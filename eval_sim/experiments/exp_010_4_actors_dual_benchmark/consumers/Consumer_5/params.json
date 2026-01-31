@@ -1,0 +1,5 @@
+{
+  "quality_sensitivity": 0.5,
+  "switching_threshold": 0.3,
+  "llm_mode": false
+}

@@ -1,0 +1,88 @@
+{
+  "name": "QualityCorp",
+  "strategy_profile": "Quality-focused organization that prioritizes genuine capability over benchmark scores",
+  "innate_traits": "risk-averse, reputation-conscious, long-term focused",
+  "true_capability": 0.5233726097929392,
+  "last_score": 0.38377875612612994,
+  "current_round": 4,
+  "believed_own_capability": 0.4226958261381306,
+  "believed_benchmark_exploitability": 0.2,
+  "capability_belief_confidence": 0.5,
+  "believed_competitor_capabilities": {
+    "AlphaTech": 0.4425565567223648
+  },
+  "rnd_investment": 0.589110711886278,
+  "gaming_investment": 0.41088928811372205,
+  "effort_budget": 1.0,
+  "past_scores": [
+    [
+      0,
+      0.3710015893759504
+    ],
+    [
+      1,
+      0.5536232762253843
+    ],
+    [
+      2,
+      0.33346150370561217
+    ],
+    [
+      3,
+      0.432463231662976
+    ],
+    [
+      4,
+      0.38377875612612994
+    ]
+  ],
+  "past_strategies": [
+    [
+      0,
+      0.5779143844186709,
+      0.42208561558132907
+    ],
+    [
+      1,
+      0.5776376390908918,
+      0.42236236090910817
+    ],
+    [
+      2,
+      0.5925982438980769,
+      0.4074017561019231
+    ],
+    [
+      3,
+      0.589110711886278,
+      0.41088928811372205
+    ]
+  ],
+  "observed_competitor_scores": {
+    "AlphaTech": [
+      [
+        0,
+        0.5054717079754432
+      ],
+      [
+        1,
+        0.5619723689341187
+      ],
+      [
+        2,
+        0.3039761779738137
+      ],
+      [
+        3,
+        0.5175108930613638
+      ],
+      [
+        4,
+        0.506182599131917
+      ]
+    ]
+  },
+  "importance_trigger_curr": 0.0,
+  "importance_trigger_max": 100.0,
+  "recent_insights": []
+}

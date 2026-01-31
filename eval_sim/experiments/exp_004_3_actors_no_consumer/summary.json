@@ -1,0 +1,94 @@
+{
+  "n_rounds": 50,
+  "final_scores": {
+    "AlphaTech": 0.6504200438389505,
+    "QualityCorp": 0.5780355290650812
+  },
+  "final_true_capabilities": {
+    "AlphaTech": 0.692497267010467,
+    "QualityCorp": 0.7966057673690732
+  },
+  "final_believed_capabilities": {
+    "AlphaTech": 0.5613295907400524,
+    "QualityCorp": 0.58977220666259
+  },
+  "final_strategies": {
+    "AlphaTech": {
+      "rnd": 0.37283547157518615,
+      "gaming": 0.6271645284248138
+    },
+    "QualityCorp": {
+      "rnd": 0.6522353254907908,
+      "gaming": 0.3477646745092092
+    }
+  },
+  "leaderboard": [
+    [
+      "AlphaTech",
+      0.6504200438389505
+    ],
+    [
+      "QualityCorp",
+      0.5780355290650812
+    ]
+  ],
+  "validity_correlation": 0.5215453543880075,
+  "benchmark_params": {
+    "validity": 0.7999999999999999,
+    "exploitability": 0.3,
+    "noise": 0.1
+  },
+  "provider_summaries": {
+    "AlphaTech": {
+      "initial_capability": 0.5,
+      "final_capability": 0.692497267010467,
+      "capability_growth": 0.192497267010467,
+      "mean_score": 0.5325081123361838,
+      "score_std": 0.08154904680534365,
+      "mean_rnd_investment": 0.3949945340209341,
+      "mean_gaming_investment": 0.6050054659790659
+    },
+    "QualityCorp": {
+      "initial_capability": 0.5,
+      "final_capability": 0.7966057673690732,
+      "capability_growth": 0.2966057673690732,
+      "mean_score": 0.5469576026394429,
+      "score_std": 0.09393634006163341,
+      "mean_rnd_investment": 0.6032115347381463,
+      "mean_gaming_investment": 0.39678846526185374
+    }
+  },
+  "policymaker_summary": {
+    "n_policymakers": 1,
+    "total_interventions": 24,
+    "intervention_types": [
+      "mandate_benchmark"
+    ],
+    "active_regulations": [
+      "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R7 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R8 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R11 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R12 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R14 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R15 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R16 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R17 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R18 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R19 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R20 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R21 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R22 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R23 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R26 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R27 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+    ]
+  }
+}

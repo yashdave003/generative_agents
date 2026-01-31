@@ -1,0 +1,152 @@
+{
+  "policy_objectives": [
+    "safety",
+    "fairness"
+  ],
+  "risk_beliefs": {
+    "gaming_risk": 1.0,
+    "consumer_harm_risk": 0.0,
+    "validity_degradation_risk": 1.0
+  },
+  "industry_trust": 0.16333333333333366,
+  "regulatory_capacity": 1.0,
+  "past_interventions": [
+    [
+      1,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ],
+    [
+      2,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ],
+    [
+      3,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ],
+    [
+      4,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ],
+    [
+      5,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ],
+    [
+      6,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ],
+    [
+      9,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ],
+    [
+      10,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ],
+    [
+      13,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ],
+    [
+      17,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ],
+    [
+      18,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ],
+    [
+      20,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ],
+    [
+      23,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ],
+    [
+      24,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ],
+    [
+      25,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ],
+    [
+      26,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ],
+    [
+      28,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ]
+  ],
+  "observed_incidents": []
+}

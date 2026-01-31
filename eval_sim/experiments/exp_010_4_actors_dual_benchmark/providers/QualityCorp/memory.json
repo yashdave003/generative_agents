@@ -1,0 +1,1209 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "own_score": 0.4839519308157311,
+    "competitor_scores": {
+      "AlphaTech": 0.34728963681574754
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "updated_believed_capability": 0.4951855792447193,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.34728963681574754
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "portfolio": {
+      "fundamental_research": 0.34436878272869154,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.10563121727130846,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "capability_gain": 0.007771162958201683,
+    "new_true_capability": 0.5077711629582017,
+    "portfolio": {
+      "fundamental_research": 0.34436878272869154,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.10563121727130846,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "own_score": 0.346823369517587,
+    "competitor_scores": {
+      "AlphaTech": 0.2625936219436102
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "updated_believed_capability": 0.4506769163265796,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.30494162937967884
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "portfolio": {
+      "fundamental_research": 0.3437205860840702,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.10627941391592975,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "capability_gain": 0.007762088205176983,
+    "new_true_capability": 0.5155332511633787,
+    "portfolio": {
+      "fundamental_research": 0.3437205860840702,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.10627941391592975,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "own_score": 0.4477610784120658,
+    "competitor_scores": {
+      "AlphaTech": 0.3701531168941895
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "updated_believed_capability": 0.4498021649522254,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.32667879188451576
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "portfolio": {
+      "fundamental_research": 0.3369370119203129,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.11306298807968711,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "capability_gain": 0.007667118166884381,
+    "new_true_capability": 0.523200369330263,
+    "portfolio": {
+      "fundamental_research": 0.3369370119203129,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.11306298807968711,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "own_score": 0.34001133252486776,
+    "competitor_scores": {
+      "AlphaTech": 0.49807073282237935
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "updated_believed_capability": 0.4168649152240181,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.3769391572200597
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "portfolio": {
+      "fundamental_research": 0.3119777274011875,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1380222725988125,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "capability_gain": 0.0073176881836166255,
+    "new_true_capability": 0.5305180575138797,
+    "portfolio": {
+      "fundamental_research": 0.3119777274011875,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1380222725988125,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "own_score": 0.41700565383079313,
+    "competitor_scores": {
+      "AlphaTech": 0.3823601790962459
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "updated_believed_capability": 0.41690713680605057,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.4168613429376049
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "portfolio": {
+      "fundamental_research": 0.30001373816053367,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.14998626183946628,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 5,
+    "capability_gain": 0.007150192334247471,
+    "new_true_capability": 0.5376682498481272,
+    "portfolio": {
+      "fundamental_research": 0.30001373816053367,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.14998626183946628,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "own_score": 0.43261026295756094,
+    "competitor_scores": {
+      "AlphaTech": 0.3842306047757553
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 5,
+    "updated_believed_capability": 0.4216180746515037,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.42155383889812686
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 5,
+    "portfolio": {
+      "fundamental_research": 0.30001927072601303,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.14998072927398698,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 6,
+    "capability_gain": 0.007150269790164182,
+    "new_true_capability": 0.5448185196382914,
+    "portfolio": {
+      "fundamental_research": 0.30001927072601303,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.14998072927398698,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "own_score": 0.4408454605383243,
+    "competitor_scores": {
+      "AlphaTech": 0.39872010937108515
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 6,
+    "updated_believed_capability": 0.42738629041754983,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.38843696441436215
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 6,
+    "portfolio": {
+      "fundamental_research": 0.3116847978009563,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1383152021990437,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 7,
+    "capability_gain": 0.00731358716921339,
+    "new_true_capability": 0.5521321068075048,
+    "portfolio": {
+      "fundamental_research": 0.3116847978009563,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1383152021990437,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "own_score": 0.4602782811143423,
+    "competitor_scores": {
+      "AlphaTech": 0.486530903914985
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 7,
+    "updated_believed_capability": 0.43725388762658757,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.4231605393539419
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 7,
+    "portfolio": {
+      "fundamental_research": 0.3042280044817937,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1457719955182063,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 8,
+    "capability_gain": 0.007209192062745112,
+    "new_true_capability": 0.5593412988702499,
+    "portfolio": {
+      "fundamental_research": 0.3042280044817937,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1457719955182063,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "own_score": 0.4982232374322155,
+    "competitor_scores": {
+      "AlphaTech": 0.378090195619999
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 8,
+    "updated_believed_capability": 0.4555446925682759,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.42111373630202303
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 8,
+    "portfolio": {
+      "fundamental_research": 0.3103292868798759,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.13967071312012413,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 9,
+    "capability_gain": 0.007294610016318262,
+    "new_true_capability": 0.5666359088865681,
+    "portfolio": {
+      "fundamental_research": 0.3103292868798759,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.13967071312012413,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "own_score": 0.41487416622293777,
+    "competitor_scores": {
+      "AlphaTech": 0.3997204650913193
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 9,
+    "updated_believed_capability": 0.4433435346646744,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.4214471882087678
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 9,
+    "portfolio": {
+      "fundamental_research": 0.306568903936772,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.14343109606322801,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 10,
+    "capability_gain": 0.007241964655114808,
+    "new_true_capability": 0.573877873541683,
+    "portfolio": {
+      "fundamental_research": 0.306568903936772,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.14343109606322801,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 10,
+    "own_score": 0.40192492675288544,
+    "competitor_scores": {
+      "AlphaTech": 0.5207007857012518
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 10,
+    "updated_believed_capability": 0.4309179522911377,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.43283714880419
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 10,
+    "portfolio": {
+      "fundamental_research": 0.29942424104608434,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15057575895391573,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 11,
+    "capability_gain": 0.007141939374645181,
+    "new_true_capability": 0.5810198129163281,
+    "portfolio": {
+      "fundamental_research": 0.29942424104608434,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15057575895391573,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 11,
+    "own_score": 0.4696027325366573,
+    "competitor_scores": {
+      "AlphaTech": 0.4758148960060648
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 11,
+    "updated_believed_capability": 0.4425233863647936,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.46541204893287863
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 11,
+    "portfolio": {
+      "fundamental_research": 0.2931334012295745,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15686659877042552,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 12,
+    "capability_gain": 0.007053867617214044,
+    "new_true_capability": 0.5880736805335421,
+    "portfolio": {
+      "fundamental_research": 0.2931334012295745,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15686659877042552,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 12,
+    "own_score": 0.47718127548813755,
+    "competitor_scores": {
+      "AlphaTech": 0.49184887022192225
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 12,
+    "updated_believed_capability": 0.45292075310179675,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.49612151730974624
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 12,
+    "portfolio": {
+      "fundamental_research": 0.28703977073761516,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.16296022926238485,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 13,
+    "capability_gain": 0.006968556790326614,
+    "new_true_capability": 0.5950422373238687,
+    "portfolio": {
+      "fundamental_research": 0.28703977073761516,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.16296022926238485,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 13,
+    "own_score": 0.3768883436802939,
+    "competitor_scores": {
+      "AlphaTech": 0.3882406854871131
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 13,
+    "updated_believed_capability": 0.43011103027534586,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.4519681505717001
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 13,
+    "portfolio": {
+      "fundamental_research": 0.29344286391109375,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1565571360889063,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 14,
+    "capability_gain": 0.007058200094755313,
+    "new_true_capability": 0.6021004374186241,
+    "portfolio": {
+      "fundamental_research": 0.29344286391109375,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1565571360889063,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 14,
+    "own_score": 0.46023031043564755,
+    "competitor_scores": {
+      "AlphaTech": 0.5499097885681252
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 14,
+    "updated_believed_capability": 0.43914681432343633,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.47666644809238684
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 14,
+    "portfolio": {
+      "fundamental_research": 0.28874410986931487,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1612558901306852,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 15,
+    "capability_gain": 0.006992417538170408,
+    "new_true_capability": 0.6090928549567944,
+    "portfolio": {
+      "fundamental_research": 0.28874410986931487,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1612558901306852,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 15,
+    "own_score": 0.4843580263455719,
+    "competitor_scores": {
+      "AlphaTech": 0.3850610446295595
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 15,
+    "updated_believed_capability": 0.45271017793007695,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.441070506228266
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 15,
+    "portfolio": {
+      "fundamental_research": 0.3034919015105433,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.14650809848945673,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 16,
+    "capability_gain": 0.007198886621147606,
+    "new_true_capability": 0.6162917415779421,
+    "portfolio": {
+      "fundamental_research": 0.3034919015105433,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.14650809848945673,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 16,
+    "own_score": 0.4013868701377933,
+    "competitor_scores": {
+      "AlphaTech": 0.5553220091739965
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 16,
+    "updated_believed_capability": 0.43731318559239185,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.4967642807905604
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 16,
+    "portfolio": {
+      "fundamental_research": 0.28216467144054946,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1678353285594506,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 17,
+    "capability_gain": 0.006900305400167693,
+    "new_true_capability": 0.6231920469781098,
+    "portfolio": {
+      "fundamental_research": 0.28216467144054946,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1678353285594506,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 17,
+    "own_score": 0.3347223900442863,
+    "competitor_scores": {
+      "AlphaTech": 0.5043450698144629
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 17,
+    "updated_believed_capability": 0.40653594692796013,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.48157604120600633
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 17,
+    "portfolio": {
+      "fundamental_research": 0.2774879717165861,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1725120282834139,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 18,
+    "capability_gain": 0.006834831604032206,
+    "new_true_capability": 0.630026878582142,
+    "portfolio": {
+      "fundamental_research": 0.2774879717165861,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1725120282834139,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 18,
+    "own_score": 0.506672109967471,
+    "competitor_scores": {
+      "AlphaTech": 0.47474889271807835
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 18,
+    "updated_believed_capability": 0.43657679583981335,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.511471990568846
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 18,
+    "portfolio": {
+      "fundamental_research": 0.27753144158129023,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.17246855841870978,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 19,
+    "capability_gain": 0.006835440182138064,
+    "new_true_capability": 0.6368623187642801,
+    "portfolio": {
+      "fundamental_research": 0.27753144158129023,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.17246855841870978,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 19,
+    "own_score": 0.4704392125136871,
+    "competitor_scores": {
+      "AlphaTech": 0.47953470233556217
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 19,
+    "updated_believed_capability": 0.44673552084197543,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.4862095549560345
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 19,
+    "portfolio": {
+      "fundamental_research": 0.28815778976578227,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.16184221023421774,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 20,
+    "capability_gain": 0.0069842090567209525,
+    "new_true_capability": 0.643846527821001,
+    "portfolio": {
+      "fundamental_research": 0.28815778976578227,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.16184221023421774,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 20,
+    "own_score": 0.42800805654907115,
+    "competitor_scores": {
+      "AlphaTech": 0.47215094518533074
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 20,
+    "updated_believed_capability": 0.4411172815541041,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.4754781800796571
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 20,
+    "portfolio": {
+      "fundamental_research": 0.2896917304423341,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.16030826955766592,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 21,
+    "capability_gain": 0.007005684226192677,
+    "new_true_capability": 0.6508522120471937,
+    "portfolio": {
+      "fundamental_research": 0.2896917304423341,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.16030826955766592,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 21,
+    "own_score": 0.45151688951795127,
+    "competitor_scores": {
+      "AlphaTech": 0.4822355598705327
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 21,
+    "updated_believed_capability": 0.44423716394325824,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.47797373579714186
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 21,
+    "portfolio": {
+      "fundamental_research": 0.2898790284438349,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.16012097155616511,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 22,
+    "capability_gain": 0.007008306398213688,
+    "new_true_capability": 0.6578605184454074,
+    "portfolio": {
+      "fundamental_research": 0.2898790284438349,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.16012097155616511,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 22,
+    "own_score": 0.4947506940291486,
+    "competitor_scores": {
+      "AlphaTech": 0.5495336327722413
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 22,
+    "updated_believed_capability": 0.45939122296902535,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.5013067126093683
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 22,
+    "portfolio": {
+      "fundamental_research": 0.2874253531078971,
+      "training_optimization": 0.24999999999999994,
+      "evaluation_engineering": 0.1625746468921029,
+      "safety_alignment": 0.29999999999999993
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 23,
+    "capability_gain": 0.006973954943510559,
+    "new_true_capability": 0.664834473388918,
+    "portfolio": {
+      "fundamental_research": 0.2874253531078971,
+      "training_optimization": 0.24999999999999994,
+      "evaluation_engineering": 0.1625746468921029,
+      "safety_alignment": 0.29999999999999993
+    }
+  },
+  {
+    "type": "observation",
+    "round": 23,
+    "own_score": 0.3249689295978001,
+    "competitor_scores": {
+      "AlphaTech": 0.4850644986412404
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 23,
+    "updated_believed_capability": 0.4190645349576578,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.5056112304280048
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 23,
+    "portfolio": {
+      "fundamental_research": 0.2740359913588959,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.17596400864110412,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 24,
+    "capability_gain": 0.006786503879024542,
+    "new_true_capability": 0.6716209772679426,
+    "portfolio": {
+      "fundamental_research": 0.2740359913588959,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.17596400864110412,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 24,
+    "own_score": 0.4492454234774167,
+    "competitor_scores": {
+      "AlphaTech": 0.395918161997988
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 24,
+    "updated_believed_capability": 0.4281188015135854,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.4768387644704899
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 24,
+    "portfolio": {
+      "fundamental_research": 0.28538401111292866,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.16461598888707135,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 25,
+    "capability_gain": 0.006945376155581001,
+    "new_true_capability": 0.6785663534235236,
+    "portfolio": {
+      "fundamental_research": 0.28538401111292866,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.16461598888707135,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 25,
+    "own_score": 0.5188071417681092,
+    "competitor_scores": {
+      "AlphaTech": 0.578414222102454
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 25,
+    "updated_believed_capability": 0.4553253035899425,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.4864656275805608
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 25,
+    "portfolio": {
+      "fundamental_research": 0.2906579028028145,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1593420971971855,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 26,
+    "capability_gain": 0.007019210639239404,
+    "new_true_capability": 0.6855855640627629,
+    "portfolio": {
+      "fundamental_research": 0.2906579028028145,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1593420971971855,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 26,
+    "own_score": 0.43349695807752264,
+    "competitor_scores": {
+      "AlphaTech": 0.46812756789736776
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 26,
+    "updated_believed_capability": 0.44877679993621655,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.48081998399926995
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 26,
+    "portfolio": {
+      "fundamental_research": 0.29038704478108396,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15961295521891605,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 27,
+    "capability_gain": 0.007015418626935175,
+    "new_true_capability": 0.6926009826896982,
+    "portfolio": {
+      "fundamental_research": 0.29038704478108396,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15961295521891605,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 27,
+    "own_score": 0.5281194776435604,
+    "competitor_scores": {
+      "AlphaTech": 0.4560660199133069
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 27,
+    "updated_believed_capability": 0.47257960324841963,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.5008692699710429
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 27,
+    "portfolio": {
+      "fundamental_research": 0.291513099983213,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.158486900016787,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 28,
+    "capability_gain": 0.007031183399764982,
+    "new_true_capability": 0.6996321660894631,
+    "portfolio": {
+      "fundamental_research": 0.291513099983213,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.158486900016787,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 28,
+    "own_score": 0.4718377267277458,
+    "competitor_scores": {
+      "AlphaTech": 0.4229649288372995
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 28,
+    "updated_believed_capability": 0.4723570402922175,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.44905283888265807
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 28,
+    "portfolio": {
+      "fundamental_research": 0.3069912604228678,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.14300873957713217,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 29,
+    "capability_gain": 0.007247877645920149,
+    "new_true_capability": 0.7068800437353833,
+    "portfolio": {
+      "fundamental_research": 0.3069912604228678,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.14300873957713217,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 29,
+    "own_score": 0.5506543809098225,
+    "competitor_scores": {
+      "AlphaTech": 0.5484565374285122
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 29,
+    "updated_believed_capability": 0.495846242477499,
+    "updated_believed_exploitability": 0.2,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.4758291620597062
+    },
+    "llm_mode": false
+  }
+]

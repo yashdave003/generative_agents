@@ -1,0 +1,848 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.4839519308157311
+      ],
+      [
+        "AlphaTech",
+        0.34728963681574754
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "decision": "subscribe",
+    "provider": "QualityCorp",
+    "reason": "highest leaderboard score"
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "decision": "subscribe",
+    "provider": "QualityCorp",
+    "reason": "highest leaderboard score"
+  },
+  {
+    "type": "subscription_change",
+    "round": 0,
+    "from": null,
+    "to": "QualityCorp"
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.346823369517587
+      ],
+      [
+        "AlphaTech",
+        0.2625936219436102
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.4477610784120658
+      ],
+      [
+        "AlphaTech",
+        0.3701531168941895
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.49807073282237935
+      ],
+      [
+        "QualityCorp",
+        0.34001133252486776
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.41700565383079313
+      ],
+      [
+        "AlphaTech",
+        0.3823601790962459
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.43261026295756094
+      ],
+      [
+        "AlphaTech",
+        0.3842306047757553
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 5,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 5,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.4408454605383243
+      ],
+      [
+        "AlphaTech",
+        0.39872010937108515
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 6,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 6,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.486530903914985
+      ],
+      [
+        "QualityCorp",
+        0.4602782811143423
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 7,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 7,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.4982232374322155
+      ],
+      [
+        "AlphaTech",
+        0.378090195619999
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 8,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 8,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.41487416622293777
+      ],
+      [
+        "AlphaTech",
+        0.3997204650913193
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 9,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 9,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 10,
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5207007857012518
+      ],
+      [
+        "QualityCorp",
+        0.40192492675288544
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 10,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 10,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 11,
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.4758148960060648
+      ],
+      [
+        "QualityCorp",
+        0.4696027325366573
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 11,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 11,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 12,
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.49184887022192225
+      ],
+      [
+        "QualityCorp",
+        0.47718127548813755
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 12,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 12,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 13,
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.3882406854871131
+      ],
+      [
+        "QualityCorp",
+        0.3768883436802939
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 13,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 13,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 14,
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5499097885681252
+      ],
+      [
+        "QualityCorp",
+        0.46023031043564755
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 14,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 14,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 15,
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.4843580263455719
+      ],
+      [
+        "AlphaTech",
+        0.3850610446295595
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 15,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 15,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 16,
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5553220091739965
+      ],
+      [
+        "QualityCorp",
+        0.4013868701377933
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 16,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 16,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 17,
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5043450698144629
+      ],
+      [
+        "QualityCorp",
+        0.3347223900442863
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 17,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 17,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 18,
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.506672109967471
+      ],
+      [
+        "AlphaTech",
+        0.47474889271807835
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 18,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 18,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 19,
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.47953470233556217
+      ],
+      [
+        "QualityCorp",
+        0.4704392125136871
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 19,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 19,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 20,
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.47215094518533074
+      ],
+      [
+        "QualityCorp",
+        0.42800805654907115
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 20,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 20,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 21,
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.4822355598705327
+      ],
+      [
+        "QualityCorp",
+        0.45151688951795127
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 21,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 21,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 22,
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5495336327722413
+      ],
+      [
+        "QualityCorp",
+        0.4947506940291486
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 22,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 22,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 23,
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.4850644986412404
+      ],
+      [
+        "QualityCorp",
+        0.3249689295978001
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 23,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 23,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 24,
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.4492454234774167
+      ],
+      [
+        "AlphaTech",
+        0.395918161997988
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 24,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 24,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 25,
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.578414222102454
+      ],
+      [
+        "QualityCorp",
+        0.5188071417681092
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 25,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 25,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 26,
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.46812756789736776
+      ],
+      [
+        "QualityCorp",
+        0.43349695807752264
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 26,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 26,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 27,
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.5281194776435604
+      ],
+      [
+        "AlphaTech",
+        0.4560660199133069
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 27,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 27,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 28,
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.4718377267277458
+      ],
+      [
+        "AlphaTech",
+        0.4229649288372995
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 28,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 28,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 29,
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.5506543809098225
+      ],
+      [
+        "AlphaTech",
+        0.5484565374285122
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 29,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 29,
+    "decision": "stay",
+    "provider": "QualityCorp",
+    "reason": "satisfied with current provider"
+  }
+]

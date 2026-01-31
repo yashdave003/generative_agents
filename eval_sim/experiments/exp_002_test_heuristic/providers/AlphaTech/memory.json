@@ -1,0 +1,144 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "own_score": 0.5054717079754432,
+    "competitor_scores": {
+      "QualityCorp": 0.3710015893759504
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "updated_believed_capability": 0.5016415123926329,
+    "updated_believed_exploitability": 0.4,
+    "updated_competitor_beliefs": {
+      "QualityCorp": 0.3710015893759504
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "rnd_investment": 0.4653199615083412,
+    "gaming_investment": 0.5346800384916588,
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 0,
+    "capability_gain": 0.004653199615083412,
+    "new_true_capability": 0.5046531996150834
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "own_score": 0.5619723689341187,
+    "competitor_scores": {
+      "QualityCorp": 0.5536232762253843
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "updated_believed_capability": 0.5197407693550786,
+    "updated_believed_exploitability": 0.4,
+    "updated_competitor_beliefs": {
+      "QualityCorp": 0.46231243280066736
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "rnd_investment": 0.42871416827720565,
+    "gaming_investment": 0.5712858317227943,
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "capability_gain": 0.004287141682772056,
+    "new_true_capability": 0.5089403412978555
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "own_score": 0.3039761779738137,
+    "competitor_scores": {
+      "QualityCorp": 0.33346150370561217
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "updated_believed_capability": 0.4550113919406991,
+    "updated_believed_exploitability": 0.4,
+    "updated_competitor_beliefs": {
+      "QualityCorp": 0.41936212310231563
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "rnd_investment": 0.4178246344191917,
+    "gaming_investment": 0.5821753655808083,
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "capability_gain": 0.004178246344191917,
+    "new_true_capability": 0.5131185876420474
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "own_score": 0.5175108930613638,
+    "competitor_scores": {
+      "QualityCorp": 0.432463231662976
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "updated_believed_capability": 0.47376124227689853,
+    "updated_believed_exploitability": 0.4,
+    "updated_competitor_beliefs": {
+      "QualityCorp": 0.43984933719799085
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "rnd_investment": 0.41695595253945383,
+    "gaming_investment": 0.5830440474605462,
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "capability_gain": 0.004169559525394538,
+    "new_true_capability": 0.517288147167442
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "own_score": 0.506182599131917,
+    "competitor_scores": {
+      "QualityCorp": 0.38377875612612994
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "updated_believed_capability": 0.48348764933340405,
+    "updated_believed_exploitability": 0.4,
+    "updated_competitor_beliefs": {
+      "QualityCorp": 0.38323449716490604
+    },
+    "llm_mode": false
+  }
+]

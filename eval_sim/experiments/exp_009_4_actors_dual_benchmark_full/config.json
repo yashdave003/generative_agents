@@ -1,0 +1,48 @@
+{
+  "n_rounds": 30,
+  "seed": 42,
+  "benchmark_name": "capability_benchmark",
+  "benchmark_validity": 0.7,
+  "benchmark_exploitability": 0.5,
+  "benchmark_noise": 0.1,
+  "benchmarks": [
+    {
+      "name": "MMLU_Academic",
+      "validity": 0.8,
+      "exploitability": 0.3,
+      "noise_level": 0.08,
+      "weight": 1.0
+    },
+    {
+      "name": "Arena_Preference",
+      "validity": 0.5,
+      "exploitability": 0.7,
+      "noise_level": 0.12,
+      "weight": 1.0
+    }
+  ],
+  "rnd_efficiency": 0.01,
+  "llm_mode": false,
+  "enable_consumers": true,
+  "enable_policymakers": true,
+  "n_consumers": 10,
+  "n_policymakers": 1,
+  "output_dir": null,
+  "verbose": false,
+  "provider_configs": [
+    {
+      "name": "AlphaTech",
+      "strategy_profile": "Aggressive competitor focused on market dominance and benchmark leadership",
+      "innate_traits": "risk-tolerant, competitive, short-term focused",
+      "initial_capability": 0.5,
+      "initial_believed_exploitability": 0.4
+    },
+    {
+      "name": "QualityCorp",
+      "strategy_profile": "Quality-focused organization that prioritizes genuine capability over benchmark scores",
+      "innate_traits": "risk-averse, reputation-conscious, long-term focused",
+      "initial_capability": 0.5,
+      "initial_believed_exploitability": 0.2
+    }
+  ]
+}

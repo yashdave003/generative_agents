@@ -1,0 +1,702 @@
+[
+  {
+    "round": 0,
+    "scores": {
+      "AlphaTech": 0.5054717079754432,
+      "QualityCorp": 0.3710015893759504
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5,
+      "QualityCorp": 0.5
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.5016415123926329,
+      "QualityCorp": 0.4613004768127851
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.5,
+        "gaming": 0.5
+      },
+      "QualityCorp": {
+        "rnd": 0.5,
+        "gaming": 0.5
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5054717079754432
+      ],
+      [
+        "QualityCorp",
+        0.3710015893759504
+      ]
+    ]
+  },
+  {
+    "round": 1,
+    "scores": {
+      "AlphaTech": 0.5619723689341187,
+      "QualityCorp": 0.5536232762253843
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5046531996150834,
+      "QualityCorp": 0.5057791438441868
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.5197407693550786,
+      "QualityCorp": 0.48899731663656476
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.4653199615083412,
+        "gaming": 0.5346800384916588
+      },
+      "QualityCorp": {
+        "rnd": 0.5779143844186709,
+        "gaming": 0.42208561558132907
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5619723689341187
+      ],
+      [
+        "QualityCorp",
+        0.5536232762253843
+      ]
+    ]
+  },
+  {
+    "round": 2,
+    "scores": {
+      "AlphaTech": 0.3039761779738137,
+      "QualityCorp": 0.33346150370561217
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5089403412978555,
+      "QualityCorp": 0.5115555202350957
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.4550113919406991,
+      "QualityCorp": 0.44233657275727895
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.42871416827720565,
+        "gaming": 0.5712858317227943
+      },
+      "QualityCorp": {
+        "rnd": 0.5776376390908918,
+        "gaming": 0.42236236090910817
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.33346150370561217
+      ],
+      [
+        "AlphaTech",
+        0.3039761779738137
+      ]
+    ]
+  },
+  {
+    "round": 3,
+    "scores": {
+      "AlphaTech": 0.5175108930613638,
+      "QualityCorp": 0.432463231662976
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5131185876420474,
+      "QualityCorp": 0.5174815026740764
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.47376124227689853,
+      "QualityCorp": 0.43937457042898803
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.4178246344191917,
+        "gaming": 0.5821753655808083
+      },
+      "QualityCorp": {
+        "rnd": 0.5925982438980769,
+        "gaming": 0.4074017561019231
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5175108930613638
+      ],
+      [
+        "QualityCorp",
+        0.432463231662976
+      ]
+    ]
+  },
+  {
+    "round": 4,
+    "scores": {
+      "AlphaTech": 0.506182599131917,
+      "QualityCorp": 0.38377875612612994
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.517288147167442,
+      "QualityCorp": 0.5233726097929392
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.48348764933340405,
+      "QualityCorp": 0.4226958261381306
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.41695595253945383,
+        "gaming": 0.5830440474605462
+      },
+      "QualityCorp": {
+        "rnd": 0.589110711886278,
+        "gaming": 0.41088928811372205
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.506182599131917
+      ],
+      [
+        "QualityCorp",
+        0.38377875612612994
+      ]
+    ]
+  },
+  {
+    "round": 5,
+    "scores": {
+      "AlphaTech": 0.5906607425150198,
+      "QualityCorp": 0.5507530991639367
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5217894129282845,
+      "QualityCorp": 0.529273306140018
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.5156395772878888,
+      "QualityCorp": 0.4611130080458724
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.450126576084249,
+        "gaming": 0.549873423915751
+      },
+      "QualityCorp": {
+        "rnd": 0.5900696347078829,
+        "gaming": 0.4099303652921171
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5906607425150198
+      ],
+      [
+        "QualityCorp",
+        0.5507530991639367
+      ]
+    ]
+  },
+  {
+    "round": 6,
+    "scores": {
+      "AlphaTech": 0.5173687511870404,
+      "QualityCorp": 0.5967715510229284
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5260892856698022,
+      "QualityCorp": 0.5348882807890668
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.5161583294576342,
+      "QualityCorp": 0.5018105709389892
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.4299872741517706,
+        "gaming": 0.5700127258482294
+      },
+      "QualityCorp": {
+        "rnd": 0.5614974649048862,
+        "gaming": 0.43850253509511383
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.5967715510229284
+      ],
+      [
+        "AlphaTech",
+        0.5173687511870404
+      ]
+    ]
+  },
+  {
+    "round": 7,
+    "scores": {
+      "AlphaTech": 0.5671179851206398,
+      "QualityCorp": 0.3970981556547119
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5301179049732354,
+      "QualityCorp": 0.5407069801557052
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.5314462261565358,
+      "QualityCorp": 0.470396846353706
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.40286193034331785,
+        "gaming": 0.5971380696566821
+      },
+      "QualityCorp": {
+        "rnd": 0.5818699366638317,
+        "gaming": 0.4181300633361683
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5671179851206398
+      ],
+      [
+        "QualityCorp",
+        0.3970981556547119
+      ]
+    ]
+  },
+  {
+    "round": 8,
+    "scores": {
+      "AlphaTech": 0.5587441190480794,
+      "QualityCorp": 0.3974968820864378
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5342007647609488,
+      "QualityCorp": 0.5462670519227693
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.5396355940239989,
+      "QualityCorp": 0.4485268570735255
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.40828597877133843,
+        "gaming": 0.5917140212286616
+      },
+      "QualityCorp": {
+        "rnd": 0.556007176706403,
+        "gaming": 0.443992823293597
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5587441190480794
+      ],
+      [
+        "QualityCorp",
+        0.3974968820864378
+      ]
+    ]
+  },
+  {
+    "round": 9,
+    "scores": {
+      "AlphaTech": 0.6053701876344206,
+      "QualityCorp": 0.4936491817547881
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.538579998416462,
+      "QualityCorp": 0.5517709681158773
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.5593559721071254,
+      "QualityCorp": 0.46206355447790426
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.4379233655513197,
+        "gaming": 0.5620766344486803
+      },
+      "QualityCorp": {
+        "rnd": 0.5503916193108028,
+        "gaming": 0.4496083806891972
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.6053701876344206
+      ],
+      [
+        "QualityCorp",
+        0.4936491817547881
+      ]
+    ]
+  },
+  {
+    "round": 10,
+    "scores": {
+      "AlphaTech": 0.495531902815567,
+      "QualityCorp": 0.43632090918968175
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5432297045778377,
+      "QualityCorp": 0.5571958987352617
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.5402087513196578,
+      "QualityCorp": 0.4543407608914375
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.46497061613757307,
+        "gaming": 0.5350293838624269
+      },
+      "QualityCorp": {
+        "rnd": 0.5424930619384288,
+        "gaming": 0.45750693806157117
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.495531902815567
+      ],
+      [
+        "QualityCorp",
+        0.43632090918968175
+      ]
+    ]
+  },
+  {
+    "round": 11,
+    "scores": {
+      "AlphaTech": 0.6434419761943027,
+      "QualityCorp": 0.490797449944165
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5477183033793844,
+      "QualityCorp": 0.5627015255238887
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.5711787187820513,
+      "QualityCorp": 0.4652777676072557
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.4488598801546777,
+        "gaming": 0.5511401198453223
+      },
+      "QualityCorp": {
+        "rnd": 0.5505626788627075,
+        "gaming": 0.4494373211372925
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.6434419761943027
+      ],
+      [
+        "QualityCorp",
+        0.490797449944165
+      ]
+    ]
+  },
+  {
+    "round": 12,
+    "scores": {
+      "AlphaTech": 0.4815129012232289,
+      "QualityCorp": 0.4769923987527114
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5522062510718136,
+      "QualityCorp": 0.5681206742508512
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.5442789735144045,
+      "QualityCorp": 0.4687921569508924
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.44879476924291983,
+        "gaming": 0.5512052307570802
+      },
+      "QualityCorp": {
+        "rnd": 0.541914872696246,
+        "gaming": 0.45808512730375395
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.4815129012232289
+      ],
+      [
+        "QualityCorp",
+        0.4769923987527114
+      ]
+    ]
+  },
+  {
+    "round": 13,
+    "scores": {
+      "AlphaTech": 0.5833118847180099,
+      "QualityCorp": 0.5471003459419108
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.556587461342908,
+      "QualityCorp": 0.5737638237352172
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.5559888468754861,
+      "QualityCorp": 0.49228461364819787
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.43812102710944256,
+        "gaming": 0.5618789728905574
+      },
+      "QualityCorp": {
+        "rnd": 0.5643149484365965,
+        "gaming": 0.43568505156340354
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5833118847180099
+      ],
+      [
+        "QualityCorp",
+        0.5471003459419108
+      ]
+    ]
+  },
+  {
+    "round": 14,
+    "scores": {
+      "AlphaTech": 0.5774848920871337,
+      "QualityCorp": 0.5582890002236737
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5608425885862208,
+      "QualityCorp": 0.5793781355332323
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.5624376604389804,
+      "QualityCorp": 0.5120859296208407
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.4255127243312785,
+        "gaming": 0.5744872756687215
+      },
+      "QualityCorp": {
+        "rnd": 0.5614311798015087,
+        "gaming": 0.4385688201984913
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5774848920871337
+      ],
+      [
+        "QualityCorp",
+        0.5582890002236737
+      ]
+    ]
+  },
+  {
+    "round": 15,
+    "scores": {
+      "AlphaTech": 0.7553048570232556,
+      "QualityCorp": 0.47341829474601793
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5650174739802186,
+      "QualityCorp": 0.5852013823846225
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.6202978194142629,
+      "QualityCorp": 0.5004856391583938
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.41748853939977426,
+        "gaming": 0.5825114606002257
+      },
+      "QualityCorp": {
+        "rnd": 0.5823246851390248,
+        "gaming": 0.4176753148609752
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.7553048570232556
+      ],
+      [
+        "QualityCorp",
+        0.47341829474601793
+      ]
+    ]
+  },
+  {
+    "round": 16,
+    "scores": {
+      "AlphaTech": 0.48566348327708614,
+      "QualityCorp": 0.4492568058567532
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5694876170091039,
+      "QualityCorp": 0.5905103078573671
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.5799075185731098,
+      "QualityCorp": 0.4851169891679016
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.44701430288853106,
+        "gaming": 0.5529856971114689
+      },
+      "QualityCorp": {
+        "rnd": 0.5308925472744638,
+        "gaming": 0.4691074527255362
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.48566348327708614
+      ],
+      [
+        "QualityCorp",
+        0.4492568058567532
+      ]
+    ]
+  },
+  {
+    "round": 17,
+    "scores": {
+      "AlphaTech": 0.6025595567407604,
+      "QualityCorp": 0.6451600865000389
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5739188811005921,
+      "QualityCorp": 0.5959051374158942
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.586703130023405,
+      "QualityCorp": 0.5331299183675428
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.4431264091488142,
+        "gaming": 0.5568735908511858
+      },
+      "QualityCorp": {
+        "rnd": 0.5394829558527049,
+        "gaming": 0.4605170441472951
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.6451600865000389
+      ],
+      [
+        "AlphaTech",
+        0.6025595567407604
+      ]
+    ]
+  },
+  {
+    "round": 18,
+    "scores": {
+      "AlphaTech": 0.535361365784747,
+      "QualityCorp": 0.44720554324338135
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5782393381055377,
+      "QualityCorp": 0.6014982405126634
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.5713006007518076,
+      "QualityCorp": 0.5073526058302943
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.4320457004945675,
+        "gaming": 0.5679542995054325
+      },
+      "QualityCorp": {
+        "rnd": 0.559310309676921,
+        "gaming": 0.44068969032307903
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.535361365784747
+      ],
+      [
+        "QualityCorp",
+        0.44720554324338135
+      ]
+    ]
+  },
+  {
+    "round": 19,
+    "scores": {
+      "AlphaTech": 0.4681421007552149,
+      "QualityCorp": 0.5944198739679588
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5825264703832965,
+      "QualityCorp": 0.607329029532144
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.5403530507528297,
+      "QualityCorp": 0.5334727862715936
+    },
+    "strategies": {
+      "AlphaTech": {
+        "rnd": 0.42871322777587484,
+        "gaming": 0.5712867722241252
+      },
+      "QualityCorp": {
+        "rnd": 0.5830789019480481,
+        "gaming": 0.4169210980519519
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.5944198739679588
+      ],
+      [
+        "AlphaTech",
+        0.4681421007552149
+      ]
+    ]
+  }
+]

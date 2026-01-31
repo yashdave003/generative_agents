@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp_001_baseline_heuristic",
+  "name": "baseline_heuristic",
+  "description": "Baseline simulation with heuristic planning, 2 providers",
+  "tags": [
+    "baseline",
+    "heuristic",
+    "2-provider"
+  ],
+  "created_at": "2026-01-19T20:43:20.281631",
+  "git_commit": "fe05a71d",
+  "seed": 42,
+  "llm_mode": false,
+  "notes": "Completed at: 2026-01-19T20:43:27.071508"
+}

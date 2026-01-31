@@ -1,0 +1,13 @@
+{
+  "experiment_id": "exp_002_test_heuristic",
+  "name": "test_heuristic",
+  "description": "Quick test of heuristic mode",
+  "tags": [
+    "test"
+  ],
+  "created_at": "2026-01-20T11:27:09.577797",
+  "git_commit": "fe05a71d",
+  "seed": 42,
+  "llm_mode": false,
+  "notes": "Completed at: 2026-01-20T11:27:09.817120"
+}

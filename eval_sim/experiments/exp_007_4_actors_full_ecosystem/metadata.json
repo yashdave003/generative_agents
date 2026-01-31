@@ -1,0 +1,16 @@
+{
+  "experiment_id": "exp_007_4_actors_full_ecosystem",
+  "name": "4_actors_full_ecosystem",
+  "description": "Full simulation with Provider, Evaluator, Consumer, and Policymaker.",
+  "tags": [
+    "4-actor",
+    "full-ecosystem",
+    "consumer",
+    "policymaker"
+  ],
+  "created_at": "2026-01-30T07:42:20.594007",
+  "git_commit": "9f37e0e4",
+  "seed": 42,
+  "llm_mode": false,
+  "notes": ""
+}

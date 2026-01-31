@@ -1,0 +1,1644 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "validity_correlation": null,
+    "consumer_satisfaction": 0.5,
+    "risk_beliefs": {
+      "gaming_risk": 0.3,
+      "consumer_harm_risk": 0.25,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "industry_trust": 0.5216666666666667,
+    "avg_risk": 0.2833333333333333
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "validity_correlation": 0.7673025567391835,
+    "consumer_satisfaction": 0.5046531996150834,
+    "risk_beliefs": {
+      "gaming_risk": 0.25,
+      "consumer_harm_risk": 0.2,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "industry_trust": 0.5466666666666667,
+    "avg_risk": 0.25
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "validity_correlation": -0.43344644759422035,
+    "consumer_satisfaction": 0.5089403412978555,
+    "risk_beliefs": {
+      "gaming_risk": 0.35,
+      "consumer_harm_risk": 0.15000000000000002,
+      "validity_degradation_risk": 0.4
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "industry_trust": 0.5666666666666668,
+    "avg_risk": 0.3
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R2",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to -0.43"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R2",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to -0.43"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "validity_correlation": -0.2670596082467509,
+    "consumer_satisfaction": 0.5131185876420474,
+    "risk_beliefs": {
+      "gaming_risk": 0.44999999999999996,
+      "consumer_harm_risk": 0.10000000000000002,
+      "validity_degradation_risk": 0.5
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "industry_trust": 0.5816666666666668,
+    "avg_risk": 0.35000000000000003
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R3",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to -0.27"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R3",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to -0.27"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "validity_correlation": -0.3010701766788937,
+    "consumer_satisfaction": 0.5172477864190304,
+    "risk_beliefs": {
+      "gaming_risk": 0.5499999999999999,
+      "consumer_harm_risk": 0.05000000000000002,
+      "validity_degradation_risk": 0.6
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "industry_trust": 0.5916666666666668,
+    "avg_risk": 0.39999999999999997
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R4",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to -0.30"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R4",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to -0.30"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "validity_correlation": 0.08767927052088101,
+    "consumer_satisfaction": 0.5216886960127417,
+    "risk_beliefs": {
+      "gaming_risk": 0.6499999999999999,
+      "consumer_harm_risk": 1.3877787807814457e-17,
+      "validity_degradation_risk": 0.7
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 5,
+    "industry_trust": 0.5966666666666668,
+    "avg_risk": 0.44999999999999996
+  },
+  {
+    "type": "planning",
+    "round": 5,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R5",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.09"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 5,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R5",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.09"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "validity_correlation": 0.2752375029634835,
+    "consumer_satisfaction": 0.5259293885078334,
+    "risk_beliefs": {
+      "gaming_risk": 0.7499999999999999,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.7999999999999999
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 6,
+    "industry_trust": 0.5950000000000001,
+    "avg_risk": 0.5166666666666666
+  },
+  {
+    "type": "planning",
+    "round": 6,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R6",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.28"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 6,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R6",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.28"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "validity_correlation": 0.14417913366338347,
+    "consumer_satisfaction": 0.5298869343741434,
+    "risk_beliefs": {
+      "gaming_risk": 0.8499999999999999,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.8999999999999999
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 7,
+    "industry_trust": 0.5866666666666668,
+    "avg_risk": 0.5833333333333333
+  },
+  {
+    "type": "planning",
+    "round": 7,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R7",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.14"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 7,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R7",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.14"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "validity_correlation": 0.045070746379841486,
+    "consumer_satisfaction": 0.5338792507140677,
+    "risk_beliefs": {
+      "gaming_risk": 0.9499999999999998,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.9999999999999999
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 8,
+    "industry_trust": 0.5716666666666668,
+    "avg_risk": 0.6499999999999999
+  },
+  {
+    "type": "planning",
+    "round": 8,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R8",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.05"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 8,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R8",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.05"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "validity_correlation": 0.11915623568905367,
+    "consumer_satisfaction": 0.5381626492448042,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 9,
+    "industry_trust": 0.5550000000000002,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 9,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R9",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.12"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 9,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R9",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.12"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 10,
+    "validity_correlation": 0.04500169165987428,
+    "consumer_satisfaction": 0.5427155855086803,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 10,
+    "industry_trust": 0.5383333333333336,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 10,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R10",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.05"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 10,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R10",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.05"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 11,
+    "validity_correlation": 0.12450223964905244,
+    "consumer_satisfaction": 0.5471214020194918,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 11,
+    "industry_trust": 0.521666666666667,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 11,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R11",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.12"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 11,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R11",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.12"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 12,
+    "validity_correlation": 0.08682485708544498,
+    "consumer_satisfaction": 0.5515256793200236,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 12,
+    "industry_trust": 0.5050000000000003,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 12,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R12",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.09"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 12,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R12",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.09"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 13,
+    "validity_correlation": 0.17283573385065742,
+    "consumer_satisfaction": 0.5558231656669947,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 13,
+    "industry_trust": 0.4883333333333337,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 13,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R13",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.17"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 13,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R13",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.17"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 14,
+    "validity_correlation": 0.24368328630303235,
+    "consumer_satisfaction": 0.5599840604671843,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 14,
+    "industry_trust": 0.471666666666667,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 14,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R14",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.24"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 14,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R14",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.24"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 15,
+    "validity_correlation": 0.27696668630394106,
+    "consumer_satisfaction": 0.5640555600078604,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 15,
+    "industry_trust": 0.45500000000000035,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 15,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R15",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.28"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 15,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R15",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.28"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 16,
+    "validity_correlation": 0.20008914810281633,
+    "consumer_satisfaction": 0.56840512063423,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 16,
+    "industry_trust": 0.4383333333333337,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 16,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R16",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.20"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 16,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R16",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.20"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 17,
+    "validity_correlation": 0.30042640923529795,
+    "consumer_satisfaction": 0.5727274832367032,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 17,
+    "industry_trust": 0.421666666666667,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 17,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R17",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.30"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 17,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R17",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.30"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 18,
+    "validity_correlation": 0.2452418131578894,
+    "consumer_satisfaction": 0.5769451667364653,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 18,
+    "industry_trust": 0.40500000000000036,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 18,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R18",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.25"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 18,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R18",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.25"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 19,
+    "validity_correlation": 0.26364095400461435,
+    "consumer_satisfaction": 0.5811325488764146,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 19,
+    "industry_trust": 0.3883333333333337,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 19,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R19",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.26"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 19,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R19",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.26"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 20,
+    "validity_correlation": 0.3227065775497817,
+    "consumer_satisfaction": 0.5849055941546449,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 20,
+    "industry_trust": 0.37166666666666703,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 20,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R20",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.32"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 20,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R20",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.32"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 21,
+    "validity_correlation": 0.3206734256750052,
+    "consumer_satisfaction": 0.5888984498799344,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 21,
+    "industry_trust": 0.35500000000000037,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 21,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R21",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.32"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 21,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R21",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.32"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 22,
+    "validity_correlation": 0.344134829648301,
+    "consumer_satisfaction": 0.5925813976672084,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 22,
+    "industry_trust": 0.3383333333333337,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 22,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R22",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.34"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 22,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R22",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.34"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 23,
+    "validity_correlation": 0.38101390261459694,
+    "consumer_satisfaction": 0.5963626359781251,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 23,
+    "industry_trust": 0.32166666666666704,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 23,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R23",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.38"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 23,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R23",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.38"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 24,
+    "validity_correlation": 0.4036397540926503,
+    "consumer_satisfaction": 0.6003209904947289,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 24,
+    "industry_trust": 0.3050000000000004,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 24,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 25,
+    "validity_correlation": 0.44160343762504023,
+    "consumer_satisfaction": 0.6043587463030163,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 25,
+    "industry_trust": 0.2883333333333337,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 25,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 26,
+    "validity_correlation": 0.39095244657589484,
+    "consumer_satisfaction": 0.6082972607619413,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 26,
+    "industry_trust": 0.27166666666666706,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 26,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R26",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.39"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 26,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R26",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.39"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 27,
+    "validity_correlation": 0.36292663177291007,
+    "consumer_satisfaction": 0.6120435775732178,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 27,
+    "industry_trust": 0.2550000000000004,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 27,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R27",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.36"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 27,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Validity_Mandate_R27",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "Validity correlation dropped to 0.36"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 28,
+    "validity_correlation": 0.419706033670641,
+    "consumer_satisfaction": 0.6158614375578789,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 28,
+    "industry_trust": 0.23833333333333373,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 28,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 29,
+    "validity_correlation": 0.44226892513764726,
+    "consumer_satisfaction": 0.6195334972915313,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 29,
+    "industry_trust": 0.22166666666666707,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 29,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 30,
+    "validity_correlation": 0.4004003076132096,
+    "consumer_satisfaction": 0.6229052632253589,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 30,
+    "industry_trust": 0.2050000000000004,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 30,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 31,
+    "validity_correlation": 0.4352494746460492,
+    "consumer_satisfaction": 0.6260423158369973,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 31,
+    "industry_trust": 0.18833333333333374,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 31,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 32,
+    "validity_correlation": 0.47710064161298016,
+    "consumer_satisfaction": 0.6294791308657744,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 32,
+    "industry_trust": 0.17166666666666708,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 32,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 33,
+    "validity_correlation": 0.4664542590195015,
+    "consumer_satisfaction": 0.6331195636935752,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 33,
+    "industry_trust": 0.15500000000000042,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 33,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 34,
+    "validity_correlation": 0.48018035910910073,
+    "consumer_satisfaction": 0.63673562440153,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 34,
+    "industry_trust": 0.13833333333333375,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 34,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 35,
+    "validity_correlation": 0.43291453830659926,
+    "consumer_satisfaction": 0.6406209024449907,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 35,
+    "industry_trust": 0.12166666666666709,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 35,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 36,
+    "validity_correlation": 0.4482849906816972,
+    "consumer_satisfaction": 0.6445948515838267,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 36,
+    "industry_trust": 0.10500000000000043,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 36,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 37,
+    "validity_correlation": 0.4818642074658468,
+    "consumer_satisfaction": 0.6482985655660827,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 37,
+    "industry_trust": 0.08833333333333376,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 37,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 38,
+    "validity_correlation": 0.4945392506577546,
+    "consumer_satisfaction": 0.6519450498828979,
+    "risk_beliefs": {
+      "gaming_risk": 1.0,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 38,
+    "industry_trust": 0.0716666666666671,
+    "avg_risk": 0.6666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 38,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 39,
+    "validity_correlation": 0.5048228855872408,
+    "consumer_satisfaction": 0.6553575120813055,
+    "risk_beliefs": {
+      "gaming_risk": 0.95,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 39,
+    "industry_trust": 0.0566666666666671,
+    "avg_risk": 0.65
+  },
+  {
+    "type": "planning",
+    "round": 39,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 40,
+    "validity_correlation": 0.5053090626072397,
+    "consumer_satisfaction": 0.6590466163095451,
+    "risk_beliefs": {
+      "gaming_risk": 0.8999999999999999,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 40,
+    "industry_trust": 0.04333333333333377,
+    "avg_risk": 0.6333333333333333
+  },
+  {
+    "type": "planning",
+    "round": 40,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 41,
+    "validity_correlation": 0.5077238632095151,
+    "consumer_satisfaction": 0.6630217499933544,
+    "risk_beliefs": {
+      "gaming_risk": 0.8499999999999999,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 41,
+    "industry_trust": 0.03166666666666711,
+    "avg_risk": 0.6166666666666666
+  },
+  {
+    "type": "planning",
+    "round": 41,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 42,
+    "validity_correlation": 0.5177475498016807,
+    "consumer_satisfaction": 0.6669937357745869,
+    "risk_beliefs": {
+      "gaming_risk": 0.7999999999999998,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 42,
+    "industry_trust": 0.021666666666667115,
+    "avg_risk": 0.6
+  },
+  {
+    "type": "planning",
+    "round": 42,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 43,
+    "validity_correlation": 0.5289124740194187,
+    "consumer_satisfaction": 0.6706399667427858,
+    "risk_beliefs": {
+      "gaming_risk": 0.7499999999999998,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 43,
+    "industry_trust": 0.013333333333333789,
+    "avg_risk": 0.5833333333333333
+  },
+  {
+    "type": "planning",
+    "round": 43,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 44,
+    "validity_correlation": 0.5544738577106912,
+    "consumer_satisfaction": 0.6741580596447585,
+    "risk_beliefs": {
+      "gaming_risk": 0.6999999999999997,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 44,
+    "industry_trust": 0.006666666666667135,
+    "avg_risk": 0.5666666666666665
+  },
+  {
+    "type": "planning",
+    "round": 44,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 45,
+    "validity_correlation": 0.5689174651234211,
+    "consumer_satisfaction": 0.677673300658484,
+    "risk_beliefs": {
+      "gaming_risk": 0.6499999999999997,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 45,
+    "industry_trust": 0.0016666666666671406,
+    "avg_risk": 0.5499999999999999
+  },
+  {
+    "type": "planning",
+    "round": 45,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 46,
+    "validity_correlation": 0.5777267540929911,
+    "consumer_satisfaction": 0.681406289826465,
+    "risk_beliefs": {
+      "gaming_risk": 0.5999999999999996,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 46,
+    "industry_trust": 0.0,
+    "avg_risk": 0.5333333333333332
+  },
+  {
+    "type": "planning",
+    "round": 46,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 47,
+    "validity_correlation": 0.5382194385155468,
+    "consumer_satisfaction": 0.6850603249521999,
+    "risk_beliefs": {
+      "gaming_risk": 0.5499999999999996,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 47,
+    "industry_trust": 0.0,
+    "avg_risk": 0.5166666666666665
+  },
+  {
+    "type": "planning",
+    "round": 47,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 48,
+    "validity_correlation": 0.5202788092216579,
+    "consumer_satisfaction": 0.6887689122947152,
+    "risk_beliefs": {
+      "gaming_risk": 0.4999999999999996,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 48,
+    "industry_trust": 1.665334536937735e-17,
+    "avg_risk": 0.49999999999999983
+  },
+  {
+    "type": "planning",
+    "round": 48,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  },
+  {
+    "type": "observation",
+    "round": 49,
+    "validity_correlation": 0.5215453543880075,
+    "consumer_satisfaction": 0.692497267010467,
+    "risk_beliefs": {
+      "gaming_risk": 0.4499999999999996,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 49,
+    "industry_trust": 0.001666666666666694,
+    "avg_risk": 0.4833333333333332
+  },
+  {
+    "type": "planning",
+    "round": 49,
+    "decision": "no_action",
+    "reason": "risks below threshold"
+  }
+]

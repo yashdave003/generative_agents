@@ -1,0 +1,14 @@
+{
+  "experiment_id": "exp_003_test_llm",
+  "name": "test_llm",
+  "description": "Test of LLM-driven planning",
+  "tags": [
+    "test",
+    "llm"
+  ],
+  "created_at": "2026-01-20T16:51:06.731039",
+  "git_commit": "fe05a71d",
+  "seed": 42,
+  "llm_mode": true,
+  "notes": "Completed at: 2026-01-20T16:51:38.586297"
+}

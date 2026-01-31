@@ -1,0 +1,12 @@
+{
+  "AlphaTech": {
+    "true_capability": 0.692497267010467
+  },
+  "QualityCorp": {
+    "true_capability": 0.7966057673690732
+  },
+  "Regulator": {
+    "true_risk_tolerance": 0.5,
+    "true_intervention_effectiveness": 0.5
+  }
+}

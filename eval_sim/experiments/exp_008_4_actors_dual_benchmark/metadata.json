@@ -1,0 +1,16 @@
+{
+  "experiment_id": "exp_008_4_actors_dual_benchmark",
+  "name": "4_actors_dual_benchmark",
+  "description": "Full 4-actor simulation with two benchmarks: MMLU_Academic (high validity) and Arena_Preference (high exploitability)",
+  "tags": [
+    "4-actor",
+    "dual-benchmark",
+    "consumer",
+    "policymaker"
+  ],
+  "created_at": "2026-01-30T09:59:16.185483",
+  "git_commit": "9f37e0e4",
+  "seed": 42,
+  "llm_mode": false,
+  "notes": ""
+}

@@ -1,0 +1,52 @@
+{
+  "AlphaTech": {
+    "true_capability": 0.6916017351210825
+  },
+  "QualityCorp": {
+    "true_capability": 0.7068800437353833
+  },
+  "Consumer_0": {
+    "true_satisfaction": 0.7068800437353833,
+    "true_quality_sensitivity": 0.5
+  },
+  "Consumer_1": {
+    "true_satisfaction": 0.7068800437353833,
+    "true_quality_sensitivity": 0.5
+  },
+  "Consumer_2": {
+    "true_satisfaction": 0.7068800437353833,
+    "true_quality_sensitivity": 0.5
+  },
+  "Consumer_3": {
+    "true_satisfaction": 0.7068800437353833,
+    "true_quality_sensitivity": 0.5
+  },
+  "Consumer_4": {
+    "true_satisfaction": 0.7068800437353833,
+    "true_quality_sensitivity": 0.5
+  },
+  "Consumer_5": {
+    "true_satisfaction": 0.7068800437353833,
+    "true_quality_sensitivity": 0.5
+  },
+  "Consumer_6": {
+    "true_satisfaction": 0.7068800437353833,
+    "true_quality_sensitivity": 0.5
+  },
+  "Consumer_7": {
+    "true_satisfaction": 0.7068800437353833,
+    "true_quality_sensitivity": 0.5
+  },
+  "Consumer_8": {
+    "true_satisfaction": 0.7068800437353833,
+    "true_quality_sensitivity": 0.5
+  },
+  "Consumer_9": {
+    "true_satisfaction": 0.7068800437353833,
+    "true_quality_sensitivity": 0.5
+  },
+  "Regulator": {
+    "true_risk_tolerance": 0.5,
+    "true_intervention_effectiveness": 0.5
+  }
+}

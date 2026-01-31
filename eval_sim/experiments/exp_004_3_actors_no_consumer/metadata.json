@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp_004_3_actors_no_consumer",
+  "name": "3_actors_no_consumer",
+  "description": "Simulation with Provider, Evaluator, and Policymaker. No consumers.",
+  "tags": [
+    "3-actor",
+    "policymaker",
+    "no-consumer"
+  ],
+  "created_at": "2026-01-30T07:10:05.812765",
+  "git_commit": "9f37e0e4",
+  "seed": 42,
+  "llm_mode": false,
+  "notes": "Completed at: 2026-01-30T07:10:19.478374"
+}

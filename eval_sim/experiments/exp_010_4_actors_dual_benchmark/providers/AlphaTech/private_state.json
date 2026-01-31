@@ -1,0 +1,345 @@
+{
+  "strategy_profile": "Aggressive competitor focused on market dominance and benchmark leadership",
+  "innate_traits": "risk-tolerant, competitive, short-term focused",
+  "believed_own_capability": 0.4885720969499504,
+  "believed_benchmark_exploitability": 0.4,
+  "capability_belief_confidence": 0.5,
+  "believed_competitor_capabilities": {
+    "QualityCorp": 0.516870528427043
+  },
+  "fundamental_research": 0.24552678477857287,
+  "training_optimization": 0.25,
+  "evaluation_engineering": 0.3044732152214271,
+  "safety_alignment": 0.2,
+  "effort_budget": 1.0,
+  "past_strategies": [
+    {
+      "round": 0,
+      "fundamental_research": 0.24107048806869794,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.3089295119313021,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 1,
+      "fundamental_research": 0.24439637804431927,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.3056036219556807,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 2,
+      "fundamental_research": 0.23876901381196056,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.3112309861880394,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 3,
+      "fundamental_research": 0.26300264408911134,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.28699735591088865,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 4,
+      "fundamental_research": 0.2524581651360838,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.29754183486391617,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 5,
+      "fundamental_research": 0.25167320962749534,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.29832679037250465,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 6,
+      "fundamental_research": 0.2412838263019021,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.3087161736980979,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 7,
+      "fundamental_research": 0.24464535571552484,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.3053546442844752,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 8,
+      "fundamental_research": 0.23370654902089502,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.316293450979105,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 9,
+      "fundamental_research": 0.23518614623183742,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.31481385376816257,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 10,
+      "fundamental_research": 0.2511274379684597,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2988725620315403,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 11,
+      "fundamental_research": 0.25702392779578226,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.29297607220421773,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 12,
+      "fundamental_research": 0.2543603820851262,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2956396179148738,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 13,
+      "fundamental_research": 0.25003631941735727,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2999636805826428,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 14,
+      "fundamental_research": 0.2607443762222297,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.28925562377777037,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 15,
+      "fundamental_research": 0.2520298843983553,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2979701156016447,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 16,
+      "fundamental_research": 0.25930574684491303,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.29069425315508696,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 17,
+      "fundamental_research": 0.2740766149063065,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2759233850936935,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 18,
+      "fundamental_research": 0.2707356038210222,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.27926439617897786,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 19,
+      "fundamental_research": 0.2634843705428402,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2865156294571598,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 20,
+      "fundamental_research": 0.2532490664204261,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2967509335795739,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 21,
+      "fundamental_research": 0.2590374875566913,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2909625124433087,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 22,
+      "fundamental_research": 0.2628541953302182,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.28714580466978185,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 23,
+      "fundamental_research": 0.27172938510110634,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.27827061489889365,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 24,
+      "fundamental_research": 0.2629332553602998,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.28706674463970017,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 25,
+      "fundamental_research": 0.2706359625544037,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2793640374455963,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 26,
+      "fundamental_research": 0.25693320720557367,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2930667927944263,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 27,
+      "fundamental_research": 0.2459652957197934,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.3040347042802066,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 28,
+      "fundamental_research": 0.24552678477857287,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.3044732152214271,
+      "safety_alignment": 0.2
+    }
+  ],
+  "observed_competitor_scores": {
+    "QualityCorp": [
+      [
+        0,
+        0.4839519308157311
+      ],
+      [
+        1,
+        0.346823369517587
+      ],
+      [
+        2,
+        0.4477610784120658
+      ],
+      [
+        3,
+        0.34001133252486776
+      ],
+      [
+        4,
+        0.41700565383079313
+      ],
+      [
+        5,
+        0.43261026295756094
+      ],
+      [
+        6,
+        0.4408454605383243
+      ],
+      [
+        7,
+        0.4602782811143423
+      ],
+      [
+        8,
+        0.4982232374322155
+      ],
+      [
+        9,
+        0.41487416622293777
+      ],
+      [
+        10,
+        0.40192492675288544
+      ],
+      [
+        11,
+        0.4696027325366573
+      ],
+      [
+        12,
+        0.47718127548813755
+      ],
+      [
+        13,
+        0.3768883436802939
+      ],
+      [
+        14,
+        0.46023031043564755
+      ],
+      [
+        15,
+        0.4843580263455719
+      ],
+      [
+        16,
+        0.4013868701377933
+      ],
+      [
+        17,
+        0.3347223900442863
+      ],
+      [
+        18,
+        0.506672109967471
+      ],
+      [
+        19,
+        0.4704392125136871
+      ],
+      [
+        20,
+        0.42800805654907115
+      ],
+      [
+        21,
+        0.45151688951795127
+      ],
+      [
+        22,
+        0.4947506940291486
+      ],
+      [
+        23,
+        0.3249689295978001
+      ],
+      [
+        24,
+        0.4492454234774167
+      ],
+      [
+        25,
+        0.5188071417681092
+      ],
+      [
+        26,
+        0.43349695807752264
+      ],
+      [
+        27,
+        0.5281194776435604
+      ],
+      [
+        28,
+        0.4718377267277458
+      ],
+      [
+        29,
+        0.5506543809098225
+      ]
+    ]
+  },
+  "recent_insights": []
+}

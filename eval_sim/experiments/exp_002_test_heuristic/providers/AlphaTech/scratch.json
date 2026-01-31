@@ -1,0 +1,88 @@
+{
+  "name": "AlphaTech",
+  "strategy_profile": "Aggressive competitor focused on market dominance and benchmark leadership",
+  "innate_traits": "risk-tolerant, competitive, short-term focused",
+  "true_capability": 0.517288147167442,
+  "last_score": 0.506182599131917,
+  "current_round": 4,
+  "believed_own_capability": 0.48348764933340405,
+  "believed_benchmark_exploitability": 0.4,
+  "capability_belief_confidence": 0.5,
+  "believed_competitor_capabilities": {
+    "QualityCorp": 0.38323449716490604
+  },
+  "rnd_investment": 0.41695595253945383,
+  "gaming_investment": 0.5830440474605462,
+  "effort_budget": 1.0,
+  "past_scores": [
+    [
+      0,
+      0.5054717079754432
+    ],
+    [
+      1,
+      0.5619723689341187
+    ],
+    [
+      2,
+      0.3039761779738137
+    ],
+    [
+      3,
+      0.5175108930613638
+    ],
+    [
+      4,
+      0.506182599131917
+    ]
+  ],
+  "past_strategies": [
+    [
+      0,
+      0.4653199615083412,
+      0.5346800384916588
+    ],
+    [
+      1,
+      0.42871416827720565,
+      0.5712858317227943
+    ],
+    [
+      2,
+      0.4178246344191917,
+      0.5821753655808083
+    ],
+    [
+      3,
+      0.41695595253945383,
+      0.5830440474605462
+    ]
+  ],
+  "observed_competitor_scores": {
+    "QualityCorp": [
+      [
+        0,
+        0.3710015893759504
+      ],
+      [
+        1,
+        0.5536232762253843
+      ],
+      [
+        2,
+        0.33346150370561217
+      ],
+      [
+        3,
+        0.432463231662976
+      ],
+      [
+        4,
+        0.38377875612612994
+      ]
+    ]
+  },
+  "importance_trigger_curr": 0.0,
+  "importance_trigger_max": 100.0,
+  "recent_insights": []
+}

@@ -1,0 +1,550 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "own_score": 0.3710015893759504,
+    "competitor_scores": {
+      "AlphaTech": 0.5054717079754432
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "updated_believed_capability": 0.4613004768127851,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.5054717079754432
+    }
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "rnd_investment": 0.5779143844186709,
+    "gaming_investment": 0.42208561558132907
+  },
+  {
+    "type": "execution",
+    "round": 0,
+    "capability_gain": 0.00577914384418671,
+    "new_true_capability": 0.5057791438441868
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "own_score": 0.5536232762253843,
+    "competitor_scores": {
+      "AlphaTech": 0.5619723689341187
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "updated_believed_capability": 0.48899731663656476,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.533722038454781
+    }
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "rnd_investment": 0.5776376390908918,
+    "gaming_investment": 0.42236236090910817
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "capability_gain": 0.005776376390908919,
+    "new_true_capability": 0.5115555202350957
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "own_score": 0.33346150370561217,
+    "competitor_scores": {
+      "AlphaTech": 0.3039761779738137
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "updated_believed_capability": 0.44233657275727895,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.4571400849611252
+    }
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "rnd_investment": 0.5925982438980769,
+    "gaming_investment": 0.4074017561019231
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "capability_gain": 0.005925982438980769,
+    "new_true_capability": 0.5174815026740764
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "own_score": 0.432463231662976,
+    "competitor_scores": {
+      "AlphaTech": 0.5175108930613638
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "updated_believed_capability": 0.43937457042898803,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.4611531466564321
+    }
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "rnd_investment": 0.589110711886278,
+    "gaming_investment": 0.41088928811372205
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "capability_gain": 0.0058911071188627795,
+    "new_true_capability": 0.5233726097929392
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "own_score": 0.38377875612612994,
+    "competitor_scores": {
+      "AlphaTech": 0.506182599131917
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "updated_believed_capability": 0.4226958261381306,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.4425565567223648
+    }
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "rnd_investment": 0.5900696347078829,
+    "gaming_investment": 0.4099303652921171
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "capability_gain": 0.005900696347078829,
+    "new_true_capability": 0.529273306140018
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "own_score": 0.5507530991639367,
+    "competitor_scores": {
+      "AlphaTech": 0.5906607425150198
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 5,
+    "updated_believed_capability": 0.4611130080458724,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.5381180782361001
+    }
+  },
+  {
+    "type": "planning",
+    "round": 5,
+    "rnd_investment": 0.5614974649048862,
+    "gaming_investment": 0.43850253509511383
+  },
+  {
+    "type": "execution",
+    "round": 5,
+    "capability_gain": 0.0056149746490488615,
+    "new_true_capability": 0.5348882807890668
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "own_score": 0.5967715510229284,
+    "competitor_scores": {
+      "AlphaTech": 0.5173687511870404
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 6,
+    "updated_believed_capability": 0.5018105709389892,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.5380706976113258
+    }
+  },
+  {
+    "type": "planning",
+    "round": 6,
+    "rnd_investment": 0.5818699366638317,
+    "gaming_investment": 0.4181300633361683
+  },
+  {
+    "type": "execution",
+    "round": 6,
+    "capability_gain": 0.005818699366638317,
+    "new_true_capability": 0.5407069801557052
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "own_score": 0.3970981556547119,
+    "competitor_scores": {
+      "AlphaTech": 0.5671179851206398
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 7,
+    "updated_believed_capability": 0.470396846353706,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.5583824929409
+    }
+  },
+  {
+    "type": "planning",
+    "round": 7,
+    "rnd_investment": 0.556007176706403,
+    "gaming_investment": 0.443992823293597
+  },
+  {
+    "type": "execution",
+    "round": 7,
+    "capability_gain": 0.00556007176706403,
+    "new_true_capability": 0.5462670519227693
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "own_score": 0.3974968820864378,
+    "competitor_scores": {
+      "AlphaTech": 0.5587441190480794
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 8,
+    "updated_believed_capability": 0.4485268570735255,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.5477436184519199
+    }
+  },
+  {
+    "type": "planning",
+    "round": 8,
+    "rnd_investment": 0.5503916193108028,
+    "gaming_investment": 0.4496083806891972
+  },
+  {
+    "type": "execution",
+    "round": 8,
+    "capability_gain": 0.005503916193108028,
+    "new_true_capability": 0.5517709681158773
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "own_score": 0.4936491817547881,
+    "competitor_scores": {
+      "AlphaTech": 0.6053701876344206
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 9,
+    "updated_believed_capability": 0.46206355447790426,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.5770774306010465
+    }
+  },
+  {
+    "type": "planning",
+    "round": 9,
+    "rnd_investment": 0.5424930619384288,
+    "gaming_investment": 0.45750693806157117
+  },
+  {
+    "type": "execution",
+    "round": 9,
+    "capability_gain": 0.005424930619384288,
+    "new_true_capability": 0.5571958987352617
+  },
+  {
+    "type": "observation",
+    "round": 10,
+    "own_score": 0.43632090918968175,
+    "competitor_scores": {
+      "AlphaTech": 0.495531902815567
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 10,
+    "updated_believed_capability": 0.4543407608914375,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.5532154031660224
+    }
+  },
+  {
+    "type": "planning",
+    "round": 10,
+    "rnd_investment": 0.5505626788627075,
+    "gaming_investment": 0.4494373211372925
+  },
+  {
+    "type": "execution",
+    "round": 10,
+    "capability_gain": 0.005505626788627075,
+    "new_true_capability": 0.5627015255238887
+  },
+  {
+    "type": "observation",
+    "round": 11,
+    "own_score": 0.490797449944165,
+    "competitor_scores": {
+      "AlphaTech": 0.6434419761943027
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 11,
+    "updated_believed_capability": 0.4652777676072557,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.5814480222147634
+    }
+  },
+  {
+    "type": "planning",
+    "round": 11,
+    "rnd_investment": 0.541914872696246,
+    "gaming_investment": 0.45808512730375395
+  },
+  {
+    "type": "execution",
+    "round": 11,
+    "capability_gain": 0.00541914872696246,
+    "new_true_capability": 0.5681206742508512
+  },
+  {
+    "type": "observation",
+    "round": 12,
+    "own_score": 0.4769923987527114,
+    "competitor_scores": {
+      "AlphaTech": 0.4815129012232289
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 12,
+    "updated_believed_capability": 0.4687921569508924,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.5401622600776995
+    }
+  },
+  {
+    "type": "planning",
+    "round": 12,
+    "rnd_investment": 0.5643149484365965,
+    "gaming_investment": 0.43568505156340354
+  },
+  {
+    "type": "execution",
+    "round": 12,
+    "capability_gain": 0.005643149484365965,
+    "new_true_capability": 0.5737638237352172
+  },
+  {
+    "type": "observation",
+    "round": 13,
+    "own_score": 0.5471003459419108,
+    "competitor_scores": {
+      "AlphaTech": 0.5833118847180099
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 13,
+    "updated_believed_capability": 0.49228461364819787,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.5694222540451804
+    }
+  },
+  {
+    "type": "planning",
+    "round": 13,
+    "rnd_investment": 0.5614311798015087,
+    "gaming_investment": 0.4385688201984913
+  },
+  {
+    "type": "execution",
+    "round": 13,
+    "capability_gain": 0.0056143117980150875,
+    "new_true_capability": 0.5793781355332323
+  },
+  {
+    "type": "observation",
+    "round": 14,
+    "own_score": 0.5582890002236737,
+    "competitor_scores": {
+      "AlphaTech": 0.5774848920871337
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 14,
+    "updated_believed_capability": 0.5120859296208407,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.5474365593427909
+    }
+  },
+  {
+    "type": "planning",
+    "round": 14,
+    "rnd_investment": 0.5823246851390248,
+    "gaming_investment": 0.4176753148609752
+  },
+  {
+    "type": "execution",
+    "round": 14,
+    "capability_gain": 0.005823246851390248,
+    "new_true_capability": 0.5852013823846225
+  },
+  {
+    "type": "observation",
+    "round": 15,
+    "own_score": 0.47341829474601793,
+    "competitor_scores": {
+      "AlphaTech": 0.7553048570232556
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 15,
+    "updated_believed_capability": 0.5004856391583938,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.6387005446094663
+    }
+  },
+  {
+    "type": "planning",
+    "round": 15,
+    "rnd_investment": 0.5308925472744638,
+    "gaming_investment": 0.4691074527255362
+  },
+  {
+    "type": "execution",
+    "round": 15,
+    "capability_gain": 0.005308925472744638,
+    "new_true_capability": 0.5905103078573671
+  },
+  {
+    "type": "observation",
+    "round": 16,
+    "own_score": 0.4492568058567532,
+    "competitor_scores": {
+      "AlphaTech": 0.48566348327708614
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 16,
+    "updated_believed_capability": 0.4851169891679016,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.6061510774624917
+    }
+  },
+  {
+    "type": "planning",
+    "round": 16,
+    "rnd_investment": 0.5394829558527049,
+    "gaming_investment": 0.4605170441472951
+  },
+  {
+    "type": "execution",
+    "round": 16,
+    "capability_gain": 0.005394829558527049,
+    "new_true_capability": 0.5959051374158942
+  },
+  {
+    "type": "observation",
+    "round": 17,
+    "own_score": 0.6451600865000389,
+    "competitor_scores": {
+      "AlphaTech": 0.6025595567407604
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 17,
+    "updated_believed_capability": 0.5331299183675428,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.6145092990137008
+    }
+  },
+  {
+    "type": "planning",
+    "round": 17,
+    "rnd_investment": 0.559310309676921,
+    "gaming_investment": 0.44068969032307903
+  },
+  {
+    "type": "execution",
+    "round": 17,
+    "capability_gain": 0.00559310309676921,
+    "new_true_capability": 0.6014982405126634
+  },
+  {
+    "type": "observation",
+    "round": 18,
+    "own_score": 0.44720554324338135,
+    "competitor_scores": {
+      "AlphaTech": 0.535361365784747
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 18,
+    "updated_believed_capability": 0.5073526058302943,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.5411948019341979
+    }
+  },
+  {
+    "type": "planning",
+    "round": 18,
+    "rnd_investment": 0.5830789019480481,
+    "gaming_investment": 0.4169210980519519
+  },
+  {
+    "type": "execution",
+    "round": 18,
+    "capability_gain": 0.005830789019480482,
+    "new_true_capability": 0.607329029532144
+  },
+  {
+    "type": "observation",
+    "round": 19,
+    "own_score": 0.5944198739679588,
+    "competitor_scores": {
+      "AlphaTech": 0.4681421007552149
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 19,
+    "updated_believed_capability": 0.5334727862715936,
+    "updated_competitor_beliefs": {
+      "AlphaTech": 0.5353543410935742
+    }
+  }
+]

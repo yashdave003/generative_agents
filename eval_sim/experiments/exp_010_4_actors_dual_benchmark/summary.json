@@ -1,0 +1,101 @@
+{
+  "n_rounds": 30,
+  "final_scores": {
+    "AlphaTech": 0.5484565374285122,
+    "QualityCorp": 0.5506543809098225
+  },
+  "final_true_capabilities": {
+    "AlphaTech": 0.6916017351210825,
+    "QualityCorp": 0.7068800437353833
+  },
+  "final_believed_capabilities": {
+    "AlphaTech": 0.4885720969499504,
+    "QualityCorp": 0.495846242477499
+  },
+  "final_strategies": {
+    "AlphaTech": {
+      "fundamental_research": 0.24552678477857287,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.3044732152214271,
+      "safety_alignment": 0.2
+    },
+    "QualityCorp": {
+      "fundamental_research": 0.3069912604228678,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.14300873957713217,
+      "safety_alignment": 0.3
+    }
+  },
+  "leaderboard": [
+    [
+      "QualityCorp",
+      0.5506543809098225
+    ],
+    [
+      "AlphaTech",
+      0.5484565374285122
+    ]
+  ],
+  "validity_correlation": 0.4386053821660388,
+  "benchmark_params": {
+    "validity": 0.7999999999999999,
+    "exploitability": 0.3,
+    "noise": 0.08
+  },
+  "provider_summaries": {
+    "AlphaTech": {
+      "initial_capability": 0.5,
+      "final_capability": 0.6916017351210825,
+      "capability_growth": 0.19160173512108247,
+      "mean_score": 0.4530739461882575,
+      "score_std": 0.0726794719264341,
+      "mean_fundamental_research": 0.2539327026692435,
+      "mean_training_optimization": 0.25,
+      "mean_evaluation_engineering": 0.2944006306640898,
+      "mean_safety_alignment": 0.2016666666666667
+    },
+    "QualityCorp": {
+      "initial_capability": 0.5,
+      "final_capability": 0.7068800437353833,
+      "capability_growth": 0.20688004373538327,
+      "mean_score": 0.44390655498556686,
+      "score_std": 0.056895365825302587,
+      "mean_fundamental_research": 0.29721438984615034,
+      "mean_training_optimization": 0.25,
+      "mean_evaluation_engineering": 0.15445227682051632,
+      "mean_safety_alignment": 0.2983333333333333
+    }
+  },
+  "consumer_summary": {
+    "n_consumers": 10,
+    "mean_satisfaction": 0.6048492875527025,
+    "final_satisfaction": 0.7068800437353833,
+    "total_subscription_switches": 10
+  },
+  "policymaker_summary": {
+    "n_policymakers": 1,
+    "total_interventions": 17,
+    "intervention_types": [
+      "mandate_benchmark"
+    ],
+    "active_regulations": [
+      "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R17 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R18 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R20 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R23 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R24 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R25 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R26 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+      "Validity_Mandate_R28 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+    ]
+  }
+}

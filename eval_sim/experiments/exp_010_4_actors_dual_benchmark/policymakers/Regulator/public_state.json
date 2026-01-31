@@ -1,0 +1,74 @@
+{
+  "name": "Regulator",
+  "current_round": 29,
+  "published_scores": [
+    [
+      1,
+      "[Round 1] Issued mandate_benchmark: Validity correlation dropped to -0.64"
+    ],
+    [
+      2,
+      "[Round 2] Issued mandate_benchmark: Validity correlation dropped to 0.03"
+    ],
+    [
+      3,
+      "[Round 3] Issued mandate_benchmark: Validity correlation dropped to 0.13"
+    ],
+    [
+      4,
+      "[Round 4] Issued mandate_benchmark: Validity correlation dropped to 0.16"
+    ],
+    [
+      5,
+      "[Round 5] Issued mandate_benchmark: Validity correlation dropped to 0.20"
+    ],
+    [
+      6,
+      "[Round 6] Issued mandate_benchmark: Validity correlation dropped to 0.26"
+    ],
+    [
+      9,
+      "[Round 9] Issued mandate_benchmark: Validity correlation dropped to 0.37"
+    ],
+    [
+      10,
+      "[Round 10] Issued mandate_benchmark: Validity correlation dropped to 0.40"
+    ],
+    [
+      13,
+      "[Round 13] Issued mandate_benchmark: Validity correlation dropped to 0.38"
+    ],
+    [
+      17,
+      "[Round 17] Issued mandate_benchmark: Validity correlation dropped to 0.35"
+    ],
+    [
+      18,
+      "[Round 18] Issued mandate_benchmark: Validity correlation dropped to 0.39"
+    ],
+    [
+      20,
+      "[Round 20] Issued mandate_benchmark: Validity correlation dropped to 0.40"
+    ],
+    [
+      23,
+      "[Round 23] Issued mandate_benchmark: Validity correlation dropped to 0.37"
+    ],
+    [
+      24,
+      "[Round 24] Issued mandate_benchmark: Validity correlation dropped to 0.33"
+    ],
+    [
+      25,
+      "[Round 25] Issued mandate_benchmark: Validity correlation dropped to 0.40"
+    ],
+    [
+      26,
+      "[Round 26] Issued mandate_benchmark: Validity correlation dropped to 0.38"
+    ],
+    [
+      28,
+      "[Round 28] Issued mandate_benchmark: Validity correlation dropped to 0.38"
+    ]
+  ]
+}

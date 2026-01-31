@@ -1,0 +1,3040 @@
+[
+  {
+    "round": 0,
+    "scores": {
+      "AlphaTech": 0.34728963681574754,
+      "QualityCorp": 0.4839519308157311
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5,
+      "QualityCorp": 0.5
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.4541868910447242,
+      "QualityCorp": 0.4951855792447193
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.25,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.25,
+        "safety_alignment": 0.25
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.25,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.25,
+        "safety_alignment": 0.25
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.4839519308157311
+      ],
+      [
+        "AlphaTech",
+        0.34728963681574754
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.4468773663803546,
+        "QualityCorp": 0.4825360956645166
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.24770190725114055,
+        "QualityCorp": 0.48536776596694564
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.5,
+        "Consumer_1": 0.5,
+        "Consumer_2": 0.5,
+        "Consumer_3": 0.5,
+        "Consumer_4": 0.5,
+        "Consumer_5": 0.5,
+        "Consumer_6": 0.5,
+        "Consumer_7": 0.5,
+        "Consumer_8": 0.5,
+        "Consumer_9": 0.5
+      },
+      "switches": 10,
+      "avg_satisfaction": 0.5,
+      "min_satisfaction": 0.5
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    }
+  },
+  {
+    "round": 1,
+    "scores": {
+      "AlphaTech": 0.2625936219436102,
+      "QualityCorp": 0.346823369517587
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5064249868329618,
+      "QualityCorp": 0.5077711629582017
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.39670891031439,
+      "QualityCorp": 0.4506769163265796
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.24107048806869794,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3089295119313021,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.34436878272869154,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.10563121727130846,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.346823369517587
+      ],
+      [
+        "AlphaTech",
+        0.2625936219436102
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.2768608304478797,
+        "QualityCorp": 0.42595097217436195
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.24832641343934073,
+        "QualityCorp": 0.2676957668608121
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.5077711629582017,
+        "Consumer_1": 0.5077711629582017,
+        "Consumer_2": 0.5077711629582017,
+        "Consumer_3": 0.5077711629582017,
+        "Consumer_4": 0.5077711629582017,
+        "Consumer_5": 0.5077711629582017,
+        "Consumer_6": 0.5077711629582017,
+        "Consumer_7": 0.5077711629582017,
+        "Consumer_8": 0.5077711629582017,
+        "Consumer_9": 0.5077711629582017
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.5077711629582017,
+      "min_satisfaction": 0.5077711629582017
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 2,
+    "scores": {
+      "AlphaTech": 0.3701531168941895,
+      "QualityCorp": 0.4477610784120658
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5128965361255823,
+      "QualityCorp": 0.5155332511633787
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.3887421722883298,
+      "QualityCorp": 0.4498021649522254
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.24439637804431927,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3056036219556807,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.3437205860840702,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.10627941391592975,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.4477610784120658
+      ],
+      [
+        "AlphaTech",
+        0.3701531168941895
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.43647746227613393,
+        "QualityCorp": 0.49234358617216284
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.303828771512245,
+        "QualityCorp": 0.4031785706519687
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.5155332511633787,
+        "Consumer_1": 0.5155332511633787,
+        "Consumer_2": 0.5155332511633787,
+        "Consumer_3": 0.5155332511633787,
+        "Consumer_4": 0.5155332511633787,
+        "Consumer_5": 0.5155332511633787,
+        "Consumer_6": 0.5155332511633787,
+        "Consumer_7": 0.5155332511633787,
+        "Consumer_8": 0.5155332511633787,
+        "Consumer_9": 0.5155332511633787
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.5155332511633787,
+      "min_satisfaction": 0.5155332511633787
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 3,
+    "scores": {
+      "AlphaTech": 0.49807073282237935,
+      "QualityCorp": 0.34001133252486776
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5192893023189498,
+      "QualityCorp": 0.523200369330263
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.42154074044854467,
+      "QualityCorp": 0.4168649152240181
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.23876901381196056,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3112309861880394,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.3369370119203129,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.11306298807968711,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.49807073282237935
+      ],
+      [
+        "QualityCorp",
+        0.34001133252486776
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.4487246864169806,
+        "QualityCorp": 0.4661367117715459
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.5474167792277781,
+        "QualityCorp": 0.2138859532781896
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.523200369330263,
+        "Consumer_1": 0.523200369330263,
+        "Consumer_2": 0.523200369330263,
+        "Consumer_3": 0.523200369330263,
+        "Consumer_4": 0.523200369330263,
+        "Consumer_5": 0.523200369330263,
+        "Consumer_6": 0.523200369330263,
+        "Consumer_7": 0.523200369330263,
+        "Consumer_8": 0.523200369330263,
+        "Consumer_9": 0.523200369330263
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.523200369330263,
+      "min_satisfaction": 0.523200369330263
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 4,
+    "scores": {
+      "AlphaTech": 0.3823601790962459,
+      "QualityCorp": 0.41700565383079313
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5260213393361973,
+      "QualityCorp": 0.5305180575138797
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.409786572042855,
+      "QualityCorp": 0.41690713680605057
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.26300264408911134,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.28699735591088865,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.3119777274011875,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.1380222725988125,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.41700565383079313
+      ],
+      [
+        "AlphaTech",
+        0.3823601790962459
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.47614689622753764,
+        "QualityCorp": 0.5071124746495786
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.2885734619649542,
+        "QualityCorp": 0.3268988330120076
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.5305180575138797,
+        "Consumer_1": 0.5305180575138797,
+        "Consumer_2": 0.5305180575138797,
+        "Consumer_3": 0.5305180575138797,
+        "Consumer_4": 0.5305180575138797,
+        "Consumer_5": 0.5305180575138797,
+        "Consumer_6": 0.5305180575138797,
+        "Consumer_7": 0.5305180575138797,
+        "Consumer_8": 0.5305180575138797,
+        "Consumer_9": 0.5305180575138797
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.5305180575138797,
+      "min_satisfaction": 0.5305180575138797
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 5,
+    "scores": {
+      "AlphaTech": 0.3842306047757553,
+      "QualityCorp": 0.43261026295756094
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5326057536481025,
+      "QualityCorp": 0.5376682498481272
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.40211978186272507,
+      "QualityCorp": 0.4216180746515037
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.2524581651360838,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.29754183486391617,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.30001373816053367,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.14998626183946628,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.43261026295756094
+      ],
+      [
+        "AlphaTech",
+        0.3842306047757553
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.43807437897261353,
+        "QualityCorp": 0.5414366705379761
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.3303868305788972,
+        "QualityCorp": 0.3237838553771458
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.5376682498481272,
+        "Consumer_1": 0.5376682498481272,
+        "Consumer_2": 0.5376682498481272,
+        "Consumer_3": 0.5376682498481272,
+        "Consumer_4": 0.5376682498481272,
+        "Consumer_5": 0.5376682498481272,
+        "Consumer_6": 0.5376682498481272,
+        "Consumer_7": 0.5376682498481272,
+        "Consumer_8": 0.5376682498481272,
+        "Consumer_9": 0.5376682498481272
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.5376682498481272,
+      "min_satisfaction": 0.5376682498481272
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 6,
+    "scores": {
+      "AlphaTech": 0.39872010937108515,
+      "QualityCorp": 0.4408454605383243
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5391791785828874,
+      "QualityCorp": 0.5448185196382914
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.40109988011523307,
+      "QualityCorp": 0.42738629041754983
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.25167320962749534,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.29832679037250465,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.30001927072601303,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.14998072927398698,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.4408454605383243
+      ],
+      [
+        "AlphaTech",
+        0.39872010937108515
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.4239265282267868,
+        "QualityCorp": 0.49193781618955984
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.37351369051538347,
+        "QualityCorp": 0.38975310488708875
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.5448185196382914,
+        "Consumer_1": 0.5448185196382914,
+        "Consumer_2": 0.5448185196382914,
+        "Consumer_3": 0.5448185196382914,
+        "Consumer_4": 0.5448185196382914,
+        "Consumer_5": 0.5448185196382914,
+        "Consumer_6": 0.5448185196382914,
+        "Consumer_7": 0.5448185196382914,
+        "Consumer_8": 0.5448185196382914,
+        "Consumer_9": 0.5448185196382914
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.5448185196382914,
+      "min_satisfaction": 0.5448185196382914
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 7,
+    "scores": {
+      "AlphaTech": 0.486530903914985,
+      "QualityCorp": 0.4602782811143423
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5456071521511141,
+      "QualityCorp": 0.5521321068075048
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.4267291872551586,
+      "QualityCorp": 0.43725388762658757
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.2412838263019021,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3087161736980979,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.3116847978009563,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.1383152021990437,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.486530903914985
+      ],
+      [
+        "QualityCorp",
+        0.4602782811143423
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.4972887862813991,
+        "QualityCorp": 0.6254858617135547
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.47577302154857093,
+        "QualityCorp": 0.2950707005151299
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.5521321068075048,
+        "Consumer_1": 0.5521321068075048,
+        "Consumer_2": 0.5521321068075048,
+        "Consumer_3": 0.5521321068075048,
+        "Consumer_4": 0.5521321068075048,
+        "Consumer_5": 0.5521321068075048,
+        "Consumer_6": 0.5521321068075048,
+        "Consumer_7": 0.5521321068075048,
+        "Consumer_8": 0.5521321068075048,
+        "Consumer_9": 0.5521321068075048
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.5521321068075048,
+      "min_satisfaction": 0.5521321068075048
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 8,
+    "scores": {
+      "AlphaTech": 0.378090195619999,
+      "QualityCorp": 0.4982232374322155
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5520821871311314,
+      "QualityCorp": 0.5593412988702499
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.41213748976461073,
+      "QualityCorp": 0.4555446925682759
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.24464535571552484,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3053546442844752,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.3042280044817937,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.1457719955182063,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.4982232374322155
+      ],
+      [
+        "AlphaTech",
+        0.378090195619999
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.4281682493647849,
+        "QualityCorp": 0.5098708724988781
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.32801214187521316,
+        "QualityCorp": 0.486575602365553
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.5593412988702499,
+        "Consumer_1": 0.5593412988702499,
+        "Consumer_2": 0.5593412988702499,
+        "Consumer_3": 0.5593412988702499,
+        "Consumer_4": 0.5593412988702499,
+        "Consumer_5": 0.5593412988702499,
+        "Consumer_6": 0.5593412988702499,
+        "Consumer_7": 0.5593412988702499,
+        "Consumer_8": 0.5593412988702499,
+        "Consumer_9": 0.5593412988702499
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.5593412988702499,
+      "min_satisfaction": 0.5593412988702499
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 9,
+    "scores": {
+      "AlphaTech": 0.3997204650913193,
+      "QualityCorp": 0.41487416622293777
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5584040788174239,
+      "QualityCorp": 0.5666359088865681
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.4084123823626233,
+      "QualityCorp": 0.4433435346646744
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.23370654902089502,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.316293450979105,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.3103292868798759,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.13967071312012413,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.41487416622293777
+      ],
+      [
+        "AlphaTech",
+        0.3997204650913193
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.46607387702966857,
+        "QualityCorp": 0.3999205940347665
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.33336705315297,
+        "QualityCorp": 0.42982773841110905
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.5666359088865681,
+        "Consumer_1": 0.5666359088865681,
+        "Consumer_2": 0.5666359088865681,
+        "Consumer_3": 0.5666359088865681,
+        "Consumer_4": 0.5666359088865681,
+        "Consumer_5": 0.5666359088865681,
+        "Consumer_6": 0.5666359088865681,
+        "Consumer_7": 0.5666359088865681,
+        "Consumer_8": 0.5666359088865681,
+        "Consumer_9": 0.5666359088865681
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.5666359088865681,
+      "min_satisfaction": 0.5666359088865681
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 10,
+    "scores": {
+      "AlphaTech": 0.5207007857012518,
+      "QualityCorp": 0.40192492675288544
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5647466848646696,
+      "QualityCorp": 0.573877873541683
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.44209890336421187,
+      "QualityCorp": 0.4309179522911377
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.23518614623183742,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.31481385376816257,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.306568903936772,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.14343109606322801,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5207007857012518
+      ],
+      [
+        "QualityCorp",
+        0.40192492675288544
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.5395909284271456,
+        "QualityCorp": 0.4187703208959413
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.5018106429753578,
+        "QualityCorp": 0.3850795326098296
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.573877873541683,
+        "Consumer_1": 0.573877873541683,
+        "Consumer_2": 0.573877873541683,
+        "Consumer_3": 0.573877873541683,
+        "Consumer_4": 0.573877873541683,
+        "Consumer_5": 0.573877873541683,
+        "Consumer_6": 0.573877873541683,
+        "Consumer_7": 0.573877873541683,
+        "Consumer_8": 0.573877873541683,
+        "Consumer_9": 0.573877873541683
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.573877873541683,
+      "min_satisfaction": 0.573877873541683
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 11,
+    "scores": {
+      "AlphaTech": 0.4758148960060648,
+      "QualityCorp": 0.4696027325366573
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.571312468996228,
+      "QualityCorp": 0.5810198129163281
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.45221370115676773,
+      "QualityCorp": 0.4425233863647936
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.2511274379684597,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2988725620315403,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.29942424104608434,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.15057575895391573,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.4758148960060648
+      ],
+      [
+        "QualityCorp",
+        0.4696027325366573
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.4932833705110793,
+        "QualityCorp": 0.5480819708747701
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.4583464215010503,
+        "QualityCorp": 0.3911234941985446
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.5810198129163281,
+        "Consumer_1": 0.5810198129163281,
+        "Consumer_2": 0.5810198129163281,
+        "Consumer_3": 0.5810198129163281,
+        "Consumer_4": 0.5810198129163281,
+        "Consumer_5": 0.5810198129163281,
+        "Consumer_6": 0.5810198129163281,
+        "Consumer_7": 0.5810198129163281,
+        "Consumer_8": 0.5810198129163281,
+        "Consumer_9": 0.5810198129163281
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.5810198129163281,
+      "min_satisfaction": 0.5810198129163281
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 12,
+    "scores": {
+      "AlphaTech": 0.49184887022192225,
+      "QualityCorp": 0.47718127548813755
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.577960803985369,
+      "QualityCorp": 0.5880736805335421
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.46410425187631404,
+      "QualityCorp": 0.45292075310179675
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.25702392779578226,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.29297607220421773,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.2931334012295745,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.15686659877042552,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.49184887022192225
+      ],
+      [
+        "QualityCorp",
+        0.47718127548813755
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.5430495747324263,
+        "QualityCorp": 0.5077064902113707
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.4406481657114181,
+        "QualityCorp": 0.4466560607649044
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.5880736805335421,
+        "Consumer_1": 0.5880736805335421,
+        "Consumer_2": 0.5880736805335421,
+        "Consumer_3": 0.5880736805335421,
+        "Consumer_4": 0.5880736805335421,
+        "Consumer_5": 0.5880736805335421,
+        "Consumer_6": 0.5880736805335421,
+        "Consumer_7": 0.5880736805335421,
+        "Consumer_8": 0.5880736805335421,
+        "Consumer_9": 0.5880736805335421
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.5880736805335421,
+      "min_satisfaction": 0.5880736805335421
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 13,
+    "scores": {
+      "AlphaTech": 0.3882406854871131,
+      "QualityCorp": 0.3768883436802939
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5845718493345607,
+      "QualityCorp": 0.5950422373238687
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.44134518195955375,
+      "QualityCorp": 0.43011103027534586
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.2543603820851262,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2956396179148738,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.28703977073761516,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.16296022926238485,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.3882406854871131
+      ],
+      [
+        "QualityCorp",
+        0.3768883436802939
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.3776925794915339,
+        "QualityCorp": 0.4530703981492859
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.39878879148269236,
+        "QualityCorp": 0.3007062892113019
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.5950422373238687,
+        "Consumer_1": 0.5950422373238687,
+        "Consumer_2": 0.5950422373238687,
+        "Consumer_3": 0.5950422373238687,
+        "Consumer_4": 0.5950422373238687,
+        "Consumer_5": 0.5950422373238687,
+        "Consumer_6": 0.5950422373238687,
+        "Consumer_7": 0.5950422373238687,
+        "Consumer_8": 0.5950422373238687,
+        "Consumer_9": 0.5950422373238687
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.5950422373238687,
+      "min_satisfaction": 0.5950422373238687
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 14,
+    "scores": {
+      "AlphaTech": 0.5499097885681252,
+      "QualityCorp": 0.46023031043564755
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.5911223578064038,
+      "QualityCorp": 0.6021004374186241
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.47391456394212517,
+      "QualityCorp": 0.43914681432343633
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.25003631941735727,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2999636805826428,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.29344286391109375,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.1565571360889063,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5499097885681252
+      ],
+      [
+        "QualityCorp",
+        0.46023031043564755
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.4778832373994261,
+        "QualityCorp": 0.42650400292744134
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.6219363397368243,
+        "QualityCorp": 0.4939566179438538
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.6021004374186241,
+        "Consumer_1": 0.6021004374186241,
+        "Consumer_2": 0.6021004374186241,
+        "Consumer_3": 0.6021004374186241,
+        "Consumer_4": 0.6021004374186241,
+        "Consumer_5": 0.6021004374186241,
+        "Consumer_6": 0.6021004374186241,
+        "Consumer_7": 0.6021004374186241,
+        "Consumer_8": 0.6021004374186241,
+        "Consumer_9": 0.6021004374186241
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.6021004374186241,
+      "min_satisfaction": 0.6021004374186241
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 15,
+    "scores": {
+      "AlphaTech": 0.3850610446295595,
+      "QualityCorp": 0.4843580263455719
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.597822779073515,
+      "QualityCorp": 0.6090928549567944
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.44725850814835544,
+      "QualityCorp": 0.45271017793007695
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.2607443762222297,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.28925562377777037,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.28874410986931487,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.1612558901306852,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.4843580263455719
+      ],
+      [
+        "AlphaTech",
+        0.3850610446295595
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.3696616476695469,
+        "QualityCorp": 0.5148075592855975
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.400460441589572,
+        "QualityCorp": 0.45390849340554634
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.6090928549567944,
+        "Consumer_1": 0.6090928549567944,
+        "Consumer_2": 0.6090928549567944,
+        "Consumer_3": 0.6090928549567944,
+        "Consumer_4": 0.6090928549567944,
+        "Consumer_5": 0.6090928549567944,
+        "Consumer_6": 0.6090928549567944,
+        "Consumer_7": 0.6090928549567944,
+        "Consumer_8": 0.6090928549567944,
+        "Consumer_9": 0.6090928549567944
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.6090928549567944,
+      "min_satisfaction": 0.6090928549567944
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 16,
+    "scores": {
+      "AlphaTech": 0.5553220091739965,
+      "QualityCorp": 0.4013868701377933
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.604401197455092,
+      "QualityCorp": 0.6162917415779421
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.47967755845604776,
+      "QualityCorp": 0.43731318559239185
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.2520298843983553,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2979701156016447,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.3034919015105433,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.14650809848945673,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5553220091739965
+      ],
+      [
+        "QualityCorp",
+        0.4013868701377933
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.56723639475165,
+        "QualityCorp": 0.47832111634652974
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.543407623596343,
+        "QualityCorp": 0.32445262392905677
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.6162917415779421,
+        "Consumer_1": 0.6162917415779421,
+        "Consumer_2": 0.6162917415779421,
+        "Consumer_3": 0.6162917415779421,
+        "Consumer_4": 0.6162917415779421,
+        "Consumer_5": 0.6162917415779421,
+        "Consumer_6": 0.6162917415779421,
+        "Consumer_7": 0.6162917415779421,
+        "Consumer_8": 0.6162917415779421,
+        "Consumer_9": 0.6162917415779421
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.6162917415779421,
+      "min_satisfaction": 0.6162917415779421
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 17,
+    "scores": {
+      "AlphaTech": 0.5043450698144629,
+      "QualityCorp": 0.3347223900442863
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.6110814779109208,
+      "QualityCorp": 0.6231920469781098
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.48707781186357224,
+      "QualityCorp": 0.40653594692796013
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.25930574684491303,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.29069425315508696,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.28216467144054946,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.1678353285594506,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5043450698144629
+      ],
+      [
+        "QualityCorp",
+        0.3347223900442863
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.5836657356132667,
+        "QualityCorp": 0.4116039112858046
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.4250244040156592,
+        "QualityCorp": 0.257840868802768
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.6231920469781098,
+        "Consumer_1": 0.6231920469781098,
+        "Consumer_2": 0.6231920469781098,
+        "Consumer_3": 0.6231920469781098,
+        "Consumer_4": 0.6231920469781098,
+        "Consumer_5": 0.6231920469781098,
+        "Consumer_6": 0.6231920469781098,
+        "Consumer_7": 0.6231920469781098,
+        "Consumer_8": 0.6231920469781098,
+        "Consumer_9": 0.6231920469781098
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.6231920469781098,
+      "min_satisfaction": 0.6231920469781098
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R17 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 18,
+    "scores": {
+      "AlphaTech": 0.47474889271807835,
+      "QualityCorp": 0.506672109967471
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.6179685505196091,
+      "QualityCorp": 0.630026878582142
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.48337913611992406,
+      "QualityCorp": 0.43657679583981335
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.2740766149063065,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2759233850936935,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.2774879717165861,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.1725120282834139,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.506672109967471
+      ],
+      [
+        "AlphaTech",
+        0.47474889271807835
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.4456517621939907,
+        "QualityCorp": 0.5309416442968661
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.503846023242166,
+        "QualityCorp": 0.482402575638076
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.630026878582142,
+        "Consumer_1": 0.630026878582142,
+        "Consumer_2": 0.630026878582142,
+        "Consumer_3": 0.630026878582142,
+        "Consumer_4": 0.630026878582142,
+        "Consumer_5": 0.630026878582142,
+        "Consumer_6": 0.630026878582142,
+        "Consumer_7": 0.630026878582142,
+        "Consumer_8": 0.630026878582142,
+        "Consumer_9": 0.630026878582142
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.630026878582142,
+      "min_satisfaction": 0.630026878582142
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R17 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R18 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 19,
+    "scores": {
+      "AlphaTech": 0.47953470233556217,
+      "QualityCorp": 0.4704392125136871
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.6248088489731034,
+      "QualityCorp": 0.6368623187642801
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.4822258059846155,
+      "QualityCorp": 0.44673552084197543
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.2707356038210222,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.27926439617897786,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.27753144158129023,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.17246855841870978,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.47953470233556217
+      ],
+      [
+        "QualityCorp",
+        0.4704392125136871
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.4908006631276679,
+        "QualityCorp": 0.5750592567864949
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.4682687415434565,
+        "QualityCorp": 0.36581916824087923
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.6368623187642801,
+        "Consumer_1": 0.6368623187642801,
+        "Consumer_2": 0.6368623187642801,
+        "Consumer_3": 0.6368623187642801,
+        "Consumer_4": 0.6368623187642801,
+        "Consumer_5": 0.6368623187642801,
+        "Consumer_6": 0.6368623187642801,
+        "Consumer_7": 0.6368623187642801,
+        "Consumer_8": 0.6368623187642801,
+        "Consumer_9": 0.6368623187642801
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.6368623187642801,
+      "min_satisfaction": 0.6368623187642801
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R17 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R18 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 20,
+    "scores": {
+      "AlphaTech": 0.47215094518533074,
+      "QualityCorp": 0.42800805654907115
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.6315476301607031,
+      "QualityCorp": 0.643846527821001
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.4792033477448301,
+      "QualityCorp": 0.4411172815541041
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.2634843705428402,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2865156294571598,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.28815778976578227,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.16184221023421774,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.47215094518533074
+      ],
+      [
+        "QualityCorp",
+        0.42800805654907115
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.5675665297842998,
+        "QualityCorp": 0.5005987134526746
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.3767353605863617,
+        "QualityCorp": 0.3554173996454677
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.643846527821001,
+        "Consumer_1": 0.643846527821001,
+        "Consumer_2": 0.643846527821001,
+        "Consumer_3": 0.643846527821001,
+        "Consumer_4": 0.643846527821001,
+        "Consumer_5": 0.643846527821001,
+        "Consumer_6": 0.643846527821001,
+        "Consumer_7": 0.643846527821001,
+        "Consumer_8": 0.643846527821001,
+        "Consumer_9": 0.643846527821001
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.643846527821001,
+      "min_satisfaction": 0.643846527821001
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R17 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R18 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R20 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 21,
+    "scores": {
+      "AlphaTech": 0.4822355598705327,
+      "QualityCorp": 0.45151688951795127
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.6381431170905891,
+      "QualityCorp": 0.6508522120471937
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.4801130113825408,
+      "QualityCorp": 0.44423716394325824
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.2532490664204261,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2967509335795739,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.2896917304423341,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.16030826955766592,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.4822355598705327
+      ],
+      [
+        "QualityCorp",
+        0.45151688951795127
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.44155490604750974,
+        "QualityCorp": 0.4975573266817269
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.5229162136935556,
+        "QualityCorp": 0.4054764523541756
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.6508522120471937,
+        "Consumer_1": 0.6508522120471937,
+        "Consumer_2": 0.6508522120471937,
+        "Consumer_3": 0.6508522120471937,
+        "Consumer_4": 0.6508522120471937,
+        "Consumer_5": 0.6508522120471937,
+        "Consumer_6": 0.6508522120471937,
+        "Consumer_7": 0.6508522120471937,
+        "Consumer_8": 0.6508522120471937,
+        "Consumer_9": 0.6508522120471937
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.6508522120471937,
+      "min_satisfaction": 0.6508522120471937
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R17 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R18 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R20 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 22,
+    "scores": {
+      "AlphaTech": 0.5495336327722413,
+      "QualityCorp": 0.4947506940291486
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.6448196419163829,
+      "QualityCorp": 0.6578605184454074
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.500939197799451,
+      "QualityCorp": 0.45939122296902535
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.2590374875566913,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2909625124433087,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.2898790284438349,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.16012097155616511,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.5495336327722413
+      ],
+      [
+        "QualityCorp",
+        0.4947506940291486
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.5805020723654767,
+        "QualityCorp": 0.5939301109142036
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.518565193179006,
+        "QualityCorp": 0.39557127714409374
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.6578605184454074,
+        "Consumer_1": 0.6578605184454074,
+        "Consumer_2": 0.6578605184454074,
+        "Consumer_3": 0.6578605184454074,
+        "Consumer_4": 0.6578605184454074,
+        "Consumer_5": 0.6578605184454074,
+        "Consumer_6": 0.6578605184454074,
+        "Consumer_7": 0.6578605184454074,
+        "Consumer_8": 0.6578605184454074,
+        "Consumer_9": 0.6578605184454074
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.6578605184454074,
+      "min_satisfaction": 0.6578605184454074
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R17 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R18 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R20 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 23,
+    "scores": {
+      "AlphaTech": 0.4850644986412404,
+      "QualityCorp": 0.3249689295978001
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.6515496006510059,
+      "QualityCorp": 0.664834473388918
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.4961767880519878,
+      "QualityCorp": 0.4190645349576578
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.2628541953302182,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.28714580466978185,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.2874253531078971,
+        "training_optimization": 0.24999999999999994,
+        "evaluation_engineering": 0.1625746468921029,
+        "safety_alignment": 0.29999999999999993
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.4850644986412404
+      ],
+      [
+        "QualityCorp",
+        0.3249689295978001
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.5132189379775527,
+        "QualityCorp": 0.41151254221478123
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.4569100593049281,
+        "QualityCorp": 0.23842531698081892
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.664834473388918,
+        "Consumer_1": 0.664834473388918,
+        "Consumer_2": 0.664834473388918,
+        "Consumer_3": 0.664834473388918,
+        "Consumer_4": 0.664834473388918,
+        "Consumer_5": 0.664834473388918,
+        "Consumer_6": 0.664834473388918,
+        "Consumer_7": 0.664834473388918,
+        "Consumer_8": 0.664834473388918,
+        "Consumer_9": 0.664834473388918
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.664834473388918,
+      "min_satisfaction": 0.664834473388918
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R17 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R18 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R20 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R23 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 24,
+    "scores": {
+      "AlphaTech": 0.395918161997988,
+      "QualityCorp": 0.4492454234774167
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.6584038120424214,
+      "QualityCorp": 0.6716209772679426
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.4660992002357879,
+      "QualityCorp": 0.4281188015135854
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.27172938510110634,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.27827061489889365,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.2740359913588959,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.17596400864110412,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.4492454234774167
+      ],
+      [
+        "AlphaTech",
+        0.395918161997988
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.44595143598648523,
+        "QualityCorp": 0.5851154807299284
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.3458848880094908,
+        "QualityCorp": 0.313375366224905
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.6716209772679426,
+        "Consumer_1": 0.6716209772679426,
+        "Consumer_2": 0.6716209772679426,
+        "Consumer_3": 0.6716209772679426,
+        "Consumer_4": 0.6716209772679426,
+        "Consumer_5": 0.6716209772679426,
+        "Consumer_6": 0.6716209772679426,
+        "Consumer_7": 0.6716209772679426,
+        "Consumer_8": 0.6716209772679426,
+        "Consumer_9": 0.6716209772679426
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.6716209772679426,
+      "min_satisfaction": 0.6716209772679426
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R17 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R18 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R20 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R23 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R24 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 25,
+    "scores": {
+      "AlphaTech": 0.578414222102454,
+      "QualityCorp": 0.5188071417681092
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.6651348776174656,
+      "QualityCorp": 0.6785663534235236
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.4997937067957877,
+      "QualityCorp": 0.4553253035899425
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.2629332553602998,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.28706674463970017,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.28538401111292866,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.16461598888707135,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.578414222102454
+      ],
+      [
+        "QualityCorp",
+        0.5188071417681092
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.5276909047883943,
+        "QualityCorp": 0.5291674040537412
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.6291375394165137,
+        "QualityCorp": 0.5084468794824771
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.6785663534235236,
+        "Consumer_1": 0.6785663534235236,
+        "Consumer_2": 0.6785663534235236,
+        "Consumer_3": 0.6785663534235236,
+        "Consumer_4": 0.6785663534235236,
+        "Consumer_5": 0.6785663534235236,
+        "Consumer_6": 0.6785663534235236,
+        "Consumer_7": 0.6785663534235236,
+        "Consumer_8": 0.6785663534235236,
+        "Consumer_9": 0.6785663534235236
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.6785663534235236,
+      "min_satisfaction": 0.6785663534235236
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R17 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R18 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R20 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R23 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R24 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R25 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 26,
+    "scores": {
+      "AlphaTech": 0.46812756789736776,
+      "QualityCorp": 0.43349695807752264
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.6719737810932273,
+      "QualityCorp": 0.6855855640627629
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.4902938651262617,
+      "QualityCorp": 0.44877679993621655
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.2706359625544037,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2793640374455963,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.2906579028028145,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.1593420971971855,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "AlphaTech",
+        0.46812756789736776
+      ],
+      [
+        "QualityCorp",
+        0.43349695807752264
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.4880323738438953,
+        "QualityCorp": 0.48680747560511045
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.4482227619508402,
+        "QualityCorp": 0.3801864405499349
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.6855855640627629,
+        "Consumer_1": 0.6855855640627629,
+        "Consumer_2": 0.6855855640627629,
+        "Consumer_3": 0.6855855640627629,
+        "Consumer_4": 0.6855855640627629,
+        "Consumer_5": 0.6855855640627629,
+        "Consumer_6": 0.6855855640627629,
+        "Consumer_7": 0.6855855640627629,
+        "Consumer_8": 0.6855855640627629,
+        "Consumer_9": 0.6855855640627629
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.6855855640627629,
+      "min_satisfaction": 0.6855855640627629
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R17 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R18 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R20 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R23 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R24 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R25 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R26 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 27,
+    "scores": {
+      "AlphaTech": 0.4560660199133069,
+      "QualityCorp": 0.5281194776435604
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.6786208459941053,
+      "QualityCorp": 0.6926009826896982
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.4800255115623753,
+      "QualityCorp": 0.47257960324841963
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.25693320720557367,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2930667927944263,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.29038704478108396,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.15961295521891605,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.5281194776435604
+      ],
+      [
+        "AlphaTech",
+        0.4560660199133069
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.6364973391433741,
+        "QualityCorp": 0.6031998436051295
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.2756347006832397,
+        "QualityCorp": 0.4530391116819913
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.6926009826896982,
+        "Consumer_1": 0.6926009826896982,
+        "Consumer_2": 0.6926009826896982,
+        "Consumer_3": 0.6926009826896982,
+        "Consumer_4": 0.6926009826896982,
+        "Consumer_5": 0.6926009826896982,
+        "Consumer_6": 0.6926009826896982,
+        "Consumer_7": 0.6926009826896982,
+        "Consumer_8": 0.6926009826896982,
+        "Consumer_9": 0.6926009826896982
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.6926009826896982,
+      "min_satisfaction": 0.6926009826896982
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R17 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R18 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R20 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R23 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R24 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R25 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R26 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 28,
+    "scores": {
+      "AlphaTech": 0.4229649288372995,
+      "QualityCorp": 0.4718377267277458
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.6851143601341825,
+      "QualityCorp": 0.6996321660894631
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.4629073367448525,
+      "QualityCorp": 0.4723570402922175
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.2459652957197934,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3040347042802066,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.291513099983213,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.158486900016787,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.4718377267277458
+      ],
+      [
+        "AlphaTech",
+        0.4229649288372995
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.527922615036821,
+        "QualityCorp": 0.5797399144901908
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.31800724263777796,
+        "QualityCorp": 0.3639355389653009
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.6996321660894631,
+        "Consumer_1": 0.6996321660894631,
+        "Consumer_2": 0.6996321660894631,
+        "Consumer_3": 0.6996321660894631,
+        "Consumer_4": 0.6996321660894631,
+        "Consumer_5": 0.6996321660894631,
+        "Consumer_6": 0.6996321660894631,
+        "Consumer_7": 0.6996321660894631,
+        "Consumer_8": 0.6996321660894631,
+        "Consumer_9": 0.6996321660894631
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.6996321660894631,
+      "min_satisfaction": 0.6996321660894631
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R17 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R18 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R20 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R23 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R24 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R25 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R26 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R28 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 29,
+    "scores": {
+      "AlphaTech": 0.5484565374285122,
+      "QualityCorp": 0.5506543809098225
+    },
+    "true_capabilities": {
+      "AlphaTech": 0.6916017351210825,
+      "QualityCorp": 0.7068800437353833
+    },
+    "believed_capabilities": {
+      "AlphaTech": 0.4885720969499504,
+      "QualityCorp": 0.495846242477499
+    },
+    "strategies": {
+      "AlphaTech": {
+        "fundamental_research": 0.24552678477857287,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3044732152214271,
+        "safety_alignment": 0.2
+      },
+      "QualityCorp": {
+        "fundamental_research": 0.3069912604228678,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.14300873957713217,
+        "safety_alignment": 0.3
+      }
+    },
+    "leaderboard": [
+      [
+        "QualityCorp",
+        0.5506543809098225
+      ],
+      [
+        "AlphaTech",
+        0.5484565374285122
+      ]
+    ],
+    "per_benchmark_scores": {
+      "MMLU_Academic": {
+        "AlphaTech": 0.5992980743751707,
+        "QualityCorp": 0.7065171328559217
+      },
+      "Arena_Preference": {
+        "AlphaTech": 0.49761500048185364,
+        "QualityCorp": 0.3947916289637235
+      }
+    },
+    "benchmark_names": [
+      "MMLU_Academic",
+      "Arena_Preference"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "QualityCorp",
+        "Consumer_1": "QualityCorp",
+        "Consumer_2": "QualityCorp",
+        "Consumer_3": "QualityCorp",
+        "Consumer_4": "QualityCorp",
+        "Consumer_5": "QualityCorp",
+        "Consumer_6": "QualityCorp",
+        "Consumer_7": "QualityCorp",
+        "Consumer_8": "QualityCorp",
+        "Consumer_9": "QualityCorp"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7068800437353833,
+        "Consumer_1": 0.7068800437353833,
+        "Consumer_2": 0.7068800437353833,
+        "Consumer_3": 0.7068800437353833,
+        "Consumer_4": 0.7068800437353833,
+        "Consumer_5": 0.7068800437353833,
+        "Consumer_6": 0.7068800437353833,
+        "Consumer_7": 0.7068800437353833,
+        "Consumer_8": 0.7068800437353833,
+        "Consumer_9": 0.7068800437353833
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.7068800437353833,
+      "min_satisfaction": 0.7068800437353833
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R2 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R4 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R5 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R6 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R9 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R10 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R13 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R17 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R18 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R20 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R23 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R24 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R25 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R26 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R28 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  }
+]
