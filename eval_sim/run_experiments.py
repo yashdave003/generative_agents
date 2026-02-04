@@ -229,14 +229,15 @@ def run_llm_experiments():
     experiments_dir = os.path.join(os.path.dirname(__file__), "experiments")
     os.makedirs(experiments_dir, exist_ok=True)
 
+    # Set Ollama as default provider if no API key is set
+    if not os.environ.get("OPENAI_API_KEY"):
+        os.environ["LLM_PROVIDER"] = "ollama"
+        print("Using Ollama provider (no OpenAI API key found)")
+
     print()
     print("=" * 60)
     print("LLM MODE EXPERIMENTS")
     print("=" * 60)
-    print()
-    print("NOTE: LLM mode requires either:")
-    print("  - OpenAI API key: export OPENAI_API_KEY=sk-...")
-    print("  - Ollama running locally: export LLM_PROVIDER=ollama")
     print()
 
     # Experiment 3: 3 Actors with LLM

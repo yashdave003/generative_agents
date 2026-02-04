@@ -5,12 +5,14 @@ Provides multi-provider LLM support with abstract interface.
 
 Supported Providers:
 - OpenAI (GPT-4, GPT-4o-mini, etc.)
+- Anthropic (Claude 3.5 Sonnet, Claude 3 Opus, etc.)
 - Ollama (local models like llama3, mistral, phi, gemma)
 
 Configuration via environment variables:
-- LLM_PROVIDER: "openai" or "ollama" (default: "openai")
+- LLM_PROVIDER: "openai", "anthropic", or "ollama" (default: "openai")
 - LLM_MODEL: Model name (provider-specific)
 - OPENAI_API_KEY: Required for OpenAI provider
+- ANTHROPIC_API_KEY: Required for Anthropic provider
 - OLLAMA_BASE_URL: Ollama server URL (default: http://localhost:11434)
 """
 import json
@@ -254,6 +256,122 @@ class OpenAIProvider(LLMProvider):
         )
 
 
+class AnthropicProvider(LLMProvider):
+    """
+    Anthropic Claude API provider.
+
+    Requires anthropic package and ANTHROPIC_API_KEY environment variable.
+    """
+
+    def __init__(
+        self,
+        api_key: Optional[str] = None,
+        model: str = "claude-3-5-sonnet-20241022",
+        temperature: float = 0.7,
+        max_tokens: int = 500,
+    ):
+        """
+        Initialize Anthropic provider.
+
+        Args:
+            api_key: Anthropic API key. If None, uses ANTHROPIC_API_KEY env var.
+            model: Model to use (default: claude-3-5-sonnet-20241022)
+            temperature: Default sampling temperature (0-1)
+            max_tokens: Default max tokens in response
+        """
+        try:
+            from anthropic import Anthropic
+        except ImportError:
+            raise ImportError(
+                "anthropic package not installed. Run: pip install anthropic"
+            )
+
+        self.api_key = api_key or os.environ.get("ANTHROPIC_API_KEY")
+        if not self.api_key:
+            raise ValueError(
+                "No API key provided. Set ANTHROPIC_API_KEY environment variable "
+                "or pass api_key parameter."
+            )
+
+        self.client = Anthropic(api_key=self.api_key)
+        self.model = model
+        self.default_temperature = temperature
+        self.default_max_tokens = max_tokens
+
+        # Rate limiting
+        self.last_call_time = 0
+        self.min_call_interval = 0.1  # seconds between calls
+
+    def _rate_limit(self):
+        """Simple rate limiting to avoid hitting API limits."""
+        elapsed = time.time() - self.last_call_time
+        if elapsed < self.min_call_interval:
+            time.sleep(self.min_call_interval - elapsed)
+        self.last_call_time = time.time()
+
+    def generate(
+        self,
+        prompt: str,
+        system_prompt: Optional[str] = None,
+        temperature: Optional[float] = None,
+        max_tokens: Optional[int] = None,
+        **kwargs,
+    ) -> str:
+        """Generate a response from Anthropic Claude."""
+        self._rate_limit()
+
+        try:
+            message = self.client.messages.create(
+                model=self.model,
+                max_tokens=max_tokens if max_tokens is not None else self.default_max_tokens,
+                temperature=temperature if temperature is not None else self.default_temperature,
+                system=system_prompt or "",
+                messages=[{"role": "user", "content": prompt}],
+            )
+            return message.content[0].text
+        except Exception as e:
+            print(f"Anthropic API Error: {e}")
+            return f"ERROR: {e}"
+
+    def generate_json(
+        self,
+        prompt: str,
+        system_prompt: Optional[str] = None,
+        retries: int = 3,
+        fail_safe: dict = None,
+        verbose: bool = False,
+    ) -> dict:
+        """Generate and parse JSON response from Anthropic Claude."""
+        # Enhance system prompt to request JSON output
+        json_system = system_prompt or ""
+        if json_system:
+            json_system += " Always respond with valid JSON only, no additional text."
+        else:
+            json_system = "Always respond with valid JSON only, no additional text."
+
+        def validate_json(response: str) -> bool:
+            try:
+                cleaned = _extract_json(response)
+                json.loads(cleaned)
+                return True
+            except:
+                return False
+
+        def cleanup_json(response: str) -> dict:
+            cleaned = _extract_json(response)
+            return json.loads(cleaned)
+
+        return self.safe_generate(
+            prompt=prompt,
+            system_prompt=json_system,
+            func_validate=validate_json,
+            func_cleanup=cleanup_json,
+            retries=retries,
+            fail_safe=fail_safe or {},
+            verbose=verbose,
+        )
+
+
 class OllamaProvider(LLMProvider):
     """
     Ollama local LLM provider.
@@ -422,7 +540,7 @@ def create_llm_provider(
     Create an LLM provider based on configuration.
 
     Args:
-        provider: Provider name ("openai" or "ollama").
+        provider: Provider name ("openai", "anthropic", or "ollama").
                  If None, uses LLM_PROVIDER env var (default: "openai")
         **kwargs: Additional arguments passed to provider constructor
 
@@ -430,9 +548,10 @@ def create_llm_provider(
         LLMProvider instance
 
     Environment Variables:
-        LLM_PROVIDER: Provider name (openai, ollama)
+        LLM_PROVIDER: Provider name (openai, anthropic, ollama)
         LLM_MODEL: Model name (provider-specific)
         OPENAI_API_KEY: For OpenAI provider
+        ANTHROPIC_API_KEY: For Anthropic provider
         OLLAMA_BASE_URL: For Ollama provider
     """
     provider = provider or os.getenv("LLM_PROVIDER", "openai")
@@ -444,6 +563,13 @@ def create_llm_provider(
             temperature=kwargs.get("temperature", 0.7),
             max_tokens=kwargs.get("max_tokens", 500),
         )
+    elif provider == "anthropic":
+        return AnthropicProvider(
+            model=kwargs.get("model") or os.getenv("LLM_MODEL", "claude-3-5-sonnet-20241022"),
+            api_key=kwargs.get("api_key") or os.getenv("ANTHROPIC_API_KEY"),
+            temperature=kwargs.get("temperature", 0.7),
+            max_tokens=kwargs.get("max_tokens", 500),
+        )
     elif provider == "openai":
         return OpenAIProvider(
             model=kwargs.get("model") or os.getenv("LLM_MODEL", "gpt-4o-mini"),
@@ -452,7 +578,7 @@ def create_llm_provider(
             max_tokens=kwargs.get("max_tokens", 500),
         )
     else:
-        raise ValueError(f"Unknown provider: {provider}. Use 'openai' or 'ollama'.")
+        raise ValueError(f"Unknown provider: {provider}. Use 'openai', 'anthropic', or 'ollama'.")
 
 
 def get_provider() -> LLMProvider:
@@ -731,7 +857,7 @@ def create_reflection_prompt(
         strategy_profile: Strategy profile description
         current_believed_capability: Current capability belief
         current_believed_exploitability: Current exploitability belief
-        recent_history: List of (round, score, rnd_investment, gaming_investment)
+        recent_history: List of dicts with round, score, and portfolio allocations
 
     Returns:
         Prompt string
@@ -747,35 +873,55 @@ Strategy Profile: {strategy_profile}
 """
 
     if recent_history:
-        prompt += "| Round | Score | R&D | Gaming |\n"
-        prompt += "|-------|-------|-----|--------|\n"
-        for round_num, score, rnd, gaming in recent_history[-10:]:
-            prompt += f"| {round_num} | {score:.3f} | {rnd:.0%} | {gaming:.0%} |\n"
+        # Check format - new portfolio format uses dicts
+        if isinstance(recent_history[0], dict):
+            prompt += "| Round | Score | Research | Training | EvalEng | Safety |\n"
+            prompt += "|-------|-------|----------|----------|---------|--------|\n"
+            for entry in recent_history[-10:]:
+                prompt += (f"| {entry.get('round', '?')} | {entry.get('score', 0):.3f} | "
+                          f"{entry.get('fundamental_research', 0):.0%} | "
+                          f"{entry.get('training_optimization', 0):.0%} | "
+                          f"{entry.get('evaluation_engineering', 0):.0%} | "
+                          f"{entry.get('safety_alignment', 0):.0%} |\n")
 
-        # Add some analysis hints
-        scores = [h[1] for h in recent_history]
-        gaming_investments = [h[3] for h in recent_history]
+            # Add some analysis hints
+            scores = [h.get('score', 0) for h in recent_history]
+            eval_eng = [h.get('evaluation_engineering', 0) for h in recent_history]
 
-        prompt += f"\nAverage score: {sum(scores)/len(scores):.3f}\n"
-        prompt += f"Average gaming investment: {sum(gaming_investments)/len(gaming_investments):.0%}\n"
+            prompt += f"\nAverage score: {sum(scores)/len(scores):.3f}\n"
+            prompt += f"Average evaluation engineering: {sum(eval_eng)/len(eval_eng):.0%}\n"
 
-        # Simple correlation hint
-        if len(recent_history) >= 3:
-            high_gaming = [(s, g) for _, s, _, g in recent_history if g > 0.5]
-            low_gaming = [(s, g) for _, s, _, g in recent_history if g <= 0.5]
-            if high_gaming and low_gaming:
-                avg_high = sum(s for s, _ in high_gaming) / len(high_gaming)
-                avg_low = sum(s for s, _ in low_gaming) / len(low_gaming)
-                prompt += f"\nWhen gaming > 50%: avg score = {avg_high:.3f}"
-                prompt += f"\nWhen gaming <= 50%: avg score = {avg_low:.3f}\n"
+            # Correlation hint for eval engineering vs real capability investment
+            if len(recent_history) >= 3:
+                high_eval = [(h.get('score', 0), h.get('evaluation_engineering', 0))
+                            for h in recent_history if h.get('evaluation_engineering', 0) > 0.3]
+                low_eval = [(h.get('score', 0), h.get('evaluation_engineering', 0))
+                           for h in recent_history if h.get('evaluation_engineering', 0) <= 0.3]
+                if high_eval and low_eval:
+                    avg_high = sum(s for s, _ in high_eval) / len(high_eval)
+                    avg_low = sum(s for s, _ in low_eval) / len(low_eval)
+                    prompt += f"\nWhen eval engineering > 30%: avg score = {avg_high:.3f}"
+                    prompt += f"\nWhen eval engineering <= 30%: avg score = {avg_low:.3f}\n"
+        else:
+            # Legacy tuple format (round, score, rnd, gaming)
+            prompt += "| Round | Score | R&D | Gaming |\n"
+            prompt += "|-------|-------|-----|--------|\n"
+            for round_num, score, rnd, gaming in recent_history[-10:]:
+                prompt += f"| {round_num} | {score:.3f} | {rnd:.0%} | {gaming:.0%} |\n"
+
+            scores = [h[1] for h in recent_history]
+            gaming_investments = [h[3] for h in recent_history]
+
+            prompt += f"\nAverage score: {sum(scores)/len(scores):.3f}\n"
+            prompt += f"Average gaming investment: {sum(gaming_investments)/len(gaming_investments):.0%}\n"
     else:
         prompt += "No history yet.\n"
 
     prompt += """
 # Reflection Task
 Based on your performance history, update your beliefs:
-- If scores improved when you invested more in gaming, the benchmark might be more exploitable
-- If scores improved when you invested more in R&D, the benchmark might be more valid
+- If scores improved when you invested more in evaluation engineering, the benchmark might be more exploitable
+- If scores improved when you invested more in fundamental research, the benchmark might be more valid
 - Consider whether your scores are converging to your believed capability
 
 Output your updated beliefs as JSON."""

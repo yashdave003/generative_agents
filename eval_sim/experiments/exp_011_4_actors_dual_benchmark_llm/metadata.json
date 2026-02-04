@@ -1,0 +1,17 @@
+{
+  "experiment_id": "exp_011_4_actors_dual_benchmark_llm",
+  "name": "4_actors_dual_benchmark_llm",
+  "description": "LLM-assisted 4-actor simulation with two benchmarks: MMLU_Academic and Arena_Preference",
+  "tags": [
+    "4-actor",
+    "dual-benchmark",
+    "consumer",
+    "policymaker",
+    "llm"
+  ],
+  "created_at": "2026-02-03T09:01:43.701282",
+  "git_commit": "a0b2a12e",
+  "seed": 42,
+  "llm_mode": true,
+  "notes": ""
+}
