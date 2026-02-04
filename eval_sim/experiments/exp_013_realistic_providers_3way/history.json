@@ -1,0 +1,2955 @@
+[
+  {
+    "round": 0,
+    "scores": {
+      "OpenAI": 0.5969717079754432,
+      "Anthropic": 0.4095015893759504,
+      "NovaMind": 0.5475451195806458
+    },
+    "true_capabilities": {
+      "OpenAI": 0.72,
+      "Anthropic": 0.68,
+      "NovaMind": 0.55
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6690915123926329,
+      "Anthropic": 0.577850476812785,
+      "NovaMind": 0.5142635358741937
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2,
+        "training_optimization": 0.4,
+        "evaluation_engineering": 0.25,
+        "safety_alignment": 0.15
+      },
+      "Anthropic": {
+        "fundamental_research": 0.3,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.3
+      },
+      "NovaMind": {
+        "fundamental_research": 0.15,
+        "training_optimization": 0.3,
+        "evaluation_engineering": 0.35,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5969717079754432
+      ],
+      [
+        "NovaMind",
+        0.5475451195806458
+      ],
+      [
+        "Anthropic",
+        0.4095015893759504
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.72,
+        "Consumer_1": 0.72,
+        "Consumer_2": 0.72,
+        "Consumer_3": 0.72,
+        "Consumer_4": 0.72,
+        "Consumer_5": 0.72,
+        "Consumer_6": 0.72,
+        "Consumer_7": 0.72,
+        "Consumer_8": 0.72,
+        "Consumer_9": 0.72,
+        "Consumer_10": 0.72,
+        "Consumer_11": 0.72,
+        "Consumer_12": 0.72,
+        "Consumer_13": 0.72,
+        "Consumer_14": 0.72
+      },
+      "switches": 15,
+      "avg_satisfaction": 0.72,
+      "min_satisfaction": 0.72
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    }
+  },
+  {
+    "round": 1,
+    "scores": {
+      "OpenAI": 0.6563478385730894,
+      "Anthropic": 0.33731435705219737,
+      "NovaMind": 0.3403270001953842
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7270104948498103,
+      "Anthropic": 0.6871196908291168,
+      "NovaMind": 0.5562026256771748
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6652684102467699,
+      "Anthropic": 0.5056896408846087,
+      "NovaMind": 0.46208257517055085
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.28646391784359615,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.21353608215640388,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.29426363065120253,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.20573636934879747,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.22518754836962515,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3248124516303748,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.6563478385730894
+      ],
+      [
+        "NovaMind",
+        0.3403270001953842
+      ],
+      [
+        "Anthropic",
+        0.33731435705219737
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7270104948498103,
+        "Consumer_1": 0.7270104948498103,
+        "Consumer_2": 0.7270104948498103,
+        "Consumer_3": 0.7270104948498103,
+        "Consumer_4": 0.7270104948498103,
+        "Consumer_5": 0.7270104948498103,
+        "Consumer_6": 0.7270104948498103,
+        "Consumer_7": 0.7270104948498103,
+        "Consumer_8": 0.7270104948498103,
+        "Consumer_9": 0.7270104948498103,
+        "Consumer_10": 0.7270104948498103,
+        "Consumer_11": 0.7270104948498103,
+        "Consumer_12": 0.7270104948498103,
+        "Consumer_13": 0.7270104948498103,
+        "Consumer_14": 0.7270104948498103
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.7270104948498103,
+      "min_satisfaction": 0.7270104948498103
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 2,
+    "scores": {
+      "OpenAI": 0.6168601394340958,
+      "Anthropic": 0.5446912273586267,
+      "NovaMind": 0.4794125897544827
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7344400907213171,
+      "Anthropic": 0.6938116162730803,
+      "NovaMind": 0.5620614014451392
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6507459290029676,
+      "Anthropic": 0.517390116826814,
+      "NovaMind": 0.46728157954573035
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.31639970510762644,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.18360029489237356,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2637089602831027,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2362910397168973,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.20062684056888538,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.34937315943111463,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.6168601394340958
+      ],
+      [
+        "Anthropic",
+        0.5446912273586267
+      ],
+      [
+        "NovaMind",
+        0.4794125897544827
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7344400907213171,
+        "Consumer_1": 0.7344400907213171,
+        "Consumer_2": 0.7344400907213171,
+        "Consumer_3": 0.7344400907213171,
+        "Consumer_4": 0.7344400907213171,
+        "Consumer_5": 0.7344400907213171,
+        "Consumer_6": 0.7344400907213171,
+        "Consumer_7": 0.7344400907213171,
+        "Consumer_8": 0.7344400907213171,
+        "Consumer_9": 0.7344400907213171,
+        "Consumer_10": 0.7344400907213171,
+        "Consumer_11": 0.7344400907213171,
+        "Consumer_12": 0.7344400907213171,
+        "Consumer_13": 0.7344400907213171,
+        "Consumer_14": 0.7344400907213171
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.7344400907213171,
+      "min_satisfaction": 0.7344400907213171
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 3,
+    "scores": {
+      "OpenAI": 0.5253382495691659,
+      "Anthropic": 0.6692550040685044,
+      "NovaMind": 0.5633587940840882
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7417590250297869,
+      "Anthropic": 0.7005664032033773,
+      "NovaMind": 0.5679557325188556
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.613123625172827,
+      "Anthropic": 0.5629495829993211,
+      "NovaMind": 0.4961047439072377
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.308495307747839,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.191504692252161,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.26819906644978136,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.23180093355021864,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.20316650526545627,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3468334947345437,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.6692550040685044
+      ],
+      [
+        "NovaMind",
+        0.5633587940840882
+      ],
+      [
+        "OpenAI",
+        0.5253382495691659
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7417590250297869,
+        "Consumer_1": 0.7417590250297869,
+        "Consumer_2": 0.7417590250297869,
+        "Consumer_3": 0.7417590250297869,
+        "Consumer_4": 0.7417590250297869,
+        "Consumer_5": 0.7417590250297869,
+        "Consumer_6": 0.7417590250297869,
+        "Consumer_7": 0.7417590250297869,
+        "Consumer_8": 0.7417590250297869,
+        "Consumer_9": 0.7417590250297869,
+        "Consumer_10": 0.7417590250297869,
+        "Consumer_11": 0.7417590250297869,
+        "Consumer_12": 0.7417590250297869,
+        "Consumer_13": 0.7417590250297869,
+        "Consumer_14": 0.7417590250297869
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.7417590250297869,
+      "min_satisfaction": 0.7417590250297869
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "mandate_benchmark",
+          "details": {
+            "validity": 0.7999999999999999,
+            "exploitability": 0.3
+          }
+        }
+      ],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 4,
+    "scores": {
+      "OpenAI": 0.6254399807180825,
+      "Anthropic": 0.6978016593907028,
+      "NovaMind": 0.5358001483676235
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7486623794316417,
+      "Anthropic": 0.7076128267333676,
+      "NovaMind": 0.574071407724659
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6168185318364037,
+      "Anthropic": 0.6034052059167355,
+      "NovaMind": 0.5080133652453533
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2788110287039153,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.22118897129608472,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2890302521421612,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.21096974785783879,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.2189768004145362,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3310231995854638,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.6978016593907028
+      ],
+      [
+        "OpenAI",
+        0.6254399807180825
+      ],
+      [
+        "NovaMind",
+        0.5358001483676235
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7486623794316417,
+        "Consumer_1": 0.7486623794316417,
+        "Consumer_2": 0.7486623794316417,
+        "Consumer_3": 0.7486623794316417,
+        "Consumer_4": 0.7486623794316417,
+        "Consumer_5": 0.7486623794316417,
+        "Consumer_6": 0.7486623794316417,
+        "Consumer_7": 0.7486623794316417,
+        "Consumer_8": 0.7486623794316417,
+        "Consumer_9": 0.7486623794316417,
+        "Consumer_10": 0.7486623794316417,
+        "Consumer_11": 0.7486623794316417,
+        "Consumer_12": 0.7486623794316417,
+        "Consumer_13": 0.7486623794316417,
+        "Consumer_14": 0.7486623794316417
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.7486623794316417,
+      "min_satisfaction": 0.7486623794316417
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 5,
+    "scores": {
+      "OpenAI": 0.5411836405440213,
+      "Anthropic": 0.6263898310804764,
+      "NovaMind": 0.39866400352207165
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7550765702182096,
+      "Anthropic": 0.7148724348806079,
+      "NovaMind": 0.5800786168115446
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.5941280644486889,
+      "Anthropic": 0.6103005934658577,
+      "NovaMind": 0.4752085567283688
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.24387077046913774,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.25612922953086226,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.30425772480288626,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.19574227519711374,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.21122922049182263,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.33877077950817736,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.6263898310804764
+      ],
+      [
+        "OpenAI",
+        0.5411836405440213
+      ],
+      [
+        "NovaMind",
+        0.39866400352207165
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7550765702182096,
+        "Consumer_1": 0.7550765702182096,
+        "Consumer_2": 0.7550765702182096,
+        "Consumer_3": 0.7550765702182096,
+        "Consumer_4": 0.7550765702182096,
+        "Consumer_5": 0.7550765702182096,
+        "Consumer_6": 0.7550765702182096,
+        "Consumer_7": 0.7550765702182096,
+        "Consumer_8": 0.7550765702182096,
+        "Consumer_9": 0.7550765702182096,
+        "Consumer_10": 0.7550765702182096,
+        "Consumer_11": 0.7550765702182096,
+        "Consumer_12": 0.7550765702182096,
+        "Consumer_13": 0.7550765702182096,
+        "Consumer_14": 0.7550765702182096
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.7550765702182096,
+      "min_satisfaction": 0.7550765702182096
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 6,
+    "scores": {
+      "OpenAI": 0.7212694572387006,
+      "Anthropic": 0.5895705103184785,
+      "NovaMind": 0.4822910851906236
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7612810829965385,
+      "Anthropic": 0.7222669507540007,
+      "NovaMind": 0.5858336676574482
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6322704822856924,
+      "Anthropic": 0.604081568521644,
+      "NovaMind": 0.47733331526704526
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2288937698806383,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2711062301193617,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.31389399095663034,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.18610600904336966,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.1932179175645423,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.35678208243545767,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.7212694572387006
+      ],
+      [
+        "Anthropic",
+        0.5895705103184785
+      ],
+      [
+        "NovaMind",
+        0.4822910851906236
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7612810829965385,
+        "Consumer_1": 0.7612810829965385,
+        "Consumer_2": 0.7612810829965385,
+        "Consumer_3": 0.7612810829965385,
+        "Consumer_4": 0.7612810829965385,
+        "Consumer_5": 0.7612810829965385,
+        "Consumer_6": 0.7612810829965385,
+        "Consumer_7": 0.7612810829965385,
+        "Consumer_8": 0.7612810829965385,
+        "Consumer_9": 0.7612810829965385,
+        "Consumer_10": 0.7612810829965385,
+        "Consumer_11": 0.7612810829965385,
+        "Consumer_12": 0.7612810829965385,
+        "Consumer_13": 0.7612810829965385,
+        "Consumer_14": 0.7612810829965385
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.7612810829965385,
+      "min_satisfaction": 0.7612810829965385
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 7,
+    "scores": {
+      "OpenAI": 0.5687654823218254,
+      "Anthropic": 0.7244238036493382,
+      "NovaMind": 0.48925027091238776
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7677573522210329,
+      "Anthropic": 0.7293610430318905,
+      "NovaMind": 0.5917092007804642
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6132189822965323,
+      "Anthropic": 0.6401842390599523,
+      "NovaMind": 0.480908401960648
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.24830494460674193,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.25169505539325804,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.29243516270641273,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.20756483729358727,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.2018237945011478,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3481762054988522,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.7244238036493382
+      ],
+      [
+        "OpenAI",
+        0.5687654823218254
+      ],
+      [
+        "NovaMind",
+        0.48925027091238776
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7677573522210329,
+        "Consumer_1": 0.7677573522210329,
+        "Consumer_2": 0.7677573522210329,
+        "Consumer_3": 0.7677573522210329,
+        "Consumer_4": 0.7677573522210329,
+        "Consumer_5": 0.7677573522210329,
+        "Consumer_6": 0.7677573522210329,
+        "Consumer_7": 0.7677573522210329,
+        "Consumer_8": 0.7677573522210329,
+        "Consumer_9": 0.7677573522210329,
+        "Consumer_10": 0.7677573522210329,
+        "Consumer_11": 0.7677573522210329,
+        "Consumer_12": 0.7677573522210329,
+        "Consumer_13": 0.7677573522210329,
+        "Consumer_14": 0.7677573522210329
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.7677573522210329,
+      "min_satisfaction": 0.7677573522210329
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 8,
+    "scores": {
+      "OpenAI": 0.5998668298820061,
+      "Anthropic": 0.5713315263765361,
+      "NovaMind": 0.562759831620337
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7741163341436107,
+      "Anthropic": 0.736686110823796,
+      "NovaMind": 0.5975624782656312
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6092133365721744,
+      "Anthropic": 0.6195284252549274,
+      "NovaMind": 0.5054638308585547
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.23992728018413034,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.26007271981586966,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.3089334137075309,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.1910665862924691,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.20023410608336506,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.34976589391663493,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5998668298820061
+      ],
+      [
+        "Anthropic",
+        0.5713315263765361
+      ],
+      [
+        "NovaMind",
+        0.562759831620337
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7741163341436107,
+        "Consumer_1": 0.7741163341436107,
+        "Consumer_2": 0.7741163341436107,
+        "Consumer_3": 0.7741163341436107,
+        "Consumer_4": 0.7741163341436107,
+        "Consumer_5": 0.7741163341436107,
+        "Consumer_6": 0.7741163341436107,
+        "Consumer_7": 0.7741163341436107,
+        "Consumer_8": 0.7741163341436107,
+        "Consumer_9": 0.7741163341436107,
+        "Consumer_10": 0.7741163341436107,
+        "Consumer_11": 0.7741163341436107,
+        "Consumer_12": 0.7741163341436107,
+        "Consumer_13": 0.7741163341436107,
+        "Consumer_14": 0.7741163341436107
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.7741163341436107,
+      "min_satisfaction": 0.7741163341436107
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 9,
+    "scores": {
+      "OpenAI": 0.6839920380966437,
+      "Anthropic": 0.6546289237888163,
+      "NovaMind": 0.5563153438950041
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7805355739807317,
+      "Anthropic": 0.7438422677326472,
+      "NovaMind": 0.6035895638780177
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6316469470295151,
+      "Anthropic": 0.630058574815094,
+      "NovaMind": 0.5207192847694895
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.24423141693721703,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.255768583062783,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.296868350632225,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.203131649367775,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.2126489723133132,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3373510276866868,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.6839920380966437
+      ],
+      [
+        "Anthropic",
+        0.6546289237888163
+      ],
+      [
+        "NovaMind",
+        0.5563153438950041
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7805355739807317,
+        "Consumer_1": 0.7805355739807317,
+        "Consumer_2": 0.7805355739807317,
+        "Consumer_3": 0.7805355739807317,
+        "Consumer_4": 0.7805355739807317,
+        "Consumer_5": 0.7805355739807317,
+        "Consumer_6": 0.7805355739807317,
+        "Consumer_7": 0.7805355739807317,
+        "Consumer_8": 0.7805355739807317,
+        "Consumer_9": 0.7805355739807317,
+        "Consumer_10": 0.7805355739807317,
+        "Consumer_11": 0.7805355739807317,
+        "Consumer_12": 0.7805355739807317,
+        "Consumer_13": 0.7805355739807317,
+        "Consumer_14": 0.7805355739807317
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.7805355739807317,
+      "min_satisfaction": 0.7805355739807317
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 10,
+    "scores": {
+      "OpenAI": 0.8667301133639134,
+      "Anthropic": 0.577896407719395,
+      "NovaMind": 0.4669466022233693
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7869579532029151,
+      "Anthropic": 0.7510948396564499,
+      "NovaMind": 0.609596046918709
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.7021718969298345,
+      "Anthropic": 0.6144099246863842,
+      "NovaMind": 0.5045874800056533
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.24445565872738545,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.25554434127261455,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.3037551374144806,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.19624486258551938,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.21117736004937776,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.33882263995062223,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.8667301133639134
+      ],
+      [
+        "Anthropic",
+        0.577896407719395
+      ],
+      [
+        "NovaMind",
+        0.4669466022233693
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7869579532029151,
+        "Consumer_1": 0.7869579532029151,
+        "Consumer_2": 0.7869579532029151,
+        "Consumer_3": 0.7869579532029151,
+        "Consumer_4": 0.7869579532029151,
+        "Consumer_5": 0.7869579532029151,
+        "Consumer_6": 0.7869579532029151,
+        "Consumer_7": 0.7869579532029151,
+        "Consumer_8": 0.7869579532029151,
+        "Consumer_9": 0.7869579532029151,
+        "Consumer_10": 0.7869579532029151,
+        "Consumer_11": 0.7869579532029151,
+        "Consumer_12": 0.7869579532029151,
+        "Consumer_13": 0.7869579532029151,
+        "Consumer_14": 0.7869579532029151
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.7869579532029151,
+      "min_satisfaction": 0.7869579532029151
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 11,
+    "scores": {
+      "OpenAI": 0.5735041381342547,
+      "Anthropic": 0.6886558045361026,
+      "NovaMind": 0.637832259952702
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7938816755689817,
+      "Anthropic": 0.7578645367662531,
+      "NovaMind": 0.6152544897608531
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6635715692911606,
+      "Anthropic": 0.6366836886412996,
+      "NovaMind": 0.5445609139897679
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.28026588329047564,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.21973411670952436,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.26926407927165896,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.23073592072834104,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.1863173458674397,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3636826541325603,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.6886558045361026
+      ],
+      [
+        "NovaMind",
+        0.637832259952702
+      ],
+      [
+        "OpenAI",
+        0.5735041381342547
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7938816755689817,
+        "Consumer_1": 0.7938816755689817,
+        "Consumer_2": 0.7938816755689817,
+        "Consumer_3": 0.7938816755689817,
+        "Consumer_4": 0.7938816755689817,
+        "Consumer_5": 0.7938816755689817,
+        "Consumer_6": 0.7938816755689817,
+        "Consumer_7": 0.7938816755689817,
+        "Consumer_8": 0.7938816755689817,
+        "Consumer_9": 0.7938816755689817,
+        "Consumer_10": 0.7938816755689817,
+        "Consumer_11": 0.7938816755689817,
+        "Consumer_12": 0.7938816755689817,
+        "Consumer_13": 0.7938816755689817,
+        "Consumer_14": 0.7938816755689817
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.7938816755689817,
+      "min_satisfaction": 0.7938816755689817
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 12,
+    "scores": {
+      "OpenAI": 0.6508626701436839,
+      "Anthropic": 0.5477236824792764,
+      "NovaMind": 0.44586095339484744
+    },
+    "true_capabilities": {
+      "OpenAI": 0.8004790225695425,
+      "Anthropic": 0.7647646914531138,
+      "NovaMind": 0.6211177287941774
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6597588995469175,
+      "Anthropic": 0.6099956867926926,
+      "NovaMind": 0.5149509258112918
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2569533571829168,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2430466428170832,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2785824776329087,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.22141752236709134,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.20094564523744918,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3490543547625508,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.6508626701436839
+      ],
+      [
+        "Anthropic",
+        0.5477236824792764
+      ],
+      [
+        "NovaMind",
+        0.44586095339484744
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.8004790225695425,
+        "Consumer_1": 0.8004790225695425,
+        "Consumer_2": 0.8004790225695425,
+        "Consumer_3": 0.8004790225695425,
+        "Consumer_4": 0.8004790225695425,
+        "Consumer_5": 0.8004790225695425,
+        "Consumer_6": 0.8004790225695425,
+        "Consumer_7": 0.8004790225695425,
+        "Consumer_8": 0.8004790225695425,
+        "Consumer_9": 0.8004790225695425,
+        "Consumer_10": 0.8004790225695425,
+        "Consumer_11": 0.8004790225695425,
+        "Consumer_12": 0.8004790225695425,
+        "Consumer_13": 0.8004790225695425,
+        "Consumer_14": 0.8004790225695425
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.8004790225695425,
+      "min_satisfaction": 0.8004790225695425
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 13,
+    "scores": {
+      "OpenAI": 0.7318422905033249,
+      "Anthropic": 0.7119547159895937,
+      "NovaMind": 0.5877540137222201
+    },
+    "true_capabilities": {
+      "OpenAI": 0.8072100236950108,
+      "Anthropic": 0.7715991376473444,
+      "NovaMind": 0.6269029869922862
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6813839168338397,
+      "Anthropic": 0.6405833955517629,
+      "NovaMind": 0.5367918521845703
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2665000803905978,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.23349991960940217,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2738890138736226,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.22611098612637748,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.19537558557920232,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3546244144207977,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.7318422905033249
+      ],
+      [
+        "Anthropic",
+        0.7119547159895937
+      ],
+      [
+        "NovaMind",
+        0.5877540137222201
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.8072100236950108,
+        "Consumer_1": 0.8072100236950108,
+        "Consumer_2": 0.8072100236950108,
+        "Consumer_3": 0.8072100236950108,
+        "Consumer_4": 0.8072100236950108,
+        "Consumer_5": 0.8072100236950108,
+        "Consumer_6": 0.8072100236950108,
+        "Consumer_7": 0.8072100236950108,
+        "Consumer_8": 0.8072100236950108,
+        "Consumer_9": 0.8072100236950108,
+        "Consumer_10": 0.8072100236950108,
+        "Consumer_11": 0.8072100236950108,
+        "Consumer_12": 0.8072100236950108,
+        "Consumer_13": 0.8072100236950108,
+        "Consumer_14": 0.8072100236950108
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.8072100236950109,
+      "min_satisfaction": 0.8072100236950108
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 14,
+    "scores": {
+      "OpenAI": 0.6061620059528664,
+      "Anthropic": 0.6645269786521002,
+      "NovaMind": 0.5481561388206548
+    },
+    "true_capabilities": {
+      "OpenAI": 0.813844168261506,
+      "Anthropic": 0.7787508951703681,
+      "NovaMind": 0.6329688200331676
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6588173435695477,
+      "Anthropic": 0.6477664704818641,
+      "NovaMind": 0.5402011381753956
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2595817547496546,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.24041824525034539,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2965541087874025,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.20344589121259748,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.21541664577724473,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.33458335422275526,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.6645269786521002
+      ],
+      [
+        "OpenAI",
+        0.6061620059528664
+      ],
+      [
+        "NovaMind",
+        0.5481561388206548
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.813844168261506,
+        "Consumer_1": 0.813844168261506,
+        "Consumer_2": 0.813844168261506,
+        "Consumer_3": 0.813844168261506,
+        "Consumer_4": 0.813844168261506,
+        "Consumer_5": 0.813844168261506,
+        "Consumer_6": 0.813844168261506,
+        "Consumer_7": 0.813844168261506,
+        "Consumer_8": 0.813844168261506,
+        "Consumer_9": 0.813844168261506,
+        "Consumer_10": 0.813844168261506,
+        "Consumer_11": 0.813844168261506,
+        "Consumer_12": 0.813844168261506,
+        "Consumer_13": 0.813844168261506,
+        "Consumer_14": 0.813844168261506
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.813844168261506,
+      "min_satisfaction": 0.813844168261506
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 15,
+    "scores": {
+      "OpenAI": 0.7002324906518351,
+      "Anthropic": 0.7342626662657292,
+      "NovaMind": 0.5638765276943429
+    },
+    "true_capabilities": {
+      "OpenAI": 0.8204173135765287,
+      "Anthropic": 0.7858871005931521,
+      "NovaMind": 0.6390032510602645
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6712418876942339,
+      "Anthropic": 0.6737153292170236,
+      "NovaMind": 0.5473037550310798
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2552246653587673,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2447753346412327,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2954432444845717,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2045567555154283,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.21317364479263118,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3368263552073688,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.7342626662657292
+      ],
+      [
+        "OpenAI",
+        0.7002324906518351
+      ],
+      [
+        "NovaMind",
+        0.5638765276943429
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.8204173135765287,
+        "Consumer_1": 0.8204173135765287,
+        "Consumer_2": 0.8204173135765287,
+        "Consumer_3": 0.8204173135765287,
+        "Consumer_4": 0.8204173135765287,
+        "Consumer_5": 0.8204173135765287,
+        "Consumer_6": 0.8204173135765287,
+        "Consumer_7": 0.8204173135765287,
+        "Consumer_8": 0.8204173135765287,
+        "Consumer_9": 0.8204173135765287,
+        "Consumer_10": 0.8204173135765287,
+        "Consumer_11": 0.8204173135765287,
+        "Consumer_12": 0.8204173135765287,
+        "Consumer_13": 0.8204173135765287,
+        "Consumer_14": 0.8204173135765287
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.8204173135765287,
+      "min_satisfaction": 0.8204173135765287
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 16,
+    "scores": {
+      "OpenAI": 0.7526897145072712,
+      "Anthropic": 0.6593622629231316,
+      "NovaMind": 0.5760489455122257
+    },
+    "true_capabilities": {
+      "OpenAI": 0.8267814873995741,
+      "Anthropic": 0.7930631734739124,
+      "NovaMind": 0.6448968847261246
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.695676235738145,
+      "Anthropic": 0.669409409328856,
+      "NovaMind": 0.5559273121754236
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.24029813021752786,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.25970186978247217,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.29829092005430446,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.20170907994569554,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.2031166904185816,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3468833095814184,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.7526897145072712
+      ],
+      [
+        "Anthropic",
+        0.6593622629231316
+      ],
+      [
+        "NovaMind",
+        0.5760489455122257
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.8267814873995741,
+        "Consumer_1": 0.8267814873995741,
+        "Consumer_2": 0.8267814873995741,
+        "Consumer_3": 0.8267814873995741,
+        "Consumer_4": 0.8267814873995741,
+        "Consumer_5": 0.8267814873995741,
+        "Consumer_6": 0.8267814873995741,
+        "Consumer_7": 0.8267814873995741,
+        "Consumer_8": 0.8267814873995741,
+        "Consumer_9": 0.8267814873995741,
+        "Consumer_10": 0.8267814873995741,
+        "Consumer_11": 0.8267814873995741,
+        "Consumer_12": 0.8267814873995741,
+        "Consumer_13": 0.8267814873995741,
+        "Consumer_14": 0.8267814873995741
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.8267814873995741,
+      "min_satisfaction": 0.8267814873995741
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 17,
+    "scores": {
+      "OpenAI": 0.7520264633244503,
+      "Anthropic": 0.5128957019405913,
+      "NovaMind": 0.5192738480689049
+    },
+    "true_capabilities": {
+      "OpenAI": 0.833321914918697,
+      "Anthropic": 0.8001919750975368,
+      "NovaMind": 0.6508990615417046
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.7125813040140365,
+      "Anthropic": 0.6224552971123765,
+      "NovaMind": 0.5449312729434679
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2528876799373474,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2471123200626526,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2949144016874595,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.20508559831254047,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.2108697725414298,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3391302274585702,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.7520264633244503
+      ],
+      [
+        "NovaMind",
+        0.5192738480689049
+      ],
+      [
+        "Anthropic",
+        0.5128957019405913
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.833321914918697,
+        "Consumer_1": 0.833321914918697,
+        "Consumer_2": 0.833321914918697,
+        "Consumer_3": 0.833321914918697,
+        "Consumer_4": 0.833321914918697,
+        "Consumer_5": 0.833321914918697,
+        "Consumer_6": 0.833321914918697,
+        "Consumer_7": 0.833321914918697,
+        "Consumer_8": 0.833321914918697,
+        "Consumer_9": 0.833321914918697,
+        "Consumer_10": 0.833321914918697,
+        "Consumer_11": 0.833321914918697,
+        "Consumer_12": 0.833321914918697,
+        "Consumer_13": 0.833321914918697,
+        "Consumer_14": 0.833321914918697
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.833321914918697,
+      "min_satisfaction": 0.833321914918697
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 18,
+    "scores": {
+      "OpenAI": 0.6454982270520863,
+      "Anthropic": 0.6026859475376091,
+      "NovaMind": 0.5299378443259621
+    },
+    "true_capabilities": {
+      "OpenAI": 0.8401456275119747,
+      "Anthropic": 0.8069193592095318,
+      "NovaMind": 0.6566508447521903
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6924563809254514,
+      "Anthropic": 0.6165244922399462,
+      "NovaMind": 0.5404332443582162
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.27312232809126574,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.22687767190873429,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2662417222853573,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.23375827771464275,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.19298451503468472,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.35701548496531527,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.6454982270520863
+      ],
+      [
+        "Anthropic",
+        0.6026859475376091
+      ],
+      [
+        "NovaMind",
+        0.5299378443259621
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.8401456275119747,
+        "Consumer_1": 0.8401456275119747,
+        "Consumer_2": 0.8401456275119747,
+        "Consumer_3": 0.8401456275119747,
+        "Consumer_4": 0.8401456275119747,
+        "Consumer_5": 0.8401456275119747,
+        "Consumer_6": 0.8401456275119747,
+        "Consumer_7": 0.8401456275119747,
+        "Consumer_8": 0.8401456275119747,
+        "Consumer_9": 0.8401456275119747,
+        "Consumer_10": 0.8401456275119747,
+        "Consumer_11": 0.8401456275119747,
+        "Consumer_12": 0.8401456275119747,
+        "Consumer_13": 0.8401456275119747,
+        "Consumer_14": 0.8401456275119747
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.8401456275119747,
+      "min_satisfaction": 0.8401456275119747
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 19,
+    "scores": {
+      "OpenAI": 0.8469275223176641,
+      "Anthropic": 0.5850814263122333,
+      "NovaMind": 0.6585563588747564
+    },
+    "true_capabilities": {
+      "OpenAI": 0.8470690228344998,
+      "Anthropic": 0.8136984619101023,
+      "NovaMind": 0.6624603642116574
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.7387977233431151,
+      "Anthropic": 0.6070915724616323,
+      "NovaMind": 0.5758701787131781
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.28024252303750224,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.21975747696249778,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2699359071836031,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.23006409281639695,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.19710853281908408,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3528914671809159,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.8469275223176641
+      ],
+      [
+        "NovaMind",
+        0.6585563588747564
+      ],
+      [
+        "Anthropic",
+        0.5850814263122333
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.8470690228344998,
+        "Consumer_1": 0.8470690228344998,
+        "Consumer_2": 0.8470690228344998,
+        "Consumer_3": 0.8470690228344998,
+        "Consumer_4": 0.8470690228344998,
+        "Consumer_5": 0.8470690228344998,
+        "Consumer_6": 0.8470690228344998,
+        "Consumer_7": 0.8470690228344998,
+        "Consumer_8": 0.8470690228344998,
+        "Consumer_9": 0.8470690228344998,
+        "Consumer_10": 0.8470690228344998,
+        "Consumer_11": 0.8470690228344998,
+        "Consumer_12": 0.8470690228344998,
+        "Consumer_13": 0.8470690228344998,
+        "Consumer_14": 0.8470690228344998
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.8470690228344998,
+      "min_satisfaction": 0.8470690228344998
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 20,
+    "scores": {
+      "OpenAI": 0.5330602751701927,
+      "Anthropic": 0.6445649051925416,
+      "NovaMind": 0.5825563102910772
+    },
+    "true_capabilities": {
+      "OpenAI": 0.8542810980007635,
+      "Anthropic": 0.8203060134166693,
+      "NovaMind": 0.6682867858644809
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6770764888912383,
+      "Anthropic": 0.618333572280905,
+      "NovaMind": 0.5778760181865479
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.3008625118759722,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.19913748812402782,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2576822504690696,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.24231774953093044,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.19831583234453337,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3516841676554666,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.6445649051925416
+      ],
+      [
+        "NovaMind",
+        0.5825563102910772
+      ],
+      [
+        "OpenAI",
+        0.5330602751701927
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.8542810980007635,
+        "Consumer_1": 0.8542810980007635,
+        "Consumer_2": 0.8542810980007635,
+        "Consumer_3": 0.8542810980007635,
+        "Consumer_4": 0.8542810980007635,
+        "Consumer_5": 0.8542810980007635,
+        "Consumer_6": 0.8542810980007635,
+        "Consumer_7": 0.8542810980007635,
+        "Consumer_8": 0.8542810980007635,
+        "Consumer_9": 0.8542810980007635,
+        "Consumer_10": 0.8542810980007635,
+        "Consumer_11": 0.8542810980007635,
+        "Consumer_12": 0.8542810980007635,
+        "Consumer_13": 0.8542810980007635,
+        "Consumer_14": 0.8542810980007635
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.8542810980007635,
+      "min_satisfaction": 0.8542810980007635
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 21,
+    "scores": {
+      "OpenAI": 0.7681798016980037,
+      "Anthropic": 0.7524708929372751,
+      "NovaMind": 0.6485039930150219
+    },
+    "true_capabilities": {
+      "OpenAI": 0.8610595540634474,
+      "Anthropic": 0.8272673339858931,
+      "NovaMind": 0.6744281847065084
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.7044074827332678,
+      "Anthropic": 0.658574768477816,
+      "NovaMind": 0.5990644106350901
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.26988971876313306,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.23011028123686691,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2829514692302772,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2170485307697228,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.22081420300197005,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.32918579699802997,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.7681798016980037
+      ],
+      [
+        "Anthropic",
+        0.7524708929372751
+      ],
+      [
+        "NovaMind",
+        0.6485039930150219
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.8610595540634474,
+        "Consumer_1": 0.8610595540634474,
+        "Consumer_2": 0.8610595540634474,
+        "Consumer_3": 0.8610595540634474,
+        "Consumer_4": 0.8610595540634474,
+        "Consumer_5": 0.8610595540634474,
+        "Consumer_6": 0.8610595540634474,
+        "Consumer_7": 0.8610595540634474,
+        "Consumer_8": 0.8610595540634474,
+        "Consumer_9": 0.8610595540634474,
+        "Consumer_10": 0.8610595540634474,
+        "Consumer_11": 0.8610595540634474,
+        "Consumer_12": 0.8610595540634474,
+        "Consumer_13": 0.8610595540634474,
+        "Consumer_14": 0.8610595540634474
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.8610595540634474,
+      "min_satisfaction": 0.8610595540634474
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 22,
+    "scores": {
+      "OpenAI": 0.6806420268627029,
+      "Anthropic": 0.6406975410770268,
+      "NovaMind": 0.6603458139050931
+    },
+    "true_capabilities": {
+      "OpenAI": 0.8677431013767082,
+      "Anthropic": 0.8342259133746398,
+      "NovaMind": 0.6804868205923156
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6972778459720983,
+      "Anthropic": 0.6532116002575792,
+      "NovaMind": 0.617448831616091
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.26311052237577537,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.23688947762422463,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.28275567062475876,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.21724432937524124,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.21490256327194096,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.33509743672805903,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.6806420268627029
+      ],
+      [
+        "NovaMind",
+        0.6603458139050931
+      ],
+      [
+        "Anthropic",
+        0.6406975410770268
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.8677431013767082,
+        "Consumer_1": 0.8677431013767082,
+        "Consumer_2": 0.8677431013767082,
+        "Consumer_3": 0.8677431013767082,
+        "Consumer_4": 0.8677431013767082,
+        "Consumer_5": 0.8677431013767082,
+        "Consumer_6": 0.8677431013767082,
+        "Consumer_7": 0.8677431013767082,
+        "Consumer_8": 0.8677431013767082,
+        "Consumer_9": 0.8677431013767082,
+        "Consumer_10": 0.8677431013767082,
+        "Consumer_11": 0.8677431013767082,
+        "Consumer_12": 0.8677431013767082,
+        "Consumer_13": 0.8677431013767082,
+        "Consumer_14": 0.8677431013767082
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.8677431013767082,
+      "min_satisfaction": 0.8677431013767082
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 23,
+    "scores": {
+      "OpenAI": 0.7023377390473744,
+      "Anthropic": 0.5637474071132299,
+      "NovaMind": 0.4647615834070498
+    },
+    "true_capabilities": {
+      "OpenAI": 0.8743188416549014,
+      "Anthropic": 0.8413947671504984,
+      "NovaMind": 0.6867772790102136
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6987958138946812,
+      "Anthropic": 0.6263723423142744,
+      "NovaMind": 0.5716426571533786
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.25541001987094514,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.24458998012905483,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.29777526970418383,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.20222473029581617,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.23146131556414296,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.31853868443585703,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.7023377390473744
+      ],
+      [
+        "Anthropic",
+        0.5637474071132299
+      ],
+      [
+        "NovaMind",
+        0.4647615834070498
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.8743188416549014,
+        "Consumer_1": 0.8743188416549014,
+        "Consumer_2": 0.8743188416549014,
+        "Consumer_3": 0.8743188416549014,
+        "Consumer_4": 0.8743188416549014,
+        "Consumer_5": 0.8743188416549014,
+        "Consumer_6": 0.8743188416549014,
+        "Consumer_7": 0.8743188416549014,
+        "Consumer_8": 0.8743188416549014,
+        "Consumer_9": 0.8743188416549014,
+        "Consumer_10": 0.8743188416549014,
+        "Consumer_11": 0.8743188416549014,
+        "Consumer_12": 0.8743188416549014,
+        "Consumer_13": 0.8743188416549014,
+        "Consumer_14": 0.8743188416549014
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.8743188416549014,
+      "min_satisfaction": 0.8743188416549014
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 24,
+    "scores": {
+      "OpenAI": 0.6341108085113747,
+      "Anthropic": 0.7487355833462173,
+      "NovaMind": 0.5993419017928732
+    },
+    "true_capabilities": {
+      "OpenAI": 0.8810141018956805,
+      "Anthropic": 0.8482139075935671,
+      "NovaMind": 0.6927165547756065
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.6793903122796892,
+      "Anthropic": 0.6630813146238572,
+      "NovaMind": 0.5799524305452269
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.26394716005565116,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.23605283994434884,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.27279574593347417,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.22720425406652583,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.20637684038520543,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.34362315961479456,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.7487355833462173
+      ],
+      [
+        "OpenAI",
+        0.6341108085113747
+      ],
+      [
+        "NovaMind",
+        0.5993419017928732
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.8810141018956805,
+        "Consumer_1": 0.8810141018956805,
+        "Consumer_2": 0.8810141018956805,
+        "Consumer_3": 0.8810141018956805,
+        "Consumer_4": 0.8810141018956805,
+        "Consumer_5": 0.8810141018956805,
+        "Consumer_6": 0.8810141018956805,
+        "Consumer_7": 0.8810141018956805,
+        "Consumer_8": 0.8810141018956805,
+        "Consumer_9": 0.8810141018956805,
+        "Consumer_10": 0.8810141018956805,
+        "Consumer_11": 0.8810141018956805,
+        "Consumer_12": 0.8810141018956805,
+        "Consumer_13": 0.8810141018956805,
+        "Consumer_14": 0.8810141018956805
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.8810141018956805,
+      "min_satisfaction": 0.8810141018956805
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 25,
+    "scores": {
+      "OpenAI": 0.8008900925295367,
+      "Anthropic": 0.6598252928899332,
+      "NovaMind": 0.6044518111965084
+    },
+    "true_capabilities": {
+      "OpenAI": 0.8876330884631042,
+      "Anthropic": 0.8553749223107973,
+      "NovaMind": 0.6988784281797064
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.7158402463546434,
+      "Anthropic": 0.6621045081036799,
+      "NovaMind": 0.5873022447406113
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.25849904053025935,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.24150095946974065,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.29721533694501195,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2027846630549881,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.22227667172142285,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.32772332827857714,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.8008900925295367
+      ],
+      [
+        "Anthropic",
+        0.6598252928899332
+      ],
+      [
+        "NovaMind",
+        0.6044518111965084
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.8876330884631042,
+        "Consumer_1": 0.8876330884631042,
+        "Consumer_2": 0.8876330884631042,
+        "Consumer_3": 0.8876330884631042,
+        "Consumer_4": 0.8876330884631042,
+        "Consumer_5": 0.8876330884631042,
+        "Consumer_6": 0.8876330884631042,
+        "Consumer_7": 0.8876330884631042,
+        "Consumer_8": 0.8876330884631042,
+        "Consumer_9": 0.8876330884631042,
+        "Consumer_10": 0.8876330884631042,
+        "Consumer_11": 0.8876330884631042,
+        "Consumer_12": 0.8876330884631042,
+        "Consumer_13": 0.8876330884631042,
+        "Consumer_14": 0.8876330884631042
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.8876330884631042,
+      "min_satisfaction": 0.8876330884631042
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 26,
+    "scores": {
+      "OpenAI": 0.7989848360161862,
+      "Anthropic": 0.6783153617889386,
+      "NovaMind": 0.6399786697177339
+    },
+    "true_capabilities": {
+      "OpenAI": 0.8943783859011045,
+      "Anthropic": 0.8623634871487091,
+      "NovaMind": 0.7049028235114934
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.7407836232531062,
+      "Anthropic": 0.6669677642092575,
+      "NovaMind": 0.603105172233748
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.26752124557145496,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.23247875442854501,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2848974884222754,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2151025115777246,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.21245680941335482,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.33754319058664517,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.7989848360161862
+      ],
+      [
+        "Anthropic",
+        0.6783153617889386
+      ],
+      [
+        "NovaMind",
+        0.6399786697177339
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.8943783859011045,
+        "Consumer_1": 0.8943783859011045,
+        "Consumer_2": 0.8943783859011045,
+        "Consumer_3": 0.8943783859011045,
+        "Consumer_4": 0.8943783859011045,
+        "Consumer_5": 0.8943783859011045,
+        "Consumer_6": 0.8943783859011045,
+        "Consumer_7": 0.8943783859011045,
+        "Consumer_8": 0.8943783859011045,
+        "Consumer_9": 0.8943783859011045,
+        "Consumer_10": 0.8943783859011045,
+        "Consumer_11": 0.8943783859011045,
+        "Consumer_12": 0.8943783859011045,
+        "Consumer_13": 0.8943783859011045,
+        "Consumer_14": 0.8943783859011045
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.8943783859011045,
+      "min_satisfaction": 0.8943783859011045
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 27,
+    "scores": {
+      "OpenAI": 0.6759425745161527,
+      "Anthropic": 0.679182094724563,
+      "NovaMind": 0.5613348707457658
+    },
+    "true_capabilities": {
+      "OpenAI": 0.9010680503855324,
+      "Anthropic": 0.869237171726508,
+      "NovaMind": 0.7108582852029952
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.7213313086320201,
+      "Anthropic": 0.6706320633638492,
+      "NovaMind": 0.5905740817873534
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2635474631734229,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.23645253682657708,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2766917555570675,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2233082444429325,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.20753297796441464,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3424670220355853,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.679182094724563
+      ],
+      [
+        "OpenAI",
+        0.6759425745161527
+      ],
+      [
+        "NovaMind",
+        0.5613348707457658
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.9010680503855324,
+        "Consumer_1": 0.9010680503855324,
+        "Consumer_2": 0.9010680503855324,
+        "Consumer_3": 0.9010680503855324,
+        "Consumer_4": 0.9010680503855324,
+        "Consumer_5": 0.9010680503855324,
+        "Consumer_6": 0.9010680503855324,
+        "Consumer_7": 0.9010680503855324,
+        "Consumer_8": 0.9010680503855324,
+        "Consumer_9": 0.9010680503855324,
+        "Consumer_10": 0.9010680503855324,
+        "Consumer_11": 0.9010680503855324,
+        "Consumer_12": 0.9010680503855324,
+        "Consumer_13": 0.9010680503855324,
+        "Consumer_14": 0.9010680503855324
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.9010680503855324,
+      "min_satisfaction": 0.9010680503855324
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 28,
+    "scores": {
+      "OpenAI": 0.62781470687876,
+      "Anthropic": 0.7699266854059708,
+      "NovaMind": 0.5579586647727983
+    },
+    "true_capabilities": {
+      "OpenAI": 0.907773390032622,
+      "Anthropic": 0.8760676818883496,
+      "NovaMind": 0.7167025518422154
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.693276328106042,
+      "Anthropic": 0.7004204499764857,
+      "NovaMind": 0.5807894566829869
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.26466711764926254,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.23533288235073746,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.27360786870296716,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.22639213129703284,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.19959047423001844,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3504095257699815,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.7699266854059708
+      ],
+      [
+        "OpenAI",
+        0.62781470687876
+      ],
+      [
+        "NovaMind",
+        0.5579586647727983
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.907773390032622,
+        "Consumer_1": 0.907773390032622,
+        "Consumer_2": 0.907773390032622,
+        "Consumer_3": 0.907773390032622,
+        "Consumer_4": 0.907773390032622,
+        "Consumer_5": 0.907773390032622,
+        "Consumer_6": 0.907773390032622,
+        "Consumer_7": 0.907773390032622,
+        "Consumer_8": 0.907773390032622,
+        "Consumer_9": 0.907773390032622,
+        "Consumer_10": 0.907773390032622,
+        "Consumer_11": 0.907773390032622,
+        "Consumer_12": 0.907773390032622,
+        "Consumer_13": 0.907773390032622,
+        "Consumer_14": 0.907773390032622
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.907773390032622,
+      "min_satisfaction": 0.907773390032622
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  },
+  {
+    "round": 29,
+    "scores": {
+      "OpenAI": 0.7555431737407649,
+      "Anthropic": 0.7727004798490258,
+      "NovaMind": 0.6532893985591063
+    },
+    "true_capabilities": {
+      "OpenAI": 0.9142067568119802,
+      "Anthropic": 0.8832656088138753,
+      "NovaMind": 0.7227134737615967
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.7119563817964588,
+      "Anthropic": 0.7221044589382477,
+      "NovaMind": 0.6025394392458227
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2452404842398654,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2547595157601346,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.29985192325183585,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.20014807674816415,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.21149442281294886,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.33850557718705115,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.7727004798490258
+      ],
+      [
+        "OpenAI",
+        0.7555431737407649
+      ],
+      [
+        "NovaMind",
+        0.6532893985591063
+      ]
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "OpenAI",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "OpenAI",
+        "Consumer_5": "OpenAI",
+        "Consumer_6": "OpenAI",
+        "Consumer_7": "OpenAI",
+        "Consumer_8": "OpenAI",
+        "Consumer_9": "OpenAI",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI",
+        "Consumer_12": "OpenAI",
+        "Consumer_13": "OpenAI",
+        "Consumer_14": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.9142067568119802,
+        "Consumer_1": 0.9142067568119802,
+        "Consumer_2": 0.9142067568119802,
+        "Consumer_3": 0.9142067568119802,
+        "Consumer_4": 0.9142067568119802,
+        "Consumer_5": 0.9142067568119802,
+        "Consumer_6": 0.9142067568119802,
+        "Consumer_7": 0.9142067568119802,
+        "Consumer_8": 0.9142067568119802,
+        "Consumer_9": 0.9142067568119802,
+        "Consumer_10": 0.9142067568119802,
+        "Consumer_11": 0.9142067568119802,
+        "Consumer_12": 0.9142067568119802,
+        "Consumer_13": 0.9142067568119802,
+        "Consumer_14": 0.9142067568119802
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.9142067568119802,
+      "min_satisfaction": 0.9142067568119802
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": [
+        "Validity_Mandate_R1 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}",
+        "Validity_Mandate_R3 (mandate_benchmark): Active - {'validity': 0.7999999999999999, 'exploitability': 0.3}"
+      ]
+    }
+  }
+]

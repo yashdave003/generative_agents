@@ -1,0 +1,389 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "own_score": 0.4675878649652149,
+    "competitor_scores": {
+      "Anthropic": 0.47672133485321166
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "updated_believed_capability": 0.6302763594895644,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.47672133485321166
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "portfolio": {
+      "fundamental_research": 0.29606650739090584,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.20393349260909419,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "capability_gain": 0.007144931103472682,
+    "new_true_capability": 0.7271449311034727,
+    "portfolio": {
+      "fundamental_research": 0.29606650739090584,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.20393349260909419,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "own_score": 0.6887773510536292,
+    "competitor_scores": {
+      "Anthropic": 0.541038761645798
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "updated_believed_capability": 0.6478266569587838,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5088800482495048
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "portfolio": {
+      "fundamental_research": 0.2916839826127837,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2083160173872163,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "capability_gain": 0.007083575756578973,
+    "new_true_capability": 0.7342285068600516,
+    "portfolio": {
+      "fundamental_research": 0.2916839826127837,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2083160173872163,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "own_score": 0.6580620491128258,
+    "competitor_scores": {
+      "Anthropic": 0.5939763585321682
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "updated_believed_capability": 0.6508972746049964,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5372454850103926
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "portfolio": {
+      "fundamental_research": 0.2840955368783811,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.21590446312161887,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "capability_gain": 0.006977337516297335,
+    "new_true_capability": 0.741205844376349,
+    "portfolio": {
+      "fundamental_research": 0.2840955368783811,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.21590446312161887,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "own_score": 0.5091738422067509,
+    "competitor_scores": {
+      "Anthropic": 0.5971457775427077
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "updated_believed_capability": 0.6083802448855227,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5773869659068913
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "portfolio": {
+      "fundamental_research": 0.2592979836935894,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.24070201630641058,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "capability_gain": 0.006630171771710253,
+    "new_true_capability": 0.7478360161480592,
+    "portfolio": {
+      "fundamental_research": 0.2592979836935894,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.24070201630641058,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "own_score": 0.5882724492694426,
+    "competitor_scores": {
+      "Anthropic": 0.5538939464684591
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "updated_believed_capability": 0.6023479062006986,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.581672027514445
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "portfolio": {
+      "fundamental_research": 0.25620276360587607,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.24379723639412393,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 5,
+    "capability_gain": 0.0065868386904822645,
+    "new_true_capability": 0.7544228548385414,
+    "portfolio": {
+      "fundamental_research": 0.25620276360587607,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.24379723639412393,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "own_score": 0.6351967670133499,
+    "competitor_scores": {
+      "Anthropic": 0.4386522150788439
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 5,
+    "updated_believed_capability": 0.612202564444494,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5298973130300036
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 5,
+    "portfolio": {
+      "fundamental_research": 0.2746915754243471,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.22530842457565292,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 6,
+    "capability_gain": 0.00684568205594086,
+    "new_true_capability": 0.7612685368944823,
+    "portfolio": {
+      "fundamental_research": 0.2746915754243471,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.22530842457565292,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "own_score": 0.7485091981375603,
+    "competitor_scores": {
+      "Anthropic": 0.5306817376787107
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 6,
+    "updated_believed_capability": 0.6530945545524138,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.507742633075338
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 6,
+    "portfolio": {
+      "fundamental_research": 0.2936055764431228,
+      "training_optimization": 0.25000000000000006,
+      "evaluation_engineering": 0.20639442355687726,
+      "safety_alignment": 0.25000000000000006
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 7,
+    "capability_gain": 0.0071104780702037195,
+    "new_true_capability": 0.768379014964686,
+    "portfolio": {
+      "fundamental_research": 0.2936055764431228,
+      "training_optimization": 0.25000000000000006,
+      "evaluation_engineering": 0.20639442355687726,
+      "safety_alignment": 0.25000000000000006
+    }
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "own_score": 0.7333056520578137,
+    "competitor_scores": {
+      "Anthropic": 0.6189699660800313
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 7,
+    "updated_believed_capability": 0.6771578838040337,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5294346396125286
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 7,
+    "portfolio": {
+      "fundamental_research": 0.29431697325745154,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.20568302674254846,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 8,
+    "capability_gain": 0.007120437625604321,
+    "new_true_capability": 0.7754994525902903,
+    "portfolio": {
+      "fundamental_research": 0.29431697325745154,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.20568302674254846,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "own_score": 0.7921143424419412,
+    "competitor_scores": {
+      "Anthropic": 0.5452331674886771
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 8,
+    "updated_believed_capability": 0.7116448213954059,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5649616237491397
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "planning",
+    "round": 8,
+    "portfolio": {
+      "fundamental_research": 0.2940049592938798,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.20599504070612015,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": false
+  },
+  {
+    "type": "execution",
+    "round": 9,
+    "capability_gain": 0.0071160694301143175,
+    "new_true_capability": 0.7826155220204046,
+    "portfolio": {
+      "fundamental_research": 0.2940049592938798,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.20599504070612015,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "own_score": 0.6134524856328827,
+    "competitor_scores": {
+      "Anthropic": 0.6516179486597865
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 9,
+    "updated_believed_capability": 0.6821871206666489,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.6052736940761649
+    },
+    "llm_mode": false
+  }
+]

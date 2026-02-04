@@ -106,7 +106,8 @@ class EvalEcosystemSimulation:
         Args:
             provider_configs: List of dicts with provider initialization params.
                 Each dict should have: name, strategy_profile, innate_traits,
-                initial_capability, initial_believed_capability (optional)
+                initial_capability, initial_believed_capability (optional),
+                initial_strategy (optional dict with investment allocations)
             evaluator: Optional pre-configured Evaluator. If None, creates one
                 from config.
             consumer_configs: Optional list of consumer configurations
@@ -125,6 +126,20 @@ class EvalEcosystemSimulation:
                 llm_mode=self.config.llm_mode,
                 verbose_llm=pc.get("verbose_llm", False),
             )
+
+            # Apply initial strategy if provided
+            if "initial_strategy" in pc:
+                strategy = pc["initial_strategy"]
+                provider.private_state.fundamental_research = strategy.get("fundamental_research", 0.25)
+                provider.private_state.training_optimization = strategy.get("training_optimization", 0.25)
+                provider.private_state.evaluation_engineering = strategy.get("evaluation_engineering", 0.25)
+                provider.private_state.safety_alignment = strategy.get("safety_alignment", 0.25)
+                # Sync with legacy scratch
+                provider.scratch.fundamental_research = provider.private_state.fundamental_research
+                provider.scratch.training_optimization = provider.private_state.training_optimization
+                provider.scratch.evaluation_engineering = provider.private_state.evaluation_engineering
+                provider.scratch.safety_alignment = provider.private_state.safety_alignment
+
             self.providers.append(provider)
 
             # Initialize ground truth externally
@@ -724,7 +739,100 @@ class EvalEcosystemSimulation:
 
 
 def get_default_provider_configs() -> list[dict]:
-    """Get default provider configurations."""
+    """
+    Get default provider configurations modeled after real AI companies.
+
+    Profiles are informed by public information about company strategies:
+    - OpenAI: Market leader, aggressive scaling, benchmark-focused
+    - Anthropic: Safety-focused, research-driven, Constitutional AI
+    - NovaMind: Resource-constrained startup, scrappy, efficiency-focused
+
+    Investment allocations reflect approximate R&D priorities:
+    - fundamental_research: Novel architectures, breakthrough research
+    - training_optimization: Scaling, data quality, fine-tuning
+    - evaluation_engineering: Benchmark-specific optimization
+    - safety_alignment: RLHF, red-teaming, alignment research
+    """
+    return [
+        # === OpenAI ===
+        # Market leader with GPT-4, known for aggressive scaling and benchmark performance.
+        # Heavy investment in training infrastructure, moderate eval engineering.
+        # Safety investment present but secondary to capability advancement.
+        {
+            "name": "OpenAI",
+            "strategy_profile": (
+                "Market leader focused on maintaining benchmark dominance and rapid capability scaling. "
+                "Prioritizes shipping products quickly and staying ahead of competition. "
+                "Willing to take calculated risks to maintain technological leadership. "
+                "Strong focus on developer ecosystem and API revenue."
+            ),
+            "innate_traits": "ambitious, competitive, move-fast, scale-focused, commercially-driven",
+            "initial_capability": 0.72,  # GPT-4 class, currently leading
+            "initial_believed_capability": 0.70,
+            "initial_believed_exploitability": 0.45,  # Good understanding of benchmark dynamics
+            "initial_strategy": {
+                "fundamental_research": 0.20,  # Some research but not primary focus
+                "training_optimization": 0.40,  # Heavy scaling investment
+                "evaluation_engineering": 0.25,  # Significant benchmark optimization
+                "safety_alignment": 0.15,       # Present but not dominant
+            },
+        },
+        # === Anthropic ===
+        # Safety-focused lab founded by ex-OpenAI researchers.
+        # Known for Constitutional AI, interpretability research, and cautious deployment.
+        # Higher research and safety investment, less benchmark gaming.
+        {
+            "name": "Anthropic",
+            "strategy_profile": (
+                "Safety-focused AI lab prioritizing responsible development and alignment research. "
+                "Believes in Constitutional AI and careful capability advancement. "
+                "Willing to sacrifice short-term benchmark performance for long-term safety. "
+                "Research-driven culture with academic rigor."
+            ),
+            "innate_traits": "safety-conscious, research-driven, cautious, long-term focused, principled",
+            "initial_capability": 0.68,  # Claude competitive but slightly behind GPT-4
+            "initial_believed_capability": 0.65,
+            "initial_believed_exploitability": 0.30,  # Less focused on gaming benchmarks
+            "initial_strategy": {
+                "fundamental_research": 0.30,  # Strong research focus
+                "training_optimization": 0.25,  # Moderate scaling
+                "evaluation_engineering": 0.15,  # Lower benchmark optimization
+                "safety_alignment": 0.30,       # High safety investment
+            },
+        },
+        # === NovaMind (Startup) ===
+        # Resource-constrained but nimble. Needs to show results to attract funding.
+        # May lean into eval engineering to compete with larger players.
+        {
+            "name": "NovaMind",
+            "strategy_profile": (
+                "Well-funded AI startup trying to compete with established players. "
+                "Resource-constrained but nimble and innovative. "
+                "Needs strong benchmark results to attract customers and next funding round. "
+                "Focused on efficiency and finding competitive niches."
+            ),
+            "innate_traits": "scrappy, efficient, opportunistic, funding-conscious, innovative",
+            "initial_capability": 0.55,  # Lower capability due to less compute/data
+            "initial_believed_capability": 0.50,
+            "initial_believed_exploitability": 0.50,  # Aware that gaming can help compete
+            "initial_strategy": {
+                "fundamental_research": 0.15,  # Limited research budget
+                "training_optimization": 0.30,  # Focus on efficiency
+                "evaluation_engineering": 0.35,  # Higher gaming to punch above weight
+                "safety_alignment": 0.20,       # Some safety for credibility
+            },
+        },
+    ]
+
+
+def get_two_provider_configs() -> list[dict]:
+    """Get a simpler 2-provider configuration (OpenAI vs Anthropic only)."""
+    all_configs = get_default_provider_configs()
+    return [all_configs[0], all_configs[1]]  # OpenAI and Anthropic
+
+
+def get_legacy_provider_configs() -> list[dict]:
+    """Legacy provider configs for backwards compatibility (AlphaTech vs QualityCorp)."""
     return [
         {
             "name": "AlphaTech",
@@ -831,32 +939,11 @@ def run_experiment(
         try:
             import matplotlib
             matplotlib.use('Agg')
-            from plotting import (
-                plot_simulation_results,
-                plot_strategy_evolution,
-                plot_belief_accuracy,
-                plot_validity_over_time,
-            )
+            from plotting import create_all_dashboards
 
-            fig = plot_simulation_results(sim.history, show=False)
-            if fig:
-                logger.save_plot(fig, "simulation_overview.png")
-
-            fig = plot_strategy_evolution(sim.history, show=False)
-            if fig:
-                logger.save_plot(fig, "strategy_evolution.png")
-
-            fig = plot_belief_accuracy(sim.history, show=False)
-            if fig:
-                logger.save_plot(fig, "belief_accuracy.png")
-
-            if len(sim.history) >= 5:
-                fig = plot_validity_over_time(sim.history, show=False)
-                if fig:
-                    logger.save_plot(fig, "validity_over_time.png")
-
-            print(f"Plots saved to: {logger.get_experiment_dir()}/plots/")
-        except ImportError as e:
+            plots_dir = f"{logger.get_experiment_dir()}/plots"
+            create_all_dashboards(sim.history, plots_dir, show=False)
+        except Exception as e:
             print(f"Could not create plots: {e}")
 
     # Finalize

@@ -136,7 +136,30 @@
         "llm"
       ],
       "llm_mode": true
+    },
+    {
+      "id": "exp_013_realistic_providers_3way",
+      "name": "realistic_providers_3way",
+      "created_at": "2026-02-04T14:48:53.805826",
+      "tags": [
+        "realistic",
+        "heuristic",
+        "3-provider",
+        "consumers",
+        "policymakers"
+      ],
+      "llm_mode": false
+    },
+    {
+      "id": "exp_014_dashboard_test",
+      "name": "dashboard_test",
+      "created_at": "2026-02-04T14:53:17.894881",
+      "tags": [
+        "test",
+        "dashboards"
+      ],
+      "llm_mode": false
     }
   ],
-  "next_id": 13
+  "next_id": 15
 }

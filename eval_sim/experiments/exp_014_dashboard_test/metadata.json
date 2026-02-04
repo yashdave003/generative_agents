@@ -1,0 +1,14 @@
+{
+  "experiment_id": "exp_014_dashboard_test",
+  "name": "dashboard_test",
+  "description": "Quick test to verify new dashboards generate automatically",
+  "tags": [
+    "test",
+    "dashboards"
+  ],
+  "created_at": "2026-02-04T14:53:17.894881",
+  "git_commit": "54f6ea70",
+  "seed": 123,
+  "llm_mode": false,
+  "notes": "Completed at: 2026-02-04T14:53:33.981333"
+}

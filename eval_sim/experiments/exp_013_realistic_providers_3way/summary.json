@@ -1,0 +1,93 @@
+{
+  "n_rounds": 30,
+  "final_scores": {
+    "OpenAI": 0.7555431737407649,
+    "Anthropic": 0.7727004798490258,
+    "NovaMind": 0.6532893985591063
+  },
+  "final_true_capabilities": {
+    "OpenAI": 0.9142067568119802,
+    "Anthropic": 0.8832656088138753,
+    "NovaMind": 0.7227134737615967
+  },
+  "final_believed_capabilities": {
+    "OpenAI": 0.7119563817964588,
+    "Anthropic": 0.7221044589382477,
+    "NovaMind": 0.6025394392458227
+  },
+  "final_strategies": {
+    "OpenAI": {
+      "fundamental_research": 0.2452404842398654,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2547595157601346,
+      "safety_alignment": 0.25
+    },
+    "Anthropic": {
+      "fundamental_research": 0.29985192325183585,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.20014807674816415,
+      "safety_alignment": 0.25
+    },
+    "NovaMind": {
+      "fundamental_research": 0.21149442281294886,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.33850557718705115,
+      "safety_alignment": 0.2
+    }
+  },
+  "leaderboard": [
+    [
+      "Anthropic",
+      0.7727004798490258
+    ],
+    [
+      "OpenAI",
+      0.7555431737407649
+    ],
+    [
+      "NovaMind",
+      0.6532893985591063
+    ]
+  ],
+  "validity_correlation": 0.6635395552680015,
+  "benchmark_params": {
+    "validity": 0.7999999999999999,
+    "exploitability": 0.3,
+    "noise": 0.1
+  },
+  "provider_summaries": {
+    "OpenAI": {
+      "initial_capability": 0.72,
+      "final_capability": 0.9142067568119802,
+      "capability_growth": 0.19420675681198019,
+      "mean_score": 0.6746672345091824,
+      "score_std": 0.0897388792115009,
+      "mean_fundamental_research": 0.26192084955233413,
+      "mean_training_optimization": 0.255,
+      "mean_evaluation_engineering": 0.23641248378099916,
+      "mean_safety_alignment": 0.24666666666666667
+    },
+    "Anthropic": {
+      "initial_capability": 0.68,
+      "final_capability": 0.8832656088138753,
+      "capability_growth": 0.20326560881387523,
+      "mean_score": 0.6340040090380037,
+      "score_std": 0.09836554172195601,
+      "mean_fundamental_research": 0.2868228781282741,
+      "mean_training_optimization": 0.25,
+      "mean_evaluation_engineering": 0.2115104552050592,
+      "mean_safety_alignment": 0.25166666666666665
+    },
+    "NovaMind": {
+      "initial_capability": 0.55,
+      "final_capability": 0.7227134737615967,
+      "capability_growth": 0.17271347376159663,
+      "mean_score": 0.5487496899038554,
+      "score_std": 0.07661900813374307,
+      "mean_fundamental_research": 0.20562731847999238,
+      "mean_training_optimization": 0.25166666666666665,
+      "mean_evaluation_engineering": 0.3427060148533409,
+      "mean_safety_alignment": 0.2
+    }
+  }
+}
