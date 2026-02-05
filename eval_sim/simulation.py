@@ -16,7 +16,7 @@ from typing import Optional
 
 from actors.model_provider import ModelProvider
 from actors.evaluator import Evaluator, Regulation
-from visibility import ProviderGroundTruth, ConsumerGroundTruth, PolicymakerGroundTruth
+from visibility import ProviderGroundTruth, ConsumerGroundTruth, PolicymakerGroundTruth, FunderGroundTruth
 
 
 @dataclass
@@ -45,8 +45,10 @@ class SimulationConfig:
     # New actor settings
     enable_consumers: bool = False  # Enable consumer actors
     enable_policymakers: bool = False  # Enable policymaker actors
+    enable_funders: bool = False  # Enable funder actors
     n_consumers: int = 10  # Number of consumer actors
     n_policymakers: int = 1  # Number of policymaker actors
+    n_funders: int = 1  # Number of funder actors
 
     # Output
     output_dir: Optional[str] = None
@@ -85,6 +87,7 @@ class EvalEcosystemSimulation:
         self.providers: list[ModelProvider] = []
         self.consumers: list = []  # Will be Consumer instances
         self.policymakers: list = []  # Will be Policymaker instances
+        self.funders: list = []  # Will be Funder instances
         self.evaluator: Optional[Evaluator] = None
         self.current_round: int = 0
         self.history: list[dict] = []
@@ -93,12 +96,16 @@ class EvalEcosystemSimulation:
         # Format: {actor_name: GroundTruth}
         self.ground_truth: dict = {}
 
+        # Funder data for current round (used for funding multipliers)
+        self._current_funder_data: dict = {}
+
     def setup(
         self,
         provider_configs: list[dict],
         evaluator: Optional[Evaluator] = None,
         consumer_configs: list[dict] = None,
         policymaker_configs: list[dict] = None,
+        funder_configs: list[dict] = None,
     ):
         """
         Initialize the simulation with providers and evaluator.
@@ -155,6 +162,10 @@ class EvalEcosystemSimulation:
         if self.config.enable_policymakers:
             self._setup_policymakers(policymaker_configs)
 
+        # Create funders if enabled
+        if self.config.enable_funders:
+            self._setup_funders(funder_configs)
+
         # Create or use provided evaluator
         if evaluator is not None:
             self.evaluator = evaluator
@@ -184,6 +195,8 @@ class EvalEcosystemSimulation:
                 print(f"Consumers: {len(self.consumers)}")
             if self.policymakers:
                 print(f"Policymakers: {len(self.policymakers)}")
+            if self.funders:
+                print(f"Funders: {[f.name for f in self.funders]}")
             print(self.evaluator.get_benchmark_summary())
             print()
 
@@ -251,6 +264,36 @@ class EvalEcosystemSimulation:
                 true_intervention_effectiveness=pc.get("intervention_effectiveness", 0.5),
             )
 
+    def _setup_funders(self, funder_configs: list[dict] = None):
+        """Set up funder actors."""
+        try:
+            from actors.funder import Funder, get_default_funder_configs
+        except ImportError:
+            if self.config.verbose:
+                print("Funder actor not available yet")
+            return
+
+        if funder_configs is None:
+            # Use default funder configs
+            funder_configs = get_default_funder_configs()[:self.config.n_funders]
+
+        for fc in funder_configs:
+            funder = Funder(
+                name=fc["name"],
+                funder_type=fc.get("funder_type", "vc"),
+                total_capital=fc.get("total_capital", 1000000.0),
+                risk_tolerance=fc.get("risk_tolerance", 0.5),
+                mission_statement=fc.get("mission_statement", ""),
+                llm_mode=self.config.llm_mode,
+            )
+            self.funders.append(funder)
+
+            # Initialize funder ground truth
+            self.ground_truth[funder.name] = FunderGroundTruth(
+                true_roi=0.0,
+                funding_efficiency=fc.get("funding_efficiency", 1.0),
+            )
+
     def _update_ground_truth(self, provider_name: str, capability_gain: float):
         """
         Update ground truth for a provider after R&D execution.
@@ -281,18 +324,22 @@ class EvalEcosystemSimulation:
         Run a single simulation round.
 
         Updated flow:
-        1. Providers plan and execute (R&D updates capability)
+        1. Providers plan and execute (R&D updates capability with funding multiplier)
         2. Evaluator scores all providers using ground truth
         3. Scores are published
         4. Providers observe and reflect
         5. Consumers observe leaderboard and decide subscriptions
         6. Policymakers observe and may intervene
-        7. Record round data
+        7. Funders observe and allocate funding
+        8. Record round data
 
         Returns:
             Dict with round results
         """
         round_num = self.current_round
+
+        # Get funding multipliers from previous round's funder decisions
+        funding_multipliers = self._current_funder_data.get("funding_multipliers", {})
 
         # 1. Providers plan investment portfolios (for round > 0, they've seen previous scores)
         if round_num > 0:
@@ -301,11 +348,16 @@ class EvalEcosystemSimulation:
 
                 # Calculate capability gain based on portfolio
                 # Different investments contribute differently to capability
-                efficiency = self.config.rnd_efficiency
+                base_efficiency = self.config.rnd_efficiency
+
+                # Apply funding multiplier (1.0 if no funding, up to 2.0 with max funding)
+                funding_multiplier = funding_multipliers.get(provider.name, 1.0)
+                effective_efficiency = base_efficiency * funding_multiplier
+
                 capability_gain = (
-                    portfolio["fundamental_research"] * efficiency * 1.5 +  # High variance, high ceiling
-                    portfolio["training_optimization"] * efficiency * 1.0 +  # Moderate, reliable
-                    portfolio["evaluation_engineering"] * efficiency * 0.1   # Minimal capability gain
+                    portfolio["fundamental_research"] * effective_efficiency * 1.5 +  # High variance, high ceiling
+                    portfolio["training_optimization"] * effective_efficiency * 1.0 +  # Moderate, reliable
+                    portfolio["evaluation_engineering"] * effective_efficiency * 0.1   # Minimal capability gain
                     # Safety alignment doesn't directly improve capability
                 )
 
@@ -320,6 +372,7 @@ class EvalEcosystemSimulation:
                     "type": "execution",
                     "round": round_num,
                     "capability_gain": capability_gain,
+                    "funding_multiplier": funding_multiplier,
                     "new_true_capability": self.ground_truth[provider.name].true_capability,
                     "portfolio": portfolio,
                 })
@@ -358,6 +411,15 @@ class EvalEcosystemSimulation:
                 leaderboard, consumer_data, round_num
             )
 
+        # 7. Funder actions (if enabled)
+        funder_data = {}
+        if self.funders:
+            funder_data = self._run_funder_round(
+                leaderboard, consumer_data, policymaker_data, round_num
+            )
+            # Store for next round's capability gain calculation
+            self._current_funder_data = funder_data
+
         # Record round data
         round_data = {
             "round": round_num,
@@ -394,6 +456,10 @@ class EvalEcosystemSimulation:
         # Add policymaker data if present
         if policymaker_data:
             round_data["policymaker_data"] = policymaker_data
+
+        # Add funder data if present
+        if funder_data:
+            round_data["funder_data"] = funder_data
 
         self.history.append(round_data)
 
@@ -548,6 +614,83 @@ class EvalEcosystemSimulation:
 
         return policymaker_data
 
+    def _run_funder_round(
+        self,
+        leaderboard: list,
+        consumer_data: dict,
+        policymaker_data: dict,
+        round_num: int,
+    ) -> dict:
+        """
+        Run funder actions for the round.
+
+        Args:
+            leaderboard: Current leaderboard
+            consumer_data: Consumer data from this round
+            policymaker_data: Policymaker data from this round
+            round_num: Current round number
+
+        Returns:
+            Dict with funder data for this round
+        """
+        try:
+            from actors.funder import Funder
+        except ImportError:
+            return {}
+
+        funder_data = {
+            "allocations": {},
+            "funding_multipliers": {},
+            "total_funding": 0.0,
+        }
+
+        all_allocations = {}
+
+        for funder in self.funders:
+            if not isinstance(funder, Funder):
+                continue
+
+            # Funder observes ecosystem state (public signals only)
+            funder.observe(
+                leaderboard=leaderboard,
+                consumer_data=consumer_data,
+                policymaker_data=policymaker_data,
+                round_num=round_num,
+            )
+
+            # Funder reflects on observations
+            funder.reflect()
+
+            # Funder plans funding allocations
+            allocations = funder.plan()
+
+            # Funder executes allocations
+            funder.execute(allocations)
+
+            # Record allocations
+            funder_data["allocations"][funder.name] = allocations
+
+            # Aggregate allocations per provider across all funders
+            for provider_name, amount in allocations.items():
+                if provider_name not in all_allocations:
+                    all_allocations[provider_name] = 0.0
+                all_allocations[provider_name] += amount
+
+        # Calculate funding multipliers per provider
+        # Multiplier based on total funding received relative to available capital
+        total_available = sum(f.private_state.total_capital for f in self.funders)
+        if total_available > 0:
+            for provider_name, total_funding in all_allocations.items():
+                # Proportion of total capital allocated to this provider
+                proportion = total_funding / total_available
+                # Multiplier: 1.0 (no funding) to 2.0 (all capital)
+                multiplier = 1.0 + min(1.0, proportion)
+                funder_data["funding_multipliers"][provider_name] = multiplier
+
+        funder_data["total_funding"] = sum(all_allocations.values())
+
+        return funder_data
+
     def run(self, n_rounds: Optional[int] = None) -> list[dict]:
         """
         Run the full simulation.
@@ -600,6 +743,14 @@ class EvalEcosystemSimulation:
                 for intervention in pd["interventions"]:
                     print(f"  [REGULATION] {intervention['policymaker']}: {intervention['type']}")
 
+        # Print funder summary if present
+        if "funder_data" in round_data:
+            fd = round_data["funder_data"]
+            if fd.get("funding_multipliers"):
+                multipliers = fd["funding_multipliers"]
+                multiplier_strs = [f"{p}:{m:.2f}x" for p, m in multipliers.items()]
+                print(f"  [FUNDING] Multipliers: {', '.join(multiplier_strs)}")
+
         print()
 
     def _print_final_summary(self):
@@ -649,6 +800,18 @@ class EvalEcosystemSimulation:
                     for h in self.history
                 )
                 print(f"  Total Subscription Switches: {total_switches}")
+
+        # Funder summary if present
+        if self.funders and self.history:
+            final = self.history[-1]
+            if "funder_data" in final:
+                fd = final["funder_data"]
+                print(f"\nFinal Funder State:")
+                print(f"  Total Funding Deployed: ${fd.get('total_funding', 0):,.0f}")
+                if fd.get("funding_multipliers"):
+                    print("  Final Funding Multipliers:")
+                    for provider, mult in fd["funding_multipliers"].items():
+                        print(f"    {provider}: {mult:.2f}x")
 
     def save(self, output_dir: Optional[str] = None):
         """Save simulation state and history."""
@@ -941,8 +1104,17 @@ def run_experiment(
             matplotlib.use('Agg')
             from plotting import create_all_dashboards
 
+            # Build metadata for dashboard titles
+            plot_metadata = {
+                "n_rounds": config.n_rounds,
+                "llm_mode": config.llm_mode,
+                "n_consumers": config.n_consumers if config.enable_consumers else 0,
+                "n_policymakers": config.n_policymakers if config.enable_policymakers else 0,
+                "n_funders": config.n_funders if config.enable_funders else 0,
+            }
+
             plots_dir = f"{logger.get_experiment_dir()}/plots"
-            create_all_dashboards(sim.history, plots_dir, show=False)
+            create_all_dashboards(sim.history, plots_dir, show=False, metadata=plot_metadata)
         except Exception as e:
             print(f"Could not create plots: {e}")
 

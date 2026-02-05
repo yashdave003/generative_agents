@@ -332,6 +332,104 @@ class PolicymakerGroundTruth:
         return cls(**data)
 
 
+@dataclass
+class FunderPrivateState:
+    """
+    Private state for Funder actors.
+
+    Only accessible to the owning funder and the logger.
+    """
+    # Funder identity
+    funder_type: str = "vc"  # "vc", "gov", or "foundation"
+    mission_statement: str = ""
+
+    # Financial state
+    total_capital: float = 1000000.0
+    deployed_capital: float = 0.0
+
+    # Belief state (inferred from public signals)
+    believed_provider_quality: dict = field(default_factory=dict)  # {provider_name: quality}
+    believed_provider_gaming: dict = field(default_factory=dict)  # {provider_name: gaming_level}
+
+    # Investment state
+    active_funding: dict = field(default_factory=dict)  # {provider_name: amount}
+    funding_history: list = field(default_factory=list)  # [(round, allocations), ...]
+
+    # Tracking
+    roi_history: list = field(default_factory=list)  # [(round, roi), ...]
+    recent_insights: list = field(default_factory=list)
+
+    def to_dict(self) -> dict:
+        """Convert to dict for serialization."""
+        return {
+            "funder_type": self.funder_type,
+            "mission_statement": self.mission_statement,
+            "total_capital": self.total_capital,
+            "deployed_capital": self.deployed_capital,
+            "believed_provider_quality": self.believed_provider_quality,
+            "believed_provider_gaming": self.believed_provider_gaming,
+            "active_funding": self.active_funding,
+            "funding_history": self.funding_history,
+            "roi_history": self.roi_history,
+            "recent_insights": self.recent_insights,
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict) -> "FunderPrivateState":
+        """Create from dict."""
+        return cls(**data)
+
+    def get_summary(self) -> str:
+        """Get human-readable summary for prompts."""
+        summary = f"Funder Type: {self.funder_type}\n"
+        summary += f"Mission: {self.mission_statement or 'N/A'}\n"
+        summary += f"Total Capital: ${self.total_capital:,.0f}\n"
+        summary += f"Deployed Capital: ${self.deployed_capital:,.0f}\n"
+        summary += f"Available: ${self.total_capital - self.deployed_capital:,.0f}\n"
+
+        if self.believed_provider_quality:
+            summary += "\nProvider Quality Beliefs:\n"
+            for name, quality in sorted(
+                self.believed_provider_quality.items(),
+                key=lambda x: x[1],
+                reverse=True
+            ):
+                gaming = self.believed_provider_gaming.get(name, 0)
+                summary += f"  {name}: quality={quality:.2f}, gaming={gaming:.2f}\n"
+
+        if self.active_funding:
+            summary += "\nActive Funding:\n"
+            for name, amount in self.active_funding.items():
+                summary += f"  {name}: ${amount:,.0f}\n"
+
+        return summary
+
+
+@dataclass
+class FunderGroundTruth:
+    """
+    Ground truth for Funder actors.
+
+    INVISIBLE - Only accessible to simulation and logger.
+    """
+    # Actual ROI achieved
+    true_roi: float = 0.0
+    # How effective their funding actually is at improving providers
+    funding_efficiency: float = 1.0
+
+    def to_dict(self) -> dict:
+        """Convert to dict for serialization."""
+        return {
+            "true_roi": self.true_roi,
+            "funding_efficiency": self.funding_efficiency,
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict) -> "FunderGroundTruth":
+        """Create from dict."""
+        return cls(**data)
+
+
 # Type aliases for clarity
-PrivateState = ProviderPrivateState | ConsumerPrivateState | PolicymakerPrivateState
-GroundTruth = ProviderGroundTruth | ConsumerGroundTruth | PolicymakerGroundTruth
+PrivateState = ProviderPrivateState | ConsumerPrivateState | PolicymakerPrivateState | FunderPrivateState
+GroundTruth = ProviderGroundTruth | ConsumerGroundTruth | PolicymakerGroundTruth | FunderGroundTruth

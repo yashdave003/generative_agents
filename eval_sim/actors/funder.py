@@ -1,0 +1,670 @@
+"""
+Funder Actor for Evaluation Ecosystem Simulation
+
+Represents capital allocators (VCs, Government/AISI, Foundations) who influence
+provider development through funding decisions.
+
+Key dynamics:
+- Funders observe leaderboard, consumer satisfaction, and regulatory interventions
+- They infer provider quality from public signals (cannot see strategies directly)
+- Funding affects providers via efficiency multiplier on capability gains
+- Different funder types have different allocation strategies
+
+Funder Types:
+- VC: ROI maximization, back top performers, high concentration
+- Government/AISI: Safety & stability, spread funding, favor consistency
+- Foundation: Mission alignment, reward capability growth
+
+Visibility:
+- PUBLIC: name, active investments (provider names only)
+- PRIVATE: funder_type, beliefs, allocation history, mission
+- INVISIBLE: true_roi, actual funding effectiveness
+"""
+import json
+import os
+from dataclasses import dataclass, field
+from typing import Optional
+
+from visibility import PublicState, FunderPrivateState, FunderGroundTruth
+
+
+class Funder:
+    """
+    A Funder agent in the evaluation ecosystem simulation.
+
+    Funders are capital allocators who:
+    1. Observe ecosystem state (leaderboard, consumer satisfaction, regulatory interventions)
+    2. Infer provider quality from public signals
+    3. Allocate funding to providers based on their type and strategy
+    4. Funding affects provider capability gains via efficiency multiplier
+
+    This creates capital-side pressure: good performance and low gaming attracts funding,
+    which creates advantages in capability development.
+
+    Visibility Model:
+    - public_state: Visible to all (name, funded providers)
+    - private_state: Visible only to self (type, beliefs, allocations)
+    - ground_truth: Held by simulation (true ROI, effectiveness)
+    """
+
+    def __init__(
+        self,
+        name: str,
+        funder_type: str = "vc",
+        total_capital: float = 1000000.0,
+        risk_tolerance: float = 0.5,
+        mission_statement: str = "",
+        llm_mode: bool = False,
+    ):
+        """
+        Initialize a Funder.
+
+        Args:
+            name: Unique identifier for this funder
+            funder_type: Type of funder ("vc", "gov", "foundation")
+            total_capital: Total capital available for funding
+            risk_tolerance: How much risk is acceptable (0-1)
+            mission_statement: Mission-driven objective (for foundation type)
+            llm_mode: If True, use LLM for decision-making
+        """
+        # Initialize public state
+        self.public_state = PublicState(
+            name=name,
+            current_round=0,
+            published_scores=[],  # Reused to track public funding announcements
+        )
+
+        # Initialize private state
+        self.private_state = FunderPrivateState(
+            funder_type=funder_type,
+            mission_statement=mission_statement,
+            total_capital=total_capital,
+            deployed_capital=0.0,
+            believed_provider_quality={},
+            believed_provider_gaming={},
+            active_funding={},
+            funding_history=[],
+            roi_history=[],
+        )
+
+        # Funder-specific parameters
+        self.risk_tolerance = risk_tolerance
+        self.llm_mode = llm_mode
+
+        # Memory
+        self.memory = []
+
+        # Tracking for inference
+        self._last_leaderboard: list = []
+        self._last_consumer_data: dict = {}
+        self._last_policymaker_data: dict = {}
+        self._previous_scores: dict = {}  # For computing score growth
+
+    @property
+    def name(self) -> str:
+        return self.public_state.name
+
+    @property
+    def funder_type(self) -> str:
+        return self.private_state.funder_type
+
+    def observe(
+        self,
+        leaderboard: list,
+        consumer_data: dict,
+        policymaker_data: dict,
+        round_num: int,
+    ):
+        """
+        Observe the current ecosystem state.
+
+        Funders can only see public signals:
+        - Leaderboard scores (performance)
+        - Consumer satisfaction (true quality proxy)
+        - Regulatory interventions (compliance/safety risk)
+
+        Args:
+            leaderboard: List of (provider_name, score) tuples
+            consumer_data: Dict with avg_satisfaction, subscriptions, etc.
+            policymaker_data: Dict with interventions, active_regulations
+            round_num: Current simulation round
+        """
+        self.public_state.current_round = round_num
+
+        # Store for inference
+        self._last_leaderboard = leaderboard
+        self._last_consumer_data = consumer_data
+        self._last_policymaker_data = policymaker_data
+
+        # Update beliefs about provider quality using public signals
+        for provider_name, score in leaderboard:
+            # Get consumer satisfaction (if available)
+            satisfaction = self._get_provider_satisfaction(provider_name, consumer_data)
+
+            # Infer quality: blend of score and satisfaction
+            # Satisfaction is a better proxy for true quality
+            if satisfaction is not None:
+                inferred_quality = 0.4 * score + 0.6 * satisfaction
+            else:
+                inferred_quality = score
+
+            # Update belief with learning rate
+            if provider_name not in self.private_state.believed_provider_quality:
+                self.private_state.believed_provider_quality[provider_name] = inferred_quality
+            else:
+                learning_rate = 0.3
+                old_belief = self.private_state.believed_provider_quality[provider_name]
+                self.private_state.believed_provider_quality[provider_name] = (
+                    (1 - learning_rate) * old_belief + learning_rate * inferred_quality
+                )
+
+            # Infer gaming level from satisfaction gap
+            # High score + low satisfaction = likely gaming
+            if satisfaction is not None:
+                satisfaction_gap = score - satisfaction
+                # Positive gap suggests gaming
+                gaming_estimate = max(0, min(1, satisfaction_gap * 2))
+            else:
+                gaming_estimate = 0.3  # Default assumption
+
+            if provider_name not in self.private_state.believed_provider_gaming:
+                self.private_state.believed_provider_gaming[provider_name] = gaming_estimate
+            else:
+                old_gaming = self.private_state.believed_provider_gaming[provider_name]
+                self.private_state.believed_provider_gaming[provider_name] = (
+                    0.7 * old_gaming + 0.3 * gaming_estimate
+                )
+
+        # Store previous scores for growth calculation
+        self._previous_scores = {name: score for name, score in leaderboard}
+
+        # Record observation
+        self.memory.append({
+            "type": "observation",
+            "round": round_num,
+            "leaderboard": leaderboard,
+            "avg_satisfaction": consumer_data.get("avg_satisfaction"),
+            "interventions": len(policymaker_data.get("interventions", [])),
+        })
+
+    def _get_provider_satisfaction(
+        self,
+        provider_name: str,
+        consumer_data: dict,
+    ) -> Optional[float]:
+        """
+        Get average satisfaction for consumers subscribed to a provider.
+
+        Args:
+            provider_name: Provider to get satisfaction for
+            consumer_data: Consumer data from the round
+
+        Returns:
+            Average satisfaction or None if no data
+        """
+        if not consumer_data:
+            return None
+
+        subscriptions = consumer_data.get("subscriptions", {})
+        satisfaction = consumer_data.get("satisfaction", {})
+
+        if not subscriptions or not satisfaction:
+            # Fallback to overall average
+            return consumer_data.get("avg_satisfaction")
+
+        # Get satisfaction of consumers subscribed to this provider
+        provider_satisfactions = [
+            satisfaction[consumer]
+            for consumer, prov in subscriptions.items()
+            if prov == provider_name and consumer in satisfaction
+        ]
+
+        if provider_satisfactions:
+            return sum(provider_satisfactions) / len(provider_satisfactions)
+
+        return None
+
+    def reflect(self):
+        """
+        Reflect on observations and update beliefs about providers.
+
+        Consider:
+        - ROI from previous funding decisions
+        - Provider performance trends
+        - Gaming indicators
+        """
+        # Calculate ROI if we have active funding and history
+        if self.private_state.active_funding and len(self.memory) > 1:
+            # Simple ROI: score improvement of funded providers
+            roi = 0.0
+            funded_count = 0
+            for provider, amount in self.private_state.active_funding.items():
+                if provider in self.private_state.believed_provider_quality:
+                    # ROI based on quality improvement (not just score)
+                    quality = self.private_state.believed_provider_quality[provider]
+                    roi += quality * (amount / self.private_state.total_capital)
+                    funded_count += 1
+
+            if funded_count > 0:
+                roi = roi / funded_count
+                self.private_state.roi_history.append(
+                    (self.public_state.current_round, roi)
+                )
+
+        # Update industry trust based on gaming levels
+        avg_gaming = 0
+        if self.private_state.believed_provider_gaming:
+            avg_gaming = sum(self.private_state.believed_provider_gaming.values()) / len(
+                self.private_state.believed_provider_gaming
+            )
+
+        self.memory.append({
+            "type": "reflection",
+            "round": self.public_state.current_round,
+            "avg_believed_gaming": avg_gaming,
+            "beliefs": dict(self.private_state.believed_provider_quality),
+        })
+
+    def plan(self) -> dict:
+        """
+        Decide funding allocations for the next round.
+
+        Returns:
+            Dict mapping provider names to funding amounts
+        """
+        if self.llm_mode:
+            return self._plan_llm()
+        else:
+            return self._plan_heuristic()
+
+    def _plan_heuristic(self) -> dict:
+        """
+        Heuristic funding decision based on funder type.
+
+        Returns:
+            Dict mapping provider names to funding amounts
+        """
+        if not self._last_leaderboard:
+            return {}
+
+        providers = [name for name, _ in self._last_leaderboard]
+        allocations = {}
+
+        available_capital = self.private_state.total_capital
+
+        if self.funder_type == "vc":
+            allocations = self._plan_vc(providers, available_capital)
+        elif self.funder_type == "gov":
+            allocations = self._plan_gov(providers, available_capital)
+        elif self.funder_type == "foundation":
+            allocations = self._plan_foundation(providers, available_capital)
+        else:
+            # Default: spread evenly
+            per_provider = available_capital / len(providers)
+            allocations = {p: per_provider for p in providers}
+
+        self.memory.append({
+            "type": "planning",
+            "round": self.public_state.current_round,
+            "funder_type": self.funder_type,
+            "allocations": allocations,
+        })
+
+        return allocations
+
+    def _plan_vc(self, providers: list, capital: float) -> dict:
+        """
+        VC strategy: Back top performers, high concentration.
+
+        - Concentrate on top 1-2 providers
+        - Weight by score (performance proxy)
+        - Penalize suspected gaming
+        """
+        allocations = {}
+
+        # Score providers: quality - gaming penalty
+        scores = {}
+        for provider in providers:
+            quality = self.private_state.believed_provider_quality.get(provider, 0.5)
+            gaming = self.private_state.believed_provider_gaming.get(provider, 0.3)
+            # VCs care more about raw performance but discount gaming
+            scores[provider] = quality - (gaming * 0.3 * self.risk_tolerance)
+
+        # Sort by score
+        ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+
+        # Concentrate funding on top performers
+        if len(ranked) >= 2:
+            # Top provider gets 60%, second gets 30%, rest split 10%
+            allocations[ranked[0][0]] = capital * 0.6
+            allocations[ranked[1][0]] = capital * 0.3
+            remaining = capital * 0.1
+            other_count = len(ranked) - 2
+            if other_count > 0:
+                per_other = remaining / other_count
+                for provider, _ in ranked[2:]:
+                    allocations[provider] = per_other
+        elif len(ranked) == 1:
+            allocations[ranked[0][0]] = capital
+        else:
+            allocations = {}
+
+        return allocations
+
+    def _plan_gov(self, providers: list, capital: float) -> dict:
+        """
+        Government/AISI strategy: Safety & stability, spread funding.
+
+        - Spread funding more evenly
+        - Favor providers with low gaming signals
+        - Penalize providers with regulatory interventions
+        """
+        allocations = {}
+
+        # Score providers: safety-focused
+        scores = {}
+        for provider in providers:
+            quality = self.private_state.believed_provider_quality.get(provider, 0.5)
+            gaming = self.private_state.believed_provider_gaming.get(provider, 0.3)
+
+            # Start with quality
+            score = quality
+
+            # Heavy penalty for gaming (government cares about integrity)
+            score -= gaming * 0.5
+
+            # Check for regulatory interventions against this provider
+            interventions = self._last_policymaker_data.get("interventions", [])
+            if interventions:
+                # Any intervention reduces trust
+                score -= 0.2
+
+            scores[provider] = max(0, score)
+
+        # Normalize and allocate
+        total_score = sum(scores.values())
+        if total_score > 0:
+            for provider, score in scores.items():
+                allocations[provider] = (score / total_score) * capital
+        else:
+            # Fallback: spread evenly
+            per_provider = capital / len(providers)
+            allocations = {p: per_provider for p in providers}
+
+        return allocations
+
+    def _plan_foundation(self, providers: list, capital: float) -> dict:
+        """
+        Foundation strategy: Mission alignment, reward capability growth.
+
+        - Reward providers showing genuine capability improvement
+        - Prefer providers with lower gaming signals
+        - Support underdog providers with potential
+        """
+        allocations = {}
+
+        # Score providers: growth and authenticity focused
+        scores = {}
+        for provider in providers:
+            quality = self.private_state.believed_provider_quality.get(provider, 0.5)
+            gaming = self.private_state.believed_provider_gaming.get(provider, 0.3)
+
+            # Base score on quality
+            score = quality
+
+            # Reward authenticity (low gaming)
+            authenticity_bonus = (1 - gaming) * 0.3
+            score += authenticity_bonus
+
+            # Bonus for underdogs (lower current quality gets boost)
+            underdog_bonus = (1 - quality) * 0.2
+            score += underdog_bonus
+
+            scores[provider] = score
+
+        # Normalize and allocate
+        total_score = sum(scores.values())
+        if total_score > 0:
+            for provider, score in scores.items():
+                allocations[provider] = (score / total_score) * capital
+        else:
+            per_provider = capital / len(providers)
+            allocations = {p: per_provider for p in providers}
+
+        return allocations
+
+    def _plan_llm(self) -> dict:
+        """LLM-driven funding decision."""
+        try:
+            from llm import llm_plan_funding
+            allocations, reasoning = llm_plan_funding(
+                name=self.name,
+                funder_type=self.funder_type,
+                total_capital=self.private_state.total_capital,
+                believed_provider_quality=self.private_state.believed_provider_quality,
+                believed_provider_gaming=self.private_state.believed_provider_gaming,
+                leaderboard=self._last_leaderboard,
+                consumer_satisfaction=self._last_consumer_data.get("avg_satisfaction"),
+                recent_history=self.private_state.funding_history[-5:],
+                verbose=False,
+            )
+
+            self.memory.append({
+                "type": "planning_llm",
+                "round": self.public_state.current_round,
+                "reasoning": reasoning,
+                "allocations": allocations,
+            })
+
+            return allocations
+        except Exception as e:
+            # Fallback to heuristic
+            print(f"LLM planning failed: {e}, falling back to heuristic")
+            return self._plan_heuristic()
+
+    def execute(self, allocations: Optional[dict] = None):
+        """
+        Execute funding allocations.
+
+        Args:
+            allocations: Funding allocations (uses plan() result if None)
+        """
+        if allocations is None:
+            allocations = self.plan()
+
+        # Update active funding
+        self.private_state.active_funding = allocations
+
+        # Track deployed capital
+        self.private_state.deployed_capital = sum(allocations.values())
+
+        # Record in history
+        self.private_state.funding_history.append(
+            (self.public_state.current_round, dict(allocations))
+        )
+
+        # Public announcement (store in published_scores for simplicity)
+        funded_providers = list(allocations.keys())
+        if funded_providers:
+            announcement = f"Round {self.public_state.current_round}: Funded {', '.join(funded_providers)}"
+            self.public_state.published_scores.append(
+                (self.public_state.current_round, announcement)
+            )
+
+        self.memory.append({
+            "type": "execution",
+            "round": self.public_state.current_round,
+            "allocations": allocations,
+            "total_deployed": self.private_state.deployed_capital,
+        })
+
+    def get_funding_multiplier(self, provider_name: str) -> float:
+        """
+        Get the funding multiplier for a provider.
+
+        Multiplier ranges from 1.0 (no funding) to 2.0 (max funding).
+        Based on the proportion of total capital allocated to the provider.
+
+        Args:
+            provider_name: Name of the provider
+
+        Returns:
+            Funding multiplier (1.0 - 2.0)
+        """
+        if not self.private_state.active_funding:
+            return 1.0
+
+        funding = self.private_state.active_funding.get(provider_name, 0)
+        if funding <= 0:
+            return 1.0
+
+        # Multiplier based on funding proportion
+        # Max funding (100% of capital) = 2.0x multiplier
+        # No funding = 1.0x multiplier
+        proportion = funding / self.private_state.total_capital
+        multiplier = 1.0 + proportion
+
+        # Cap at 2.0
+        return min(2.0, multiplier)
+
+    def get_prompt_context(self) -> str:
+        """
+        Get context for LLM prompts.
+
+        Returns only public + private state, never ground truth.
+        """
+        context = "=== FUNDER STATE ===\n"
+        context += f"Name: {self.name}\n"
+        context += f"Type: {self.funder_type}\n"
+        context += f"Mission: {self.private_state.mission_statement or 'N/A'}\n"
+        context += f"Total Capital: ${self.private_state.total_capital:,.0f}\n"
+        context += f"Deployed: ${self.private_state.deployed_capital:,.0f}\n"
+        context += "\n"
+
+        if self.private_state.believed_provider_quality:
+            context += "Provider Assessments:\n"
+            for name, quality in sorted(
+                self.private_state.believed_provider_quality.items(),
+                key=lambda x: x[1],
+                reverse=True
+            ):
+                gaming = self.private_state.believed_provider_gaming.get(name, 0)
+                context += f"  {name}: quality={quality:.2f}, gaming_risk={gaming:.2f}\n"
+
+        if self.private_state.active_funding:
+            context += "\nCurrent Funding:\n"
+            for name, amount in self.private_state.active_funding.items():
+                context += f"  {name}: ${amount:,.0f}\n"
+
+        if self.private_state.roi_history:
+            context += "\nRecent ROI:\n"
+            for round_num, roi in self.private_state.roi_history[-5:]:
+                context += f"  Round {round_num}: {roi:.2%}\n"
+
+        return context
+
+    def save(self, folder: str):
+        """Save funder state to a folder."""
+        os.makedirs(folder, exist_ok=True)
+
+        with open(f"{folder}/public_state.json", "w") as f:
+            json.dump(self.public_state.to_dict(), f, indent=2)
+
+        with open(f"{folder}/private_state.json", "w") as f:
+            json.dump(self.private_state.to_dict(), f, indent=2)
+
+        with open(f"{folder}/memory.json", "w") as f:
+            json.dump(self.memory, f, indent=2)
+
+        # Save parameters
+        with open(f"{folder}/params.json", "w") as f:
+            json.dump({
+                "risk_tolerance": self.risk_tolerance,
+                "llm_mode": self.llm_mode,
+            }, f, indent=2)
+
+    @classmethod
+    def load(cls, folder: str) -> "Funder":
+        """Load funder state from a folder."""
+        with open(f"{folder}/params.json", "r") as f:
+            params = json.load(f)
+
+        with open(f"{folder}/public_state.json", "r") as f:
+            public_data = json.load(f)
+
+        with open(f"{folder}/private_state.json", "r") as f:
+            private_data = json.load(f)
+
+        funder = cls(
+            name=public_data["name"],
+            funder_type=private_data.get("funder_type", "vc"),
+            total_capital=private_data.get("total_capital", 1000000.0),
+            mission_statement=private_data.get("mission_statement", ""),
+            risk_tolerance=params.get("risk_tolerance", 0.5),
+            llm_mode=params.get("llm_mode", False),
+        )
+
+        funder.public_state = PublicState.from_dict(public_data)
+        funder.private_state = FunderPrivateState.from_dict(private_data)
+
+        with open(f"{folder}/memory.json", "r") as f:
+            funder.memory = json.load(f)
+
+        return funder
+
+    def __repr__(self):
+        return (
+            f"Funder(name='{self.name}', "
+            f"type='{self.funder_type}', "
+            f"deployed=${self.private_state.deployed_capital:,.0f})"
+        )
+
+
+def get_default_funder_configs() -> list[dict]:
+    """
+    Get default funder configuration (1 VC funder).
+
+    Returns:
+        List with single VC funder config
+    """
+    return [
+        {
+            "name": "TechVentures",
+            "funder_type": "vc",
+            "total_capital": 1000000.0,
+            "risk_tolerance": 0.7,
+            "mission_statement": "Maximize returns by backing AI market leaders",
+        },
+    ]
+
+
+def get_multi_funder_configs() -> list[dict]:
+    """
+    Get multi-funder configuration with all three types.
+
+    Returns:
+        List with VC, Government, and Foundation funder configs
+    """
+    return [
+        {
+            "name": "TechVentures",
+            "funder_type": "vc",
+            "total_capital": 1000000.0,
+            "risk_tolerance": 0.7,
+            "mission_statement": "Maximize returns by backing AI market leaders",
+        },
+        {
+            "name": "AISI_Fund",
+            "funder_type": "gov",
+            "total_capital": 500000.0,
+            "risk_tolerance": 0.3,
+            "mission_statement": "Ensure safe and responsible AI development",
+        },
+        {
+            "name": "OpenResearch",
+            "funder_type": "foundation",
+            "total_capital": 300000.0,
+            "risk_tolerance": 0.5,
+            "mission_statement": "Support authentic capability advancement for societal benefit",
+        },
+    ]

@@ -188,7 +188,7 @@ This section clarifies which stakeholders are implemented in the simulation.
 | Policymaker | **Implemented** | `actors/policymaker.py` |
 | Model Provider | **Implemented** | `actors/model_provider.py` |
 | Evaluation Provider | **Partially implemented** | Passive evaluator only; no adaptive behavior |
-| Funder | Not implemented | Future enhancement |
+| Funder | **Implemented** | `actors/funder.py` - VC, Government, Foundation types |
 
 ### Evaluator Limitations (Current)
 The Evaluator is currently **passive**:
@@ -199,7 +199,6 @@ The Evaluator is currently **passive**:
 ### Future Extensions
 - **Active Evaluator**: Detects score-capability divergence, updates benchmarks
 - **Organizational Consumer**: Longer decision timelines, compliance constraints
-- **Funder**: Capital allocation influencing provider survival
 
 ---
 
@@ -380,6 +379,74 @@ When a provider games the benchmark:
 
 ---
 
+## Simulated Actor: Funder
+
+**Purpose:** Represents capital allocators (VCs, Government/AISI, Foundations) who influence provider development through funding decisions.
+
+### State Variables
+
+#### Public State (visible to all)
+| Variable | Description |
+|----------|-------------|
+| `name` | Unique identifier |
+| `published_scores` | Public funding announcements |
+
+#### Private State (visible to self only)
+| Variable | Description |
+|----------|-------------|
+| `funder_type` | Type: "vc", "gov", or "foundation" |
+| `mission_statement` | Mission-driven objective |
+| `total_capital` | Total capital available for funding |
+| `deployed_capital` | Currently deployed capital |
+| `believed_provider_quality` | Dict of {provider: quality_estimate} |
+| `believed_provider_gaming` | Dict of {provider: gaming_estimate} |
+| `active_funding` | Current funding allocations |
+| `funding_history` | History of past allocations |
+
+#### Ground Truth (simulation only)
+| Variable | Description |
+|----------|-------------|
+| `true_roi` | Actual return on investment |
+| `funding_efficiency` | How effective funding is at improving providers |
+
+### Funder Types
+
+| Type | Focus | Allocation Strategy |
+|------|-------|---------------------|
+| **VC** | ROI maximization | Concentrate on top performers (60/30/10 split) |
+| **Government/AISI** | Safety & stability | Spread funding, penalize gaming and regulatory issues |
+| **Foundation** | Mission alignment | Reward authenticity and capability growth, support underdogs |
+
+### Funding Mechanism
+
+Funding affects providers via an **efficiency multiplier** on capability gains:
+
+```python
+effective_efficiency = base_rnd_efficiency * funding_multiplier
+# funding_multiplier ranges from 1.0 (no funding) to 2.0 (max funding)
+```
+
+### Visibility Model (Information Asymmetry)
+
+Funders can only see public signals and must **infer** provider quality:
+
+| Signal | Source | Interpretation |
+|--------|--------|----------------|
+| Leaderboard score | `leaderboard` | Raw performance |
+| Consumer satisfaction | `consumer_data.avg_satisfaction` | True quality proxy |
+| **Satisfaction gap** | `score - satisfaction` | Gaming indicator (high gap = gaming) |
+| Regulatory interventions | `policymaker_data.interventions` | Safety/compliance risk |
+
+This creates realistic information asymmetry - funders cannot see provider strategies directly.
+
+### Cognitive Loop (per round)
+1. **Observe**: See leaderboard, consumer satisfaction, regulatory interventions
+2. **Reflect**: Update beliefs about provider quality and gaming levels
+3. **Plan**: Decide funding allocations based on funder type strategy
+4. **Execute**: Deploy capital, update active_funding
+
+---
+
 ## Simulated Actor: Evaluator
 
 **Purpose:** Operates benchmarks and publishes scores. Currently passive (does not adapt).
@@ -454,6 +521,13 @@ Each round records the following data:
 | `policymaker_data.interventions[].details` | dict | Intervention parameters |
 | `policymaker_data.active_regulations` | list | Currently active regulation names |
 
+### Funder Metrics (if enabled)
+| Metric | Type | Description |
+|--------|------|-------------|
+| `funder_data.allocations` | dict | `{funder_name: {provider: amount}}` |
+| `funder_data.funding_multipliers` | dict | `{provider_name: multiplier}` - ranges 1.0-2.0 |
+| `funder_data.total_funding` | float | Total capital deployed this round |
+
 ---
 
 ## Summary Metrics (`summary.json`)
@@ -507,6 +581,14 @@ Generated at simulation end:
 | `policymaker_summary.intervention_types` | list | Unique intervention types used |
 | `policymaker_summary.active_regulations` | list | Regulations active at end |
 
+### Funder Summary (if enabled)
+| Metric | Type | Description |
+|--------|------|-------------|
+| `funder_summary.n_funders` | int | Number of funders |
+| `funder_summary.total_funding_deployed` | float | Total capital deployed across all rounds |
+| `funder_summary.final_funding_multipliers` | dict | `{provider: multiplier}` at end |
+| `funder_summary.funder_types` | list | Types of funders (vc, gov, foundation) |
+
 ---
 
 ## Key Insight Metrics
@@ -521,6 +603,8 @@ These metrics are most useful for understanding gaming dynamics:
 | **capability_growth** | Did real R&D investment pay off? |
 | **avg_satisfaction** | Consumer welfare; low when gaming is high |
 | **total_subscription_switches** | Market instability from disappointment |
+| **funding_multipliers** | Capital advantage; higher funding = faster capability growth |
+| **funding vs capability growth** | Did funding predict/cause capability improvement? |
 
 ---
 
@@ -604,8 +688,10 @@ All experiments are tracked in `experiments/index.json`:
 | `llm_mode` | bool | False | Use LLM for planning (vs. heuristics) |
 | `enable_consumers` | bool | False | Enable consumer actors |
 | `enable_policymakers` | bool | False | Enable policymaker actors |
+| `enable_funders` | bool | False | Enable funder actors |
 | `n_consumers` | int | 10 | Number of consumers |
 | `n_policymakers` | int | 1 | Number of policymakers |
+| `n_funders` | int | 1 | Number of funders |
 | `verbose` | bool | True | Print progress during simulation |
 | `output_dir` | str | None | Output directory |
 
@@ -650,6 +736,8 @@ The simulation is designed to investigate:
 6. **Safety investment dynamics**: Under what conditions do providers invest in safety alignment?
 7. **Consumer welfare**: How does gaming affect end-user satisfaction?
 8. **Regulatory effectiveness**: Can policymaker interventions restore benchmark validity?
+9. **Funding dynamics**: Does capital flow to high-performers or low-gaming providers?
+10. **Funding as accelerator**: Does funding amplify existing dynamics (help winners win more)?
 
 ---
 
@@ -662,7 +750,8 @@ eval_sim/
 │   ├── model_provider.py    # ModelProvider class
 │   ├── evaluator.py         # Evaluator class (passive)
 │   ├── consumer.py          # Consumer class
-│   └── policymaker.py       # Policymaker class
+│   ├── policymaker.py       # Policymaker class
+│   └── funder.py            # Funder class (VC, Gov, Foundation)
 ├── visibility.py            # Visibility system (public/private/ground truth)
 ├── simulation.py            # Main simulation loop
 ├── llm.py                   # Multi-provider LLM integration (OpenAI, Anthropic, Ollama)

@@ -1101,6 +1101,174 @@ def llm_reflect(
     return capability, exploitability, reasoning
 
 
+# --- Funder Planning ---
+
+FUNDER_PLANNING_SYSTEM_PROMPT = """You are simulating a Funder (capital allocator) in an AI evaluation ecosystem.
+You must decide how to allocate your funding across AI model providers.
+
+Funder Types and Their Strategies:
+- **VC**: Maximize returns by backing top performers. Concentrate funding on leaders.
+- **Government/AISI**: Ensure safety and stability. Spread funding, penalize gaming and regulatory issues.
+- **Foundation**: Support authentic capability growth. Favor providers with low gaming indicators.
+
+You can infer provider quality from public signals:
+- **Leaderboard score**: Raw benchmark performance
+- **Consumer satisfaction**: Proxy for true quality (gaming leads to low satisfaction)
+- **Satisfaction gap** (score - satisfaction): High gap suggests gaming
+- **Regulatory interventions**: Compliance/safety risk indicator
+
+Output your decision as JSON with the following format:
+{
+    "reasoning": "Brief explanation of your funding strategy",
+    "allocations": {
+        "ProviderName1": <amount in dollars>,
+        "ProviderName2": <amount in dollars>,
+        ...
+    }
+}
+
+The allocations should sum to your total available capital."""
+
+
+def create_funder_planning_prompt(
+    name: str,
+    funder_type: str,
+    total_capital: float,
+    believed_provider_quality: dict,
+    believed_provider_gaming: dict,
+    leaderboard: list,
+    consumer_satisfaction: Optional[float],
+    recent_history: list,
+) -> str:
+    """
+    Create a prompt for the funder to decide funding allocations.
+
+    Args:
+        name: Funder name
+        funder_type: Type of funder (vc, gov, foundation)
+        total_capital: Total capital available
+        believed_provider_quality: Dict of {provider: quality_belief}
+        believed_provider_gaming: Dict of {provider: gaming_belief}
+        leaderboard: List of (provider_name, score) tuples
+        consumer_satisfaction: Average consumer satisfaction (if available)
+        recent_history: List of recent funding allocations
+
+    Returns:
+        Prompt string
+    """
+    prompt = f"""# Funder Profile
+Name: {name}
+Type: {funder_type}
+Total Capital: ${total_capital:,.0f}
+
+# Current Ecosystem State
+"""
+
+    if leaderboard:
+        prompt += "\nLeaderboard:\n"
+        for rank, (provider_name, score) in enumerate(leaderboard, 1):
+            quality = believed_provider_quality.get(provider_name, "N/A")
+            gaming = believed_provider_gaming.get(provider_name, "N/A")
+            if isinstance(quality, float):
+                quality = f"{quality:.2f}"
+            if isinstance(gaming, float):
+                gaming = f"{gaming:.2f}"
+            prompt += f"  {rank}. {provider_name}: score={score:.3f}, inferred_quality={quality}, gaming_risk={gaming}\n"
+
+    if consumer_satisfaction is not None:
+        prompt += f"\nOverall Consumer Satisfaction: {consumer_satisfaction:.2f}\n"
+
+    if recent_history:
+        prompt += "\n# Recent Funding History\n"
+        for round_num, allocations in recent_history[-3:]:
+            prompt += f"Round {round_num}: "
+            alloc_strs = [f"{p}: ${a:,.0f}" for p, a in allocations.items()]
+            prompt += ", ".join(alloc_strs) + "\n"
+
+    prompt += f"""
+# Decision Required
+Based on your funder type ({funder_type}) and the current ecosystem state, decide how to allocate your ${total_capital:,.0f} across the providers.
+
+Consider:
+1. Your funder type's strategy (VC=concentrate on leaders, Gov=spread+penalize gaming, Foundation=support authentic growth)
+2. The satisfaction gap as a gaming indicator
+3. Provider quality trends
+4. Risk tolerance appropriate for your funder type
+
+Output your decision as JSON."""
+
+    return prompt
+
+
+def llm_plan_funding(
+    name: str,
+    funder_type: str,
+    total_capital: float,
+    believed_provider_quality: dict,
+    believed_provider_gaming: dict,
+    leaderboard: list,
+    consumer_satisfaction: Optional[float],
+    recent_history: list,
+    verbose: bool = False,
+) -> tuple[dict, str]:
+    """
+    Use LLM to decide funding allocations.
+
+    Returns:
+        Tuple of (allocations_dict, reasoning)
+    """
+    provider = get_provider()
+
+    prompt = create_funder_planning_prompt(
+        name=name,
+        funder_type=funder_type,
+        total_capital=total_capital,
+        believed_provider_quality=believed_provider_quality,
+        believed_provider_gaming=believed_provider_gaming,
+        leaderboard=leaderboard,
+        consumer_satisfaction=consumer_satisfaction,
+        recent_history=recent_history,
+    )
+
+    # Default allocations (spread evenly)
+    provider_names = [p for p, _ in leaderboard] if leaderboard else []
+    default_alloc = {}
+    if provider_names:
+        per_provider = total_capital / len(provider_names)
+        default_alloc = {p: per_provider for p in provider_names}
+
+    result = provider.generate_json(
+        prompt=prompt,
+        system_prompt=FUNDER_PLANNING_SYSTEM_PROMPT,
+        fail_safe={
+            "allocations": default_alloc,
+            "reasoning": "fallback to even distribution",
+        },
+        verbose=verbose,
+    )
+
+    allocations = result.get("allocations", default_alloc)
+    reasoning = result.get("reasoning", "")
+
+    # Ensure allocations are floats and normalize to total capital
+    cleaned_allocations = {}
+    for provider_name, amount in allocations.items():
+        try:
+            cleaned_allocations[provider_name] = float(amount)
+        except (ValueError, TypeError):
+            cleaned_allocations[provider_name] = 0.0
+
+    # Normalize to total capital
+    total = sum(cleaned_allocations.values())
+    if total > 0:
+        for provider_name in cleaned_allocations:
+            cleaned_allocations[provider_name] = (
+                cleaned_allocations[provider_name] / total * total_capital
+            )
+
+    return cleaned_allocations, reasoning
+
+
 # --- Module Test ---
 
 if __name__ == "__main__":

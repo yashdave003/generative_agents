@@ -644,6 +644,7 @@ def plot_summary_dashboard(
     save_path: Optional[str] = None,
     show: bool = True,
     figsize: tuple = (18, 12),
+    metadata: Optional[dict] = None,
 ) -> Optional[plt.Figure]:
     """
     Create a comprehensive summary dashboard showing all ecosystem dynamics.
@@ -658,6 +659,8 @@ def plot_summary_dashboard(
         save_path: Path to save figure
         show: Whether to display
         figsize: Figure size
+        metadata: Optional dict with experiment metadata (n_rounds, llm_mode,
+                  n_consumers, n_policymakers, etc.)
 
     Returns:
         matplotlib Figure or None
@@ -677,7 +680,47 @@ def plot_summary_dashboard(
     has_policymakers = any("policymaker_data" in h for h in history)
 
     fig, axes = plt.subplots(3, 3, figsize=figsize)
-    fig.suptitle("Evaluation Ecosystem Summary Dashboard", fontsize=16, fontweight='bold')
+
+    # Build title with metadata
+    title = "Evaluation Ecosystem Summary Dashboard"
+    subtitle_parts = []
+
+    # Extract info from history
+    n_rounds = len(history)
+    provider_names = ", ".join(providers)
+    subtitle_parts.append(f"{n_rounds} rounds")
+    subtitle_parts.append(f"Providers: {provider_names}")
+
+    has_funders = any("funder_data" in h for h in history)
+
+    # Add metadata if provided
+    if metadata:
+        if metadata.get("llm_mode"):
+            subtitle_parts.append("LLM mode")
+        else:
+            subtitle_parts.append("Heuristic mode")
+        if "n_consumers" in metadata and metadata["n_consumers"] > 0:
+            subtitle_parts.append(f"{metadata['n_consumers']} consumers")
+        if "n_policymakers" in metadata and metadata["n_policymakers"] > 0:
+            subtitle_parts.append(f"{metadata['n_policymakers']} policymaker(s)")
+        if "n_funders" in metadata and metadata["n_funders"] > 0:
+            subtitle_parts.append(f"{metadata['n_funders']} funder(s)")
+    else:
+        # Infer from history
+        if has_consumers:
+            # Count consumers from first round with consumer data
+            for h in history:
+                if "consumer_data" in h and "subscriptions" in h["consumer_data"]:
+                    n_consumers = len(h["consumer_data"]["subscriptions"])
+                    subtitle_parts.append(f"{n_consumers} consumers")
+                    break
+        if has_policymakers:
+            subtitle_parts.append("1 policymaker")
+        if has_funders:
+            subtitle_parts.append("funders enabled")
+
+    subtitle = " | ".join(subtitle_parts)
+    fig.suptitle(f"{title}\n{subtitle}", fontsize=14, fontweight='bold')
 
     # =========== ROW 1 ===========
 
@@ -961,6 +1004,153 @@ def plot_investment_comparison(
 
 
 # =============================================================================
+# Funder Dashboard
+# =============================================================================
+
+def plot_funder_dashboard(
+    history: list,
+    save_path: Optional[str] = None,
+    show: bool = True,
+    figsize: tuple = (14, 10),
+) -> Optional[plt.Figure]:
+    """
+    Create a dashboard for Funder actors.
+
+    Panels:
+    1. Funding Allocations Over Time (stacked area)
+    2. Provider Funding Multipliers Over Time
+    3. Total Funding Deployed
+    4. Funder ROI Tracking (inferred from provider performance)
+
+    Args:
+        history: List of round data dicts
+        save_path: Path to save figure
+        show: Whether to display
+        figsize: Figure size
+
+    Returns:
+        matplotlib Figure or None
+    """
+    funder_rounds = [h for h in history if "funder_data" in h]
+    if not funder_rounds:
+        print("No funder data to plot")
+        return None
+
+    providers = get_providers(history)
+    provider_colors = {p: c for p, c in zip(providers, get_provider_colors(len(providers)))}
+
+    rounds = [h["round"] for h in funder_rounds]
+
+    fig, axes = plt.subplots(2, 2, figsize=figsize)
+    fig.suptitle("Funder Dashboard", fontsize=14, fontweight='bold')
+
+    # --- Panel 1: Funding Allocations Over Time (stacked area) ---
+    ax1 = axes[0, 0]
+
+    # Aggregate funding per provider across all funders
+    funding_per_provider = {p: [] for p in providers}
+    for h in funder_rounds:
+        fd = h["funder_data"]
+        allocations = fd.get("allocations", {})
+        # Sum across all funders
+        provider_totals = {p: 0 for p in providers}
+        for funder_allocs in allocations.values():
+            if isinstance(funder_allocs, dict):
+                for provider, amount in funder_allocs.items():
+                    if provider in provider_totals:
+                        provider_totals[provider] += amount
+        for p in providers:
+            funding_per_provider[p].append(provider_totals.get(p, 0))
+
+    # Stacked area chart
+    bottom = np.zeros(len(rounds))
+    for provider in providers:
+        values = np.array(funding_per_provider[provider])
+        # Convert to thousands for readability
+        values_k = values / 1000
+        ax1.fill_between(rounds, bottom, bottom + values_k, alpha=0.7,
+                        label=provider, color=provider_colors[provider])
+        bottom += values_k
+
+    ax1.set_xlabel("Round", fontsize=9)
+    ax1.set_ylabel("Funding ($K)", fontsize=9)
+    ax1.legend(loc='upper right', fontsize=8)
+    ax1.grid(True, alpha=0.3)
+    ax1.set_title("Funding Allocations Over Time", fontsize=11, fontweight='bold')
+
+    # --- Panel 2: Provider Funding Multipliers Over Time ---
+    ax2 = axes[0, 1]
+
+    for provider in providers:
+        multipliers = []
+        for h in funder_rounds:
+            fd = h["funder_data"]
+            mult = fd.get("funding_multipliers", {}).get(provider, 1.0)
+            multipliers.append(mult)
+        ax2.plot(rounds, multipliers, 'o-', label=provider, color=provider_colors[provider],
+                 markersize=4, linewidth=2)
+
+    ax2.axhline(y=1.0, color='gray', linestyle='--', alpha=0.5, label='No Funding')
+    ax2.set_ylim(0.9, 2.1)
+    style_axis(ax2, "Funding Multipliers Over Time", "Round", "Multiplier")
+
+    # --- Panel 3: Total Funding Deployed ---
+    ax3 = axes[1, 0]
+
+    total_funding = [h["funder_data"].get("total_funding", 0) / 1000 for h in funder_rounds]
+    ax3.fill_between(rounds, 0, total_funding, alpha=0.5, color='#2A9D8F')
+    ax3.plot(rounds, total_funding, 'o-', color='#2A9D8F', markersize=4, linewidth=2)
+    ax3.set_xlabel("Round", fontsize=9)
+    ax3.set_ylabel("Total Funding ($K)", fontsize=9)
+    ax3.grid(True, alpha=0.3)
+    ax3.set_title("Total Funding Deployed", fontsize=11, fontweight='bold')
+
+    # --- Panel 4: Provider Performance vs Funding (scatter) ---
+    ax4 = axes[1, 1]
+
+    # For each provider, plot funding received vs capability growth
+    # Use data from all rounds
+    for provider in providers:
+        # Get average funding multiplier
+        avg_multiplier = np.mean([
+            h["funder_data"].get("funding_multipliers", {}).get(provider, 1.0)
+            for h in funder_rounds
+        ])
+
+        # Get capability growth
+        if len(history) >= 2:
+            initial_cap = history[0]["true_capabilities"].get(provider, 0.5)
+            final_cap = history[-1]["true_capabilities"].get(provider, 0.5)
+            cap_growth = final_cap - initial_cap
+        else:
+            cap_growth = 0
+
+        ax4.scatter(avg_multiplier, cap_growth, s=150, color=provider_colors[provider],
+                   label=provider, alpha=0.8, edgecolors='black', linewidth=1)
+
+    ax4.axhline(y=0, color='gray', linestyle='--', alpha=0.5)
+    ax4.axvline(x=1.0, color='gray', linestyle='--', alpha=0.5)
+    ax4.set_xlabel("Average Funding Multiplier", fontsize=9)
+    ax4.set_ylabel("Capability Growth", fontsize=9)
+    ax4.legend(loc='best', fontsize=8)
+    ax4.grid(True, alpha=0.3)
+    ax4.set_title("Funding Impact on Capability Growth", fontsize=11, fontweight='bold')
+
+    plt.tight_layout()
+
+    if save_path:
+        plt.savefig(save_path, dpi=150, bbox_inches='tight')
+        print(f"Funder dashboard saved to: {save_path}")
+
+    if show:
+        plt.show()
+    else:
+        plt.close(fig)
+
+    return fig
+
+
+# =============================================================================
 # Convenience Function: Create All Dashboards
 # =============================================================================
 
@@ -968,6 +1158,7 @@ def create_all_dashboards(
     history: list,
     output_dir: str = "./plots",
     show: bool = False,
+    metadata: Optional[dict] = None,
 ) -> dict:
     """
     Create and save all dashboards.
@@ -976,6 +1167,8 @@ def create_all_dashboards(
         history: List of round data dicts
         output_dir: Directory to save plots
         show: Whether to display plots
+        metadata: Optional experiment metadata dict with keys like:
+                  n_rounds, llm_mode, n_consumers, n_policymakers
 
     Returns:
         Dict of {dashboard_name: figure_path}
@@ -1014,6 +1207,15 @@ def create_all_dashboards(
         saved['policymaker_dashboard'] = path
         print(f"  - Policymaker dashboard saved")
 
+    # Funder Dashboard
+    fig = plot_funder_dashboard(history, show=False)
+    if fig:
+        path = f"{output_dir}/funder_dashboard.png"
+        fig.savefig(path, dpi=150, bbox_inches='tight')
+        plt.close(fig)
+        saved['funder_dashboard'] = path
+        print(f"  - Funder dashboard saved")
+
     # Evaluator Dashboard
     fig = plot_evaluator_dashboard(history, show=False)
     if fig:
@@ -1023,8 +1225,8 @@ def create_all_dashboards(
         saved['evaluator_dashboard'] = path
         print(f"  - Evaluator dashboard saved")
 
-    # Summary Dashboard
-    fig = plot_summary_dashboard(history, show=False)
+    # Summary Dashboard (with metadata)
+    fig = plot_summary_dashboard(history, show=False, metadata=metadata)
     if fig:
         path = f"{output_dir}/summary_dashboard.png"
         fig.savefig(path, dpi=150, bbox_inches='tight')

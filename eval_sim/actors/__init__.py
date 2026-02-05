@@ -6,6 +6,7 @@ This module exports all actor types:
 - Evaluator: Benchmark organization that scores models
 - Consumer: End user who subscribes to models
 - Policymaker: Regulator who can issue requirements
+- Funder: Capital allocator who influences provider development
 
 Each actor has:
 - PublicState: Visible to all actors
@@ -17,6 +18,7 @@ from .model_provider import ModelProvider, ModelProviderScratch
 from .evaluator import Evaluator, Benchmark, Regulation
 from .consumer import Consumer
 from .policymaker import Policymaker
+from .funder import Funder, get_default_funder_configs, get_multi_funder_configs
 
 __all__ = [
     # Core actors
@@ -28,4 +30,8 @@ __all__ = [
     # New actors
     "Consumer",
     "Policymaker",
+    "Funder",
+    # Funder configs
+    "get_default_funder_configs",
+    "get_multi_funder_configs",
 ]

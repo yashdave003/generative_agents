@@ -225,6 +225,14 @@ class ExperimentLogger:
         for policymaker in policymakers:
             policymaker.save(os.path.join(policymakers_dir, policymaker.name))
 
+    def log_funders(self, funders: list):
+        """Log funder final states."""
+        exp_dir = self.get_experiment_dir()
+        funders_dir = os.path.join(exp_dir, "funders")
+        os.makedirs(funders_dir, exist_ok=True)
+        for funder in funders:
+            funder.save(os.path.join(funders_dir, funder.name))
+
     def log_ground_truth(self, ground_truth: dict):
         """Log ground truth data."""
         exp_dir = self.get_experiment_dir()
@@ -352,6 +360,7 @@ def generate_summary(
     providers: list,
     consumers: list = None,
     policymakers: list = None,
+    funders: list = None,
 ) -> dict:
     """
     Generate a summary dict from simulation results.
@@ -459,6 +468,28 @@ def generate_summary(
                 "total_interventions": len(interventions),
                 "intervention_types": list(set(i["type"] for i in interventions if "type" in i)),
                 "active_regulations": policymaker_rounds[-1]["policymaker_data"].get("active_regulations", []),
+            }
+
+    # Funder summary
+    if funders and any("funder_data" in h for h in history):
+        funder_rounds = [h for h in history if "funder_data" in h]
+        if funder_rounds:
+            final_funder_data = funder_rounds[-1]["funder_data"]
+
+            # Calculate total funding over simulation
+            total_funding = sum(
+                h["funder_data"].get("total_funding", 0)
+                for h in funder_rounds
+            )
+
+            # Get final funding multipliers
+            final_multipliers = final_funder_data.get("funding_multipliers", {})
+
+            summary["funder_summary"] = {
+                "n_funders": len(funders),
+                "total_funding_deployed": total_funding,
+                "final_funding_multipliers": final_multipliers,
+                "funder_types": [f.funder_type for f in funders] if hasattr(funders[0], 'funder_type') else [],
             }
 
     return summary
