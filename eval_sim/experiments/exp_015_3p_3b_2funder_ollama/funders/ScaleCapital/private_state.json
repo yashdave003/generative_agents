@@ -1,0 +1,82 @@
+{
+  "funder_type": "vc",
+  "mission_statement": "Invest in high-growth AI companies with strong benchmark performance",
+  "total_capital": 800000.0,
+  "deployed_capital": 800000.0,
+  "believed_provider_quality": {
+    "OpenAI": 0.5581061857635642,
+    "Anthropic": 0.5141394127257581,
+    "NovaMind": 0.43687107395011804
+  },
+  "believed_provider_gaming": {
+    "OpenAI": 0.3,
+    "Anthropic": 0.3,
+    "NovaMind": 0.3
+  },
+  "active_funding": {
+    "OpenAI": 266666.6666666667,
+    "Anthropic": 266666.6666666667,
+    "NovaMind": 266666.6666666667
+  },
+  "funding_history": [
+    [
+      0,
+      {
+        "OpenAI": 266666.6666666667,
+        "Anthropic": 266666.6666666667,
+        "NovaMind": 266666.6666666667
+      }
+    ],
+    [
+      1,
+      {
+        "OpenAI": 266666.6666666667,
+        "NovaMind": 266666.6666666667,
+        "Anthropic": 266666.6666666667
+      }
+    ],
+    [
+      2,
+      {
+        "Anthropic": 266666.6666666667,
+        "OpenAI": 266666.6666666667,
+        "NovaMind": 266666.6666666667
+      }
+    ],
+    [
+      3,
+      {
+        "Anthropic": 266666.6666666667,
+        "OpenAI": 266666.6666666667,
+        "NovaMind": 266666.6666666667
+      }
+    ],
+    [
+      4,
+      {
+        "OpenAI": 266666.6666666667,
+        "Anthropic": 266666.6666666667,
+        "NovaMind": 266666.6666666667
+      }
+    ]
+  ],
+  "roi_history": [
+    [
+      1,
+      0.1645016025429403
+    ],
+    [
+      2,
+      0.16839119074934758
+    ],
+    [
+      3,
+      0.1682486634021133
+    ],
+    [
+      4,
+      0.16767963027104896
+    ]
+  ],
+  "recent_insights": []
+}

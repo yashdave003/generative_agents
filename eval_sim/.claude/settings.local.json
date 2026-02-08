@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"Start-Sleep -Seconds 180; Get-Content ''C:\\\\Users\\\\yashd\\\\Desktop\\\\generative_agents\\\\eval_sim\\\\overnight_output.log'' | Select-Object -Last 30\")"
+    ]
+  }
+}

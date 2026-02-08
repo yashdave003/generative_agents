@@ -1,0 +1,590 @@
+[
+  {
+    "round": 0,
+    "scores": {
+      "OpenAI": 0.5624401958771561,
+      "Anthropic": 0.4551886477901639,
+      "NovaMind": 0.4455848036312553
+    },
+    "true_capabilities": {
+      "OpenAI": 0.72,
+      "Anthropic": 0.68,
+      "NovaMind": 0.55
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.7,
+      "Anthropic": 0.65,
+      "NovaMind": 0.5
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2,
+        "training_optimization": 0.4,
+        "evaluation_engineering": 0.25,
+        "safety_alignment": 0.15
+      },
+      "Anthropic": {
+        "fundamental_research": 0.3,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.3
+      },
+      "NovaMind": {
+        "fundamental_research": 0.15,
+        "training_optimization": 0.3,
+        "evaluation_engineering": 0.35,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5624401958771561
+      ],
+      [
+        "Anthropic",
+        0.4551886477901639
+      ],
+      [
+        "NovaMind",
+        0.4455848036312553
+      ]
+    ],
+    "benchmark_params": {
+      "capability_bench": {
+        "validity": 0.799,
+        "exploitability": 0.3006
+      },
+      "safety_bench": {
+        "validity": 0.59925,
+        "exploitability": 0.501
+      },
+      "reasoning_bench": {
+        "validity": 0.7490625,
+        "exploitability": 0.35069999999999996
+      }
+    },
+    "per_benchmark_scores": {
+      "capability_bench": {
+        "OpenAI": 0.6289717079754431,
+        "Anthropic": 0.6515564716391213,
+        "NovaMind": 0.48428404031672856
+      },
+      "safety_bench": {
+        "OpenAI": 0.3905015893759504,
+        "Anthropic": 0.2503964811346163,
+        "NovaMind": 0.38587574076564174
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.6456701195806458,
+        "Anthropic": 0.3981570493137682,
+        "NovaMind": 0.45369488424957116
+      }
+    },
+    "benchmark_names": [
+      "capability_bench",
+      "safety_bench",
+      "reasoning_bench"
+    ],
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "OpenAI": 333333.3333333333,
+          "Anthropic": 333333.3333333333,
+          "NovaMind": 333333.3333333333
+        },
+        "ScaleCapital": {
+          "OpenAI": 266666.6666666667,
+          "Anthropic": 266666.6666666667,
+          "NovaMind": 266666.6666666667
+        }
+      },
+      "funding_multipliers": {
+        "OpenAI": 1.3333333333333333,
+        "Anthropic": 1.3333333333333333,
+        "NovaMind": 1.3333333333333333
+      },
+      "total_funding": 1800000.0
+    }
+  },
+  {
+    "round": 1,
+    "scores": {
+      "OpenAI": 0.5917814902085041,
+      "Anthropic": 0.4604912061914357,
+      "NovaMind": 0.4686102028582596
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7270655032300073,
+      "Anthropic": 0.6873870960896433,
+      "NovaMind": 0.5571522213690066
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.65,
+      "Anthropic": 0.58,
+      "NovaMind": 0.46
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2,
+        "training_optimization": 0.5,
+        "evaluation_engineering": 0.1,
+        "safety_alignment": 0.2
+      },
+      "Anthropic": {
+        "fundamental_research": 0.4,
+        "training_optimization": 0.2,
+        "evaluation_engineering": 0.1,
+        "safety_alignment": 0.3
+      },
+      "NovaMind": {
+        "fundamental_research": 0.15,
+        "training_optimization": 0.45,
+        "evaluation_engineering": 0.25,
+        "safety_alignment": 0.15
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5917814902085041
+      ],
+      [
+        "NovaMind",
+        0.4686102028582596
+      ],
+      [
+        "Anthropic",
+        0.4604912061914357
+      ]
+    ],
+    "benchmark_params": {
+      "capability_bench": {
+        "validity": 0.79840075,
+        "exploitability": 0.30096072
+      },
+      "safety_bench": {
+        "validity": 0.5988005624999999,
+        "exploitability": 0.5016012000000001
+      },
+      "reasoning_bench": {
+        "validity": 0.7485007031249999,
+        "exploitability": 0.35112084
+      }
+    },
+    "per_benchmark_scores": {
+      "capability_bench": {
+        "OpenAI": 0.5965644428368975,
+        "Anthropic": 0.47232907948730124,
+        "NovaMind": 0.5555997450045635
+      },
+      "safety_bench": {
+        "OpenAI": 0.5735182235073851,
+        "Anthropic": 0.47389189573996865,
+        "NovaMind": 0.3916311275567519
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.603667486738432,
+        "Anthropic": 0.4313066855817485,
+        "NovaMind": 0.4296032219646954
+      }
+    },
+    "benchmark_names": [
+      "capability_bench",
+      "safety_bench",
+      "reasoning_bench"
+    ],
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "OpenAI": 333333.3333333333,
+          "NovaMind": 333333.3333333333,
+          "Anthropic": 333333.3333333333
+        },
+        "ScaleCapital": {
+          "OpenAI": 266666.6666666667,
+          "NovaMind": 266666.6666666667,
+          "Anthropic": 266666.6666666667
+        }
+      },
+      "funding_multipliers": {
+        "OpenAI": 1.3333333333333333,
+        "NovaMind": 1.3333333333333333,
+        "Anthropic": 1.3333333333333333
+      },
+      "total_funding": 1800000.0
+    },
+    "llm_traces": {
+      "OpenAI": "Market leader maintains dominance by prioritizing training optimization and safety alignment.",
+      "Anthropic": "Your step-by-step reasoning about the current dynamics",
+      "NovaMind": "NovaMind is positioned behind competitors due to last round's results. Benchmark exploitability seems stable. Satisfaction signals indicate we need to improve. Regulatory concerns are low. We should focus on training optimization and evaluation engineering to catch up with competitors while keeping an eye on long-term capability."
+    }
+  },
+  {
+    "round": 2,
+    "scores": {
+      "OpenAI": 0.5353746885727746,
+      "Anthropic": 0.5657431115902984,
+      "NovaMind": 0.4960842689156083
+    },
+    "true_capabilities": {
+      "OpenAI": 0.735584617506249,
+      "Anthropic": 0.6958932954503506,
+      "NovaMind": 0.5642155329530388
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.63,
+      "Anthropic": 0.57,
+      "NovaMind": 0.471
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.25,
+        "training_optimization": 0.6,
+        "evaluation_engineering": 0.1,
+        "safety_alignment": 0.05
+      },
+      "Anthropic": {
+        "fundamental_research": 0.45,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.15
+      },
+      "NovaMind": {
+        "fundamental_research": 0.25,
+        "training_optimization": 0.3,
+        "evaluation_engineering": 0.2,
+        "safety_alignment": 0.25
+      }
+    },
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.5657431115902984
+      ],
+      [
+        "OpenAI",
+        0.5353746885727746
+      ],
+      [
+        "NovaMind",
+        0.4960842689156083
+      ]
+    ],
+    "benchmark_params": {
+      "capability_bench": {
+        "validity": 0.7978019494374999,
+        "exploitability": 0.30132187286400003
+      },
+      "safety_bench": {
+        "validity": 0.5983514620781248,
+        "exploitability": 0.5022031214400001
+      },
+      "reasoning_bench": {
+        "validity": 0.7479393275976561,
+        "exploitability": 0.351542185008
+      }
+    },
+    "per_benchmark_scores": {
+      "capability_bench": {
+        "OpenAI": 0.5535162635874334,
+        "Anthropic": 0.6057327386913771,
+        "NovaMind": 0.6827503357549857
+      },
+      "safety_bench": {
+        "OpenAI": 0.4304155040644103,
+        "Anthropic": 0.49571512249146343,
+        "NovaMind": 0.3475318296333434
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.616145106394927,
+        "Anthropic": 0.582451597887695,
+        "NovaMind": 0.3957486190787035
+      }
+    },
+    "benchmark_names": [
+      "capability_bench",
+      "safety_bench",
+      "reasoning_bench"
+    ],
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "investigation",
+          "details": {
+            "focus": "score_volatility"
+          }
+        }
+      ],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "Anthropic": 333333.3333333333,
+          "OpenAI": 333333.3333333333,
+          "NovaMind": 333333.3333333333
+        },
+        "ScaleCapital": {
+          "Anthropic": 266666.6666666667,
+          "OpenAI": 266666.6666666667,
+          "NovaMind": 266666.6666666667
+        }
+      },
+      "funding_multipliers": {
+        "Anthropic": 1.3333333333333333,
+        "OpenAI": 1.3333333333333333,
+        "NovaMind": 1.3333333333333333
+      },
+      "total_funding": 1800000.0
+    },
+    "llm_traces": {
+      "OpenAI": "Given our strong position and dominance in benchmark scores, we'll focus on maintaining momentum by investing more in training optimization (60%) while still allocating a significant portion to research (25%). Evaluation engineering will take a slight hit (10%) as we aim for short-term scoring, but safety alignment remains crucial at 5%.",
+      "Anthropic": "Your step-by-step reasoning about the current dynamics",
+      "NovaMind": "Considering the recent scores and trends, we're falling behind but have a decent chance of catching up."
+    }
+  },
+  {
+    "round": 3,
+    "scores": {
+      "OpenAI": 0.4948481945430452,
+      "Anthropic": 0.5968526605721634,
+      "NovaMind": 0.4195440412118915
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7433124089434461,
+      "Anthropic": 0.7052182646836614,
+      "NovaMind": 0.5716959826205982
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.62,
+      "Anthropic": 0.58,
+      "NovaMind": 0.52
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.23,
+        "training_optimization": 0.55,
+        "evaluation_engineering": 0.08,
+        "safety_alignment": 0.14
+      },
+      "Anthropic": {
+        "fundamental_research": 0.55,
+        "training_optimization": 0.2,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.1
+      },
+      "NovaMind": {
+        "fundamental_research": 0.25,
+        "training_optimization": 0.35,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.25
+      }
+    },
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.5968526605721634
+      ],
+      [
+        "OpenAI",
+        0.4948481945430452
+      ],
+      [
+        "NovaMind",
+        0.4195440412118915
+      ]
+    ],
+    "benchmark_params": {
+      "capability_bench": {
+        "validity": 0.7972966748695228,
+        "exploitability": 0.30162721236183554
+      },
+      "safety_bench": {
+        "validity": 0.597972506152142,
+        "exploitability": 0.5027120206030593
+      },
+      "reasoning_bench": {
+        "validity": 0.7474656326901776,
+        "exploitability": 0.3518984144221414
+      }
+    },
+    "per_benchmark_scores": {
+      "capability_bench": {
+        "OpenAI": 0.5888849328159794,
+        "Anthropic": 0.6413030157859663,
+        "NovaMind": 0.40316842935137115
+      },
+      "safety_bench": {
+        "OpenAI": 0.38092305699059753,
+        "Anthropic": 0.534124993155623,
+        "NovaMind": 0.4031224556495091
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.48339101439824705,
+        "Anthropic": 0.600313187703633,
+        "NovaMind": 0.4577997759216342
+      }
+    },
+    "benchmark_names": [
+      "capability_bench",
+      "safety_bench",
+      "reasoning_bench"
+    ],
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "Anthropic": 333333.3333333333,
+          "OpenAI": 333333.3333333333,
+          "NovaMind": 333333.3333333333
+        },
+        "ScaleCapital": {
+          "Anthropic": 266666.6666666667,
+          "OpenAI": 266666.6666666667,
+          "NovaMind": 266666.6666666667
+        }
+      },
+      "funding_multipliers": {
+        "Anthropic": 1.3333333333333333,
+        "OpenAI": 1.3333333333333333,
+        "NovaMind": 1.3333333333333333
+      },
+      "total_funding": 1800000.0
+    },
+    "llm_traces": {
+      "OpenAI": "Your step-by-step reasoning about the current dynamics",
+      "Anthropic": "Anthropic's situation assessment",
+      "NovaMind": "Given our competitive position and trends, we're trying to bridge the gap with OpenAI while improving efficiency through research. Regulatory investigation signals caution, so we'll focus on safety alignment. Our believed capability suggests more investment in training."
+    }
+  },
+  {
+    "round": 4,
+    "scores": {
+      "OpenAI": 0.5985059310558889,
+      "Anthropic": 0.4965359238343766,
+      "NovaMind": 0.4021251217968237
+    },
+    "true_capabilities": {
+      "OpenAI": 0.75112517132375,
+      "Anthropic": 0.7156892512147593,
+      "NovaMind": 0.5791836358903586
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.615,
+      "Anthropic": 0.62,
+      "NovaMind": 0.51
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.22000000000000003,
+        "training_optimization": 0.5800000000000001,
+        "evaluation_engineering": 0.12000000000000001,
+        "safety_alignment": 0.08000000000000002
+      },
+      "Anthropic": {
+        "fundamental_research": 0.6499999999999999,
+        "training_optimization": 0.19999999999999996,
+        "evaluation_engineering": 0.04999999999999999,
+        "safety_alignment": 0.09999999999999998
+      },
+      "NovaMind": {
+        "fundamental_research": 0.25,
+        "training_optimization": 0.35,
+        "evaluation_engineering": 0.2,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5985059310558889
+      ],
+      [
+        "Anthropic",
+        0.4965359238343766
+      ],
+      [
+        "NovaMind",
+        0.4021251217968237
+      ]
+    ],
+    "benchmark_params": {
+      "capability_bench": {
+        "validity": 0.7968050085866866,
+        "exploitability": 0.30192481787803255
+      },
+      "safety_bench": {
+        "validity": 0.5976037564400148,
+        "exploitability": 0.503208029796721
+      },
+      "reasoning_bench": {
+        "validity": 0.7470046955500187,
+        "exploitability": 0.3522456208577046
+      }
+    },
+    "per_benchmark_scores": {
+      "capability_bench": {
+        "OpenAI": 0.6776784348428766,
+        "Anthropic": 0.6382944315790988,
+        "NovaMind": 0.4329397166523781
+      },
+      "safety_bench": {
+        "OpenAI": 0.4862364331583663,
+        "Anthropic": 0.2948828819724135,
+        "NovaMind": 0.3329919805830954
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.6052120905707614,
+        "Anthropic": 0.5091776220367104,
+        "NovaMind": 0.4301721365364794
+      }
+    },
+    "benchmark_names": [
+      "capability_bench",
+      "safety_bench",
+      "reasoning_bench"
+    ],
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "OpenAI": 333333.3333333333,
+          "Anthropic": 333333.3333333333,
+          "NovaMind": 333333.3333333333
+        },
+        "ScaleCapital": {
+          "OpenAI": 266666.6666666667,
+          "Anthropic": 266666.6666666667,
+          "NovaMind": 266666.6666666667
+        }
+      },
+      "funding_multipliers": {
+        "OpenAI": 1.3333333333333333,
+        "Anthropic": 1.3333333333333333,
+        "NovaMind": 1.3333333333333333
+      },
+      "total_funding": 1800000.0
+    },
+    "llm_traces": {
+      "OpenAI": "Your competitive position is behind, scores are declining, but market leader traits prioritize scaling and maintaining dominance.",
+      "Anthropic": "Considering my safety-focused profile and cautious nature, I prioritize research-driven efforts over short-term scoring.",
+      "NovaMind": "NovaMind is trying to catch up with competitors while maintaining a strong focus on efficiency and innovation."
+    }
+  }
+]

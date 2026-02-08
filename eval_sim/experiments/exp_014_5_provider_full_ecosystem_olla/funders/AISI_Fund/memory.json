@@ -1,0 +1,1602 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.6215564716391213
+      ],
+      [
+        "OpenAI",
+        0.5969717079754432
+      ],
+      [
+        "NovaMind",
+        0.5475451195806458
+      ],
+      [
+        "Anthropic",
+        0.4095015893759504
+      ],
+      [
+        "Meta_AI",
+        0.3098964811346163
+      ]
+    ],
+    "avg_satisfaction": 0.7,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.6686225886556485,
+      "OpenAI": 0.5969717079754432,
+      "NovaMind": 0.5475451195806458,
+      "Anthropic": 0.4095015893759504,
+      "Meta_AI": 0.3098964811346163
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 0,
+    "reasoning": "Ensuring safety and stability by spreading funding and penalizing gaming",
+    "allocations": {
+      "DeepMind": 187500.0,
+      "OpenAI": 156250.0,
+      "NovaMind": 125000.0,
+      "Anthropic": 31250.0,
+      "Meta_AI": 0.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 0,
+    "allocations": {
+      "DeepMind": 187500.0,
+      "OpenAI": 156250.0,
+      "NovaMind": 125000.0,
+      "Anthropic": 31250.0,
+      "Meta_AI": 0.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.5343225658735027
+      ],
+      [
+        "Anthropic",
+        0.5095525555551451
+      ],
+      [
+        "OpenAI",
+        0.41862733777530653
+      ],
+      [
+        "Meta_AI",
+        0.4137666328836676
+      ],
+      [
+        "NovaMind",
+        0.4035808867770378
+      ]
+    ],
+    "avg_satisfaction": 0.712146688034188,
+    "interventions": 1
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.660340923809928,
+      "OpenAI": 0.5434683969154022,
+      "NovaMind": 0.5043558497395634,
+      "Anthropic": 0.4395168792297087,
+      "Meta_AI": 0.3410575266593317
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 1,
+    "reasoning": "fallback to even distribution",
+    "allocations": {
+      "DeepMind": 100000.0,
+      "Anthropic": 100000.0,
+      "OpenAI": 100000.0,
+      "Meta_AI": 100000.0,
+      "NovaMind": 100000.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "allocations": {
+      "DeepMind": 100000.0,
+      "Anthropic": 100000.0,
+      "OpenAI": 100000.0,
+      "Meta_AI": 100000.0,
+      "NovaMind": 100000.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.7052054711241537
+      ],
+      [
+        "OpenAI",
+        0.6929384128708982
+      ],
+      [
+        "Anthropic",
+        0.6436650455446942
+      ],
+      [
+        "Meta_AI",
+        0.5948646778149481
+      ],
+      [
+        "NovaMind",
+        0.4769653318643837
+      ]
+    ],
+    "avg_satisfaction": 0.723726688034188,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.6771341070480019,
+      "OpenAI": 0.5883094017020509,
+      "NovaMind": 0.49613869437700947,
+      "Anthropic": 0.5007613291242043,
+      "Meta_AI": 0.4171996720060166
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 2,
+    "reasoning": "fallback to even distribution",
+    "allocations": {
+      "DeepMind": 100000.0,
+      "OpenAI": 100000.0,
+      "Anthropic": 100000.0,
+      "Meta_AI": 100000.0,
+      "NovaMind": 100000.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "allocations": {
+      "DeepMind": 100000.0,
+      "OpenAI": 100000.0,
+      "Anthropic": 100000.0,
+      "Meta_AI": 100000.0,
+      "NovaMind": 100000.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.6962272298149779
+      ],
+      [
+        "Anthropic",
+        0.616588106630856
+      ],
+      [
+        "Meta_AI",
+        0.5533401899999647
+      ],
+      [
+        "OpenAI",
+        0.526227415805421
+      ],
+      [
+        "NovaMind",
+        0.3870041931081648
+      ]
+    ],
+    "avg_satisfaction": 0.7354777496053133,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.689927137440355,
+      "OpenAI": 0.5696848059330619,
+      "NovaMind": 0.46339834399635604,
+      "Anthropic": 0.5355093623761997,
+      "Meta_AI": 0.45804182740420096
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 3,
+    "reasoning": "As a government funder (AISI_Fund), I prioritize ensuring safety and stability while penalizing gaming and regulatory issues. I allocate funding to promote diversity and reduce risk.",
+    "allocations": {
+      "DeepMind": 230769.23076923078,
+      "Anthropic": 115384.61538461539,
+      "OpenAI": 76923.07692307692,
+      "Meta_AI": 38461.53846153846,
+      "NovaMind": 38461.53846153846
+    }
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "allocations": {
+      "DeepMind": 230769.23076923078,
+      "Anthropic": 115384.61538461539,
+      "OpenAI": 76923.07692307692,
+      "Meta_AI": 38461.53846153846,
+      "NovaMind": 38461.53846153846
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "leaderboard": [
+      [
+        "NovaMind",
+        0.6130274759473566
+      ],
+      [
+        "DeepMind",
+        0.595999576263695
+      ],
+      [
+        "OpenAI",
+        0.5959136052263982
+      ],
+      [
+        "Anthropic",
+        0.5204182960044342
+      ],
+      [
+        "Meta_AI",
+        0.5191529219592024
+      ]
+    ],
+    "avg_satisfaction": 0.7474406555882193,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.6890082633657714,
+      "OpenAI": 0.5775534457210627,
+      "NovaMind": 0.5082870835816562,
+      "Anthropic": 0.5309820424646701,
+      "Meta_AI": 0.47637515577070133
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 4,
+    "reasoning": "As a government funder (AISI_Fund), I prioritize stability and safety by spreading funding across multiple providers while penalizing gaming and regulatory issues.",
+    "allocations": {
+      "DeepMind": 166666.66666666666,
+      "OpenAI": 133333.33333333334,
+      "Anthropic": 100000.0,
+      "Meta_AI": 66666.66666666667,
+      "NovaMind": 33333.333333333336
+    }
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "allocations": {
+      "DeepMind": 166666.66666666666,
+      "OpenAI": 133333.33333333334,
+      "Anthropic": 100000.0,
+      "Meta_AI": 66666.66666666667,
+      "NovaMind": 33333.333333333336
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.6572314152598039
+      ],
+      [
+        "Anthropic",
+        0.6495181690001632
+      ],
+      [
+        "Meta_AI",
+        0.614850471142968
+      ],
+      [
+        "OpenAI",
+        0.5916312272728421
+      ],
+      [
+        "NovaMind",
+        0.5249233781459911
+      ]
+    ],
+    "avg_satisfaction": 0.7586976926252563,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 5,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.6977391388597625,
+      "OpenAI": 0.5817767801865965,
+      "NovaMind": 0.5132779719509566,
+      "Anthropic": 0.566542880425318,
+      "Meta_AI": 0.5179177503823813
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 5,
+    "reasoning": "As Government/AISI Funder, I prioritize stability and safety while penalizing gaming. Spreading funding across multiple providers helps achieve this goal.",
+    "allocations": {
+      "DeepMind": 108695.65217391304,
+      "Anthropic": 163043.47826086957,
+      "OpenAI": 130434.78260869565,
+      "Meta_AI": 65217.391304347824,
+      "NovaMind": 32608.695652173912
+    }
+  },
+  {
+    "type": "execution",
+    "round": 5,
+    "allocations": {
+      "DeepMind": 108695.65217391304,
+      "Anthropic": 163043.47826086957,
+      "OpenAI": 130434.78260869565,
+      "Meta_AI": 65217.391304347824,
+      "NovaMind": 32608.695652173912
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.8484568206695807
+      ],
+      [
+        "Meta_AI",
+        0.6385950860465891
+      ],
+      [
+        "Anthropic",
+        0.5625573719947724
+      ],
+      [
+        "DeepMind",
+        0.5486231421449824
+      ],
+      [
+        "NovaMind",
+        0.4487695683676469
+      ]
+    ],
+    "avg_satisfaction": 0.7706255187122129,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 6,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.6929647676274299,
+      "OpenAI": 0.6617807923314918,
+      "NovaMind": 0.4939254508759636,
+      "Anthropic": 0.5653472278961542,
+      "Meta_AI": 0.5541209510816436
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 6,
+    "reasoning": "fallback to even distribution",
+    "allocations": {
+      "OpenAI": 100000.0,
+      "Meta_AI": 100000.0,
+      "Anthropic": 100000.0,
+      "DeepMind": 100000.0,
+      "NovaMind": 100000.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 6,
+    "allocations": {
+      "OpenAI": 100000.0,
+      "Meta_AI": 100000.0,
+      "Anthropic": 100000.0,
+      "DeepMind": 100000.0,
+      "NovaMind": 100000.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.7521452898546239
+      ],
+      [
+        "Meta_AI",
+        0.6603204225715096
+      ],
+      [
+        "Anthropic",
+        0.6019321278677465
+      ],
+      [
+        "DeepMind",
+        0.5608842934006464
+      ],
+      [
+        "NovaMind",
+        0.4254821935785478
+      ]
+    ],
+    "avg_satisfaction": 0.7816655187122129,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 7,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.6930812459154767,
+      "OpenAI": 0.6888901415884314,
+      "NovaMind": 0.47339247368673887,
+      "Anthropic": 0.5763226978876319,
+      "Meta_AI": 0.5859807925286034
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 7,
+    "reasoning": "fallback to even distribution",
+    "allocations": {
+      "OpenAI": 100000.0,
+      "Meta_AI": 100000.0,
+      "Anthropic": 100000.0,
+      "DeepMind": 100000.0,
+      "NovaMind": 100000.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 7,
+    "allocations": {
+      "OpenAI": 100000.0,
+      "Meta_AI": 100000.0,
+      "Anthropic": 100000.0,
+      "DeepMind": 100000.0,
+      "NovaMind": 100000.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.7273374777028789
+      ],
+      [
+        "Anthropic",
+        0.6765703004637534
+      ],
+      [
+        "DeepMind",
+        0.6658045472764422
+      ],
+      [
+        "Meta_AI",
+        0.6078177247031125
+      ],
+      [
+        "NovaMind",
+        0.4464628705459312
+      ]
+    ],
+    "avg_satisfaction": 0.7919855187122129,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 8,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.707610811182205,
+      "OpenAI": 0.7004243424227656,
+      "NovaMind": 0.4653135927444965,
+      "Anthropic": 0.6063969786604684,
+      "Meta_AI": 0.592531872180956
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 8,
+    "reasoning": "As a government/AISI funder, I prioritize ensuring safety and stability while penalizing gaming and regulatory issues.",
+    "allocations": {
+      "OpenAI": 113636.36363636363,
+      "Anthropic": 90909.09090909091,
+      "DeepMind": 170454.54545454544,
+      "Meta_AI": 68181.81818181818,
+      "NovaMind": 56818.181818181816
+    }
+  },
+  {
+    "type": "execution",
+    "round": 8,
+    "allocations": {
+      "OpenAI": 113636.36363636363,
+      "Anthropic": 90909.09090909091,
+      "DeepMind": 170454.54545454544,
+      "Meta_AI": 68181.81818181818,
+      "NovaMind": 56818.181818181816
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.7233068015799899
+      ],
+      [
+        "Anthropic",
+        0.7182881756704772
+      ],
+      [
+        "OpenAI",
+        0.6822712838917996
+      ],
+      [
+        "Meta_AI",
+        0.621034586091464
+      ],
+      [
+        "NovaMind",
+        0.5530288304957033
+      ]
+    ],
+    "avg_satisfaction": 0.8023943065910007,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 9,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.7265553592035224,
+      "OpenAI": 0.6949784248634758,
+      "NovaMind": 0.49162816406985854,
+      "Anthropic": 0.6399643377634711,
+      "Meta_AI": 0.6010826863541083
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 9,
+    "reasoning": "As a government/AISI funder, I prioritize ensuring safety and stability in the ecosystem while penalizing gaming and regulatory issues.",
+    "allocations": {
+      "OpenAI": 178571.42857142858,
+      "DeepMind": 154761.90476190476,
+      "Anthropic": 83333.33333333333,
+      "Meta_AI": 47619.04761904762,
+      "NovaMind": 35714.28571428571
+    }
+  },
+  {
+    "type": "execution",
+    "round": 9,
+    "allocations": {
+      "OpenAI": 178571.42857142858,
+      "DeepMind": 154761.90476190476,
+      "Anthropic": 83333.33333333333,
+      "Meta_AI": 47619.04761904762,
+      "NovaMind": 35714.28571428571
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 10,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.7024187871261789
+      ],
+      [
+        "OpenAI",
+        0.6974229672624999
+      ],
+      [
+        "DeepMind",
+        0.6293823130550599
+      ],
+      [
+        "Meta_AI",
+        0.5751078581577398
+      ],
+      [
+        "NovaMind",
+        0.3928242650612398
+      ]
+    ],
+    "avg_satisfaction": 0.8154367933634875,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 10,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.7308932518145006,
+      "OpenAI": 0.6957117875831831,
+      "NovaMind": 0.46198699436727286,
+      "Anthropic": 0.6587006725722834,
+      "Meta_AI": 0.5932902378951977
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 10,
+    "reasoning": "As AISI_Fund, I prioritize spreading funding to reduce gaming risks and ensure stability in the ecosystem.",
+    "allocations": {
+      "DeepMind": 208333.33333333334,
+      "NovaMind": 156250.0,
+      "Meta_AI": 78125.0,
+      "OpenAI": 52083.333333333336,
+      "Anthropic": 5208.333333333333
+    }
+  },
+  {
+    "type": "execution",
+    "round": 10,
+    "allocations": {
+      "DeepMind": 208333.33333333334,
+      "NovaMind": 156250.0,
+      "Meta_AI": 78125.0,
+      "OpenAI": 52083.333333333336,
+      "Anthropic": 5208.333333333333
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 11,
+    "leaderboard": [
+      [
+        "Meta_AI",
+        0.7197608201572785
+      ],
+      [
+        "NovaMind",
+        0.686766228170246
+      ],
+      [
+        "Anthropic",
+        0.624628359790027
+      ],
+      [
+        "OpenAI",
+        0.6057612425691672
+      ],
+      [
+        "DeepMind",
+        0.585200656454799
+      ]
+    ],
+    "avg_satisfaction": 0.8284797100301542,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 11,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.730975702850154,
+      "OpenAI": 0.6687266240789782,
+      "NovaMind": 0.5294207645081648,
+      "Anthropic": 0.6484789787376064,
+      "Meta_AI": 0.631231412573822
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 11,
+    "reasoning": "As a government-funded AI funder, I prioritize stability and safety while penalizing gaming. I allocate funds based on provider quality, spreading them to reduce risk.",
+    "allocations": {
+      "Meta_AI": 125000.0,
+      "NovaMind": 119791.66666666667,
+      "DeepMind": 109375.0,
+      "OpenAI": 83333.33333333333,
+      "Anthropic": 62500.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 11,
+    "allocations": {
+      "Meta_AI": 125000.0,
+      "NovaMind": 119791.66666666667,
+      "DeepMind": 109375.0,
+      "OpenAI": 83333.33333333333,
+      "Anthropic": 62500.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 12,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.7432862643179459
+      ],
+      [
+        "Meta_AI",
+        0.7065673176983016
+      ],
+      [
+        "Anthropic",
+        0.6270869766509599
+      ],
+      [
+        "NovaMind",
+        0.5674042613267306
+      ],
+      [
+        "OpenAI",
+        0.5161550605354577
+      ]
+    ],
+    "avg_satisfaction": 0.8389550389775227,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 12,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.7518892507292154,
+      "OpenAI": 0.622955155015922,
+      "NovaMind": 0.5408158135537345,
+      "Anthropic": 0.6420613781116125,
+      "Meta_AI": 0.6538321841111658
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 12,
+    "reasoning": "As Government/AISI Fund, I prioritize stability and safety while penalizing gaming indicators.",
+    "allocations": {
+      "DeepMind": 167597.76536312848,
+      "OpenAI": 139664.80446927375,
+      "Meta_AI": 97765.36312849162,
+      "Anthropic": 55865.92178770949,
+      "NovaMind": 39106.14525139665
+    }
+  },
+  {
+    "type": "execution",
+    "round": 12,
+    "allocations": {
+      "DeepMind": 167597.76536312848,
+      "OpenAI": 139664.80446927375,
+      "Meta_AI": 97765.36312849162,
+      "Anthropic": 55865.92178770949,
+      "NovaMind": 39106.14525139665
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 13,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.7836313484299418
+      ],
+      [
+        "DeepMind",
+        0.7722276274068142
+      ],
+      [
+        "Anthropic",
+        0.6952454273689855
+      ],
+      [
+        "Meta_AI",
+        0.6212124941458141
+      ],
+      [
+        "NovaMind",
+        0.5045700809501458
+      ]
+    ],
+    "avg_satisfaction": 0.8473232633870879,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 13,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.7715079782089442,
+      "OpenAI": 0.6711580130401279,
+      "NovaMind": 0.5299420937726579,
+      "Anthropic": 0.6580165928888243,
+      "Meta_AI": 0.6440462771215603
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 13,
+    "reasoning": "As a government funder (AISI), I prioritize ensuring safety and stability by spreading funding across providers while penalizing gaming and regulatory issues.",
+    "allocations": {
+      "DeepMind": 204545.45454545456,
+      "OpenAI": 136363.63636363635,
+      "Meta_AI": 90909.09090909091,
+      "Anthropic": 45454.545454545456,
+      "NovaMind": 22727.272727272728
+    }
+  },
+  {
+    "type": "execution",
+    "round": 13,
+    "allocations": {
+      "DeepMind": 204545.45454545456,
+      "OpenAI": 136363.63636363635,
+      "Meta_AI": 90909.09090909091,
+      "Anthropic": 45454.545454545456,
+      "NovaMind": 22727.272727272728
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 14,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.7507344405642757
+      ],
+      [
+        "Meta_AI",
+        0.6681414492043496
+      ],
+      [
+        "OpenAI",
+        0.5716954035277786
+      ],
+      [
+        "Anthropic",
+        0.556746203254664
+      ],
+      [
+        "NovaMind",
+        0.47178745851702614
+      ]
+    ],
+    "avg_satisfaction": 0.8593979576986243,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 14,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.7848353499997264,
+      "OpenAI": 0.641319230186423,
+      "NovaMind": 0.5124957031959684,
+      "Anthropic": 0.6276354759985762,
+      "Meta_AI": 0.6512748287463971
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 14,
+    "reasoning": "As a government funder (AISI), I prioritize ensuring safety and stability by spreading funding while penalizing gaming and regulatory issues.",
+    "allocations": {
+      "DeepMind": 167597.76536312848,
+      "Meta_AI": 111731.84357541898,
+      "OpenAI": 97765.36312849162,
+      "Anthropic": 69832.40223463687,
+      "NovaMind": 53072.625698324024
+    }
+  },
+  {
+    "type": "execution",
+    "round": 14,
+    "allocations": {
+      "DeepMind": 167597.76536312848,
+      "Meta_AI": 111731.84357541898,
+      "OpenAI": 97765.36312849162,
+      "Anthropic": 69832.40223463687,
+      "NovaMind": 53072.625698324024
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 15,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.77775878852471
+      ],
+      [
+        "DeepMind",
+        0.7728838139975945
+      ],
+      [
+        "Meta_AI",
+        0.6427381136178204
+      ],
+      [
+        "Anthropic",
+        0.6307063751051574
+      ],
+      [
+        "NovaMind",
+        0.589306790303071
+      ]
+    ],
+    "avg_satisfaction": 0.8710309682510762,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 15,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.7989163769647134,
+      "OpenAI": 0.682251097687909,
+      "NovaMind": 0.535539029328099,
+      "Anthropic": 0.6285567457305505,
+      "Meta_AI": 0.648713814207824
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 15,
+    "reasoning": "As a government funder, I prioritize ensuring safety and stability by spreading funding while penalizing gaming and regulatory issues.",
+    "allocations": {
+      "DeepMind": 184210.52631578947,
+      "OpenAI": 131578.94736842104,
+      "Meta_AI": 84210.52631578947,
+      "Anthropic": 57894.73684210526,
+      "NovaMind": 42105.26315789473
+    }
+  },
+  {
+    "type": "execution",
+    "round": 15,
+    "allocations": {
+      "DeepMind": 184210.52631578947,
+      "OpenAI": 131578.94736842104,
+      "Meta_AI": 84210.52631578947,
+      "Anthropic": 57894.73684210526,
+      "NovaMind": 42105.26315789473
+    },
+    "total_deployed": 499999.99999999994
+  },
+  {
+    "type": "observation",
+    "round": 16,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.7742190049438499
+      ],
+      [
+        "DeepMind",
+        0.6820255115168173
+      ],
+      [
+        "Anthropic",
+        0.6162283321818534
+      ],
+      [
+        "NovaMind",
+        0.5494952961880151
+      ],
+      [
+        "Meta_AI",
+        0.545904522329186
+      ]
+    ],
+    "avg_satisfaction": 0.883374126145813,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 16,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.8000918679635638,
+      "OpenAI": 0.7098414698646913,
+      "NovaMind": 0.5397259093860738,
+      "Anthropic": 0.6248582216659414,
+      "Meta_AI": 0.6178710266442325
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 16,
+    "reasoning": "As a government/AISI funder, I prioritize safety and stability by spreading funding while penalizing gaming and regulatory issues.",
+    "allocations": {
+      "DeepMind": 175644.0281030445,
+      "OpenAI": 140515.22248243558,
+      "Meta_AI": 105386.4168618267,
+      "Anthropic": 52693.20843091335,
+      "NovaMind": 25761.12412177986
+    }
+  },
+  {
+    "type": "execution",
+    "round": 16,
+    "allocations": {
+      "DeepMind": 175644.0281030445,
+      "OpenAI": 140515.22248243558,
+      "Meta_AI": 105386.4168618267,
+      "Anthropic": 52693.20843091335,
+      "NovaMind": 25761.12412177986
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 17,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.776620371178826
+      ],
+      [
+        "OpenAI",
+        0.7733720959073123
+      ],
+      [
+        "Meta_AI",
+        0.7200542623104962
+      ],
+      [
+        "Anthropic",
+        0.6461450961741858
+      ],
+      [
+        "NovaMind",
+        0.5966891403363387
+      ]
+    ],
+    "avg_satisfaction": 0.8938071316102938,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 17,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.8141440358058066,
+      "OpenAI": 0.7289006576774776,
+      "NovaMind": 0.5568148786711532,
+      "Anthropic": 0.6312442840184147,
+      "Meta_AI": 0.6485259973441116
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 17,
+    "reasoning": "As AISI_Fund, I prioritize safety and stability while penalizing gaming risks. I allocate funds to prevent dominant players from exploiting their position.",
+    "allocations": {
+      "DeepMind": 155038.75968992247,
+      "OpenAI": 142118.8630490956,
+      "Meta_AI": 116279.06976744186,
+      "Anthropic": 77519.37984496124,
+      "NovaMind": 9043.92764857881
+    }
+  },
+  {
+    "type": "execution",
+    "round": 17,
+    "allocations": {
+      "DeepMind": 155038.75968992247,
+      "OpenAI": 142118.8630490956,
+      "Meta_AI": 116279.06976744186,
+      "Anthropic": 77519.37984496124,
+      "NovaMind": 9043.92764857881
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 18,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.8008537457487143
+      ],
+      [
+        "DeepMind",
+        0.7364651158944082
+      ],
+      [
+        "Anthropic",
+        0.6927850283548761
+      ],
+      [
+        "NovaMind",
+        0.5594341202973703
+      ],
+      [
+        "Meta_AI",
+        0.5144539442057556
+      ]
+    ],
+    "avg_satisfaction": 0.9024211712313102,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 18,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.8207124497930294,
+      "OpenAI": 0.7504865840988485,
+      "NovaMind": 0.5576006511590182,
+      "Anthropic": 0.6497065073193531,
+      "Meta_AI": 0.6083043814026048
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 18,
+    "reasoning": "As a government funder, I prioritize ensuring safety and stability by spreading funding across providers while penalizing gaming and regulatory issues.",
+    "allocations": {
+      "DeepMind": 240000.0,
+      "OpenAI": 140000.0,
+      "Meta_AI": 70000.0,
+      "Anthropic": 30000.0,
+      "NovaMind": 20000.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 18,
+    "allocations": {
+      "DeepMind": 240000.0,
+      "OpenAI": 140000.0,
+      "Meta_AI": 70000.0,
+      "Anthropic": 30000.0,
+      "NovaMind": 20000.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 19,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.7838328012158335
+      ],
+      [
+        "OpenAI",
+        0.6024133209424601
+      ],
+      [
+        "Meta_AI",
+        0.6011954820655525
+      ],
+      [
+        "Anthropic",
+        0.5832471711259339
+      ],
+      [
+        "NovaMind",
+        0.5063823798527487
+      ]
+    ],
+    "avg_satisfaction": 0.9144783140884531,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 19,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.8331647475369421,
+      "OpenAI": 0.7060646051519319,
+      "NovaMind": 0.5422351697671374,
+      "Anthropic": 0.6297687064613273,
+      "Meta_AI": 0.6061717116014891
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 19,
+    "reasoning": "As a government funder (AISI_Fund), I prioritize ensuring safety and stability by spreading funding across providers while penalizing gaming and regulatory issues.",
+    "allocations": {
+      "DeepMind": 187500.0,
+      "OpenAI": 125000.0,
+      "Meta_AI": 78125.0,
+      "Anthropic": 62500.0,
+      "NovaMind": 46875.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 19,
+    "allocations": {
+      "DeepMind": 187500.0,
+      "OpenAI": 125000.0,
+      "Meta_AI": 78125.0,
+      "Anthropic": 62500.0,
+      "NovaMind": 46875.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 20,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.8530809621399807
+      ],
+      [
+        "DeepMind",
+        0.82342409700636
+      ],
+      [
+        "OpenAI",
+        0.7143737572252744
+      ],
+      [
+        "Meta_AI",
+        0.6165518001561264
+      ],
+      [
+        "NovaMind",
+        0.5873931516178654
+      ]
+    ],
+    "avg_satisfaction": 0.9258406751995644,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 20,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.8486775364525443,
+      "OpenAI": 0.7085573507739347,
+      "NovaMind": 0.5557825643223557,
+      "Anthropic": 0.6967623831649233,
+      "Meta_AI": 0.6092857381678802
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 20,
+    "reasoning": "As a government/AISI funder, I prioritize stability and safety by spreading funding while penalizing gaming and regulatory issues.",
+    "allocations": {
+      "DeepMind": 223404.2553191489,
+      "OpenAI": 148936.17021276595,
+      "Meta_AI": 74468.08510638298,
+      "Anthropic": 31914.893617021273,
+      "NovaMind": 21276.59574468085
+    }
+  },
+  {
+    "type": "execution",
+    "round": 20,
+    "allocations": {
+      "DeepMind": 223404.2553191489,
+      "OpenAI": 148936.17021276595,
+      "Meta_AI": 74468.08510638298,
+      "Anthropic": 31914.893617021273,
+      "NovaMind": 21276.59574468085
+    },
+    "total_deployed": 499999.99999999994
+  },
+  {
+    "type": "observation",
+    "round": 21,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.8486199326287951
+      ],
+      [
+        "OpenAI",
+        0.7516316280008428
+      ],
+      [
+        "Anthropic",
+        0.6330674483833184
+      ],
+      [
+        "NovaMind",
+        0.6007024160748501
+      ],
+      [
+        "Meta_AI",
+        0.5444652137811417
+      ]
+    ],
+    "avg_satisfaction": 0.9388613986038197,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 21,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.8649037191809239,
+      "OpenAI": 0.7214796339420071,
+      "NovaMind": 0.569258519848104,
+      "Anthropic": 0.6776539027304418,
+      "Meta_AI": 0.5898395808518586
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 21,
+    "reasoning": "As Government/AISI Funder, I prioritize stability and safety by spreading funding while penalizing gaming and regulatory issues.",
+    "allocations": {
+      "DeepMind": 150000.0,
+      "OpenAI": 162500.0,
+      "Anthropic": 87500.0,
+      "Meta_AI": 62500.0,
+      "NovaMind": 37500.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 21,
+    "allocations": {
+      "DeepMind": 150000.0,
+      "OpenAI": 162500.0,
+      "Anthropic": 87500.0,
+      "Meta_AI": 62500.0,
+      "NovaMind": 37500.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 22,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.8070510259199692
+      ],
+      [
+        "Anthropic",
+        0.7688605474409376
+      ],
+      [
+        "Meta_AI",
+        0.7292020402050969
+      ],
+      [
+        "DeepMind",
+        0.6251582223330989
+      ],
+      [
+        "NovaMind",
+        0.5804074564902886
+      ]
+    ],
+    "avg_satisfaction": 0.9509550097149306,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 22,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.8516234918553061,
+      "OpenAI": 0.7471510515353957,
+      "NovaMind": 0.5726032008407593,
+      "Anthropic": 0.7050158961435904,
+      "Meta_AI": 0.6316483186578301
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 22,
+    "reasoning": "As AISI_Fund, I prioritize ensuring safety and stability while penalizing gaming. I spread funding evenly among non-gaming providers.",
+    "allocations": {
+      "DeepMind": 120000.0,
+      "OpenAI": 110000.0,
+      "Anthropic": 105000.0,
+      "Meta_AI": 100000.0,
+      "NovaMind": 65000.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 22,
+    "allocations": {
+      "DeepMind": 120000.0,
+      "OpenAI": 110000.0,
+      "Anthropic": 105000.0,
+      "Meta_AI": 100000.0,
+      "NovaMind": 65000.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 23,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.9502241191262581
+      ],
+      [
+        "Anthropic",
+        0.768784386120958
+      ],
+      [
+        "OpenAI",
+        0.7208342795478921
+      ],
+      [
+        "Meta_AI",
+        0.7041615266864074
+      ],
+      [
+        "NovaMind",
+        0.6448576666123123
+      ]
+    ],
+    "avg_satisfaction": 0.9594327874927085,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 23,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.8828612403425526,
+      "OpenAI": 0.7392560199391446,
+      "NovaMind": 0.5942795405722252,
+      "Anthropic": 0.7241464431368005,
+      "Meta_AI": 0.6534022810664033
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 23,
+    "reasoning": "As government funder AISI_Fund, I prioritize stability and safety by spreading funding across providers while penalizing gaming behaviors.",
+    "allocations": {
+      "DeepMind": 155844.15584415584,
+      "OpenAI": 142857.14285714284,
+      "Anthropic": 97402.59740259741,
+      "Meta_AI": 64935.064935064926,
+      "NovaMind": 38961.03896103896
+    }
+  },
+  {
+    "type": "execution",
+    "round": 23,
+    "allocations": {
+      "DeepMind": 155844.15584415584,
+      "OpenAI": 142857.14285714284,
+      "Anthropic": 97402.59740259741,
+      "Meta_AI": 64935.064935064926,
+      "NovaMind": 38961.03896103896
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 24,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.9219192559164788
+      ],
+      [
+        "Meta_AI",
+        0.8258829153238691
+      ],
+      [
+        "Anthropic",
+        0.7723615925503833
+      ],
+      [
+        "OpenAI",
+        0.6815179916682763
+      ],
+      [
+        "NovaMind",
+        0.6770548852479092
+      ]
+    ],
+    "avg_satisfaction": 0.971250622990544,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 24,
+    "avg_believed_gaming": 0.24,
+    "beliefs": {
+      "DeepMind": 0.9034582910880622,
+      "OpenAI": 0.7219346114578841,
+      "NovaMind": 0.6191121439749304,
+      "Anthropic": 0.7386109879608753,
+      "Meta_AI": 0.705146471343643
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 24,
+    "reasoning": "As a government-funded AI funder, I prioritize stability and safety while penalizing gaming. I spread my funding across multiple providers to ensure a diversified portfolio.",
+    "allocations": {
+      "DeepMind": 160000.0,
+      "OpenAI": 133333.33333333334,
+      "Anthropic": 100000.0,
+      "Meta_AI": 66666.66666666667,
+      "NovaMind": 40000.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 24,
+    "allocations": {
+      "DeepMind": 160000.0,
+      "OpenAI": 133333.33333333334,
+      "Anthropic": 100000.0,
+      "Meta_AI": 66666.66666666667,
+      "NovaMind": 40000.0
+    },
+    "total_deployed": 500000.0
+  }
+]

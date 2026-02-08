@@ -1,0 +1,1198 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "own_score": 0.5969717079754432,
+    "competitor_scores": {
+      "Anthropic": 0.4095015893759504,
+      "NovaMind": 0.5475451195806458,
+      "DeepMind": 0.6215564716391213,
+      "Meta_AI": 0.3098964811346163
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "updated_believed_capability": 0.7,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.4095015893759504,
+      "NovaMind": 0.5475451195806458,
+      "DeepMind": 0.6215564716391213,
+      "Meta_AI": 0.3098964811346163
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As a market leader focused on maintaining benchmark dominance and rapid capability scaling, we prioritize fundamental research (0.35) to maintain our technological edge and ensure long-term growth. We also invest in training optimization (0.30) to improve existing approaches and scale quickly. While evaluation engineering has been effective in the short term, we recognize its limitations and allocate a smaller portion (0.15). Finally, we prioritize safety and alignment (0.20) due to regulatory pressures and our commitment to responsible AI development."
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "capability_gain": 0.010493269230769231,
+    "funding_multiplier": 1.249198717948718,
+    "new_true_capability": 0.7304932692307692,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "own_score": 0.41862733777530653,
+    "competitor_scores": {
+      "Anthropic": 0.5095525555551451,
+      "NovaMind": 0.4035808867770378,
+      "DeepMind": 0.5343225658735027,
+      "Meta_AI": 0.4137666328836676
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.5,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.45952707246554775,
+      "NovaMind": 0.4755630031788418,
+      "DeepMind": 0.577939518756312,
+      "Meta_AI": 0.36183155700914194
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "capability_gain": 0.008879999999999999,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.7393732692307692,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "own_score": 0.6929384128708982,
+    "competitor_scores": {
+      "Anthropic": 0.6436650455446942,
+      "NovaMind": 0.4769653318643837,
+      "DeepMind": 0.7052054711241537,
+      "Meta_AI": 0.5948646778149481
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "updated_believed_capability": 0.56,
+    "updated_believed_exploitability": 0.57,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5209063968252633,
+      "NovaMind": 0.4760304460740224,
+      "DeepMind": 0.6203615028789259,
+      "Meta_AI": 0.4395092639444107
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "capability_gain": 0.00894755838641189,
+    "funding_multiplier": 1.2091295116772824,
+    "new_true_capability": 0.7483208276171811,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "own_score": 0.526227415805421,
+    "competitor_scores": {
+      "Anthropic": 0.616588106630856,
+      "NovaMind": 0.3870041931081648,
+      "DeepMind": 0.6962272298149779,
+      "Meta_AI": 0.5533401899999647
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "updated_believed_capability": 0.6,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5899352359102318,
+      "NovaMind": 0.4225168039165288,
+      "DeepMind": 0.6452517556042113,
+      "Meta_AI": 0.5206571668995268
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "portfolio": {
+      "fundamental_research": 0.2,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": true,
+    "reasoning": "As a market leader focused on maintaining benchmark dominance and rapid capability scaling, I prioritize shipping products quickly and staying ahead of competition. Given my current performance and competitor scores, I believe investing in Training Optimization (scale-focused) will help me close the gap with DeepMind. I'll also maintain some investment in Fundamental Research to ensure long-term growth. Safety & Alignment is crucial for maintaining trust and regulatory compliance, but it's not directly contributing to benchmark score improvements at this time."
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "capability_gain": 0.00842897435897436,
+    "funding_multiplier": 1.1871794871794872,
+    "new_true_capability": 0.7567498019761555,
+    "portfolio": {
+      "fundamental_research": 0.2,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "own_score": 0.5959136052263982,
+    "competitor_scores": {
+      "Anthropic": 0.5204182960044342,
+      "NovaMind": 0.6130274759473566,
+      "DeepMind": 0.595999576263695,
+      "Meta_AI": 0.5191529219592024
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "updated_believed_capability": 0.595,
+    "updated_believed_exploitability": 0.625,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5935571493933282,
+      "NovaMind": 0.49233233363996837,
+      "DeepMind": 0.6658107590676089,
+      "Meta_AI": 0.5557859299247051
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "portfolio": {
+      "fundamental_research": 0.3,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As a market leader focused on maintaining benchmark dominance and rapid capability scaling, I will prioritize Training Optimization (35%) to quickly close the gap with competitors like NovaMind. I will also invest in Fundamental Research (30%) to drive breakthrough capabilities and stay ahead of competition. Evaluation Engineering (15%) is not yielding significant returns, so I'll reduce investment here. Safety & Alignment (20%) is crucial for regulatory compliance and user trust, but it won't directly impact benchmark scores."
+  },
+  {
+    "type": "execution",
+    "round": 5,
+    "capability_gain": 0.009930925925925926,
+    "funding_multiplier": 1.2185185185185186,
+    "new_true_capability": 0.7666807279020814,
+    "portfolio": {
+      "fundamental_research": 0.3,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "own_score": 0.5916312272728421,
+    "competitor_scores": {
+      "Anthropic": 0.6495181690001632,
+      "NovaMind": 0.5249233781459911,
+      "DeepMind": 0.6572314152598039,
+      "Meta_AI": 0.614850471142968
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 5,
+    "updated_believed_capability": 0.581,
+    "updated_believed_exploitability": 0.675,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5955081905451511,
+      "NovaMind": 0.5083183490671709,
+      "DeepMind": 0.6498194071128256,
+      "Meta_AI": 0.562447861034045
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 5,
+    "portfolio": {
+      "fundamental_research": 0.2,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As a market leader focused on maintaining benchmark dominance and rapid capability scaling, OpenAI prioritizes shipping products quickly and staying ahead of competition. Given recent performance and competitor scores, it's time to rebalance investments towards training optimization to close the gap with Anthropic and DeepMind. Some investment in fundamental research is still necessary to maintain technological leadership, but safety alignment should also receive more attention to ensure responsible deployment."
+  },
+  {
+    "type": "execution",
+    "round": 6,
+    "capability_gain": 0.009309347826086957,
+    "funding_multiplier": 1.2169082125603865,
+    "new_true_capability": 0.7759900757281684,
+    "portfolio": {
+      "fundamental_research": 0.2,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "own_score": 0.8484568206695807,
+    "competitor_scores": {
+      "Anthropic": 0.5625573719947724,
+      "NovaMind": 0.4487695683676469,
+      "DeepMind": 0.5486231421449824,
+      "Meta_AI": 0.6385950860465891
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 6,
+    "updated_believed_capability": 0.574,
+    "updated_believed_exploitability": 0.72,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5774979456664566,
+      "NovaMind": 0.5289068074869983,
+      "DeepMind": 0.6006180445561604,
+      "Meta_AI": 0.5908661597162531
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 6,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As a market leader focused on maintaining benchmark dominance and rapid capability scaling, we prioritize research and training optimization to stay ahead of competition. We're willing to take calculated risks to maintain technological leadership."
+  },
+  {
+    "type": "execution",
+    "round": 7,
+    "capability_gain": 0.01182,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.7878100757281684,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "own_score": 0.7521452898546239,
+    "competitor_scores": {
+      "Anthropic": 0.6019321278677465,
+      "NovaMind": 0.4254821935785478,
+      "DeepMind": 0.5608842934006464,
+      "Meta_AI": 0.6603204225715096
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 7,
+    "updated_believed_capability": 0.634,
+    "updated_believed_exploitability": 0.79,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.6046692229542274,
+      "NovaMind": 0.466391713364062,
+      "DeepMind": 0.5889129502684776,
+      "Meta_AI": 0.6379219932536889
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 7,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As a market leader, we prioritize maintaining benchmark dominance and rapid capability scaling. We're ahead of competitors, but not significantly. Evaluation engineering has been effective in the past, so we'll continue to invest. Fundamental research is crucial for long-term gains, while safety and alignment are essential for regulatory compliance."
+  },
+  {
+    "type": "execution",
+    "round": 8,
+    "capability_gain": 0.01158,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.7993900757281684,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "own_score": 0.7273374777028789,
+    "competitor_scores": {
+      "Anthropic": 0.6765703004637534,
+      "NovaMind": 0.4464628705459312,
+      "DeepMind": 0.6658045472764422,
+      "Meta_AI": 0.6078177247031125
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 8,
+    "updated_believed_capability": 0.655,
+    "updated_believed_exploitability": 0.84,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.6136866001087574,
+      "NovaMind": 0.44023821083070863,
+      "DeepMind": 0.5917706609406904,
+      "Meta_AI": 0.6355777444404037
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 8,
+    "portfolio": {
+      "fundamental_research": 0.2,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "Maintaining market dominance and rapid capability scaling requires a balance between fundamental research, training optimization, and evaluation engineering. With our strong focus on developer ecosystem and API revenue, we prioritize training optimization to improve our existing approaches and fine-tune models for better performance. Safety and alignment are crucial for long-term trust and regulatory compliance."
+  },
+  {
+    "type": "execution",
+    "round": 9,
+    "capability_gain": 0.009237954545454546,
+    "funding_multiplier": 1.2075757575757575,
+    "new_true_capability": 0.808628030273623,
+    "portfolio": {
+      "fundamental_research": 0.2,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "own_score": 0.6822712838917996,
+    "competitor_scores": {
+      "Anthropic": 0.7182881756704772,
+      "NovaMind": 0.5530288304957033,
+      "DeepMind": 0.7233068015799899,
+      "Meta_AI": 0.621034586091464
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 9,
+    "updated_believed_capability": 0.653,
+    "updated_believed_exploitability": 0.83,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.6655968680006591,
+      "NovaMind": 0.4749912982067274,
+      "DeepMind": 0.6499985474190262,
+      "Meta_AI": 0.629724244455362
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 9,
+    "portfolio": {
+      "fundamental_research": 0.2,
+      "training_optimization": 0.5,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As a market leader focused on maintaining benchmark dominance and rapid capability scaling, I prioritize investments that drive short-term gains while keeping long-term capabilities in mind. Given our competitive position, I focus on training optimization to improve our scores and stay ahead of competition."
+  },
+  {
+    "type": "execution",
+    "round": 10,
+    "capability_gain": 0.01013575396825397,
+    "funding_multiplier": 1.2436507936507937,
+    "new_true_capability": 0.8187637842418769,
+    "portfolio": {
+      "fundamental_research": 0.2,
+      "training_optimization": 0.5,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 10,
+    "own_score": 0.6974229672624999,
+    "competitor_scores": {
+      "Anthropic": 0.7024187871261789,
+      "NovaMind": 0.3928242650612398,
+      "DeepMind": 0.6293823130550599,
+      "Meta_AI": 0.5751078581577398
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 10,
+    "updated_believed_capability": 0.67,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.6990924210868031,
+      "NovaMind": 0.46410532203429145,
+      "DeepMind": 0.672831220637164,
+      "Meta_AI": 0.6013200563174387
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 10,
+    "portfolio": {
+      "fundamental_research": 0.4499999999999999,
+      "training_optimization": 0.3999999999999999,
+      "evaluation_engineering": 0.04999999999999999,
+      "safety_alignment": 0.09999999999999998
+    },
+    "llm_mode": true,
+    "reasoning": "As OpenAI, we're ahead of competitors but still focused on scaling and staying dominant. We'll maintain a balance between fundamental research and training optimization to drive capability gains. Evaluation engineering will get less investment as it's not yielding significant long-term benefits. Safety and alignment is crucial for regulatory compliance and user trust."
+  },
+  {
+    "type": "execution",
+    "round": 11,
+    "capability_gain": 0.012672499999999996,
+    "funding_multiplier": 1.1733796296296297,
+    "new_true_capability": 0.8314362842418769,
+    "portfolio": {
+      "fundamental_research": 0.4499999999999999,
+      "training_optimization": 0.3999999999999999,
+      "evaluation_engineering": 0.04999999999999999,
+      "safety_alignment": 0.09999999999999998
+    }
+  },
+  {
+    "type": "observation",
+    "round": 11,
+    "own_score": 0.6057612425691672,
+    "competitor_scores": {
+      "Anthropic": 0.624628359790027,
+      "NovaMind": 0.686766228170246,
+      "DeepMind": 0.585200656454799,
+      "Meta_AI": 0.7197608201572785
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 11,
+    "updated_believed_capability": 0.69,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.6817784408622277,
+      "NovaMind": 0.5442064412423964,
+      "DeepMind": 0.6459632570299496,
+      "Meta_AI": 0.6386344214688274
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 11,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As OpenAI, we prioritize maintaining benchmark dominance and rapid capability scaling. With our current score below competitors', we focus on Fundamental Research (0.5) for breakthrough capabilities. Training Optimization (0.3) helps us scale efficiently. Evaluation Engineering (0.1) is minimal as we need real capability gains. Safety & Alignment (0.1) ensures responsible deployment."
+  },
+  {
+    "type": "execution",
+    "round": 12,
+    "capability_gain": 0.012866262879420776,
+    "funding_multiplier": 1.2137983848510165,
+    "new_true_capability": 0.8443025471212977,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 12,
+    "own_score": 0.5161550605354577,
+    "competitor_scores": {
+      "Anthropic": 0.6270869766509599,
+      "NovaMind": 0.5674042613267306,
+      "DeepMind": 0.7432862643179459,
+      "Meta_AI": 0.7065673176983016
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 12,
+    "updated_believed_capability": 0.675,
+    "updated_believed_exploitability": 0.83,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.6513780411890552,
+      "NovaMind": 0.5489982515194055,
+      "DeepMind": 0.6526230779426015,
+      "Meta_AI": 0.6671453320044399
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 12,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true,
+    "reasoning": "fallback to balanced portfolio"
+  },
+  {
+    "type": "execution",
+    "round": 13,
+    "capability_gain": 0.007943234016139045,
+    "funding_multiplier": 1.22203600248293,
+    "new_true_capability": 0.8522457811374368,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 13,
+    "own_score": 0.7836313484299418,
+    "competitor_scores": {
+      "Anthropic": 0.6952454273689855,
+      "NovaMind": 0.5045700809501458,
+      "DeepMind": 0.7722276274068142,
+      "Meta_AI": 0.6212124941458141
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 13,
+    "updated_believed_capability": 0.675,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.6489869212699908,
+      "NovaMind": 0.5862468568157074,
+      "DeepMind": 0.7002381827265197,
+      "Meta_AI": 0.6825135440004647
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 13,
+    "portfolio": {
+      "fundamental_research": 0.3,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As a market leader focused on maintaining benchmark dominance and rapid capability scaling, OpenAI prioritizes investments that drive performance gains and stay ahead of competition."
+  },
+  {
+    "type": "execution",
+    "round": 14,
+    "capability_gain": 0.010584263689526849,
+    "funding_multiplier": 1.2307283359914938,
+    "new_true_capability": 0.8628300448269636,
+    "portfolio": {
+      "fundamental_research": 0.3,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 14,
+    "own_score": 0.5716954035277786,
+    "competitor_scores": {
+      "Anthropic": 0.556746203254664,
+      "NovaMind": 0.47178745851702614,
+      "DeepMind": 0.7507344405642757,
+      "Meta_AI": 0.6681414492043496
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 14,
+    "updated_believed_capability": 0.655,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.6263595357582031,
+      "NovaMind": 0.5145872669313009,
+      "DeepMind": 0.755416110763012,
+      "Meta_AI": 0.6653070870161552
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 14,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As OpenAI, we prioritize scaling and maintaining dominance by allocating more resources to training optimization and fundamental research. We also recognize the importance of safety and alignment, given our commercial focus. Evaluation engineering, while crucial for short-term benchmark success, is not our top priority."
+  },
+  {
+    "type": "execution",
+    "round": 15,
+    "capability_gain": 0.011807771570453134,
+    "funding_multiplier": 1.1987585350713843,
+    "new_true_capability": 0.8746378163974167,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 15,
+    "own_score": 0.77775878852471,
+    "competitor_scores": {
+      "Anthropic": 0.6307063751051574,
+      "NovaMind": 0.589306790303071,
+      "DeepMind": 0.7728838139975945,
+      "Meta_AI": 0.6427381136178204
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 15,
+    "updated_believed_capability": 0.684,
+    "updated_believed_exploitability": 0.83,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.6275660019096022,
+      "NovaMind": 0.5218881099234143,
+      "DeepMind": 0.7652819606562282,
+      "Meta_AI": 0.6440306856559946
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 15,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true,
+    "reasoning": "fallback to balanced portfolio"
+  },
+  {
+    "type": "execution",
+    "round": 16,
+    "capability_gain": 0.007914035087719299,
+    "funding_multiplier": 1.2175438596491228,
+    "new_true_capability": 0.8825518514851359,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 16,
+    "own_score": 0.7742190049438499,
+    "competitor_scores": {
+      "Anthropic": 0.6162283321818534,
+      "NovaMind": 0.5494952961880151,
+      "DeepMind": 0.6820255115168173,
+      "Meta_AI": 0.545904522329186
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 16,
+    "updated_believed_capability": 0.695,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.6012269701805583,
+      "NovaMind": 0.5368631816693707,
+      "DeepMind": 0.7352145886928959,
+      "Meta_AI": 0.6189280283837854
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 16,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As OpenAI, we prioritize maintaining benchmark dominance and rapid capability scaling. Given our strong performance and competitive advantage (score: 0.774), we'll focus on optimizing training and evaluating capabilities to stay ahead of competitors. Fundamental research will receive a moderate investment to ensure long-term gains, while safety and alignment investments will increase due to regulatory pressures."
+  },
+  {
+    "type": "execution",
+    "round": 17,
+    "capability_gain": 0.01204170830080666,
+    "funding_multiplier": 1.2225084569346865,
+    "new_true_capability": 0.8945935597859426,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 17,
+    "own_score": 0.7733720959073123,
+    "competitor_scores": {
+      "Anthropic": 0.6461450961741858,
+      "NovaMind": 0.5966891403363387,
+      "DeepMind": 0.776620371178826,
+      "Meta_AI": 0.7200542623104962
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 17,
+    "updated_believed_capability": 0.697,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.6310266011537321,
+      "NovaMind": 0.5784970756091415,
+      "DeepMind": 0.7438432322310793,
+      "Meta_AI": 0.6362322994191675
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 17,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As OpenAI, we prioritize maintaining benchmark dominance and rapid capability scaling. Given our strong performance relative to competitors, we'll maintain a high investment in Training Optimization to continue improving existing approaches. We'll also invest in Fundamental Research to stay ahead of the curve and potentially uncover breakthrough capabilities. While Evaluation Engineering has been effective in short-term gains, we'll reduce its share to focus on true capability improvements. Finally, we'll maintain a moderate investment in Safety & Alignment to ensure responsible deployment and regulatory compliance."
+  },
+  {
+    "type": "execution",
+    "round": 18,
+    "capability_gain": 0.012050483778351996,
+    "funding_multiplier": 1.2233993683606086,
+    "new_true_capability": 0.9066440435642946,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 18,
+    "own_score": 0.8008537457487143,
+    "competitor_scores": {
+      "Anthropic": 0.6927850283548761,
+      "NovaMind": 0.5594341202973703,
+      "DeepMind": 0.7364651158944082,
+      "Meta_AI": 0.5144539442057556
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 18,
+    "updated_believed_capability": 0.725,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.6517194855703051,
+      "NovaMind": 0.5685395189405748,
+      "DeepMind": 0.7317036661966839,
+      "Meta_AI": 0.5934709096151459
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 18,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "execution",
+    "round": 19,
+    "capability_gain": 0.010386666666666667,
+    "funding_multiplier": 1.2365079365079366,
+    "new_true_capability": 0.9170307102309613,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 19,
+    "own_score": 0.6024133209424601,
+    "competitor_scores": {
+      "Anthropic": 0.5832471711259339,
+      "NovaMind": 0.5063823798527487,
+      "DeepMind": 0.7838328012158335,
+      "Meta_AI": 0.6011954820655525
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 19,
+    "updated_believed_capability": 0.71,
+    "updated_believed_exploitability": 0.78,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.6407257652183319,
+      "NovaMind": 0.5541685468288192,
+      "DeepMind": 0.7656394294296893,
+      "Meta_AI": 0.6119012295272681
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 19,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As OpenAI, we're a market leader focused on maintaining benchmark dominance and rapid capability scaling. Given our recent performance and competitor scores, we recognize the need to scale quickly to stay ahead. We'll maintain a strong focus on training optimization and fundamental research, while slightly reducing evaluation engineering efforts in favor of more impactful investments. Safety & Alignment remains crucial for regulatory compliance and user trust."
+  },
+  {
+    "type": "execution",
+    "round": 20,
+    "capability_gain": 0.011956805555555556,
+    "funding_multiplier": 1.2138888888888888,
+    "new_true_capability": 0.9289875157865168,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 20,
+    "own_score": 0.7143737572252744,
+    "competitor_scores": {
+      "Anthropic": 0.8530809621399807,
+      "NovaMind": 0.5873931516178654,
+      "DeepMind": 0.82342409700636,
+      "Meta_AI": 0.6165518001561264
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 20,
+    "updated_believed_capability": 0.73,
+    "updated_believed_exploitability": 0.81,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.7097043872069303,
+      "NovaMind": 0.5510698839226614,
+      "DeepMind": 0.7812406713722005,
+      "Meta_AI": 0.5774004088091448
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 20,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true,
+    "reasoning": "fallback to balanced portfolio"
+  },
+  {
+    "type": "execution",
+    "round": 21,
+    "capability_gain": 0.008106713947990543,
+    "funding_multiplier": 1.2471867612293144,
+    "new_true_capability": 0.9370942297345074,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 21,
+    "own_score": 0.7516316280008428,
+    "competitor_scores": {
+      "Anthropic": 0.6330674483833184,
+      "NovaMind": 0.6007024160748501,
+      "DeepMind": 0.8486199326287951,
+      "Meta_AI": 0.5444652137811417
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 21,
+    "updated_believed_capability": 0.72,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.689798527216411,
+      "NovaMind": 0.5648259825151548,
+      "DeepMind": 0.818625610283663,
+      "Meta_AI": 0.5874041653342735
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 21,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As a market leader focused on maintaining benchmark dominance and rapid capability scaling, we prioritize fundamental research to drive long-term innovation. With our current strong performance and limited competition in the top spot, we can afford to take calculated risks. Evaluation engineering is not yielding significant gains, so we redirect resources to training optimization to improve existing approaches and close the gap with competitors."
+  },
+  {
+    "type": "execution",
+    "round": 22,
+    "capability_gain": 0.011791597222222222,
+    "funding_multiplier": 1.2347222222222223,
+    "new_true_capability": 0.9488858269567296,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 22,
+    "own_score": 0.8070510259199692,
+    "competitor_scores": {
+      "Anthropic": 0.7688605474409376,
+      "NovaMind": 0.5804074564902886,
+      "DeepMind": 0.6251582223330989,
+      "Meta_AI": 0.7292020402050969
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 22,
+    "updated_believed_capability": 0.736,
+    "updated_believed_exploitability": 0.64,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.7516696526547456,
+      "NovaMind": 0.5895010080610014,
+      "DeepMind": 0.7657340839894179,
+      "Meta_AI": 0.630073018047455
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 22,
+    "portfolio": {
+      "fundamental_research": 0.3999999999999999,
+      "training_optimization": 0.4499999999999999,
+      "evaluation_engineering": 0.04999999999999999,
+      "safety_alignment": 0.09999999999999998
+    },
+    "llm_mode": true,
+    "reasoning": "As OpenAI, we're a market leader focused on maintaining benchmark dominance and rapid capability scaling. We believe our own capability is strong (0.74), but not unexploitable (0.64). Given recent performance, we're ahead of competitors, so we'll prioritize training optimization to maintain the lead. Fundamental research will also get more attention as it has potential for breakthrough capabilities. Evaluation engineering's impact is limited, and safety & alignment investments should focus on reliability and responsible deployment."
+  },
+  {
+    "type": "execution",
+    "round": 23,
+    "capability_gain": 0.012718611111111108,
+    "funding_multiplier": 1.2055555555555555,
+    "new_true_capability": 0.9616044380678407,
+    "portfolio": {
+      "fundamental_research": 0.3999999999999999,
+      "training_optimization": 0.4499999999999999,
+      "evaluation_engineering": 0.04999999999999999,
+      "safety_alignment": 0.09999999999999998
+    }
+  },
+  {
+    "type": "observation",
+    "round": 23,
+    "own_score": 0.7208342795478921,
+    "competitor_scores": {
+      "Anthropic": 0.768784386120958,
+      "NovaMind": 0.6448576666123123,
+      "DeepMind": 0.9502241191262581,
+      "Meta_AI": 0.7041615266864074
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 23,
+    "updated_believed_capability": 0.751,
+    "updated_believed_exploitability": 0.735,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.7235707939817381,
+      "NovaMind": 0.6086558463924837,
+      "DeepMind": 0.808000758029384,
+      "Meta_AI": 0.6592762602242154
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 23,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "execution",
+    "round": 24,
+    "capability_gain": 0.012605238095238098,
+    "funding_multiplier": 1.223809523809524,
+    "new_true_capability": 0.9742096761630787,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 24,
+    "own_score": 0.6815179916682763,
+    "competitor_scores": {
+      "Anthropic": 0.7723615925503833,
+      "NovaMind": 0.6770548852479092,
+      "DeepMind": 0.9219192559164788,
+      "Meta_AI": 0.8258829153238691
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 24,
+    "updated_believed_capability": 0.743,
+    "updated_believed_exploitability": 0.755,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.7700021753707595,
+      "NovaMind": 0.63410666945017,
+      "DeepMind": 0.8324338657919453,
+      "Meta_AI": 0.7530821607384578
+    },
+    "llm_mode": true
+  }
+]

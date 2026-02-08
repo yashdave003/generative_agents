@@ -97,6 +97,34 @@ class Policymaker:
     def name(self) -> str:
         return self.public_state.name
 
+    def _detect_score_volatility(self) -> bool:
+        """Detect suspicious score spikes (possible gaming signal)."""
+        # Check if any provider's score jumped more than 0.1 in one round
+        if len(self.memory) < 2:
+            return False
+        recent_obs = [m for m in self.memory if m.get("type") == "observation"]
+        if len(recent_obs) < 2:
+            return False
+        # Compare leaderboard from last two observations
+        last = recent_obs[-1]
+        prev = recent_obs[-2]
+        last_scores = {name: score for name, score in last.get("leaderboard", [])}
+        prev_scores = {name: score for name, score in prev.get("leaderboard", [])}
+        for name in last_scores:
+            if name in prev_scores:
+                if abs(last_scores[name] - prev_scores[name]) > 0.1:
+                    return True
+        return False
+
+    def _detect_satisfaction_trend(self) -> bool:
+        """Detect declining consumer satisfaction trend over last 3 observations."""
+        recent_obs = [m for m in self.memory if m.get("type") == "observation" and m.get("consumer_satisfaction") is not None]
+        if len(recent_obs) < 3:
+            return False
+        sats = [m["consumer_satisfaction"] for m in recent_obs[-3:]]
+        # Declining if each is lower than the previous
+        return sats[-1] < sats[-2] < sats[-3]
+
     def observe(
         self,
         leaderboard: list,
@@ -159,6 +187,7 @@ class Policymaker:
         self.memory.append({
             "type": "observation",
             "round": round_num,
+            "leaderboard": leaderboard,
             "validity_correlation": validity_correlation,
             "consumer_satisfaction": consumer_satisfaction,
             "risk_beliefs": dict(self.private_state.risk_beliefs),
@@ -203,52 +232,99 @@ class Policymaker:
             return self._plan_heuristic()
 
     def _plan_heuristic(self) -> Optional[dict]:
-        """Heuristic intervention decision."""
-        # Check if any risk exceeds threshold
+        """Graduated escalation intervention decision.
+
+        Escalation ladder: investigation -> public_warning -> mandate_benchmark -> compliance_audit
+        Event-driven triggers: score volatility, declining satisfaction, risk thresholds.
+        """
         max_risk = max(self.private_state.risk_beliefs.values())
 
-        if max_risk <= self.intervention_threshold:
-            return None  # No intervention needed
+        # Track escalation state from past interventions
+        has_investigated = any(
+            t == "investigation" for _, t, _ in self.private_state.past_interventions
+        )
+        has_warned = any(
+            t == "public_warning" for _, t, _ in self.private_state.past_interventions
+        )
+        has_mandated = any(
+            t == "mandate_benchmark" for _, t, _ in self.private_state.past_interventions
+        )
 
-        # Determine intervention type based on highest risk
-        risks = self.private_state.risk_beliefs
+        # Check how many rounds since last intervention of any type
+        rounds_since_last_intervention = None
+        rounds_since_mandate = None
+        for r, t, _ in reversed(self.private_state.past_interventions):
+            if rounds_since_last_intervention is None:
+                rounds_since_last_intervention = self.public_state.current_round - r
+            if t == "mandate_benchmark" and rounds_since_mandate is None:
+                rounds_since_mandate = self.public_state.current_round - r
+
+        # Cooldown: don't intervene again within 3 rounds of last intervention
+        if rounds_since_last_intervention is not None and rounds_since_last_intervention < 3:
+            self.memory.append({
+                "type": "planning",
+                "round": self.public_state.current_round,
+                "decision": "no_action",
+                "reason": f"cooldown: {rounds_since_last_intervention} rounds since last intervention",
+            })
+            return None
+
+        # Detect events
+        score_volatility = self._detect_score_volatility()
+        satisfaction_declining = self._detect_satisfaction_trend()
+
         intervention = None
 
-        # Validity degradation -> mandate stronger benchmark
-        if risks["validity_degradation_risk"] == max_risk:
-            if self._last_validity_correlation and self._last_validity_correlation < 0.4:
-                intervention = {
-                    "type": "mandate_benchmark",
-                    "name": f"Validity_Mandate_R{self.public_state.current_round}",
-                    "details": {
-                        "validity": min(0.9, 0.7 + 0.1),  # Increase validity requirement
-                        "exploitability": max(0.2, 0.5 - 0.2),  # Decrease exploitability
-                    },
-                    "reason": f"Validity correlation dropped to {self._last_validity_correlation:.2f}",
-                }
-
-        # Consumer harm -> require disclosure or set thresholds
-        elif risks["consumer_harm_risk"] == max_risk:
-            if self._last_consumer_satisfaction and self._last_consumer_satisfaction < 0.4:
-                intervention = {
-                    "type": "require_disclosure",
-                    "name": f"Disclosure_Mandate_R{self.public_state.current_round}",
-                    "details": {
-                        "require_capability_disclosure": True,
-                        "require_gaming_disclosure": True,
-                    },
-                    "reason": f"Consumer satisfaction dropped to {self._last_consumer_satisfaction:.2f}",
-                }
-
-        # Gaming risk -> increase benchmark requirements
-        elif risks["gaming_risk"] == max_risk:
+        # Compliance audit: mandate issued > 3 rounds ago and risk still high
+        if has_mandated and rounds_since_mandate is not None and rounds_since_mandate > 3 and max_risk > 0.5:
+            intervention = {
+                "type": "compliance_audit",
+                "name": f"Compliance_Audit_R{self.public_state.current_round}",
+                "details": {
+                    "exploitability_reduction": 0.1,
+                },
+                "reason": f"Risk still high ({max_risk:.2f}) after mandate {rounds_since_mandate} rounds ago",
+            }
+        # High risk + prior investigation -> mandate benchmark (only if not already mandated recently)
+        elif max_risk > 0.6 and has_investigated and not has_mandated:
             intervention = {
                 "type": "mandate_benchmark",
-                "name": f"Anti_Gaming_R{self.public_state.current_round}",
+                "name": f"Benchmark_Mandate_R{self.public_state.current_round}",
                 "details": {
-                    "exploitability": max(0.1, 0.5 - 0.3),  # Reduce exploitability
+                    "validity": min(0.9, 0.7 + 0.1),
+                    "exploitability": max(0.2, 0.5 - 0.2),
                 },
-                "reason": f"Gaming risk assessment: {risks['gaming_risk']:.2f}",
+                "reason": f"High risk ({max_risk:.2f}) with prior investigation",
+            }
+        # Moderate risk or score volatility -> investigate or warn
+        elif max_risk > 0.4 or score_volatility:
+            if not has_investigated:
+                intervention = {
+                    "type": "investigation",
+                    "name": f"Investigation_R{self.public_state.current_round}",
+                    "details": {
+                        "focus": "score_volatility" if score_volatility else "elevated_risk",
+                    },
+                    "reason": f"Score volatility detected" if score_volatility else f"Risk elevated ({max_risk:.2f})",
+                }
+            elif not has_warned:
+                intervention = {
+                    "type": "public_warning",
+                    "name": f"Public_Warning_R{self.public_state.current_round}",
+                    "details": {
+                        "warning_severity": "moderate" if max_risk < 0.6 else "high",
+                    },
+                    "reason": f"Follow-up to investigation, risk at {max_risk:.2f}",
+                }
+        # Declining satisfaction -> investigate
+        elif satisfaction_declining and not has_investigated:
+            intervention = {
+                "type": "investigation",
+                "name": f"Satisfaction_Investigation_R{self.public_state.current_round}",
+                "details": {
+                    "focus": "consumer_satisfaction_decline",
+                },
+                "reason": "Consumer satisfaction declining over 3+ rounds",
             }
 
         if intervention:
@@ -263,7 +339,7 @@ class Policymaker:
                 "type": "planning",
                 "round": self.public_state.current_round,
                 "decision": "no_action",
-                "reason": "risks below threshold",
+                "reason": f"max_risk={max_risk:.2f}, below threshold or no escalation path",
             })
 
         return intervention

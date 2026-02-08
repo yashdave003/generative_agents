@@ -2,6 +2,24 @@
 
 This document describes (1) the conceptual stakeholders in the AI evaluation ecosystem, and (2) how they are computationally modeled in the `eval_sim/` simulation framework.
 
+## File Reference
+
+| File | Purpose |
+|------|---------|
+| `simulation.py` | Core sim loop, `SimulationConfig`, `EvalEcosystemSimulation`, provider config presets (`get_default_provider_configs`, `get_two_provider_configs`, `get_five_provider_configs`) |
+| `run_experiment.py` | **Editable experiment config file** — edit all parameters (providers, benchmarks, funders, rounds, LLM provider, etc.) at the top, then `python run_experiment.py` to run |
+| `run_llm_now.py` | CLI-driven quick experiment runner — parameterized via command-line flags (e.g. `python run_llm_now.py -r 5 -p ollama -e --funders`) |
+| `actors/model_provider.py` | ModelProvider actor with plan/observe/reflect/execute cycle |
+| `actors/evaluator.py` | Evaluator, Benchmark, Regulation classes |
+| `actors/consumer.py` | Consumer actor with subscription decisions |
+| `actors/policymaker.py` | Policymaker with graduated interventions |
+| `actors/funder.py` | Funder actor (VC, gov, foundation types) |
+| `visibility.py` | State classes: PublicState, PrivateState, GroundTruth |
+| `llm.py` | Multi-provider LLM integration (OpenAI, Anthropic, Ollama, Gemini) and prompt templates |
+| `plotting.py` | Visualization dashboards (provider, consumer, policymaker, evaluator, funder, summary) |
+| `experiment_logger.py` | ExperimentLogger for systematic experiment logging to `experiments/` |
+| `game_log.py` | Natural language markdown game log generator |
+
 ---
 
 # Part 1: Conceptual Stakeholders
@@ -187,17 +205,13 @@ This section clarifies which stakeholders are implemented in the simulation.
 | Organizational Consumer | Not implemented | Could extend Consumer with longer decision cycles |
 | Policymaker | **Implemented** | `actors/policymaker.py` |
 | Model Provider | **Implemented** | `actors/model_provider.py` |
-| Evaluation Provider | **Partially implemented** | Passive evaluator only; no adaptive behavior |
+| Evaluation Provider | **Implemented** | Active benchmark evolution: gaming-pressure-driven validity decay and exploitability growth |
 | Funder | **Implemented** | `actors/funder.py` - VC, Government, Foundation types |
 
-### Evaluator Limitations (Current)
-The Evaluator is currently **passive**:
-- Runs benchmarks and publishes scores
-- Does not detect gaming or adapt benchmarks
-- Does not create new benchmarks
+### Evaluator Behavior (Current)
+The Evaluator is now **active**: benchmarks degrade in validity and grow in exploitability in proportion to aggregate evaluation engineering investment (gaming pressure). This creates the core Goodhart's Law feedback loop where benchmark optimization erodes the very signal the benchmark is meant to provide.
 
 ### Future Extensions
-- **Active Evaluator**: Detects score-capability divergence, updates benchmarks
 - **Organizational Consumer**: Longer decision timelines, compliance constraints
 
 ---
@@ -315,6 +329,9 @@ Providers have strategic profiles influencing decision-making:
 | `use_cases` | Types of tasks the consumer needs |
 | `budget` | Available resources |
 | `switching_threshold` | How much disappointment triggers a switch |
+| `switching_cost` | Additional switching friction (0-1) |
+| `leaderboard_trust` | How much to trust leaderboard vs own experience (0-1) |
+| `rounds_with_provider` | Tenure with current provider |
 
 #### Ground Truth (simulation only)
 | Variable | Description |
@@ -327,6 +344,12 @@ Providers have strategic profiles influencing decision-making:
 2. **Reflect**: Update quality beliefs based on actual experience vs. expectations
 3. **Plan**: Decide whether to switch providers
 4. **Execute**: Subscribe/unsubscribe
+
+### Consumer Heterogeneity
+Consumers are instantiated across 3 archetypes with blended scoring:
+- **Leaderboard follower**: Relies heavily on benchmark rankings to choose providers (high `leaderboard_trust`)
+- **Experience-driven**: Prioritizes own satisfaction history over leaderboard signals (low `leaderboard_trust`)
+- **Cautious/sticky**: High `switching_cost` and inertia; stays with current provider unless strongly disappointed
 
 ### Key Dynamic: The Satisfaction Gap
 When a provider games the benchmark:
@@ -367,14 +390,17 @@ When a provider games the benchmark:
 ### Intervention Types
 | Type | Description |
 |------|-------------|
-| `mandate_benchmark` | Require use of specific benchmark, or change validity/exploitability |
-| `require_disclosure` | Require providers to disclose capability or strategy information |
-| `set_threshold` | Set minimum capability requirements |
+| `investigation` | Initial inquiry triggered by score volatility or elevated risk |
+| `public_warning` | Warning that reduces consumer `leaderboard_trust` |
+| `mandate_benchmark` | Changes benchmark validity/exploitability (requires prior investigation) |
+| `compliance_audit` | Post-mandate follow-up that further reduces exploitability |
+
+Interventions follow a **graduated escalation** model and have a **3-round cooldown** between actions.
 
 ### Cognitive Loop (per round)
 1. **Observe**: See leaderboard, consumer satisfaction, validity correlation
 2. **Reflect**: Update risk assessments
-3. **Plan**: Decide whether to intervene
+3. **Plan**: Decide whether to intervene (respecting cooldown and escalation requirements)
 4. **Execute**: Issue regulations
 
 ---
@@ -449,7 +475,7 @@ This creates realistic information asymmetry - funders cannot see provider strat
 
 ## Simulated Actor: Evaluator
 
-**Purpose:** Operates benchmarks and publishes scores. Currently passive (does not adapt).
+**Purpose:** Operates benchmarks and publishes scores. Actively evolves benchmarks under gaming pressure (validity decays, exploitability grows).
 
 ### Benchmark Properties
 | Variable | Description | Range |
@@ -459,6 +485,8 @@ This creates realistic information asymmetry - funders cannot see provider strat
 | `exploitability` (β) | How much gaming improves scores | 0-1 |
 | `noise_level` (σ) | Standard deviation of score noise | 0-1 |
 | `weight` | Importance in composite score (multi-benchmark mode) | 0-1 |
+| `validity_decay_rate` | Rate at which validity degrades under gaming pressure | 0-1 |
+| `exploitability_growth_rate` | Rate at which exploitability increases under gaming pressure | 0-1 |
 
 ### Multi-Benchmark Mode
 The simulation supports multiple benchmarks with different properties:
@@ -504,6 +532,7 @@ Each round records the following data:
 |--------|------|-------------|
 | `per_benchmark_scores` | dict | `{benchmark_name: {provider: score}}` |
 | `benchmark_names` | list | List of benchmark names |
+| `benchmark_params` | dict | `{benchmark_name: {validity, exploitability}}` - Current benchmark state |
 
 ### Consumer Metrics (if enabled)
 | Metric | Type | Description |
@@ -517,7 +546,7 @@ Each round records the following data:
 | Metric | Type | Description |
 |--------|------|-------------|
 | `policymaker_data.interventions` | list | Regulatory actions taken this round |
-| `policymaker_data.interventions[].type` | string | Intervention type (mandate_benchmark, require_disclosure, set_threshold) |
+| `policymaker_data.interventions[].type` | string | Intervention type (investigation, public_warning, mandate_benchmark, compliance_audit) |
 | `policymaker_data.interventions[].details` | dict | Intervention parameters |
 | `policymaker_data.active_regulations` | list | Currently active regulation names |
 
@@ -692,6 +721,12 @@ All experiments are tracked in `experiments/index.json`:
 | `n_consumers` | int | 10 | Number of consumers |
 | `n_policymakers` | int | 1 | Number of policymakers |
 | `n_funders` | int | 1 | Number of funders |
+| `capability_ceiling` | float | 1.0 | Maximum capability achievable |
+| `diminishing_returns_rate` | float | 3.0 | S-curve steepness near ceiling |
+| `breakthrough_probability` | float | 0.02 | Chance of capability breakthrough |
+| `breakthrough_magnitude` | float | 0.05 | Size of breakthroughs |
+| `benchmark_validity_decay_rate` | float | 0.005 | Validity decay per round |
+| `benchmark_exploitability_growth_rate` | float | 0.008 | Exploitability growth per round |
 | `verbose` | bool | True | Print progress during simulation |
 | `output_dir` | str | None | Output directory |
 
@@ -715,11 +750,16 @@ python run_experiments.py --all    # Both heuristic and LLM
 
 Set via environment variables:
 ```bash
-export LLM_PROVIDER=openai      # or "anthropic" or "ollama"
+export LLM_PROVIDER=openai      # or "anthropic", "ollama", or "gemini"
 export LLM_MODEL=gpt-4o-mini    # provider-specific model name
 export OPENAI_API_KEY=sk-...    # for OpenAI
 export ANTHROPIC_API_KEY=sk-... # for Anthropic
+export GEMINI_API_KEY=...       # for Gemini
 export OLLAMA_BASE_URL=http://localhost:11434  # for Ollama
+
+# Example: use Gemini
+export LLM_PROVIDER=gemini
+export LLM_MODEL=gemini-2.5-flash
 ```
 
 ---
@@ -748,7 +788,7 @@ eval_sim/
 ├── actors/
 │   ├── __init__.py
 │   ├── model_provider.py    # ModelProvider class
-│   ├── evaluator.py         # Evaluator class (passive)
+│   ├── evaluator.py         # Evaluator class (active benchmark evolution)
 │   ├── consumer.py          # Consumer class
 │   ├── policymaker.py       # Policymaker class
 │   └── funder.py            # Funder class (VC, Gov, Foundation)

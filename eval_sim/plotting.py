@@ -1331,11 +1331,14 @@ def create_all_plots(history, output_dir="./plots", show=True):
 # =============================================================================
 
 if __name__ == "__main__":
-    # Test with a simulation
-    from simulation import run_default_simulation
+    # Test with a quick simulation
+    from simulation import EvalEcosystemSimulation, SimulationConfig, get_default_provider_configs
 
     print("Running simulation...")
-    sim = run_default_simulation()
+    config = SimulationConfig(n_rounds=20, seed=42, verbose=True)
+    sim = EvalEcosystemSimulation(config)
+    sim.setup(get_default_provider_configs())
+    sim.run()
 
     print("\nCreating dashboards...")
     create_all_dashboards(sim.history, output_dir="./test_plots", show=False)

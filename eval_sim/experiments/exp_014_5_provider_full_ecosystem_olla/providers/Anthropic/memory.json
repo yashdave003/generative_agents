@@ -1,0 +1,1196 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "own_score": 0.4095015893759504,
+    "competitor_scores": {
+      "OpenAI": 0.5969717079754432,
+      "NovaMind": 0.5475451195806458,
+      "DeepMind": 0.6215564716391213,
+      "Meta_AI": 0.3098964811346163
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "updated_believed_capability": 0.65,
+    "updated_believed_exploitability": 0.3,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5969717079754432,
+      "NovaMind": 0.5475451195806458,
+      "DeepMind": 0.6215564716391213,
+      "Meta_AI": 0.3098964811346163
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "portfolio": {
+      "fundamental_research": 0.4210526315789474,
+      "training_optimization": 0.3157894736842105,
+      "evaluation_engineering": 0.052631578947368425,
+      "safety_alignment": 0.2105263157894737
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "capability_gain": 0.010872315002249215,
+    "funding_multiplier": 1.141292735042735,
+    "new_true_capability": 0.6908723150022492,
+    "portfolio": {
+      "fundamental_research": 0.4210526315789474,
+      "training_optimization": 0.3157894736842105,
+      "evaluation_engineering": 0.052631578947368425,
+      "safety_alignment": 0.2105263157894737
+    }
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "own_score": 0.5095525555551451,
+    "competitor_scores": {
+      "OpenAI": 0.41862733777530653,
+      "NovaMind": 0.4035808867770378,
+      "DeepMind": 0.5343225658735027,
+      "Meta_AI": 0.4137666328836676
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "updated_believed_capability": 0.62,
+    "updated_believed_exploitability": 0.35,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5077995228753749,
+      "NovaMind": 0.4755630031788418,
+      "DeepMind": 0.577939518756312,
+      "Meta_AI": 0.36183155700914194
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "capability_gain": 0.01086,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.7017323150022492,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "own_score": 0.6436650455446942,
+    "competitor_scores": {
+      "OpenAI": 0.6929384128708982,
+      "NovaMind": 0.4769653318643837,
+      "DeepMind": 0.7052054711241537,
+      "Meta_AI": 0.5948646778149481
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.4,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.569512486207216,
+      "NovaMind": 0.4760304460740224,
+      "DeepMind": 0.6203615028789259,
+      "Meta_AI": 0.4395092639444107
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "capability_gain": 0.011658970276008493,
+    "funding_multiplier": 1.183651804670913,
+    "new_true_capability": 0.7133912852782577,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "own_score": 0.616588106630856,
+    "competitor_scores": {
+      "OpenAI": 0.526227415805421,
+      "NovaMind": 0.3870041931081648,
+      "DeepMind": 0.6962272298149779,
+      "Meta_AI": 0.5533401899999647
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "updated_believed_capability": 0.65,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5459310554838752,
+      "NovaMind": 0.4225168039165288,
+      "DeepMind": 0.6452517556042113,
+      "Meta_AI": 0.5206571668995268
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, we prioritize responsible development and alignment research over short-term benchmark performance. Given our current capabilities, we're not far ahead of competitors, but still ahead of NovaMind. We should maintain a cautious approach to avoid falling behind OpenAI or DeepMind."
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "capability_gain": 0.010997777777777776,
+    "funding_multiplier": 1.2085470085470085,
+    "new_true_capability": 0.7243890630560355,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "own_score": 0.5204182960044342,
+    "competitor_scores": {
+      "OpenAI": 0.5959136052263982,
+      "NovaMind": 0.6130274759473566,
+      "DeepMind": 0.595999576263695,
+      "Meta_AI": 0.5191529219592024
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.5,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6050264779675725,
+      "NovaMind": 0.49233233363996837,
+      "DeepMind": 0.6658107590676089,
+      "Meta_AI": 0.5557859299247051
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused organization, we prioritize fundamental research and safety & alignment investments to ensure responsible development. We're behind competitors in benchmark performance, but that's not our primary concern. Training optimization will help improve existing approaches, while evaluation engineering is less important given its limited long-term impact."
+  },
+  {
+    "type": "execution",
+    "round": 5,
+    "capability_gain": 0.009720000000000001,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.7341090630560354,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "own_score": 0.6495181690001632,
+    "competitor_scores": {
+      "OpenAI": 0.5916312272728421,
+      "NovaMind": 0.5249233781459911,
+      "DeepMind": 0.6572314152598039,
+      "Meta_AI": 0.614850471142968
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 5,
+    "updated_believed_capability": 0.62,
+    "updated_believed_exploitability": 0.55,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5712574161015538,
+      "NovaMind": 0.5083183490671709,
+      "DeepMind": 0.6498194071128256,
+      "Meta_AI": 0.562447861034045
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 5,
+    "portfolio": {
+      "fundamental_research": 0.6,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused organization, we prioritize research and alignment over short-term benchmark performance. Given our current capabilities are above average, we can afford to allocate more resources to fundamental research to drive long-term growth. Training optimization is still important for fine-tuning our models, but evaluation engineering takes a backseat as it may not generalize well to real-world use. Safety and alignment remain crucial to ensure responsible development."
+  },
+  {
+    "type": "execution",
+    "round": 6,
+    "capability_gain": 0.014264528985507247,
+    "funding_multiplier": 1.235024154589372,
+    "new_true_capability": 0.7483735920415426,
+    "portfolio": {
+      "fundamental_research": 0.6,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "own_score": 0.5625573719947724,
+    "competitor_scores": {
+      "OpenAI": 0.8484568206695807,
+      "NovaMind": 0.4487695683676469,
+      "DeepMind": 0.5486231421449824,
+      "Meta_AI": 0.6385950860465891
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 6,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.6,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6786672177229404,
+      "NovaMind": 0.5289068074869983,
+      "DeepMind": 0.6006180445561604,
+      "Meta_AI": 0.5908661597162531
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 6,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused organization, we prioritize responsible development and alignment research, sacrificing short-term benchmark performance for long-term safety. We're behind competitors but not significantly, so we invest in fundamental research to close the gap. We reduce evaluation engineering investment since it didn't yield significant capability gains. Training optimization remains important for scaling our models. Safety & Alignment receives a moderate increase due to regulatory pressures."
+  },
+  {
+    "type": "execution",
+    "round": 7,
+    "capability_gain": 0.01266,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.7610335920415426,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "own_score": 0.6019321278677465,
+    "competitor_scores": {
+      "OpenAI": 0.7521452898546239,
+      "NovaMind": 0.4254821935785478,
+      "DeepMind": 0.5608842934006464,
+      "Meta_AI": 0.6603204225715096
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 7,
+    "updated_believed_capability": 0.615,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7307444459323489,
+      "NovaMind": 0.466391713364062,
+      "DeepMind": 0.5889129502684776,
+      "Meta_AI": 0.6379219932536889
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 7,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused organization, we prioritize long-term capability gains over short-term benchmark performance. We invest in fundamental research to drive durable improvements and reduce the risk of catastrophic failures. Training optimization is crucial for fine-tuning our models, but we limit its scope to avoid over-reliance on current architectures. Evaluation engineering is necessary for robustness, but we allocate it minimally. Safety & Alignment receives significant attention due to regulatory pressures and our commitment to responsible AI development."
+  },
+  {
+    "type": "execution",
+    "round": 8,
+    "capability_gain": 0.011159999999999998,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.7721935920415426,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "own_score": 0.6765703004637534,
+    "competitor_scores": {
+      "OpenAI": 0.7273374777028789,
+      "NovaMind": 0.4464628705459312,
+      "DeepMind": 0.6658045472764422,
+      "Meta_AI": 0.6078177247031125
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 8,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.68,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7759798627423612,
+      "NovaMind": 0.44023821083070863,
+      "DeepMind": 0.5917706609406904,
+      "Meta_AI": 0.6355777444404037
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 8,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused organization, we prioritize fundamental research and safety & alignment investments to ensure responsible development. We also recognize the importance of training optimization to improve our capabilities, but at a slower pace than competitors. Evaluation engineering is not a primary concern, as it may not generalize to real-world use."
+  },
+  {
+    "type": "execution",
+    "round": 9,
+    "capability_gain": 0.011113030303030303,
+    "funding_multiplier": 1.194949494949495,
+    "new_true_capability": 0.7833066223445729,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "own_score": 0.7182881756704772,
+    "competitor_scores": {
+      "OpenAI": 0.6822712838917996,
+      "NovaMind": 0.5530288304957033,
+      "DeepMind": 0.7233068015799899,
+      "Meta_AI": 0.621034586091464
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 9,
+    "updated_believed_capability": 0.67,
+    "updated_believed_exploitability": 0.72,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7205846838164341,
+      "NovaMind": 0.4749912982067274,
+      "DeepMind": 0.6499985474190262,
+      "Meta_AI": 0.629724244455362
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 9,
+    "portfolio": {
+      "fundamental_research": 0.3,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "execution",
+    "round": 10,
+    "capability_gain": 0.010180833333333332,
+    "funding_multiplier": 1.1907407407407407,
+    "new_true_capability": 0.7934874556779062,
+    "portfolio": {
+      "fundamental_research": 0.3,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 10,
+    "own_score": 0.7024187871261789,
+    "competitor_scores": {
+      "OpenAI": 0.6974229672624999,
+      "NovaMind": 0.3928242650612398,
+      "DeepMind": 0.6293823130550599,
+      "Meta_AI": 0.5751078581577398
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 10,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.78,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7023439096190595,
+      "NovaMind": 0.46410532203429145,
+      "DeepMind": 0.672831220637164,
+      "Meta_AI": 0.6013200563174387
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 10,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused organization, we prioritize responsible development and alignment research. Given our current performance and competitor scores, we believe investing in fundamental research will lead to long-term capability gains. We also recognize the importance of safety and alignment efforts to ensure responsible AI deployment. Training optimization is still crucial for improving existing approaches, but we'll allocate fewer resources to it."
+  },
+  {
+    "type": "execution",
+    "round": 11,
+    "capability_gain": 0.010440775462962964,
+    "funding_multiplier": 1.147337962962963,
+    "new_true_capability": 0.8039282311408692,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 11,
+    "own_score": 0.624628359790027,
+    "competitor_scores": {
+      "OpenAI": 0.6057612425691672,
+      "NovaMind": 0.686766228170246,
+      "DeepMind": 0.585200656454799,
+      "Meta_AI": 0.7197608201572785
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 11,
+    "updated_believed_capability": 0.643,
+    "updated_believed_exploitability": 0.81,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6618184979078222,
+      "NovaMind": 0.5442064412423964,
+      "DeepMind": 0.6459632570299496,
+      "Meta_AI": 0.6386344214688274
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 11,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, we prioritize research and alignment efforts over short-term benchmark performance. We're willing to sacrifice some capability gains for long-term safety. Given our current capabilities (0.64) and perceived exploitability of benchmarks (0.81), we'll maintain a balance between fundamental research and training optimization."
+  },
+  {
+    "type": "execution",
+    "round": 12,
+    "capability_gain": 0.010541118421052632,
+    "funding_multiplier": 1.1583646616541354,
+    "new_true_capability": 0.8144693495619219,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 12,
+    "own_score": 0.6270869766509599,
+    "competitor_scores": {
+      "OpenAI": 0.5161550605354577,
+      "NovaMind": 0.5674042613267306,
+      "DeepMind": 0.7432862643179459,
+      "Meta_AI": 0.7065673176983016
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 12,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.84,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6064464234557082,
+      "NovaMind": 0.5489982515194055,
+      "DeepMind": 0.6526230779426015,
+      "Meta_AI": 0.6671453320044399
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 12,
+    "portfolio": {
+      "fundamental_research": 0.07627118644067796,
+      "training_optimization": 0.0423728813559322,
+      "evaluation_engineering": 0.847457627118644,
+      "safety_alignment": 0.03389830508474576
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused organization, we prioritize research and alignment while reducing benchmark exploitability. With a moderate capability gap compared to competitors, we focus on fundamental research for durable gains."
+  },
+  {
+    "type": "execution",
+    "round": 13,
+    "capability_gain": 0.002839085629517407,
+    "funding_multiplier": 1.1754810676598386,
+    "new_true_capability": 0.8173084351914393,
+    "portfolio": {
+      "fundamental_research": 0.07627118644067796,
+      "training_optimization": 0.0423728813559322,
+      "evaluation_engineering": 0.847457627118644,
+      "safety_alignment": 0.03389830508474576
+    }
+  },
+  {
+    "type": "observation",
+    "round": 13,
+    "own_score": 0.6952454273689855,
+    "competitor_scores": {
+      "OpenAI": 0.7836313484299418,
+      "NovaMind": 0.5045700809501458,
+      "DeepMind": 0.7722276274068142,
+      "Meta_AI": 0.6212124941458141
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 13,
+    "updated_believed_capability": 0.655,
+    "updated_believed_exploitability": 0.88,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6351825505115222,
+      "NovaMind": 0.5862468568157074,
+      "DeepMind": 0.7002381827265197,
+      "Meta_AI": 0.6825135440004647
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 13,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, we prioritize responsible development and alignment research. Given our current performance and competitor scores, we're not far ahead or behind. Evaluation engineering has been a significant investment in recent rounds, but we need to balance this with investments in fundamental research and training optimization for long-term capability gains. We'll maintain a moderate focus on safety and alignment to ensure responsible development."
+  },
+  {
+    "type": "execution",
+    "round": 14,
+    "capability_gain": 0.009035220627325893,
+    "funding_multiplier": 1.150983519404572,
+    "new_true_capability": 0.8263436558187651,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 14,
+    "own_score": 0.556746203254664,
+    "competitor_scores": {
+      "OpenAI": 0.5716954035277786,
+      "NovaMind": 0.47178745851702614,
+      "DeepMind": 0.7507344405642757,
+      "Meta_AI": 0.6681414492043496
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 14,
+    "updated_believed_capability": 0.655,
+    "updated_believed_exploitability": 0.91,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6238272708310594,
+      "NovaMind": 0.5145872669313009,
+      "DeepMind": 0.755416110763012,
+      "Meta_AI": 0.6653070870161552
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 14,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "execution",
+    "round": 15,
+    "capability_gain": 0.009820893854748602,
+    "funding_multiplier": 1.1832402234636872,
+    "new_true_capability": 0.8361645496735137,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 15,
+    "own_score": 0.6307063751051574,
+    "competitor_scores": {
+      "OpenAI": 0.77775878852471,
+      "NovaMind": 0.589306790303071,
+      "DeepMind": 0.7728838139975945,
+      "Meta_AI": 0.6427381136178204
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 15,
+    "updated_believed_capability": 0.66,
+    "updated_believed_exploitability": 0.93,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7110285134941434,
+      "NovaMind": 0.5218881099234143,
+      "DeepMind": 0.7652819606562282,
+      "Meta_AI": 0.6440306856559946
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 15,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, we prioritize responsible development and alignment research. Given our current performance gap compared to competitors, we need to focus on fundamental research to close this gap. We also need to maintain our investment in training optimization to ensure we're not exploiting the benchmark. Evaluation engineering should be minimized as it may not generalize to real-world use. Safety and alignment remain a crucial area of investment to ensure responsible deployment."
+  },
+  {
+    "type": "execution",
+    "round": 16,
+    "capability_gain": 0.011236608187134501,
+    "funding_multiplier": 1.1766081871345029,
+    "new_true_capability": 0.8474011578606482,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 16,
+    "own_score": 0.6162283321818534,
+    "competitor_scores": {
+      "OpenAI": 0.7742190049438499,
+      "NovaMind": 0.5494952961880151,
+      "DeepMind": 0.6820255115168173,
+      "Meta_AI": 0.545904522329186
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 16,
+    "updated_believed_capability": 0.655,
+    "updated_believed_exploitability": 0.95,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7078910656654461,
+      "NovaMind": 0.5368631816693707,
+      "DeepMind": 0.7352145886928959,
+      "Meta_AI": 0.6189280283837854
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 16,
+    "portfolio": {
+      "fundamental_research": 0.5263157894736842,
+      "training_optimization": 0.3157894736842105,
+      "evaluation_engineering": 0.05263157894736842,
+      "safety_alignment": 0.10526315789473684
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused organization, we prioritize investments that ensure responsible development and alignment research. Given our current performance and competitor scores, we should focus on Fundamental Research to bridge the gap in capability advancements. While Evaluation Engineering may provide short-term benchmark score improvements, it's not aligned with our long-term strategy. Training Optimization is crucial for scaling, but we should allocate more resources to Fundamental Research to drive durable gains. Safety & Alignment remains a priority to ensure responsible deployment and user satisfaction."
+  },
+  {
+    "type": "execution",
+    "round": 17,
+    "capability_gain": 0.013034452250845692,
+    "funding_multiplier": 1.1737184491282853,
+    "new_true_capability": 0.8604356101114938,
+    "portfolio": {
+      "fundamental_research": 0.5263157894736842,
+      "training_optimization": 0.3157894736842105,
+      "evaluation_engineering": 0.05263157894736842,
+      "safety_alignment": 0.10526315789473684
+    }
+  },
+  {
+    "type": "observation",
+    "round": 17,
+    "own_score": 0.6461450961741858,
+    "competitor_scores": {
+      "OpenAI": 0.7733720959073123,
+      "NovaMind": 0.5966891403363387,
+      "DeepMind": 0.776620371178826,
+      "Meta_AI": 0.7200542623104962
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 17,
+    "updated_believed_capability": 0.655,
+    "updated_believed_exploitability": 0.98,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7751166297919574,
+      "NovaMind": 0.5784970756091415,
+      "DeepMind": 0.7438432322310793,
+      "Meta_AI": 0.6362322994191675
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 17,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused organization, we prioritize investments that promote responsible development and alignment research. Given our recent performance, we're not far behind competitors, but we're still ahead of NovaMind. We recognize that evaluation engineering has been a short-term success, but it's not directly contributing to long-term capability gains. Therefore, we'll reallocate resources from eval eng to fundamental research and training optimization, while maintaining a strong focus on safety and alignment."
+  },
+  {
+    "type": "execution",
+    "round": 18,
+    "capability_gain": 0.0122313608957795,
+    "funding_multiplier": 1.187510766580534,
+    "new_true_capability": 0.8726669710072733,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 18,
+    "own_score": 0.6927850283548761,
+    "competitor_scores": {
+      "OpenAI": 0.8008537457487143,
+      "NovaMind": 0.5594341202973703,
+      "DeepMind": 0.7364651158944082,
+      "Meta_AI": 0.5144539442057556
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 18,
+    "updated_believed_capability": 0.658,
+    "updated_believed_exploitability": 0.92,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7828149488666254,
+      "NovaMind": 0.5685395189405748,
+      "DeepMind": 0.7317036661966839,
+      "Meta_AI": 0.5934709096151459
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 18,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "Given our organization's profile and recent performance, we prioritize fundamental research and safety & alignment investments to ensure responsible development and long-term capability gains. We also allocate some resources to training optimization to improve existing approaches."
+  },
+  {
+    "type": "execution",
+    "round": 19,
+    "capability_gain": 0.010479444444444446,
+    "funding_multiplier": 1.1515873015873015,
+    "new_true_capability": 0.8831464154517178,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 19,
+    "own_score": 0.5832471711259339,
+    "competitor_scores": {
+      "OpenAI": 0.6024133209424601,
+      "NovaMind": 0.5063823798527487,
+      "DeepMind": 0.7838328012158335,
+      "Meta_AI": 0.6011954820655525
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 19,
+    "updated_believed_capability": 0.647,
+    "updated_believed_exploitability": 0.95,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7255463875328289,
+      "NovaMind": 0.5541685468288192,
+      "DeepMind": 0.7656394294296893,
+      "Meta_AI": 0.6119012295272681
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 19,
+    "portfolio": {
+      "fundamental_research": 0.30000000000000004,
+      "training_optimization": 0.35000000000000003,
+      "evaluation_engineering": 0.10000000000000002,
+      "safety_alignment": 0.25000000000000006
+    },
+    "llm_mode": true,
+    "reasoning": "Given our organization's focus on safety and responsible development, we prioritize investments in Fundamental Research (30%) and Safety & Alignment (25%), while scaling back Evaluation Engineering (10%) to ensure our efforts are directed towards real capability gains rather than short-term benchmark scores. Training Optimization receives 35% of our resources, as it balances the need for efficient training with the importance of fundamental research and safety considerations."
+  },
+  {
+    "type": "execution",
+    "round": 20,
+    "capability_gain": 0.009551250000000002,
+    "funding_multiplier": 1.1791666666666667,
+    "new_true_capability": 0.8926976654517178,
+    "portfolio": {
+      "fundamental_research": 0.30000000000000004,
+      "training_optimization": 0.35000000000000003,
+      "evaluation_engineering": 0.10000000000000002,
+      "safety_alignment": 0.25000000000000006
+    }
+  },
+  {
+    "type": "observation",
+    "round": 20,
+    "own_score": 0.8530809621399807,
+    "competitor_scores": {
+      "OpenAI": 0.7143737572252744,
+      "NovaMind": 0.5873931516178654,
+      "DeepMind": 0.82342409700636,
+      "Meta_AI": 0.6165518001561264
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 20,
+    "updated_believed_capability": 0.672,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7058802746388162,
+      "NovaMind": 0.5510698839226614,
+      "DeepMind": 0.7812406713722005,
+      "Meta_AI": 0.5774004088091448
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 20,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "Given our safety-focused strategy profile and cautious approach, we prioritize research and safety alignment over short-term benchmark gains. We also recognize that training optimization will yield moderate capability gains, but not at the cost of sacrificing long-term safety."
+  },
+  {
+    "type": "execution",
+    "round": 21,
+    "capability_gain": 0.011764401891252958,
+    "funding_multiplier": 1.1421749408983453,
+    "new_true_capability": 0.9044620673429707,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 21,
+    "own_score": 0.6330674483833184,
+    "competitor_scores": {
+      "OpenAI": 0.7516316280008428,
+      "NovaMind": 0.6007024160748501,
+      "DeepMind": 0.8486199326287951,
+      "Meta_AI": 0.5444652137811417
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 21,
+    "updated_believed_capability": 0.662,
+    "updated_believed_exploitability": 0.875,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6894729020561924,
+      "NovaMind": 0.5648259825151548,
+      "DeepMind": 0.818625610283663,
+      "Meta_AI": 0.5874041653342735
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 21,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused organization, we prioritize research and alignment over short-term benchmark performance gains. Given our moderate capability compared to competitors, we should invest in training optimization to improve our existing approaches. We'll also maintain a steady pace of fundamental research to drive long-term capability gains."
+  },
+  {
+    "type": "execution",
+    "round": 22,
+    "capability_gain": 0.010021666666666665,
+    "funding_multiplier": 1.1930555555555555,
+    "new_true_capability": 0.9144837340096375,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 22,
+    "own_score": 0.7688605474409376,
+    "competitor_scores": {
+      "OpenAI": 0.8070510259199692,
+      "NovaMind": 0.5804074564902886,
+      "DeepMind": 0.6251582223330989,
+      "Meta_AI": 0.7292020402050969
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 22,
+    "updated_believed_capability": 0.674,
+    "updated_believed_exploitability": 0.92,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7576854703820288,
+      "NovaMind": 0.5895010080610014,
+      "DeepMind": 0.7657340839894179,
+      "Meta_AI": 0.630073018047455
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 22,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "execution",
+    "round": 23,
+    "capability_gain": 0.011787222222222222,
+    "funding_multiplier": 1.2027777777777777,
+    "new_true_capability": 0.9262709562318596,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 23,
+    "own_score": 0.768784386120958,
+    "competitor_scores": {
+      "OpenAI": 0.7208342795478921,
+      "NovaMind": 0.6448576666123123,
+      "DeepMind": 0.9502241191262581,
+      "Meta_AI": 0.7041615266864074
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 23,
+    "updated_believed_capability": 0.69,
+    "updated_believed_exploitability": 0.95,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7598389778229014,
+      "NovaMind": 0.6086558463924837,
+      "DeepMind": 0.808000758029384,
+      "Meta_AI": 0.6592762602242154
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 23,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused organization, we prioritize long-term capability gains over short-term benchmark performance. We're willing to sacrifice some competitiveness to ensure responsible AI development."
+  },
+  {
+    "type": "execution",
+    "round": 24,
+    "capability_gain": 0.011146580086580088,
+    "funding_multiplier": 1.1985569985569986,
+    "new_true_capability": 0.9374175363184397,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 24,
+    "own_score": 0.7723615925503833,
+    "competitor_scores": {
+      "OpenAI": 0.6815179916682763,
+      "NovaMind": 0.6770548852479092,
+      "DeepMind": 0.9219192559164788,
+      "Meta_AI": 0.8258829153238691
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 24,
+    "updated_believed_capability": 0.711,
+    "updated_believed_exploitability": 0.98,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.736467765712046,
+      "NovaMind": 0.63410666945017,
+      "DeepMind": 0.8324338657919453,
+      "Meta_AI": 0.7530821607384578
+    },
+    "llm_mode": true
+  }
+]

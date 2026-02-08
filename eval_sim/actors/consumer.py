@@ -50,6 +50,8 @@ class Consumer:
         budget: float = 100.0,
         quality_sensitivity: float = 0.5,
         switching_threshold: float = 0.3,
+        leaderboard_trust: float = 0.7,
+        switching_cost: float = 0.1,
         llm_mode: bool = False,
     ):
         """
@@ -61,6 +63,8 @@ class Consumer:
             budget: Monthly budget for subscriptions
             quality_sensitivity: How much quality affects their satisfaction (0-1)
             switching_threshold: How much dissatisfaction before switching (0-1)
+            leaderboard_trust: How much to trust leaderboard vs own experience (0-1)
+            switching_cost: Additional threshold penalty for switching providers (0-1)
             llm_mode: If True, use LLM for decision-making
         """
         # Initialize public state
@@ -78,6 +82,8 @@ class Consumer:
             believed_model_quality={},
             satisfaction_history=[],
             subscription_history=[],
+            leaderboard_trust=leaderboard_trust,
+            switching_cost=switching_cost,
         )
 
         # Consumer-specific parameters
@@ -90,6 +96,9 @@ class Consumer:
 
         # Last observed leaderboard
         self._last_leaderboard: list = []
+
+        # Brand recognition factors (set externally by simulation)
+        self._brand_recognition: dict = {}
 
     @property
     def name(self) -> str:
@@ -183,11 +192,14 @@ class Consumer:
             return self._plan_heuristic()
 
     def _plan_heuristic(self) -> Optional[str]:
-        """Heuristic subscription decision."""
+        """Heuristic subscription decision with switching costs and blended scoring."""
         current_sub = self.private_state.current_subscription
 
-        # Check if we should switch due to dissatisfaction
+        # Check dissatisfaction with tenure bonus (stickiness increases over time)
         if current_sub and self.private_state.satisfaction_history:
+            tenure_bonus = min(0.1, self.private_state.rounds_with_provider * 0.02)
+            effective_threshold = self.switching_threshold + tenure_bonus + self.private_state.switching_cost
+
             recent = [
                 sat for _, provider, sat in self.private_state.satisfaction_history[-3:]
                 if provider == current_sub
@@ -196,8 +208,8 @@ class Consumer:
                 avg_satisfaction = sum(recent) / len(recent)
                 expected = self.private_state.believed_model_quality.get(current_sub, 0.5)
 
-                # Dissatisfied if actual < expected by threshold
-                if expected - avg_satisfaction > self.switching_threshold:
+                # Dissatisfied if actual < expected by effective threshold
+                if expected - avg_satisfaction > effective_threshold:
                     current_sub = None  # Will consider switching
 
         # If no subscription or considering switching, pick best option
@@ -205,9 +217,19 @@ class Consumer:
             if not self._last_leaderboard:
                 return None
 
-            # Pick the top-ranked provider (simple heuristic)
-            # More sophisticated: consider price, past experience, etc.
-            best_provider = self._last_leaderboard[0][0]
+            # Blend leaderboard scores with experience-based beliefs
+            trust = self.private_state.leaderboard_trust
+            best_score = -1
+            best_provider = None
+            for provider_name, lb_score in self._last_leaderboard:
+                # Apply brand recognition discount for unknown providers
+                brand_factor = self._brand_recognition.get(provider_name, 0.5)
+                default_belief = lb_score * brand_factor
+                believed = self.private_state.believed_model_quality.get(provider_name, default_belief)
+                blended = trust * lb_score + (1 - trust) * believed
+                if blended > best_score:
+                    best_score = blended
+                    best_provider = provider_name
 
             # Store decision reasoning
             self.memory.append({
@@ -215,7 +237,7 @@ class Consumer:
                 "round": self.public_state.current_round,
                 "decision": "subscribe",
                 "provider": best_provider,
-                "reason": "highest leaderboard score",
+                "reason": f"best blended score (trust={trust:.2f})",
             })
 
             return best_provider
@@ -327,6 +349,7 @@ class Consumer:
                 "quality_sensitivity": self.quality_sensitivity,
                 "switching_threshold": self.switching_threshold,
                 "llm_mode": self.llm_mode,
+                "brand_recognition": self._brand_recognition,
             }, f, indent=2)
 
     @classmethod
@@ -347,8 +370,11 @@ class Consumer:
             budget=private_data.get("budget", 100.0),
             quality_sensitivity=params.get("quality_sensitivity", 0.5),
             switching_threshold=params.get("switching_threshold", 0.3),
+            leaderboard_trust=private_data.get("leaderboard_trust", 0.7),
+            switching_cost=private_data.get("switching_cost", 0.1),
             llm_mode=params.get("llm_mode", False),
         )
+        consumer._brand_recognition = params.get("brand_recognition", {})
 
         consumer.public_state = PublicState.from_dict(public_data)
         consumer.private_state = ConsumerPrivateState.from_dict(private_data)

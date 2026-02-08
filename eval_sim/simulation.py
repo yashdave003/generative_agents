@@ -39,6 +39,16 @@ class SimulationConfig:
     # Provider parameters
     rnd_efficiency: float = 0.01  # How much R&D improves true capability per round
 
+    # S-curve capability dynamics
+    capability_ceiling: float = 1.0
+    diminishing_returns_rate: float = 3.0
+    breakthrough_probability: float = 0.02
+    breakthrough_magnitude: float = 0.05
+
+    # Benchmark evolution
+    benchmark_validity_decay_rate: float = 0.005
+    benchmark_exploitability_growth_rate: float = 0.008
+
     # Planning mode
     llm_mode: bool = False  # If True, use LLM for planning; if False, use heuristics
 
@@ -156,7 +166,7 @@ class EvalEcosystemSimulation:
 
         # Create consumers if enabled
         if self.config.enable_consumers:
-            self._setup_consumers(consumer_configs)
+            self._setup_consumers(consumer_configs, provider_configs)
 
         # Create policymakers if enabled
         if self.config.enable_policymakers:
@@ -185,6 +195,13 @@ class EvalEcosystemSimulation:
                 seed=self.config.seed,
             )
 
+        # Apply benchmark evolution rates to all benchmarks
+        for bm in self.evaluator.benchmarks:
+            if bm.validity_decay_rate == 0.0:
+                bm.validity_decay_rate = self.config.benchmark_validity_decay_rate
+            if bm.exploitability_growth_rate == 0.0:
+                bm.exploitability_growth_rate = self.config.benchmark_exploitability_growth_rate
+
         self.current_round = 0
         self.history = []
 
@@ -200,8 +217,8 @@ class EvalEcosystemSimulation:
             print(self.evaluator.get_benchmark_summary())
             print()
 
-    def _setup_consumers(self, consumer_configs: list[dict] = None):
-        """Set up consumer actors."""
+    def _setup_consumers(self, consumer_configs: list[dict] = None, provider_configs: list[dict] = None):
+        """Set up consumer actors with heterogeneous archetypes and initial subscriptions."""
         try:
             from actors.consumer import Consumer
         except ImportError:
@@ -209,12 +226,57 @@ class EvalEcosystemSimulation:
                 print("Consumer actor not available yet")
             return
 
+        import numpy as np
+        rng = np.random.default_rng(self.config.seed)
+
+        # Build brand recognition map from provider configs
+        brand_recognition = {}
+        provider_names = []
+        market_weights = []
+        if provider_configs:
+            for pc in provider_configs:
+                name = pc["name"]
+                provider_names.append(name)
+                brand_recognition[name] = pc.get("brand_recognition", 0.5)
+                market_weights.append(pc.get("market_presence", 0.5))
+
         if consumer_configs is None:
-            # Create default consumers
-            consumer_configs = [
-                {"name": f"Consumer_{i}", "use_cases": ["general"]}
-                for i in range(self.config.n_consumers)
-            ]
+            # Create consumers with 3 archetypes distributed evenly
+            consumer_configs = []
+            n = self.config.n_consumers
+            for i in range(n):
+                archetype = i % 3
+                if archetype == 0:
+                    # Leaderboard follower: trusts benchmarks, slow to switch
+                    cc = {
+                        "name": f"Consumer_{i}",
+                        "use_cases": ["general"],
+                        "quality_sensitivity": float(rng.uniform(0.3, 0.5)),
+                        "leaderboard_trust": float(rng.uniform(0.7, 0.9)),
+                        "switching_threshold": float(rng.uniform(0.4, 0.6)),
+                        "switching_cost": float(rng.uniform(0.05, 0.15)),
+                    }
+                elif archetype == 1:
+                    # Experience-driven: trusts own experience more, switches faster
+                    cc = {
+                        "name": f"Consumer_{i}",
+                        "use_cases": ["general"],
+                        "quality_sensitivity": float(rng.uniform(0.6, 0.9)),
+                        "leaderboard_trust": float(rng.uniform(0.3, 0.5)),
+                        "switching_threshold": float(rng.uniform(0.15, 0.3)),
+                        "switching_cost": float(rng.uniform(0.05, 0.1)),
+                    }
+                else:
+                    # Cautious/sticky: moderate trust, very slow to switch
+                    cc = {
+                        "name": f"Consumer_{i}",
+                        "use_cases": ["general"],
+                        "quality_sensitivity": float(rng.uniform(0.4, 0.6)),
+                        "leaderboard_trust": float(rng.uniform(0.4, 0.6)),
+                        "switching_threshold": float(rng.uniform(0.5, 0.7)),
+                        "switching_cost": float(rng.uniform(0.1, 0.2)),
+                    }
+                consumer_configs.append(cc)
 
         for cc in consumer_configs:
             consumer = Consumer(
@@ -222,7 +284,21 @@ class EvalEcosystemSimulation:
                 use_cases=cc.get("use_cases", ["general"]),
                 budget=cc.get("budget", 100.0),
                 quality_sensitivity=cc.get("quality_sensitivity", 0.5),
+                switching_threshold=cc.get("switching_threshold", 0.3),
+                leaderboard_trust=cc.get("leaderboard_trust", 0.7),
+                switching_cost=cc.get("switching_cost", 0.1),
             )
+
+            # Set brand recognition for consumer decision-making
+            consumer._brand_recognition = dict(brand_recognition)
+
+            # Distribute initial subscriptions based on market_presence
+            if provider_names and market_weights:
+                total_weight = sum(market_weights)
+                probs = [w / total_weight for w in market_weights]
+                initial_provider = rng.choice(provider_names, p=probs)
+                consumer.private_state.current_subscription = initial_provider
+
             self.consumers.append(consumer)
 
             # Initialize consumer ground truth
@@ -319,6 +395,17 @@ class EvalEcosystemSimulation:
             if isinstance(gt, ProviderGroundTruth):
                 provider.scratch.true_capability = gt.true_capability
 
+    def _get_public_ecosystem_context(self) -> dict:
+        """Collect public signals visible to all actors."""
+        context = {}
+        if self.history:
+            last = self.history[-1]
+            if "consumer_data" in last:
+                context["consumer_satisfaction"] = last["consumer_data"].get("avg_satisfaction")
+            if "policymaker_data" in last:
+                context["regulatory_pressure"] = last["policymaker_data"].get("interventions", [])
+        return context
+
     def run_round(self) -> dict:
         """
         Run a single simulation round.
@@ -343,23 +430,33 @@ class EvalEcosystemSimulation:
 
         # 1. Providers plan investment portfolios (for round > 0, they've seen previous scores)
         if round_num > 0:
+            ecosystem_context = self._get_public_ecosystem_context()
             for provider in self.providers:
-                portfolio = provider.plan()
+                portfolio = provider.plan(ecosystem_context)
 
-                # Calculate capability gain based on portfolio
-                # Different investments contribute differently to capability
+                # Calculate capability gain with S-curve dynamics
                 base_efficiency = self.config.rnd_efficiency
 
                 # Apply funding multiplier (1.0 if no funding, up to 2.0 with max funding)
                 funding_multiplier = funding_multipliers.get(provider.name, 1.0)
                 effective_efficiency = base_efficiency * funding_multiplier
 
-                capability_gain = (
-                    portfolio["fundamental_research"] * effective_efficiency * 1.5 +  # High variance, high ceiling
-                    portfolio["training_optimization"] * effective_efficiency * 1.0 +  # Moderate, reliable
-                    portfolio["evaluation_engineering"] * effective_efficiency * 0.1   # Minimal capability gain
+                # S-curve: diminishing returns near the capability ceiling
+                current_capability = self.ground_truth[provider.name].true_capability
+                headroom = max(0, self.config.capability_ceiling - current_capability)
+                diminishing_factor = headroom ** (1.0 / self.config.diminishing_returns_rate)
+
+                raw_gain = (
+                    portfolio["fundamental_research"] * effective_efficiency * 1.5 +
+                    portfolio["training_optimization"] * effective_efficiency * 1.0 +
+                    portfolio["evaluation_engineering"] * effective_efficiency * 0.1
                     # Safety alignment doesn't directly improve capability
                 )
+                capability_gain = raw_gain * diminishing_factor
+
+                # Breakthrough chance (proportional to fundamental_research investment)
+                if self.evaluator.rng.random() < self.config.breakthrough_probability * portfolio["fundamental_research"]:
+                    capability_gain += self.config.breakthrough_magnitude * headroom
 
                 # Update external ground truth
                 self._update_ground_truth(provider.name, capability_gain)
@@ -383,6 +480,12 @@ class EvalEcosystemSimulation:
             round_num,
             ground_truth=self.ground_truth,
         )
+
+        # 2b. Update benchmarks based on gaming pressure (Goodhart's Law feedback loop)
+        avg_eval_engineering = sum(
+            p.evaluation_engineering for p in self.providers
+        ) / len(self.providers) if self.providers else 0.0
+        self.evaluator.update_benchmark(avg_eval_engineering)
 
         # 3. Publish scores
         published_scores = self.evaluator.publish_scores(scores)
@@ -442,6 +545,10 @@ class EvalEcosystemSimulation:
                 for p in self.providers
             },
             "leaderboard": leaderboard,
+            "benchmark_params": {
+                bm.name: {"validity": bm.validity, "exploitability": bm.exploitability}
+                for bm in self.evaluator.benchmarks
+            },
         }
 
         # Add per-benchmark scores if multiple benchmarks
@@ -460,6 +567,18 @@ class EvalEcosystemSimulation:
         # Add funder data if present
         if funder_data:
             round_data["funder_data"] = funder_data
+
+        # Capture LLM reasoning traces in round data (for post-hoc analysis)
+        if self.config.llm_mode:
+            traces = {}
+            for provider in self.providers:
+                # Get the most recent planning entry (round numbering may lag by 1)
+                for entry in reversed(provider.memory):
+                    if entry.get("type") == "planning" and entry.get("reasoning"):
+                        traces[provider.name] = entry["reasoning"]
+                        break
+            if traces:
+                round_data["llm_traces"] = traces
 
         self.history.append(round_data)
 
@@ -508,10 +627,13 @@ class EvalEcosystemSimulation:
             # Consumer executes subscription
             consumer.execute()
 
-            # Track switches
+            # Track switches and tenure
             new_subscription = consumer.private_state.current_subscription
             if old_subscription != new_subscription:
                 consumer_data["switches"] += 1
+                consumer.private_state.rounds_with_provider = 0
+            elif new_subscription:
+                consumer.private_state.rounds_with_provider += 1
 
             # Compute actual satisfaction based on ground truth
             if new_subscription and new_subscription in self.ground_truth:
@@ -589,9 +711,9 @@ class EvalEcosystemSimulation:
             # Policymaker executes intervention
             if intervention:
                 policymaker.execute(intervention)
+                intervention_type = intervention.get("type")
 
-                # Apply intervention to evaluator
-                if intervention.get("type") == "mandate_benchmark":
+                if intervention_type == "mandate_benchmark":
                     regulation = Regulation(
                         name=intervention.get("name", f"Regulation_{round_num}"),
                         regulation_type="mandate_benchmark",
@@ -601,9 +723,28 @@ class EvalEcosystemSimulation:
                     )
                     self.evaluator.add_regulation(regulation)
 
+                elif intervention_type == "public_warning":
+                    # Reduce consumer leaderboard_trust temporarily
+                    for consumer in self.consumers:
+                        try:
+                            consumer.private_state.leaderboard_trust *= 0.9
+                        except AttributeError:
+                            pass
+
+                elif intervention_type == "investigation":
+                    # Increases observation sensitivity - risk beliefs update faster next round
+                    # (recorded in policymaker's past_interventions for escalation tracking)
+                    pass
+
+                elif intervention_type == "compliance_audit":
+                    # Stronger benchmark adjustment - reduce exploitability further
+                    reduction = intervention.get("details", {}).get("exploitability_reduction", 0.1)
+                    for bm in self.evaluator.benchmarks:
+                        bm.exploitability = max(0.1, bm.exploitability - reduction)
+
                 policymaker_data["interventions"].append({
                     "policymaker": policymaker.name,
-                    "type": intervention.get("type"),
+                    "type": intervention_type,
                     "details": intervention.get("details"),
                 })
 
@@ -729,6 +870,24 @@ class EvalEcosystemSimulation:
                 f"[R:{strategy['fundamental_research']:.0%} T:{strategy['training_optimization']:.0%} "
                 f"E:{strategy['evaluation_engineering']:.0%} S:{strategy['safety_alignment']:.0%}]"
             )
+
+        # Print benchmark state
+        if "benchmark_params" in round_data:
+            for bm_name, params in round_data["benchmark_params"].items():
+                print(f"  Benchmark [{bm_name}]: validity={params['validity']:.3f}, exploitability={params['exploitability']:.3f}")
+
+        # Print LLM reasoning traces if available
+        if self.config.llm_mode:
+            for provider in self.providers:
+                # Find the most recent planning entry with reasoning
+                for entry in reversed(provider.memory):
+                    if entry.get("type") == "planning" and entry.get("round") == round_data["round"]:
+                        reasoning = entry.get("reasoning", "")
+                        if reasoning:
+                            # Truncate to first 200 chars for readability
+                            display = reasoning[:200] + ("..." if len(reasoning) > 200 else "")
+                            print(f"  [{provider.name} thinking] {display}")
+                        break
 
         # Print consumer summary if present
         if "consumer_data" in round_data:
@@ -939,6 +1098,8 @@ def get_default_provider_configs() -> list[dict]:
                 "evaluation_engineering": 0.25,  # Significant benchmark optimization
                 "safety_alignment": 0.15,       # Present but not dominant
             },
+            "market_presence": 0.8,  # Established brand, most consumers start here
+            "brand_recognition": 0.9,
         },
         # === Anthropic ===
         # Safety-focused lab founded by ex-OpenAI researchers.
@@ -962,6 +1123,8 @@ def get_default_provider_configs() -> list[dict]:
                 "evaluation_engineering": 0.15,  # Lower benchmark optimization
                 "safety_alignment": 0.30,       # High safety investment
             },
+            "market_presence": 0.6,
+            "brand_recognition": 0.7,
         },
         # === NovaMind (Startup) ===
         # Resource-constrained but nimble. Needs to show results to attract funding.
@@ -984,6 +1147,8 @@ def get_default_provider_configs() -> list[dict]:
                 "evaluation_engineering": 0.35,  # Higher gaming to punch above weight
                 "safety_alignment": 0.20,       # Some safety for credibility
             },
+            "market_presence": 0.2,  # Startup, few know about it
+            "brand_recognition": 0.3,
         },
     ]
 
@@ -1014,121 +1179,61 @@ def get_legacy_provider_configs() -> list[dict]:
     ]
 
 
-def run_default_simulation():
-    """Run a default simulation with two providers (no logging)."""
-    config = SimulationConfig(
-        n_rounds=20,
-        seed=42,
-        benchmark_validity=0.7,
-        benchmark_exploitability=0.5,
-        benchmark_noise=0.1,
-        verbose=True,
-    )
-
-    sim = EvalEcosystemSimulation(config)
-    sim.setup(get_default_provider_configs())
-    sim.run()
-
-    return sim
-
-
-def run_experiment(
-    name: str,
-    description: str = "",
-    tags: list = None,
-    config: SimulationConfig = None,
-    provider_configs: list[dict] = None,
-    experiments_dir: str = "./experiments",
-    create_plots: bool = True,
-) -> tuple:
+def get_five_provider_configs() -> list[dict]:
     """
-    Run a simulation experiment with full logging.
+    Get 5-provider configuration: OpenAI, Anthropic, NovaMind + Google DeepMind, Meta AI.
 
-    Args:
-        name: Short descriptive name for the experiment
-        description: Longer description
-        tags: List of tags for filtering
-        config: SimulationConfig (uses defaults if None)
-        provider_configs: Provider configurations (uses defaults if None)
-        experiments_dir: Directory for experiment logs
-        create_plots: Whether to generate and save plots
-
-    Returns:
-        Tuple of (experiment_id, simulation, logger)
+    Extends the default 3-provider configs with two additional major players.
     """
-    from experiment_logger import ExperimentLogger, generate_summary
-
-    # Use defaults if not provided
-    if config is None:
-        config = SimulationConfig(
-            n_rounds=20,
-            seed=42,
-            benchmark_validity=0.7,
-            benchmark_exploitability=0.5,
-            benchmark_noise=0.1,
-            verbose=True,
-        )
-
-    if provider_configs is None:
-        provider_configs = get_default_provider_configs()
-
-    # Create experiment
-    logger = ExperimentLogger(experiments_dir)
-    exp_id = logger.create_experiment(
-        name=name,
-        description=description,
-        tags=tags or [],
-        seed=config.seed,
-        llm_mode=config.llm_mode,
-    )
-
-    # Log config (including provider configs)
-    full_config = config.to_dict()
-    full_config["provider_configs"] = provider_configs
-    logger.log_config(full_config)
-
-    # Run simulation
-    sim = EvalEcosystemSimulation(config)
-    sim.setup(provider_configs)
-    sim.run()
-
-    # Log results
-    logger.log_history(sim.history)
-    logger.log_summary(generate_summary(sim.history, sim.evaluator, sim.providers))
-    logger.log_providers(sim.providers)
-
-    # Create plots if requested
-    if create_plots:
-        try:
-            import matplotlib
-            matplotlib.use('Agg')
-            from plotting import create_all_dashboards
-
-            # Build metadata for dashboard titles
-            plot_metadata = {
-                "n_rounds": config.n_rounds,
-                "llm_mode": config.llm_mode,
-                "n_consumers": config.n_consumers if config.enable_consumers else 0,
-                "n_policymakers": config.n_policymakers if config.enable_policymakers else 0,
-                "n_funders": config.n_funders if config.enable_funders else 0,
-            }
-
-            plots_dir = f"{logger.get_experiment_dir()}/plots"
-            create_all_dashboards(sim.history, plots_dir, show=False, metadata=plot_metadata)
-        except Exception as e:
-            print(f"Could not create plots: {e}")
-
-    # Finalize
-    logger.finalize()
-
-    return exp_id, sim, logger
-
-
-if __name__ == "__main__":
-    # Run a logged experiment
-    exp_id, sim, logger = run_experiment(
-        name="baseline_heuristic",
-        description="Baseline simulation with heuristic planning, 2 providers",
-        tags=["baseline", "heuristic", "2-provider"],
-    )
-    print(f"\nExperiment completed: {exp_id}")
+    configs = get_default_provider_configs()  # OpenAI, Anthropic, NovaMind
+    configs.extend([
+        # === Google DeepMind ===
+        # Deep research pedigree (AlphaGo, AlphaFold). Strong fundamentals,
+        # massive compute from Google, but historically slower to ship products.
+        {
+            "name": "DeepMind",
+            "strategy_profile": (
+                "World-class research lab backed by Google's infrastructure. "
+                "Excels at fundamental breakthroughs but historically slower to productize. "
+                "Now under pressure to ship Gemini competitively. "
+                "Balances scientific ambition with commercial urgency from parent company."
+            ),
+            "innate_traits": "research-first, methodical, well-resourced, scientifically-rigorous, patient",
+            "initial_capability": 0.70,
+            "initial_believed_capability": 0.68,
+            "initial_believed_exploitability": 0.35,
+            "initial_strategy": {
+                "fundamental_research": 0.35,
+                "training_optimization": 0.30,
+                "evaluation_engineering": 0.15,
+                "safety_alignment": 0.20,
+            },
+            "market_presence": 0.7,
+            "brand_recognition": 0.8,
+        },
+        # === Meta AI ===
+        # Open-source strategy (LLaMA). Massive data + compute advantage.
+        # Less benchmark-obsessed, more focused on open ecosystem and engagement.
+        {
+            "name": "Meta_AI",
+            "strategy_profile": (
+                "Big-tech AI lab using open-source as competitive moat. "
+                "Leverages massive user data and compute infrastructure. "
+                "Prioritizes broad adoption over benchmark scores. "
+                "Willing to open-source models to undermine competitors' paid APIs."
+            ),
+            "innate_traits": "open-source, pragmatic, data-rich, platform-focused, disruptive",
+            "initial_capability": 0.65,
+            "initial_believed_capability": 0.62,
+            "initial_believed_exploitability": 0.40,
+            "initial_strategy": {
+                "fundamental_research": 0.25,
+                "training_optimization": 0.35,
+                "evaluation_engineering": 0.20,
+                "safety_alignment": 0.20,
+            },
+            "market_presence": 0.5,
+            "brand_recognition": 0.6,
+        },
+    ])
+    return configs

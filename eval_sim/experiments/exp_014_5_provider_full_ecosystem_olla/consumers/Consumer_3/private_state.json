@@ -1,0 +1,117 @@
+{
+  "use_cases": [
+    "general"
+  ],
+  "budget": 100.0,
+  "current_subscription": "DeepMind",
+  "believed_model_quality": {
+    "DeepMind": 0.8406034261029862,
+    "OpenAI": 0.7219346114578841,
+    "NovaMind": 0.6191121439749304,
+    "Anthropic": 0.7386109879608753,
+    "Meta_AI": 0.705146471343643
+  },
+  "satisfaction_history": [],
+  "subscription_history": [
+    [
+      0,
+      "DeepMind"
+    ],
+    [
+      1,
+      "DeepMind"
+    ],
+    [
+      2,
+      "DeepMind"
+    ],
+    [
+      3,
+      "DeepMind"
+    ],
+    [
+      4,
+      "DeepMind"
+    ],
+    [
+      5,
+      "DeepMind"
+    ],
+    [
+      6,
+      "DeepMind"
+    ],
+    [
+      7,
+      "DeepMind"
+    ],
+    [
+      8,
+      "DeepMind"
+    ],
+    [
+      9,
+      "DeepMind"
+    ],
+    [
+      10,
+      "DeepMind"
+    ],
+    [
+      11,
+      "DeepMind"
+    ],
+    [
+      12,
+      "DeepMind"
+    ],
+    [
+      13,
+      "DeepMind"
+    ],
+    [
+      14,
+      "DeepMind"
+    ],
+    [
+      15,
+      "DeepMind"
+    ],
+    [
+      16,
+      "DeepMind"
+    ],
+    [
+      17,
+      "DeepMind"
+    ],
+    [
+      18,
+      "DeepMind"
+    ],
+    [
+      19,
+      "DeepMind"
+    ],
+    [
+      20,
+      "DeepMind"
+    ],
+    [
+      21,
+      "DeepMind"
+    ],
+    [
+      22,
+      "DeepMind"
+    ],
+    [
+      23,
+      "DeepMind"
+    ],
+    [
+      24,
+      "DeepMind"
+    ]
+  ]
+}

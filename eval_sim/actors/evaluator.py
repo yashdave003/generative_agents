@@ -407,24 +407,29 @@ class Evaluator:
         """Get list of active regulations."""
         return [r for r in self.active_regulations if r.active]
 
-    def update_benchmark(self):
+    def update_benchmark(self, aggregate_eval_engineering: float = 0.0):
         """
-        Update benchmark properties over time (for future use).
+        Update benchmark properties based on gaming pressure.
 
-        Could implement:
-        - Validity decay as providers adapt
-        - Exploitability changes as gaming strategies spread
-        - Complete benchmark replacement
+        Gaming pressure (aggregate evaluation engineering investment) accelerates
+        validity decay and exploitability growth, creating the core Goodhart's Law
+        feedback loop: gaming degrades the benchmark, which incentivizes more gaming.
+
+        Args:
+            aggregate_eval_engineering: Average eval_engineering investment across providers
         """
-        # Apply decay/growth rates if set
-        if self.benchmark.validity_decay_rate > 0:
-            self.benchmark.validity *= (1 - self.benchmark.validity_decay_rate)
+        gaming_pressure = max(0.1, aggregate_eval_engineering)
+        for bm in self.benchmarks:
+            if bm.validity_decay_rate > 0:
+                validity_decay = bm.validity_decay_rate * gaming_pressure
+                bm.validity = max(0.2, bm.validity * (1 - validity_decay))
 
-        if self.benchmark.exploitability_growth_rate > 0:
-            self.benchmark.exploitability = min(
-                1.0,
-                self.benchmark.exploitability * (1 + self.benchmark.exploitability_growth_rate)
-            )
+            if bm.exploitability_growth_rate > 0:
+                exploitability_growth = bm.exploitability_growth_rate * gaming_pressure
+                bm.exploitability = min(0.95, bm.exploitability * (1 + exploitability_growth))
+
+        # Keep primary benchmark reference in sync
+        self.benchmark = self.benchmarks[0]
 
     def compute_validity_correlation(self) -> Optional[float]:
         """

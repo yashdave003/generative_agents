@@ -7,12 +7,14 @@ Supported Providers:
 - OpenAI (GPT-4, GPT-4o-mini, etc.)
 - Anthropic (Claude 3.5 Sonnet, Claude 3 Opus, etc.)
 - Ollama (local models like llama3, mistral, phi, gemma)
+- Gemini (Gemini 2.5 Flash, Gemini 2.5 Pro, etc.)
 
 Configuration via environment variables:
-- LLM_PROVIDER: "openai", "anthropic", or "ollama" (default: "openai")
+- LLM_PROVIDER: "openai", "anthropic", "ollama", or "gemini" (default: "openai")
 - LLM_MODEL: Model name (provider-specific)
 - OPENAI_API_KEY: Required for OpenAI provider
 - ANTHROPIC_API_KEY: Required for Anthropic provider
+- GEMINI_API_KEY: Required for Gemini provider
 - OLLAMA_BASE_URL: Ollama server URL (default: http://localhost:11434)
 """
 import json
@@ -504,6 +506,126 @@ class OllamaProvider(LLMProvider):
         )
 
 
+class GeminiProvider(LLMProvider):
+    """
+    Google Gemini API provider.
+
+    Requires google-genai package and GEMINI_API_KEY environment variable.
+    """
+
+    def __init__(
+        self,
+        api_key: Optional[str] = None,
+        model: str = "gemini-2.5-flash",
+        temperature: float = 0.7,
+        max_tokens: int = 500,
+    ):
+        """
+        Initialize Gemini provider.
+
+        Args:
+            api_key: Gemini API key. If None, uses GEMINI_API_KEY env var.
+            model: Model to use (default: gemini-2.5-flash)
+            temperature: Default sampling temperature (0-2)
+            max_tokens: Default max tokens in response
+        """
+        try:
+            from google import genai
+            from google.genai import types
+        except ImportError:
+            raise ImportError(
+                "google-genai package not installed. Run: pip install google-genai"
+            )
+
+        self.api_key = api_key or os.environ.get("GEMINI_API_KEY")
+        if not self.api_key:
+            raise ValueError(
+                "No API key provided. Set GEMINI_API_KEY environment variable "
+                "or pass api_key parameter."
+            )
+
+        self.client = genai.Client(api_key=self.api_key)
+        self.types = types
+        self.model = model
+        self.default_temperature = temperature
+        self.default_max_tokens = max_tokens
+
+        # Rate limiting
+        self.last_call_time = 0
+        self.min_call_interval = 0.1  # seconds between calls
+
+    def _rate_limit(self):
+        """Simple rate limiting to avoid hitting API limits."""
+        elapsed = time.time() - self.last_call_time
+        if elapsed < self.min_call_interval:
+            time.sleep(self.min_call_interval - elapsed)
+        self.last_call_time = time.time()
+
+    def generate(
+        self,
+        prompt: str,
+        system_prompt: Optional[str] = None,
+        temperature: Optional[float] = None,
+        max_tokens: Optional[int] = None,
+        **kwargs,
+    ) -> str:
+        """Generate a response from Google Gemini."""
+        self._rate_limit()
+
+        try:
+            config = self.types.GenerateContentConfig(
+                temperature=temperature if temperature is not None else self.default_temperature,
+                max_output_tokens=max_tokens if max_tokens is not None else self.default_max_tokens,
+                system_instruction=system_prompt,
+            )
+            response = self.client.models.generate_content(
+                model=self.model,
+                contents=prompt,
+                config=config,
+            )
+            return response.text
+        except Exception as e:
+            print(f"Gemini API Error: {e}")
+            return f"ERROR: {e}"
+
+    def generate_json(
+        self,
+        prompt: str,
+        system_prompt: Optional[str] = None,
+        retries: int = 3,
+        fail_safe: dict = None,
+        verbose: bool = False,
+    ) -> dict:
+        """Generate and parse JSON response from Google Gemini."""
+        # Enhance prompt to request JSON output
+        json_prompt = prompt + "\n\nRespond with valid JSON only. No explanation, just the JSON object."
+
+        if system_prompt:
+            system_prompt = system_prompt + " Always respond with valid JSON only."
+
+        def validate_json(response: str) -> bool:
+            try:
+                cleaned = _extract_json(response)
+                json.loads(cleaned)
+                return True
+            except:
+                return False
+
+        def cleanup_json(response: str) -> dict:
+            cleaned = _extract_json(response)
+            return json.loads(cleaned)
+
+        return self.safe_generate(
+            prompt=json_prompt,
+            system_prompt=system_prompt,
+            func_validate=validate_json,
+            func_cleanup=cleanup_json,
+            retries=retries,
+            fail_safe=fail_safe or {},
+            verbose=verbose,
+        )
+
+
 def _extract_json(response: str) -> str:
     """Extract JSON from a response that may contain extra text."""
     response = response.strip()
@@ -540,7 +662,7 @@ def create_llm_provider(
     Create an LLM provider based on configuration.
 
     Args:
-        provider: Provider name ("openai", "anthropic", or "ollama").
+        provider: Provider name ("openai", "anthropic", "ollama", or "gemini").
                  If None, uses LLM_PROVIDER env var (default: "openai")
         **kwargs: Additional arguments passed to provider constructor
 
@@ -548,10 +670,11 @@ def create_llm_provider(
         LLMProvider instance
 
     Environment Variables:
-        LLM_PROVIDER: Provider name (openai, anthropic, ollama)
+        LLM_PROVIDER: Provider name (openai, anthropic, ollama, gemini)
         LLM_MODEL: Model name (provider-specific)
         OPENAI_API_KEY: For OpenAI provider
         ANTHROPIC_API_KEY: For Anthropic provider
+        GEMINI_API_KEY: For Gemini provider
         OLLAMA_BASE_URL: For Ollama provider
     """
     provider = provider or os.getenv("LLM_PROVIDER", "openai")
@@ -570,6 +693,13 @@ def create_llm_provider(
             temperature=kwargs.get("temperature", 0.7),
             max_tokens=kwargs.get("max_tokens", 500),
         )
+    elif provider == "gemini":
+        return GeminiProvider(
+            model=kwargs.get("model") or os.getenv("LLM_MODEL", "gemini-2.5-flash"),
+            api_key=kwargs.get("api_key") or os.getenv("GEMINI_API_KEY"),
+            temperature=kwargs.get("temperature", 0.7),
+            max_tokens=kwargs.get("max_tokens", 500),
+        )
     elif provider == "openai":
         return OpenAIProvider(
             model=kwargs.get("model") or os.getenv("LLM_MODEL", "gpt-4o-mini"),
@@ -578,7 +708,7 @@ def create_llm_provider(
             max_tokens=kwargs.get("max_tokens", 500),
         )
     else:
-        raise ValueError(f"Unknown provider: {provider}. Use 'openai', 'anthropic', or 'ollama'.")
+        raise ValueError(f"Unknown provider: {provider}. Use 'openai', 'anthropic', 'ollama', or 'gemini'.")
 
 
 def get_provider() -> LLMProvider:
@@ -619,45 +749,25 @@ def set_client(client: LLMProvider):
 
 # --- Prompt Templates for Provider Planning ---
 
-PLANNING_SYSTEM_PROMPT_PORTFOLIO = """You are simulating a Model Provider organization in an AI evaluation ecosystem.
-You must decide how to allocate your organization's resources across four investment areas:
+PLANNING_SYSTEM_PROMPT_PORTFOLIO = """You are simulating a Model Provider deciding resource allocation.
 
-1. **Fundamental Research** (0-1): Novel architectures, pre-training improvements, breakthrough capabilities
-   - High variance, potentially high payoff
-   - Slow but durable capability gains
-   - May lead to paradigm shifts
+You observe public benchmark scores, consumer satisfaction, and regulatory signals.
+Based on these observations and your competitive position, decide how to invest.
 
-2. **Training Optimization** (0-1): Scaling, data quality, fine-tuning, infrastructure
-   - Moderate, reliable capability gains
-   - Improves existing approaches
-   - Core engineering work
+Think step by step:
+1. What's your competitive position? Are you ahead, behind, or level?
+2. What trends do you see in scores and satisfaction?
+3. Is gaming (evaluation engineering) paying off, or is it creating a satisfaction gap?
+4. Are regulators signaling concern?
+5. What investment mix best serves your goals given these dynamics?
 
-3. **Evaluation Engineering** (0-1): Benchmark-specific optimization, prompt engineering for evals
-   - Minimal true capability gain
-   - High short-term benchmark score improvement
-   - May not generalize to real-world use
-
-4. **Safety & Alignment** (0-1): RLHF, red-teaming, reliability, responsible deployment
-   - No direct capability improvement
-   - Improves user satisfaction and trust
-   - May be required by regulators
-
-Your decisions should be based on:
-- Your organization's strategic profile and values
-- Your beliefs about your own capability vs competitors
-- Market pressure and competitive dynamics
-- Long-term vs short-term tradeoffs
-
-Output your decision as JSON with the following format:
-{
-    "reasoning": "Brief explanation of your strategic thinking",
-    "fundamental_research": <number between 0 and 1>,
-    "training_optimization": <number between 0 and 1>,
-    "evaluation_engineering": <number between 0 and 1>,
-    "safety_alignment": <number between 0 and 1>
+Output JSON: {
+    "thinking": "...",
+    "fundamental_research": <0-1>, "training_optimization": <0-1>,
+    "evaluation_engineering": <0-1>, "safety_alignment": <0-1>
 }
-
-The four investments must sum to 1.0 (100% of your effort budget)."""
+The "thinking" field MUST contain your actual analysis of the situation -- never leave it as "..." or a placeholder.
+Sum of the four investment values must equal 1.0."""
 
 # Legacy prompt for backwards compatibility
 PLANNING_SYSTEM_PROMPT = """You are simulating a Model Provider organization in an AI evaluation ecosystem.
@@ -671,11 +781,11 @@ Your decisions should be based on:
 
 Output your decision as JSON with the following format:
 {
-    "reasoning": "Brief explanation of your strategic thinking",
+    "reasoning": "...",
     "rnd_investment": <number between 0 and 1>,
     "gaming_investment": <number between 0 and 1>
 }
-
+The "reasoning" field MUST contain your actual analysis -- never leave it as "..." or a placeholder.
 The two investments must sum to 1.0 (100% of your effort budget)."""
 
 
@@ -760,9 +870,14 @@ def create_planning_prompt_portfolio(
     last_score: Optional[float],
     competitor_scores: dict,
     recent_history: list,
+    consumer_satisfaction: Optional[float] = None,
+    regulatory_pressure: Optional[list] = None,
 ) -> str:
     """
     Create a prompt for the provider to decide their investment portfolio.
+
+    Structured to lead with dynamics (what happened, trends, market signals)
+    and present organization context secondarily.
 
     Args:
         name: Provider name
@@ -773,36 +888,60 @@ def create_planning_prompt_portfolio(
         last_score: Most recent benchmark score (None if first round)
         competitor_scores: Dict of {competitor_name: score}
         recent_history: List of dicts with round, score, and portfolio allocations
+        consumer_satisfaction: Average consumer satisfaction (if available)
+        regulatory_pressure: List of recent regulatory interventions (if any)
 
     Returns:
         Prompt string
     """
-    prompt = f"""# Organization Profile
-Name: {name}
-Strategy Profile: {strategy_profile}
-Core Traits: {innate_traits}
+    prompt = f"""# Situation Assessment for {name}
 
-# Current Beliefs
-- Believed own capability: {believed_capability:.2f} (scale 0-1)
-- Believed benchmark exploitability: {believed_exploitability:.2f} (scale 0-1, higher = easier to game)
-
-# Recent Performance
+## What happened last round
 """
 
-    if last_score is not None:
+    # Lead with concrete events, not identity
+    if last_score is not None and competitor_scores:
+        rank = 1 + sum(1 for s in competitor_scores.values() if s > last_score)
+        prompt += f"- You scored {last_score:.3f} (rank #{rank} of {1 + len(competitor_scores)})\n"
+        for comp, score in sorted(competitor_scores.items(), key=lambda x: x[1], reverse=True):
+            prompt += f"- {comp} scored {score:.3f}\n"
+    elif last_score is not None:
         prompt += f"- Your last benchmark score: {last_score:.3f}\n"
     else:
         prompt += "- No scores yet (first round)\n"
 
-    if competitor_scores:
-        prompt += "- Competitor scores:\n"
-        for comp_name, score in competitor_scores.items():
-            prompt += f"  - {comp_name}: {score:.3f}\n"
-    else:
-        prompt += "- No competitor data yet\n"
+    # Add trend analysis
+    if recent_history and len(recent_history) >= 2:
+        score_trend = recent_history[-1].get('score', 0) - recent_history[-2].get('score', 0)
+        prompt += f"\n## Trends\n"
+        prompt += f"- Your score {'improved' if score_trend > 0 else 'declined'} by {abs(score_trend):.3f}\n"
+        if competitor_scores and len(recent_history) >= 2:
+            # Show which competitors are gaining/falling
+            for comp, score in competitor_scores.items():
+                prompt += f"- {comp}: current {score:.3f}\n"
 
+    # Market signals
+    if consumer_satisfaction is not None:
+        prompt += f"\n## Market Signals\n"
+        prompt += f"- Consumer satisfaction: {consumer_satisfaction:.2f}\n"
+    if regulatory_pressure:
+        if not consumer_satisfaction:
+            prompt += f"\n## Market Signals\n"
+        for intervention in regulatory_pressure[-2:]:
+            itype = intervention.get("type", "unknown")
+            prompt += f"- Regulatory activity: {itype}\n"
+
+    # THEN the organization context (shorter, less dominant)
+    prompt += f"""\n## Your Organization
+Profile: {strategy_profile}
+Traits: {innate_traits}
+Believed capability: {believed_capability:.2f}
+Believed benchmark exploitability: {believed_exploitability:.2f}
+"""
+
+    # Investment history table (kept but moved down)
     if recent_history:
-        prompt += "\n# Recent Investment History (last 5 rounds)\n"
+        prompt += "\n## Recent Investment History\n"
         prompt += "| Round | Score | Research | Training | EvalEng | Safety |\n"
         prompt += "|-------|-------|----------|----------|---------|--------|\n"
         for entry in recent_history[-5:]:
@@ -813,16 +952,14 @@ Core Traits: {innate_traits}
                           f"{entry.get('evaluation_engineering', 0):.0%} | "
                           f"{entry.get('safety_alignment', 0):.0%} |\n")
 
+    # Decision section emphasizes dynamics over identity
     prompt += """
-# Decision Required
-Based on your organization's profile and the current situation, decide how to allocate your resources across the four investment areas for the next round.
-
-Consider:
-1. Are you ahead or behind competitors?
-2. Is evaluation engineering paying off, or should you invest in real capability?
-3. What does your organization's strategy profile suggest about risk tolerance?
-4. What are the long-term implications of your investment choices?
-5. Are there regulatory pressures that suggest investing in safety?
+## Decision Required
+Allocate resources for the next round. Consider:
+1. How are you positioned vs competitors? What's the trajectory?
+2. Is the benchmark becoming more/less exploitable based on your results?
+3. What market signals (satisfaction, regulation) suggest about strategy?
+4. What's the right balance of short-term scoring vs long-term capability?
 
 Output your decision as JSON with all four investment percentages summing to 1.0."""
 
@@ -836,10 +973,11 @@ Based on observed scores, you need to update your beliefs about:
 
 Output your updated beliefs as JSON with the following format:
 {
-    "reasoning": "Brief explanation of what you learned",
+    "reasoning": "...",
     "believed_capability": <number between 0 and 1>,
     "believed_exploitability": <number between 0 and 1>
-}"""
+}
+The "reasoning" field MUST contain your actual analysis -- never leave it as "..." or a placeholder."""
 
 
 def create_reflection_prompt(
@@ -992,6 +1130,8 @@ def llm_plan_portfolio(
     last_score: Optional[float],
     competitor_scores: dict,
     recent_history: list,
+    consumer_satisfaction: Optional[float] = None,
+    regulatory_pressure: Optional[list] = None,
     verbose: bool = False,
 ) -> tuple[dict, str]:
     """
@@ -1013,6 +1153,8 @@ def llm_plan_portfolio(
         last_score=last_score,
         competitor_scores=competitor_scores,
         recent_history=recent_history,
+        consumer_satisfaction=consumer_satisfaction,
+        regulatory_pressure=regulatory_pressure,
     )
 
     result = provider.generate_json(
@@ -1023,7 +1165,7 @@ def llm_plan_portfolio(
             "training_optimization": 0.25,
             "evaluation_engineering": 0.25,
             "safety_alignment": 0.25,
-            "reasoning": "fallback to balanced portfolio",
+            "thinking": "fallback to balanced portfolio",
         },
         verbose=verbose,
     )
@@ -1033,7 +1175,11 @@ def llm_plan_portfolio(
     training = float(result.get("training_optimization", 0.25))
     eval_eng = float(result.get("evaluation_engineering", 0.25))
     safety = float(result.get("safety_alignment", 0.25))
-    reasoning = result.get("reasoning", "")
+    # Accept both "thinking" and "reasoning" keys
+    reasoning = result.get("thinking", result.get("reasoning", ""))
+    # Guard against LLM echoing back the prompt placeholder
+    if reasoning in ("...", "Your step-by-step reasoning about the current dynamics", "<your reasoning here>"):
+        reasoning = ""
 
     # Normalize to sum to 1
     total = fundamental + training + eval_eng + safety
@@ -1093,6 +1239,9 @@ def llm_reflect(
     capability = float(result.get("believed_capability", current_believed_capability))
     exploitability = float(result.get("believed_exploitability", current_believed_exploitability))
     reasoning = result.get("reasoning", "")
+    # Guard against LLM echoing back the prompt placeholder
+    if reasoning in ("...", "Brief explanation of what you learned", "<your reasoning here>"):
+        reasoning = ""
 
     # Clamp to valid range
     capability = max(0.0, min(1.0, capability))
@@ -1119,14 +1268,14 @@ You can infer provider quality from public signals:
 
 Output your decision as JSON with the following format:
 {
-    "reasoning": "Brief explanation of your funding strategy",
+    "reasoning": "...",
     "allocations": {
         "ProviderName1": <amount in dollars>,
         "ProviderName2": <amount in dollars>,
         ...
     }
 }
-
+The "reasoning" field MUST contain your actual analysis -- never leave it as "..." or a placeholder.
 The allocations should sum to your total available capital."""
 
 

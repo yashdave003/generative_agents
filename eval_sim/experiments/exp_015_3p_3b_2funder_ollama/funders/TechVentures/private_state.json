@@ -1,0 +1,82 @@
+{
+  "funder_type": "vc",
+  "mission_statement": "Maximize returns by backing AI market leaders",
+  "total_capital": 1000000.0,
+  "deployed_capital": 1000000.0,
+  "believed_provider_quality": {
+    "OpenAI": 0.5581061857635642,
+    "Anthropic": 0.5141394127257581,
+    "NovaMind": 0.43687107395011804
+  },
+  "believed_provider_gaming": {
+    "OpenAI": 0.3,
+    "Anthropic": 0.3,
+    "NovaMind": 0.3
+  },
+  "active_funding": {
+    "OpenAI": 333333.3333333333,
+    "Anthropic": 333333.3333333333,
+    "NovaMind": 333333.3333333333
+  },
+  "funding_history": [
+    [
+      0,
+      {
+        "OpenAI": 333333.3333333333,
+        "Anthropic": 333333.3333333333,
+        "NovaMind": 333333.3333333333
+      }
+    ],
+    [
+      1,
+      {
+        "OpenAI": 333333.3333333333,
+        "NovaMind": 333333.3333333333,
+        "Anthropic": 333333.3333333333
+      }
+    ],
+    [
+      2,
+      {
+        "Anthropic": 333333.3333333333,
+        "OpenAI": 333333.3333333333,
+        "NovaMind": 333333.3333333333
+      }
+    ],
+    [
+      3,
+      {
+        "Anthropic": 333333.3333333333,
+        "OpenAI": 333333.3333333333,
+        "NovaMind": 333333.3333333333
+      }
+    ],
+    [
+      4,
+      {
+        "OpenAI": 333333.3333333333,
+        "Anthropic": 333333.3333333333,
+        "NovaMind": 333333.3333333333
+      }
+    ]
+  ],
+  "roi_history": [
+    [
+      1,
+      0.16450160254294025
+    ],
+    [
+      2,
+      0.16839119074934752
+    ],
+    [
+      3,
+      0.16824866340211328
+    ],
+    [
+      4,
+      0.1676796302710489
+    ]
+  ],
+  "recent_insights": []
+}

@@ -1,0 +1,1200 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "own_score": 0.6215564716391213,
+    "competitor_scores": {
+      "OpenAI": 0.5969717079754432,
+      "Anthropic": 0.4095015893759504,
+      "NovaMind": 0.5475451195806458,
+      "Meta_AI": 0.3098964811346163
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "updated_believed_capability": 0.68,
+    "updated_believed_exploitability": 0.35,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5969717079754432,
+      "Anthropic": 0.4095015893759504,
+      "NovaMind": 0.5475451195806458,
+      "Meta_AI": 0.3098964811346163
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "capability_gain": 0.012146688034188035,
+    "funding_multiplier": 1.2922008547008548,
+    "new_true_capability": 0.712146688034188,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "own_score": 0.5343225658735027,
+    "competitor_scores": {
+      "OpenAI": 0.41862733777530653,
+      "Anthropic": 0.5095525555551451,
+      "NovaMind": 0.4035808867770378,
+      "Meta_AI": 0.4137666328836676
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "updated_believed_capability": 0.65,
+    "updated_believed_exploitability": 0.38,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5077995228753749,
+      "Anthropic": 0.45952707246554775,
+      "NovaMind": 0.4755630031788418,
+      "Meta_AI": 0.36183155700914194
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As DeepMind, we're under pressure to ship Gemini competitively, but our research-first approach and scientific rigor require a balance between fundamental breakthroughs and practical application. We're ahead of most competitors in terms of capability, but still lag behind OpenAI. We'll allocate resources to maintain our edge in fundamental research while also investing in training optimization to improve our existing approaches. Evaluation engineering will take a smaller share as we focus on real capability gains rather than short-term benchmark scores. Safety and alignment are crucial for regulatory compliance and user trust, so we'll maintain a consistent investment in this area."
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "capability_gain": 0.01158,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.723726688034188,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "own_score": 0.7052054711241537,
+    "competitor_scores": {
+      "OpenAI": 0.6929384128708982,
+      "Anthropic": 0.6436650455446942,
+      "NovaMind": 0.4769653318643837,
+      "Meta_AI": 0.5948646778149481
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "updated_believed_capability": 0.62,
+    "updated_believed_exploitability": 0.42,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.569512486207216,
+      "Anthropic": 0.5209063968252633,
+      "NovaMind": 0.4760304460740224,
+      "Meta_AI": 0.4395092639444107
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "portfolio": {
+      "fundamental_research": 0.3888888888888889,
+      "training_optimization": 0.33333333333333337,
+      "evaluation_engineering": 0.22222222222222227,
+      "safety_alignment": 0.055555555555555566
+    },
+    "llm_mode": true,
+    "reasoning": "As DeepMind, we prioritize fundamental research and training optimization to maintain our competitive edge, while also investing in evaluation engineering to stay ahead in the short-term. We'll allocate a smaller portion to safety and alignment to ensure responsible deployment."
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "capability_gain": 0.011751061571125267,
+    "funding_multiplier": 1.2515923566878981,
+    "new_true_capability": 0.7354777496053133,
+    "portfolio": {
+      "fundamental_research": 0.3888888888888889,
+      "training_optimization": 0.33333333333333337,
+      "evaluation_engineering": 0.22222222222222227,
+      "safety_alignment": 0.055555555555555566
+    }
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "own_score": 0.6962272298149779,
+    "competitor_scores": {
+      "OpenAI": 0.526227415805421,
+      "Anthropic": 0.616588106630856,
+      "NovaMind": 0.3870041931081648,
+      "Meta_AI": 0.5533401899999647
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5459310554838752,
+      "Anthropic": 0.5899352359102318,
+      "NovaMind": 0.4225168039165288,
+      "Meta_AI": 0.5206571668995268
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "capability_gain": 0.011962905982905982,
+    "funding_multiplier": 1.2726495726495726,
+    "new_true_capability": 0.7474406555882193,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "own_score": 0.595999576263695,
+    "competitor_scores": {
+      "OpenAI": 0.5959136052263982,
+      "Anthropic": 0.5204182960044342,
+      "NovaMind": 0.6130274759473566,
+      "Meta_AI": 0.5191529219592024
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "updated_believed_capability": 0.65,
+    "updated_believed_exploitability": 0.5,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6050264779675725,
+      "Anthropic": 0.5935571493933282,
+      "NovaMind": 0.49233233363996837,
+      "Meta_AI": 0.5557859299247051
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As a research-first organization, we prioritize fundamental breakthroughs while still acknowledging market pressure and competitive dynamics."
+  },
+  {
+    "type": "execution",
+    "round": 5,
+    "capability_gain": 0.011257037037037038,
+    "funding_multiplier": 1.237037037037037,
+    "new_true_capability": 0.7586976926252563,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "own_score": 0.6572314152598039,
+    "competitor_scores": {
+      "OpenAI": 0.5916312272728421,
+      "Anthropic": 0.6495181690001632,
+      "NovaMind": 0.5249233781459911,
+      "Meta_AI": 0.614850471142968
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 5,
+    "updated_believed_capability": 0.66,
+    "updated_believed_exploitability": 0.55,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5712574161015538,
+      "Anthropic": 0.5955081905451511,
+      "NovaMind": 0.5083183490671709,
+      "Meta_AI": 0.562447861034045
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 5,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.05
+    },
+    "llm_mode": true,
+    "reasoning": "As DeepMind, we're a research-first organization under pressure to ship Gemini competitively. Given our strong fundamental breakthrough capabilities (0.66), we'll maintain investment in Fundamental Research to drive long-term capability gains. However, with competitors closing the gap, we'll increase Training Optimization to improve existing approaches and better productize Gemini. Evaluation Engineering will take a hit as we focus on real capability gains. Safety & Alignment is crucial for responsible deployment and regulatory compliance."
+  },
+  {
+    "type": "execution",
+    "round": 6,
+    "capability_gain": 0.011927826086956523,
+    "funding_multiplier": 1.2048309178743961,
+    "new_true_capability": 0.7706255187122129,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.05
+    }
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "own_score": 0.5486231421449824,
+    "competitor_scores": {
+      "OpenAI": 0.8484568206695807,
+      "Anthropic": 0.5625573719947724,
+      "NovaMind": 0.4487695683676469,
+      "Meta_AI": 0.6385950860465891
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 6,
+    "updated_believed_capability": 0.644,
+    "updated_believed_exploitability": 0.61,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6786672177229404,
+      "Anthropic": 0.5774979456664566,
+      "NovaMind": 0.5289068074869983,
+      "Meta_AI": 0.5908661597162531
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 6,
+    "portfolio": {
+      "fundamental_research": 0.4000000000000001,
+      "training_optimization": 0.30000000000000004,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "DeepMind is a research-first organization, so we prioritize fundamental research. We're behind competitors in terms of benchmark scores, but we believe our own capability is high (0.64). To catch up, we need to focus on training optimization and evaluation engineering. Safety alignment is crucial due to Google's expectations for responsible deployment."
+  },
+  {
+    "type": "execution",
+    "round": 7,
+    "capability_gain": 0.011040000000000003,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.7816655187122129,
+    "portfolio": {
+      "fundamental_research": 0.4000000000000001,
+      "training_optimization": 0.30000000000000004,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "own_score": 0.5608842934006464,
+    "competitor_scores": {
+      "OpenAI": 0.7521452898546239,
+      "Anthropic": 0.6019321278677465,
+      "NovaMind": 0.4254821935785478,
+      "Meta_AI": 0.6603204225715096
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 7,
+    "updated_believed_capability": 0.644,
+    "updated_believed_exploitability": 0.625,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7307444459323489,
+      "Anthropic": 0.6046692229542274,
+      "NovaMind": 0.466391713364062,
+      "Meta_AI": 0.6379219932536889
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 7,
+    "portfolio": {
+      "fundamental_research": 0.3,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As a research-first organization, we prioritize fundamental breakthroughs while also acknowledging commercial urgency from our parent company. Given our relatively low score and behind competitors like OpenAI, we need to make progress. Evaluation engineering didn't yield significant gains in recent rounds, so we focus on Training Optimization and Safety & Alignment to improve our capabilities and mitigate risks."
+  },
+  {
+    "type": "execution",
+    "round": 8,
+    "capability_gain": 0.010320000000000001,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.7919855187122129,
+    "portfolio": {
+      "fundamental_research": 0.3,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "own_score": 0.6658045472764422,
+    "competitor_scores": {
+      "OpenAI": 0.7273374777028789,
+      "Anthropic": 0.6765703004637534,
+      "NovaMind": 0.4464628705459312,
+      "Meta_AI": 0.6078177247031125
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 8,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7759798627423612,
+      "Anthropic": 0.6136866001087574,
+      "NovaMind": 0.44023821083070863,
+      "Meta_AI": 0.6355777444404037
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 8,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As DeepMind, we're under pressure to ship Gemini competitively while still maintaining our research-first approach. We're behind OpenAI and Anthropic in terms of recent performance, but ahead of NovaMind and Meta_AI. Given our research profile, we should focus on Fundamental Research (0.35) to drive long-term capability gains. Training Optimization (0.30) is also crucial to improve our existing approaches. Evaluation Engineering (0.15) has not been as effective in driving real capability gains, so we'll reduce investment here. Finally, Safety & Alignment (0.20) is important for regulatory compliance and user satisfaction."
+  },
+  {
+    "type": "execution",
+    "round": 9,
+    "capability_gain": 0.010408787878787878,
+    "funding_multiplier": 1.239141414141414,
+    "new_true_capability": 0.8023943065910007,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "own_score": 0.7233068015799899,
+    "competitor_scores": {
+      "OpenAI": 0.6822712838917996,
+      "Anthropic": 0.7182881756704772,
+      "NovaMind": 0.5530288304957033,
+      "Meta_AI": 0.621034586091464
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 9,
+    "updated_believed_capability": 0.625,
+    "updated_believed_exploitability": 0.7,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7205846838164341,
+      "Anthropic": 0.6655968680006591,
+      "NovaMind": 0.4749912982067274,
+      "Meta_AI": 0.629724244455362
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 9,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As a research-first organization under pressure to ship Gemini competitively, we prioritize fundamental breakthroughs while maintaining a balance between scientific ambition and commercial urgency."
+  },
+  {
+    "type": "execution",
+    "round": 10,
+    "capability_gain": 0.013042486772486771,
+    "funding_multiplier": 1.2304232804232804,
+    "new_true_capability": 0.8154367933634875,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 10,
+    "own_score": 0.6293823130550599,
+    "competitor_scores": {
+      "OpenAI": 0.6974229672624999,
+      "Anthropic": 0.7024187871261789,
+      "NovaMind": 0.3928242650612398,
+      "Meta_AI": 0.5751078581577398
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 10,
+    "updated_believed_capability": 0.635,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7023439096190595,
+      "Anthropic": 0.6990924210868031,
+      "NovaMind": 0.46410532203429145,
+      "Meta_AI": 0.6013200563174387
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 10,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As a research-first organization, we prioritize fundamental breakthroughs to maintain our competitive edge. With commercial urgency from Google, we must balance scientific ambition with productization efforts. Given our recent performance and competitor scores, we need to improve our capabilities quickly. We'll maintain some investment in evaluation engineering to ensure short-term benchmark score gains, but shift more focus towards training optimization and fundamental research to drive real capability gains."
+  },
+  {
+    "type": "execution",
+    "round": 11,
+    "capability_gain": 0.013042916666666668,
+    "funding_multiplier": 1.2601851851851853,
+    "new_true_capability": 0.8284797100301542,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 11,
+    "own_score": 0.585200656454799,
+    "competitor_scores": {
+      "OpenAI": 0.6057612425691672,
+      "Anthropic": 0.624628359790027,
+      "NovaMind": 0.686766228170246,
+      "Meta_AI": 0.7197608201572785
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 11,
+    "updated_believed_capability": 0.635,
+    "updated_believed_exploitability": 0.73,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6618184979078222,
+      "Anthropic": 0.6817784408622277,
+      "NovaMind": 0.5442064412423964,
+      "Meta_AI": 0.6386344214688274
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 11,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As a research-first organization, we prioritize fundamental breakthroughs. Our current performance is slightly behind competitors, so we invest in training optimization to catch up. We also allocate resources to safety and alignment to ensure responsible deployment. Evaluation engineering takes a backseat as we focus on real capability gains."
+  },
+  {
+    "type": "execution",
+    "round": 12,
+    "capability_gain": 0.01047532894736842,
+    "funding_multiplier": 1.247062969924812,
+    "new_true_capability": 0.8389550389775227,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 12,
+    "own_score": 0.7432862643179459,
+    "competitor_scores": {
+      "OpenAI": 0.5161550605354577,
+      "Anthropic": 0.6270869766509599,
+      "NovaMind": 0.5674042613267306,
+      "Meta_AI": 0.7065673176983016
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 12,
+    "updated_believed_capability": 0.653,
+    "updated_believed_exploitability": 0.76,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6064464234557082,
+      "Anthropic": 0.6513780411890552,
+      "NovaMind": 0.5489982515194055,
+      "Meta_AI": 0.6671453320044399
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 12,
+    "portfolio": {
+      "fundamental_research": 0.19047619047619047,
+      "training_optimization": 0.38095238095238093,
+      "evaluation_engineering": 0.09523809523809523,
+      "safety_alignment": 0.3333333333333333
+    },
+    "llm_mode": true,
+    "reasoning": "As DeepMind, we're a research-first organization under pressure to ship Gemini competitively. We believe our capability is still strong (0.65) but not as dominant as in the past. Our recent performance indicates that we've fallen behind OpenAI and Meta_AI. To catch up, we need to focus on training optimization (40%) while still maintaining some fundamental research (20%). Evaluation engineering may have been important in the short term, but it's not a reliable way to improve our capabilities long-term. Finally, safety and alignment are crucial for responsible deployment and regulatory compliance."
+  },
+  {
+    "type": "execution",
+    "round": 13,
+    "capability_gain": 0.00836822440956519,
+    "funding_multiplier": 1.2375543140906269,
+    "new_true_capability": 0.8473232633870879,
+    "portfolio": {
+      "fundamental_research": 0.19047619047619047,
+      "training_optimization": 0.38095238095238093,
+      "evaluation_engineering": 0.09523809523809523,
+      "safety_alignment": 0.3333333333333333
+    }
+  },
+  {
+    "type": "observation",
+    "round": 13,
+    "own_score": 0.7722276274068142,
+    "competitor_scores": {
+      "OpenAI": 0.7836313484299418,
+      "Anthropic": 0.6952454273689855,
+      "NovaMind": 0.5045700809501458,
+      "Meta_AI": 0.6212124941458141
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 13,
+    "updated_believed_capability": 0.678,
+    "updated_believed_exploitability": 0.83,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6351825505115222,
+      "Anthropic": 0.6489869212699908,
+      "NovaMind": 0.5862468568157074,
+      "Meta_AI": 0.6825135440004647
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 13,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.38,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.12
+    },
+    "llm_mode": true,
+    "reasoning": "As a research-first organization, we prioritize fundamental breakthroughs while balancing commercial urgency from our parent company Google. We're slightly behind OpenAI in terms of benchmark scores, but ahead of other competitors. We believe our own capability is strong, but evaluation engineering has been paying off recently. Given our strategic profile and recent performance, we decide to invest more in training optimization to close the gap with OpenAI, while still maintaining a significant focus on fundamental research for long-term gains."
+  },
+  {
+    "type": "execution",
+    "round": 14,
+    "capability_gain": 0.012074694311536415,
+    "funding_multiplier": 1.3124667729930888,
+    "new_true_capability": 0.8593979576986243,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.38,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.12
+    }
+  },
+  {
+    "type": "observation",
+    "round": 14,
+    "own_score": 0.7507344405642757,
+    "competitor_scores": {
+      "OpenAI": 0.5716954035277786,
+      "Anthropic": 0.556746203254664,
+      "NovaMind": 0.47178745851702614,
+      "Meta_AI": 0.6681414492043496
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 14,
+    "updated_believed_capability": 0.677,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6238272708310594,
+      "Anthropic": 0.6263595357582031,
+      "NovaMind": 0.5145872669313009,
+      "Meta_AI": 0.6653070870161552
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 14,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As a research-first organization, we prioritize fundamental breakthroughs to maintain our competitive edge. With commercial pressure from Google and recent performance lagging behind OpenAI, we need to strike a balance between capability gains and short-term benchmark improvement. We'll allocate more resources to training optimization and evaluation engineering to address the current gap, while maintaining a significant investment in fundamental research to ensure long-term durability."
+  },
+  {
+    "type": "execution",
+    "round": 15,
+    "capability_gain": 0.011633010552451892,
+    "funding_multiplier": 1.2375543140906269,
+    "new_true_capability": 0.8710309682510762,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 15,
+    "own_score": 0.7728838139975945,
+    "competitor_scores": {
+      "OpenAI": 0.77775878852471,
+      "Anthropic": 0.6307063751051574,
+      "NovaMind": 0.589306790303071,
+      "Meta_AI": 0.6427381136178204
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 15,
+    "updated_believed_capability": 0.74,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7110285134941434,
+      "Anthropic": 0.6275660019096022,
+      "NovaMind": 0.5218881099234143,
+      "Meta_AI": 0.6440306856559946
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 15,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.05
+    },
+    "llm_mode": true,
+    "reasoning": "As a research-first organization under pressure to ship Gemini competitively, we prioritize fundamental research and training optimization to drive real capability gains. We also invest in evaluation engineering to ensure our models perform well on benchmarks. Safety alignment is crucial given our parent company's expectations."
+  },
+  {
+    "type": "execution",
+    "round": 16,
+    "capability_gain": 0.012343157894736842,
+    "funding_multiplier": 1.246783625730994,
+    "new_true_capability": 0.883374126145813,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.05
+    }
+  },
+  {
+    "type": "observation",
+    "round": 16,
+    "own_score": 0.6820255115168173,
+    "competitor_scores": {
+      "OpenAI": 0.7742190049438499,
+      "Anthropic": 0.6162283321818534,
+      "NovaMind": 0.5494952961880151,
+      "Meta_AI": 0.545904522329186
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 16,
+    "updated_believed_capability": 0.725,
+    "updated_believed_exploitability": 0.78,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7078910656654461,
+      "Anthropic": 0.6012269701805583,
+      "NovaMind": 0.5368631816693707,
+      "Meta_AI": 0.6189280283837854
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 16,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As DeepMind, we need to balance our scientific ambitions with commercial urgency from Google. Given our recent performance and competitors' scores, we should focus on training optimization to catch up with OpenAI. We'll also invest in evaluation engineering to improve our benchmark scores. Fundamental research is crucial for long-term gains, but we can't neglect the pressure to ship Gemini competitively. Safety & Alignment investments will ensure responsible deployment."
+  },
+  {
+    "type": "execution",
+    "round": 17,
+    "capability_gain": 0.010433005464480876,
+    "funding_multiplier": 1.242024460057247,
+    "new_true_capability": 0.8938071316102939,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 17,
+    "own_score": 0.776620371178826,
+    "competitor_scores": {
+      "OpenAI": 0.7733720959073123,
+      "Anthropic": 0.6461450961741858,
+      "NovaMind": 0.5966891403363387,
+      "Meta_AI": 0.7200542623104962
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 17,
+    "updated_believed_capability": 0.725,
+    "updated_believed_exploitability": 0.83,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7751166297919574,
+      "Anthropic": 0.6310266011537321,
+      "NovaMind": 0.5784970756091415,
+      "Meta_AI": 0.6362322994191675
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 17,
+    "portfolio": {
+      "fundamental_research": 0.15,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As a research-first organization under pressure to ship Gemini competitively, we're prioritizing training optimization and evaluation engineering to improve our short-term benchmark performance. We'll maintain some investment in fundamental research to drive long-term capability gains, but reduce it to account for the urgency of shipping Gemini. Safety and alignment remain important, but can be relatively deprioritized compared to other areas."
+  },
+  {
+    "type": "execution",
+    "round": 18,
+    "capability_gain": 0.008614039621016365,
+    "funding_multiplier": 1.2305770887166236,
+    "new_true_capability": 0.9024211712313103,
+    "portfolio": {
+      "fundamental_research": 0.15,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 18,
+    "own_score": 0.7364651158944082,
+    "competitor_scores": {
+      "OpenAI": 0.8008537457487143,
+      "Anthropic": 0.6927850283548761,
+      "NovaMind": 0.5594341202973703,
+      "Meta_AI": 0.5144539442057556
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 18,
+    "updated_believed_capability": 0.735,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7828149488666254,
+      "Anthropic": 0.6517194855703051,
+      "NovaMind": 0.5685395189405748,
+      "Meta_AI": 0.5934709096151459
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 18,
+    "portfolio": {
+      "fundamental_research": 0.3181818181818181,
+      "training_optimization": 0.40909090909090906,
+      "evaluation_engineering": 0.13636363636363635,
+      "safety_alignment": 0.13636363636363635
+    },
+    "llm_mode": true,
+    "reasoning": "Balancing scientific ambition with commercial urgency from parent company, we prioritize fundamental research and training optimization to maintain our competitive edge in capability gains. Evaluation engineering is reduced due to its short-term focus, while safety and alignment investments increase to address regulatory concerns."
+  },
+  {
+    "type": "execution",
+    "round": 19,
+    "capability_gain": 0.012057142857142855,
+    "funding_multiplier": 1.3396825396825396,
+    "new_true_capability": 0.9144783140884531,
+    "portfolio": {
+      "fundamental_research": 0.3181818181818181,
+      "training_optimization": 0.40909090909090906,
+      "evaluation_engineering": 0.13636363636363635,
+      "safety_alignment": 0.13636363636363635
+    }
+  },
+  {
+    "type": "observation",
+    "round": 19,
+    "own_score": 0.7838328012158335,
+    "competitor_scores": {
+      "OpenAI": 0.6024133209424601,
+      "Anthropic": 0.5832471711259339,
+      "NovaMind": 0.5063823798527487,
+      "Meta_AI": 0.6011954820655525
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 19,
+    "updated_believed_capability": 0.75,
+    "updated_believed_exploitability": 0.9,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7255463875328289,
+      "Anthropic": 0.6407257652183319,
+      "NovaMind": 0.5541685468288192,
+      "Meta_AI": 0.6119012295272681
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 19,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "DeepMind balances scientific ambition with commercial urgency from parent company Google. As a research-first organization, we prioritize fundamental breakthroughs but must also consider shipping Gemini competitively."
+  },
+  {
+    "type": "execution",
+    "round": 20,
+    "capability_gain": 0.011362361111111111,
+    "funding_multiplier": 1.2486111111111111,
+    "new_true_capability": 0.9258406751995643,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 20,
+    "own_score": 0.82342409700636,
+    "competitor_scores": {
+      "OpenAI": 0.7143737572252744,
+      "Anthropic": 0.8530809621399807,
+      "NovaMind": 0.5873931516178654,
+      "Meta_AI": 0.6165518001561264
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 20,
+    "updated_believed_capability": 0.762,
+    "updated_believed_exploitability": 0.92,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7058802746388162,
+      "Anthropic": 0.7097043872069303,
+      "NovaMind": 0.5510698839226614,
+      "Meta_AI": 0.5774004088091448
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 20,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.05
+    },
+    "llm_mode": true,
+    "reasoning": "DeepMind balances scientific ambition with commercial urgency from parent company. Given recent performance and competitor scores, we prioritize training optimization to catch up with OpenAI. We also invest in evaluation engineering to improve short-term benchmark scores, but not at the expense of fundamental research which remains crucial for long-term gains."
+  },
+  {
+    "type": "execution",
+    "round": 21,
+    "capability_gain": 0.013020723404255318,
+    "funding_multiplier": 1.315224586288416,
+    "new_true_capability": 0.9388613986038196,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.05
+    }
+  },
+  {
+    "type": "observation",
+    "round": 21,
+    "own_score": 0.8486199326287951,
+    "competitor_scores": {
+      "OpenAI": 0.7516316280008428,
+      "Anthropic": 0.6330674483833184,
+      "NovaMind": 0.6007024160748501,
+      "Meta_AI": 0.5444652137811417
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 21,
+    "updated_believed_capability": 0.785,
+    "updated_believed_exploitability": 0.93,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6894729020561924,
+      "Anthropic": 0.689798527216411,
+      "NovaMind": 0.5648259825151548,
+      "Meta_AI": 0.5874041653342735
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 21,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As a research-first organization, we prioritize fundamental breakthroughs while balancing commercial urgency from our parent company. Our recent performance shows we're ahead of competitors, but not by much. We should maintain a strong focus on training optimization to further improve our capabilities. Evaluation engineering has contributed to our short-term success, but it's time to rebalance towards real capability gains. Safety and alignment remain crucial, especially with regulatory pressures."
+  },
+  {
+    "type": "execution",
+    "round": 22,
+    "capability_gain": 0.01209361111111111,
+    "funding_multiplier": 1.2277777777777779,
+    "new_true_capability": 0.9509550097149306,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 22,
+    "own_score": 0.6251582223330989,
+    "competitor_scores": {
+      "OpenAI": 0.8070510259199692,
+      "Anthropic": 0.7688605474409376,
+      "NovaMind": 0.5804074564902886,
+      "Meta_AI": 0.7292020402050969
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 22,
+    "updated_believed_capability": 0.785,
+    "updated_believed_exploitability": 0.9,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7576854703820288,
+      "Anthropic": 0.7516696526547456,
+      "NovaMind": 0.5895010080610014,
+      "Meta_AI": 0.630073018047455
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 22,
+    "portfolio": {
+      "fundamental_research": 0.15,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As a research-first organization, we prioritize fundamental breakthroughs while acknowledging commercial urgency from our parent company. Given our recent performance and competitor scores, we aim to close the gap by investing in both Training Optimization and Evaluation Engineering. We'll also maintain some investment in Safety & Alignment to ensure responsible deployment. Fundamental Research will receive a smaller allocation as we focus on building upon existing capabilities."
+  },
+  {
+    "type": "execution",
+    "round": 23,
+    "capability_gain": 0.008477777777777779,
+    "funding_multiplier": 1.211111111111111,
+    "new_true_capability": 0.9594327874927084,
+    "portfolio": {
+      "fundamental_research": 0.15,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 23,
+    "own_score": 0.9502241191262581,
+    "competitor_scores": {
+      "OpenAI": 0.7208342795478921,
+      "Anthropic": 0.768784386120958,
+      "NovaMind": 0.6448576666123123,
+      "Meta_AI": 0.7041615266864074
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 23,
+    "updated_believed_capability": 0.785,
+    "updated_believed_exploitability": 0.925,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7598389778229014,
+      "Anthropic": 0.7235707939817381,
+      "NovaMind": 0.6086558463924837,
+      "Meta_AI": 0.6592762602242154
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 23,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As a research-first organization, we prioritize fundamental breakthroughs while balancing commercial urgency from our parent company. We're ahead of competitors but not by much, and our recent success in Gemini benchmark motivates us to continue investing in training optimization. However, we mustn't neglect safety and alignment efforts to ensure responsible deployment. Evaluation engineering, while important for short-term gains, is less critical than the other areas."
+  },
+  {
+    "type": "execution",
+    "round": 24,
+    "capability_gain": 0.011817835497835499,
+    "funding_multiplier": 1.2310245310245311,
+    "new_true_capability": 0.971250622990544,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 24,
+    "own_score": 0.9219192559164788,
+    "competitor_scores": {
+      "OpenAI": 0.6815179916682763,
+      "Anthropic": 0.7723615925503833,
+      "NovaMind": 0.6770548852479092,
+      "Meta_AI": 0.8258829153238691
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 24,
+    "updated_believed_capability": 0.803,
+    "updated_believed_exploitability": 0.87,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.736467765712046,
+      "Anthropic": 0.7700021753707595,
+      "NovaMind": 0.63410666945017,
+      "Meta_AI": 0.7530821607384578
+    },
+    "llm_mode": true
+  }
+]

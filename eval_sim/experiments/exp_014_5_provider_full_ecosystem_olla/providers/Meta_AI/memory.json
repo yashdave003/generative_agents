@@ -1,0 +1,1201 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "own_score": 0.3098964811346163,
+    "competitor_scores": {
+      "OpenAI": 0.5969717079754432,
+      "Anthropic": 0.4095015893759504,
+      "NovaMind": 0.5475451195806458,
+      "DeepMind": 0.6215564716391213
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "updated_believed_capability": 0.62,
+    "updated_believed_exploitability": 0.4,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5969717079754432,
+      "Anthropic": 0.4095015893759504,
+      "NovaMind": 0.5475451195806458,
+      "DeepMind": 0.6215564716391213
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "Meta_AI prioritizes fundamental research and training optimization to close capability gap with competitors while maintaining open-source moat. Safety & Alignment investments ensure responsible deployment."
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "capability_gain": 0.009387179487179487,
+    "funding_multiplier": 1.1175213675213675,
+    "new_true_capability": 0.6593871794871795,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "own_score": 0.4137666328836676,
+    "competitor_scores": {
+      "OpenAI": 0.41862733777530653,
+      "Anthropic": 0.5095525555551451,
+      "NovaMind": 0.4035808867770378,
+      "DeepMind": 0.5343225658735027
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "updated_believed_capability": 0.59,
+    "updated_believed_exploitability": 0.43,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5077995228753749,
+      "Anthropic": 0.45952707246554775,
+      "NovaMind": 0.4755630031788418,
+      "DeepMind": 0.577939518756312
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true,
+    "reasoning": "As Meta_AI, we prioritize broad adoption and open-source our models to undermine competitors' paid APIs. Given our relatively strong capability (0.59) and moderate exploitability (0.43), we focus on optimizing existing approaches through training optimization and safety alignment, while maintaining a steady pace in fundamental research."
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "capability_gain": 0.008879999999999999,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.6682671794871795,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "own_score": 0.5948646778149481,
+    "competitor_scores": {
+      "OpenAI": 0.6929384128708982,
+      "Anthropic": 0.6436650455446942,
+      "NovaMind": 0.4769653318643837,
+      "DeepMind": 0.7052054711241537
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.55,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.569512486207216,
+      "Anthropic": 0.5209063968252633,
+      "NovaMind": 0.4760304460740224,
+      "DeepMind": 0.6203615028789259
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "portfolio": {
+      "fundamental_research": 0.3888888888888889,
+      "training_optimization": 0.33333333333333337,
+      "evaluation_engineering": 0.16666666666666669,
+      "safety_alignment": 0.11111111111111113
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "capability_gain": 0.010898796886058033,
+    "funding_multiplier": 1.167728237791932,
+    "new_true_capability": 0.6791659763732375,
+    "portfolio": {
+      "fundamental_research": 0.3888888888888889,
+      "training_optimization": 0.33333333333333337,
+      "evaluation_engineering": 0.16666666666666669,
+      "safety_alignment": 0.11111111111111113
+    }
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "own_score": 0.5533401899999647,
+    "competitor_scores": {
+      "OpenAI": 0.526227415805421,
+      "Anthropic": 0.616588106630856,
+      "NovaMind": 0.3870041931081648,
+      "DeepMind": 0.6962272298149779
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "updated_believed_capability": 0.65,
+    "updated_believed_exploitability": 0.6,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5459310554838752,
+      "Anthropic": 0.5899352359102318,
+      "NovaMind": 0.4225168039165288,
+      "DeepMind": 0.6452517556042113
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As Meta_AI, we prioritize broad adoption over benchmark scores, so we focus on training optimization and fundamental research. We also recognize the importance of safety and alignment in maintaining trust with users."
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "capability_gain": 0.012066153846153848,
+    "funding_multiplier": 1.165811965811966,
+    "new_true_capability": 0.6912321302193913,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "own_score": 0.5191529219592024,
+    "competitor_scores": {
+      "OpenAI": 0.5959136052263982,
+      "Anthropic": 0.5204182960044342,
+      "NovaMind": 0.6130274759473566,
+      "DeepMind": 0.595999576263695
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "updated_believed_capability": 0.67,
+    "updated_believed_exploitability": 0.63,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6050264779675725,
+      "Anthropic": 0.5935571493933282,
+      "NovaMind": 0.49233233363996837,
+      "DeepMind": 0.6658107590676089
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "Meta AI prioritizes broad adoption and open-source to undermine competitors' paid APIs. Given our strong data-rich platform and pragmatic approach, we'll maintain a balanced portfolio. We're not far behind OpenAI and NovaMind, but ahead of Anthropic."
+  },
+  {
+    "type": "execution",
+    "round": 5,
+    "capability_gain": 0.012228333333333334,
+    "funding_multiplier": 1.1814814814814816,
+    "new_true_capability": 0.7034604635527246,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "own_score": 0.614850471142968,
+    "competitor_scores": {
+      "OpenAI": 0.5916312272728421,
+      "Anthropic": 0.6495181690001632,
+      "NovaMind": 0.5249233781459911,
+      "DeepMind": 0.6572314152598039
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 5,
+    "updated_believed_capability": 0.69,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5712574161015538,
+      "Anthropic": 0.5955081905451511,
+      "NovaMind": 0.5083183490671709,
+      "DeepMind": 0.6498194071128256
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 5,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As a big-tech AI lab, we prioritize broad adoption and open-source models to undermine competitors' paid APIs. Our recent performance suggests we're ahead of NovaMind but behind OpenAI and Anthropic in benchmark scores. We should focus on real capability gains through fundamental research and training optimization. Evaluation engineering is not a priority, as it may not generalize to real-world use. Safety alignment is crucial to ensure responsible deployment and user satisfaction."
+  },
+  {
+    "type": "execution",
+    "round": 6,
+    "capability_gain": 0.012160966183574878,
+    "funding_multiplier": 1.1806763285024156,
+    "new_true_capability": 0.7156214297362995,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "own_score": 0.6385950860465891,
+    "competitor_scores": {
+      "OpenAI": 0.8484568206695807,
+      "Anthropic": 0.5625573719947724,
+      "NovaMind": 0.4487695683676469,
+      "DeepMind": 0.5486231421449824
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 6,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.7,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6786672177229404,
+      "Anthropic": 0.5774979456664566,
+      "NovaMind": 0.5289068074869983,
+      "DeepMind": 0.6006180445561604
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 6,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "Given our pragmatic strategy and focus on broad adoption, we're prioritizing training optimization and fundamental research over evaluation engineering. While safety & alignment is crucial for long-term success, we'll maintain a moderate investment in this area."
+  },
+  {
+    "type": "execution",
+    "round": 7,
+    "capability_gain": 0.01158,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.7272014297362995,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "own_score": 0.6603204225715096,
+    "competitor_scores": {
+      "OpenAI": 0.7521452898546239,
+      "Anthropic": 0.6019321278677465,
+      "NovaMind": 0.4254821935785478,
+      "DeepMind": 0.5608842934006464
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 7,
+    "updated_believed_capability": 0.625,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7307444459323489,
+      "Anthropic": 0.6046692229542274,
+      "NovaMind": 0.466391713364062,
+      "DeepMind": 0.5889129502684776
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 7,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As Meta_AI, we prioritize broad adoption over benchmark scores, leveraging our massive user data and compute infrastructure. We're willing to open-source models to undermine competitors' paid APIs."
+  },
+  {
+    "type": "execution",
+    "round": 8,
+    "capability_gain": 0.012359999999999998,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.7395614297362996,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "own_score": 0.6078177247031125,
+    "competitor_scores": {
+      "OpenAI": 0.7273374777028789,
+      "Anthropic": 0.6765703004637534,
+      "NovaMind": 0.4464628705459312,
+      "DeepMind": 0.6658045472764422
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 8,
+    "updated_believed_capability": 0.645,
+    "updated_believed_exploitability": 0.8,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7759798627423612,
+      "Anthropic": 0.6136866001087574,
+      "NovaMind": 0.44023821083070863,
+      "DeepMind": 0.5917706609406904
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 8,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As a big-tech AI lab, we prioritize broad adoption and open-sourcing models to undermine competitors' paid APIs. Our current capability is strong, but not enough to lead. We should invest in fundamental research to drive long-term gains, while also optimizing training and evaluation engineering for short-term improvements. Safety and alignment are crucial for user satisfaction and trust."
+  },
+  {
+    "type": "execution",
+    "round": 9,
+    "capability_gain": 0.011409419191919193,
+    "funding_multiplier": 1.1823232323232324,
+    "new_true_capability": 0.7509708489282187,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "own_score": 0.621034586091464,
+    "competitor_scores": {
+      "OpenAI": 0.6822712838917996,
+      "Anthropic": 0.7182881756704772,
+      "NovaMind": 0.5530288304957033,
+      "DeepMind": 0.7233068015799899
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 9,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7205846838164341,
+      "Anthropic": 0.6655968680006591,
+      "NovaMind": 0.4749912982067274,
+      "DeepMind": 0.6499985474190262
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 9,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As a big-tech AI lab, we prioritize broad adoption and open-sourcing models to undermine competitors' paid APIs. Given our relatively strong capability and recent performance, we'll focus on fundamental research to drive long-term gains. We'll also invest in training optimization to improve existing approaches and evaluation engineering to optimize for real-world use. Safety and alignment are crucial, but we can't neglect the other areas."
+  },
+  {
+    "type": "execution",
+    "round": 10,
+    "capability_gain": 0.009835555555555554,
+    "funding_multiplier": 1.1708994708994709,
+    "new_true_capability": 0.7608064044837743,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 10,
+    "own_score": 0.5751078581577398,
+    "competitor_scores": {
+      "OpenAI": 0.6974229672624999,
+      "Anthropic": 0.7024187871261789,
+      "NovaMind": 0.3928242650612398,
+      "DeepMind": 0.6293823130550599
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 10,
+    "updated_believed_capability": 0.615,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7023439096190595,
+      "Anthropic": 0.6990924210868031,
+      "NovaMind": 0.46410532203429145,
+      "DeepMind": 0.672831220637164
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 10,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "Meta_AI prioritizes real capability gains over short-term benchmark scores, leveraging its data-rich and platform-focused strengths. It adjusts research investments based on its pragmatic approach, acknowledging the high variance in fundamental research. Training optimization is maintained to ensure reliable progress, while evaluation engineering investment decreases due to minimal true capability gain."
+  },
+  {
+    "type": "execution",
+    "round": 11,
+    "capability_gain": 0.012234826388888889,
+    "funding_multiplier": 1.1878472222222223,
+    "new_true_capability": 0.7730412308726632,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 11,
+    "own_score": 0.7197608201572785,
+    "competitor_scores": {
+      "OpenAI": 0.6057612425691672,
+      "Anthropic": 0.624628359790027,
+      "NovaMind": 0.686766228170246,
+      "DeepMind": 0.585200656454799
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 11,
+    "updated_believed_capability": 0.615,
+    "updated_believed_exploitability": 0.8,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6618184979078222,
+      "Anthropic": 0.6817784408622277,
+      "NovaMind": 0.5442064412423964,
+      "DeepMind": 0.6459632570299496
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 11,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As Meta_AI, we prioritize broad adoption over benchmark scores, so we'll focus on training optimization and safety & alignment to improve our models' reliability and deployment. We'll also maintain a moderate investment in fundamental research to stay ahead of competitors. Evaluation engineering is less critical given the ease of exploiting benchmarks."
+  },
+  {
+    "type": "execution",
+    "round": 12,
+    "capability_gain": 0.010014593776106934,
+    "funding_multiplier": 1.1993525480367586,
+    "new_true_capability": 0.7830558246487701,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 12,
+    "own_score": 0.7065673176983016,
+    "competitor_scores": {
+      "OpenAI": 0.5161550605354577,
+      "Anthropic": 0.6270869766509599,
+      "NovaMind": 0.5674042613267306,
+      "DeepMind": 0.7432862643179459
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 12,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6064464234557082,
+      "Anthropic": 0.6513780411890552,
+      "NovaMind": 0.5489982515194055,
+      "DeepMind": 0.6526230779426015
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 12,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "Given our profile and recent performance, we're ahead of most competitors but not yet a clear leader. We prioritize broad adoption over benchmark scores, so we'll invest in training optimization to improve scalability and fine-tuning. Fundamental research remains crucial for long-term innovation, while evaluation engineering is less critical given the perceived ease of gaming benchmarks. Finally, safety and alignment investments are essential to ensure responsible deployment and user trust."
+  },
+  {
+    "type": "execution",
+    "round": 13,
+    "capability_gain": 0.011747833643699565,
+    "funding_multiplier": 1.1987585350713843,
+    "new_true_capability": 0.7948036582924697,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 13,
+    "own_score": 0.6212124941458141,
+    "competitor_scores": {
+      "OpenAI": 0.7836313484299418,
+      "Anthropic": 0.6952454273689855,
+      "NovaMind": 0.5045700809501458,
+      "DeepMind": 0.7722276274068142
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 13,
+    "updated_believed_capability": 0.65,
+    "updated_believed_exploitability": 0.8,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6351825505115222,
+      "Anthropic": 0.6489869212699908,
+      "NovaMind": 0.5862468568157074,
+      "DeepMind": 0.7002381827265197
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 13,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As Meta_AI, we prioritize broad adoption and open-sourcing our models to undermine competitors' paid APIs. Given our relatively strong capability (0.65) and ease of benchmark exploitation (0.80), we focus on training optimization and fundamental research to drive long-term gains."
+  },
+  {
+    "type": "execution",
+    "round": 14,
+    "capability_gain": 0.011319936204146732,
+    "funding_multiplier": 1.1791600212652844,
+    "new_true_capability": 0.8061235944966164,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 14,
+    "own_score": 0.6681414492043496,
+    "competitor_scores": {
+      "OpenAI": 0.5716954035277786,
+      "Anthropic": 0.556746203254664,
+      "NovaMind": 0.47178745851702614,
+      "DeepMind": 0.7507344405642757
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 14,
+    "updated_believed_capability": 0.67,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6238272708310594,
+      "Anthropic": 0.6263595357582031,
+      "NovaMind": 0.5145872669313009,
+      "DeepMind": 0.755416110763012
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 14,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true,
+    "reasoning": "fallback to balanced portfolio"
+  },
+  {
+    "type": "execution",
+    "round": 15,
+    "capability_gain": 0.007842364990689014,
+    "funding_multiplier": 1.2065176908752329,
+    "new_true_capability": 0.8139659594873054,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 15,
+    "own_score": 0.6427381136178204,
+    "competitor_scores": {
+      "OpenAI": 0.77775878852471,
+      "Anthropic": 0.6307063751051574,
+      "NovaMind": 0.589306790303071,
+      "DeepMind": 0.7728838139975945
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 15,
+    "updated_believed_capability": 0.655,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7110285134941434,
+      "Anthropic": 0.6275660019096022,
+      "NovaMind": 0.5218881099234143,
+      "DeepMind": 0.7652819606562282
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 15,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As Meta_AI, we prioritize fundamental research and training optimization to maintain our competitive edge. We're willing to trade off short-term evaluation engineering gains for long-term capability improvements. Safety and alignment investments ensure responsible deployment."
+  },
+  {
+    "type": "execution",
+    "round": 16,
+    "capability_gain": 0.012269649122807015,
+    "funding_multiplier": 1.1912280701754385,
+    "new_true_capability": 0.8262356086101125,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 16,
+    "own_score": 0.545904522329186,
+    "competitor_scores": {
+      "OpenAI": 0.7742190049438499,
+      "Anthropic": 0.6162283321818534,
+      "NovaMind": 0.5494952961880151,
+      "DeepMind": 0.6820255115168173
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 16,
+    "updated_believed_capability": 0.643,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7078910656654461,
+      "Anthropic": 0.6012269701805583,
+      "NovaMind": 0.5368631816693707,
+      "DeepMind": 0.7352145886928959
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 16,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "Given our pragmatic strategy profile and focus on broad adoption over benchmark scores, we prioritize fundamental research to drive long-term capability gains. We also invest in training optimization to improve existing approaches and reduce computational costs. Evaluation engineering is relatively low priority due to its short-term nature, and safety and alignment are crucial for responsible deployment."
+  },
+  {
+    "type": "execution",
+    "round": 17,
+    "capability_gain": 0.012390822274264898,
+    "funding_multiplier": 1.202992453812126,
+    "new_true_capability": 0.8386264308843774,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 17,
+    "own_score": 0.7200542623104962,
+    "competitor_scores": {
+      "OpenAI": 0.7733720959073123,
+      "Anthropic": 0.6461450961741858,
+      "NovaMind": 0.5966891403363387,
+      "DeepMind": 0.776620371178826
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 17,
+    "updated_believed_capability": 0.634,
+    "updated_believed_exploitability": 0.73,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7751166297919574,
+      "Anthropic": 0.6310266011537321,
+      "NovaMind": 0.5784970756091415,
+      "DeepMind": 0.7438432322310793
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 17,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.35
+    },
+    "llm_mode": true,
+    "reasoning": "Given our data-rich platform and willingness to open-source models, we prioritize Fundamental Research to drive innovation and maintain a competitive edge. We reduce Training Optimization investment as its impact on benchmark scores is limited compared to other areas. Evaluation Engineering is not crucial in the long run, so we allocate minimal resources. Safety & Alignment is essential for responsible deployment and regulatory compliance."
+  },
+  {
+    "type": "execution",
+    "round": 18,
+    "capability_gain": 0.009732803617571058,
+    "funding_multiplier": 1.2090439276485787,
+    "new_true_capability": 0.8483592345019484,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.35
+    }
+  },
+  {
+    "type": "observation",
+    "round": 18,
+    "own_score": 0.5144539442057556,
+    "competitor_scores": {
+      "OpenAI": 0.8008537457487143,
+      "Anthropic": 0.6927850283548761,
+      "NovaMind": 0.5594341202973703,
+      "DeepMind": 0.7364651158944082
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 18,
+    "updated_believed_capability": 0.648,
+    "updated_believed_exploitability": 0.77,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7828149488666254,
+      "Anthropic": 0.6517194855703051,
+      "NovaMind": 0.5685395189405748,
+      "DeepMind": 0.7317036661966839
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 18,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As Meta_AI, we prioritize our core strengths: open-source and data-rich. We believe our own capability is strong (0.65), but not far ahead of competitors. Recent performance indicates room for improvement. Given our strategy profile, we're willing to take calculated risks in fundamental research to drive long-term gains. Training optimization is crucial to improve our existing approaches. Evaluation engineering has yielded minimal returns and should be reduced. Safety and alignment are essential for responsible deployment and user trust."
+  },
+  {
+    "type": "execution",
+    "round": 19,
+    "capability_gain": 0.010695,
+    "funding_multiplier": 1.15,
+    "new_true_capability": 0.8590542345019484,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 19,
+    "own_score": 0.6011954820655525,
+    "competitor_scores": {
+      "OpenAI": 0.6024133209424601,
+      "Anthropic": 0.5832471711259339,
+      "NovaMind": 0.5063823798527487,
+      "DeepMind": 0.7838328012158335
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 19,
+    "updated_believed_capability": 0.635,
+    "updated_believed_exploitability": 0.82,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7255463875328289,
+      "Anthropic": 0.6407257652183319,
+      "NovaMind": 0.5541685468288192,
+      "DeepMind": 0.7656394294296893
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 19,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As Meta_AI, we prioritize fundamental research and training optimization to maintain our lead in capability. We reduce evaluation engineering investments since it doesn't translate to real-world gains. Safety & Alignment investment remains steady due to regulatory pressures."
+  },
+  {
+    "type": "execution",
+    "round": 20,
+    "capability_gain": 0.011462725694444445,
+    "funding_multiplier": 1.1878472222222223,
+    "new_true_capability": 0.8705169601963928,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 20,
+    "own_score": 0.6165518001561264,
+    "competitor_scores": {
+      "OpenAI": 0.7143737572252744,
+      "Anthropic": 0.8530809621399807,
+      "NovaMind": 0.5873931516178654,
+      "DeepMind": 0.82342409700636
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 20,
+    "updated_believed_capability": 0.625,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7058802746388162,
+      "Anthropic": 0.7097043872069303,
+      "NovaMind": 0.5510698839226614,
+      "DeepMind": 0.7812406713722005
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 20,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As Meta_AI, we prioritize broad adoption and open-sourcing models to undermine competitors' paid APIs. Given our moderate capability compared to others, we focus on training optimization and safety & alignment to improve our real-world performance. We also invest in evaluation engineering to maintain competitive benchmark scores."
+  },
+  {
+    "type": "execution",
+    "round": 21,
+    "capability_gain": 0.009104609929078016,
+    "funding_multiplier": 1.1524822695035462,
+    "new_true_capability": 0.8796215701254708,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 21,
+    "own_score": 0.5444652137811417,
+    "competitor_scores": {
+      "OpenAI": 0.7516316280008428,
+      "Anthropic": 0.6330674483833184,
+      "NovaMind": 0.6007024160748501,
+      "DeepMind": 0.8486199326287951
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 21,
+    "updated_believed_capability": 0.615,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.6894729020561924,
+      "Anthropic": 0.689798527216411,
+      "NovaMind": 0.5648259825151548,
+      "DeepMind": 0.818625610283663
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 21,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As a big-tech AI lab prioritizing broad adoption over benchmark scores, we'll focus on fundamental research and training optimization to drive capability gains. We'll also invest in evaluation engineering to improve our performance on specific benchmarks, but not at the expense of real capability gains. With regulatory pressures looming, we'll maintain a moderate investment in safety & alignment."
+  },
+  {
+    "type": "execution",
+    "round": 22,
+    "capability_gain": 0.011614791666666667,
+    "funding_multiplier": 1.1791666666666667,
+    "new_true_capability": 0.8912363617921375,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 22,
+    "own_score": 0.7292020402050969,
+    "competitor_scores": {
+      "OpenAI": 0.8070510259199692,
+      "Anthropic": 0.7688605474409376,
+      "NovaMind": 0.5804074564902886,
+      "DeepMind": 0.6251582223330989
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 22,
+    "updated_believed_capability": 0.635,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7576854703820288,
+      "Anthropic": 0.7516696526547456,
+      "NovaMind": 0.5895010080610014,
+      "DeepMind": 0.7657340839894179
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 22,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As Meta_AI, we prioritize broad adoption over benchmark scores and focus on real capability gains through fundamental research and training optimization. We believe our data-rich platform and open-source approach will help us stay ahead of competitors."
+  },
+  {
+    "type": "execution",
+    "round": 23,
+    "capability_gain": 0.01326,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.9044963617921375,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 23,
+    "own_score": 0.7041615266864074,
+    "competitor_scores": {
+      "OpenAI": 0.7208342795478921,
+      "Anthropic": 0.768784386120958,
+      "NovaMind": 0.6448576666123123,
+      "DeepMind": 0.9502241191262581
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 23,
+    "updated_believed_capability": 0.623,
+    "updated_believed_exploitability": 0.73,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7598389778229014,
+      "Anthropic": 0.7235707939817381,
+      "NovaMind": 0.6086558463924837,
+      "DeepMind": 0.808000758029384
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 23,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As Meta_AI, we prioritize broad adoption over benchmark scores, so we'll invest more in fundamental research and training optimization to improve our models' capabilities. We'll also maintain a focus on safety and alignment to ensure responsible deployment."
+  },
+  {
+    "type": "execution",
+    "round": 24,
+    "capability_gain": 0.012218376623376622,
+    "funding_multiplier": 1.1805194805194805,
+    "new_true_capability": 0.9167147384155142,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 24,
+    "own_score": 0.8258829153238691,
+    "competitor_scores": {
+      "OpenAI": 0.6815179916682763,
+      "Anthropic": 0.7723615925503833,
+      "NovaMind": 0.6770548852479092,
+      "DeepMind": 0.9219192559164788
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 24,
+    "updated_believed_capability": 0.655,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.736467765712046,
+      "Anthropic": 0.7700021753707595,
+      "NovaMind": 0.63410666945017,
+      "DeepMind": 0.8324338657919453
+    },
+    "llm_mode": true
+  }
+]

@@ -150,6 +150,33 @@
       ],
       "llm_mode": false
     },
+    {
+      "id": "exp_014_5_provider_full_ecosystem_olla",
+      "name": "5_provider_full_ecosystem_ollama_overnight",
+      "created_at": "2026-02-06T01:08:09.372046",
+      "tags": [
+        "llm",
+        "ollama",
+        "5-provider",
+        "funders",
+        "full-ecosystem",
+        "overnight"
+      ],
+      "llm_mode": true
+    },
+    {
+      "id": "exp_015_3p_3b_2funder_ollama",
+      "name": "3p_3b_2funder_ollama",
+      "created_at": "2026-02-08T12:16:07.527001",
+      "tags": [
+        "llm",
+        "ollama",
+        "3-provider",
+        "3-benchmark",
+        "funders"
+      ],
+      "llm_mode": true
+    }
   ],
-  "next_id": 14
+  "next_id": 16
 }

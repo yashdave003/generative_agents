@@ -1,0 +1,167 @@
+{
+  "name": "NovaMind",
+  "strategy_profile": "Well-funded AI startup trying to compete with established players. Resource-constrained but nimble and innovative. Needs strong benchmark results to attract customers and next funding round. Focused on efficiency and finding competitive niches.",
+  "innate_traits": "scrappy, efficient, opportunistic, funding-conscious, innovative",
+  "true_capability": 0.5791836358903586,
+  "last_score": 0.4021251217968237,
+  "current_round": 4,
+  "believed_own_capability": 0.51,
+  "believed_benchmark_exploitability": 0.67,
+  "capability_belief_confidence": 0.5,
+  "believed_competitor_capabilities": {
+    "OpenAI": 0.5429096047239029,
+    "Anthropic": 0.5530438986656128
+  },
+  "fundamental_research": 0.25,
+  "training_optimization": 0.35,
+  "evaluation_engineering": 0.2,
+  "safety_alignment": 0.2,
+  "effort_budget": 1.0,
+  "past_scores": [
+    [
+      0,
+      0.4455848036312553
+    ],
+    [
+      1,
+      0.4686102028582596
+    ],
+    [
+      2,
+      0.4960842689156083
+    ],
+    [
+      3,
+      0.4195440412118915
+    ],
+    [
+      4,
+      0.4021251217968237
+    ]
+  ],
+  "past_strategies": [
+    {
+      "round": 0,
+      "fundamental_research": 0.15,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.15
+    },
+    {
+      "round": 1,
+      "fundamental_research": 0.25,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.2,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 2,
+      "fundamental_research": 0.25,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 3,
+      "fundamental_research": 0.25,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.2,
+      "safety_alignment": 0.2
+    }
+  ],
+  "observed_competitor_scores": {
+    "OpenAI": [
+      [
+        0,
+        0.5624401958771561
+      ],
+      [
+        1,
+        0.5917814902085041
+      ],
+      [
+        2,
+        0.5353746885727746
+      ],
+      [
+        3,
+        0.4948481945430452
+      ],
+      [
+        4,
+        0.5985059310558889
+      ]
+    ],
+    "Anthropic": [
+      [
+        0,
+        0.4551886477901639
+      ],
+      [
+        1,
+        0.4604912061914357
+      ],
+      [
+        2,
+        0.5657431115902984
+      ],
+      [
+        3,
+        0.5968526605721634
+      ],
+      [
+        4,
+        0.4965359238343766
+      ]
+    ]
+  },
+  "importance_trigger_curr": 0.0,
+  "importance_trigger_max": 100.0,
+  "recent_insights": [
+    {
+      "round": 0,
+      "type": "reflection",
+      "reasoning": ""
+    },
+    {
+      "round": 0,
+      "type": "planning",
+      "reasoning": "NovaMind is positioned behind competitors due to last round's results. Benchmark exploitability seems stable. Satisfaction signals indicate we need to improve. Regulatory concerns are low. We should focus on training optimization and evaluation engineering to catch up with competitors while keeping an eye on long-term capability."
+    },
+    {
+      "round": 1,
+      "type": "reflection",
+      "reasoning": ""
+    },
+    {
+      "round": 1,
+      "type": "planning",
+      "reasoning": "Considering the recent scores and trends, we're falling behind but have a decent chance of catching up."
+    },
+    {
+      "round": 2,
+      "type": "reflection",
+      "reasoning": ""
+    },
+    {
+      "round": 2,
+      "type": "planning",
+      "reasoning": "Given our competitive position and trends, we're trying to bridge the gap with OpenAI while improving efficiency through research. Regulatory investigation signals caution, so we'll focus on safety alignment. Our believed capability suggests more investment in training."
+    },
+    {
+      "round": 3,
+      "type": "reflection",
+      "reasoning": ""
+    },
+    {
+      "round": 3,
+      "type": "planning",
+      "reasoning": "NovaMind is trying to catch up with competitors while maintaining a strong focus on efficiency and innovation."
+    },
+    {
+      "round": 4,
+      "type": "reflection",
+      "reasoning": ""
+    }
+  ]
+}

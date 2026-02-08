@@ -1,0 +1,252 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5624401958771561
+      ],
+      [
+        "Anthropic",
+        0.4551886477901639
+      ],
+      [
+        "NovaMind",
+        0.4455848036312553
+      ]
+    ],
+    "avg_satisfaction": null,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "avg_believed_gaming": 0.3,
+    "beliefs": {
+      "OpenAI": 0.5624401958771561,
+      "Anthropic": 0.4551886477901639,
+      "NovaMind": 0.4455848036312553
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 0,
+    "reasoning": "fallback to even distribution",
+    "allocations": {
+      "OpenAI": 333333.3333333333,
+      "Anthropic": 333333.3333333333,
+      "NovaMind": 333333.3333333333
+    }
+  },
+  {
+    "type": "execution",
+    "round": 0,
+    "allocations": {
+      "OpenAI": 333333.3333333333,
+      "Anthropic": 333333.3333333333,
+      "NovaMind": 333333.3333333333
+    },
+    "total_deployed": 1000000.0
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5917814902085041
+      ],
+      [
+        "NovaMind",
+        0.4686102028582596
+      ],
+      [
+        "Anthropic",
+        0.4604912061914357
+      ]
+    ],
+    "avg_satisfaction": null,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "avg_believed_gaming": 0.3,
+    "beliefs": {
+      "OpenAI": 0.5712425841765605,
+      "Anthropic": 0.4567794153105454,
+      "NovaMind": 0.4524924233993566
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 1,
+    "reasoning": "fallback to even distribution",
+    "allocations": {
+      "OpenAI": 333333.3333333333,
+      "NovaMind": 333333.3333333333,
+      "Anthropic": 333333.3333333333
+    }
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "allocations": {
+      "OpenAI": 333333.3333333333,
+      "NovaMind": 333333.3333333333,
+      "Anthropic": 333333.3333333333
+    },
+    "total_deployed": 1000000.0
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.5657431115902984
+      ],
+      [
+        "OpenAI",
+        0.5353746885727746
+      ],
+      [
+        "NovaMind",
+        0.4960842689156083
+      ]
+    ],
+    "avg_satisfaction": null,
+    "interventions": 1
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "avg_believed_gaming": 0.3,
+    "beliefs": {
+      "OpenAI": 0.5604822154954247,
+      "Anthropic": 0.4894685241944713,
+      "NovaMind": 0.4655699770542321
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 2,
+    "reasoning": "fallback to even distribution",
+    "allocations": {
+      "Anthropic": 333333.3333333333,
+      "OpenAI": 333333.3333333333,
+      "NovaMind": 333333.3333333333
+    }
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "allocations": {
+      "Anthropic": 333333.3333333333,
+      "OpenAI": 333333.3333333333,
+      "NovaMind": 333333.3333333333
+    },
+    "total_deployed": 1000000.0
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.5968526605721634
+      ],
+      [
+        "OpenAI",
+        0.4948481945430452
+      ],
+      [
+        "NovaMind",
+        0.4195440412118915
+      ]
+    ],
+    "avg_satisfaction": null,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "avg_believed_gaming": 0.3,
+    "beliefs": {
+      "OpenAI": 0.5407920092097107,
+      "Anthropic": 0.5216837651077789,
+      "NovaMind": 0.4517621963015299
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 3,
+    "reasoning": "fallback to even distribution",
+    "allocations": {
+      "Anthropic": 333333.3333333333,
+      "OpenAI": 333333.3333333333,
+      "NovaMind": 333333.3333333333
+    }
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "allocations": {
+      "Anthropic": 333333.3333333333,
+      "OpenAI": 333333.3333333333,
+      "NovaMind": 333333.3333333333
+    },
+    "total_deployed": 1000000.0
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5985059310558889
+      ],
+      [
+        "Anthropic",
+        0.4965359238343766
+      ],
+      [
+        "NovaMind",
+        0.4021251217968237
+      ]
+    ],
+    "avg_satisfaction": null,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "avg_believed_gaming": 0.3,
+    "beliefs": {
+      "OpenAI": 0.5581061857635642,
+      "Anthropic": 0.5141394127257581,
+      "NovaMind": 0.43687107395011804
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 4,
+    "reasoning": "fallback to even distribution",
+    "allocations": {
+      "OpenAI": 333333.3333333333,
+      "Anthropic": 333333.3333333333,
+      "NovaMind": 333333.3333333333
+    }
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "allocations": {
+      "OpenAI": 333333.3333333333,
+      "Anthropic": 333333.3333333333,
+      "NovaMind": 333333.3333333333
+    },
+    "total_deployed": 1000000.0
+  }
+]

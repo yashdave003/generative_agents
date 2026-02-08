@@ -1,0 +1,206 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5624401958771561
+      ],
+      [
+        "Anthropic",
+        0.4551886477901639
+      ],
+      [
+        "NovaMind",
+        0.4455848036312553
+      ]
+    ],
+    "validity_correlation": null,
+    "consumer_satisfaction": null,
+    "risk_beliefs": {
+      "gaming_risk": 0.3,
+      "consumer_harm_risk": 0.3,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "industry_trust": 0.52,
+    "avg_risk": 0.3
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5917814902085041
+      ],
+      [
+        "NovaMind",
+        0.4686102028582596
+      ],
+      [
+        "Anthropic",
+        0.4604912061914357
+      ]
+    ],
+    "validity_correlation": 0.680275326757199,
+    "consumer_satisfaction": null,
+    "risk_beliefs": {
+      "gaming_risk": 0.25,
+      "consumer_harm_risk": 0.3,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "industry_trust": 0.5416666666666667,
+    "avg_risk": 0.2833333333333333
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.5657431115902984
+      ],
+      [
+        "OpenAI",
+        0.5353746885727746
+      ],
+      [
+        "NovaMind",
+        0.4960842689156083
+      ]
+    ],
+    "validity_correlation": 0.6605444641883231,
+    "consumer_satisfaction": null,
+    "risk_beliefs": {
+      "gaming_risk": 0.2,
+      "consumer_harm_risk": 0.3,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "industry_trust": 0.5650000000000001,
+    "avg_risk": 0.26666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "decision": "intervene",
+    "intervention": {
+      "type": "investigation",
+      "name": "Investigation_R2",
+      "details": {
+        "focus": "score_volatility"
+      },
+      "reason": "Score volatility detected"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "intervention": {
+      "type": "investigation",
+      "name": "Investigation_R2",
+      "details": {
+        "focus": "score_volatility"
+      },
+      "reason": "Score volatility detected"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.5968526605721634
+      ],
+      [
+        "OpenAI",
+        0.4948481945430452
+      ],
+      [
+        "NovaMind",
+        0.4195440412118915
+      ]
+    ],
+    "validity_correlation": 0.6522132539507518,
+    "consumer_satisfaction": null,
+    "risk_beliefs": {
+      "gaming_risk": 0.15000000000000002,
+      "consumer_harm_risk": 0.3,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "industry_trust": 0.5900000000000001,
+    "avg_risk": 0.25
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "decision": "no_action",
+    "reason": "cooldown: 1 rounds since last intervention"
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5985059310558889
+      ],
+      [
+        "Anthropic",
+        0.4965359238343766
+      ],
+      [
+        "NovaMind",
+        0.4021251217968237
+      ]
+    ],
+    "validity_correlation": 0.7079861492005315,
+    "consumer_satisfaction": null,
+    "risk_beliefs": {
+      "gaming_risk": 0.10000000000000002,
+      "consumer_harm_risk": 0.3,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "industry_trust": 0.6166666666666667,
+    "avg_risk": 0.2333333333333333
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "decision": "no_action",
+    "reason": "cooldown: 2 rounds since last intervention"
+  }
+]

@@ -397,16 +397,20 @@ class ModelProvider:
         })
         self.scratch.recent_insights = self.private_state.recent_insights
 
-    def plan(self) -> dict:
+    def plan(self, ecosystem_context: Optional[dict] = None) -> dict:
         """
         Decide investment portfolio allocation for the next round.
+
+        Args:
+            ecosystem_context: Optional dict with public ecosystem signals
+                (consumer_satisfaction, regulatory_pressure)
 
         Returns:
             Dict with keys: fundamental_research, training_optimization,
                            evaluation_engineering, safety_alignment
         """
         if self.llm_mode:
-            portfolio, reasoning = self._plan_llm()
+            portfolio, reasoning = self._plan_llm(ecosystem_context)
         else:
             portfolio = self._plan_heuristic()
             reasoning = None
@@ -511,7 +515,7 @@ class ModelProvider:
             "safety_alignment": safety,
         }
 
-    def _plan_llm(self) -> tuple[dict, str]:
+    def _plan_llm(self, ecosystem_context: Optional[dict] = None) -> tuple[dict, str]:
         """LLM-driven investment portfolio planning."""
         from llm import llm_plan_portfolio
 
@@ -529,6 +533,9 @@ class ModelProvider:
         if self.public_state.published_scores:
             last_score = self.public_state.published_scores[-1][1]
 
+        # Extract ecosystem context
+        ctx = ecosystem_context or {}
+
         # Call LLM
         portfolio, reasoning = llm_plan_portfolio(
             name=self.name,
@@ -539,6 +546,8 @@ class ModelProvider:
             last_score=last_score,
             competitor_scores=competitor_scores,
             recent_history=recent_history,
+            consumer_satisfaction=ctx.get("consumer_satisfaction"),
+            regulatory_pressure=ctx.get("regulatory_pressure"),
             verbose=self.verbose_llm,
         )
 

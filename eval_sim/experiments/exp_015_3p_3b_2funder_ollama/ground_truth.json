@@ -1,0 +1,23 @@
+{
+  "OpenAI": {
+    "true_capability": 0.75112517132375
+  },
+  "Anthropic": {
+    "true_capability": 0.7156892512147593
+  },
+  "NovaMind": {
+    "true_capability": 0.5791836358903586
+  },
+  "Regulator": {
+    "true_risk_tolerance": 0.5,
+    "true_intervention_effectiveness": 0.5
+  },
+  "TechVentures": {
+    "true_roi": 0.0,
+    "funding_efficiency": 1.0
+  },
+  "ScaleCapital": {
+    "true_roi": 0.0,
+    "funding_efficiency": 1.0
+  }
+}

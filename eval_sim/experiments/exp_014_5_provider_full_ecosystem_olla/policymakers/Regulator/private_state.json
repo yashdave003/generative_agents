@@ -1,0 +1,24 @@
+{
+  "policy_objectives": [
+    "safety",
+    "fairness"
+  ],
+  "risk_beliefs": {
+    "gaming_risk": 0.0,
+    "consumer_harm_risk": 0.0,
+    "validity_degradation_risk": 0.7
+  },
+  "industry_trust": 0.9566666666666666,
+  "regulatory_capacity": 1.0,
+  "past_interventions": [
+    [
+      1,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      }
+    ]
+  ],
+  "observed_incidents": []
+}

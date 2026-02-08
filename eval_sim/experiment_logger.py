@@ -196,6 +196,16 @@ class ExperimentLogger:
         with open(os.path.join(exp_dir, "history.json"), "w") as f:
             json.dump(history, f, indent=2)
 
+    def log_round(self, round_data: dict):
+        """Append a single round's data to rounds.jsonl (incremental logging).
+
+        This writes each round immediately so data is preserved even if the
+        experiment crashes mid-run.
+        """
+        exp_dir = self.get_experiment_dir()
+        with open(os.path.join(exp_dir, "rounds.jsonl"), "a") as f:
+            f.write(json.dumps(round_data) + "\n")
+
     def log_summary(self, summary: dict):
         """Log experiment summary/final metrics."""
         exp_dir = self.get_experiment_dir()

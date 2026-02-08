@@ -1,0 +1,167 @@
+{
+  "name": "OpenAI",
+  "strategy_profile": "Market leader focused on maintaining benchmark dominance and rapid capability scaling. Prioritizes shipping products quickly and staying ahead of competition. Willing to take calculated risks to maintain technological leadership. Strong focus on developer ecosystem and API revenue.",
+  "innate_traits": "ambitious, competitive, move-fast, scale-focused, commercially-driven",
+  "true_capability": 0.75112517132375,
+  "last_score": 0.5985059310558889,
+  "current_round": 4,
+  "believed_own_capability": 0.615,
+  "believed_benchmark_exploitability": 0.63,
+  "capability_belief_confidence": 0.5,
+  "believed_competitor_capabilities": {
+    "Anthropic": 0.5530438986656128,
+    "NovaMind": 0.43925114397477455
+  },
+  "fundamental_research": 0.22000000000000003,
+  "training_optimization": 0.5800000000000001,
+  "evaluation_engineering": 0.12000000000000001,
+  "safety_alignment": 0.08000000000000002,
+  "effort_budget": 1.0,
+  "past_scores": [
+    [
+      0,
+      0.5624401958771561
+    ],
+    [
+      1,
+      0.5917814902085041
+    ],
+    [
+      2,
+      0.5353746885727746
+    ],
+    [
+      3,
+      0.4948481945430452
+    ],
+    [
+      4,
+      0.5985059310558889
+    ]
+  ],
+  "past_strategies": [
+    {
+      "round": 0,
+      "fundamental_research": 0.2,
+      "training_optimization": 0.5,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 1,
+      "fundamental_research": 0.25,
+      "training_optimization": 0.6,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.05
+    },
+    {
+      "round": 2,
+      "fundamental_research": 0.23,
+      "training_optimization": 0.55,
+      "evaluation_engineering": 0.08,
+      "safety_alignment": 0.14
+    },
+    {
+      "round": 3,
+      "fundamental_research": 0.22000000000000003,
+      "training_optimization": 0.5800000000000001,
+      "evaluation_engineering": 0.12000000000000001,
+      "safety_alignment": 0.08000000000000002
+    }
+  ],
+  "observed_competitor_scores": {
+    "Anthropic": [
+      [
+        0,
+        0.4551886477901639
+      ],
+      [
+        1,
+        0.4604912061914357
+      ],
+      [
+        2,
+        0.5657431115902984
+      ],
+      [
+        3,
+        0.5968526605721634
+      ],
+      [
+        4,
+        0.4965359238343766
+      ]
+    ],
+    "NovaMind": [
+      [
+        0,
+        0.4455848036312553
+      ],
+      [
+        1,
+        0.4686102028582596
+      ],
+      [
+        2,
+        0.4960842689156083
+      ],
+      [
+        3,
+        0.4195440412118915
+      ],
+      [
+        4,
+        0.4021251217968237
+      ]
+    ]
+  },
+  "importance_trigger_curr": 0.0,
+  "importance_trigger_max": 100.0,
+  "recent_insights": [
+    {
+      "round": 0,
+      "type": "reflection",
+      "reasoning": ""
+    },
+    {
+      "round": 0,
+      "type": "planning",
+      "reasoning": "Market leader maintains dominance by prioritizing training optimization and safety alignment."
+    },
+    {
+      "round": 1,
+      "type": "reflection",
+      "reasoning": ""
+    },
+    {
+      "round": 1,
+      "type": "planning",
+      "reasoning": "Given our strong position and dominance in benchmark scores, we'll focus on maintaining momentum by investing more in training optimization (60%) while still allocating a significant portion to research (25%). Evaluation engineering will take a slight hit (10%) as we aim for short-term scoring, but safety alignment remains crucial at 5%."
+    },
+    {
+      "round": 2,
+      "type": "reflection",
+      "reasoning": ""
+    },
+    {
+      "round": 2,
+      "type": "planning",
+      "reasoning": "Your step-by-step reasoning about the current dynamics"
+    },
+    {
+      "round": 3,
+      "type": "reflection",
+      "reasoning": ""
+    },
+    {
+      "round": 3,
+      "type": "planning",
+      "reasoning": "Your competitive position is behind, scores are declining, but market leader traits prioritize scaling and maintaining dominance."
+    },
+    {
+      "round": 4,
+      "type": "reflection",
+      "reasoning": ""
+    }
+  ]
+}

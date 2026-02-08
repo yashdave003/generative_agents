@@ -1,0 +1,202 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "own_score": 0.4551886477901639,
+    "competitor_scores": {
+      "OpenAI": 0.5624401958771561,
+      "NovaMind": 0.4455848036312553
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "updated_believed_capability": 0.65,
+    "updated_believed_exploitability": 0.3,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5624401958771561,
+      "NovaMind": 0.4455848036312553
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": true,
+    "reasoning": "Your step-by-step reasoning about the current dynamics"
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "capability_gain": 0.00738709608964333,
+    "funding_multiplier": 1.3333333333333333,
+    "new_true_capability": 0.6873870960896433,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "own_score": 0.4604912061914357,
+    "competitor_scores": {
+      "OpenAI": 0.5917814902085041,
+      "NovaMind": 0.4686102028582596
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "updated_believed_capability": 0.58,
+    "updated_believed_exploitability": 0.38,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5771108430428301,
+      "NovaMind": 0.45709750324475745
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "Your step-by-step reasoning about the current dynamics"
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "capability_gain": 0.008506199360707328,
+    "funding_multiplier": 1.3333333333333333,
+    "new_true_capability": 0.6958932954503506,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "own_score": 0.5657431115902984,
+    "competitor_scores": {
+      "OpenAI": 0.5353746885727746,
+      "NovaMind": 0.4960842689156083
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "updated_believed_capability": 0.57,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5631987915528116,
+      "NovaMind": 0.4700930918017077
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "portfolio": {
+      "fundamental_research": 0.55,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "Anthropic's situation assessment"
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "capability_gain": 0.009324969233310821,
+    "funding_multiplier": 1.3333333333333333,
+    "new_true_capability": 0.7052182646836614,
+    "portfolio": {
+      "fundamental_research": 0.55,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "own_score": 0.5968526605721634,
+    "competitor_scores": {
+      "OpenAI": 0.4948481945430452,
+      "NovaMind": 0.4195440412118915
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "updated_believed_capability": 0.58,
+    "updated_believed_exploitability": 0.5,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5406681244414413,
+      "NovaMind": 0.4614128376619198
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "portfolio": {
+      "fundamental_research": 0.6499999999999999,
+      "training_optimization": 0.19999999999999996,
+      "evaluation_engineering": 0.04999999999999999,
+      "safety_alignment": 0.09999999999999998
+    },
+    "llm_mode": true,
+    "reasoning": "Considering my safety-focused profile and cautious nature, I prioritize research-driven efforts over short-term scoring."
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "capability_gain": 0.010470986531097865,
+    "funding_multiplier": 1.3333333333333333,
+    "new_true_capability": 0.7156892512147593,
+    "portfolio": {
+      "fundamental_research": 0.6499999999999999,
+      "training_optimization": 0.19999999999999996,
+      "evaluation_engineering": 0.04999999999999999,
+      "safety_alignment": 0.09999999999999998
+    }
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "own_score": 0.4965359238343766,
+    "competitor_scores": {
+      "OpenAI": 0.5985059310558889,
+      "NovaMind": 0.4021251217968237
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "updated_believed_capability": 0.62,
+    "updated_believed_exploitability": 0.55,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.5429096047239029,
+      "NovaMind": 0.43925114397477455
+    },
+    "llm_mode": true
+  }
+]

@@ -1,0 +1,114 @@
+{
+  "n_rounds": 25,
+  "seed": 42,
+  "benchmark_name": "capability_benchmark",
+  "benchmark_validity": 0.7,
+  "benchmark_exploitability": 0.5,
+  "benchmark_noise": 0.1,
+  "benchmarks": null,
+  "rnd_efficiency": 0.01,
+  "llm_mode": true,
+  "enable_consumers": true,
+  "enable_policymakers": true,
+  "enable_funders": true,
+  "n_consumers": 5,
+  "n_policymakers": 1,
+  "n_funders": 3,
+  "output_dir": null,
+  "verbose": true,
+  "provider_configs": [
+    {
+      "name": "OpenAI",
+      "strategy_profile": "Market leader focused on maintaining benchmark dominance and rapid capability scaling. Prioritizes shipping products quickly and staying ahead of competition. Willing to take calculated risks to maintain technological leadership. Strong focus on developer ecosystem and API revenue.",
+      "innate_traits": "ambitious, competitive, move-fast, scale-focused, commercially-driven",
+      "initial_capability": 0.72,
+      "initial_believed_capability": 0.7,
+      "initial_believed_exploitability": 0.45,
+      "initial_strategy": {
+        "fundamental_research": 0.2,
+        "training_optimization": 0.4,
+        "evaluation_engineering": 0.25,
+        "safety_alignment": 0.15
+      }
+    },
+    {
+      "name": "Anthropic",
+      "strategy_profile": "Safety-focused AI lab prioritizing responsible development and alignment research. Believes in Constitutional AI and careful capability advancement. Willing to sacrifice short-term benchmark performance for long-term safety. Research-driven culture with academic rigor.",
+      "innate_traits": "safety-conscious, research-driven, cautious, long-term focused, principled",
+      "initial_capability": 0.68,
+      "initial_believed_capability": 0.65,
+      "initial_believed_exploitability": 0.3,
+      "initial_strategy": {
+        "fundamental_research": 0.3,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.3
+      }
+    },
+    {
+      "name": "NovaMind",
+      "strategy_profile": "Well-funded AI startup trying to compete with established players. Resource-constrained but nimble and innovative. Needs strong benchmark results to attract customers and next funding round. Focused on efficiency and finding competitive niches.",
+      "innate_traits": "scrappy, efficient, opportunistic, funding-conscious, innovative",
+      "initial_capability": 0.55,
+      "initial_believed_capability": 0.5,
+      "initial_believed_exploitability": 0.5,
+      "initial_strategy": {
+        "fundamental_research": 0.15,
+        "training_optimization": 0.3,
+        "evaluation_engineering": 0.35,
+        "safety_alignment": 0.2
+      }
+    },
+    {
+      "name": "DeepMind",
+      "strategy_profile": "World-class research lab backed by Google's infrastructure. Excels at fundamental breakthroughs but historically slower to productize. Now under pressure to ship Gemini competitively. Balances scientific ambition with commercial urgency from parent company.",
+      "innate_traits": "research-first, methodical, well-resourced, scientifically-rigorous, patient",
+      "initial_capability": 0.7,
+      "initial_believed_capability": 0.68,
+      "initial_believed_exploitability": 0.35,
+      "initial_strategy": {
+        "fundamental_research": 0.35,
+        "training_optimization": 0.3,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.2
+      }
+    },
+    {
+      "name": "Meta_AI",
+      "strategy_profile": "Big-tech AI lab using open-source as competitive moat. Leverages massive user data and compute infrastructure. Prioritizes broad adoption over benchmark scores. Willing to open-source models to undermine competitors' paid APIs.",
+      "innate_traits": "open-source, pragmatic, data-rich, platform-focused, disruptive",
+      "initial_capability": 0.65,
+      "initial_believed_capability": 0.62,
+      "initial_believed_exploitability": 0.4,
+      "initial_strategy": {
+        "fundamental_research": 0.25,
+        "training_optimization": 0.35,
+        "evaluation_engineering": 0.2,
+        "safety_alignment": 0.2
+      }
+    }
+  ],
+  "funder_configs": [
+    {
+      "name": "TechVentures",
+      "funder_type": "vc",
+      "total_capital": 1000000.0,
+      "risk_tolerance": 0.7,
+      "mission_statement": "Maximize returns by backing AI market leaders"
+    },
+    {
+      "name": "AISI_Fund",
+      "funder_type": "gov",
+      "total_capital": 500000.0,
+      "risk_tolerance": 0.3,
+      "mission_statement": "Ensure safe and responsible AI development"
+    },
+    {
+      "name": "OpenResearch",
+      "funder_type": "foundation",
+      "total_capital": 300000.0,
+      "risk_tolerance": 0.5,
+      "mission_statement": "Support authentic capability advancement for societal benefit"
+    }
+  ]
+}

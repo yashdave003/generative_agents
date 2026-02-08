@@ -169,6 +169,11 @@ class ConsumerPrivateState:
     satisfaction_history: list = field(default_factory=list)  # [(round, provider, satisfaction), ...]
     subscription_history: list = field(default_factory=list)  # [(round, provider), ...]
 
+    # Consumer heterogeneity
+    switching_cost: float = 0.1
+    leaderboard_trust: float = 0.7
+    rounds_with_provider: int = 0
+
     def to_dict(self) -> dict:
         """Convert to dict for serialization."""
         return {
@@ -178,18 +183,31 @@ class ConsumerPrivateState:
             "believed_model_quality": self.believed_model_quality,
             "satisfaction_history": self.satisfaction_history,
             "subscription_history": self.subscription_history,
+            "switching_cost": self.switching_cost,
+            "leaderboard_trust": self.leaderboard_trust,
+            "rounds_with_provider": self.rounds_with_provider,
         }
 
     @classmethod
     def from_dict(cls, data: dict) -> "ConsumerPrivateState":
         """Create from dict."""
-        return cls(**data)
+        # Filter to known fields for backwards compatibility
+        known_fields = {
+            "use_cases", "budget", "current_subscription", "believed_model_quality",
+            "satisfaction_history", "subscription_history", "switching_cost",
+            "leaderboard_trust", "rounds_with_provider",
+        }
+        filtered = {k: v for k, v in data.items() if k in known_fields}
+        return cls(**filtered)
 
     def get_summary(self) -> str:
         """Get human-readable summary for prompts."""
         summary = f"Use Cases: {', '.join(self.use_cases) if self.use_cases else 'General'}\n"
         summary += f"Budget: ${self.budget:.0f}/month\n"
         summary += f"Current Subscription: {self.current_subscription or 'None'}\n"
+        summary += f"Leaderboard Trust: {self.leaderboard_trust:.2f}\n"
+        summary += f"Switching Cost: {self.switching_cost:.2f}\n"
+        summary += f"Rounds with Current Provider: {self.rounds_with_provider}\n"
 
         if self.believed_model_quality:
             summary += "Model Quality Beliefs:\n"
