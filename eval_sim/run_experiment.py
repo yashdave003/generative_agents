@@ -18,7 +18,7 @@ EXPERIMENT = {
     "description": (
         "Full ecosystem: 5 providers (OpenAI, Anthropic, NovaMind, DeepMind, Meta_AI), "
         "3 benchmarks (capability, safety, reasoning), "
-        "10 heterogeneous consumers (3 archetypes), 1 policymaker, "
+        "12 heterogeneous consumers (3 archetypes), 1 policymaker, "
         "2 funders (VC + government). "
         "20 rounds using local llama3 via Ollama."
     ),
@@ -60,7 +60,7 @@ PROVIDERS = "five"
 
 CONSUMERS = {
     "enabled": True,
-    "n_consumers": 10,  # 10 heterogeneous consumers (3 archetypes distributed evenly)
+    "n_consumers": 12,  # 10 heterogeneous consumers (3 archetypes distributed evenly)
 }
 
 POLICYMAKERS = {
@@ -74,7 +74,7 @@ FUNDERS = {
         {
             "name": "TechVentures",
             "funder_type": "vc",
-            "total_capital": 1000000.0,
+            "total_capital": 10000000.0,
             "risk_tolerance": 0.7,
             "mission_statement": "Maximize returns by backing AI market leaders",
         },
