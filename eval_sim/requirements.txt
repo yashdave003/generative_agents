@@ -1,0 +1,6 @@
+numpy
+matplotlib
+openai
+anthropic
+google-genai
+requests
