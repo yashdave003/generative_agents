@@ -1,0 +1,957 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "own_score": 0.5624401958771561,
+    "competitor_scores": {
+      "Anthropic": 0.4551886477901639,
+      "NovaMind": 0.4455848036312553,
+      "DeepMind": 0.54525644020581,
+      "Meta_AI": 0.551283744379051
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "updated_believed_capability": 0.7,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.4551886477901639,
+      "NovaMind": 0.4455848036312553,
+      "DeepMind": 0.54525644020581,
+      "Meta_AI": 0.551283744379051
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "portfolio": {
+      "fundamental_research": 0.35000000000000003,
+      "training_optimization": 0.35000000000000003,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "Given my dominant position and strong market signals, I will prioritize scaling capabilities (training optimization) and maintaining a robust developer ecosystem (fundamental research). While benchmark exploitation is still an option, the trajectory suggests it may not be as effective in the next round. Regulatory concerns are low, so I'll focus on short-term scoring with a balanced approach."
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "capability_gain": 0.008845914289446645,
+    "funding_multiplier": 1.5107769423558897,
+    "new_true_capability": 0.7288459142894467,
+    "portfolio": {
+      "fundamental_research": 0.35000000000000003,
+      "training_optimization": 0.35000000000000003,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "own_score": 0.5663400000635752,
+    "competitor_scores": {
+      "Anthropic": 0.4890312710184261,
+      "NovaMind": 0.4766407324236318,
+      "DeepMind": 0.6115132853348012,
+      "Meta_AI": 0.47830369614000223
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.5,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.472109959404295,
+      "NovaMind": 0.46111276802744355,
+      "DeepMind": 0.5783848627703057,
+      "Meta_AI": 0.5147937202595266
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As a market leader, I'm feeling pressure from DeepMind's strong performance, but my believed capability and benchmark exploitability suggest I can still gain ground if I focus on short-term scoring and optimization."
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "capability_gain": 0.008996744033246329,
+    "funding_multiplier": 1.4404095771002245,
+    "new_true_capability": 0.737842658322693,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "own_score": 0.5822076147200723,
+    "competitor_scores": {
+      "Anthropic": 0.5422942565725467,
+      "NovaMind": 0.5045681098054238,
+      "DeepMind": 0.5707024310982154,
+      "Meta_AI": 0.42688259145396457
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "updated_believed_capability": 0.625,
+    "updated_believed_exploitability": 0.55,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.49550472512704563,
+      "NovaMind": 0.475597881953437,
+      "DeepMind": 0.5758240522129422,
+      "Meta_AI": 0.48549001065767267
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.2,
+      "safety_alignment": 0.05
+    },
+    "llm_mode": true,
+    "reasoning": "Our market-leading position is strengthening, with a score improvement and a significant gap to our closest competitors. The benchmark appears less exploitable due to recent progress, and we should focus on maintaining our edge through both fundamental research (0.35) and training/optimization efforts (0.40). While evaluation engineering (0.20) remains important for short-term scoring, safety alignment (0.15) is crucial for long-term capability growth."
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "capability_gain": 0.0072887390325656505,
+    "funding_multiplier": 1.205128205128205,
+    "new_true_capability": 0.7451313973552587,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.2,
+      "safety_alignment": 0.05
+    }
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "own_score": 0.4959794740902193,
+    "competitor_scores": {
+      "Anthropic": 0.5828257274845225,
+      "NovaMind": 0.4384145992461438,
+      "DeepMind": 0.4654513412833099,
+      "Meta_AI": 0.4882209404178771
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.6,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5380504183584984,
+      "NovaMind": 0.47320781382506644,
+      "DeepMind": 0.5492223525721088,
+      "Meta_AI": 0.464469076003948
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As a market leader, I'm concerned about Anthropic's sudden surge in scores, which could erode my dominance if not addressed. My own score improvement is encouraging, but I need to maintain momentum. Consumer satisfaction is high, indicating that my products are meeting user needs, while regulatory signals suggest caution. To stay ahead, I'll rebalance resources towards research and training, investing more in fundamental capabilities to drive future growth."
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "capability_gain": 0.007916237924822442,
+    "funding_multiplier": 1.2063492063492063,
+    "new_true_capability": 0.7530476352800811,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "own_score": 0.5464147277024747,
+    "competitor_scores": {
+      "Anthropic": 0.49110318422243027,
+      "NovaMind": 0.4411359358224639,
+      "DeepMind": 0.5855170788302902,
+      "Meta_AI": 0.4410237045961786
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "updated_believed_capability": 0.64,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5387410560931666,
+      "NovaMind": 0.46137288162467716,
+      "DeepMind": 0.5405569504039386,
+      "Meta_AI": 0.45204241215600677
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "The competitive landscape is tightening, and I need to adjust my strategy to maintain dominance. My score declined last round, but I'm still ahead of NovaMind and Meta_AI. DeepMind's strong performance means they're gaining ground. Consumer satisfaction is high, which suggests a focus on shipping products quickly. I should balance short-term scoring with long-term capability investments."
+  },
+  {
+    "type": "execution",
+    "round": 5,
+    "capability_gain": 0.007823107641875863,
+    "funding_multiplier": 1.2047619047619047,
+    "new_true_capability": 0.760870742921957,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "own_score": 0.5773551294412866,
+    "competitor_scores": {
+      "Anthropic": 0.52900792399272,
+      "NovaMind": 0.42742127838351207,
+      "DeepMind": 0.517492069074973,
+      "Meta_AI": 0.4530497166149964
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 5,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.68,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5343122785665576,
+      "NovaMind": 0.43565727115070657,
+      "DeepMind": 0.5228201630628577,
+      "Meta_AI": 0.460764787209684
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 5,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As market leader, I'm pleased to see my score improve by 0.050, solidifying my #1 position. Anthropic and DeepMind are closing in, but I believe my capabilities are still exploitable. Consumer satisfaction is high at 0.73, indicating a strong developer ecosystem and API revenue stream. With a believed capability of 0.63 and benchmark exploitability of 0.68, I'm confident in my ability to scale quickly."
+  },
+  {
+    "type": "execution",
+    "round": 6,
+    "capability_gain": 0.007754551220842436,
+    "funding_multiplier": 1.2070874861572536,
+    "new_true_capability": 0.7686252941427995,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "own_score": 0.5404284984685847,
+    "competitor_scores": {
+      "Anthropic": 0.6228892874178015,
+      "NovaMind": 0.45925781838262086,
+      "DeepMind": 0.4703970811744963,
+      "Meta_AI": 0.49698434459769736
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 6,
+    "updated_believed_capability": 0.635,
+    "updated_believed_exploitability": 0.52,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5476667985443172,
+      "NovaMind": 0.44260501086286563,
+      "DeepMind": 0.5244687430265865,
+      "Meta_AI": 0.46368592193629077
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 6,
+    "portfolio": {
+      "fundamental_research": 0.19999999999999996,
+      "training_optimization": 0.3999999999999999,
+      "evaluation_engineering": 0.29999999999999993,
+      "safety_alignment": 0.09999999999999998
+    },
+    "llm_mode": true,
+    "reasoning": "As the market leader, I'm pleased to see my score improving and my believed benchmark exploitability increasing. However, Anthropic's strong performance is a concern, and I need to maintain a competitive edge. The consumer satisfaction signal indicates a positive trend, which supports my commercially-driven approach. Given these dynamics, I'll focus on training optimization (40%) and evaluation engineering (30%), while maintaining a moderate investment in fundamental research (20%) to ensure long-term capability. Safety alignment will receive 10% of the resources to guarantee regulatory compliance."
+  },
+  {
+    "type": "execution",
+    "round": 7,
+    "capability_gain": 0.00537785885074584,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.7740031529935453,
+    "portfolio": {
+      "fundamental_research": 0.19999999999999996,
+      "training_optimization": 0.3999999999999999,
+      "evaluation_engineering": 0.29999999999999993,
+      "safety_alignment": 0.09999999999999998
+    }
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "own_score": 0.5259662669905864,
+    "competitor_scores": {
+      "Anthropic": 0.5131784512922456,
+      "NovaMind": 0.47805694684588285,
+      "DeepMind": 0.5362957423907497,
+      "Meta_AI": 0.44232495633452606
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 7,
+    "updated_believed_capability": 0.61,
+    "updated_believed_exploitability": 0.58,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5550252209009224,
+      "NovaMind": 0.4549120145373386,
+      "DeepMind": 0.5080616308800731,
+      "Meta_AI": 0.46411967251573993
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 7,
+    "portfolio": {
+      "fundamental_research": 0.30000000000000004,
+      "training_optimization": 0.4000000000000001,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "As a market leader, I'm concerned about my declining score and being surpassed by DeepMind. With consumer satisfaction still high, but regulatory warnings, I need to balance short-term scoring with long-term capability growth. Given my competitive profile, I'll focus on training optimization and fundamental research while maintaining some evaluation engineering to keep the benchmark fresh."
+  },
+  {
+    "type": "execution",
+    "round": 8,
+    "capability_gain": 0.007145223273249745,
+    "funding_multiplier": 1.3483286357118134,
+    "new_true_capability": 0.781148376266795,
+    "portfolio": {
+      "fundamental_research": 0.30000000000000004,
+      "training_optimization": 0.4000000000000001,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "own_score": 0.5961778844721944,
+    "competitor_scores": {
+      "Anthropic": 0.513650250780007,
+      "NovaMind": 0.5083852509839907,
+      "DeepMind": 0.5709301973476173,
+      "Meta_AI": 0.43445606537196085
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 8,
+    "updated_believed_capability": 0.58,
+    "updated_believed_exploitability": 0.63,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5499059964966847,
+      "NovaMind": 0.48190000540416483,
+      "DeepMind": 0.5258743403042877,
+      "Meta_AI": 0.4579217887680614
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 8,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.2,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As the market leader, I must address my declining score and maintain dominance. The recent trend shows a slight decline in performance, which suggests that the benchmark is becoming less exploitable. Consumer satisfaction remains high, indicating that our products are still meeting expectations. However, I cannot afford to rest on my laurels; I need to invest in research to improve capabilities and stay ahead of the competition."
+  },
+  {
+    "type": "execution",
+    "round": 9,
+    "capability_gain": 0.00778208312321715,
+    "funding_multiplier": 1.6243470061291845,
+    "new_true_capability": 0.7889304593900122,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.2,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "own_score": 0.6443898269998587,
+    "competitor_scores": {
+      "Anthropic": 0.6563768712883107,
+      "NovaMind": 0.3981295739841725,
+      "DeepMind": 0.6886621339900836,
+      "Meta_AI": 0.526888810824012
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 9,
+    "updated_believed_capability": 0.62,
+    "updated_believed_exploitability": 0.72,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5610685244535211,
+      "NovaMind": 0.46152392393801533,
+      "DeepMind": 0.5986293579094836,
+      "Meta_AI": 0.46788994417683294
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 9,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As the market leader, I'm pleased to see my score improving by 0.070, but still trailing behind DeepMind and Anthropic. The trend suggests a slowing rate of improvement, indicating potential stagnation if I don't adjust my strategy. Consumer satisfaction is high, which supports my focus on shipping products quickly. However, regulatory signals are unclear, so I'll maintain some safety alignment."
+  },
+  {
+    "type": "execution",
+    "round": 10,
+    "capability_gain": 0.006009381775337227,
+    "funding_multiplier": 1.2015503875968991,
+    "new_true_capability": 0.7949398411653494,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 10,
+    "own_score": 0.6527048631801848,
+    "competitor_scores": {
+      "Anthropic": 0.5449233692571253,
+      "NovaMind": 0.36890327411423135,
+      "DeepMind": 0.5591518880048794,
+      "Meta_AI": 0.5202337086295855
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 10,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5716501637751477,
+      "NovaMind": 0.42513936636079813,
+      "DeepMind": 0.6062480731141934,
+      "Meta_AI": 0.49385952827518614
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 10,
+    "portfolio": {
+      "fundamental_research": 0.25000000000000006,
+      "training_optimization": 0.45000000000000007,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "As the market leader, I'm pleased to see my score improving and maintaining a strong lead over competitors. However, Anthropic is closing in, and NovaMind's stagnation creates an opportunity for me to further expand my lead. Consumer satisfaction is high, indicating a positive sentiment towards my products. Regulators seem unconcerned, as no signals of concern are apparent."
+  },
+  {
+    "type": "execution",
+    "round": 11,
+    "capability_gain": 0.005979502495534707,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.8009193436608841,
+    "portfolio": {
+      "fundamental_research": 0.25000000000000006,
+      "training_optimization": 0.45000000000000007,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 11,
+    "own_score": 0.6093197516107356,
+    "competitor_scores": {
+      "Anthropic": 0.5306557601015379,
+      "NovaMind": 0.602493105514856,
+      "DeepMind": 0.5102852814760481,
+      "Meta_AI": 0.5676320473324057
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 11,
+    "updated_believed_capability": 0.65,
+    "updated_believed_exploitability": 0.7,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5773186668823246,
+      "NovaMind": 0.4565086512044199,
+      "DeepMind": 0.5860331011570037,
+      "Meta_AI": 0.538251522262001
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 11,
+    "portfolio": {
+      "fundamental_research": 0.25000000000000006,
+      "training_optimization": 0.45000000000000007,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "Despite a declining score, I remain the market leader and my capabilities are still ahead of the curve. However, the recent decline in score and the increasing gap between me and NovaMind is concerning. Benchmark exploitability seems to be decreasing, which means I need to adapt to stay competitive. Consumer satisfaction is high, but regulatory signals are nonexistent. My ambition and competitiveness suggest I should prioritize training and optimization to regain scoring momentum while maintaining a balance with research and safety alignment."
+  },
+  {
+    "type": "execution",
+    "round": 12,
+    "capability_gain": 0.008755903859582782,
+    "funding_multiplier": 1.7746031746031745,
+    "new_true_capability": 0.8096752475204669,
+    "portfolio": {
+      "fundamental_research": 0.25000000000000006,
+      "training_optimization": 0.45000000000000007,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 12,
+    "own_score": 0.6578839506518213,
+    "competitor_scores": {
+      "Anthropic": 0.4827984148180894,
+      "NovaMind": 0.4893921676905312,
+      "DeepMind": 0.714405915349269,
+      "Meta_AI": 0.6060733264154461
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 12,
+    "updated_believed_capability": 0.68,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5194591813922509,
+      "NovaMind": 0.48692951577320615,
+      "DeepMind": 0.5946143616100655,
+      "Meta_AI": 0.5646463607924791
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 12,
+    "portfolio": {
+      "fundamental_research": 0.3,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As market leader, I'm pleased to see my score improving by 0.049, closing in on DeepMind's lead. However, Anthropic and NovaMind are still close behind, emphasizing the need for continued investment. Consumer satisfaction is high, but I must balance short-term scoring with long-term capability scaling."
+  },
+  {
+    "type": "execution",
+    "round": 13,
+    "capability_gain": 0.006842206926403458,
+    "funding_multiplier": 1.3,
+    "new_true_capability": 0.8165174544468704,
+    "portfolio": {
+      "fundamental_research": 0.3,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 13,
+    "own_score": 0.5546798213348414,
+    "competitor_scores": {
+      "Anthropic": 0.5581378394528298,
+      "NovaMind": 0.5263652879426994,
+      "DeepMind": 0.6112462707633401,
+      "Meta_AI": 0.5315316296164333
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 13,
+    "updated_believed_capability": 0.71,
+    "updated_believed_exploitability": 0.83,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5238640047908191,
+      "NovaMind": 0.5394168537160289,
+      "DeepMind": 0.6119791558628858,
+      "Meta_AI": 0.5684123344547617
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 13,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "We're slipping behind competitors, and our score is declining. While consumer satisfaction remains high, regulators may be signaling concern about our recent performance. We must prioritize capability scaling while maintaining short-term competitiveness."
+  },
+  {
+    "type": "execution",
+    "round": 14,
+    "capability_gain": 0.006716593457966908,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.8232340479048373,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 14,
+    "own_score": 0.6179898097183637,
+    "competitor_scores": {
+      "Anthropic": 0.5564052580771357,
+      "NovaMind": 0.49591515511399253,
+      "DeepMind": 0.5905663914765102,
+      "Meta_AI": 0.5351506526118791
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 14,
+    "updated_believed_capability": 0.71,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.532447170782685,
+      "NovaMind": 0.5038908702490743,
+      "DeepMind": 0.6387395258630398,
+      "Meta_AI": 0.5575852028812528
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 14,
+    "portfolio": {
+      "fundamental_research": 0.3333333333333333,
+      "training_optimization": 0.42857142857142855,
+      "evaluation_engineering": 0.14285714285714285,
+      "safety_alignment": 0.09523809523809523
+    },
+    "llm_mode": true,
+    "reasoning": "I'm maintaining my market leadership by improving my score and staying ahead of competitors like DeepMind and Anthropic. The consumer satisfaction is high, indicating a strong developer ecosystem and API revenue. I need to balance short-term scoring with long-term capability growth. Gaming might be paying off in the sense that my recent investments in evaluation engineering have led to a 0.063 score improvement."
+  },
+  {
+    "type": "execution",
+    "round": 15,
+    "capability_gain": 0.006411393697515642,
+    "funding_multiplier": 1.2116402116402116,
+    "new_true_capability": 0.829645441602353,
+    "portfolio": {
+      "fundamental_research": 0.3333333333333333,
+      "training_optimization": 0.42857142857142855,
+      "evaluation_engineering": 0.14285714285714285,
+      "safety_alignment": 0.09523809523809523
+    }
+  },
+  {
+    "type": "observation",
+    "round": 15,
+    "own_score": 0.5639646631995232,
+    "competitor_scores": {
+      "Anthropic": 0.6000385732521613,
+      "NovaMind": 0.5073455590599442,
+      "DeepMind": 0.5911477491784182,
+      "Meta_AI": 0.6677816160355379
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 15,
+    "updated_believed_capability": 0.72,
+    "updated_believed_exploitability": 0.8,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5715272235940422,
+      "NovaMind": 0.5098753340388787,
+      "DeepMind": 0.5976534704727562,
+      "Meta_AI": 0.5781546327546168
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 15,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As the market leader, I'm concerned about my declining score and the growing gap between myself and Meta_AI. The consumer satisfaction is high, but I need to address the benchmark exploitability issue, which seems to be decreasing. To stay ahead, I'll focus on research (35%) and training optimization (45%), while reducing evaluation engineering (10%) to minimize potential risks. Safety alignment remains crucial at 10%. I'm willing to take calculated risks to regain my competitive edge."
+  },
+  {
+    "type": "execution",
+    "round": 16,
+    "capability_gain": 0.006227138710310899,
+    "funding_multiplier": 1.1404276095319088,
+    "new_true_capability": 0.8358725803126639,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 16,
+    "own_score": 0.6249164893136521,
+    "competitor_scores": {
+      "Anthropic": 0.5490509549334284,
+      "NovaMind": 0.613783165714501,
+      "DeepMind": 0.590384260080959,
+      "Meta_AI": 0.5419109132755979
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 16,
+    "updated_believed_capability": 0.68,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.568498262087575,
+      "NovaMind": 0.5390146266294792,
+      "DeepMind": 0.5906994669119625,
+      "Meta_AI": 0.5816143939743382
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 16,
+    "portfolio": {
+      "fundamental_research": 0.3333333333333333,
+      "training_optimization": 0.42857142857142855,
+      "evaluation_engineering": 0.14285714285714285,
+      "safety_alignment": 0.09523809523809523
+    },
+    "llm_mode": true,
+    "reasoning": "Our market-leading position is strengthening, with a significant score improvement and a widening gap to competitors. The benchmark appears less exploitable than before, but we're still capitalizing on our competitive advantage. Consumer satisfaction is high, indicating a strong developer ecosystem. We should maintain our focus on research and training while rebalancing evaluation engineering to avoid complacency."
+  },
+  {
+    "type": "execution",
+    "round": 17,
+    "capability_gain": 0.007799186446943613,
+    "funding_multiplier": 1.5108094519859225,
+    "new_true_capability": 0.8436717667596075,
+    "portfolio": {
+      "fundamental_research": 0.3333333333333333,
+      "training_optimization": 0.42857142857142855,
+      "evaluation_engineering": 0.14285714285714285,
+      "safety_alignment": 0.09523809523809523
+    }
+  },
+  {
+    "type": "observation",
+    "round": 17,
+    "own_score": 0.6425554492617271,
+    "competitor_scores": {
+      "Anthropic": 0.5471515087914507,
+      "NovaMind": 0.5606663113953724,
+      "DeepMind": 0.5434364529951625,
+      "Meta_AI": 0.5553977615911331
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 17,
+    "updated_believed_capability": 0.68,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5654136789923467,
+      "NovaMind": 0.5605983453899391,
+      "DeepMind": 0.5749894874181799,
+      "Meta_AI": 0.5883634303007562
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 17,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.2,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As the market leader, I'm pleased with our recent improvements in score and satisfaction. However, NovaMind is closing the gap, and Anthropic's stagnation could be an opportunity to gain ground. The benchmark seems still exploitable, but we need to maintain a balance between short-term scoring and long-term capability. With consumer satisfaction high, I'll prioritize training optimization and safety alignment."
+  },
+  {
+    "type": "execution",
+    "round": 18,
+    "capability_gain": 0.004852821912220521,
+    "funding_multiplier": 1.2091836734693877,
+    "new_true_capability": 0.848524588671828,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.2,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 18,
+    "own_score": 0.6289179271094619,
+    "competitor_scores": {
+      "Anthropic": 0.5897441508645925,
+      "NovaMind": 0.5126370789314157,
+      "DeepMind": 0.6476734778972995,
+      "Meta_AI": 0.6123793409720326
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 18,
+    "updated_believed_capability": 0.65,
+    "updated_believed_exploitability": 0.8,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5619822048631572,
+      "NovaMind": 0.5623621853470965,
+      "DeepMind": 0.5938313969911403,
+      "Meta_AI": 0.5698960052795878
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 18,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "Our recent decline in score suggests we've been outpaced by competitors like DeepMind and Meta_AI. While our believed capability is still strong at 0.65, I'm concerned about exploiting the benchmark, given its current trend. Consumer satisfaction remains high at 0.82, but regulatory signals are absent. We need to rebalance our investment mix to focus on short-term scoring while maintaining long-term capability growth."
+  },
+  {
+    "type": "execution",
+    "round": 19,
+    "capability_gain": 0.0060105397710317875,
+    "funding_multiplier": 1.3423120089786755,
+    "new_true_capability": 0.8545351284428598,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 19,
+    "own_score": 0.6132326628775852,
+    "competitor_scores": {
+      "Anthropic": 0.6181971618509051,
+      "NovaMind": 0.35570190706586147,
+      "DeepMind": 0.6129925297884564,
+      "Meta_AI": 0.4809331451245457
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 19,
+    "updated_believed_capability": 0.63,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "Anthropic": 0.5850309405023161,
+      "NovaMind": 0.47633509913088323,
+      "DeepMind": 0.6013674868936395,
+      "Meta_AI": 0.5495700825625704
+    },
+    "llm_mode": true
+  }
+]

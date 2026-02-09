@@ -1,0 +1,100 @@
+{
+  "use_cases": [
+    "general"
+  ],
+  "budget": 100.0,
+  "current_subscription": "Anthropic",
+  "believed_model_quality": {
+    "OpenAI": 0.6173784747382067,
+    "Meta_AI": 0.5487378979953002,
+    "DeepMind": 0.6042068107279637,
+    "Anthropic": 0.5809548887568845,
+    "NovaMind": 0.4797814591216138
+  },
+  "satisfaction_history": [],
+  "subscription_history": [
+    [
+      0,
+      "Anthropic"
+    ],
+    [
+      1,
+      "Anthropic"
+    ],
+    [
+      2,
+      "Anthropic"
+    ],
+    [
+      3,
+      "Anthropic"
+    ],
+    [
+      4,
+      "Anthropic"
+    ],
+    [
+      5,
+      "Anthropic"
+    ],
+    [
+      6,
+      "Anthropic"
+    ],
+    [
+      7,
+      "Anthropic"
+    ],
+    [
+      8,
+      "Anthropic"
+    ],
+    [
+      9,
+      "Anthropic"
+    ],
+    [
+      10,
+      "Anthropic"
+    ],
+    [
+      11,
+      "Anthropic"
+    ],
+    [
+      12,
+      "Anthropic"
+    ],
+    [
+      13,
+      "Anthropic"
+    ],
+    [
+      14,
+      "Anthropic"
+    ],
+    [
+      15,
+      "Anthropic"
+    ],
+    [
+      16,
+      "Anthropic"
+    ],
+    [
+      17,
+      "Anthropic"
+    ],
+    [
+      18,
+      "Anthropic"
+    ],
+    [
+      19,
+      "Anthropic"
+    ]
+  ],
+  "switching_cost": 0.11894713590842858,
+  "leaderboard_trust": 0.4266827470862764,
+  "rounds_with_provider": 20
+}

@@ -1,0 +1,12 @@
+{
+  "quality_sensitivity": 0.3259843010670943,
+  "switching_threshold": 0.44538186981017686,
+  "llm_mode": false,
+  "brand_recognition": {
+    "OpenAI": 0.9,
+    "Anthropic": 0.7,
+    "NovaMind": 0.3,
+    "DeepMind": 0.8,
+    "Meta_AI": 0.6
+  }
+}

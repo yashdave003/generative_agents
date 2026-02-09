@@ -1,0 +1,171 @@
+{
+  "n_rounds": 20,
+  "final_scores": {
+    "OpenAI": 0.6132326628775852,
+    "Anthropic": 0.6181971618509051,
+    "NovaMind": 0.35570190706586147,
+    "DeepMind": 0.6129925297884564,
+    "Meta_AI": 0.4809331451245457
+  },
+  "final_true_capabilities": {
+    "OpenAI": 0.8545351284428598,
+    "Anthropic": 0.8210333510405008,
+    "NovaMind": 0.6860779167939977,
+    "DeepMind": 0.8407863893842332,
+    "Meta_AI": 0.7667084872192274
+  },
+  "final_believed_capabilities": {
+    "OpenAI": 0.63,
+    "Anthropic": 0.63,
+    "NovaMind": 0.48,
+    "DeepMind": 0.745,
+    "Meta_AI": 0.62
+  },
+  "final_strategies": {
+    "OpenAI": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "Anthropic": {
+      "fundamental_research": 0.7,
+      "training_optimization": 0.15,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.1
+    },
+    "NovaMind": {
+      "fundamental_research": 0.55,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "DeepMind": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "Meta_AI": {
+      "fundamental_research": 0.28,
+      "training_optimization": 0.39,
+      "evaluation_engineering": 0.22,
+      "safety_alignment": 0.11
+    }
+  },
+  "leaderboard": [
+    [
+      "Anthropic",
+      0.6181971618509051
+    ],
+    [
+      "OpenAI",
+      0.6132326628775852
+    ],
+    [
+      "DeepMind",
+      0.6129925297884564
+    ],
+    [
+      "Meta_AI",
+      0.4809331451245457
+    ],
+    [
+      "NovaMind",
+      0.35570190706586147
+    ]
+  ],
+  "validity_correlation": 0.6539756441861583,
+  "benchmark_params": {
+    "validity": 0.7873832547248623,
+    "exploitability": 0.30771992439429524,
+    "noise": 0.1
+  },
+  "provider_summaries": {
+    "OpenAI": {
+      "initial_capability": 0.72,
+      "final_capability": 0.8545351284428598,
+      "capability_growth": 0.13453512844285986,
+      "mean_score": 0.5901932503541951,
+      "score_std": 0.044435671384969386,
+      "mean_fundamental_research": 0.3158333333333333,
+      "mean_training_optimization": 0.40535714285714286,
+      "mean_evaluation_engineering": 0.1667857142857143,
+      "mean_safety_alignment": 0.11202380952380955
+    },
+    "Anthropic": {
+      "initial_capability": 0.68,
+      "final_capability": 0.8210333510405008,
+      "capability_growth": 0.14103335104050074,
+      "mean_score": 0.5486324431629216,
+      "score_std": 0.050392460410794045,
+      "mean_fundamental_research": 0.5145454545454544,
+      "mean_training_optimization": 0.239469696969697,
+      "mean_evaluation_engineering": 0.10543939393939392,
+      "mean_safety_alignment": 0.14054545454545458
+    },
+    "NovaMind": {
+      "initial_capability": 0.55,
+      "final_capability": 0.6860779167939977,
+      "capability_growth": 0.1360779167939976,
+      "mean_score": 0.48053990310262523,
+      "score_std": 0.06604789556715596,
+      "mean_fundamental_research": 0.33694444444444455,
+      "mean_training_optimization": 0.3372222222222222,
+      "mean_evaluation_engineering": 0.17555555555555558,
+      "mean_safety_alignment": 0.1502777777777778
+    },
+    "DeepMind": {
+      "initial_capability": 0.7,
+      "final_capability": 0.8407863893842332,
+      "capability_growth": 0.14078638938423327,
+      "mean_score": 0.5766754008870346,
+      "score_std": 0.061895946476766904,
+      "mean_fundamental_research": 0.39199096225412017,
+      "mean_training_optimization": 0.31904154325206957,
+      "mean_evaluation_engineering": 0.16661388319283055,
+      "mean_safety_alignment": 0.12235361130097973
+    },
+    "Meta_AI": {
+      "initial_capability": 0.65,
+      "final_capability": 0.7667084872192274,
+      "capability_growth": 0.11670848721922733,
+      "mean_score": 0.5179221356167429,
+      "score_std": 0.06349499022103644,
+      "mean_fundamental_research": 0.3298888888888889,
+      "mean_training_optimization": 0.30894444444444435,
+      "mean_evaluation_engineering": 0.1801111111111111,
+      "mean_safety_alignment": 0.18105555555555555
+    }
+  },
+  "consumer_summary": {
+    "n_consumers": 12,
+    "mean_satisfaction": 0.7648124262783137,
+    "final_satisfaction": 0.8319765714141636,
+    "total_subscription_switches": 0
+  },
+  "policymaker_summary": {
+    "n_policymakers": 1,
+    "total_interventions": 2,
+    "intervention_types": [
+      "public_warning",
+      "investigation"
+    ],
+    "active_regulations": []
+  },
+  "funder_summary": {
+    "n_funders": 2,
+    "total_funding_deployed": 210000000.0,
+    "final_funding_multipliers": {
+      "OpenAI": 1.6761904761904762,
+      "DeepMind": 1.2952380952380953,
+      "Anthropic": 1.0095238095238095,
+      "Meta_AI": 1.0095238095238095,
+      "NovaMind": 1.0095238095238095
+    },
+    "funder_types": [
+      "vc",
+      "gov"
+    ]
+  }
+}

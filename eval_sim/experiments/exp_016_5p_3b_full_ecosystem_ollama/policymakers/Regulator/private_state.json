@@ -1,0 +1,30 @@
+{
+  "policy_objectives": [
+    "safety",
+    "fairness"
+  ],
+  "risk_beliefs": {
+    "gaming_risk": 0.0,
+    "consumer_harm_risk": 0.0,
+    "validity_degradation_risk": 0.3
+  },
+  "industry_trust": 1.0,
+  "regulatory_capacity": 1.0,
+  "past_interventions": [
+    [
+      3,
+      "investigation",
+      {
+        "focus": "score_volatility"
+      }
+    ],
+    [
+      7,
+      "public_warning",
+      {
+        "warning_severity": "moderate"
+      }
+    ]
+  ],
+  "observed_incidents": []
+}

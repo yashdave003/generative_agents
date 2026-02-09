@@ -1,0 +1,86 @@
+{
+  "name": "AISI_Fund",
+  "current_round": 19,
+  "published_scores": [
+    [
+      0,
+      "Round 0: Funded OpenAI, DeepMind, Meta_AI, Anthropic, NovaMind"
+    ],
+    [
+      1,
+      "Round 1: Funded DeepMind, OpenAI, Anthropic, Meta_AI, NovaMind"
+    ],
+    [
+      2,
+      "Round 2: Funded OpenAI, DeepMind, Anthropic, NovaMind, Meta_AI"
+    ],
+    [
+      3,
+      "Round 3: Funded OpenAI, DeepMind, Meta_AI, Anthropic, NovaMind"
+    ],
+    [
+      4,
+      "Round 4: Funded DeepMind, OpenAI, Anthropic, NovaMind, Meta_AI"
+    ],
+    [
+      5,
+      "Round 5: Funded OpenAI, DeepMind, Anthropic, NovaMind, Meta_AI"
+    ],
+    [
+      6,
+      "Round 6: Funded Anthropic, OpenAI, Meta_AI, DeepMind, NovaMind"
+    ],
+    [
+      7,
+      "Round 7: Funded DeepMind, OpenAI, Anthropic, NovaMind, Meta_AI"
+    ],
+    [
+      8,
+      "Round 8: Funded OpenAI, DeepMind, Anthropic, NovaMind, Meta_AI"
+    ],
+    [
+      9,
+      "Round 9: Funded DeepMind, Anthropic, OpenAI, NovaMind, Meta_AI"
+    ],
+    [
+      10,
+      "Round 10: Funded OpenAI, DeepMind, Anthropic, Meta_AI, NovaMind"
+    ],
+    [
+      11,
+      "Round 11: Funded OpenAI, NovaMind, Anthropic, DeepMind, Meta_AI"
+    ],
+    [
+      12,
+      "Round 12: Funded DeepMind, OpenAI, NovaMind, Anthropic, Meta_AI"
+    ],
+    [
+      13,
+      "Round 13: Funded DeepMind, Anthropic, OpenAI, Meta_AI, NovaMind"
+    ],
+    [
+      14,
+      "Round 14: Funded OpenAI, DeepMind, NovaMind, Anthropic"
+    ],
+    [
+      15,
+      "Round 15: Funded OpenAI, DeepMind, NovaMind, Anthropic, Meta_AI"
+    ],
+    [
+      16,
+      "Round 16: Funded OpenAI, DeepMind, NovaMind, Meta_AI, Anthropic"
+    ],
+    [
+      17,
+      "Round 17: Funded OpenAI, DeepMind, NovaMind, Meta_AI, Anthropic"
+    ],
+    [
+      18,
+      "Round 18: Funded OpenAI, DeepMind, NovaMind, Anthropic, Meta_AI"
+    ],
+    [
+      19,
+      "Round 19: Funded Anthropic, OpenAI, DeepMind, Meta_AI, NovaMind"
+    ]
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Regulator",
+  "current_round": 19,
+  "published_scores": [
+    [
+      3,
+      "[Round 3] Issued investigation: Score volatility detected"
+    ],
+    [
+      7,
+      "[Round 7] Issued public_warning: Follow-up to investigation, risk at 0.30"
+    ]
+  ]
+}
