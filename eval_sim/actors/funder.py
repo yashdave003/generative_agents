@@ -303,11 +303,20 @@ class Funder:
             per_provider = available_capital / len(providers)
             allocations = {p: per_provider for p in providers}
 
+        # Build a short reasoning summary
+        top_provider = max(allocations, key=allocations.get) if allocations else "none"
+        top_amount = allocations.get(top_provider, 0) if allocations else 0
+        reason = (
+            f"{self.funder_type} strategy: top allocation "
+            f"${top_amount:,.0f} to {top_provider}"
+        )
+
         self.memory.append({
             "type": "planning",
             "round": self.public_state.current_round,
             "funder_type": self.funder_type,
             "allocations": allocations,
+            "reason": reason,
         })
 
         return allocations

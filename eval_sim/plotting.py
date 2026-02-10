@@ -5,6 +5,7 @@ Provides dashboards for each actor type and a summary dashboard.
 Scalable to N providers/actors.
 """
 import matplotlib.pyplot as plt
+import matplotlib.lines as mlines
 import matplotlib.patches as mpatches
 import numpy as np
 from typing import Optional
@@ -81,7 +82,11 @@ def extract_investment(history: list, provider: str, investment_type: str) -> li
 
 
 def compute_rolling_correlation(history: list, window_size: int = 5) -> tuple:
-    """Compute rolling correlation between scores and true capabilities."""
+    """Compute rolling correlation between scores and true capabilities.
+
+    Returns (rounds, correlations) where rounds are actual round numbers
+    (from history[i]["round"]), not array indices.
+    """
     if len(history) < window_size:
         return [], []
 
@@ -102,7 +107,8 @@ def compute_rolling_correlation(history: list, window_size: int = 5) -> tuple:
             corr = np.corrcoef(all_scores, all_caps)[0, 1]
             if not np.isnan(corr):
                 correlations.append(corr)
-                rounds_used.append(i - 1)
+                # Use actual round number from history, not array index
+                rounds_used.append(history[i - 1]["round"])
 
     return rounds_used, correlations
 
@@ -166,11 +172,19 @@ def plot_provider_dashboard(
     for provider in providers:
         true_caps = [h["true_capabilities"][provider] for h in history]
         believed_caps = [h["believed_capabilities"][provider] for h in history]
-        ax2.plot(rounds, true_caps, '-', label=f"{provider} (true)",
-                 color=provider_colors[provider], linewidth=2)
-        ax2.plot(rounds, believed_caps, '--', label=f"{provider} (believed)",
-                 color=provider_colors[provider], linewidth=1.5, alpha=0.6)
-    style_axis(ax2, "True vs Believed Capability", "Round", "Capability")
+        ax2.plot(rounds, true_caps, '-', color=provider_colors[provider], linewidth=2)
+        ax2.plot(rounds, believed_caps, '--', color=provider_colors[provider],
+                 linewidth=1.5, alpha=0.6)
+    # Legend: provider colors + line-style key
+    handles = [
+        mlines.Line2D([], [], color=provider_colors[p], linewidth=2, label=p)
+        for p in providers
+    ]
+    handles.append(mlines.Line2D([], [], color='gray', linestyle='-', linewidth=2, label='True'))
+    handles.append(mlines.Line2D([], [], color='gray', linestyle='--', linewidth=1.5,
+                                  alpha=0.6, label='Believed'))
+    ax2.legend(handles=handles, loc='best', fontsize=7)
+    style_axis(ax2, "True vs Believed Capability", "Round", "Capability", legend=False)
 
     # --- Panel 3: Investment Portfolio (stacked area for first provider, lines for comparison) ---
     ax3 = axes[0, 2]
@@ -741,10 +755,15 @@ def plot_summary_dashboard(
         ax.plot(rounds, true_caps, '-', color=provider_colors[provider], linewidth=2)
         ax.plot(rounds, believed_caps, '--', color=provider_colors[provider],
                 linewidth=1.5, alpha=0.6)
-    # Custom legend
-    solid_line = mpatches.Patch(color='gray', label='True')
-    dashed_line = mpatches.Patch(color='gray', alpha=0.6, label='Believed')
-    ax.legend(handles=[solid_line, dashed_line], loc='best', fontsize=8)
+    # Legend: one entry per provider (colored) + line-style entries
+    handles = [
+        mlines.Line2D([], [], color=provider_colors[p], linewidth=2, label=p)
+        for p in providers
+    ]
+    handles.append(mlines.Line2D([], [], color='gray', linestyle='-', linewidth=2, label='True'))
+    handles.append(mlines.Line2D([], [], color='gray', linestyle='--', linewidth=1.5,
+                                  alpha=0.6, label='Believed'))
+    ax.legend(handles=handles, loc='best', fontsize=7)
     style_axis(ax, "True vs Believed Capability", "Round", "Capability", legend=False)
 
     # --- Panel 1,3: Investment Portfolio (first provider) ---

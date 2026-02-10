@@ -91,6 +91,7 @@ class GameLogGenerator:
             "consumer_data": round_data.get("consumer_data", {}),
             "policymaker_data": round_data.get("policymaker_data", {}),
             "provider_states": provider_states,
+            "actor_traces": round_data.get("actor_traces", {}),
         }
 
         self.rounds_data.append(record)
@@ -354,22 +355,42 @@ class GameLogGenerator:
                     )
             lines.append("")
 
-        # Provider reasoning (LLM mode only)
-        if self.llm_mode:
-            provider_states = record.get("provider_states", {})
-            has_reasoning = any(
-                ps.get("reasoning") for ps in provider_states.values()
-            )
-            if has_reasoning:
-                lines.append("### Provider Reasoning")
-                for name, state in provider_states.items():
-                    reasoning = state.get("reasoning")
-                    if reasoning:
-                        lines.append(f"**{name}:**")
-                        # Quote the reasoning
-                        for reasoning_line in reasoning.split("\n"):
-                            lines.append(f"> {reasoning_line}")
-                        lines.append("")
+        # Actor reasoning traces (all actor types, both LLM and heuristic)
+        actor_traces = record.get("actor_traces", {})
+
+        # Provider reasoning — from provider_states (LLM) or actor_traces (heuristic)
+        provider_states = record.get("provider_states", {})
+        provider_traces = {}
+        for name, state in provider_states.items():
+            reasoning = state.get("reasoning")
+            if reasoning:
+                provider_traces[name] = reasoning
+        # Fallback to actor_traces for providers
+        for name in record.get("scores", {}).keys():
+            if name not in provider_traces and name in actor_traces:
+                provider_traces[name] = actor_traces[name]
+
+        if provider_traces:
+            lines.append("### Provider Reasoning")
+            for name, reasoning in provider_traces.items():
+                lines.append(f"**{name}:** {reasoning}")
+            lines.append("")
+
+        # Non-provider actor reasoning (filter out routine "stay" / "no_action")
+        non_provider_traces = {
+            k: v for k, v in actor_traces.items()
+            if k not in record.get("scores", {})
+        }
+        # Only show non-trivial decisions to keep the log readable
+        notable_traces = {
+            k: v for k, v in non_provider_traces.items()
+            if not v.startswith("stay:") and not v.startswith("no_action:")
+        }
+        if notable_traces:
+            lines.append("### Other Actor Reasoning")
+            for name, reasoning in notable_traces.items():
+                lines.append(f"- **{name}:** {reasoning}")
+            lines.append("")
 
         # Consumer data
         consumer_data = record.get("consumer_data", {})

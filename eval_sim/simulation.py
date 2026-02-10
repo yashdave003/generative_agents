@@ -247,34 +247,38 @@ class EvalEcosystemSimulation:
             for i in range(n):
                 archetype = i % 3
                 if archetype == 0:
-                    # Leaderboard follower: trusts benchmarks, slow to switch
+                    # Leaderboard follower: trusts benchmarks, switches when
+                    # the gap between leaderboard promise and experience is
+                    # moderate (~0.20+ effective threshold)
                     cc = {
                         "name": f"Consumer_{i}",
                         "use_cases": ["general"],
                         "quality_sensitivity": float(rng.uniform(0.3, 0.5)),
                         "leaderboard_trust": float(rng.uniform(0.7, 0.9)),
-                        "switching_threshold": float(rng.uniform(0.4, 0.6)),
-                        "switching_cost": float(rng.uniform(0.05, 0.15)),
+                        "switching_threshold": float(rng.uniform(0.12, 0.20)),
+                        "switching_cost": float(rng.uniform(0.03, 0.08)),
                     }
                 elif archetype == 1:
-                    # Experience-driven: trusts own experience more, switches faster
+                    # Experience-driven: trusts own experience, switches quickly
+                    # when disappointed (~0.08+ effective threshold)
                     cc = {
                         "name": f"Consumer_{i}",
                         "use_cases": ["general"],
                         "quality_sensitivity": float(rng.uniform(0.6, 0.9)),
                         "leaderboard_trust": float(rng.uniform(0.3, 0.5)),
-                        "switching_threshold": float(rng.uniform(0.15, 0.3)),
-                        "switching_cost": float(rng.uniform(0.05, 0.1)),
+                        "switching_threshold": float(rng.uniform(0.05, 0.10)),
+                        "switching_cost": float(rng.uniform(0.02, 0.05)),
                     }
                 else:
-                    # Cautious/sticky: moderate trust, very slow to switch
+                    # Cautious/sticky: moderate trust, needs large gap to
+                    # switch (~0.35+ effective threshold)
                     cc = {
                         "name": f"Consumer_{i}",
                         "use_cases": ["general"],
                         "quality_sensitivity": float(rng.uniform(0.4, 0.6)),
                         "leaderboard_trust": float(rng.uniform(0.4, 0.6)),
-                        "switching_threshold": float(rng.uniform(0.5, 0.7)),
-                        "switching_cost": float(rng.uniform(0.1, 0.2)),
+                        "switching_threshold": float(rng.uniform(0.20, 0.30)),
+                        "switching_cost": float(rng.uniform(0.08, 0.15)),
                     }
                 consumer_configs.append(cc)
 
@@ -568,17 +572,59 @@ class EvalEcosystemSimulation:
         if funder_data:
             round_data["funder_data"] = funder_data
 
-        # Capture LLM reasoning traces in round data (for post-hoc analysis)
-        if self.config.llm_mode:
-            traces = {}
-            for provider in self.providers:
-                # Get the most recent planning entry (round numbering may lag by 1)
-                for entry in reversed(provider.memory):
-                    if entry.get("type") == "planning" and entry.get("reasoning"):
-                        traces[provider.name] = entry["reasoning"]
-                        break
-            if traces:
-                round_data["llm_traces"] = traces
+        # Capture reasoning traces from all actor types (for post-hoc analysis
+        # and game log).  In LLM mode, actors store "reasoning"; in heuristic
+        # mode they store "reason".  We grab whichever is present.
+        actor_traces = {}
+
+        for provider in self.providers:
+            for entry in reversed(provider.memory):
+                if entry.get("type") == "planning":
+                    trace = entry.get("reasoning") or entry.get("reason")
+                    if trace:
+                        actor_traces[provider.name] = trace
+                    break
+
+        for consumer in self.consumers:
+            for entry in reversed(consumer.memory):
+                if entry.get("type") == "planning":
+                    decision = entry.get("decision", "")
+                    reason = entry.get("reasoning") or entry.get("reason", "")
+                    if decision or reason:
+                        actor_traces[consumer.name] = f"{decision}: {reason}" if reason else decision
+                    break
+
+        for policymaker in self.policymakers:
+            for entry in reversed(policymaker.memory):
+                if entry.get("type") == "planning":
+                    decision = entry.get("decision", "")
+                    reason = entry.get("reason", "")
+                    intervention = entry.get("intervention")
+                    if intervention:
+                        reason = intervention.get("reason", reason)
+                        decision = intervention.get("type", decision)
+                    trace = f"{decision}: {reason}" if reason else decision
+                    if trace:
+                        actor_traces[policymaker.name] = trace
+                    break
+
+        for funder in self.funders:
+            for entry in reversed(funder.memory):
+                if entry.get("type") in ("planning", "planning_llm"):
+                    trace = entry.get("reasoning") or entry.get("reason")
+                    if trace:
+                        actor_traces[funder.name] = trace
+                    break
+
+        if actor_traces:
+            round_data["actor_traces"] = actor_traces
+            # Backwards-compatible: keep llm_traces for providers only
+            provider_traces = {
+                p.name: actor_traces[p.name]
+                for p in self.providers if p.name in actor_traces
+            }
+            if provider_traces and self.config.llm_mode:
+                round_data["llm_traces"] = provider_traces
 
         self.history.append(round_data)
 
@@ -643,12 +689,12 @@ class EvalEcosystemSimulation:
                     consumer_gt = self.ground_truth.get(consumer.name)
                     if isinstance(consumer_gt, ConsumerGroundTruth):
                         # True satisfaction = how well model serves consumer
-                        believed_quality = consumer.private_state.believed_model_quality.get(
-                            new_subscription, 0.5
-                        )
                         true_satisfaction = provider_gt.true_capability
-                        # Dissatisfaction if true capability < believed quality
                         consumer_gt.true_satisfaction = true_satisfaction
+
+                        # Feed satisfaction back to consumer so they can
+                        # reflect on it and potentially switch next round
+                        consumer.receive_satisfaction(true_satisfaction)
 
             consumer_data["subscriptions"][consumer.name] = new_subscription
             consumer_gt = self.ground_truth.get(consumer.name)

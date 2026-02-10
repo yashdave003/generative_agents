@@ -191,53 +191,113 @@ class Consumer:
         else:
             return self._plan_heuristic()
 
+    def _blended_score(self, provider_name: str, lb_score: float) -> float:
+        """Compute blended perceived quality for a provider."""
+        trust = self.private_state.leaderboard_trust
+        brand_factor = self._brand_recognition.get(provider_name, 0.5)
+        default_belief = lb_score * brand_factor
+        believed = self.private_state.believed_model_quality.get(
+            provider_name, default_belief
+        )
+        return trust * lb_score + (1 - trust) * believed
+
     def _plan_heuristic(self) -> Optional[str]:
-        """Heuristic subscription decision with switching costs and blended scoring."""
+        """Heuristic subscription decision with switching costs and blended scoring.
+
+        Two switching triggers:
+        1. Dissatisfaction (Goodhart signal): leaderboard score promised more
+           than the consumer actually experienced.
+        2. Opportunity: a clearly better-scoring alternative appears on the
+           leaderboard, exceeding the switching cost + inertia.
+        """
         current_sub = self.private_state.current_subscription
+        should_switch = False
+        switch_reason = ""
 
-        # Check dissatisfaction with tenure bonus (stickiness increases over time)
-        if current_sub and self.private_state.satisfaction_history:
+        if current_sub and self._last_leaderboard:
             tenure_bonus = min(0.1, self.private_state.rounds_with_provider * 0.02)
-            effective_threshold = self.switching_threshold + tenure_bonus + self.private_state.switching_cost
 
-            recent = [
-                sat for _, provider, sat in self.private_state.satisfaction_history[-3:]
-                if provider == current_sub
-            ]
-            if recent:
-                avg_satisfaction = sum(recent) / len(recent)
-                expected = self.private_state.believed_model_quality.get(current_sub, 0.5)
+            # --- Trigger 1: Dissatisfaction (Goodhart signal) ---
+            # Fires when leaderboard score (promise) exceeds actual
+            # satisfaction (reality) by more than the threshold.
+            if self.private_state.satisfaction_history:
+                recent = [
+                    sat for _, provider, sat in self.private_state.satisfaction_history[-3:]
+                    if provider == current_sub
+                ]
+                if recent:
+                    avg_satisfaction = sum(recent) / len(recent)
+                    leaderboard_expected = next(
+                        (score for name, score in self._last_leaderboard
+                         if name == current_sub),
+                        None,
+                    )
+                    if leaderboard_expected is None:
+                        leaderboard_expected = self.private_state.believed_model_quality.get(
+                            current_sub, 0.5
+                        )
 
-                # Dissatisfied if actual < expected by effective threshold
-                if expected - avg_satisfaction > effective_threshold:
-                    current_sub = None  # Will consider switching
+                    satisfaction_gap = leaderboard_expected - avg_satisfaction
+                    dissatisfaction_threshold = (
+                        self.switching_threshold + tenure_bonus
+                        + self.private_state.switching_cost
+                    )
+                    if satisfaction_gap > dissatisfaction_threshold:
+                        should_switch = True
+                        switch_reason = (
+                            f"dissatisfied: gap={satisfaction_gap:.3f} "
+                            f"> threshold={dissatisfaction_threshold:.3f}"
+                        )
+
+            # --- Trigger 2: Better alternative available ---
+            # Even when not dissatisfied, consumers notice if another
+            # provider's blended score is significantly better than their
+            # current provider's.  This is basic market competition.
+            if not should_switch:
+                current_lb_score = next(
+                    (s for n, s in self._last_leaderboard if n == current_sub),
+                    None,
+                )
+                if current_lb_score is not None:
+                    current_perceived = self._blended_score(
+                        current_sub, current_lb_score
+                    )
+                    opportunity_threshold = (
+                        self.private_state.switching_cost + tenure_bonus
+                    )
+                    for name, score in self._last_leaderboard:
+                        if name == current_sub:
+                            continue
+                        alt_perceived = self._blended_score(name, score)
+                        improvement = alt_perceived - current_perceived
+                        if improvement > opportunity_threshold:
+                            should_switch = True
+                            switch_reason = (
+                                f"better option: {name} "
+                                f"(+{improvement:.3f} > {opportunity_threshold:.3f})"
+                            )
+                            break
 
         # If no subscription or considering switching, pick best option
-        if current_sub is None:
+        if should_switch or current_sub is None:
             if not self._last_leaderboard:
                 return None
 
-            # Blend leaderboard scores with experience-based beliefs
-            trust = self.private_state.leaderboard_trust
             best_score = -1
             best_provider = None
             for provider_name, lb_score in self._last_leaderboard:
-                # Apply brand recognition discount for unknown providers
-                brand_factor = self._brand_recognition.get(provider_name, 0.5)
-                default_belief = lb_score * brand_factor
-                believed = self.private_state.believed_model_quality.get(provider_name, default_belief)
-                blended = trust * lb_score + (1 - trust) * believed
+                blended = self._blended_score(provider_name, lb_score)
                 if blended > best_score:
                     best_score = blended
                     best_provider = provider_name
 
-            # Store decision reasoning
             self.memory.append({
                 "type": "planning",
                 "round": self.public_state.current_round,
-                "decision": "subscribe",
+                "decision": "switch" if current_sub else "subscribe",
                 "provider": best_provider,
-                "reason": f"best blended score (trust={trust:.2f})",
+                "from": current_sub,
+                "reason": switch_reason or "initial subscription",
             })
 
             return best_provider
