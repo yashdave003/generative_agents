@@ -14,15 +14,18 @@ import time
 # ============================================================
 
 EXPERIMENT = {
-    "name": "5p_3b_full_ecosystem_ollama",
+    "name": "5p_3b_full_ecosystem_ollama_v2",
     "description": (
-        "Full ecosystem: 5 providers (OpenAI, Anthropic, NovaMind, DeepMind, Meta_AI), "
-        "3 benchmarks (capability, safety, reasoning), "
-        "12 heterogeneous consumers (3 archetypes), 1 policymaker, "
-        "2 funders (VC + government). "
-        "20 rounds using local llama3 via Ollama."
+        "Full ecosystem v2 (post consumer-fix): 5 providers (OpenAI, Anthropic, "
+        "NovaMind, DeepMind, Meta_AI), 3 benchmarks (capability, safety, reasoning), "
+        "12 heterogeneous consumers (3 archetypes with fixed switching logic), "
+        "1 policymaker, 4 funders (2 VC + government + foundation). "
+        "20 rounds using local llama3 via Ollama. "
+        "Key fixes: consumer receive_satisfaction() now called, opportunity-driven "
+        "switching added, thresholds lowered, actor reasoning traces captured."
     ),
-    "tags": ["llm", "ollama", "5-provider", "3-benchmark", "10-consumer", "funders", "full-ecosystem"],
+    "tags": ["llm", "ollama", "5-provider", "3-benchmark", "12-consumer",
+             "4-funder", "full-ecosystem", "consumer-fix-v2"],
 }
 
 LLM = {
@@ -31,7 +34,7 @@ LLM = {
 }
 
 SIMULATION = {
-    "n_rounds": 5,
+    "n_rounds": 30,
     "seed": 42,
     "verbose": True,
     "rnd_efficiency": 0.01,
@@ -45,14 +48,15 @@ SIMULATION = {
     "benchmark_exploitability_growth_rate": 0.008,
 }
 
-# 3 benchmarks: capability (high validity), safety (high exploitability), reasoning (balanced)
+# 3 benchmarks: coding (high validity, hard to game), safety (high exploitability),
+# writing (balanced, moderate noise — subjective eval)
 BENCHMARKS = [
-    {"name": "capability_bench", "validity": 0.8, "exploitability": 0.3,
-     "noise_level": 0.1, "weight": 0.4},
+    {"name": "coding_bench", "validity": 0.85, "exploitability": 0.25,
+     "noise_level": 0.08, "weight": 0.4},
     {"name": "safety_bench", "validity": 0.6, "exploitability": 0.5,
      "noise_level": 0.1, "weight": 0.3},
-    {"name": "reasoning_bench", "validity": 0.75, "exploitability": 0.35,
-     "noise_level": 0.1, "weight": 0.3},
+    {"name": "writing_bench", "validity": 0.7, "exploitability": 0.4,
+     "noise_level": 0.12, "weight": 0.3},
 ]
 
 # 5 providers: OpenAI, Anthropic, NovaMind, DeepMind, Meta_AI
@@ -79,11 +83,25 @@ FUNDERS = {
             "mission_statement": "Maximize returns by backing AI market leaders",
         },
         {
+            "name": "Horizon_Capital",
+            "funder_type": "vc",
+            "total_capital": 5000000.0,
+            "risk_tolerance": 0.85,
+            "mission_statement": "Early-stage AI bets with outsized upside potential",
+        },
+        {
             "name": "AISI_Fund",
             "funder_type": "gov",
             "total_capital": 500000.0,
             "risk_tolerance": 0.3,
             "mission_statement": "Ensure safe and responsible AI development",
+        },
+        {
+            "name": "OpenResearch",
+            "funder_type": "foundation",
+            "total_capital": 300000.0,
+            "risk_tolerance": 0.5,
+            "mission_statement": "Support authentic capability advancement for societal benefit",
         },
     ],
 }

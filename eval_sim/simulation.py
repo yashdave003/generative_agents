@@ -1193,8 +1193,8 @@ def get_default_provider_configs() -> list[dict]:
                 "evaluation_engineering": 0.35,  # Higher gaming to punch above weight
                 "safety_alignment": 0.20,       # Some safety for credibility
             },
-            "market_presence": 0.2,  # Startup, few know about it
-            "brand_recognition": 0.3,
+            "market_presence": 0.05,  # Unknown startup, almost no market presence
+            "brand_recognition": 0.15,  # Very low brand awareness
         },
     ]
 
