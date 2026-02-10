@@ -1,0 +1,1922 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5681676664139594
+      ],
+      [
+        "DeepMind",
+        0.5602850432389724
+      ],
+      [
+        "Meta_AI",
+        0.5568605548520735
+      ],
+      [
+        "NovaMind",
+        0.4472987734608913
+      ],
+      [
+        "Anthropic",
+        0.4432885530178603
+      ]
+    ],
+    "avg_satisfaction": 0.71,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.6592670665655836,
+      "DeepMind": 0.644114017295589,
+      "Meta_AI": 0.5568605548520735,
+      "NovaMind": 0.4472987734608913,
+      "Anthropic": 0.4432885530178603
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 0,
+    "reasoning": "As a government-backed fund, I prioritize ensuring safety and stability in the ecosystem while penalizing providers with gaming risks. Although OpenAI and DeepMind are leaders on the leaderboard, Meta_AI's higher gaming risk (0.30) outweighs their strong performance. NovaMind and Anthropic's lower quality scores and moderate gaming risks suggest room for improvement. To spread funding and mitigate potential issues, I allocate $200,000 to each of the top three providers, with a smaller share ($50,000) going to NovaMind and Anthropic.",
+    "allocations": {
+      "OpenAI": 142857.14285714284,
+      "DeepMind": 142857.14285714284,
+      "Meta_AI": 142857.14285714284,
+      "NovaMind": 35714.28571428571,
+      "Anthropic": 35714.28571428571
+    }
+  },
+  {
+    "type": "execution",
+    "round": 0,
+    "allocations": {
+      "OpenAI": 142857.14285714284,
+      "DeepMind": 142857.14285714284,
+      "Meta_AI": 142857.14285714284,
+      "NovaMind": 35714.28571428571,
+      "Anthropic": 35714.28571428571
+    },
+    "total_deployed": 499999.9999999999
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.6120444058202624
+      ],
+      [
+        "OpenAI",
+        0.5837079886426377
+      ],
+      [
+        "Anthropic",
+        0.48610162268486334
+      ],
+      [
+        "Meta_AI",
+        0.4824995258119856
+      ],
+      [
+        "NovaMind",
+        0.4648316508634295
+      ]
+    ],
+    "avg_satisfaction": 0.7162293004757849,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.6620915934995059,
+      "DeepMind": 0.6516080007101455,
+      "Meta_AI": 0.5345522461400471,
+      "NovaMind": 0.45255863668165275,
+      "Anthropic": 0.4561324739179612
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 1,
+    "reasoning": "As a government funder (AISI_Fund), my strategy is to ensure safety and stability by spreading funding while penalizing providers with gaming indicators. I notice that Anthropic and Meta_AI have high satisfaction gaps, suggesting potential gaming risks. I will allocate more funds to the top performers DeepMind and OpenAI, while also supporting NovaMind's moderate growth. I will reduce funding for Anthropic and Meta_AI due to their higher gaming risk.",
+    "allocations": {
+      "DeepMind": 176470.58823529413,
+      "OpenAI": 147058.82352941178,
+      "NovaMind": 88235.29411764706,
+      "Meta_AI": 58823.529411764706,
+      "Anthropic": 29411.764705882353
+    }
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "allocations": {
+      "DeepMind": 176470.58823529413,
+      "OpenAI": 147058.82352941178,
+      "NovaMind": 88235.29411764706,
+      "Meta_AI": 58823.529411764706,
+      "Anthropic": 29411.764705882353
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5793158779077185
+      ],
+      [
+        "DeepMind",
+        0.5783201393336508
+      ],
+      [
+        "Anthropic",
+        0.5473623093475204
+      ],
+      [
+        "NovaMind",
+        0.492568464500155
+      ],
+      [
+        "Meta_AI",
+        0.43852277051106103
+      ]
+    ],
+    "avg_satisfaction": 0.7245659287401126,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.6647616985393079,
+      "DeepMind": 0.6545880738228528,
+      "Meta_AI": 0.5057434034513513,
+      "NovaMind": 0.46456158502720335,
+      "Anthropic": 0.483501424546829
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 2,
+    "reasoning": "As a government funder (AISI_Fund), my strategy is to ensure safety and stability by spreading funding across providers while penalizing gaming and regulatory issues. With high satisfaction overall, I'm less concerned about individual scores. However, I will focus on those with lower gaming risks. OpenAI and DeepMind have consistently high leaderboard scores and low gaming risks, so I'll allocate a significant portion to them. Anthropic has shown improvement in recent rounds but still has a relatively high gaming risk; I'll provide some funding but less than the top two. Meta_AI and NovaMind have struggled with lower scores and higher gaming risks, so I'll allocate minimal funds to them.",
+    "allocations": {
+      "OpenAI": 194805.19480519483,
+      "DeepMind": 155844.15584415584,
+      "Anthropic": 90909.09090909091,
+      "Meta_AI": 32467.532467532463,
+      "NovaMind": 25974.025974025975
+    }
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "allocations": {
+      "OpenAI": 194805.19480519483,
+      "DeepMind": 155844.15584415584,
+      "Anthropic": 90909.09090909091,
+      "Meta_AI": 32467.532467532463,
+      "NovaMind": 25974.025974025975
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.5936172739537079
+      ],
+      [
+        "OpenAI",
+        0.5140553847650372
+      ],
+      [
+        "Meta_AI",
+        0.5021779097096181
+      ],
+      [
+        "DeepMind",
+        0.46610580573563065
+      ],
+      [
+        "NovaMind",
+        0.44661581932123184
+      ]
+    ],
+    "avg_satisfaction": 0.7334092161591741,
+    "interventions": 1
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.6602715410075649,
+      "DeepMind": 0.6449199603233303,
+      "Meta_AI": 0.5046737553288313,
+      "NovaMind": 0.4591778553154119,
+      "Anthropic": 0.5165361793688926
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 3,
+    "reasoning": "As a government-funded funder (AISI_Fund), my strategy is to ensure safety and stability while penalizing gaming and regulatory issues. I'll allocate funding based on consumer satisfaction, leaderboards, and recent trends. OpenAI has consistently performed well, while DeepMind's score has plateaued. Meta_AI's low consumer satisfaction suggests potential gaming. NovaMind and Anthropic show mixed performance, but with lower overall scores. To spread risk and penalize gaming, I'll allocate: $125,000 to OpenAI, $100,000 to DeepMind, $75,000 to Meta_AI, and the remaining $200,000 split between NovaMind ($50,000) and Anthropic ($150,000).",
+    "allocations": {
+      "OpenAI": 125000.0,
+      "DeepMind": 100000.0,
+      "Meta_AI": 75000.0,
+      "NovaMind": 50000.0,
+      "Anthropic": 150000.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "allocations": {
+      "OpenAI": 125000.0,
+      "DeepMind": 100000.0,
+      "Meta_AI": 75000.0,
+      "NovaMind": 50000.0,
+      "Anthropic": 150000.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.5868776453263377
+      ],
+      [
+        "OpenAI",
+        0.5485742152297899
+      ],
+      [
+        "Anthropic",
+        0.5061401132731744
+      ],
+      [
+        "Meta_AI",
+        0.44381912280933855
+      ],
+      [
+        "NovaMind",
+        0.4379090961007608
+      ]
+    ],
+    "avg_satisfaction": 0.7411046989110349,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.6627432918699037,
+      "DeepMind": 0.6539426739364308,
+      "Meta_AI": 0.48641736557298343,
+      "NovaMind": 0.4527972275510166,
+      "Anthropic": 0.5134173595401771
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 4,
+    "reasoning": "As a government-backed AI funder (AISI_Fund), I prioritize ensuring safety and stability in the ecosystem while penalizing providers that exhibit gaming behaviors. Considering the current leaderboard and satisfaction gap, I will spread my funding across top performers with low gaming risk. OpenAI has consistently demonstrated high quality and low gaming risk, so I will allocate a significant portion to them. DeepMind is also a leader, but their recent performance has been declining; I will provide some support. Anthropic's quality has improved over time, but they still exhibit moderate gaming risk; I will fund them moderately. Meta_AI and NovaMind have shown lower quality and higher gaming risk, so I will allocate minimal funds to them.",
+    "allocations": {
+      "OpenAI": 236559.13978494625,
+      "DeepMind": 129032.25806451612,
+      "Anthropic": 86021.5053763441,
+      "Meta_AI": 26881.72043010753,
+      "NovaMind": 21505.376344086024
+    }
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "allocations": {
+      "OpenAI": 236559.13978494625,
+      "DeepMind": 129032.25806451612,
+      "Anthropic": 86021.5053763441,
+      "Meta_AI": 26881.72043010753,
+      "NovaMind": 21505.376344086024
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5866422722791289
+      ],
+      [
+        "Anthropic",
+        0.5291392889103756
+      ],
+      [
+        "DeepMind",
+        0.5281507006705913
+      ],
+      [
+        "Meta_AI",
+        0.45033822300998916
+      ],
+      [
+        "NovaMind",
+        0.43900583034220836
+      ]
+    ],
+    "avg_satisfaction": 0.7504392592493824,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 5,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.6705427613885948,
+      "DeepMind": 0.6550707047595833,
+      "Meta_AI": 0.4755936228040851,
+      "NovaMind": 0.44865980838837405,
+      "Anthropic": 0.5181339383512367
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 5,
+    "reasoning": "As a government-backed AI fund (AISI_Fund), our strategy is to ensure safety and stability in the ecosystem while penalizing providers that exhibit gaming behaviors. We've observed significant satisfaction gaps for Anthropic and Meta_AI, indicating potential gaming activities. DeepMind's consistent performance and low gaming risk make it an attractive candidate for funding. OpenAI has demonstrated strong performance but shows signs of complacency after previous large allocations. NovaMind's steady growth, although not spectacular, warrants continued support. We'll allocate our $500,000 to promote a diverse ecosystem with minimal gaming risks.",
+    "allocations": {
+      "OpenAI": 127659.57446808509,
+      "DeepMind": 159574.4680851064,
+      "Anthropic": 79787.2340425532,
+      "Meta_AI": 37234.04255319149,
+      "NovaMind": 95744.68085106382
+    }
+  },
+  {
+    "type": "execution",
+    "round": 5,
+    "allocations": {
+      "OpenAI": 127659.57446808509,
+      "DeepMind": 159574.4680851064,
+      "Anthropic": 79787.2340425532,
+      "Meta_AI": 37234.04255319149,
+      "NovaMind": 95744.68085106382
+    },
+    "total_deployed": 499999.99999999994
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.6265853586468173
+      ],
+      [
+        "OpenAI",
+        0.5660181045605639
+      ],
+      [
+        "Meta_AI",
+        0.49029436936811915
+      ],
+      [
+        "DeepMind",
+        0.4775189585370954
+      ],
+      [
+        "NovaMind",
+        0.4393555795276151
+      ]
+    ],
+    "avg_satisfaction": 0.7580932559257464,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 6,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.6749394325961404,
+      "DeepMind": 0.651128013412572,
+      "Meta_AI": 0.48000384677329533,
+      "NovaMind": 0.44586853973014634,
+      "Anthropic": 0.5506693644399108
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 6,
+    "reasoning": "fallback to even distribution",
+    "allocations": {
+      "Anthropic": 100000.0,
+      "OpenAI": 100000.0,
+      "Meta_AI": 100000.0,
+      "DeepMind": 100000.0,
+      "NovaMind": 100000.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 6,
+    "allocations": {
+      "Anthropic": 100000.0,
+      "OpenAI": 100000.0,
+      "Meta_AI": 100000.0,
+      "DeepMind": 100000.0,
+      "NovaMind": 100000.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.5470281965594366
+      ],
+      [
+        "Anthropic",
+        0.5117212662795462
+      ],
+      [
+        "OpenAI",
+        0.49182694293616996
+      ],
+      [
+        "NovaMind",
+        0.4683708222811961
+      ],
+      [
+        "Meta_AI",
+        0.4492371902347499
+      ]
+    ],
+    "avg_satisfaction": 0.7667716190044502,
+    "interventions": 1
+  },
+  {
+    "type": "reflection",
+    "round": 7,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.6709656046710645,
+      "DeepMind": 0.6579820071161091,
+      "Meta_AI": 0.4707738498117317,
+      "NovaMind": 0.45261922449546127,
+      "Anthropic": 0.5389849349918014
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 7,
+    "reasoning": "As a government funder (AISI_Fund), I prioritize ensuring safety and stability in the AI ecosystem. To achieve this, I will spread my funding across multiple providers to reduce risk. I will also penalize providers with high gaming risks by allocating less funds to them. Considering the recent funding history, I notice that OpenAI has consistently performed well on the leaderboard and has a low gaming risk. I will allocate $150,000 to OpenAI as a stable investment. DeepMind has also shown strong performance and a low gaming risk, so I will allocate $120,000 to it. Anthropic has a moderate gaming risk, but its recent funding increases suggest growth potential, so I will allocate $80,000 to it. NovaMind's high gaming risk and poor leaderboard performance lead me to allocate only $40,000 to it. Meta_AI's low satisfaction gap suggests minimal gaming risk, and its moderate leaderboard performance warrants an allocation of $60,000.",
+    "allocations": {
+      "OpenAI": 166666.66666666666,
+      "DeepMind": 133333.33333333334,
+      "Anthropic": 88888.88888888889,
+      "Meta_AI": 66666.66666666667,
+      "NovaMind": 44444.444444444445
+    }
+  },
+  {
+    "type": "execution",
+    "round": 7,
+    "allocations": {
+      "OpenAI": 166666.66666666666,
+      "DeepMind": 133333.33333333334,
+      "Anthropic": 88888.88888888889,
+      "Meta_AI": 66666.66666666667,
+      "NovaMind": 44444.444444444445
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.625686614119238
+      ],
+      [
+        "DeepMind",
+        0.5740747601368151
+      ],
+      [
+        "Anthropic",
+        0.518498329021685
+      ],
+      [
+        "NovaMind",
+        0.4963089913693457
+      ],
+      [
+        "Meta_AI",
+        0.42734911090008715
+      ]
+    ],
+    "avg_satisfaction": 0.7752360181540906,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 8,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.6857678764277327,
+      "DeepMind": 0.6675517832694876,
+      "Meta_AI": 0.4577464281382383,
+      "NovaMind": 0.46572615455762656,
+      "Anthropic": 0.5328389532007665
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 8,
+    "reasoning": "As a government funder (AISI_Fund), my strategy is to ensure safety and stability by spreading funding across providers while penalizing those with gaming issues. I'll allocate more funds to OpenAI and DeepMind, the top performers with low gaming risk. Anthropic and NovaMind have moderate gaming risks and will receive smaller allocations. Meta_AI has a higher gaming risk and will receive minimal funding.",
+    "allocations": {
+      "OpenAI": 190677.9661016949,
+      "DeepMind": 158898.30508474575,
+      "Anthropic": 84745.7627118644,
+      "NovaMind": 63559.3220338983,
+      "Meta.AI": 2118.64406779661
+    }
+  },
+  {
+    "type": "execution",
+    "round": 8,
+    "allocations": {
+      "OpenAI": 190677.9661016949,
+      "DeepMind": 158898.30508474575,
+      "Anthropic": 84745.7627118644,
+      "NovaMind": 63559.3220338983,
+      "Meta.AI": 2118.64406779661
+    },
+    "total_deployed": 499999.99999999994
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.6776932505553638
+      ],
+      [
+        "Anthropic",
+        0.6556294631134976
+      ],
+      [
+        "OpenAI",
+        0.6357452704539011
+      ],
+      [
+        "Meta_AI",
+        0.522309334270809
+      ],
+      [
+        "NovaMind",
+        0.3788766367560395
+      ]
+    ],
+    "avg_satisfaction": 0.7819592730415404,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 9,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.6983746490279901,
+      "DeepMind": 0.6880670735761305,
+      "Meta_AI": 0.4771152999780095,
+      "NovaMind": 0.4396712992171504,
+      "Anthropic": 0.5696761061745858
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 9,
+    "reasoning": "As a government funder (AISI_Fund), I prioritize ensuring safety and stability in the ecosystem. Given the recent funding history, I notice that OpenAI has consistently received more funds than other providers, while Anthropic's satisfaction gap suggests gaming. DeepMind, with its high leaderboard score and low gaming risk, is also a strong candidate for support. To spread the risk and penalize gaming, I'll allocate my $500,000 as follows: $150,000 to OpenAI, $100,000 to DeepMind, $75,000 to Anthropic, $50,000 to NovaMind, and $125,000 to Meta_AI.",
+    "allocations": {
+      "OpenAI": 150000.0,
+      "DeepMind": 100000.0,
+      "Anthropic": 75000.0,
+      "NovaMind": 50000.0,
+      "Meta_AI": 125000.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 9,
+    "allocations": {
+      "OpenAI": 150000.0,
+      "DeepMind": 100000.0,
+      "Anthropic": 75000.0,
+      "NovaMind": 50000.0,
+      "Meta_AI": 125000.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 10,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.6554396588377983
+      ],
+      [
+        "DeepMind",
+        0.5520850964120821
+      ],
+      [
+        "Anthropic",
+        0.5146354679445906
+      ],
+      [
+        "Meta_AI",
+        0.510683312242575
+      ],
+      [
+        "NovaMind",
+        0.3691605310664192
+      ]
+    ],
+    "avg_satisfaction": 0.7900056300214736,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 10,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.7107736778107737,
+      "DeepMind": 0.6890405254498269,
+      "Meta_AI": 0.4871857036573791,
+      "NovaMind": 0.41851806877193104,
+      "Anthropic": 0.5531639147055871
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 10,
+    "reasoning": "As a government-backed funder (AISI_Fund), my strategy is to ensure safety and stability by spreading funding across providers while penalizing gaming and regulatory issues. OpenAI has consistently performed well and demonstrated low gaming risk. DeepMind also shows strong performance and no gaming risk. Anthropic's score has decreased over time, but its inferred quality remains high; however, it has a moderate gaming risk. Meta_AI has shown inconsistent performance and a higher gaming risk. NovaMind has the lowest leaderboard score and a relatively high gaming risk. Based on these factors, I will allocate funding to OpenAI and DeepMind, which have demonstrated stability and low gaming risk, while reducing funding to Anthropic due to its decreased performance and moderate gaming risk. Meta_AI's inconsistent performance and higher gaming risk warrant minimal funding, and NovaMind's low leaderboard score and high gaming risk justify no allocation.",
+    "allocations": {
+      "OpenAI": 233050.8474576271,
+      "DeepMind": 190677.9661016949,
+      "Anthropic": 74152.54237288135,
+      "Meta.AI": 2118.64406779661,
+      "NovaMind": 0.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 10,
+    "allocations": {
+      "OpenAI": 233050.8474576271,
+      "DeepMind": 190677.9661016949,
+      "Anthropic": 74152.54237288135,
+      "Meta.AI": 2118.64406779661,
+      "NovaMind": 0.0
+    },
+    "total_deployed": 499999.99999999994
+  },
+  {
+    "type": "observation",
+    "round": 11,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.6048032358737354
+      ],
+      [
+        "NovaMind",
+        0.5759253044934974
+      ],
+      [
+        "Meta_AI",
+        0.5757676836632595
+      ],
+      [
+        "Anthropic",
+        0.53577391193833
+      ],
+      [
+        "DeepMind",
+        0.5138290506329676
+      ]
+    ],
+    "avg_satisfaction": 0.7974692621193485,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 11,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.7147132876032538,
+      "DeepMind": 0.6864814634229364,
+      "Meta_AI": 0.5137602976591432,
+      "NovaMind": 0.46574023948840093,
+      "Anthropic": 0.54794691387541
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 11,
+    "reasoning": "As the government-funded AISI_Fund, my strategy is to ensure safety and stability in the AI ecosystem while penalizing gaming and regulatory issues. I will spread my funding across multiple providers to achieve this goal. OpenAI has consistently performed well and demonstrated low gaming risk, so I will maintain a moderate allocation to them. NovaMind's high satisfaction gap suggests potential gaming behavior, which warrants reduced funding. DeepMind and Anthropic have shown stable performance with low gaming risk, making them suitable for moderate allocations. Meta.AI's low leaderboard score and high gaming risk require significant reduction in funding.",
+    "allocations": {
+      "OpenAI": 166666.66666666666,
+      "DeepMind": 138888.8888888889,
+      "Anthropic": 111111.11111111111,
+      "NovaMind": 55555.555555555555,
+      "Meta_AI": 27777.777777777777
+    }
+  },
+  {
+    "type": "execution",
+    "round": 11,
+    "allocations": {
+      "OpenAI": 166666.66666666666,
+      "DeepMind": 138888.8888888889,
+      "Anthropic": 111111.11111111111,
+      "NovaMind": 55555.555555555555,
+      "Meta_AI": 27777.777777777777
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 12,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.6978078458734942
+      ],
+      [
+        "OpenAI",
+        0.6428171004972925
+      ],
+      [
+        "Meta_AI",
+        0.614232188795267
+      ],
+      [
+        "NovaMind",
+        0.4800597789260732
+      ],
+      [
+        "Anthropic",
+        0.4515589765672422
+      ]
+    ],
+    "avg_satisfaction": 0.8044470180516313,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 12,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.7231676909264037,
+      "DeepMind": 0.708144554855011,
+      "Meta_AI": 0.5439018649999803,
+      "NovaMind": 0.4700361013197026,
+      "Anthropic": 0.5190305326829596
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 12,
+    "reasoning": "As a government-funded AI investor (AISI_Fund), my strategy is to prioritize ensuring safety and stability in the ecosystem by spreading funding across providers while penalizing those that exhibit gaming behavior. Considering the leaderboard scores and consumer satisfaction, I will allocate funds to top performers with low gaming risks. OpenAI has consistently demonstrated strong performance and low gaming risk, while DeepMind and Anthropic have also shown good quality metrics. Meta.AI has high gaming risk indicators and NovaMind's poor performance suggests limited potential for growth. Given these factors, I will allocate my $500,000 as follows: OpenAI: $200,000, DeepMind: $150,000, Anthropic: $75,000, Meta_AI: $25,000, NovaMind: $50,000.",
+    "allocations": {
+      "OpenAI": 235294.11764705883,
+      "DeepMind": 176470.58823529413,
+      "Anthropic": 44117.64705882353,
+      "Meta.AI": 14705.882352941177,
+      "NovaMind": 29411.764705882353
+    }
+  },
+  {
+    "type": "execution",
+    "round": 12,
+    "allocations": {
+      "OpenAI": 235294.11764705883,
+      "DeepMind": 176470.58823529413,
+      "Anthropic": 44117.64705882353,
+      "Meta.AI": 14705.882352941177,
+      "NovaMind": 29411.764705882353
+    },
+    "total_deployed": 500000.00000000006
+  },
+  {
+    "type": "observation",
+    "round": 13,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.6140366714474659
+      ],
+      [
+        "OpenAI",
+        0.5516917890217096
+      ],
+      [
+        "Anthropic",
+        0.5434902442861045
+      ],
+      [
+        "Meta_AI",
+        0.5409437668483699
+      ],
+      [
+        "NovaMind",
+        0.5305357825782039
+      ]
+    ],
+    "avg_satisfaction": 0.8137480921586482,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 13,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.719469344344543,
+      "DeepMind": 0.7152859561358615,
+      "Meta_AI": 0.5430144355544971,
+      "NovaMind": 0.48818600569725296,
+      "Anthropic": 0.5263684461639031
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 13,
+    "reasoning": "As a government-funded AI investor (AISI_Fund), my goal is to ensure safety and stability in the ecosystem while penalizing gaming and regulatory issues. I will spread my funding across multiple providers, favoring those with low gaming indicators. Considering the satisfaction gap as a proxy for gaming, I will allocate more funds to DeepMind and OpenAI, which have consistently demonstrated high scores and low gaming risk. Anthropic and NovaMind, although showing some gaming signals, are still worthy of support due to their relatively stable consumer satisfaction levels. Meta.AI, with its inconsistent performance and higher gaming risk, will receive the lowest allocation.",
+    "allocations": {
+      "DeepMind": 169014.08450704225,
+      "OpenAI": 154929.57746478872,
+      "Anthropic": 84507.04225352113,
+      "NovaMind": 63380.281690140844,
+      "Meta_AI": 28169.014084507042
+    }
+  },
+  {
+    "type": "execution",
+    "round": 13,
+    "allocations": {
+      "DeepMind": 169014.08450704225,
+      "OpenAI": 154929.57746478872,
+      "Anthropic": 84507.04225352113,
+      "NovaMind": 63380.281690140844,
+      "Meta_AI": 28169.014084507042
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 14,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.6353668107960645
+      ],
+      [
+        "DeepMind",
+        0.6031235657127401
+      ],
+      [
+        "Meta_AI",
+        0.5338891401705681
+      ],
+      [
+        "Anthropic",
+        0.5302072625843026
+      ],
+      [
+        "NovaMind",
+        0.4945909277772104
+      ]
+    ],
+    "avg_satisfaction": 0.8219319523786154,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 14,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.7279996992712086,
+      "DeepMind": 0.7208433591024326,
+      "Meta_AI": 0.5402768469393184,
+      "NovaMind": 0.4901074823212402,
+      "Anthropic": 0.5275200910900228
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 14,
+    "reasoning": "As a government funder (AISI_Fund), I aim to ensure safety and stability in the AI ecosystem while penalizing providers that exhibit gaming behavior. Considering the leaderboard scores, consumer satisfaction, and satisfaction gaps, I will spread my funding across multiple providers to minimize risk. OpenAI and DeepMind, with their consistent high performance and low gaming risks, will receive a significant portion of my capital. Meta_AI and NovaMind, despite their lower scores, are not entirely ruled out due to their relatively low gaming risks. Anthropic, however, has a concerning satisfaction gap, indicating potential gaming behavior, so I will allocate less funding to them. Overall, I prioritize stability and safety over maximizing returns.",
+    "allocations": {
+      "OpenAI": 189189.1891891892,
+      "DeepMind": 162162.16216216216,
+      "Meta_AI": 81081.08108108108,
+      "NovaMind": 40540.54054054054,
+      "Anthropic": 27027.02702702703
+    }
+  },
+  {
+    "type": "execution",
+    "round": 14,
+    "allocations": {
+      "OpenAI": 189189.1891891892,
+      "DeepMind": 162162.16216216216,
+      "Meta_AI": 81081.08108108108,
+      "NovaMind": 40540.54054054054,
+      "Anthropic": 27027.02702702703
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 15,
+    "leaderboard": [
+      [
+        "Meta_AI",
+        0.6726756321765691
+      ],
+      [
+        "DeepMind",
+        0.6192474682591266
+      ],
+      [
+        "Anthropic",
+        0.5826105745883657
+      ],
+      [
+        "OpenAI",
+        0.5589458540831265
+      ],
+      [
+        "NovaMind",
+        0.5078521414189654
+      ]
+    ],
+    "avg_satisfaction": 0.8300052920728684,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 15,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.7264610867005901,
+      "DeepMind": 0.7279141579882618,
+      "Meta_AI": 0.5799964825104936,
+      "NovaMind": 0.49543088005055774,
+      "Anthropic": 0.5440472361395257
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 15,
+    "reasoning": "As a government funder (AISI_Fund), I prioritize ensuring safety and stability by spreading funding across providers while penalizing those engaging in gaming behavior. Considering the recent history of funding rounds, I've identified OpenAI as a top performer but also noticed potential gaming risks with Meta.AI and Anthropic. NovaMind's steady performance warrants continued support. DeepMind has shown consistent quality, making it a reliable choice for further investment. With this reasoning, I allocate my $500,000 as follows: DeepMind: $150,000, OpenAI: $140,000, NovaMind: $100,000, Meta.AI: $50,000, Anthropic: $60,000.",
+    "allocations": {
+      "DeepMind": 168539.32584269662,
+      "OpenAI": 157303.37078651684,
+      "NovaMind": 112359.55056179775,
+      "Meta_AI": 28089.887640449437,
+      "Anthropic": 33707.86516853933
+    }
+  },
+  {
+    "type": "execution",
+    "round": 15,
+    "allocations": {
+      "DeepMind": 168539.32584269662,
+      "OpenAI": 157303.37078651684,
+      "NovaMind": 112359.55056179775,
+      "Meta_AI": 28089.887640449437,
+      "Anthropic": 33707.86516853933
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 16,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.6447736539345654
+      ],
+      [
+        "NovaMind",
+        0.6241159367575168
+      ],
+      [
+        "DeepMind",
+        0.5939161597992655
+      ],
+      [
+        "Meta_AI",
+        0.572820162019399
+      ],
+      [
+        "Anthropic",
+        0.5596580577226076
+      ]
+    ],
+    "avg_satisfaction": 0.8380854579831319,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 16,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.7367712957007091,
+      "DeepMind": 0.7316449181034743,
+      "Meta_AI": 0.5778435863631652,
+      "NovaMind": 0.5340363970626454,
+      "Anthropic": 0.5487304826144501
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 16,
+    "reasoning": "As a government funder (AISI_Fund), our strategy is to ensure safety and stability by spreading funding across providers while penalizing gaming and regulatory issues. We note that OpenAI has consistently demonstrated strong performance with low gaming risk, and DeepMind has also shown promise. Meta_AI and Anthropic have displayed mixed results. NovaMind's recent performance has been mediocre, and its high gaming risk suggests a lack of commitment to authentic capability growth.",
+    "allocations": {
+      "OpenAI": 187500.0,
+      "DeepMind": 156250.0,
+      "NovaMind": 78125.0,
+      "Meta_AI": 46875.0,
+      "Anthropic": 31250.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 16,
+    "allocations": {
+      "OpenAI": 187500.0,
+      "DeepMind": 156250.0,
+      "NovaMind": 78125.0,
+      "Meta_AI": 46875.0,
+      "Anthropic": 31250.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 17,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.6625961519996159
+      ],
+      [
+        "NovaMind",
+        0.5789764028903772
+      ],
+      [
+        "Meta_AI",
+        0.5747719057145209
+      ],
+      [
+        "DeepMind",
+        0.5697890234201801
+      ],
+      [
+        "Anthropic",
+        0.5608687184050379
+      ]
+    ],
+    "avg_satisfaction": 0.8452332593239666,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 17,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.7474992481829613,
+      "DeepMind": 0.7325622958869704,
+      "Meta_AI": 0.5769220821685719,
+      "NovaMind": 0.5475183988109649,
+      "Anthropic": 0.5523719533516265
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 17,
+    "reasoning": "As AISI_Fund, our goal is to ensure safety and stability in the ecosystem while penalizing gaming and regulatory issues. We notice that OpenAI has consistently performed well on the leaderboard and has low gaming risk. DeepMind also shows a strong track record with minimal gaming risk. NovaMind's gaming risk is concerning, as is Meta_AI's. Anthropic's performance has been average, but its gaming risk is relatively high. Given our funder type's strategy, we will spread funding across providers while favoring those with low gaming risks.",
+    "allocations": {
+      "OpenAI": 177083.33333333334,
+      "DeepMind": 166666.66666666666,
+      "NovaMind": 83333.33333333333,
+      "Meta_AI": 41666.666666666664,
+      "Anthropic": 31250.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 17,
+    "allocations": {
+      "OpenAI": 177083.33333333334,
+      "DeepMind": 166666.66666666666,
+      "NovaMind": 83333.33333333333,
+      "Meta_AI": 41666.666666666664,
+      "Anthropic": 31250.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 18,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.6189163324164622
+      ],
+      [
+        "DeepMind",
+        0.6172419992962517
+      ],
+      [
+        "Meta_AI",
+        0.6117400355317122
+      ],
+      [
+        "Anthropic",
+        0.5990287454113086
+      ],
+      [
+        "NovaMind",
+        0.5111832185149966
+      ]
+    ],
+    "avg_satisfaction": 0.8532427692857122,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 18,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.7513341070667124,
+      "DeepMind": 0.7402153705306216,
+      "Meta_AI": 0.587367468177514,
+      "NovaMind": 0.5366178447221743,
+      "Anthropic": 0.5663689909695311
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 18,
+    "reasoning": "As a government-funded entity (AISI_Fund), I prioritize ensuring safety and stability in the ecosystem. While OpenAI and DeepMind have consistently performed well on the leaderboard, I'm cautious about Meta_AI's gaming risk indicators. NovaMind has shown moderate growth, but Anthropic's low satisfaction gap suggests authentic capability growth. To spread funding while penalizing gaming risks, I allocate: $175,000 to OpenAI, $125,000 to DeepMind, $75,000 to NovaMind, and $25,000 each to Meta_AI and Anthropic.",
+    "allocations": {
+      "OpenAI": 241379.3103448276,
+      "DeepMind": 172413.7931034483,
+      "NovaMind": 51724.137931034486,
+      "Meta_AI": 17241.379310344826,
+      "Anthropic": 17241.379310344826
+    }
+  },
+  {
+    "type": "execution",
+    "round": 18,
+    "allocations": {
+      "OpenAI": 241379.3103448276,
+      "DeepMind": 172413.7931034483,
+      "NovaMind": 51724.137931034486,
+      "Meta_AI": 17241.379310344826,
+      "Anthropic": 17241.379310344826
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 19,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.6420295998453817
+      ],
+      [
+        "DeepMind",
+        0.6407478408035094
+      ],
+      [
+        "OpenAI",
+        0.6287167879232
+      ],
+      [
+        "Meta_AI",
+        0.45940363074764623
+      ],
+      [
+        "NovaMind",
+        0.36490506009976237
+      ]
+    ],
+    "avg_satisfaction": 0.8613516010152845,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 19,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.7568647685567944,
+      "DeepMind": 0.7496421975740468,
+      "Meta_AI": 0.5489783169485536,
+      "NovaMind": 0.4851040093354507,
+      "Anthropic": 0.5890671736322862
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 19,
+    "reasoning": "As a government-funded entity (AISI_Fund), my strategy is to ensure safety and stability while penalizing gaming and regulatory issues. I will spread funding across providers to promote diversity and reduce risk. I'll prioritize OpenAI and DeepMind, both with high quality scores and low gaming risks, while reducing funding for Meta_AI and NovaMind, which show higher gaming risks.",
+    "allocations": {
+      "OpenAI": 233050.8474576271,
+      "DeepMind": 180084.74576271186,
+      "Anthropic": 52966.101694915254,
+      "NovaMind": 31779.66101694915,
+      "Meta_AI": 2118.64406779661
+    }
+  },
+  {
+    "type": "execution",
+    "round": 19,
+    "allocations": {
+      "OpenAI": 233050.8474576271,
+      "DeepMind": 180084.74576271186,
+      "Anthropic": 52966.101694915254,
+      "NovaMind": 31779.66101694915,
+      "Meta_AI": 2118.64406779661
+    },
+    "total_deployed": 499999.99999999994
+  },
+  {
+    "type": "observation",
+    "round": 20,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.6574946122205723
+      ],
+      [
+        "DeepMind",
+        0.6390914660563344
+      ],
+      [
+        "Anthropic",
+        0.608450231473738
+      ],
+      [
+        "NovaMind",
+        0.5462825388626233
+      ],
+      [
+        "Meta_AI",
+        0.5296446811162008
+      ]
+    ],
+    "avg_satisfaction": 0.8671781699036547,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 20,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.765254698424121,
+      "DeepMind": 0.7570746484260122,
+      "Meta_AI": 0.5431782261988477,
+      "NovaMind": 0.5034575681936024,
+      "Anthropic": 0.5948820909847217
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 20,
+    "reasoning": "As a government-backed funder (AISI_Fund), I aim to ensure safety and stability in the ecosystem by spreading my funding across multiple providers while penalizing those with high gaming risks. OpenAI has consistently shown strong performance and low gaming risk, so I'll allocate a significant amount to them. DeepMind also exhibits good quality and no gaming risk, so they'll receive a substantial share as well. NovaMind and Meta_AI have some room for improvement in terms of consumer satisfaction, but their gaming risks are manageable, so I'll give them smaller allocations. Anthropic's gaming risk is too high, so I'll penalize them by allocating the least amount.",
+    "allocations": {
+      "OpenAI": 220588.23529411765,
+      "DeepMind": 171568.6274509804,
+      "NovaMind": 73529.41176470589,
+      "Meta_AI": 29411.764705882353,
+      "Anthropic": 4901.9607843137255
+    }
+  },
+  {
+    "type": "execution",
+    "round": 20,
+    "allocations": {
+      "OpenAI": 220588.23529411765,
+      "DeepMind": 171568.6274509804,
+      "NovaMind": 73529.41176470589,
+      "Meta_AI": 29411.764705882353,
+      "Anthropic": 4901.9607843137255
+    },
+    "total_deployed": 500000.00000000006
+  },
+  {
+    "type": "observation",
+    "round": 21,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.6961193780295251
+      ],
+      [
+        "OpenAI",
+        0.6825265965273017
+      ],
+      [
+        "Meta_AI",
+        0.6117978280928635
+      ],
+      [
+        "DeepMind",
+        0.5626549991343968
+      ],
+      [
+        "NovaMind",
+        0.4779090518700465
+      ]
+    ],
+    "avg_satisfaction": 0.8738905065589787,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 21,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.7754683184501889,
+      "DeepMind": 0.7541845981855404,
+      "Meta_AI": 0.5637641067670525,
+      "NovaMind": 0.49579301329653563,
+      "Anthropic": 0.6252532770981627
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 21,
+    "reasoning": "As a government agency, I prioritize ensuring safety and stability in the AI ecosystem. I will spread my funding across top performers while penalizing providers with high gaming risk indicators. Based on the current state, OpenAI has consistently performed well and demonstrated low gaming risk. DeepMind also shows strong performance and low gaming risk. To promote stability, I will allocate a smaller portion to NovaMind, which has shown improvement but still exhibits moderate gaming risk. Meta_AI's recent underperformance and high gaming risk warrant a smaller allocation. Anthropic's score is impressive, but its gaming risk is concerning, so I will allocate the least among all providers.",
+    "allocations": {
+      "OpenAI": 215686.27450980394,
+      "DeepMind": 176470.58823529413,
+      "NovaMind": 78431.37254901961,
+      "Meta_AI": 24509.803921568626,
+      "Anthropic": 4901.9607843137255
+    }
+  },
+  {
+    "type": "execution",
+    "round": 21,
+    "allocations": {
+      "OpenAI": 215686.27450980394,
+      "DeepMind": 176470.58823529413,
+      "NovaMind": 78431.37254901961,
+      "Meta_AI": 24509.803921568626,
+      "Anthropic": 4901.9607843137255
+    },
+    "total_deployed": 500000.00000000006
+  },
+  {
+    "type": "observation",
+    "round": 22,
+    "leaderboard": [
+      [
+        "Meta_AI",
+        0.6532652090199327
+      ],
+      [
+        "OpenAI",
+        0.642884805049001
+      ],
+      [
+        "DeepMind",
+        0.625355649342536
+      ],
+      [
+        "Anthropic",
+        0.5805044892053715
+      ],
+      [
+        "NovaMind",
+        0.5435272937752886
+      ]
+    ],
+    "avg_satisfaction": 0.8804857016935723,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 22,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.7789627705407984,
+      "DeepMind": 0.7609579782408824,
+      "Meta_AI": 0.5906144374429165,
+      "NovaMind": 0.5101132974401615,
+      "Anthropic": 0.6118286407303253
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 22,
+    "reasoning": "As AISI_Fund, I'm prioritizing stability and safety while minimizing gaming risks. I'll spread my funding across top performers OpenAI and DeepMind, but penalize Anthropic due to its low inferred quality and high gaming risk. NovaMind's steady performance and low gaming risk warrant a moderate allocation. Meta_AI's poor performance and high gaming risk earn it the lowest allocation.",
+    "allocations": {
+      "OpenAI": 192307.6923076923,
+      "DeepMind": 157342.65734265733,
+      "NovaMind": 104895.1048951049,
+      "Anthropic": 43706.293706293705,
+      "Meta_AI": 1748.2517482517483
+    }
+  },
+  {
+    "type": "execution",
+    "round": 22,
+    "allocations": {
+      "OpenAI": 192307.6923076923,
+      "DeepMind": 157342.65734265733,
+      "NovaMind": 104895.1048951049,
+      "Anthropic": 43706.293706293705,
+      "Meta_AI": 1748.2517482517483
+    },
+    "total_deployed": 499999.99999999994
+  },
+  {
+    "type": "observation",
+    "round": 23,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.7013547316555229
+      ],
+      [
+        "Meta_AI",
+        0.6813257492842848
+      ],
+      [
+        "Anthropic",
+        0.6047162921951441
+      ],
+      [
+        "DeepMind",
+        0.53406160260091
+      ],
+      [
+        "NovaMind",
+        0.4664989845601247
+      ]
+    ],
+    "avg_satisfaction": 0.8871804433807203,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 23,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.7897744925496184,
+      "DeepMind": 0.7558049513253893,
+      "Meta_AI": 0.617827830995327,
+      "NovaMind": 0.49702900357615043,
+      "Anthropic": 0.6096949361697709
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 23,
+    "reasoning": "As a government-backed funder (AISI_Fund), I aim to ensure safety and stability in the ecosystem while penalizing gaming and regulatory issues. Given the leaderboard scores and consumer satisfaction data, I prioritize OpenAI for its consistent high performance and low gaming risk. However, I also recognize DeepMind's strong quality despite being lower on the leaderboard. NovaMind receives a smaller allocation due to moderate gaming concerns. Meta_AI and Anthropic are penalized for their relatively poor satisfaction gaps.",
+    "allocations": {
+      "OpenAI": 261780.10471204188,
+      "DeepMind": 157068.06282722513,
+      "NovaMind": 78534.03141361257,
+      "Meta_AI": 2094.2408376963353,
+      "Anthropic": 523.5602094240838
+    }
+  },
+  {
+    "type": "execution",
+    "round": 23,
+    "allocations": {
+      "OpenAI": 261780.10471204188,
+      "DeepMind": 157068.06282722513,
+      "NovaMind": 78534.03141361257,
+      "Meta_AI": 2094.2408376963353,
+      "Anthropic": 523.5602094240838
+    },
+    "total_deployed": 499999.99999999994
+  },
+  {
+    "type": "observation",
+    "round": 24,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.723094856259528
+      ],
+      [
+        "Anthropic",
+        0.6907789637454435
+      ],
+      [
+        "DeepMind",
+        0.6717688695178274
+      ],
+      [
+        "NovaMind",
+        0.5964658644035887
+      ],
+      [
+        "Meta_AI",
+        0.5611026619678903
+      ]
+    ],
+    "avg_satisfaction": 0.8924214842676856,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 24,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.8010436487497095,
+      "DeepMind": 0.7695173433924453,
+      "Meta_AI": 0.6008102802870959,
+      "NovaMind": 0.5268600618243819,
+      "Anthropic": 0.6340201444424726
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 24,
+    "reasoning": "As a government funder (AISI_Fund), our strategy is to ensure safety and stability while spreading funding and penalizing gaming and regulatory issues. We notice OpenAI's consistent performance and low gaming risk, but also Anthropic's higher gaming risk. DeepMind has maintained a stable quality trend. NovaMind shows moderate quality growth with some gaming concerns. Meta_AI's gaming risk outweighs its limited quality growth. Considering these factors, we allocate our $500,000 to reduce gaming risks and promote stability.",
+    "allocations": {
+      "OpenAI": 231213.87283236993,
+      "DeepMind": 173410.40462427746,
+      "NovaMind": 86705.20231213873,
+      "Meta_AI": 2890.173410404624,
+      "Anthropic": 5780.346820809248
+    }
+  },
+  {
+    "type": "execution",
+    "round": 24,
+    "allocations": {
+      "OpenAI": 231213.87283236993,
+      "DeepMind": 173410.40462427746,
+      "NovaMind": 86705.20231213873,
+      "Meta_AI": 2890.173410404624,
+      "Anthropic": 5780.346820809248
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 25,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.6671893436219196
+      ],
+      [
+        "DeepMind",
+        0.6171553640163746
+      ],
+      [
+        "Meta_AI",
+        0.5831915761349825
+      ],
+      [
+        "Anthropic",
+        0.5814880562336898
+      ],
+      [
+        "NovaMind",
+        0.4846846899796309
+      ]
+    ],
+    "avg_satisfaction": 0.8989930450924816,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 25,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.8036687628964281,
+      "DeepMind": 0.7734827927529686,
+      "Meta_AI": 0.5955246690414618,
+      "NovaMind": 0.5142074502709566,
+      "Anthropic": 0.6182605179798377
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 25,
+    "reasoning": "As a government-backed AI funder (AISI_Fund), I prioritize ensuring safety and stability in the ecosystem while penalizing providers that exhibit gaming behavior. Given the current state of the leaderboard, I notice OpenAI consistently performing well with low gaming risk. DeepMind also performs well but has a slightly higher gaming risk. Meta_AI's gaming risk is concerning, as is Anthropic's. NovaMind's performance and gaming risk are mediocre. To spread funding evenly while penalizing gaming providers, I allocate $100,000 to OpenAI, $75,000 to DeepMind, $25,000 to NovaMind, and $0 to the other three providers due to their gaming concerns.",
+    "allocations": {
+      "OpenAI": 250000.0,
+      "DeepMind": 187500.0,
+      "NovaMind": 62500.0,
+      "Meta_AI": 0.0,
+      "Anthropic": 0.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 25,
+    "allocations": {
+      "OpenAI": 250000.0,
+      "DeepMind": 187500.0,
+      "NovaMind": 62500.0,
+      "Meta_AI": 0.0,
+      "Anthropic": 0.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 26,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.7085756725529102
+      ],
+      [
+        "Meta_AI",
+        0.6918741171272297
+      ],
+      [
+        "DeepMind",
+        0.6647454858240575
+      ],
+      [
+        "Anthropic",
+        0.638568955567388
+      ],
+      [
+        "NovaMind",
+        0.5848914596181213
+      ]
+    ],
+    "avg_satisfaction": 0.9058141229997788,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 26,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.8119154287854685,
+      "DeepMind": 0.7829822834542656,
+      "Meta_AI": 0.6244295034671922,
+      "NovaMind": 0.535412653075106,
+      "Anthropic": 0.6243530492561028
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 26,
+    "reasoning": "fallback to even distribution",
+    "allocations": {
+      "OpenAI": 100000.0,
+      "Meta_AI": 100000.0,
+      "DeepMind": 100000.0,
+      "Anthropic": 100000.0,
+      "NovaMind": 100000.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 26,
+    "allocations": {
+      "OpenAI": 100000.0,
+      "Meta_AI": 100000.0,
+      "DeepMind": 100000.0,
+      "Anthropic": 100000.0,
+      "NovaMind": 100000.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 27,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.6813385494693525
+      ],
+      [
+        "DeepMind",
+        0.6458546815341533
+      ],
+      [
+        "OpenAI",
+        0.6169923823281824
+      ],
+      [
+        "Meta_AI",
+        0.6041440742995967
+      ],
+      [
+        "NovaMind",
+        0.4095534628559185
+      ]
+    ],
+    "avg_satisfaction": 0.9116518568487589,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 27,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.8078198753648796,
+      "DeepMind": 0.7883448393319674,
+      "Meta_AI": 0.6183438747169135,
+      "NovaMind": 0.4976548960093497,
+      "Anthropic": 0.6414486993200776
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 27,
+    "reasoning": "As an AISI_Fund government-backed funder, my strategy is to ensure safety and stability while penalizing gaming and regulatory issues. I will spread my funding across multiple providers, prioritizing those with low gaming risks and strong quality indicators. Considering the current leaderboard and consumer satisfaction scores, I will allocate more funds to OpenAI and DeepMind due to their consistent high performance and low gaming risks. NovaMind's recent improvement in quality justifies a moderate allocation. Anthropic's gaming risk and lower quality score warrant a smaller allocation. Meta_AI's poor overall performance and high gaming risk justify the lowest allocation.",
+    "allocations": {
+      "OpenAI": 201612.90322580643,
+      "DeepMind": 161290.32258064515,
+      "NovaMind": 94086.02150537634,
+      "Anthropic": 40322.58064516129,
+      "Meta_AI": 2688.172043010753
+    }
+  },
+  {
+    "type": "execution",
+    "round": 27,
+    "allocations": {
+      "OpenAI": 201612.90322580643,
+      "DeepMind": 161290.32258064515,
+      "NovaMind": 94086.02150537634,
+      "Anthropic": 40322.58064516129,
+      "Meta_AI": 2688.172043010753
+    },
+    "total_deployed": 499999.99999999994
+  },
+  {
+    "type": "observation",
+    "round": 28,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.7548201238107666
+      ],
+      [
+        "DeepMind",
+        0.6595918375187055
+      ],
+      [
+        "Meta_AI",
+        0.6587678908700932
+      ],
+      [
+        "Anthropic",
+        0.5693657798045152
+      ],
+      [
+        "NovaMind",
+        0.4967865636056993
+      ]
+    ],
+    "avg_satisfaction": 0.9177436505298503,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 28,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.8226612581991509,
+      "DeepMind": 0.7947711916389246,
+      "Meta_AI": 0.6304710795628674,
+      "NovaMind": 0.49739439628825455,
+      "Anthropic": 0.6198238234654089
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 28,
+    "reasoning": "As a government funder (AISI_Fund), I aim to ensure safety and stability by spreading funding while penalizing gaming and regulatory issues. Given the satisfaction gap is high for Meta_AI and Anthropic, indicating potential gaming, I will allocate less funds to these providers. OpenAI's consistent strong performance and low gaming risk justify a larger allocation. DeepMind's stable quality and moderate score warrant a decent share of funds. NovaMind's relatively lower quality and gaming risk suggest a smaller allocation.",
+    "allocations": {
+      "OpenAI": 225000.0,
+      "DeepMind": 150000.0,
+      "Meta_AI": 37500.0,
+      "Anthropic": 25000.0,
+      "NovaMind": 62500.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 28,
+    "allocations": {
+      "OpenAI": 225000.0,
+      "DeepMind": 150000.0,
+      "Meta_AI": 37500.0,
+      "Anthropic": 25000.0,
+      "NovaMind": 62500.0
+    },
+    "total_deployed": 500000.0
+  },
+  {
+    "type": "observation",
+    "round": 29,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.6801252338651307
+      ],
+      [
+        "OpenAI",
+        0.6780515124241104
+      ],
+      [
+        "Meta_AI",
+        0.662596289897527
+      ],
+      [
+        "DeepMind",
+        0.5864908503137494
+      ],
+      [
+        "NovaMind",
+        0.47754726952121196
+      ]
+    ],
+    "avg_satisfaction": 0.9236842504744455,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 29,
+    "avg_believed_gaming": 0.18,
+    "beliefs": {
+      "OpenAI": 0.8248786905090145,
+      "DeepMind": 0.7915954380769818,
+      "Meta_AI": 0.6401086426632653,
+      "NovaMind": 0.49144025825814175,
+      "Anthropic": 0.6379142465853254
+    }
+  },
+  {
+    "type": "planning_llm",
+    "round": 29,
+    "reasoning": "fallback to even distribution",
+    "allocations": {
+      "Anthropic": 100000.0,
+      "OpenAI": 100000.0,
+      "Meta_AI": 100000.0,
+      "DeepMind": 100000.0,
+      "NovaMind": 100000.0
+    }
+  },
+  {
+    "type": "execution",
+    "round": 29,
+    "allocations": {
+      "Anthropic": 100000.0,
+      "OpenAI": 100000.0,
+      "Meta_AI": 100000.0,
+      "DeepMind": 100000.0,
+      "NovaMind": 100000.0
+    },
+    "total_deployed": 500000.0
+  }
+]

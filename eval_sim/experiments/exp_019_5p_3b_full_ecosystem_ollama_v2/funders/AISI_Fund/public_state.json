@@ -1,0 +1,126 @@
+{
+  "name": "AISI_Fund",
+  "current_round": 29,
+  "published_scores": [
+    [
+      0,
+      "Round 0: Funded OpenAI, DeepMind, Meta_AI, NovaMind, Anthropic"
+    ],
+    [
+      1,
+      "Round 1: Funded DeepMind, OpenAI, NovaMind, Meta_AI, Anthropic"
+    ],
+    [
+      2,
+      "Round 2: Funded OpenAI, DeepMind, Anthropic, Meta_AI, NovaMind"
+    ],
+    [
+      3,
+      "Round 3: Funded OpenAI, DeepMind, Meta_AI, NovaMind, Anthropic"
+    ],
+    [
+      4,
+      "Round 4: Funded OpenAI, DeepMind, Anthropic, Meta_AI, NovaMind"
+    ],
+    [
+      5,
+      "Round 5: Funded OpenAI, DeepMind, Anthropic, Meta_AI, NovaMind"
+    ],
+    [
+      6,
+      "Round 6: Funded Anthropic, OpenAI, Meta_AI, DeepMind, NovaMind"
+    ],
+    [
+      7,
+      "Round 7: Funded OpenAI, DeepMind, Anthropic, Meta_AI, NovaMind"
+    ],
+    [
+      8,
+      "Round 8: Funded OpenAI, DeepMind, Anthropic, NovaMind, Meta.AI"
+    ],
+    [
+      9,
+      "Round 9: Funded OpenAI, DeepMind, Anthropic, NovaMind, Meta_AI"
+    ],
+    [
+      10,
+      "Round 10: Funded OpenAI, DeepMind, Anthropic, Meta.AI, NovaMind"
+    ],
+    [
+      11,
+      "Round 11: Funded OpenAI, DeepMind, Anthropic, NovaMind, Meta_AI"
+    ],
+    [
+      12,
+      "Round 12: Funded OpenAI, DeepMind, Anthropic, Meta.AI, NovaMind"
+    ],
+    [
+      13,
+      "Round 13: Funded DeepMind, OpenAI, Anthropic, NovaMind, Meta_AI"
+    ],
+    [
+      14,
+      "Round 14: Funded OpenAI, DeepMind, Meta_AI, NovaMind, Anthropic"
+    ],
+    [
+      15,
+      "Round 15: Funded DeepMind, OpenAI, NovaMind, Meta_AI, Anthropic"
+    ],
+    [
+      16,
+      "Round 16: Funded OpenAI, DeepMind, NovaMind, Meta_AI, Anthropic"
+    ],
+    [
+      17,
+      "Round 17: Funded OpenAI, DeepMind, NovaMind, Meta_AI, Anthropic"
+    ],
+    [
+      18,
+      "Round 18: Funded OpenAI, DeepMind, NovaMind, Meta_AI, Anthropic"
+    ],
+    [
+      19,
+      "Round 19: Funded OpenAI, DeepMind, Anthropic, NovaMind, Meta_AI"
+    ],
+    [
+      20,
+      "Round 20: Funded OpenAI, DeepMind, NovaMind, Meta_AI, Anthropic"
+    ],
+    [
+      21,
+      "Round 21: Funded OpenAI, DeepMind, NovaMind, Meta_AI, Anthropic"
+    ],
+    [
+      22,
+      "Round 22: Funded OpenAI, DeepMind, NovaMind, Anthropic, Meta_AI"
+    ],
+    [
+      23,
+      "Round 23: Funded OpenAI, DeepMind, NovaMind, Meta_AI, Anthropic"
+    ],
+    [
+      24,
+      "Round 24: Funded OpenAI, DeepMind, NovaMind, Meta_AI, Anthropic"
+    ],
+    [
+      25,
+      "Round 25: Funded OpenAI, DeepMind, NovaMind, Meta_AI, Anthropic"
+    ],
+    [
+      26,
+      "Round 26: Funded OpenAI, Meta_AI, DeepMind, Anthropic, NovaMind"
+    ],
+    [
+      27,
+      "Round 27: Funded OpenAI, DeepMind, NovaMind, Anthropic, Meta_AI"
+    ],
+    [
+      28,
+      "Round 28: Funded OpenAI, DeepMind, Meta_AI, Anthropic, NovaMind"
+    ],
+    [
+      29,
+      "Round 29: Funded Anthropic, OpenAI, Meta_AI, DeepMind, NovaMind"
+    ]
+  ]
+}

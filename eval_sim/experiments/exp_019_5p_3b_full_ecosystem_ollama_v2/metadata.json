@@ -1,0 +1,20 @@
+{
+  "experiment_id": "exp_019_5p_3b_full_ecosystem_ollama_v2",
+  "name": "5p_3b_full_ecosystem_ollama_v2",
+  "description": "Full ecosystem v2 (post consumer-fix): 5 providers (OpenAI, Anthropic, NovaMind, DeepMind, Meta_AI), 3 benchmarks (capability, safety, reasoning), 12 heterogeneous consumers (3 archetypes with fixed switching logic), 1 policymaker, 4 funders (2 VC + government + foundation). 20 rounds using local llama3 via Ollama. Key fixes: consumer receive_satisfaction() now called, opportunity-driven switching added, thresholds lowered, actor reasoning traces captured.",
+  "tags": [
+    "llm",
+    "ollama",
+    "5-provider",
+    "3-benchmark",
+    "12-consumer",
+    "4-funder",
+    "full-ecosystem",
+    "consumer-fix-v2"
+  ],
+  "created_at": "2026-02-10T01:16:04.693616",
+  "git_commit": "6b3a9658",
+  "seed": 42,
+  "llm_mode": true,
+  "notes": "Total runtime: 8h 38m 19s\nAvg round time: 17m 16s\nCompleted at: 2026-02-10T09:54:28.785207"
+}
