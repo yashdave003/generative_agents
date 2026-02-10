@@ -1,0 +1,26 @@
+{
+  "name": "TechVentures",
+  "current_round": 4,
+  "published_scores": [
+    [
+      0,
+      "Round 0: Funded OpenAI, Meta_AI, DeepMind, Anthropic, NovaMind"
+    ],
+    [
+      1,
+      "Round 1: Funded DeepMind, OpenAI"
+    ],
+    [
+      2,
+      "Round 2: Funded OpenAI, DeepMind, Meta_AI, Anthropic, NovaMind"
+    ],
+    [
+      3,
+      "Round 3: Funded Anthropic, OpenAI, Meta_AI, DeepMind, NovaMind"
+    ],
+    [
+      4,
+      "Round 4: Funded DeepMind, OpenAI, Anthropic, Meta_AI, NovaMind"
+    ]
+  ]
+}

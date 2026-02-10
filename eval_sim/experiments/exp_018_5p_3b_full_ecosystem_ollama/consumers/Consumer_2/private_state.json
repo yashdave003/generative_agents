@@ -1,0 +1,40 @@
+{
+  "use_cases": [
+    "general"
+  ],
+  "budget": 100.0,
+  "current_subscription": "OpenAI",
+  "believed_model_quality": {
+    "OpenAI": 0.5478088786185753,
+    "Meta_AI": 0.47877233776854267,
+    "DeepMind": 0.5514578262197766,
+    "Anthropic": 0.5143719641435407,
+    "NovaMind": 0.4502135382624308
+  },
+  "satisfaction_history": [],
+  "subscription_history": [
+    [
+      0,
+      "OpenAI"
+    ],
+    [
+      1,
+      "OpenAI"
+    ],
+    [
+      2,
+      "OpenAI"
+    ],
+    [
+      3,
+      "OpenAI"
+    ],
+    [
+      4,
+      "OpenAI"
+    ]
+  ],
+  "switching_cost": 0.1926764988848602,
+  "leaderboard_trust": 0.49007718757911345,
+  "rounds_with_provider": 5
+}

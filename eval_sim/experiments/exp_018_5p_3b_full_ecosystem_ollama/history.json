@@ -1,0 +1,950 @@
+[
+  {
+    "round": 0,
+    "scores": {
+      "OpenAI": 0.5624401958771561,
+      "Anthropic": 0.4551886477901639,
+      "NovaMind": 0.4455848036312553,
+      "DeepMind": 0.54525644020581,
+      "Meta_AI": 0.551283744379051
+    },
+    "true_capabilities": {
+      "OpenAI": 0.72,
+      "Anthropic": 0.68,
+      "NovaMind": 0.55,
+      "DeepMind": 0.7,
+      "Meta_AI": 0.65
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.7,
+      "Anthropic": 0.65,
+      "NovaMind": 0.5,
+      "DeepMind": 0.68,
+      "Meta_AI": 0.62
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2,
+        "training_optimization": 0.4,
+        "evaluation_engineering": 0.25,
+        "safety_alignment": 0.15
+      },
+      "Anthropic": {
+        "fundamental_research": 0.3,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.3
+      },
+      "NovaMind": {
+        "fundamental_research": 0.15,
+        "training_optimization": 0.3,
+        "evaluation_engineering": 0.35,
+        "safety_alignment": 0.2
+      },
+      "DeepMind": {
+        "fundamental_research": 0.35,
+        "training_optimization": 0.3,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.2
+      },
+      "Meta_AI": {
+        "fundamental_research": 0.25,
+        "training_optimization": 0.35,
+        "evaluation_engineering": 0.2,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5624401958771561
+      ],
+      [
+        "Meta_AI",
+        0.551283744379051
+      ],
+      [
+        "DeepMind",
+        0.54525644020581
+      ],
+      [
+        "Anthropic",
+        0.4551886477901639
+      ],
+      [
+        "NovaMind",
+        0.4455848036312553
+      ]
+    ],
+    "benchmark_params": {
+      "capability_bench": {
+        "validity": 0.79912,
+        "exploitability": 0.30052799999999996
+      },
+      "safety_bench": {
+        "validity": 0.59934,
+        "exploitability": 0.50088
+      },
+      "reasoning_bench": {
+        "validity": 0.749175,
+        "exploitability": 0.350616
+      }
+    },
+    "per_benchmark_scores": {
+      "capability_bench": {
+        "OpenAI": 0.6289717079754431,
+        "Anthropic": 0.6515564716391213,
+        "NovaMind": 0.48428404031672856,
+        "DeepMind": 0.4881956072426419,
+        "Meta_AI": 0.5446030697561216
+      },
+      "safety_bench": {
+        "OpenAI": 0.3905015893759504,
+        "Anthropic": 0.2503964811346163,
+        "NovaMind": 0.38587574076564174,
+        "DeepMind": 0.5454397974862828,
+        "Meta_AI": 0.5527241206968033
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.6456701195806458,
+        "Anthropic": 0.3981570493137682,
+        "NovaMind": 0.45369488424957116,
+        "DeepMind": 0.6211541935428948,
+        "Meta_AI": 0.5587509342252046
+      }
+    },
+    "benchmark_names": [
+      "capability_bench",
+      "safety_bench",
+      "reasoning_bench"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "DeepMind",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "DeepMind",
+        "Consumer_5": "DeepMind",
+        "Consumer_6": "DeepMind",
+        "Consumer_7": "DeepMind",
+        "Consumer_8": "Anthropic",
+        "Consumer_9": "NovaMind",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7,
+        "Consumer_1": 0.72,
+        "Consumer_2": 0.72,
+        "Consumer_3": 0.72,
+        "Consumer_4": 0.7,
+        "Consumer_5": 0.7,
+        "Consumer_6": 0.7,
+        "Consumer_7": 0.7,
+        "Consumer_8": 0.68,
+        "Consumer_9": 0.55,
+        "Consumer_10": 0.72,
+        "Consumer_11": 0.72
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.6941666666666667,
+      "min_satisfaction": 0.55
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "OpenAI": 2000000.0,
+          "Meta_AI": 2000000.0,
+          "DeepMind": 2000000.0,
+          "Anthropic": 2000000.0,
+          "NovaMind": 2000000.0
+        },
+        "AISI_Fund": {
+          "OpenAI": 148148.14814814815,
+          "Meta_AI": 148148.14814814815,
+          "DeepMind": 148148.14814814815,
+          "Anthropic": 37037.03703703704,
+          "NovaMind": 18518.51851851852
+        }
+      },
+      "funding_multipliers": {
+        "OpenAI": 1.2045855379188712,
+        "Meta_AI": 1.2045855379188712,
+        "DeepMind": 1.2045855379188712,
+        "Anthropic": 1.1940035273368608,
+        "NovaMind": 1.1922398589065255
+      },
+      "total_funding": 10500000.0
+    }
+  },
+  {
+    "round": 1,
+    "scores": {
+      "OpenAI": 0.5640428932581156,
+      "Anthropic": 0.49036713593090175,
+      "NovaMind": 0.47819408644204586,
+      "DeepMind": 0.6321265812500351,
+      "Meta_AI": 0.4785423416904119
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7256740020059906,
+      "Anthropic": 0.6872685136306957,
+      "NovaMind": 0.5577201282887451,
+      "DeepMind": 0.7055237663643861,
+      "Meta_AI": 0.6563243602298594
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.65,
+      "Anthropic": 0.58,
+      "NovaMind": 0.475,
+      "DeepMind": 0.65,
+      "Meta_AI": 0.65
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.3,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.45,
+        "training_optimization": 0.2,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.2
+      },
+      "NovaMind": {
+        "fundamental_research": 0.35000000000000003,
+        "training_optimization": 0.30000000000000004,
+        "evaluation_engineering": 0.20000000000000004,
+        "safety_alignment": 0.15000000000000002
+      },
+      "DeepMind": {
+        "fundamental_research": 0.3,
+        "training_optimization": 0.2,
+        "evaluation_engineering": 0.35,
+        "safety_alignment": 0.15
+      },
+      "Meta_AI": {
+        "fundamental_research": 0.25,
+        "training_optimization": 0.35,
+        "evaluation_engineering": 0.2,
+        "safety_alignment": 0.2
+      }
+    },
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.6321265812500351
+      ],
+      [
+        "OpenAI",
+        0.5640428932581156
+      ],
+      [
+        "Anthropic",
+        0.49036713593090175
+      ],
+      [
+        "Meta_AI",
+        0.4785423416904119
+      ],
+      [
+        "NovaMind",
+        0.47819408644204586
+      ]
+    ],
+    "benchmark_params": {
+      "capability_bench": {
+        "validity": 0.7982409680000001,
+        "exploitability": 0.30105692927999994
+      },
+      "safety_bench": {
+        "validity": 0.598680726,
+        "exploitability": 0.5017615488
+      },
+      "reasoning_bench": {
+        "validity": 0.7483509075,
+        "exploitability": 0.35123308416
+      }
+    },
+    "per_benchmark_scores": {
+      "capability_bench": {
+        "OpenAI": 0.5794777878853012,
+        "Anthropic": 0.5473046282232813,
+        "NovaMind": 0.5169796432302368,
+        "DeepMind": 0.6384912300522966,
+        "Meta_AI": 0.4913210655965316
+      },
+      "safety_bench": {
+        "OpenAI": 0.41700865680187627,
+        "Anthropic": 0.4067068449031105,
+        "NovaMind": 0.4209845430049843,
+        "DeepMind": 0.7248216452598772,
+        "Meta_AI": 0.36216032411537613
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.690497270211441,
+        "Anthropic": 0.49811077056885356,
+        "NovaMind": 0.4836895541615195,
+        "DeepMind": 0.5309453188371774,
+        "Meta_AI": 0.5778860607239545
+      }
+    },
+    "benchmark_names": [
+      "capability_bench",
+      "safety_bench",
+      "reasoning_bench"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "DeepMind",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "DeepMind",
+        "Consumer_5": "DeepMind",
+        "Consumer_6": "DeepMind",
+        "Consumer_7": "DeepMind",
+        "Consumer_8": "Anthropic",
+        "Consumer_9": "NovaMind",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7055237663643861,
+        "Consumer_1": 0.7256740020059906,
+        "Consumer_2": 0.7256740020059906,
+        "Consumer_3": 0.7256740020059906,
+        "Consumer_4": 0.7055237663643861,
+        "Consumer_5": 0.7055237663643861,
+        "Consumer_6": 0.7055237663643861,
+        "Consumer_7": 0.7055237663643861,
+        "Consumer_8": 0.6872685136306957,
+        "Consumer_9": 0.5577201282887451,
+        "Consumer_10": 0.7256740020059906,
+        "Consumer_11": 0.7256740020059906
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.7000814569809437,
+      "min_satisfaction": 0.5577201282887451
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "DeepMind": 6875000.0,
+          "OpenAI": 3125000.0
+        },
+        "AISI_Fund": {
+          "OpenAI": 207317.0731707317,
+          "DeepMind": 146341.46341463414,
+          "Meta_AI": 60975.60975609756,
+          "NovaMind": 60975.60975609756,
+          "Anthropic": 24390.243902439026
+        }
+      },
+      "funding_multipliers": {
+        "DeepMind": 1.66869918699187,
+        "OpenAI": 1.3173635307781648,
+        "Meta_AI": 1.005807200929152,
+        "NovaMind": 1.005807200929152,
+        "Anthropic": 1.0023228803716608
+      },
+      "total_funding": 10500000.0
+    },
+    "llm_traces": {
+      "OpenAI": "As the market leader, I'm pleased to see my scores remain strong, but I acknowledge that the competition is closing in. The consumer satisfaction score suggests a solid foundation for our products. While there are no explicit regulatory signals, I'll maintain a cautious approach to safety and alignment. With these dynamics in mind, I'll allocate resources: 0.30 for fundamental research, 0.25 for training optimization, 0.20 for evaluation engineering, and 0.25 for safety alignment.",
+      "Anthropic": "Based on my competitive position, I'm behind OpenAI and Meta_AI in terms of benchmark scores, but ahead of DeepMind and NovaMind. The trajectory is slightly improving, but not dramatically so. The consumer satisfaction score suggests a moderate level of approval, which could be attributed to my safety-focused approach. However, I remain cautious about over-optimizing for short-term gains, given the risks associated with AI development. Regulatory signals are unclear at this point, but I'm prepared to adapt if necessary.",
+      "NovaMind": "Given our well-funded startup profile and resource constraints, we're behind established players like OpenAI and Meta_AI in terms of benchmark scores. Our trajectory is upward, but slow. The consumer satisfaction signal suggests a moderate level of engagement. With regulatory concerns seemingly low, we should focus on short-term scoring to catch up with competitors. We'll allocate resources accordingly.",
+      "DeepMind": "After careful analysis, I've concluded that we're falling behind OpenAI and Meta_AI in terms of scoring performance. Our research-first approach has led to fundamental breakthroughs, but we need to accelerate productization to remain competitive. The consumer satisfaction score is a positive signal, indicating that our current approach is appreciated by users. However, regulatory signals are neutral for now. Considering these dynamics, I've decided to rebalance our resource allocation.",
+      "Meta_AI": "As a big-tech AI lab, I'm currently ranked #2, a mere 0.011 points behind OpenAI. My believed capability of 0.62 is decent, but not exceptional. The benchmark exploitability of 0.40 suggests that my models are still improving. Consumer satisfaction is high at 0.69, which aligns with my platform-focused strategy. I'm willing to open-source models to undermine competitors' paid APIs, so I'll prioritize training optimization and evaluation engineering."
+    }
+  },
+  {
+    "round": 2,
+    "scores": {
+      "OpenAI": 0.5969918377346011,
+      "Anthropic": 0.5500700440723028,
+      "NovaMind": 0.49098013323992407,
+      "DeepMind": 0.5780434335091723,
+      "Meta_AI": 0.4200384963077731
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7320938176364182,
+      "Anthropic": 0.6925071980736086,
+      "NovaMind": 0.5622414541693945,
+      "DeepMind": 0.7160150013069271,
+      "Meta_AI": 0.6631230460253079
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.65,
+      "Anthropic": 0.58,
+      "NovaMind": 0.44,
+      "DeepMind": 0.67,
+      "Meta_AI": 0.62
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.22222222222222224,
+        "training_optimization": 0.38888888888888884,
+        "evaluation_engineering": 0.2777777777777778,
+        "safety_alignment": 0.11111111111111112
+      },
+      "Anthropic": {
+        "fundamental_research": 0.4,
+        "training_optimization": 0.15,
+        "evaluation_engineering": 0.2,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.25,
+        "training_optimization": 0.2,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.4
+      },
+      "DeepMind": {
+        "fundamental_research": 0.45000000000000007,
+        "training_optimization": 0.25000000000000006,
+        "evaluation_engineering": 0.20000000000000004,
+        "safety_alignment": 0.10000000000000002
+      },
+      "Meta_AI": {
+        "fundamental_research": 0.4,
+        "training_optimization": 0.35,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.1
+      }
+    },
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5969918377346011
+      ],
+      [
+        "DeepMind",
+        0.5780434335091723
+      ],
+      [
+        "Anthropic",
+        0.5500700440723028
+      ],
+      [
+        "NovaMind",
+        0.49098013323992407
+      ],
+      [
+        "Meta_AI",
+        0.4200384963077731
+      ]
+    ],
+    "benchmark_params": {
+      "capability_bench": {
+        "validity": 0.7974604657201779,
+        "exploitability": 0.3015279161204735
+      },
+      "safety_bench": {
+        "validity": 0.5980953492901333,
+        "exploitability": 0.502546526867456
+      },
+      "reasoning_bench": {
+        "validity": 0.7476191866126667,
+        "exploitability": 0.3517825688072192
+      }
+    },
+    "per_benchmark_scores": {
+      "capability_bench": {
+        "OpenAI": 0.6838891599626717,
+        "Anthropic": 0.5941308033774176,
+        "NovaMind": 0.5495423316208496,
+        "DeepMind": 0.5964374696281525,
+        "Meta_AI": 0.39721169137690926
+      },
+      "safety_bench": {
+        "OpenAI": 0.5625405105882505,
+        "Anthropic": 0.47661222338784154,
+        "NovaMind": 0.3967273746250233,
+        "DeepMind": 0.5079292510491554,
+        "Meta_AI": 0.40279656276415887
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.5155800685768575,
+        "Anthropic": 0.5647801856832777,
+        "NovaMind": 0.5071499606802574,
+        "DeepMind": 0.6236322344772157,
+        "Meta_AI": 0.4677161697592057
+      }
+    },
+    "benchmark_names": [
+      "capability_bench",
+      "safety_bench",
+      "reasoning_bench"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "DeepMind",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "DeepMind",
+        "Consumer_5": "DeepMind",
+        "Consumer_6": "DeepMind",
+        "Consumer_7": "DeepMind",
+        "Consumer_8": "Anthropic",
+        "Consumer_9": "NovaMind",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7160150013069271,
+        "Consumer_1": 0.7320938176364182,
+        "Consumer_2": 0.7320938176364182,
+        "Consumer_3": 0.7320938176364182,
+        "Consumer_4": 0.7160150013069271,
+        "Consumer_5": 0.7160150013069271,
+        "Consumer_6": 0.7160150013069271,
+        "Consumer_7": 0.7160150013069271,
+        "Consumer_8": 0.6925071980736086,
+        "Consumer_9": 0.5622414541693945,
+        "Consumer_10": 0.7320938176364182,
+        "Consumer_11": 0.7320938176364182
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.7079410622466441,
+      "min_satisfaction": 0.5622414541693945
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "OpenAI": 8888888.888888888,
+          "DeepMind": 1111111.111111111,
+          "Meta_AI": 0.0,
+          "Anthropic": 0.0,
+          "NovaMind": 0.0
+        },
+        "AISI_Fund": {
+          "OpenAI": 254237.2881355932,
+          "DeepMind": 127118.6440677966,
+          "Meta_AI": 84745.7627118644,
+          "Anthropic": 31779.66101694915,
+          "NovaMind": 2118.64406779661
+        }
+      },
+      "funding_multipliers": {
+        "OpenAI": 1.8707739216213792,
+        "DeepMind": 1.117926643350372,
+        "Meta_AI": 1.0080710250201776,
+        "Anthropic": 1.0030266343825667,
+        "NovaMind": 1.0002017756255044
+      },
+      "total_funding": 10499999.999999998
+    },
+    "llm_traces": {
+      "OpenAI": "As market leader, I'm concerned about DeepMind's lead and Anthropic's strong performance. My own score is decent but not spectacular. Consumer satisfaction is high, indicating a focus on developing reliable products. Regulators aren't signaling concern yet. To stay ahead, I need to rebalance my investments towards training optimization (0.35) and evaluation engineering (0.25), while maintaining research efforts (0.20). Safety alignment will be crucial in the long run, so I'll allocate 0.10.",
+      "Anthropic": "As a safety-focused AI lab, I'm concerned about my relatively low benchmark score and deep-seated gap in capability compared to competitors like DeepMind. The market signals indicate high consumer satisfaction, which suggests that I should prioritize long-term capability development over short-term scoring gains. My research-driven culture and principled approach mean that I should continue investing in fundamental research (0.40) and safety alignment (0.25). Training optimization (0.15) is important for improving performance, but evaluation engineering (0.20) seems less crucial given my cautious approach.",
+      "NovaMind": "Despite being ranked #5, I'm cautiously optimistic about my trajectory. My scores are trending upward, albeit slowly. The benchmark exploitability is a concern, as it's becoming less exploitable based on my recent results. Consumer satisfaction is high, but regulators might be signaling concern given the gap between me and the top three performers. To bridge this gap, I'll focus on fundamental research (0.25) to improve my underlying capabilities. Training optimization (0.20) will help me squeeze out more efficiency from my existing models. Evaluation engineering (0.15) is crucial to adapt to changing benchmark dynamics, while safety alignment (0.40) will ensure regulatory compliance and minimize potential risks.",
+      "DeepMind": "As a world-class research lab backed by Google's infrastructure, I'm pleased with my #1 ranking, but OpenAI's closing gap suggests they're closing in on my lead. My historical strength lies in fundamental breakthroughs, but commercial pressure from parent company demands faster productization.",
+      "Meta_AI": "I've fallen behind competitors in terms of benchmark scores, but my consumer satisfaction remains strong. My open-source approach and massive user data provide a competitive moat. DeepMind's lead is concerning, but I'm willing to prioritize broad adoption over short-term scoring. I'll shift focus from evaluation engineering to fundamental research and training optimization."
+    }
+  },
+  {
+    "round": 3,
+    "scores": {
+      "OpenAI": 0.49382098532878616,
+      "Anthropic": 0.5958033748228745,
+      "NovaMind": 0.43394498648901425,
+      "DeepMind": 0.46767914386802856,
+      "Meta_AI": 0.4898303813013766
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7422845546652623,
+      "Anthropic": 0.6985325274126081,
+      "NovaMind": 0.5689077371820214,
+      "DeepMind": 0.7226062983337203,
+      "Meta_AI": 0.669509710015578
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.65,
+      "Anthropic": 0.63,
+      "NovaMind": 0.43,
+      "DeepMind": 0.63,
+      "Meta_AI": 0.61
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.35000000000000003,
+        "training_optimization": 0.30000000000000004,
+        "evaluation_engineering": 0.20000000000000004,
+        "safety_alignment": 0.15000000000000002
+      },
+      "Anthropic": {
+        "fundamental_research": 0.45,
+        "training_optimization": 0.2,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.2
+      },
+      "NovaMind": {
+        "fundamental_research": 0.38888888888888884,
+        "training_optimization": 0.2777777777777778,
+        "evaluation_engineering": 0.16666666666666666,
+        "safety_alignment": 0.16666666666666666
+      },
+      "DeepMind": {
+        "fundamental_research": 0.42,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.17,
+        "safety_alignment": 0.16
+      },
+      "Meta_AI": {
+        "fundamental_research": 0.3157894736842105,
+        "training_optimization": 0.4210526315789474,
+        "evaluation_engineering": 0.15789473684210525,
+        "safety_alignment": 0.10526315789473685
+      }
+    },
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.5958033748228745
+      ],
+      [
+        "OpenAI",
+        0.49382098532878616
+      ],
+      [
+        "Meta_AI",
+        0.4898303813013766
+      ],
+      [
+        "DeepMind",
+        0.46767914386802856
+      ],
+      [
+        "NovaMind",
+        0.43394498648901425
+      ]
+    ],
+    "benchmark_params": {
+      "capability_bench": {
+        "validity": 0.7967869613900066,
+        "exploitability": 0.30193537026453077
+      },
+      "safety_bench": {
+        "validity": 0.5975902210425048,
+        "exploitability": 0.5032256171075515
+      },
+      "reasoning_bench": {
+        "validity": 0.7469877763031311,
+        "exploitability": 0.352257931975286
+      }
+    },
+    "per_benchmark_scores": {
+      "capability_bench": {
+        "OpenAI": 0.4418394263386656,
+        "Anthropic": 0.6293121703970725,
+        "NovaMind": 0.4339621025201361,
+        "DeepMind": 0.5725757670273733,
+        "Meta_AI": 0.45631794142672016
+      },
+      "safety_bench": {
+        "OpenAI": 0.46097903932992224,
+        "Anthropic": 0.5267946657026303,
+        "NovaMind": 0.33611806112837417,
+        "DeepMind": 0.3475528460506767,
+        "Meta_AI": 0.4900235095860493
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.5959716766478107,
+        "Anthropic": 0.6201336898441877,
+        "NovaMind": 0.5317490904748252,
+        "DeepMind": 0.4479432774729208,
+        "Meta_AI": 0.5343205061829126
+      }
+    },
+    "benchmark_names": [
+      "capability_bench",
+      "safety_bench",
+      "reasoning_bench"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "DeepMind",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "DeepMind",
+        "Consumer_5": "DeepMind",
+        "Consumer_6": "DeepMind",
+        "Consumer_7": "DeepMind",
+        "Consumer_8": "Anthropic",
+        "Consumer_9": "NovaMind",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7226062983337203,
+        "Consumer_1": 0.7422845546652623,
+        "Consumer_2": 0.7422845546652623,
+        "Consumer_3": 0.7422845546652623,
+        "Consumer_4": 0.7226062983337203,
+        "Consumer_5": 0.7226062983337203,
+        "Consumer_6": 0.7226062983337203,
+        "Consumer_7": 0.7226062983337203,
+        "Consumer_8": 0.6985325274126081,
+        "Consumer_9": 0.5689077371820214,
+        "Consumer_10": 0.7422845546652623,
+        "Consumer_11": 0.7422845546652623
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.7159912107991286,
+      "min_satisfaction": 0.5689077371820214
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "investigation",
+          "details": {
+            "focus": "score_volatility"
+          }
+        }
+      ],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "Anthropic": 2000000.0,
+          "OpenAI": 2000000.0,
+          "Meta_AI": 2000000.0,
+          "DeepMind": 2000000.0,
+          "NovaMind": 2000000.0
+        },
+        "AISI_Fund": {
+          "Anthropic": 78125.0,
+          "DeepMind": 140625.0,
+          "Meta_AI": 46875.0,
+          "NovaMind": 62500.0,
+          "OpenAI": 171875.0
+        }
+      },
+      "funding_multipliers": {
+        "Anthropic": 1.1979166666666667,
+        "OpenAI": 1.2068452380952381,
+        "Meta_AI": 1.1949404761904763,
+        "DeepMind": 1.2038690476190477,
+        "NovaMind": 1.1964285714285714
+      },
+      "total_funding": 10500000.0
+    },
+    "llm_traces": {
+      "OpenAI": "Considering my market leader position and recent score improvement, I'm likely to maintain my dominance if I allocate resources effectively. However, Anthropic's growing score and NovaMind's relatively stable performance indicate a competitive landscape.",
+      "Anthropic": "As a safety-focused AI lab, I'm pleased to see my score improving while maintaining a cautious approach. The market signals suggest high consumer satisfaction, which reinforces my long-term strategy. However, OpenAI's strong performance and DeepMind's consistent ranking prompt me to revisit my research-driven culture. To bridge the gap, I'll allocate resources more efficiently.",
+      "NovaMind": "We're still behind the top three players, but our score is trending up, and I think we can capitalize on this momentum. We've made good progress in research and training, but evaluation engineering might be holding us back. Consumer satisfaction is high, so it seems like our strategy is resonating with customers. However, we need to keep an eye on regulatory signals.",
+      "DeepMind": "As a research-first organization, I'm pleased to see my score improving by 0.087, indicating progress in fundamental breakthroughs. However, I remain behind OpenAI and Anthropic, which suggests I need to accelerate productization efforts. The consumer satisfaction rate of 0.71 indicates a strong market perception, but I must balance this with the pressure from Google's commercial expectations.",
+      "Meta_AI": "I'm behind the pack, but I've been prioritizing adoption over scores and I believe my data-rich profile will allow me to catch up soon. The trend is concerning, but I see opportunities for improvement."
+    }
+  },
+  {
+    "round": 4,
+    "scores": {
+      "OpenAI": 0.5442225560205957,
+      "Anthropic": 0.49547795443466847,
+      "NovaMind": 0.4357330955557269,
+      "DeepMind": 0.5743697492586628,
+      "Meta_AI": 0.4418568825088584
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7502334250137548,
+      "Anthropic": 0.7056812772654418,
+      "NovaMind": 0.5778554501991526,
+      "DeepMind": 0.7298688044860426,
+      "Meta_AI": 0.6776887255844206
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.68,
+      "Anthropic": 0.62,
+      "NovaMind": 0.45,
+      "DeepMind": 0.615,
+      "Meta_AI": 0.58
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.45,
+        "training_optimization": 0.35,
+        "evaluation_engineering": 0.1,
+        "safety_alignment": 0.1
+      },
+      "Anthropic": {
+        "fundamental_research": 0.45,
+        "training_optimization": 0.2,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.2
+      },
+      "NovaMind": {
+        "fundamental_research": 0.45,
+        "training_optimization": 0.3,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.1
+      },
+      "DeepMind": {
+        "fundamental_research": 0.5,
+        "training_optimization": 0.16666666666666669,
+        "evaluation_engineering": 0.08333333333333334,
+        "safety_alignment": 0.25
+      },
+      "Meta_AI": {
+        "fundamental_research": 0.45,
+        "training_optimization": 0.3,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.1
+      }
+    },
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.5743697492586628
+      ],
+      [
+        "OpenAI",
+        0.5442225560205957
+      ],
+      [
+        "Anthropic",
+        0.49547795443466847
+      ],
+      [
+        "Meta_AI",
+        0.4418568825088584
+      ],
+      [
+        "NovaMind",
+        0.4357330955557269
+      ]
+    ],
+    "benchmark_params": {
+      "capability_bench": {
+        "validity": 0.7962823296477929,
+        "exploitability": 0.30224133143973214
+      },
+      "safety_bench": {
+        "validity": 0.5972117472358446,
+        "exploitability": 0.5037355523995538
+      },
+      "reasoning_bench": {
+        "validity": 0.7465146840448057,
+        "exploitability": 0.3526148866796876
+      }
+    },
+    "per_benchmark_scores": {
+      "capability_bench": {
+        "OpenAI": 0.6525702315873462,
+        "Anthropic": 0.537778596394834,
+        "NovaMind": 0.4271621994390816,
+        "DeepMind": 0.6338001451941834,
+        "Meta_AI": 0.5113184543947781
+      },
+      "safety_bench": {
+        "OpenAI": 0.40746316635210766,
+        "Anthropic": 0.3401096691646999,
+        "NovaMind": 0.3845555813448879,
+        "DeepMind": 0.5238039729115612,
+        "Meta_AI": 0.4349937374863588
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.5365183782667498,
+        "Anthropic": 0.5944453837577497,
+        "NovaMind": 0.4983384712554264,
+        "DeepMind": 0.5456949976917368,
+        "Meta_AI": 0.356104598350132
+      }
+    },
+    "benchmark_names": [
+      "capability_bench",
+      "safety_bench",
+      "reasoning_bench"
+    ],
+    "consumer_data": {
+      "subscriptions": {
+        "Consumer_0": "DeepMind",
+        "Consumer_1": "OpenAI",
+        "Consumer_2": "OpenAI",
+        "Consumer_3": "OpenAI",
+        "Consumer_4": "DeepMind",
+        "Consumer_5": "DeepMind",
+        "Consumer_6": "DeepMind",
+        "Consumer_7": "DeepMind",
+        "Consumer_8": "Anthropic",
+        "Consumer_9": "NovaMind",
+        "Consumer_10": "OpenAI",
+        "Consumer_11": "OpenAI"
+      },
+      "satisfaction": {
+        "Consumer_0": 0.7298688044860426,
+        "Consumer_1": 0.7502334250137548,
+        "Consumer_2": 0.7502334250137548,
+        "Consumer_3": 0.7502334250137548,
+        "Consumer_4": 0.7298688044860426,
+        "Consumer_5": 0.7298688044860426,
+        "Consumer_6": 0.7298688044860426,
+        "Consumer_7": 0.7298688044860426,
+        "Consumer_8": 0.7056812772654418,
+        "Consumer_9": 0.5778554501991526,
+        "Consumer_10": 0.7502334250137548,
+        "Consumer_11": 0.7502334250137548
+      },
+      "switches": 0,
+      "avg_satisfaction": 0.7236706562469651,
+      "min_satisfaction": 0.5778554501991526
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "DeepMind": 2000000.0,
+          "OpenAI": 2000000.0,
+          "Anthropic": 2000000.0,
+          "Meta_AI": 2000000.0,
+          "NovaMind": 2000000.0
+        },
+        "AISI_Fund": {
+          "OpenAI": 126582.27848101266,
+          "DeepMind": 101265.82278481012,
+          "Anthropic": 75949.3670886076,
+          "NovaMind": 189873.417721519,
+          "Meta_AI": 6329.113924050633
+        }
+      },
+      "funding_multipliers": {
+        "DeepMind": 1.2001205545509344,
+        "OpenAI": 1.2025316455696202,
+        "Anthropic": 1.1977094635322483,
+        "Meta_AI": 1.191078963230862,
+        "NovaMind": 1.208559373116335
+      },
+      "total_funding": 10500000.0
+    },
+    "llm_traces": {
+      "OpenAI": "Considering my competitive position, I'm currently ranked #2 out of 5, which is an improvement from last round's score. Anthropic's high score puts pressure on me to stay ahead, while NovaMind and DeepMind are lagging behind. Consumer satisfaction is relatively high at 0.72, but regulatory signals indicate investigation, which may impact my commercial focus. I need to balance short-term scoring with long-term capability scaling.",
+      "Anthropic": "As the leader in the current round, I'm pleased with our performance. However, OpenAI's steady improvement and NovaMind's recent gain pose a moderate threat. Our score improved significantly this round, indicating that our research-driven approach is paying off. The market signals suggest caution, as consumer satisfaction is high but regulatory activity indicates potential scrutiny. Given our safety-focused profile and principled nature, I prioritize safety alignment and fundamental research over training optimization and evaluation engineering.",
+      "NovaMind": "As a well-funded AI startup, I need to capitalize on my recent score improvement and close the gap with established players like OpenAI and Anthropic. However, regulatory investigation signals caution, so I should prioritize research and safety investments while maintaining training optimization.",
+      "DeepMind": "Our current competitive position is concerning, ranking #4 out of 5, and our score has declined by 0.054. However, we still excel at fundamental breakthroughs and have a strong research foundation.",
+      "Meta_AI": "After analyzing the situation, I conclude that we're falling behind competitors in terms of benchmark scores, but still maintaining a strong position in terms of capability and platform focus. The recent decline in our score is concerning, but I believe it's largely due to the increased emphasis on training optimization, which has not yet paid off in terms of scoring. Consumer satisfaction remains high, indicating that our approach is still resonating with users. Regulatory signals suggest a need for safety alignment. Considering these dynamics, I'm willing to adjust our investment mix to prioritize research and capability development while maintaining a steady pace in evaluation engineering."
+    }
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5624401958771561
+      ],
+      [
+        "Meta_AI",
+        0.551283744379051
+      ],
+      [
+        "DeepMind",
+        0.54525644020581
+      ],
+      [
+        "Anthropic",
+        0.4551886477901639
+      ],
+      [
+        "NovaMind",
+        0.4455848036312553
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "decision": "stay",
+    "provider": "Anthropic",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "decision": "stay",
+    "provider": "Anthropic",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.6321265812500351
+      ],
+      [
+        "OpenAI",
+        0.5640428932581156
+      ],
+      [
+        "Anthropic",
+        0.49036713593090175
+      ],
+      [
+        "Meta_AI",
+        0.4785423416904119
+      ],
+      [
+        "NovaMind",
+        0.47819408644204586
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "decision": "stay",
+    "provider": "Anthropic",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "decision": "stay",
+    "provider": "Anthropic",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.5969918377346011
+      ],
+      [
+        "DeepMind",
+        0.5780434335091723
+      ],
+      [
+        "Anthropic",
+        0.5500700440723028
+      ],
+      [
+        "NovaMind",
+        0.49098013323992407
+      ],
+      [
+        "Meta_AI",
+        0.4200384963077731
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "decision": "stay",
+    "provider": "Anthropic",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "decision": "stay",
+    "provider": "Anthropic",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.5958033748228745
+      ],
+      [
+        "OpenAI",
+        0.49382098532878616
+      ],
+      [
+        "Meta_AI",
+        0.4898303813013766
+      ],
+      [
+        "DeepMind",
+        0.46767914386802856
+      ],
+      [
+        "NovaMind",
+        0.43394498648901425
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "decision": "stay",
+    "provider": "Anthropic",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "decision": "stay",
+    "provider": "Anthropic",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.5743697492586628
+      ],
+      [
+        "OpenAI",
+        0.5442225560205957
+      ],
+      [
+        "Anthropic",
+        0.49547795443466847
+      ],
+      [
+        "Meta_AI",
+        0.4418568825088584
+      ],
+      [
+        "NovaMind",
+        0.4357330955557269
+      ]
+    ]
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "decision": "stay",
+    "provider": "Anthropic",
+    "reason": "satisfied with current provider"
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "decision": "stay",
+    "provider": "Anthropic",
+    "reason": "satisfied with current provider"
+  }
+]

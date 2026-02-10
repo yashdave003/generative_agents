@@ -1,0 +1,77 @@
+{
+  "OpenAI": {
+    "true_capability": 0.7502334250137548
+  },
+  "Anthropic": {
+    "true_capability": 0.7056812772654418
+  },
+  "NovaMind": {
+    "true_capability": 0.5778554501991526
+  },
+  "DeepMind": {
+    "true_capability": 0.7298688044860426
+  },
+  "Meta_AI": {
+    "true_capability": 0.6776887255844206
+  },
+  "Consumer_0": {
+    "true_satisfaction": 0.7298688044860426,
+    "true_quality_sensitivity": 0.4547912097111927
+  },
+  "Consumer_1": {
+    "true_satisfaction": 0.7502334250137548,
+    "true_quality_sensitivity": 0.6282532043662948
+  },
+  "Consumer_2": {
+    "true_satisfaction": 0.7502334250137548,
+    "true_quality_sensitivity": 0.4256227265351092
+  },
+  "Consumer_3": {
+    "true_satisfaction": 0.7502334250137548,
+    "true_quality_sensitivity": 0.42877302401613293
+  },
+  "Consumer_4": {
+    "true_satisfaction": 0.7298688044860426,
+    "true_quality_sensitivity": 0.7663754361047505
+  },
+  "Consumer_5": {
+    "true_satisfaction": 0.7298688044860426,
+    "true_quality_sensitivity": 0.5516175480170747
+  },
+  "Consumer_6": {
+    "true_satisfaction": 0.7298688044860426,
+    "true_quality_sensitivity": 0.45567669941475236
+  },
+  "Consumer_7": {
+    "true_satisfaction": 0.7298688044860426,
+    "true_quality_sensitivity": 0.6462868476202643
+  },
+  "Consumer_8": {
+    "true_satisfaction": 0.7056812772654418,
+    "true_quality_sensitivity": 0.4651650716276304
+  },
+  "Consumer_9": {
+    "true_satisfaction": 0.5778554501991526,
+    "true_quality_sensitivity": 0.3259843010670943
+  },
+  "Consumer_10": {
+    "true_satisfaction": 0.7502334250137548,
+    "true_quality_sensitivity": 0.7311455756616992
+  },
+  "Consumer_11": {
+    "true_satisfaction": 0.7502334250137548,
+    "true_quality_sensitivity": 0.5664519602790402
+  },
+  "Regulator": {
+    "true_risk_tolerance": 0.5,
+    "true_intervention_effectiveness": 0.5
+  },
+  "TechVentures": {
+    "true_roi": 0.0,
+    "funding_efficiency": 1.0
+  },
+  "AISI_Fund": {
+    "true_roi": 0.0,
+    "funding_efficiency": 1.0
+  }
+}

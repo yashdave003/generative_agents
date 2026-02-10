@@ -1,0 +1,98 @@
+{
+  "funder_type": "gov",
+  "mission_statement": "Ensure safe and responsible AI development",
+  "total_capital": 500000.0,
+  "deployed_capital": 500000.00000000006,
+  "believed_provider_quality": {
+    "OpenAI": 0.660790409437111,
+    "Meta_AI": 0.47877233776854267,
+    "DeepMind": 0.6505614693360552,
+    "Anthropic": 0.6222584069208359,
+    "NovaMind": 0.5190381082040422
+  },
+  "believed_provider_gaming": {
+    "OpenAI": 0.0,
+    "Meta_AI": 0.3,
+    "DeepMind": 0.0,
+    "Anthropic": 0.0,
+    "NovaMind": 0.0
+  },
+  "active_funding": {
+    "OpenAI": 126582.27848101266,
+    "DeepMind": 101265.82278481012,
+    "Anthropic": 75949.3670886076,
+    "NovaMind": 189873.417721519,
+    "Meta_AI": 6329.113924050633
+  },
+  "funding_history": [
+    [
+      0,
+      {
+        "OpenAI": 148148.14814814815,
+        "Meta_AI": 148148.14814814815,
+        "DeepMind": 148148.14814814815,
+        "Anthropic": 37037.03703703704,
+        "NovaMind": 18518.51851851852
+      }
+    ],
+    [
+      1,
+      {
+        "OpenAI": 207317.0731707317,
+        "DeepMind": 146341.46341463414,
+        "Meta_AI": 60975.60975609756,
+        "NovaMind": 60975.60975609756,
+        "Anthropic": 24390.243902439026
+      }
+    ],
+    [
+      2,
+      {
+        "OpenAI": 254237.2881355932,
+        "DeepMind": 127118.6440677966,
+        "Meta_AI": 84745.7627118644,
+        "Anthropic": 31779.66101694915,
+        "NovaMind": 2118.64406779661
+      }
+    ],
+    [
+      3,
+      {
+        "Anthropic": 78125.0,
+        "DeepMind": 140625.0,
+        "Meta_AI": 46875.0,
+        "NovaMind": 62500.0,
+        "OpenAI": 171875.0
+      }
+    ],
+    [
+      4,
+      {
+        "OpenAI": 126582.27848101266,
+        "DeepMind": 101265.82278481012,
+        "Anthropic": 75949.3670886076,
+        "NovaMind": 189873.417721519,
+        "Meta_AI": 6329.113924050633
+      }
+    ]
+  ],
+  "roi_history": [
+    [
+      1,
+      0.12149722677156602
+    ],
+    [
+      2,
+      0.12400880252194217
+    ],
+    [
+      3,
+      0.12471751650854923
+    ],
+    [
+      4,
+      0.12342193255349183
+    ]
+  ],
+  "recent_insights": []
+}

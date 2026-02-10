@@ -1,0 +1,40 @@
+{
+  "use_cases": [
+    "general"
+  ],
+  "budget": 100.0,
+  "current_subscription": "NovaMind",
+  "believed_model_quality": {
+    "OpenAI": 0.5478088786185753,
+    "Meta_AI": 0.47877233776854267,
+    "DeepMind": 0.5514578262197766,
+    "Anthropic": 0.5143719641435407,
+    "NovaMind": 0.4502135382624308
+  },
+  "satisfaction_history": [],
+  "subscription_history": [
+    [
+      0,
+      "NovaMind"
+    ],
+    [
+      1,
+      "NovaMind"
+    ],
+    [
+      2,
+      "NovaMind"
+    ],
+    [
+      3,
+      "NovaMind"
+    ],
+    [
+      4,
+      "NovaMind"
+    ]
+  ],
+  "switching_cost": 0.11698139946825103,
+  "leaderboard_trust": 0.7951409852451867,
+  "rounds_with_provider": 5
+}

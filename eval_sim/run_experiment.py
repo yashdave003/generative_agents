@@ -31,7 +31,7 @@ LLM = {
 }
 
 SIMULATION = {
-    "n_rounds": 20,
+    "n_rounds": 5,
     "seed": 42,
     "verbose": True,
     "rnd_efficiency": 0.01,
