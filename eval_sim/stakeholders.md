@@ -214,6 +214,14 @@ The Evaluator is now **active**: benchmarks degrade in validity and grow in expl
 ### Future Extensions
 - **Organizational Consumer**: Longer decision timelines, compliance constraints
 
+### TODO / Known Issues
+
+| # | Priority | Area | Issue | Details |
+|---|----------|------|-------|---------|
+| 1 | **High** | Consumers | Consumers are too passive / unrealistic | The 3 archetypes (leaderboard follower, experience-driven, cautious/sticky) are implemented but have minimal observable effect on dynamics. Market share graphs are stagnant — consumers rarely switch providers. Need to investigate switching thresholds, satisfaction gap sensitivity, and whether the blended scoring model produces enough differentiation between archetypes. |
+| 2 | **Medium** | Logging | LLM thinking traces missing for non-provider actors | The game log includes model provider thinking/reasoning traces, but consumers, policymakers, and funders do not log their LLM reasoning. All actor types should capture a summary of their LLM thinking (not full paragraphs, but key reasoning) in the round logs and game log. |
+| 3 | **Medium** | Plotting | Multiple plotting bugs | **Benchmark validity graph**: x-axis is wrong. **Market share graph**: completely flat (likely related to consumer switching issue #1). **Score/capability graph**: legend says "true vs believed capability" in grey but doesn't match what's actually plotted — hard to read. General pass needed on plot correctness and readability. |
+
 ---
 
 # Part 3: Simulation Model
