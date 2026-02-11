@@ -70,7 +70,7 @@ class SimulationConfig:
     benchmark_exploitability_growth_rate: float = 0.008
 
     # Benchmark introduction (evaluator introduces new benchmarks mid-simulation)
-    benchmark_introduction_cooldown: int = 8
+    benchmark_introduction_cooldown: int = 6
     max_benchmarks: int = 6
 
     # Planning mode

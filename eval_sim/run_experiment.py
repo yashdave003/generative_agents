@@ -37,7 +37,7 @@ LLM = {
 }
 
 SIMULATION = {
-    "n_rounds": 30,
+    "n_rounds": 10,
     "seed": 42,
     "verbose": True,
     "rnd_efficiency": 0.01,
@@ -50,7 +50,7 @@ SIMULATION = {
     "benchmark_validity_decay_rate": 0.005,
     "benchmark_exploitability_growth_rate": 0.008,
     # Benchmark introduction
-    "benchmark_introduction_cooldown": 8,
+    "benchmark_introduction_cooldown": 6,
     "max_benchmarks": 6,
     # Media
     "enable_media": True,
@@ -189,7 +189,7 @@ def run():
         breakthrough_magnitude=SIMULATION.get("breakthrough_magnitude", 0.05),
         benchmark_validity_decay_rate=SIMULATION.get("benchmark_validity_decay_rate", 0.005),
         benchmark_exploitability_growth_rate=SIMULATION.get("benchmark_exploitability_growth_rate", 0.008),
-        benchmark_introduction_cooldown=SIMULATION.get("benchmark_introduction_cooldown", 8),
+        benchmark_introduction_cooldown=SIMULATION.get("benchmark_introduction_cooldown", 6),
         max_benchmarks=SIMULATION.get("max_benchmarks", 6),
         llm_mode=LLM["llm_mode"],
         enable_consumers=CONSUMERS["enabled"],

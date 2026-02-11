@@ -481,7 +481,7 @@ class Evaluator:
                 break
 
         # Trigger 2: Periodic introduction (every cooldown rounds)
-        if trigger is None and round_num > 0:
+        if trigger is None and round_num > 0 and round_num % self.benchmark_introduction_cooldown == 0:
             trigger = f"periodic_introduction:round_{round_num}"
 
         if trigger is None:
