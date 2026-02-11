@@ -14,21 +14,19 @@ import time
 # ============================================================
 
 EXPERIMENT = {
-    "name": "5p_2b_full_ecosystem_v4",
+    "name": "5p_2b_3funder_highcap",
     "description": (
-        "Full ecosystem v4: 5 providers, 2 benchmarks (coding + reasoning), "
+        "Full ecosystem v5: 5 providers, 2 benchmarks (coding + reasoning), "
         "12 consumer segments (4 use-cases × 3 archetypes), 1 policymaker, "
-        "4 funders, expanded media actor (TechPress). "
-        "New in v4: monotonic per-benchmark scores (providers don't disclose worse scores), "
-        "periodic benchmark introduction every 7 rounds (replaces every-15-round trigger), "
-        "expanded media reporting (funding headlines, per-benchmark leader changes, "
-        "consumer market shifts, narrative framing of large score jumps, "
-        "specific policymaker intervention headlines). "
+        "3 funders (2 VC + 1 Gov) with high capital ($2B/$500M/$100M). "
+        "Funder rework: 10% per-round deployment cap, 2-round cooldown, "
+        "momentum-based scoring (no direct gaming penalty), "
+        "media headline dedup, cleaned round_data. "
         "LLM mode via Ollama."
     ),
     "tags": ["llm", "ollama", "5-provider", "2-benchmark", "12-segments",
-             "4-funder", "media-expanded", "monotonic-scores",
-             "periodic-benchmarks", "full-ecosystem-v4"],
+             "3-funder", "high-capital", "momentum-scoring", "funder-cap",
+             "funder-cooldown", "media-dedup", "full-ecosystem-v5"],
 }
 
 LLM = {
@@ -85,7 +83,7 @@ FUNDERS = {
         {
             "name": "TechVentures",
             "funder_type": "vc",
-            "total_capital": 10000000.0,
+            "total_capital": 2_000_000_000.0,
             "risk_tolerance": 0.7,
             "mission_statement": "Maximize returns by backing AI market leaders",
             "max_round_deployment": 0.10,
@@ -94,7 +92,7 @@ FUNDERS = {
         {
             "name": "Horizon_Capital",
             "funder_type": "vc",
-            "total_capital": 5000000.0,
+            "total_capital": 500_000_000.0,
             "risk_tolerance": 0.85,
             "mission_statement": "Early-stage AI bets with outsized upside potential",
             "max_round_deployment": 0.10,
@@ -103,18 +101,9 @@ FUNDERS = {
         {
             "name": "AISI_Fund",
             "funder_type": "gov",
-            "total_capital": 500000.0,
+            "total_capital": 100_000_000.0,
             "risk_tolerance": 0.3,
             "mission_statement": "Ensure safe and responsible AI development",
-            "max_round_deployment": 0.10,
-            "funding_cooldown": 2,
-        },
-        {
-            "name": "OpenResearch",
-            "funder_type": "foundation",
-            "total_capital": 300000.0,
-            "risk_tolerance": 0.5,
-            "mission_statement": "Support authentic capability advancement for societal benefit",
             "max_round_deployment": 0.10,
             "funding_cooldown": 2,
         },
