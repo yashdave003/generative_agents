@@ -213,7 +213,7 @@ This section clarifies which stakeholders are implemented in the simulation.
 ### Evaluator Behavior (Current)
 The Evaluator is **active** in two ways:
 1. **Benchmark evolution**: Benchmarks degrade in validity and grow in exploitability in proportion to aggregate evaluation engineering investment (gaming pressure). This creates the core Goodhart's Law feedback loop.
-2. **Benchmark introduction**: The evaluator can introduce new benchmarks mid-simulation when existing benchmarks become unreliable (validity < 0.4) or periodically (every 15 rounds). New benchmarks start with high validity (0.85) and low exploitability (0.15), resetting the measurement quality. Subject to an 8-round cooldown and a maximum of 6 total benchmarks.
+2. **Benchmark introduction**: The evaluator can introduce new benchmarks mid-simulation when existing benchmarks become unreliable (validity < 0.4) or periodically every `cooldown` rounds (default 8). New benchmarks start with high validity (0.85) and low exploitability (0.15), resetting the measurement quality. Subject to a configurable cooldown and a maximum of 6 total benchmarks.
 
 ### Future Extensions
 - **Organizational Consumer**: Longer decision timelines, compliance constraints
@@ -246,6 +246,8 @@ Where:
 - Validity controls noise magnitude, not signal scaling
 
 **Key insight:** Providers don't directly observe `α` or `exploitability`. They only see realized scores and must *infer* these properties. "Gaming" is not an explicit choice—it emerges from rational investment in evaluation engineering. The resulting score inflation (score > true capability) is what creates consumer disappointment and drives the Goodhart feedback loop.
+
+**Per-benchmark monotonicity:** Published per-benchmark scores are monotonically non-decreasing per provider — providers wouldn't disclose a worse score. The evaluator enforces `score = max(score, previous_best)` before publishing. Composite scores (weighted average of per-benchmark) inherit this property.
 
 ### Visibility System
 The simulation enforces strict information boundaries:
@@ -553,11 +555,14 @@ The media detects newsworthy events from public data:
 | Event Type | Trigger | Sentiment Effect |
 |------------|---------|------------------|
 | Leader change | New provider at top of leaderboard | +0.2 (exciting) |
-| Large score jump | Score change > 0.05 in a round | +0.1 (surge) or -0.1 (drop) |
-| Regulatory action | Any policymaker intervention | -0.15 (sobering) |
+| Large score jump | Score surge > 0.05; > 0.08 adds "major model update" headline | +0.1 (surge) |
+| Regulatory action | Policymaker intervention — specific headlines per type (investigation, warning, mandate, audit) | -0.15 (sobering) |
 | New benchmark | Evaluator introduces a benchmark | +0.1 (positive innovation) |
 | Low validity | Benchmark validity < 0.5 | -0.1 (risk signal) |
 | Score convergence | Score range < 0.03 | -0.05 (benchmark meaningfulness concern) |
+| Funding decision | Top provider allocation per funder | +0.05 |
+| Per-benchmark leader change | New #1 on a specific benchmark | +0.1 |
+| Consumer market shift | Provider gains/loses > 3% market share | +0.05 (surge) or -0.1 (turning away) |
 
 ### Coverage Output (`MediaCoverage`)
 
@@ -624,7 +629,7 @@ The evaluator can introduce new benchmarks mid-simulation:
 
 **Trigger conditions** (any one):
 - Any existing benchmark validity drops below 0.4
-- Periodic innovation: every 15 rounds
+- Periodic introduction: every `cooldown` rounds (default 8)
 
 New benchmarks are created with high validity (0.85) and low exploitability (0.15), effectively resetting measurement quality. Their weight equals the average of existing benchmark weights. Consumer market benchmark weights are automatically re-resolved when new benchmarks appear.
 
@@ -659,7 +664,7 @@ Each round records the following data:
 ### Multi-Benchmark Metrics (if enabled)
 | Metric | Type | Description |
 |--------|------|-------------|
-| `per_benchmark_scores` | dict | `{benchmark_name: {provider: score}}` |
+| `per_benchmark_scores` | dict | `{benchmark_name: {provider: score}}` — monotonically non-decreasing per provider |
 | `benchmark_names` | list | List of benchmark names |
 | `benchmark_params` | dict | `{benchmark_name: {validity, exploitability}}` - Current benchmark state |
 

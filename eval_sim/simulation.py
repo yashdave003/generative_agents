@@ -522,6 +522,10 @@ class EvalEcosystemSimulation:
         # 5. Media observes and publishes (if enabled)
         media_coverage = None
         if self.media:
+            prev_funder_data = self.history[-1].get("funder_data", {}) if self.history else {}
+            prev_consumer_data = self.history[-1].get("consumer_data", {}) if self.history else {}
+            per_bm_scores = self.evaluator.get_per_benchmark_scores(round_num)
+
             media_coverage = self.media.observe_and_publish(
                 leaderboard=leaderboard,
                 benchmark_params={
@@ -531,6 +535,9 @@ class EvalEcosystemSimulation:
                 policymaker_data=self.history[-1].get("policymaker_data", {}) if self.history else {},
                 new_benchmark={"name": new_benchmark.name} if new_benchmark else None,
                 round_num=round_num,
+                funder_data=prev_funder_data,
+                per_benchmark_scores=per_bm_scores,
+                consumer_data=prev_consumer_data,
             )
 
         # 6. Consumer actions (if enabled)

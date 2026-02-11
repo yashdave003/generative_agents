@@ -179,9 +179,14 @@ class Evaluator:
 
         # Benchmark introduction parameters
         self.benchmark_introduction_cooldown: int = 8
-        self.last_introduction_round: int = -8  # allows first introduction immediately
+        self.last_introduction_round: int = 0  # first introduction at round 8
         self.max_benchmarks: int = 6
         self.introduction_history: list[dict] = []  # [{round, benchmark_name, trigger}]
+
+        # Per-benchmark best published scores (monotonicity enforcement)
+        self._best_published_scores: dict[str, dict[str, float]] = {
+            bm.name: {} for bm in self.benchmarks
+        }
 
     def evaluate(
         self,
@@ -290,6 +295,12 @@ class Evaluator:
                     evaluation_engineering=provider.evaluation_engineering,
                     benchmark=benchmark,
                 )
+
+                # Monotonicity: providers wouldn't disclose a worse score
+                best = self._best_published_scores[benchmark.name].get(provider.name, 0.0)
+                score = max(score, best)
+                self._best_published_scores[benchmark.name][provider.name] = score
+
                 per_benchmark_scores[benchmark.name][provider.name] = score
 
                 weight = self.benchmark_weights.get(benchmark.name, 1.0)
@@ -445,7 +456,7 @@ class Evaluator:
 
         Triggers:
         - Any existing benchmark validity drops below 0.4 (degraded signal)
-        - Periodic innovation every 15 rounds
+        - Periodic introduction every `cooldown` rounds
 
         Constraints:
         - 8-round cooldown between introductions
@@ -469,9 +480,9 @@ class Evaluator:
                 trigger = f"validity_decay:{bm.name}={bm.validity:.2f}"
                 break
 
-        # Trigger 2: Periodic innovation (every 15 rounds)
-        if trigger is None and round_num > 0 and round_num % 15 == 0:
-            trigger = f"periodic_innovation:round_{round_num}"
+        # Trigger 2: Periodic introduction (every cooldown rounds)
+        if trigger is None and round_num > 0:
+            trigger = f"periodic_introduction:round_{round_num}"
 
         if trigger is None:
             return None
@@ -492,6 +503,7 @@ class Evaluator:
         self.benchmarks.append(new_bm)
         self.benchmark_weights[new_name] = avg_weight
         self.benchmark_score_history[new_name] = []
+        self._best_published_scores[new_name] = {}
 
         # Record introduction
         self.last_introduction_round = round_num
@@ -618,6 +630,7 @@ class Evaluator:
             "last_introduction_round": self.last_introduction_round,
             "max_benchmarks": self.max_benchmarks,
             "introduction_history": self.introduction_history,
+            "_best_published_scores": self._best_published_scores,
             "regulations": [
                 {
                     "name": r.name,
@@ -667,9 +680,15 @@ class Evaluator:
 
         # Load benchmark introduction state if present
         evaluator.benchmark_introduction_cooldown = data.get("benchmark_introduction_cooldown", 8)
-        evaluator.last_introduction_round = data.get("last_introduction_round", -8)
+        evaluator.last_introduction_round = data.get("last_introduction_round", 0)
         evaluator.max_benchmarks = data.get("max_benchmarks", 6)
         evaluator.introduction_history = data.get("introduction_history", [])
+
+        # Load best published scores for monotonicity enforcement
+        if "_best_published_scores" in data:
+            evaluator._best_published_scores = data["_best_published_scores"]
+        else:
+            evaluator._best_published_scores = {bm.name: {} for bm in evaluator.benchmarks}
 
         # Load regulations if present
         if "regulations" in data:

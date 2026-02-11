@@ -79,6 +79,8 @@ class Media:
         self._previous_leaderboard: list = []
         self._previous_scores: dict = {}
         self._current_coverage: Optional[MediaCoverage] = None
+        self._previous_per_benchmark_leaders: dict = {}  # {bm_name: provider_name}
+        self._previous_market_shares: dict = {}          # {provider_name: share}
 
     def observe_and_publish(
         self,
@@ -87,6 +89,9 @@ class Media:
         policymaker_data: dict,
         new_benchmark: Optional[dict],
         round_num: int,
+        funder_data: Optional[dict] = None,
+        per_benchmark_scores: Optional[dict] = None,
+        consumer_data: Optional[dict] = None,
     ) -> dict:
         """
         Observe public data and publish coverage for this round.
@@ -97,6 +102,9 @@ class Media:
             policymaker_data: {interventions: [...], ...}
             new_benchmark: Optional dict if a new benchmark was introduced
             round_num: Current round number
+            funder_data: Optional funder data from previous round
+            per_benchmark_scores: Optional {bm_name: {provider: score}} from current round
+            consumer_data: Optional consumer data from previous round
 
         Returns:
             Coverage dict for downstream actors
@@ -126,28 +134,40 @@ class Media:
                 )
                 coverage.sentiment += 0.2  # leader changes are exciting
 
-        # 2. Large score jumps or drops (> 0.05)
+        # 2. Large score jumps (> 0.05) — scores are monotonic so only upward
         current_scores = {name: score for name, score in leaderboard}
         for name, score in current_scores.items():
             prev_score = self._previous_scores.get(name)
             if prev_score is not None:
                 delta = score - prev_score
-                if abs(delta) > 0.05:
-                    direction = "surges" if delta > 0 else "drops"
-                    events_detected.append(f"{name} {direction} by {abs(delta):.3f}")
+                if delta > 0.05:
+                    events_detected.append(f"{name} surges by {delta:.3f}")
                     coverage.provider_attention[name] = max(
                         coverage.provider_attention.get(name, 0), 0.6
                     )
-                    if delta > 0:
-                        coverage.sentiment += 0.1
-                    else:
-                        coverage.sentiment -= 0.1
+                    coverage.sentiment += 0.1
+                    if delta > 0.08:
+                        events_detected.append(f"{name} appears to release major model update")
+                        coverage.provider_attention[name] = max(
+                            coverage.provider_attention.get(name, 0), 0.7
+                        )
 
         # 3. Policymaker interventions
         interventions = policymaker_data.get("interventions", [])
         for intervention in interventions:
             itype = intervention.get("type", "unknown")
-            events_detected.append(f"Regulatory action: {itype}")
+            pmaker = intervention.get("policymaker", "Regulator")
+            focus = intervention.get("details", {}).get("focus", "AI evaluation practices")
+            if itype == "investigation":
+                events_detected.append(f"{pmaker} launches investigation into {focus}")
+            elif itype == "public_warning":
+                events_detected.append(f"{pmaker} issues public warning about AI safety concerns")
+            elif itype == "mandate_benchmark":
+                events_detected.append(f"{pmaker} mandates new benchmark standards")
+            elif itype == "compliance_audit":
+                events_detected.append(f"{pmaker} initiates compliance audit on AI providers")
+            else:
+                events_detected.append(f"Regulatory action: {itype}")
             coverage.risk_signals.append(f"regulatory_{itype}")
             coverage.sentiment -= 0.15  # regulation is sobering
 
@@ -177,6 +197,54 @@ class Media:
                 events_detected.append("Scores converging — is the benchmark meaningful?")
                 coverage.risk_signals.append("score_convergence")
                 coverage.sentiment -= 0.05
+
+        # 7. Funding decisions
+        if funder_data:
+            for funder_name, provider_allocations in funder_data.get("allocations", {}).items():
+                if provider_allocations:
+                    top_provider = max(provider_allocations, key=provider_allocations.get)
+                    top_amount = provider_allocations[top_provider]
+                    if top_amount > 0:
+                        events_detected.append(f"{top_provider} raises ${top_amount:,.0f} from {funder_name}")
+                        coverage.provider_attention[top_provider] = max(
+                            coverage.provider_attention.get(top_provider, 0), 0.4)
+                        coverage.sentiment += 0.05
+
+        # 8. Per-benchmark leader changes
+        if per_benchmark_scores:
+            for bm_name, bm_scores in per_benchmark_scores.items():
+                if bm_scores:
+                    current_leader = max(bm_scores, key=bm_scores.get)
+                    prev_leader = self._previous_per_benchmark_leaders.get(bm_name)
+                    if prev_leader and prev_leader != current_leader:
+                        events_detected.append(f"{current_leader} takes #1 on {bm_name}")
+                        coverage.provider_attention[current_leader] = max(
+                            coverage.provider_attention.get(current_leader, 0), 0.5)
+                        coverage.benchmark_attention[bm_name] = max(
+                            coverage.benchmark_attention.get(bm_name, 0), 0.4)
+                        coverage.sentiment += 0.1
+                    self._previous_per_benchmark_leaders[bm_name] = current_leader
+
+        # 9. Consumer switching / market share shifts
+        if consumer_data:
+            market_shares = consumer_data.get("market_shares", {})
+            for provider, share in market_shares.items():
+                prev_share = self._previous_market_shares.get(provider)
+                if prev_share is not None:
+                    share_delta = share - prev_share
+                    if share_delta < -0.03:  # lost >3% market share
+                        events_detected.append(
+                            f"Consumers are turning away from {provider} (market share {share_delta:+.1%})")
+                        coverage.provider_attention[provider] = max(
+                            coverage.provider_attention.get(provider, 0), 0.5)
+                        coverage.sentiment -= 0.1
+                    elif share_delta > 0.03:  # gained >3% market share
+                        events_detected.append(
+                            f"{provider} sees surge in adoption (market share {share_delta:+.1%})")
+                        coverage.provider_attention[provider] = max(
+                            coverage.provider_attention.get(provider, 0), 0.4)
+                        coverage.sentiment += 0.05
+            self._previous_market_shares = dict(market_shares)
 
         # --- Compose coverage ---
         coverage.headlines = events_detected
@@ -227,6 +295,8 @@ class Media:
             "editorial_bias": self.editorial_bias,
             "amplification": self.amplification,
             "coverage_history": self.coverage_history,
+            "_previous_per_benchmark_leaders": self._previous_per_benchmark_leaders,
+            "_previous_market_shares": self._previous_market_shares,
         }
         with open(os.path.join(folder, "media.json"), "w") as f:
             json.dump(data, f, indent=2)

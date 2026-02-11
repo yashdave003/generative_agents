@@ -14,18 +14,21 @@ import time
 # ============================================================
 
 EXPERIMENT = {
-    "name": "5p_2b_full_ecosystem_v3",
+    "name": "5p_2b_full_ecosystem_v4",
     "description": (
-        "Full ecosystem v3 (post major rework): 5 providers, 2 benchmarks "
-        "(coding + reasoning), 12 consumer segments (4 use-cases × 3 archetypes), "
-        "1 policymaker, 4 funders, media actor (TechPress). "
-        "New features: scoring formula (gaming inflates above true_cap), "
-        "proportional consumer switching, market segments, media influence, "
-        "per-provider visibility, benchmark introduction, numeric precision. "
+        "Full ecosystem v4: 5 providers, 2 benchmarks (coding + reasoning), "
+        "12 consumer segments (4 use-cases × 3 archetypes), 1 policymaker, "
+        "4 funders, expanded media actor (TechPress). "
+        "New in v4: monotonic per-benchmark scores (providers don't disclose worse scores), "
+        "periodic benchmark introduction every 8 rounds (replaces every-15-round trigger), "
+        "expanded media reporting (funding headlines, per-benchmark leader changes, "
+        "consumer market shifts, narrative framing of large score jumps, "
+        "specific policymaker intervention headlines). "
         "LLM mode via Ollama."
     ),
     "tags": ["llm", "ollama", "5-provider", "2-benchmark", "12-segments",
-             "4-funder", "media", "full-ecosystem-v3"],
+             "4-funder", "media-expanded", "monotonic-scores",
+             "periodic-benchmarks", "full-ecosystem-v4"],
 }
 
 LLM = {
