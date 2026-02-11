@@ -20,7 +20,7 @@ EXPERIMENT = {
         "12 consumer segments (4 use-cases × 3 archetypes), 1 policymaker, "
         "4 funders, expanded media actor (TechPress). "
         "New in v4: monotonic per-benchmark scores (providers don't disclose worse scores), "
-        "periodic benchmark introduction every 8 rounds (replaces every-15-round trigger), "
+        "periodic benchmark introduction every 7 rounds (replaces every-15-round trigger), "
         "expanded media reporting (funding headlines, per-benchmark leader changes, "
         "consumer market shifts, narrative framing of large score jumps, "
         "specific policymaker intervention headlines). "
@@ -50,7 +50,7 @@ SIMULATION = {
     "benchmark_validity_decay_rate": 0.005,
     "benchmark_exploitability_growth_rate": 0.008,
     # Benchmark introduction
-    "benchmark_introduction_cooldown": 6,
+    "benchmark_introduction_cooldown": 7,
     "max_benchmarks": 6,
     # Media
     "enable_media": True,
@@ -88,6 +88,8 @@ FUNDERS = {
             "total_capital": 10000000.0,
             "risk_tolerance": 0.7,
             "mission_statement": "Maximize returns by backing AI market leaders",
+            "max_round_deployment": 0.10,
+            "funding_cooldown": 2,
         },
         {
             "name": "Horizon_Capital",
@@ -95,6 +97,8 @@ FUNDERS = {
             "total_capital": 5000000.0,
             "risk_tolerance": 0.85,
             "mission_statement": "Early-stage AI bets with outsized upside potential",
+            "max_round_deployment": 0.10,
+            "funding_cooldown": 2,
         },
         {
             "name": "AISI_Fund",
@@ -102,6 +106,8 @@ FUNDERS = {
             "total_capital": 500000.0,
             "risk_tolerance": 0.3,
             "mission_statement": "Ensure safe and responsible AI development",
+            "max_round_deployment": 0.10,
+            "funding_cooldown": 2,
         },
         {
             "name": "OpenResearch",
@@ -109,6 +115,8 @@ FUNDERS = {
             "total_capital": 300000.0,
             "risk_tolerance": 0.5,
             "mission_statement": "Support authentic capability advancement for societal benefit",
+            "max_round_deployment": 0.10,
+            "funding_cooldown": 2,
         },
     ],
 }

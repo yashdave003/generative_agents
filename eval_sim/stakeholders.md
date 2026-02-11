@@ -213,7 +213,7 @@ This section clarifies which stakeholders are implemented in the simulation.
 ### Evaluator Behavior (Current)
 The Evaluator is **active** in two ways:
 1. **Benchmark evolution**: Benchmarks degrade in validity and grow in exploitability in proportion to aggregate evaluation engineering investment (gaming pressure). This creates the core Goodhart's Law feedback loop.
-2. **Benchmark introduction**: The evaluator can introduce new benchmarks mid-simulation when existing benchmarks become unreliable (validity < 0.4) or periodically every `cooldown` rounds (default 8). New benchmarks start with high validity (0.85) and low exploitability (0.15), resetting the measurement quality. Subject to a configurable cooldown and a maximum of 6 total benchmarks.
+2. **Benchmark introduction**: The evaluator can introduce new benchmarks mid-simulation when existing benchmarks become unreliable (validity < 0.4) or periodically every `cooldown` rounds (default 7). New benchmarks start with high validity (0.85) and low exploitability (0.15), resetting the measurement quality. Subject to a configurable cooldown and a maximum of 6 total benchmarks.
 
 ### Future Extensions
 - **Organizational Consumer**: Longer decision timelines, compliance constraints
@@ -493,11 +493,22 @@ Interventions follow a **graduated escalation** model and have a **3-round coold
 
 ### Funder Types
 
-| Type | Focus | Allocation Strategy |
-|------|-------|---------------------|
-| **VC** | ROI maximization | Concentrate on top performers (60/30/10 split) |
-| **Government/AISI** | Safety & stability | Spread funding, penalize gaming and regulatory issues |
-| **Foundation** | Mission alignment | Reward authenticity and capability growth, support underdogs |
+Funders score providers using **publicly observable momentum signals**. Gaming effects emerge indirectly: a gaming provider may have high scores but stalling score momentum, declining market traction, and negative market momentum as consumers discover the quality gap.
+
+| Signal | Computation | Source |
+|--------|------------|--------|
+| `quality` | `believed_provider_quality[provider]` | Leaderboard scores + consumer satisfaction blend |
+| `score_momentum` | Avg score delta over last 3 rounds | Score history tracking |
+| `market_traction` | Provider's current market share | `consumer_data.market_shares` |
+| `market_momentum` | Market share change vs prior round | Delta of market shares |
+
+Type-specific signal weights:
+
+| Type | Quality | Score Momentum | Market Traction | Market Momentum | Allocation Pattern |
+|------|---------|---------------|-----------------|-----------------|-------------------|
+| **VC** | 0.20 | 0.30 | 0.25 | 0.25 | Concentrated (60/30/10 split) |
+| **Government/AISI** | 0.50 | 0.10 | 0.30 | 0.10 | Spread proportionally; penalizes regulatory interventions |
+| **Foundation** | 0.40 | 0.25 | 0.20 | 0.15 | Spread proportionally; includes underdog bonus |
 
 ### Funding Mechanism
 
@@ -508,6 +519,12 @@ effective_efficiency = base_rnd_efficiency * funding_multiplier
 # funding_multiplier ranges from 1.0 (no funding) to 2.0 (max funding)
 ```
 
+**Per-round deployment cap**: Funders deploy at most `max_round_deployment` (default 10%) of their `total_capital` per round, preventing unrealistic 100%-every-round deployments.
+
+**Funding cooldown**: Funders make new allocation decisions every `funding_cooldown` rounds (default 2). On off-rounds, previous allocations are reused without recomputation. This halves LLM calls in LLM mode.
+
+**Multiplier normalization**: Funding multipliers are normalized to the actual round deployment pool (`sum of all allocations`), not total capital.
+
 ### Visibility Model (Information Asymmetry)
 
 Funders can only see public signals and must **infer** provider quality:
@@ -516,17 +533,17 @@ Funders can only see public signals and must **infer** provider quality:
 |--------|--------|----------------|
 | Leaderboard score | `leaderboard` | Raw performance |
 | Consumer satisfaction | `consumer_data.provider_satisfaction` | Per-provider true quality proxy |
-| **Satisfaction gap** | `score - satisfaction` | Gaming indicator (high gap = gaming) |
+| Market shares | `consumer_data.market_shares` | Demand-side traction |
 | Regulatory interventions | `policymaker_data.interventions` | Safety/compliance risk |
 | Media coverage | `media_data` | Sentiment, provider attention, and risk signals |
 
-This creates realistic information asymmetry — funders cannot see provider strategies directly. Media acts as an amplifying intermediary: high media attention combined with risk signals increases the funder's `believed_gaming` estimate for that provider.
+This creates realistic information asymmetry — funders cannot see provider strategies directly. Gaming effects are **not penalized directly** but emerge through declining market traction and momentum when consumers discover the quality gap. Media acts as an amplifying intermediary: high media attention combined with risk signals increases the funder's internal `believed_gaming` estimate.
 
 ### Cognitive Loop (per round)
-1. **Observe**: See leaderboard, consumer satisfaction, regulatory interventions, media coverage
-2. **Reflect**: Update beliefs about provider quality and gaming levels (media attention + risk signals can increase believed_gaming for specific providers)
-3. **Plan**: Decide funding allocations based on funder type strategy
-4. **Execute**: Deploy capital, update active_funding
+1. **Observe**: See leaderboard, consumer satisfaction, market shares, regulatory interventions, media coverage; compute score momentum and market momentum
+2. **Reflect**: Update beliefs about provider quality and gaming levels
+3. **Plan**: Decide funding allocations based on funder type signal weights (respecting cooldown)
+4. **Execute**: Deploy capped capital, update active_funding
 
 ---
 
@@ -624,12 +641,12 @@ The evaluator can introduce new benchmarks mid-simulation:
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
-| `benchmark_introduction_cooldown` | 8 rounds | Minimum rounds between introductions |
+| `benchmark_introduction_cooldown` | 7 rounds | Minimum rounds between introductions |
 | `max_benchmarks` | 6 | Maximum total benchmarks allowed |
 
 **Trigger conditions** (any one):
 - Any existing benchmark validity drops below 0.4
-- Periodic introduction: every `cooldown` rounds (default 8)
+- Periodic introduction: every `cooldown` rounds (default 7)
 
 New benchmarks are created with high validity (0.85) and low exploitability (0.15), effectively resetting measurement quality. Their weight equals the average of existing benchmark weights. Consumer market benchmark weights are automatically re-resolved when new benchmarks appear.
 
@@ -650,7 +667,6 @@ Each round records the following data:
 | `scores` | dict | `{provider_name: score}` - Published benchmark scores |
 | `true_capabilities` | dict | `{provider_name: capability}` - Ground truth capabilities |
 | `believed_capabilities` | dict | `{provider_name: belief}` - What each provider believes their capability is |
-| `leaderboard` | list | Ranked list of `(provider_name, score)` tuples |
 
 ### Strategy Metrics
 | Metric | Type | Description |
@@ -665,7 +681,6 @@ Each round records the following data:
 | Metric | Type | Description |
 |--------|------|-------------|
 | `per_benchmark_scores` | dict | `{benchmark_name: {provider: score}}` — monotonically non-decreasing per provider |
-| `benchmark_names` | list | List of benchmark names |
 | `benchmark_params` | dict | `{benchmark_name: {validity, exploitability}}` - Current benchmark state |
 
 ### Consumer Metrics (if enabled)
@@ -874,7 +889,7 @@ All experiments are tracked in `experiments/index.json`:
 | `benchmarks` | list | None | Multi-benchmark config (overrides single benchmark) |
 | `rnd_efficiency` | float | 0.01 | Capability gain per unit R&D investment |
 | `llm_mode` | bool | False | Use LLM for planning (vs. heuristics) |
-| `benchmark_introduction_cooldown` | int | 8 | Minimum rounds between benchmark introductions |
+| `benchmark_introduction_cooldown` | int | 7 | Minimum rounds between benchmark introductions |
 | `max_benchmarks` | int | 6 | Maximum total benchmarks allowed |
 | `enable_consumers` | bool | False | Enable consumer market |
 | `enable_policymakers` | bool | False | Enable policymaker actors |

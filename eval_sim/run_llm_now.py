@@ -331,10 +331,10 @@ def _collect_all_traces(sim) -> dict:
     for rd in sim.history:
         round_traces = {
             "round": rd["round"],
-            "leaderboard": rd["leaderboard"],
+            "leaderboard": sorted(rd["scores"].items(), key=lambda x: x[1], reverse=True),
         }
-        if "llm_traces" in rd:
-            round_traces["reasoning"] = rd["llm_traces"]
+        if "actor_traces" in rd:
+            round_traces["reasoning"] = rd["actor_traces"]
         traces["rounds"].append(round_traces)
 
     # Per-provider full memory (includes all planning + reflection reasoning)

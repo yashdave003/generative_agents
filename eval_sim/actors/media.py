@@ -81,6 +81,7 @@ class Media:
         self._current_coverage: Optional[MediaCoverage] = None
         self._previous_per_benchmark_leaders: dict = {}  # {bm_name: provider_name}
         self._previous_market_shares: dict = {}          # {provider_name: share}
+        self._previous_funding_allocations: dict = {}    # {funder_name: {"top_provider": str, "top_amount": float}}
 
     def observe_and_publish(
         self,
@@ -198,17 +199,28 @@ class Media:
                 coverage.risk_signals.append("score_convergence")
                 coverage.sentiment -= 0.05
 
-        # 7. Funding decisions
+        # 7. Funding decisions (only headline when top recipient changes or amount shifts >10%)
         if funder_data:
             for funder_name, provider_allocations in funder_data.get("allocations", {}).items():
                 if provider_allocations:
                     top_provider = max(provider_allocations, key=provider_allocations.get)
                     top_amount = provider_allocations[top_provider]
                     if top_amount > 0:
-                        events_detected.append(f"{top_provider} raises ${top_amount:,.0f} from {funder_name}")
-                        coverage.provider_attention[top_provider] = max(
-                            coverage.provider_attention.get(top_provider, 0), 0.4)
-                        coverage.sentiment += 0.05
+                        prev = self._previous_funding_allocations.get(funder_name)
+                        is_new = (
+                            prev is None
+                            or prev["top_provider"] != top_provider
+                            or abs(top_amount - prev["top_amount"]) / max(prev["top_amount"], 1) > 0.10
+                        )
+                        if is_new:
+                            events_detected.append(f"{top_provider} raises ${top_amount:,.0f} from {funder_name}")
+                            coverage.provider_attention[top_provider] = max(
+                                coverage.provider_attention.get(top_provider, 0), 0.4)
+                            coverage.sentiment += 0.05
+                        self._previous_funding_allocations[funder_name] = {
+                            "top_provider": top_provider,
+                            "top_amount": top_amount,
+                        }
 
         # 8. Per-benchmark leader changes
         if per_benchmark_scores:
@@ -297,6 +309,7 @@ class Media:
             "coverage_history": self.coverage_history,
             "_previous_per_benchmark_leaders": self._previous_per_benchmark_leaders,
             "_previous_market_shares": self._previous_market_shares,
+            "_previous_funding_allocations": self._previous_funding_allocations,
         }
         with open(os.path.join(folder, "media.json"), "w") as f:
             json.dump(data, f, indent=2)

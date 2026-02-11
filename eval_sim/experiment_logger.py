@@ -408,7 +408,7 @@ def generate_summary(
         "final_true_capabilities": final["true_capabilities"],
         "final_believed_capabilities": final["believed_capabilities"],
         "final_strategies": final["strategies"],
-        "leaderboard": final["leaderboard"],
+        "leaderboard": sorted(final["scores"].items(), key=lambda x: x[1], reverse=True),
         "validity_correlation": evaluator.compute_validity_correlation(),
         "benchmark_params": {
             "validity": evaluator.benchmark.validity,

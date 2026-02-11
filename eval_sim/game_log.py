@@ -87,14 +87,14 @@ class GameLogGenerator:
             "true_capabilities": round_data.get("true_capabilities", {}),
             "believed_capabilities": round_data.get("believed_capabilities", {}),
             "strategies": round_data.get("strategies", {}),
-            "leaderboard": round_data.get("leaderboard", []),
+            "leaderboard": sorted(round_data.get("scores", {}).items(), key=lambda x: x[1], reverse=True),
             "consumer_data": round_data.get("consumer_data", {}),
             "policymaker_data": round_data.get("policymaker_data", {}),
             "provider_states": provider_states,
             "actor_traces": round_data.get("actor_traces", {}),
             "new_benchmark": round_data.get("new_benchmark"),
             "per_benchmark_scores": round_data.get("per_benchmark_scores", {}),
-            "benchmark_names": round_data.get("benchmark_names", []),
+            "benchmark_names": list(round_data.get("benchmark_params", {}).keys()),
             "media_data": round_data.get("media_data", {}),
         }
 

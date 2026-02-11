@@ -55,6 +55,8 @@ class Funder:
         risk_tolerance: float = 0.5,
         mission_statement: str = "",
         llm_mode: bool = False,
+        max_round_deployment: float = 0.10,
+        funding_cooldown: int = 2,
     ):
         """
         Initialize a Funder.
@@ -66,6 +68,8 @@ class Funder:
             risk_tolerance: How much risk is acceptable (0-1)
             mission_statement: Mission-driven objective (for foundation type)
             llm_mode: If True, use LLM for decision-making
+            max_round_deployment: Fraction of total_capital deployable per round (default 10%)
+            funding_cooldown: Rounds between new allocation decisions (default 2)
         """
         # Initialize public state
         self.public_state = PublicState(
@@ -90,6 +94,8 @@ class Funder:
         # Funder-specific parameters
         self.risk_tolerance = risk_tolerance
         self.llm_mode = llm_mode
+        self.max_round_deployment = max_round_deployment
+        self.funding_cooldown = funding_cooldown
 
         # Memory
         self.memory = []
@@ -99,6 +105,13 @@ class Funder:
         self._last_consumer_data: dict = {}
         self._last_policymaker_data: dict = {}
         self._previous_scores: dict = {}  # For computing score growth
+
+        # Momentum tracking
+        self._score_history: list[dict] = []  # [{provider: score}, ...] last N rounds
+        self._previous_market_shares: dict = {}  # {provider: share} from prior round
+
+        # Cooldown tracking
+        self._last_funding_round: int = -2  # Ensures funding happens on round 0
 
     @property
     def name(self) -> str:
@@ -199,6 +212,21 @@ class Funder:
         # Store previous scores for growth calculation
         self._previous_scores = {name: score for name, score in leaderboard}
 
+        # Track score history for momentum (keep last 4 snapshots to compute 3-round deltas)
+        current_scores = {name: score for name, score in leaderboard}
+        self._score_history.append(current_scores)
+        if len(self._score_history) > 4:
+            self._score_history = self._score_history[-4:]
+
+        # Track market share momentum
+        market_shares = consumer_data.get("market_shares", {})
+        self._current_market_momentum = {}
+        for provider_name in [name for name, _ in leaderboard]:
+            curr_share = market_shares.get(provider_name, 0)
+            prev_share = self._previous_market_shares.get(provider_name, curr_share)
+            self._current_market_momentum[provider_name] = curr_share - prev_share
+        self._previous_market_shares = dict(market_shares)
+
         # Record observation
         self.memory.append({
             "type": "observation",
@@ -282,9 +310,19 @@ class Funder:
         """
         Decide funding allocations for the next round.
 
+        Respects funding_cooldown: if fewer than `funding_cooldown` rounds
+        have passed since last allocation, returns previous allocations.
+
         Returns:
             Dict mapping provider names to funding amounts
         """
+        current_round = self.public_state.current_round
+        if current_round - self._last_funding_round < self.funding_cooldown:
+            # Reuse previous allocations (no new decision)
+            return dict(self.private_state.active_funding)
+
+        self._last_funding_round = current_round
+
         if self.llm_mode:
             return self._plan_llm()
         else:
@@ -303,7 +341,7 @@ class Funder:
         providers = [name for name, _ in self._last_leaderboard]
         allocations = {}
 
-        available_capital = self.private_state.total_capital
+        available_capital = self.private_state.total_capital * self.max_round_deployment
 
         if self.funder_type == "vc":
             allocations = self._plan_vc(providers, available_capital)
@@ -334,30 +372,62 @@ class Funder:
 
         return allocations
 
+    def _get_score_momentum(self, provider: str) -> float:
+        """Average score delta over last 3 rounds for a provider."""
+        if len(self._score_history) < 2:
+            return 0.0
+        deltas = []
+        for i in range(1, len(self._score_history)):
+            prev = self._score_history[i - 1].get(provider)
+            curr = self._score_history[i].get(provider)
+            if prev is not None and curr is not None:
+                deltas.append(curr - prev)
+        return sum(deltas) / len(deltas) if deltas else 0.0
+
+    def _score_providers(self, providers: list, weights: dict) -> dict:
+        """Score providers using publicly observable momentum signals.
+
+        Args:
+            providers: List of provider names
+            weights: dict with keys quality, score_momentum, market_traction, market_momentum
+
+        Returns:
+            Dict of {provider: composite_score}
+        """
+        market_shares = self._last_consumer_data.get("market_shares", {})
+        scores = {}
+        for provider in providers:
+            quality = self.private_state.believed_provider_quality.get(provider, 0.5)
+            score_mom = self._get_score_momentum(provider)
+            traction = market_shares.get(provider, 0)
+            market_mom = getattr(self, "_current_market_momentum", {}).get(provider, 0)
+
+            composite = (
+                weights["quality"] * quality
+                + weights["score_momentum"] * score_mom * 10  # Scale: deltas ~0.01-0.05
+                + weights["market_traction"] * traction
+                + weights["market_momentum"] * market_mom * 10
+            )
+            scores[provider] = max(0, composite)
+        return scores
+
     def _plan_vc(self, providers: list, capital: float) -> dict:
         """
         VC strategy: Back top performers, high concentration.
 
-        - Concentrate on top 1-2 providers
-        - Weight by score (performance proxy)
-        - Penalize suspected gaming
+        Uses momentum signals — gaming effects emerge indirectly through
+        declining market traction when scores don't match real quality.
         """
-        allocations = {}
+        scores = self._score_providers(providers, {
+            "quality": 0.20, "score_momentum": 0.30,
+            "market_traction": 0.25, "market_momentum": 0.25,
+        })
 
-        # Score providers: quality - gaming penalty
-        scores = {}
-        for provider in providers:
-            quality = self.private_state.believed_provider_quality.get(provider, 0.5)
-            gaming = self.private_state.believed_provider_gaming.get(provider, 0.3)
-            # VCs care more about raw performance but discount gaming
-            scores[provider] = quality - (gaming * 0.3 * self.risk_tolerance)
-
-        # Sort by score
         ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+        allocations = {}
 
         # Concentrate funding on top performers
         if len(ranked) >= 2:
-            # Top provider gets 60%, second gets 30%, rest split 10%
             allocations[ranked[0][0]] = capital * 0.6
             allocations[ranked[1][0]] = capital * 0.3
             remaining = capital * 0.1
@@ -368,8 +438,6 @@ class Funder:
                     allocations[provider] = per_other
         elif len(ranked) == 1:
             allocations[ranked[0][0]] = capital
-        else:
-            allocations = {}
 
         return allocations
 
@@ -377,39 +445,26 @@ class Funder:
         """
         Government/AISI strategy: Safety & stability, spread funding.
 
-        - Spread funding more evenly
-        - Favor providers with low gaming signals
-        - Penalize providers with regulatory interventions
+        Weights quality heavily, with moderate market traction signal.
+        Gaming effects surface indirectly through low market share or
+        declining traction when consumers notice quality gaps.
         """
-        allocations = {}
+        scores = self._score_providers(providers, {
+            "quality": 0.50, "score_momentum": 0.10,
+            "market_traction": 0.30, "market_momentum": 0.10,
+        })
 
-        # Score providers: safety-focused
-        scores = {}
-        for provider in providers:
-            quality = self.private_state.believed_provider_quality.get(provider, 0.5)
-            gaming = self.private_state.believed_provider_gaming.get(provider, 0.3)
-
-            # Start with quality
-            score = quality
-
-            # Heavy penalty for gaming (government cares about integrity)
-            score -= gaming * 0.5
-
-            # Check for regulatory interventions against this provider
-            interventions = self._last_policymaker_data.get("interventions", [])
-            if interventions:
-                # Any intervention reduces trust
-                score -= 0.2
-
-            scores[provider] = max(0, score)
+        # Penalize providers with active regulatory interventions
+        interventions = self._last_policymaker_data.get("interventions", [])
+        if interventions:
+            for provider in providers:
+                scores[provider] = max(0, scores.get(provider, 0) - 0.1)
 
         # Normalize and allocate
         total_score = sum(scores.values())
         if total_score > 0:
-            for provider, score in scores.items():
-                allocations[provider] = (score / total_score) * capital
+            allocations = {p: (scores[p] / total_score) * capital for p in providers}
         else:
-            # Fallback: spread evenly
             per_provider = capital / len(providers)
             allocations = {p: per_provider for p in providers}
 
@@ -419,36 +474,25 @@ class Funder:
         """
         Foundation strategy: Mission alignment, reward capability growth.
 
-        - Reward providers showing genuine capability improvement
-        - Prefer providers with lower gaming signals
-        - Support underdog providers with potential
+        Balances quality with score momentum (genuine improvement).
+        Gaming effects emerge indirectly: gaming providers have high scores
+        but stalling momentum and declining market traction.
+        Includes underdog bonus for lower-quality providers with potential.
         """
-        allocations = {}
+        scores = self._score_providers(providers, {
+            "quality": 0.40, "score_momentum": 0.25,
+            "market_traction": 0.20, "market_momentum": 0.15,
+        })
 
-        # Score providers: growth and authenticity focused
-        scores = {}
+        # Underdog bonus: lower quality providers get a boost
         for provider in providers:
             quality = self.private_state.believed_provider_quality.get(provider, 0.5)
-            gaming = self.private_state.believed_provider_gaming.get(provider, 0.3)
-
-            # Base score on quality
-            score = quality
-
-            # Reward authenticity (low gaming)
-            authenticity_bonus = (1 - gaming) * 0.3
-            score += authenticity_bonus
-
-            # Bonus for underdogs (lower current quality gets boost)
-            underdog_bonus = (1 - quality) * 0.2
-            score += underdog_bonus
-
-            scores[provider] = score
+            scores[provider] = scores.get(provider, 0) + (1 - quality) * 0.15
 
         # Normalize and allocate
         total_score = sum(scores.values())
         if total_score > 0:
-            for provider, score in scores.items():
-                allocations[provider] = (score / total_score) * capital
+            allocations = {p: (scores[p] / total_score) * capital for p in providers}
         else:
             per_provider = capital / len(providers)
             allocations = {p: per_provider for p in providers}
@@ -459,10 +503,11 @@ class Funder:
         """LLM-driven funding decision."""
         try:
             from llm import llm_plan_funding
+            capped_capital = self.private_state.total_capital * self.max_round_deployment
             allocations, reasoning = llm_plan_funding(
                 name=self.name,
                 funder_type=self.funder_type,
-                total_capital=self.private_state.total_capital,
+                total_capital=capped_capital,
                 believed_provider_quality=self.private_state.believed_provider_quality,
                 believed_provider_gaming=self.private_state.believed_provider_gaming,
                 leaderboard=self._last_leaderboard,
@@ -603,6 +648,8 @@ class Funder:
             json.dump({
                 "risk_tolerance": self.risk_tolerance,
                 "llm_mode": self.llm_mode,
+                "max_round_deployment": self.max_round_deployment,
+                "funding_cooldown": self.funding_cooldown,
             }, f, indent=2)
 
     @classmethod
@@ -624,6 +671,8 @@ class Funder:
             mission_statement=private_data.get("mission_statement", ""),
             risk_tolerance=params.get("risk_tolerance", 0.5),
             llm_mode=params.get("llm_mode", False),
+            max_round_deployment=params.get("max_round_deployment", 0.10),
+            funding_cooldown=params.get("funding_cooldown", 2),
         )
 
         funder.public_state = PublicState.from_dict(public_data)

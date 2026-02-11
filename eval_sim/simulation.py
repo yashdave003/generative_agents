@@ -70,7 +70,7 @@ class SimulationConfig:
     benchmark_exploitability_growth_rate: float = 0.008
 
     # Benchmark introduction (evaluator introduces new benchmarks mid-simulation)
-    benchmark_introduction_cooldown: int = 6
+    benchmark_introduction_cooldown: int = 7
     max_benchmarks: int = 6
 
     # Planning mode
@@ -356,6 +356,8 @@ class EvalEcosystemSimulation:
                 risk_tolerance=fc.get("risk_tolerance", 0.5),
                 mission_statement=fc.get("mission_statement", ""),
                 llm_mode=self.config.llm_mode,
+                max_round_deployment=fc.get("max_round_deployment", 0.10),
+                funding_cooldown=fc.get("funding_cooldown", 2),
             )
             self.funders.append(funder)
 
@@ -583,7 +585,6 @@ class EvalEcosystemSimulation:
                 }
                 for p in self.providers
             },
-            "leaderboard": leaderboard,
             "benchmark_params": {
                 bm.name: {"validity": bm.validity, "exploitability": bm.exploitability}
                 for bm in self.evaluator.benchmarks
@@ -593,7 +594,6 @@ class EvalEcosystemSimulation:
         # Add per-benchmark scores if multiple benchmarks
         if len(self.evaluator.benchmarks) > 1:
             round_data["per_benchmark_scores"] = self.evaluator.get_per_benchmark_scores(round_num)
-            round_data["benchmark_names"] = [bm.name for bm in self.evaluator.benchmarks]
 
         # Record new benchmark introduction if one occurred
         if new_benchmark is not None:
@@ -657,13 +657,6 @@ class EvalEcosystemSimulation:
 
         if actor_traces:
             round_data["actor_traces"] = actor_traces
-            # Backwards-compatible: keep llm_traces for providers only
-            provider_traces = {
-                p.name: actor_traces[p.name]
-                for p in self.providers if p.name in actor_traces
-            }
-            if provider_traces and self.config.llm_mode:
-                round_data["llm_traces"] = provider_traces
 
         # Apply numeric precision (4 decimal places) to stored data
         round_data = r4(round_data)
@@ -875,13 +868,12 @@ class EvalEcosystemSimulation:
                 all_allocations[provider_name] += amount
 
         # Calculate funding multipliers per provider
-        # Multiplier based on total funding received relative to available capital
-        total_available = sum(f.private_state.total_capital for f in self.funders)
-        if total_available > 0:
-            for provider_name, total_funding in all_allocations.items():
-                # Proportion of total capital allocated to this provider
-                proportion = total_funding / total_available
-                # Multiplier: 1.0 (no funding) to 2.0 (all capital)
+        # Normalized to actual round deployment pool (not total capital)
+        total_deployed = sum(all_allocations.values())
+        if total_deployed > 0:
+            for provider_name, funding in all_allocations.items():
+                proportion = funding / total_deployed
+                # Multiplier: 1.0 (no funding) to 2.0 (all funding)
                 multiplier = 1.0 + min(1.0, proportion)
                 funder_data["funding_multipliers"][provider_name] = multiplier
 
@@ -916,8 +908,9 @@ class EvalEcosystemSimulation:
     def _print_round_summary(self, round_data: dict):
         """Print a summary of a round."""
         print(f"--- Round {round_data['round']} ---")
+        leaderboard = sorted(round_data["scores"].items(), key=lambda x: x[1], reverse=True)
         print("Leaderboard:")
-        for rank, (name, score) in enumerate(round_data["leaderboard"], 1):
+        for rank, (name, score) in enumerate(leaderboard, 1):
             true_cap = round_data["true_capabilities"][name]
             believed_cap = round_data["believed_capabilities"][name]
             strategy = round_data["strategies"][name]
@@ -987,8 +980,9 @@ class EvalEcosystemSimulation:
         # Final leaderboard
         if self.history:
             final = self.history[-1]
+            leaderboard = sorted(final["scores"].items(), key=lambda x: x[1], reverse=True)
             print("Final Standings:")
-            for rank, (name, score) in enumerate(final["leaderboard"], 1):
+            for rank, (name, score) in enumerate(leaderboard, 1):
                 true_cap = final["true_capabilities"][name]
                 print(f"  {rank}. {name}: score={score:.3f}, true_capability={true_cap:.3f}")
 

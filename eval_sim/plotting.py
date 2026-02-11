@@ -588,7 +588,7 @@ def plot_evaluator_dashboard(
     # --- Panel 3: Per-Benchmark Scores or Score Trends ---
     ax3 = axes[1, 0]
     if has_multi_benchmark:
-        benchmark_names = history[0].get("benchmark_names", [])
+        benchmark_names = list(history[0].get("benchmark_params", {}).keys())
         bench_colors = get_provider_colors(len(benchmark_names))
 
         # Plot average score per benchmark over time

@@ -178,7 +178,7 @@ class Evaluator:
         self.active_regulations: list[Regulation] = []
 
         # Benchmark introduction parameters
-        self.benchmark_introduction_cooldown: int = 8
+        self.benchmark_introduction_cooldown: int = 7
         self.last_introduction_round: int = 0  # first introduction at round 8
         self.max_benchmarks: int = 6
         self.introduction_history: list[dict] = []  # [{round, benchmark_name, trigger}]
@@ -459,7 +459,7 @@ class Evaluator:
         - Periodic introduction every `cooldown` rounds
 
         Constraints:
-        - 8-round cooldown between introductions
+        - 7-round cooldown between introductions
         - Maximum of max_benchmarks total benchmarks
 
         Returns:
