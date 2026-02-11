@@ -219,13 +219,25 @@ class ExperimentLogger:
         for provider in providers:
             provider.save(os.path.join(providers_dir, provider.name))
 
-    def log_consumers(self, consumers: list):
-        """Log consumer final states."""
+    def log_consumers(self, consumers):
+        """Log consumer final states.
+
+        Accepts either a list of Consumer objects (legacy) or a ConsumerMarket.
+        """
         exp_dir = self.get_experiment_dir()
         consumers_dir = os.path.join(exp_dir, "consumers")
         os.makedirs(consumers_dir, exist_ok=True)
-        for consumer in consumers:
-            consumer.save(os.path.join(consumers_dir, consumer.name))
+
+        # Handle ConsumerMarket (new format)
+        from actors.consumer import ConsumerMarket
+        if isinstance(consumers, ConsumerMarket):
+            consumers.save(consumers_dir)
+            return
+
+        # Legacy: list of Consumer objects
+        if isinstance(consumers, list):
+            for consumer in consumers:
+                consumer.save(os.path.join(consumers_dir, consumer.name))
 
     def log_policymakers(self, policymakers: list):
         """Log policymaker final states."""
@@ -446,7 +458,7 @@ def generate_summary(
             }
 
     # Consumer summary
-    if consumers and any("consumer_data" in h for h in history):
+    if any("consumer_data" in h for h in history):
         consumer_rounds = [h for h in history if "consumer_data" in h]
         if consumer_rounds:
             avg_satisfactions = [
@@ -454,16 +466,26 @@ def generate_summary(
                 for h in consumer_rounds
                 if h["consumer_data"].get("avg_satisfaction") is not None
             ]
-            total_switches = sum(
-                h["consumer_data"].get("switches", 0) for h in consumer_rounds
-            )
+            avg_switching = sum(
+                h["consumer_data"].get("switching_rate", 0) for h in consumer_rounds
+            ) / len(consumer_rounds)
 
-            summary["consumer_summary"] = {
-                "n_consumers": len(consumers),
+            final_cd = consumer_rounds[-1]["consumer_data"]
+            consumer_summary = {
                 "mean_satisfaction": sum(avg_satisfactions) / len(avg_satisfactions) if avg_satisfactions else None,
-                "final_satisfaction": consumer_rounds[-1]["consumer_data"].get("avg_satisfaction"),
-                "total_subscription_switches": total_switches,
+                "final_satisfaction": final_cd.get("avg_satisfaction"),
+                "avg_switching_rate": avg_switching,
             }
+
+            # Add market shares if available
+            if "market_shares" in final_cd:
+                consumer_summary["final_market_shares"] = final_cd["market_shares"]
+
+            # Add segment count if available
+            if "segment_data" in final_cd:
+                consumer_summary["n_segments"] = len(final_cd["segment_data"])
+
+            summary["consumer_summary"] = consumer_summary
 
     # Policymaker summary
     if policymakers and any("policymaker_data" in h for h in history):

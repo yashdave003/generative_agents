@@ -92,6 +92,10 @@ class GameLogGenerator:
             "policymaker_data": round_data.get("policymaker_data", {}),
             "provider_states": provider_states,
             "actor_traces": round_data.get("actor_traces", {}),
+            "new_benchmark": round_data.get("new_benchmark"),
+            "per_benchmark_scores": round_data.get("per_benchmark_scores", {}),
+            "benchmark_names": round_data.get("benchmark_names", []),
+            "media_data": round_data.get("media_data", {}),
         }
 
         self.rounds_data.append(record)
@@ -214,14 +218,14 @@ class GameLogGenerator:
                     "details": intervention.get("details"),
                 })
 
-        # Detect consumer switch threshold
+        # Detect significant consumer switching
         consumer_data = record.get("consumer_data", {})
-        switches = consumer_data.get("switches", 0)
-        if switches >= 3:  # Significant consumer movement
+        switching_rate = consumer_data.get("switching_rate", 0)
+        if switching_rate >= 0.05:  # 5%+ of market switching is notable
             self.events.append({
                 "round": round_num,
                 "type": "consumer_movement",
-                "switches": switches,
+                "switching_rate": switching_rate,
             })
 
     def generate_markdown(self) -> str:
@@ -350,9 +354,21 @@ class GameLogGenerator:
                         f"- **Regulation** by {event['policymaker']}: {event['regulation_type']}"
                     )
                 elif event["type"] == "consumer_movement":
+                    rate = event.get('switching_rate', 0)
                     lines.append(
-                        f"- **Consumer movement**: {event['switches']} subscription switches"
+                        f"- **Consumer movement**: {rate:.1%} of market switched providers"
                     )
+            lines.append("")
+
+        # New benchmark introduction
+        new_bm = record.get("new_benchmark")
+        if new_bm:
+            lines.append("### New Benchmark Introduced")
+            lines.append(
+                f"- **{new_bm['name']}** introduced "
+                f"(validity={new_bm['validity']:.2f}, exploitability={new_bm['exploitability']:.2f})"
+            )
+            lines.append(f"  - Trigger: {new_bm['trigger']}")
             lines.append("")
 
         # Actor reasoning traces (all actor types, both LLM and heuristic)
@@ -392,15 +408,40 @@ class GameLogGenerator:
                 lines.append(f"- **{name}:** {reasoning}")
             lines.append("")
 
+        # Media coverage
+        media_data = record.get("media_data", {})
+        if media_data:
+            headlines = media_data.get("headlines", [])
+            if headlines:
+                lines.append("### Media Coverage")
+                sentiment = media_data.get("sentiment", 0)
+                sentiment_label = "positive" if sentiment > 0.1 else "negative" if sentiment < -0.1 else "neutral"
+                lines.append(f"- Sentiment: {sentiment:.2f} ({sentiment_label})")
+                for headline in headlines:
+                    lines.append(f"- {headline}")
+                risk_signals = media_data.get("risk_signals", [])
+                if risk_signals:
+                    lines.append(f"- Risk signals: {', '.join(risk_signals)}")
+                lines.append("")
+
         # Consumer data
         consumer_data = record.get("consumer_data", {})
         if consumer_data:
-            lines.append("### Consumer Activity")
-            switches = consumer_data.get("switches", 0)
+            lines.append("### Consumer Market")
             avg_satisfaction = consumer_data.get("avg_satisfaction")
-            lines.append(f"- Switches: {switches}")
+            switching_rate = consumer_data.get("switching_rate", 0)
             if avg_satisfaction is not None:
-                lines.append(f"- Avg Satisfaction: {avg_satisfaction:.2f}")
+                lines.append(f"- Avg Satisfaction: {avg_satisfaction:.3f}")
+            lines.append(f"- Switching Rate: {switching_rate:.1%}")
+
+            # Market shares
+            market_shares = consumer_data.get("market_shares", {})
+            if market_shares:
+                shares_str = ", ".join(
+                    f"{p}: {s:.1%}" for p, s in
+                    sorted(market_shares.items(), key=lambda x: x[1], reverse=True)
+                )
+                lines.append(f"- Market Shares: {shares_str}")
             lines.append("")
 
         # Regulatory activity

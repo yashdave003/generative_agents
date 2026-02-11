@@ -14,18 +14,18 @@ import time
 # ============================================================
 
 EXPERIMENT = {
-    "name": "5p_3b_full_ecosystem_ollama_v2",
+    "name": "5p_2b_full_ecosystem_v3",
     "description": (
-        "Full ecosystem v2 (post consumer-fix): 5 providers (OpenAI, Anthropic, "
-        "NovaMind, DeepMind, Meta_AI), 3 benchmarks (capability, safety, reasoning), "
-        "12 heterogeneous consumers (3 archetypes with fixed switching logic), "
-        "1 policymaker, 4 funders (2 VC + government + foundation). "
-        "20 rounds using local llama3 via Ollama. "
-        "Key fixes: consumer receive_satisfaction() now called, opportunity-driven "
-        "switching added, thresholds lowered, actor reasoning traces captured."
+        "Full ecosystem v3 (post major rework): 5 providers, 2 benchmarks "
+        "(coding + reasoning), 12 consumer segments (4 use-cases × 3 archetypes), "
+        "1 policymaker, 4 funders, media actor (TechPress). "
+        "New features: scoring formula (gaming inflates above true_cap), "
+        "proportional consumer switching, market segments, media influence, "
+        "per-provider visibility, benchmark introduction, numeric precision. "
+        "LLM mode via Ollama."
     ),
-    "tags": ["llm", "ollama", "5-provider", "3-benchmark", "12-consumer",
-             "4-funder", "full-ecosystem", "consumer-fix-v2"],
+    "tags": ["llm", "ollama", "5-provider", "2-benchmark", "12-segments",
+             "4-funder", "media", "full-ecosystem-v3"],
 }
 
 LLM = {
@@ -46,17 +46,21 @@ SIMULATION = {
     # Benchmark evolution
     "benchmark_validity_decay_rate": 0.005,
     "benchmark_exploitability_growth_rate": 0.008,
+    # Benchmark introduction
+    "benchmark_introduction_cooldown": 8,
+    "max_benchmarks": 6,
+    # Media
+    "enable_media": True,
+    # Consumer market: 4 use-cases × 3 archetypes = 12 segments
+    "use_case_profiles": ["software_dev", "content_writer", "healthcare", "finance"],
 }
 
-# 3 benchmarks: coding (high validity, hard to game), safety (high exploitability),
-# writing (balanced, moderate noise — subjective eval)
+# 2 benchmarks: coding (high validity, harder to game) and reasoning (more exploitable)
 BENCHMARKS = [
     {"name": "coding_bench", "validity": 0.85, "exploitability": 0.25,
-     "noise_level": 0.08, "weight": 0.4},
-    {"name": "safety_bench", "validity": 0.6, "exploitability": 0.5,
-     "noise_level": 0.1, "weight": 0.3},
-    {"name": "writing_bench", "validity": 0.7, "exploitability": 0.4,
-     "noise_level": 0.12, "weight": 0.3},
+     "noise_level": 0.08, "weight": 0.5},
+    {"name": "reasoning_bench", "validity": 0.7, "exploitability": 0.45,
+     "noise_level": 0.1, "weight": 0.5},
 ]
 
 # 5 providers: OpenAI, Anthropic, NovaMind, DeepMind, Meta_AI
@@ -64,7 +68,7 @@ PROVIDERS = "five"
 
 CONSUMERS = {
     "enabled": True,
-    "n_consumers": 12,  # 10 heterogeneous consumers (3 archetypes distributed evenly)
+    # 4 use_case_profiles × 3 archetypes = 12 market segments
 }
 
 POLICYMAKERS = {
@@ -182,13 +186,16 @@ def run():
         breakthrough_magnitude=SIMULATION.get("breakthrough_magnitude", 0.05),
         benchmark_validity_decay_rate=SIMULATION.get("benchmark_validity_decay_rate", 0.005),
         benchmark_exploitability_growth_rate=SIMULATION.get("benchmark_exploitability_growth_rate", 0.008),
+        benchmark_introduction_cooldown=SIMULATION.get("benchmark_introduction_cooldown", 8),
+        max_benchmarks=SIMULATION.get("max_benchmarks", 6),
         llm_mode=LLM["llm_mode"],
         enable_consumers=CONSUMERS["enabled"],
         enable_policymakers=POLICYMAKERS["enabled"],
         enable_funders=FUNDERS["enabled"],
-        n_consumers=CONSUMERS.get("n_consumers", 5) if CONSUMERS["enabled"] else 0,
+        enable_media=SIMULATION.get("enable_media", False),
         n_policymakers=POLICYMAKERS.get("n_policymakers", 1) if POLICYMAKERS["enabled"] else 0,
         n_funders=n_funders,
+        use_case_profiles=SIMULATION.get("use_case_profiles"),
         verbose=SIMULATION.get("verbose", True),
     )
 
@@ -199,11 +206,14 @@ def run():
         f"LLM={LLM['provider']}" if LLM["llm_mode"] else "heuristic",
     ]
     if CONSUMERS["enabled"]:
-        parts.append(f"{config.n_consumers} consumers")
+        n_use_cases = len(SIMULATION.get("use_case_profiles", [])) or 6
+        parts.append(f"{n_use_cases * 3} consumer segments")
     if POLICYMAKERS["enabled"]:
         parts.append(f"{config.n_policymakers} policymaker(s)")
     if FUNDERS["enabled"]:
         parts.append(f"{n_funders} funder(s)")
+    if SIMULATION.get("enable_media"):
+        parts.append("media")
 
     print()
     print("=" * 70)
@@ -285,15 +295,15 @@ def run():
         sim.history,
         sim.evaluator,
         sim.providers,
-        consumers=sim.consumers if config.enable_consumers else None,
+        consumers=sim.consumer_market if config.enable_consumers else None,
         policymakers=sim.policymakers if config.enable_policymakers else None,
         funders=sim.funders if config.enable_funders else None,
     ))
     logger.log_providers(sim.providers)
     logger.log_ground_truth(sim.ground_truth)
 
-    if config.enable_consumers and sim.consumers:
-        logger.log_consumers(sim.consumers)
+    if config.enable_consumers and sim.consumer_market:
+        logger.log_consumers(sim.consumer_market)
     if config.enable_policymakers and sim.policymakers:
         logger.log_policymakers(sim.policymakers)
     if config.enable_funders and sim.funders:
@@ -312,7 +322,6 @@ def run():
             "noise": config.benchmark_noise,
         },
         benchmarks=BENCHMARKS,
-        consumers=sim.consumers if config.enable_consumers else None,
         policymakers=sim.policymakers if config.enable_policymakers else None,
     )
     game_log_path = logger.save_game_log(game_log_content)
@@ -327,7 +336,7 @@ def run():
         plot_metadata = {
             "n_rounds": config.n_rounds,
             "llm_mode": config.llm_mode,
-            "n_consumers": config.n_consumers if config.enable_consumers else 0,
+            "n_consumers": len(sim.consumer_market.segments) if config.enable_consumers and sim.consumer_market else 0,
             "n_policymakers": config.n_policymakers if config.enable_policymakers else 0,
             "n_funders": config.n_funders if config.enable_funders else 0,
         }

@@ -314,26 +314,22 @@ def plot_consumer_dashboard(
     ax1.set_ylim(0, 1)
     style_axis(ax1, "Average Consumer Satisfaction", "Round", "Satisfaction")
 
-    # --- Panel 2: Subscription Switches ---
+    # --- Panel 2: Switching Rate ---
     ax2 = axes[0, 1]
-    switches = [h["consumer_data"].get("switches", 0) for h in consumer_rounds]
-    ax2.bar(rounds, switches, color='#E76F51', alpha=0.7)
-    ax2.set_ylabel("Switches", fontsize=9)
-    style_axis(ax2, "Subscription Switches Per Round", "Round", "Switches", legend=False)
+    switching_rates = [h["consumer_data"].get("switching_rate", 0) for h in consumer_rounds]
+    ax2.bar(rounds, [r * 100 for r in switching_rates], color='#E76F51', alpha=0.7)
+    ax2.set_ylabel("Switching Rate (%)", fontsize=9)
+    style_axis(ax2, "Market Switching Rate Per Round", "Round", "Switching Rate (%)", legend=False)
 
     # --- Panel 3: Market Share Over Time ---
     ax3 = axes[1, 0]
 
-    # Count subscriptions per provider per round
+    # Use market_shares (proportions) from consumer_data
     market_share = {p: [] for p in providers}
     for h in consumer_rounds:
-        subs = h["consumer_data"].get("subscriptions", {})
-        counts = {p: 0 for p in providers}
-        for consumer, provider in subs.items():
-            if provider in counts:
-                counts[provider] += 1
+        shares = h["consumer_data"].get("market_shares", {})
         for p in providers:
-            market_share[p].append(counts[p])
+            market_share[p].append(shares.get(p, 0))
 
     # Stacked area chart
     bottom = np.zeros(len(rounds))
@@ -343,28 +339,23 @@ def plot_consumer_dashboard(
                         alpha=0.7, label=provider, color=provider_colors[provider])
         bottom += values
 
-    style_axis(ax3, "Market Share (Subscriptions)", "Round", "Number of Consumers")
+    ax3.set_ylim(0, 1.05)
+    style_axis(ax3, "Market Share", "Round", "Share")
 
-    # --- Panel 4: Satisfaction Range (min/max/avg) ---
+    # --- Panel 4: Per-Provider Satisfaction ---
     ax4 = axes[1, 1]
 
-    min_sats = []
-    max_sats = []
-    for h in consumer_rounds:
-        sat_dict = h["consumer_data"].get("satisfaction", {})
-        if sat_dict:
-            vals = list(sat_dict.values())
-            min_sats.append(min(vals))
-            max_sats.append(max(vals))
-        else:
-            min_sats.append(h["consumer_data"].get("min_satisfaction", 0))
-            max_sats.append(h["consumer_data"].get("avg_satisfaction", 0))
+    for provider in providers:
+        prov_sats = []
+        for h in consumer_rounds:
+            prov_sat = h["consumer_data"].get("provider_satisfaction", {})
+            prov_sats.append(prov_sat.get(provider, 0))
+        ax4.plot(rounds, prov_sats, 'o-', label=provider, color=provider_colors[provider],
+                 markersize=3, linewidth=2)
 
-    ax4.fill_between(rounds, min_sats, max_sats, alpha=0.3, color='#457B9D', label='Range')
-    ax4.plot(rounds, avg_satisfaction, 'o-', color='#457B9D', markersize=3,
-             linewidth=2, label='Average')
+    ax4.plot(rounds, avg_satisfaction, 'k--', linewidth=1.5, alpha=0.5, label='Market Avg')
     ax4.set_ylim(0, 1)
-    style_axis(ax4, "Satisfaction Range", "Round", "Satisfaction")
+    style_axis(ax4, "Per-Provider Satisfaction", "Round", "Satisfaction")
 
     plt.tight_layout()
 
@@ -722,11 +713,16 @@ def plot_summary_dashboard(
     else:
         # Infer from history
         if has_consumers:
-            # Count consumers from first round with consumer data
+            # Check for segment-based consumer market
             for h in history:
-                if "consumer_data" in h and "subscriptions" in h["consumer_data"]:
-                    n_consumers = len(h["consumer_data"]["subscriptions"])
-                    subtitle_parts.append(f"{n_consumers} consumers")
+                if "consumer_data" in h:
+                    cd = h["consumer_data"]
+                    if "segment_data" in cd:
+                        n_segments = len(cd["segment_data"])
+                        subtitle_parts.append(f"{n_segments} market segments")
+                    elif "subscriptions" in cd:
+                        n_consumers = len(cd["subscriptions"])
+                        subtitle_parts.append(f"{n_consumers} consumers")
                     break
         if has_policymakers:
             subtitle_parts.append("1 policymaker")
@@ -849,13 +845,9 @@ def plot_summary_dashboard(
             market_share = {p: [] for p in providers}
             plot_rounds = [h["round"] for h in consumer_rounds_data]
             for h in consumer_rounds_data:
-                subs = h["consumer_data"].get("subscriptions", {})
-                counts = {p: 0 for p in providers}
-                for consumer, provider in subs.items():
-                    if provider in counts:
-                        counts[provider] += 1
+                shares = h["consumer_data"].get("market_shares", {})
                 for p in providers:
-                    market_share[p].append(counts[p])
+                    market_share[p].append(shares.get(p, 0))
 
             bottom = np.zeros(len(plot_rounds))
             for provider in providers:
@@ -863,7 +855,8 @@ def plot_summary_dashboard(
                 ax.fill_between(plot_rounds, bottom, bottom + values, alpha=0.7,
                                label=provider, color=provider_colors[provider])
                 bottom += values
-    style_axis(ax, "Market Share", "Round", "Consumers")
+            ax.set_ylim(0, 1.05)
+    style_axis(ax, "Market Share", "Round", "Share")
     if not has_consumers:
         ax.text(0.5, 0.5, "No consumer data", ha='center', va='center',
                 transform=ax.transAxes, fontsize=10, alpha=0.5)

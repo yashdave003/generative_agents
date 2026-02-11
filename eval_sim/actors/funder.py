@@ -114,6 +114,7 @@ class Funder:
         consumer_data: dict,
         policymaker_data: dict,
         round_num: int,
+        media_coverage: Optional[dict] = None,
     ):
         """
         Observe the current ecosystem state.
@@ -122,12 +123,14 @@ class Funder:
         - Leaderboard scores (performance)
         - Consumer satisfaction (true quality proxy)
         - Regulatory interventions (compliance/safety risk)
+        - Media coverage (sentiment, risk signals)
 
         Args:
             leaderboard: List of (provider_name, score) tuples
-            consumer_data: Dict with avg_satisfaction, subscriptions, etc.
+            consumer_data: Dict with avg_satisfaction, provider_satisfaction, etc.
             policymaker_data: Dict with interventions, active_regulations
             round_num: Current simulation round
+            media_coverage: Optional media coverage dict
         """
         self.public_state.current_round = round_num
 
@@ -175,6 +178,24 @@ class Funder:
                     0.7 * old_gaming + 0.3 * gaming_estimate
                 )
 
+        # Media coverage influences funder sentiment
+        if media_coverage:
+            sentiment = media_coverage.get("sentiment", 0.0)
+            provider_attention = media_coverage.get("provider_attention", {})
+            risk_signals = media_coverage.get("risk_signals", [])
+
+            # Negative coverage about a provider increases believed_gaming
+            for provider_name in [name for name, _ in leaderboard]:
+                attention = provider_attention.get(provider_name, 0)
+                if attention > 0.3 and risk_signals:
+                    # High media attention + risk signals → increase gaming estimate
+                    gaming_bump = attention * 0.1
+                    if provider_name in self.private_state.believed_provider_gaming:
+                        self.private_state.believed_provider_gaming[provider_name] = min(
+                            1.0,
+                            self.private_state.believed_provider_gaming[provider_name] + gaming_bump,
+                        )
+
         # Store previous scores for growth calculation
         self._previous_scores = {name: score for name, score in leaderboard}
 
@@ -193,7 +214,10 @@ class Funder:
         consumer_data: dict,
     ) -> Optional[float]:
         """
-        Get average satisfaction for consumers subscribed to a provider.
+        Get average satisfaction for a provider from consumer market data.
+
+        Supports both new format (provider_satisfaction dict) and legacy
+        format (individual subscriptions/satisfaction).
 
         Args:
             provider_name: Provider to get satisfaction for
@@ -205,24 +229,13 @@ class Funder:
         if not consumer_data:
             return None
 
-        subscriptions = consumer_data.get("subscriptions", {})
-        satisfaction = consumer_data.get("satisfaction", {})
+        # New format: direct per-provider satisfaction
+        provider_sat = consumer_data.get("provider_satisfaction", {})
+        if provider_sat and provider_name in provider_sat:
+            return provider_sat[provider_name]
 
-        if not subscriptions or not satisfaction:
-            # Fallback to overall average
-            return consumer_data.get("avg_satisfaction")
-
-        # Get satisfaction of consumers subscribed to this provider
-        provider_satisfactions = [
-            satisfaction[consumer]
-            for consumer, prov in subscriptions.items()
-            if prov == provider_name and consumer in satisfaction
-        ]
-
-        if provider_satisfactions:
-            return sum(provider_satisfactions) / len(provider_satisfactions)
-
-        return None
+        # Fallback to overall average
+        return consumer_data.get("avg_satisfaction")
 
     def reflect(self):
         """

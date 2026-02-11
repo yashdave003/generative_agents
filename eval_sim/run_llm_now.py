@@ -257,7 +257,7 @@ def run_quick_test(
             sim.history,
             sim.evaluator,
             sim.providers,
-            consumers=sim.consumers if config.enable_consumers else None,
+            consumers=sim.consumer_market if config.enable_consumers else None,
             policymakers=sim.policymakers if config.enable_policymakers else None,
             funders=sim.funders if config.enable_funders else None,
         ))
@@ -266,8 +266,8 @@ def run_quick_test(
         logger.log_providers(sim.providers)
         logger.log_ground_truth(sim.ground_truth)
 
-        if config.enable_consumers and sim.consumers:
-            logger.log_consumers(sim.consumers)
+        if config.enable_consumers and sim.consumer_market:
+            logger.log_consumers(sim.consumer_market)
         if config.enable_policymakers and sim.policymakers:
             logger.log_policymakers(sim.policymakers)
         if config.enable_funders and sim.funders:
@@ -287,7 +287,6 @@ def run_quick_test(
             llm_mode=True,
             benchmark_params=benchmark_params,
             benchmarks=benchmarks,
-            consumers=sim.consumers if config.enable_consumers else None,
             policymakers=sim.policymakers if config.enable_policymakers else None,
         )
         logger.save_game_log(game_log_content)
@@ -301,7 +300,7 @@ def run_quick_test(
             plot_metadata = {
                 "n_rounds": config.n_rounds,
                 "llm_mode": config.llm_mode,
-                "n_consumers": config.n_consumers if config.enable_consumers else 0,
+                "n_consumers": len(sim.consumer_market.segments) if config.enable_consumers and sim.consumer_market else 0,
                 "n_policymakers": config.n_policymakers if config.enable_policymakers else 0,
                 "n_funders": config.n_funders if config.enable_funders else 0,
             }

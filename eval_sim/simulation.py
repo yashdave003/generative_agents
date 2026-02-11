@@ -19,6 +19,26 @@ from actors.evaluator import Evaluator, Regulation
 from visibility import ProviderGroundTruth, ConsumerGroundTruth, PolicymakerGroundTruth, FunderGroundTruth
 
 
+def r4(x):
+    """Round numeric values to 4 decimal places for storage precision.
+
+    Recursively handles dicts, lists, and tuples. Non-numeric types pass through.
+    Only applied at output/storage boundaries, not internal computation.
+    """
+    if isinstance(x, dict):
+        return {k: r4(v) for k, v in x.items()}
+    if isinstance(x, list):
+        return [r4(v) for v in x]
+    if isinstance(x, tuple):
+        return tuple(r4(v) for v in x)
+    if isinstance(x, (int, str, type(None), bool)):
+        return x
+    try:
+        return round(float(x), 4)
+    except (TypeError, ValueError):
+        return x
+
+
 @dataclass
 class SimulationConfig:
     """Configuration for a simulation run."""
@@ -49,16 +69,24 @@ class SimulationConfig:
     benchmark_validity_decay_rate: float = 0.005
     benchmark_exploitability_growth_rate: float = 0.008
 
+    # Benchmark introduction (evaluator introduces new benchmarks mid-simulation)
+    benchmark_introduction_cooldown: int = 8
+    max_benchmarks: int = 6
+
     # Planning mode
     llm_mode: bool = False  # If True, use LLM for planning; if False, use heuristics
 
     # New actor settings
-    enable_consumers: bool = False  # Enable consumer actors
+    enable_consumers: bool = False  # Enable consumer market
     enable_policymakers: bool = False  # Enable policymaker actors
     enable_funders: bool = False  # Enable funder actors
-    n_consumers: int = 10  # Number of consumer actors
+    enable_media: bool = False  # Enable media actor
+    n_consumers: int = 10  # Deprecated (kept for backward compat)
     n_policymakers: int = 1  # Number of policymaker actors
     n_funders: int = 1  # Number of funder actors
+
+    # Consumer market config
+    use_case_profiles: Optional[list] = None  # e.g., ["software_dev", "healthcare", "legal"]
 
     # Output
     output_dir: Optional[str] = None
@@ -95,9 +123,11 @@ class EvalEcosystemSimulation:
     def __init__(self, config: SimulationConfig):
         self.config = config
         self.providers: list[ModelProvider] = []
-        self.consumers: list = []  # Will be Consumer instances
+        self.consumers: list = []  # Deprecated: kept for backward compat
+        self.consumer_market = None  # ConsumerMarket instance
         self.policymakers: list = []  # Will be Policymaker instances
         self.funders: list = []  # Will be Funder instances
+        self.media = None  # Media instance
         self.evaluator: Optional[Evaluator] = None
         self.current_round: int = 0
         self.history: list[dict] = []
@@ -164,9 +194,9 @@ class EvalEcosystemSimulation:
                 true_capability=pc.get("initial_capability", 0.5)
             )
 
-        # Create consumers if enabled
+        # Create consumer market if enabled
         if self.config.enable_consumers:
-            self._setup_consumers(consumer_configs, provider_configs)
+            self._setup_consumer_market(provider_configs)
 
         # Create policymakers if enabled
         if self.config.enable_policymakers:
@@ -175,6 +205,11 @@ class EvalEcosystemSimulation:
         # Create funders if enabled
         if self.config.enable_funders:
             self._setup_funders(funder_configs)
+
+        # Create media if enabled
+        if self.config.enable_media:
+            from actors.media import Media
+            self.media = Media(name="TechPress", seed=self.config.seed)
 
         # Create or use provided evaluator
         if evaluator is not None:
@@ -202,114 +237,70 @@ class EvalEcosystemSimulation:
             if bm.exploitability_growth_rate == 0.0:
                 bm.exploitability_growth_rate = self.config.benchmark_exploitability_growth_rate
 
+        # Apply benchmark introduction config
+        self.evaluator.benchmark_introduction_cooldown = self.config.benchmark_introduction_cooldown
+        self.evaluator.max_benchmarks = self.config.max_benchmarks
+
+        # Resolve consumer market benchmark weights now that evaluator exists
+        if self.consumer_market:
+            benchmark_names = [bm.name for bm in self.evaluator.benchmarks]
+            self.consumer_market.resolve_benchmark_weights(benchmark_names)
+
         self.current_round = 0
         self.history = []
 
         if self.config.verbose:
             print("=== Simulation Setup ===")
             print(f"Providers: {[p.name for p in self.providers]}")
-            if self.consumers:
-                print(f"Consumers: {len(self.consumers)}")
+            if self.consumer_market:
+                print(f"Consumer Market: {len(self.consumer_market.segments)} segments")
             if self.policymakers:
                 print(f"Policymakers: {len(self.policymakers)}")
             if self.funders:
                 print(f"Funders: {[f.name for f in self.funders]}")
+            if self.media:
+                print(f"Media: {self.media.name}")
             print(self.evaluator.get_benchmark_summary())
             print()
 
-    def _setup_consumers(self, consumer_configs: list[dict] = None, provider_configs: list[dict] = None):
-        """Set up consumer actors with heterogeneous archetypes and initial subscriptions."""
-        try:
-            from actors.consumer import Consumer
-        except ImportError:
-            if self.config.verbose:
-                print("Consumer actor not available yet")
-            return
+    def _setup_consumer_market(self, provider_configs: list[dict] = None):
+        """Set up the consumer market with segments (archetype × use_case)."""
+        from actors.consumer import ConsumerMarket, create_default_segments
 
-        import numpy as np
-        rng = np.random.default_rng(self.config.seed)
-
-        # Build brand recognition map from provider configs
+        # Build brand recognition and provider names from provider configs
         brand_recognition = {}
         provider_names = []
-        market_weights = []
         if provider_configs:
             for pc in provider_configs:
                 name = pc["name"]
                 provider_names.append(name)
                 brand_recognition[name] = pc.get("brand_recognition", 0.5)
-                market_weights.append(pc.get("market_presence", 0.5))
+        else:
+            provider_names = [p.name for p in self.providers]
 
-        if consumer_configs is None:
-            # Create consumers with 3 archetypes distributed evenly
-            consumer_configs = []
-            n = self.config.n_consumers
-            for i in range(n):
-                archetype = i % 3
-                if archetype == 0:
-                    # Leaderboard follower: trusts benchmarks, switches when
-                    # the gap between leaderboard promise and experience is
-                    # moderate (~0.20+ effective threshold)
-                    cc = {
-                        "name": f"Consumer_{i}",
-                        "use_cases": ["general"],
-                        "quality_sensitivity": float(rng.uniform(0.3, 0.5)),
-                        "leaderboard_trust": float(rng.uniform(0.7, 0.9)),
-                        "switching_threshold": float(rng.uniform(0.12, 0.20)),
-                        "switching_cost": float(rng.uniform(0.03, 0.08)),
-                    }
-                elif archetype == 1:
-                    # Experience-driven: trusts own experience, switches quickly
-                    # when disappointed (~0.08+ effective threshold)
-                    cc = {
-                        "name": f"Consumer_{i}",
-                        "use_cases": ["general"],
-                        "quality_sensitivity": float(rng.uniform(0.6, 0.9)),
-                        "leaderboard_trust": float(rng.uniform(0.3, 0.5)),
-                        "switching_threshold": float(rng.uniform(0.05, 0.10)),
-                        "switching_cost": float(rng.uniform(0.02, 0.05)),
-                    }
-                else:
-                    # Cautious/sticky: moderate trust, needs large gap to
-                    # switch (~0.35+ effective threshold)
-                    cc = {
-                        "name": f"Consumer_{i}",
-                        "use_cases": ["general"],
-                        "quality_sensitivity": float(rng.uniform(0.4, 0.6)),
-                        "leaderboard_trust": float(rng.uniform(0.4, 0.6)),
-                        "switching_threshold": float(rng.uniform(0.20, 0.30)),
-                        "switching_cost": float(rng.uniform(0.08, 0.15)),
-                    }
-                consumer_configs.append(cc)
+        # Determine which use-case profiles to include
+        use_cases = self.config.use_case_profiles
+        if use_cases is None:
+            # Default: a representative set
+            use_cases = ["software_dev", "content_writer", "healthcare",
+                         "finance", "researcher", "creative"]
 
-        for cc in consumer_configs:
-            consumer = Consumer(
-                name=cc["name"],
-                use_cases=cc.get("use_cases", ["general"]),
-                budget=cc.get("budget", 100.0),
-                quality_sensitivity=cc.get("quality_sensitivity", 0.5),
-                switching_threshold=cc.get("switching_threshold", 0.3),
-                leaderboard_trust=cc.get("leaderboard_trust", 0.7),
-                switching_cost=cc.get("switching_cost", 0.1),
-            )
+        # Create segments
+        segments = create_default_segments(
+            use_cases=use_cases,
+            provider_names=provider_names,
+            brand_recognition=brand_recognition,
+        )
 
-            # Set brand recognition for consumer decision-making
-            consumer._brand_recognition = dict(brand_recognition)
-
-            # Distribute initial subscriptions based on market_presence
-            if provider_names and market_weights:
-                total_weight = sum(market_weights)
-                probs = [w / total_weight for w in market_weights]
-                initial_provider = rng.choice(provider_names, p=probs)
-                consumer.private_state.current_subscription = initial_provider
-
-            self.consumers.append(consumer)
-
-            # Initialize consumer ground truth
-            self.ground_truth[consumer.name] = ConsumerGroundTruth(
-                true_satisfaction=0.5,
-                true_quality_sensitivity=cc.get("quality_sensitivity", 0.5),
-            )
+        # Create market
+        self.consumer_market = ConsumerMarket(
+            segments=segments,
+            provider_names=provider_names,
+            brand_recognition=brand_recognition,
+            seed=self.config.seed,
+        )
+        # Note: benchmark weight resolution happens after evaluator creation
+        # (in setup()) since benchmark names aren't available yet here.
 
     def _setup_policymakers(self, policymaker_configs: list[dict] = None):
         """Set up policymaker actors."""
@@ -399,13 +390,27 @@ class EvalEcosystemSimulation:
             if isinstance(gt, ProviderGroundTruth):
                 provider.scratch.true_capability = gt.true_capability
 
-    def _get_public_ecosystem_context(self) -> dict:
-        """Collect public signals visible to all actors."""
+    def _get_provider_ecosystem_context(self, provider_name: str) -> dict:
+        """Collect ecosystem signals visible to a specific provider.
+
+        Providers see:
+        - Their OWN customer satisfaction (not competitors')
+        - Their OWN market share
+        - Public regulatory interventions (visible to all)
+        """
         context = {}
         if self.history:
             last = self.history[-1]
             if "consumer_data" in last:
-                context["consumer_satisfaction"] = last["consumer_data"].get("avg_satisfaction")
+                cd = last["consumer_data"]
+                # Provider sees only their own customer satisfaction
+                provider_sat = cd.get("provider_satisfaction", {}).get(provider_name)
+                if provider_sat is not None:
+                    context["consumer_satisfaction"] = provider_sat
+                # Provider sees their own market share
+                provider_share = cd.get("market_shares", {}).get(provider_name)
+                if provider_share is not None:
+                    context["own_market_share"] = provider_share
             if "policymaker_data" in last:
                 context["regulatory_pressure"] = last["policymaker_data"].get("interventions", [])
         return context
@@ -434,8 +439,8 @@ class EvalEcosystemSimulation:
 
         # 1. Providers plan investment portfolios (for round > 0, they've seen previous scores)
         if round_num > 0:
-            ecosystem_context = self._get_public_ecosystem_context()
             for provider in self.providers:
+                ecosystem_context = self._get_provider_ecosystem_context(provider.name)
                 portfolio = provider.plan(ecosystem_context)
 
                 # Calculate capability gain with S-curve dynamics
@@ -491,6 +496,14 @@ class EvalEcosystemSimulation:
         ) / len(self.providers) if self.providers else 0.0
         self.evaluator.update_benchmark(avg_eval_engineering)
 
+        # 2c. Consider introducing a new benchmark
+        new_benchmark = self.evaluator.consider_new_benchmark(round_num)
+
+        # Re-resolve consumer benchmark weights if a new benchmark was introduced
+        if new_benchmark is not None and self.consumer_market:
+            benchmark_names = [bm.name for bm in self.evaluator.benchmarks]
+            self.consumer_market.resolve_benchmark_weights(benchmark_names)
+
         # 3. Publish scores
         published_scores = self.evaluator.publish_scores(scores)
         leaderboard = self.evaluator.get_leaderboard(scores)
@@ -506,23 +519,38 @@ class EvalEcosystemSimulation:
             provider.observe(own_score, competitor_scores, round_num)
             provider.reflect()
 
-        # 5. Consumer actions (if enabled)
-        consumer_data = {}
-        if self.consumers:
-            consumer_data = self._run_consumer_round(leaderboard, round_num)
+        # 5. Media observes and publishes (if enabled)
+        media_coverage = None
+        if self.media:
+            media_coverage = self.media.observe_and_publish(
+                leaderboard=leaderboard,
+                benchmark_params={
+                    bm.name: {"validity": bm.validity, "exploitability": bm.exploitability}
+                    for bm in self.evaluator.benchmarks
+                },
+                policymaker_data=self.history[-1].get("policymaker_data", {}) if self.history else {},
+                new_benchmark={"name": new_benchmark.name} if new_benchmark else None,
+                round_num=round_num,
+            )
 
-        # 6. Policymaker actions (if enabled)
+        # 6. Consumer actions (if enabled)
+        consumer_data = {}
+        if self.consumer_market:
+            consumer_data = self._run_consumer_round(leaderboard, round_num, media_coverage)
+
+        # 7. Policymaker actions (if enabled)
         policymaker_data = {}
         if self.policymakers:
             policymaker_data = self._run_policymaker_round(
-                leaderboard, consumer_data, round_num
+                leaderboard, consumer_data, round_num, media_coverage
             )
 
-        # 7. Funder actions (if enabled)
+        # 8. Funder actions (if enabled)
         funder_data = {}
         if self.funders:
             funder_data = self._run_funder_round(
-                leaderboard, consumer_data, policymaker_data, round_num
+                leaderboard, consumer_data, policymaker_data, round_num,
+                media_coverage
             )
             # Store for next round's capability gain calculation
             self._current_funder_data = funder_data
@@ -560,6 +588,19 @@ class EvalEcosystemSimulation:
             round_data["per_benchmark_scores"] = self.evaluator.get_per_benchmark_scores(round_num)
             round_data["benchmark_names"] = [bm.name for bm in self.evaluator.benchmarks]
 
+        # Record new benchmark introduction if one occurred
+        if new_benchmark is not None:
+            round_data["new_benchmark"] = {
+                "name": new_benchmark.name,
+                "validity": new_benchmark.validity,
+                "exploitability": new_benchmark.exploitability,
+                "trigger": self.evaluator.introduction_history[-1]["trigger"],
+            }
+
+        # Add media data if present
+        if media_coverage:
+            round_data["media_data"] = media_coverage
+
         # Add consumer data if present
         if consumer_data:
             round_data["consumer_data"] = consumer_data
@@ -583,15 +624,6 @@ class EvalEcosystemSimulation:
                     trace = entry.get("reasoning") or entry.get("reason")
                     if trace:
                         actor_traces[provider.name] = trace
-                    break
-
-        for consumer in self.consumers:
-            for entry in reversed(consumer.memory):
-                if entry.get("type") == "planning":
-                    decision = entry.get("decision", "")
-                    reason = entry.get("reasoning") or entry.get("reason", "")
-                    if decision or reason:
-                        actor_traces[consumer.name] = f"{decision}: {reason}" if reason else decision
                     break
 
         for policymaker in self.policymakers:
@@ -626,6 +658,9 @@ class EvalEcosystemSimulation:
             if provider_traces and self.config.llm_mode:
                 round_data["llm_traces"] = provider_traces
 
+        # Apply numeric precision (4 decimal places) to stored data
+        round_data = r4(round_data)
+
         self.history.append(round_data)
 
         if self.config.verbose:
@@ -634,78 +669,43 @@ class EvalEcosystemSimulation:
         self.current_round += 1
         return round_data
 
-    def _run_consumer_round(self, leaderboard: list, round_num: int) -> dict:
+    def _run_consumer_round(self, leaderboard: list, round_num: int,
+                            media_coverage: Optional[dict] = None) -> dict:
         """
-        Run consumer actions for the round.
+        Run consumer market actions for the round.
+
+        Uses ConsumerMarket to handle segment-level observation, satisfaction,
+        and switching as proportions rather than individual consumer decisions.
 
         Args:
             leaderboard: Current leaderboard [(name, score), ...]
             round_num: Current round number
+            media_coverage: Optional media coverage dict from Media actor
 
         Returns:
             Dict with consumer data for this round
         """
-        try:
-            from actors.consumer import Consumer
-        except ImportError:
+        if not self.consumer_market:
             return {}
 
-        consumer_data = {
-            "subscriptions": {},
-            "satisfaction": {},
-            "switches": 0,
-        }
+        # Observe: update beliefs from leaderboard (use per-benchmark if available)
+        per_bm_scores = self.evaluator.get_per_benchmark_scores(round_num)
+        if per_bm_scores:
+            self.consumer_market.observe_per_benchmark(
+                leaderboard, per_bm_scores, media_coverage, round_num
+            )
+        else:
+            self.consumer_market.observe(leaderboard, media_coverage, round_num)
 
-        for consumer in self.consumers:
-            if not isinstance(consumer, Consumer):
-                continue
+        # Compute satisfaction from ground truth
+        self.consumer_market.compute_satisfaction(self.ground_truth)
 
-            # Consumer observes leaderboard
-            consumer.observe(leaderboard, round_num)
+        # Compute switching
+        switching_rate = self.consumer_market.compute_switching()
 
-            # Consumer reflects on experience
-            consumer.reflect()
-
-            # Consumer plans subscription decision
-            old_subscription = consumer.private_state.current_subscription
-            consumer.plan()
-
-            # Consumer executes subscription
-            consumer.execute()
-
-            # Track switches and tenure
-            new_subscription = consumer.private_state.current_subscription
-            if old_subscription != new_subscription:
-                consumer_data["switches"] += 1
-                consumer.private_state.rounds_with_provider = 0
-            elif new_subscription:
-                consumer.private_state.rounds_with_provider += 1
-
-            # Compute actual satisfaction based on ground truth
-            if new_subscription and new_subscription in self.ground_truth:
-                provider_gt = self.ground_truth[new_subscription]
-                if isinstance(provider_gt, ProviderGroundTruth):
-                    # Satisfaction based on true capability vs expectations
-                    consumer_gt = self.ground_truth.get(consumer.name)
-                    if isinstance(consumer_gt, ConsumerGroundTruth):
-                        # True satisfaction = how well model serves consumer
-                        true_satisfaction = provider_gt.true_capability
-                        consumer_gt.true_satisfaction = true_satisfaction
-
-                        # Feed satisfaction back to consumer so they can
-                        # reflect on it and potentially switch next round
-                        consumer.receive_satisfaction(true_satisfaction)
-
-            consumer_data["subscriptions"][consumer.name] = new_subscription
-            consumer_gt = self.ground_truth.get(consumer.name)
-            if isinstance(consumer_gt, ConsumerGroundTruth):
-                consumer_data["satisfaction"][consumer.name] = consumer_gt.true_satisfaction
-
-        # Aggregate statistics
-        satisfactions = list(consumer_data["satisfaction"].values())
-        if satisfactions:
-            consumer_data["avg_satisfaction"] = sum(satisfactions) / len(satisfactions)
-            consumer_data["min_satisfaction"] = min(satisfactions)
+        # Get consumer data
+        consumer_data = self.consumer_market.get_consumer_data()
+        consumer_data["switching_rate"] = switching_rate
 
         return consumer_data
 
@@ -714,6 +714,7 @@ class EvalEcosystemSimulation:
         leaderboard: list,
         consumer_data: dict,
         round_num: int,
+        media_coverage: Optional[dict] = None,
     ) -> dict:
         """
         Run policymaker actions for the round.
@@ -722,6 +723,7 @@ class EvalEcosystemSimulation:
             leaderboard: Current leaderboard
             consumer_data: Consumer data from this round
             round_num: Current round number
+            media_coverage: Optional media coverage dict
 
         Returns:
             Dict with policymaker data for this round
@@ -746,6 +748,7 @@ class EvalEcosystemSimulation:
                 consumer_satisfaction=consumer_data.get("avg_satisfaction"),
                 validity_correlation=self.evaluator.compute_validity_correlation(),
                 round_num=round_num,
+                media_coverage=media_coverage,
             )
 
             # Policymaker reflects on observations
@@ -771,11 +774,9 @@ class EvalEcosystemSimulation:
 
                 elif intervention_type == "public_warning":
                     # Reduce consumer leaderboard_trust temporarily
-                    for consumer in self.consumers:
-                        try:
-                            consumer.private_state.leaderboard_trust *= 0.9
-                        except AttributeError:
-                            pass
+                    if self.consumer_market:
+                        for seg in self.consumer_market.segments:
+                            seg.leaderboard_trust *= 0.9
 
                 elif intervention_type == "investigation":
                     # Increases observation sensitivity - risk beliefs update faster next round
@@ -807,6 +808,7 @@ class EvalEcosystemSimulation:
         consumer_data: dict,
         policymaker_data: dict,
         round_num: int,
+        media_coverage: Optional[dict] = None,
     ) -> dict:
         """
         Run funder actions for the round.
@@ -816,6 +818,7 @@ class EvalEcosystemSimulation:
             consumer_data: Consumer data from this round
             policymaker_data: Policymaker data from this round
             round_num: Current round number
+            media_coverage: Optional media coverage dict
 
         Returns:
             Dict with funder data for this round
@@ -843,6 +846,7 @@ class EvalEcosystemSimulation:
                 consumer_data=consumer_data,
                 policymaker_data=policymaker_data,
                 round_num=round_num,
+                media_coverage=media_coverage,
             )
 
             # Funder reflects on observations
@@ -939,7 +943,17 @@ class EvalEcosystemSimulation:
         if "consumer_data" in round_data:
             cd = round_data["consumer_data"]
             if "avg_satisfaction" in cd:
-                print(f"  Consumer Satisfaction: {cd['avg_satisfaction']:.2f} avg, {cd['switches']} switches")
+                switching = cd.get("switching_rate", 0)
+                print(f"  Consumer Satisfaction: {cd['avg_satisfaction']:.2f} avg, switching_rate={switching:.1%}")
+
+        # Print media summary if present
+        if "media_data" in round_data:
+            md = round_data["media_data"]
+            headlines = md.get("headlines", [])
+            if headlines:
+                print(f"  [MEDIA] {len(headlines)} headline(s), sentiment={md.get('sentiment', 0):.2f}")
+                for h in headlines[:3]:
+                    print(f"    - {h}")
 
         # Print policymaker summary if present
         if "policymaker_data" in round_data:
@@ -994,17 +1008,16 @@ class EvalEcosystemSimulation:
                     )
 
         # Consumer summary if present
-        if self.consumers and self.history:
+        if self.consumer_market and self.history:
             final = self.history[-1]
             if "consumer_data" in final:
                 cd = final["consumer_data"]
                 print(f"\nFinal Consumer State:")
                 print(f"  Average Satisfaction: {cd.get('avg_satisfaction', 'N/A'):.2f}")
-                total_switches = sum(
-                    h.get("consumer_data", {}).get("switches", 0)
-                    for h in self.history
-                )
-                print(f"  Total Subscription Switches: {total_switches}")
+                if "market_shares" in cd:
+                    print(f"  Market Shares:")
+                    for provider, share in cd["market_shares"].items():
+                        print(f"    {provider}: {share:.1%}")
 
         # Funder summary if present
         if self.funders and self.history:
@@ -1041,6 +1054,10 @@ class EvalEcosystemSimulation:
             ground_truth_data[name] = gt.to_dict()
         with open(f"{output_dir}/ground_truth.json", "w") as f:
             json.dump(ground_truth_data, f, indent=2)
+
+        # Save consumer market if present
+        if self.consumer_market:
+            self.consumer_market.save(f"{output_dir}/consumer_market")
 
         # Save evaluator
         self.evaluator.save(f"{output_dir}/evaluator.json")
@@ -1088,8 +1105,8 @@ class EvalEcosystemSimulation:
                     h.get("consumer_data", {}).get("avg_satisfaction")
                     for h in self.history
                 ],
-                "switches": [
-                    h.get("consumer_data", {}).get("switches", 0)
+                "switching_rate": [
+                    h.get("consumer_data", {}).get("switching_rate", 0)
                     for h in self.history
                 ],
             }

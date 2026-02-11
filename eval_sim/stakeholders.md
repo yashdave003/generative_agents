@@ -11,9 +11,10 @@ This document describes (1) the conceptual stakeholders in the AI evaluation eco
 | `run_llm_now.py` | CLI-driven quick experiment runner — parameterized via command-line flags (e.g. `python run_llm_now.py -r 5 -p ollama -e --funders`) |
 | `actors/model_provider.py` | ModelProvider actor with plan/observe/reflect/execute cycle |
 | `actors/evaluator.py` | Evaluator, Benchmark, Regulation classes |
-| `actors/consumer.py` | Consumer actor with subscription decisions |
-| `actors/policymaker.py` | Policymaker with graduated interventions |
-| `actors/funder.py` | Funder actor (VC, gov, foundation types) |
+| `actors/consumer.py` | ConsumerMarket with market segments (archetype × use-case), proportional switching |
+| `actors/policymaker.py` | Policymaker with graduated interventions, media-aware |
+| `actors/funder.py` | Funder actor (VC, gov, foundation types), media-aware |
+| `actors/media.py` | Media actor (TechPress) — observes public events, publishes coverage influencing downstream actors |
 | `visibility.py` | State classes: PublicState, PrivateState, GroundTruth |
 | `llm.py` | Multi-provider LLM integration (OpenAI, Anthropic, Ollama, Gemini) and prompt templates |
 | `plotting.py` | Visualization dashboards (provider, consumer, policymaker, evaluator, funder, summary) |
@@ -201,26 +202,22 @@ This section clarifies which stakeholders are implemented in the simulation.
 
 | Stakeholder | Status | Notes |
 |-------------|--------|-------|
-| Individual Consumer | **Implemented** | `actors/consumer.py` |
-| Organizational Consumer | Not implemented | Could extend Consumer with longer decision cycles |
-| Policymaker | **Implemented** | `actors/policymaker.py` |
-| Model Provider | **Implemented** | `actors/model_provider.py` |
-| Evaluation Provider | **Implemented** | Active benchmark evolution: gaming-pressure-driven validity decay and exploitability growth |
-| Funder | **Implemented** | `actors/funder.py` - VC, Government, Foundation types |
+| Individual Consumer | **Implemented** (as market segments) | `actors/consumer.py` — ConsumerMarket with archetype × use-case segments |
+| Organizational Consumer | Not implemented | Could extend ConsumerMarket with institutional segments |
+| Policymaker | **Implemented** | `actors/policymaker.py` — media-aware |
+| Model Provider | **Implemented** | `actors/model_provider.py` — per-provider visibility |
+| Evaluation Provider | **Implemented** | Active benchmark evolution + mid-simulation benchmark introduction |
+| Funder | **Implemented** | `actors/funder.py` — VC, Government, Foundation types; media-aware |
+| Media | **Implemented** | `actors/media.py` — TechPress outlet; publishes coverage influencing downstream actors |
 
 ### Evaluator Behavior (Current)
-The Evaluator is now **active**: benchmarks degrade in validity and grow in exploitability in proportion to aggregate evaluation engineering investment (gaming pressure). This creates the core Goodhart's Law feedback loop where benchmark optimization erodes the very signal the benchmark is meant to provide.
+The Evaluator is **active** in two ways:
+1. **Benchmark evolution**: Benchmarks degrade in validity and grow in exploitability in proportion to aggregate evaluation engineering investment (gaming pressure). This creates the core Goodhart's Law feedback loop.
+2. **Benchmark introduction**: The evaluator can introduce new benchmarks mid-simulation when existing benchmarks become unreliable (validity < 0.4) or periodically (every 15 rounds). New benchmarks start with high validity (0.85) and low exploitability (0.15), resetting the measurement quality. Subject to an 8-round cooldown and a maximum of 6 total benchmarks.
 
 ### Future Extensions
 - **Organizational Consumer**: Longer decision timelines, compliance constraints
-
-### TODO / Known Issues
-
-| # | Priority | Area | Issue | Details |
-|---|----------|------|-------|---------|
-| 1 | ~~**High**~~ **Fixed** | Consumers | ~~Consumers are too passive / unrealistic~~ | **Fixed.** Three bugs: (a) `receive_satisfaction()` was never called — consumers had empty satisfaction history and could never trigger switching; (b) switching thresholds were too high for realistic gaming gaps; (c) only dissatisfaction-driven switching existed, but with heuristic providers scores are typically *below* true capability, so the gap is negative. **Changes:** called `receive_satisfaction()` in `simulation.py:_run_consumer_round`, lowered archetype thresholds (experience-driven: 0.05-0.10, leaderboard follower: 0.12-0.20, cautious: 0.20-0.30), and added opportunity-driven switching trigger in `consumer.py:_plan_heuristic` that fires when a better alternative's blended score exceeds the current provider's by more than `switching_cost + tenure_bonus`. Verified: 30 switches over 50 heuristic rounds with active market churn in later rounds as benchmark degradation increases score volatility. |
-| 2 | ~~**Medium**~~ **Fixed** | Logging | ~~LLM thinking traces missing for non-provider actors~~ | **Fixed.** All actor types now capture reasoning traces in round data (`actor_traces` field). **Changes:** (a) `simulation.py:run_round` collects `reason`/`reasoning` from provider, consumer, policymaker, and funder memory entries; (b) `funder.py:_plan_heuristic` now records a `reason` summary in its planning memory; (c) `game_log.py:record_round` copies `actor_traces` into its records; (d) `game_log.py:_format_round` displays provider reasoning and non-provider reasoning in separate sections, filtering out routine "stay"/"no_action" entries to keep the log readable. Backwards-compatible `llm_traces` field retained for provider LLM mode traces. |
-| 3 | ~~**Medium**~~ **Fixed** | Plotting | ~~Multiple plotting bugs~~ | **Fixed.** (a) **Benchmark validity x-axis**: `compute_rolling_correlation` was using array indices (`i-1`) instead of actual round numbers (`history[i-1]["round"]`); fixed to use real round numbers. (b) **True vs Believed Capability legend**: was using gray `mpatches.Patch` rectangles that don't convey line style; replaced with `mlines.Line2D` entries showing per-provider colors plus solid/dashed style key, in both `plot_provider_dashboard` and `plot_summary_dashboard`. (c) **Market share graph**: was flat due to consumer switching bug #1 (now fixed); verified it shows movement with the consumer fix. |
+- **Multi-outlet Media**: Multiple media outlets with different editorial biases and reach
 
 ---
 
@@ -237,16 +234,18 @@ A fundamental tension exists between what we want to measure (the **construct**,
 Observed benchmark scores are generated as:
 
 ```
-score ~ Normal(α × true_capability + β × evaluation_engineering × exploitability, σ²)
+score ~ Normal(true_capability + evaluation_engineering × exploitability, (σ/√α)²)
 ```
 
 Where:
-- `α` (validity): How well the benchmark measures the true construct (0-1)
-- `β` (exploitability): Property of the benchmark - how susceptible to optimization (0-1)
+- `α` (validity): Measurement precision — higher validity = lower noise (0-1)
+- `exploitability`: Property of the benchmark — how much eval engineering inflates scores (0-1)
 - `evaluation_engineering`: Provider's investment in benchmark-specific optimization (0-1)
-- `σ²` (noise): Irreducible variance in evaluation
+- `σ` (noise_level): Base standard deviation of score noise
+- Gaming (`eval_engineering × exploitability`) inflates scores **above** true capability
+- Validity controls noise magnitude, not signal scaling
 
-**Key insight:** Providers don't directly observe `α`, `β`, or `exploitability`. They only see realized scores and must *infer* these properties. "Gaming" is not an explicit choice—it emerges from rational investment in evaluation engineering.
+**Key insight:** Providers don't directly observe `α` or `exploitability`. They only see realized scores and must *infer* these properties. "Gaming" is not an explicit choice—it emerges from rational investment in evaluation engineering. The resulting score inflation (score > true capability) is what creates consumer disappointment and drives the Goodhart feedback loop.
 
 ### Visibility System
 The simulation enforces strict information boundaries:
@@ -308,63 +307,110 @@ Providers have strategic profiles influencing decision-making:
 - `strategy_profile`: Natural language description (e.g., "aggressive competitor" vs. "quality-focused")
 - `innate_traits`: Core tendencies (e.g., "risk-tolerant", "reputation-conscious")
 
+### Per-Provider Visibility (Ecosystem Context)
+Providers receive a filtered view of the ecosystem — they see only their **own** consumer satisfaction and market share, not competitors'. This is passed via `_get_provider_ecosystem_context(provider_name)`:
+
+| Signal | Source | Description |
+|--------|--------|-------------|
+| `consumer_satisfaction` | `consumer_data.provider_satisfaction[self]` | Own customer satisfaction only |
+| `own_market_share` | `consumer_data.market_shares[self]` | Own market share proportion |
+| `regulatory_pressure` | `policymaker_data.interventions` | Public regulatory actions (visible to all) |
+
 ### Cognitive Loop (per round)
 1. **Observe**: See published scores (own and competitors')
 2. **Retrieve**: Recall relevant past experiences (what investments led to what outcomes)
 3. **Reflect**: Update beliefs about own capability and benchmark exploitability
-4. **Plan**: Decide investment portfolio allocation (LLM-driven or heuristic)
+4. **Plan**: Decide investment portfolio allocation (LLM-driven or heuristic), informed by per-provider ecosystem context
 5. **Execute**: Apply portfolio; true_capability updates based on research/training investments
 
 ---
 
-## Simulated Actor: Consumer
+## Simulated Actor: Consumer Market
 
-**Purpose:** Represents end users who choose which model to subscribe to based on leaderboard rankings and actual experience.
+**Purpose:** Represents the aggregate consumer market as a collection of market segments, each combining a **use-case profile** (what the consumer needs) with a **behavioral archetype** (how the consumer decides). Switching is proportional within segments rather than binary per-individual.
 
-### State Variables
+### Data Model
 
-#### Public State (visible to all)
+#### Use-Case Profiles (10 available, configurable subset)
+Each profile defines benchmark preferences — which capabilities matter most:
+
+| Profile | Key Benchmark Preferences |
+|---------|--------------------------|
+| `software_dev` | coding: 0.7, reasoning: 0.2, writing: 0.1 |
+| `content_writer` | writing: 0.7, reasoning: 0.2, coding: 0.1 |
+| `legal` | reasoning: 0.5, writing: 0.4, safety: 0.1 |
+| `healthcare` | safety: 0.5, reasoning: 0.3, writing: 0.2 |
+| `finance` | reasoning: 0.5, safety: 0.3, coding: 0.2 |
+| `educator` | writing: 0.4, reasoning: 0.4, safety: 0.2 |
+| `customer_service` | writing: 0.6, reasoning: 0.3, safety: 0.1 |
+| `researcher` | reasoning: 0.4, coding: 0.4, writing: 0.2 |
+| `creative` | writing: 0.6, reasoning: 0.2, coding: 0.2 |
+| `marketing` | writing: 0.5, reasoning: 0.3, coding: 0.2 |
+
+Preference categories are mapped to actual benchmark names via substring matching (e.g., "coding" matches "coding_bench"). Unmatched benchmarks receive a small default weight (0.1). Weights are re-resolved when new benchmarks are introduced mid-simulation.
+
+#### Behavioral Archetypes (3)
+
+| Archetype | `leaderboard_trust` | `switching_cost` | `switching_threshold` |
+|-----------|---------------------|-------------------|-----------------------|
+| `leaderboard_follower` | 0.85 | 0.05 | 0.15 |
+| `experience_driven` | 0.35 | 0.08 | 0.08 |
+| `cautious` | 0.50 | 0.20 | 0.25 |
+
+#### MarketSegment (archetype × use_case)
+Each segment (e.g., `"software_dev_leaderboard_follower"`) tracks:
+
 | Variable | Description |
 |----------|-------------|
-| `name` | Unique identifier |
-| `current_subscription` | Currently subscribed provider (or None) |
+| `name` | Segment identifier (use_case + archetype) |
+| `market_fraction` | Proportion of total market this segment represents |
+| `benchmark_weights` | `{benchmark_name: weight}` — resolved from use-case preferences |
+| `leaderboard_trust` | From archetype — how much to trust leaderboard vs. experience |
+| `switching_cost` | From archetype — friction for switching providers |
+| `switching_threshold` | From archetype — gap required to trigger switching |
+| `provider_shares` | `{provider: proportion}` — sums to 1.0 within segment |
+| `believed_quality` | `{provider: float}` — believed quality per provider |
+| `satisfaction` | `{provider: float}` — per-provider satisfaction in this segment |
+| `tenure` | `{provider: int}` — average rounds subscribed per provider |
 
-#### Private State (visible to self only)
-| Variable | Description |
-|----------|-------------|
-| `believed_model_quality` | Dict of {provider: quality_estimate} |
-| `satisfaction_history` | List of past satisfaction scores |
-| `use_cases` | Types of tasks the consumer needs |
-| `budget` | Available resources |
-| `switching_threshold` | How much disappointment triggers a switch |
-| `switching_cost` | Additional switching friction (0-1) |
-| `leaderboard_trust` | How much to trust leaderboard vs own experience (0-1) |
-| `rounds_with_provider` | Tenure with current provider |
+### ConsumerMarket Class
 
-#### Ground Truth (simulation only)
-| Variable | Description |
-|----------|-------------|
-| `true_satisfaction` | Actual satisfaction (based on true capability, not score) |
-| `true_quality_sensitivity` | How much quality affects satisfaction |
+The `ConsumerMarket` manages all segments and provides aggregate consumer data.
 
-### Cognitive Loop (per round)
-1. **Observe**: See leaderboard rankings
-2. **Reflect**: Update quality beliefs based on actual experience vs. expectations
-3. **Plan**: Decide whether to switch providers
-4. **Execute**: Subscribe/unsubscribe
+**Key methods:**
+- `resolve_benchmark_weights(benchmark_names)` — maps use-case preference categories to actual benchmark names
+- `observe(leaderboard, media_coverage, round_num)` — updates beliefs from composite leaderboard scores
+- `observe_per_benchmark(leaderboard, per_bm_scores, media_coverage, round_num)` — updates beliefs using per-benchmark scores weighted by segment preferences
+- `compute_satisfaction(ground_truth)` — computes per-segment per-provider satisfaction from true capabilities
+- `compute_switching()` — proportional switching within each segment (returns market-wide switching rate)
+- `get_consumer_data()` — returns aggregate `consumer_data` dict for downstream actors
 
-### Consumer Heterogeneity
-Consumers are instantiated across 3 archetypes with blended scoring:
-- **Leaderboard follower**: Relies heavily on benchmark rankings to choose providers (high `leaderboard_trust`)
-- **Experience-driven**: Prioritizes own satisfaction history over leaderboard signals (low `leaderboard_trust`)
-- **Cautious/sticky**: High `switching_cost` and inertia; stays with current provider unless strongly disappointed
+### Proportional Switching (Sigmoid-Based)
+Switching within each segment is probabilistic, not binary:
+
+```
+switch_probability = 1 / (1 + exp(-steepness × (gap - threshold)))
+```
+
+Two triggers:
+1. **Dissatisfaction**: `gap = believed_quality[current] - satisfaction[current]` — expectations exceed experience
+2. **Opportunity**: `gap = believed_quality[best_alt] - believed_quality[current] - switching_cost` — a better alternative exists
+
+The switching probability determines what fraction of the segment's share with a provider moves to the best alternative. Tenure bonus (`0.02 × tenure`) adds inertia for loyal users.
+
+### Media Influence on Consumers
+When media coverage is available:
+- Positive sentiment (`> 0`) increases belief update rate (faster adoption of leaderboard signals)
+- Negative sentiment (`< 0`) decreases it
+- Risk signals reduce `leaderboard_trust` by 5% for leaderboard-follower segments
+- Provider attention modulates brand awareness during switching decisions
 
 ### Key Dynamic: The Satisfaction Gap
 When a provider games the benchmark:
-- High score attracts consumers
-- Low true capability leads to poor actual experience
-- Disappointed consumers switch providers
-- This creates demand-side pressure against gaming
+- High scores attract market share (especially from leaderboard followers)
+- Low true capability leads to poor satisfaction in use-case-relevant dimensions
+- Disappointed segments proportionally shift market share away
+- This creates demand-side pressure against gaming, differentiated by use case
 
 ---
 
@@ -406,8 +452,8 @@ When a provider games the benchmark:
 Interventions follow a **graduated escalation** model and have a **3-round cooldown** between actions.
 
 ### Cognitive Loop (per round)
-1. **Observe**: See leaderboard, consumer satisfaction, validity correlation
-2. **Reflect**: Update risk assessments
+1. **Observe**: See leaderboard, consumer satisfaction, validity correlation, media coverage
+2. **Reflect**: Update risk assessments (media risk_signals bump gaming_risk beliefs; critical sentiment bumps validity_degradation_risk)
 3. **Plan**: Decide whether to intervene (respecting cooldown and escalation requirements)
 4. **Execute**: Issue regulations
 
@@ -467,17 +513,78 @@ Funders can only see public signals and must **infer** provider quality:
 | Signal | Source | Interpretation |
 |--------|--------|----------------|
 | Leaderboard score | `leaderboard` | Raw performance |
-| Consumer satisfaction | `consumer_data.avg_satisfaction` | True quality proxy |
+| Consumer satisfaction | `consumer_data.provider_satisfaction` | Per-provider true quality proxy |
 | **Satisfaction gap** | `score - satisfaction` | Gaming indicator (high gap = gaming) |
 | Regulatory interventions | `policymaker_data.interventions` | Safety/compliance risk |
+| Media coverage | `media_data` | Sentiment, provider attention, and risk signals |
 
-This creates realistic information asymmetry - funders cannot see provider strategies directly.
+This creates realistic information asymmetry — funders cannot see provider strategies directly. Media acts as an amplifying intermediary: high media attention combined with risk signals increases the funder's `believed_gaming` estimate for that provider.
 
 ### Cognitive Loop (per round)
-1. **Observe**: See leaderboard, consumer satisfaction, regulatory interventions
-2. **Reflect**: Update beliefs about provider quality and gaming levels
+1. **Observe**: See leaderboard, consumer satisfaction, regulatory interventions, media coverage
+2. **Reflect**: Update beliefs about provider quality and gaming levels (media attention + risk signals can increase believed_gaming for specific providers)
 3. **Plan**: Decide funding allocations based on funder type strategy
 4. **Execute**: Deploy capital, update active_funding
+
+---
+
+## Simulated Actor: Media
+
+**Purpose:** Information intermediary that observes public events and publishes coverage influencing consumer beliefs, policymaker risk perception, and funder sentiment. Currently a single outlet (TechPress); designed for future multi-outlet scaling with different editorial biases.
+
+### State Variables
+
+#### Public State (visible to all)
+| Variable | Description |
+|----------|-------------|
+| `name` | Outlet name (e.g., "TechPress") |
+| `coverage` | Published coverage for current round (headlines, sentiment, attention) |
+
+#### Private State (visible to self only)
+| Variable | Description |
+|----------|-------------|
+| `editorial_bias` | -1 (critical) to +1 (tech-optimistic), default 0.0 |
+| `amplification` | How much media amplifies signals (1.0 = neutral) |
+| `coverage_history` | All past coverage outputs |
+
+### What Makes News
+The media detects newsworthy events from public data:
+
+| Event Type | Trigger | Sentiment Effect |
+|------------|---------|------------------|
+| Leader change | New provider at top of leaderboard | +0.2 (exciting) |
+| Large score jump | Score change > 0.05 in a round | +0.1 (surge) or -0.1 (drop) |
+| Regulatory action | Any policymaker intervention | -0.15 (sobering) |
+| New benchmark | Evaluator introduces a benchmark | +0.1 (positive innovation) |
+| Low validity | Benchmark validity < 0.5 | -0.1 (risk signal) |
+| Score convergence | Score range < 0.03 | -0.05 (benchmark meaningfulness concern) |
+
+### Coverage Output (`MediaCoverage`)
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `headlines` | list[str] | Detected newsworthy events |
+| `sentiment` | float | -1 to +1, market sentiment after editorial bias and amplification |
+| `provider_attention` | dict | `{provider: 0-1}` — how much coverage each provider gets |
+| `risk_signals` | list[str] | Flagged concerns (e.g., "regulatory_investigation", "low_validity_coding_bench") |
+| `benchmark_attention` | dict | `{benchmark: 0-1}` — coverage of specific benchmarks |
+
+### How Media Influences Downstream Actors
+
+| Actor | Influence Mechanism |
+|-------|---------------------|
+| **Consumers** | Sentiment modulates belief update rate; risk signals reduce leaderboard_trust for follower segments; provider attention affects brand awareness during switching |
+| **Policymakers** | Risk signals bump gaming_risk beliefs; critical sentiment (< -0.3) bumps validity_degradation_risk |
+| **Funders** | High provider attention + risk signals increase believed_gaming for that provider |
+
+### Simulation Round Order
+Media publishes **after** evaluator scoring but **before** consumer/policymaker/funder rounds:
+1. Providers plan + execute
+2. Evaluator scores + benchmark evolution + benchmark introduction
+3. **Media observes + publishes**
+4. Consumers observe (with media coverage)
+5. Policymakers observe (with media coverage)
+6. Funders observe (with media coverage)
 
 ---
 
@@ -500,12 +607,26 @@ This creates realistic information asymmetry - funders cannot see provider strat
 The simulation supports multiple benchmarks with different properties:
 ```python
 benchmarks = [
-    {"name": "capability_bench", "validity": 0.8, "exploitability": 0.3, "weight": 0.6},
-    {"name": "safety_bench", "validity": 0.6, "exploitability": 0.5, "weight": 0.4},
+    {"name": "coding_bench", "validity": 0.85, "exploitability": 0.25, "weight": 0.5},
+    {"name": "reasoning_bench", "validity": 0.7, "exploitability": 0.45, "weight": 0.5},
 ]
 ```
 
 Composite score = weighted average of individual benchmark scores.
+
+### Benchmark Introduction
+The evaluator can introduce new benchmarks mid-simulation:
+
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `benchmark_introduction_cooldown` | 8 rounds | Minimum rounds between introductions |
+| `max_benchmarks` | 6 | Maximum total benchmarks allowed |
+
+**Trigger conditions** (any one):
+- Any existing benchmark validity drops below 0.4
+- Periodic innovation: every 15 rounds
+
+New benchmarks are created with high validity (0.85) and low exploitability (0.15), effectively resetting measurement quality. Their weight equals the average of existing benchmark weights. Consumer market benchmark weights are automatically re-resolved when new benchmarks appear.
 
 ---
 
@@ -545,10 +666,29 @@ Each round records the following data:
 ### Consumer Metrics (if enabled)
 | Metric | Type | Description |
 |--------|------|-------------|
-| `consumer_data.subscriptions` | dict | `{consumer_name: provider_name}` |
-| `consumer_data.satisfaction` | dict | `{consumer_name: satisfaction_score}` |
-| `consumer_data.avg_satisfaction` | float | Mean satisfaction across all consumers |
-| `consumer_data.switches` | int | Number of subscription changes this round |
+| `consumer_data.market_shares` | dict | `{provider_name: proportion}` — aggregate market share across all segments |
+| `consumer_data.provider_satisfaction` | dict | `{provider_name: satisfaction}` — per-provider average satisfaction |
+| `consumer_data.avg_satisfaction` | float | Market-wide average satisfaction |
+| `consumer_data.switching_rate` | float | Fraction of total market that switched providers this round |
+| `consumer_data.segment_data` | dict | `{segment_name: {provider_shares, satisfaction, ...}}` — per-segment breakdown |
+
+### Media Metrics (if enabled)
+| Metric | Type | Description |
+|--------|------|-------------|
+| `media_data.headlines` | list | Newsworthy events detected this round |
+| `media_data.sentiment` | float | Market sentiment (-1 to +1) |
+| `media_data.provider_attention` | dict | `{provider_name: 0-1}` — coverage attention per provider |
+| `media_data.risk_signals` | list | Flagged risk concerns |
+| `media_data.benchmark_attention` | dict | `{benchmark_name: 0-1}` — benchmark-specific coverage |
+
+### Benchmark Introduction Metrics
+| Metric | Type | Description |
+|--------|------|-------------|
+| `new_benchmark` | dict | Present only when a new benchmark is introduced |
+| `new_benchmark.name` | str | Name of the new benchmark (e.g., "benchmark_r12") |
+| `new_benchmark.validity` | float | Initial validity (typically 0.85) |
+| `new_benchmark.exploitability` | float | Initial exploitability (typically 0.15) |
+| `new_benchmark.trigger` | str | What triggered the introduction (e.g., "low_validity" or "periodic") |
 
 ### Policymaker Metrics (if enabled)
 | Metric | Type | Description |
@@ -605,10 +745,11 @@ Generated at simulation end:
 ### Consumer Summary (if enabled)
 | Metric | Type | Description |
 |--------|------|-------------|
-| `consumer_summary.n_consumers` | int | Number of consumers |
+| `consumer_summary.n_segments` | int | Number of market segments |
 | `consumer_summary.mean_satisfaction` | float | Average satisfaction across all rounds |
 | `consumer_summary.final_satisfaction` | float | Satisfaction at last round |
-| `consumer_summary.total_subscription_switches` | int | Total provider switches across simulation |
+| `consumer_summary.avg_switching_rate` | float | Average switching rate across all rounds |
+| `consumer_summary.final_market_shares` | dict | `{provider: proportion}` at last round |
 
 ### Policymaker Summary (if enabled)
 | Metric | Type | Description |
@@ -639,9 +780,12 @@ These metrics are most useful for understanding gaming dynamics:
 | **mean_evaluation_engineering** | Direct measure of gaming effort |
 | **capability_growth** | Did real R&D investment pay off? |
 | **avg_satisfaction** | Consumer welfare; low when gaming is high |
-| **total_subscription_switches** | Market instability from disappointment |
+| **switching_rate** | Market instability from disappointment (proportion of market that switches) |
+| **market_shares** | Provider dominance; shifts reveal consumer response to gaming |
+| **media_sentiment** | Market mood; critical sentiment can trigger regulatory and funder reactions |
 | **funding_multipliers** | Capital advantage; higher funding = faster capability growth |
 | **funding vs capability growth** | Did funding predict/cause capability improvement? |
+| **new_benchmark introductions** | Evaluator response to measurement degradation |
 
 ---
 
@@ -672,23 +816,25 @@ experiments/exp_XXX_name/
 ├── metadata.json       # Description, tags, timestamp, git commit, seed
 ├── config.json         # Full configuration (for reproducibility)
 ├── history.json        # Round-by-round data (see Per-Round Metrics)
+├── rounds.jsonl        # Incremental round data (one JSON line per round)
 ├── summary.json        # Final metrics (see Summary Metrics)
 ├── ground_truth.json   # True capability values for all actors
 ├── game_log.md         # Human-readable narrative of the simulation
 ├── plots/              # Generated visualizations
-│   ├── simulation_overview.png
-│   ├── strategy_evolution.png
-│   ├── belief_accuracy.png
-│   ├── validity_over_time.png
-│   ├── consumer_satisfaction.png      # if consumers enabled
-│   ├── policymaker_interventions.png  # if policymakers enabled
-│   └── ecosystem_dashboard.png        # if consumers or policymakers enabled
+│   ├── provider_dashboard.png
+│   ├── evaluator_dashboard.png
+│   ├── consumer_dashboard.png         # if consumers enabled
+│   ├── policymaker_dashboard.png      # if policymakers enabled
+│   ├── funder_dashboard.png           # if funders enabled
+│   └── summary_dashboard.png
 ├── providers/          # Provider state snapshots
 │   └── <provider_name>/
-├── consumers/          # Consumer states (if enabled)
-│   └── <consumer_name>/
-└── policymakers/       # Policymaker states (if enabled)
-    └── <policymaker_name>/
+├── consumer_market/    # Consumer market state (if enabled)
+│   └── market.json
+├── policymakers/       # Policymaker states (if enabled)
+│   └── <policymaker_name>/
+└── funders/            # Funder states (if enabled)
+    └── <funder_name>/
 ```
 
 ## Experiment Index
@@ -723,10 +869,13 @@ All experiments are tracked in `experiments/index.json`:
 | `benchmarks` | list | None | Multi-benchmark config (overrides single benchmark) |
 | `rnd_efficiency` | float | 0.01 | Capability gain per unit R&D investment |
 | `llm_mode` | bool | False | Use LLM for planning (vs. heuristics) |
-| `enable_consumers` | bool | False | Enable consumer actors |
+| `benchmark_introduction_cooldown` | int | 8 | Minimum rounds between benchmark introductions |
+| `max_benchmarks` | int | 6 | Maximum total benchmarks allowed |
+| `enable_consumers` | bool | False | Enable consumer market |
 | `enable_policymakers` | bool | False | Enable policymaker actors |
 | `enable_funders` | bool | False | Enable funder actors |
-| `n_consumers` | int | 10 | Number of consumers |
+| `enable_media` | bool | False | Enable media actor (TechPress) |
+| `use_case_profiles` | list | None | Which use-case profiles to include (e.g., `["software_dev", "healthcare"]`); None = default 6 |
 | `n_policymakers` | int | 1 | Number of policymakers |
 | `n_funders` | int | 1 | Number of funders |
 | `capability_ceiling` | float | 1.0 | Maximum capability achievable |
@@ -782,10 +931,14 @@ The simulation is designed to investigate:
 4. **Strategy heterogeneity**: Do different personality types lead to different investment equilibria?
 5. **Capability vs. perception gap**: Do providers who invest more in research have lower scores but higher true capability?
 6. **Safety investment dynamics**: Under what conditions do providers invest in safety alignment?
-7. **Consumer welfare**: How does gaming affect end-user satisfaction?
-8. **Regulatory effectiveness**: Can policymaker interventions restore benchmark validity?
-9. **Funding dynamics**: Does capital flow to high-performers or low-gaming providers?
-10. **Funding as accelerator**: Does funding amplify existing dynamics (help winners win more)?
+7. **Consumer welfare**: How does gaming affect end-user satisfaction across different use cases?
+8. **Use-case differentiation**: Do different consumer segments (developers vs. healthcare) respond differently to gaming?
+9. **Regulatory effectiveness**: Can policymaker interventions restore benchmark validity?
+10. **Media amplification**: Does media coverage accelerate or dampen gaming dynamics?
+11. **Funding dynamics**: Does capital flow to high-performers or low-gaming providers?
+12. **Funding as accelerator**: Does funding amplify existing dynamics (help winners win more)?
+13. **Benchmark renewal**: Does introducing new benchmarks effectively reset gaming incentives?
+14. **Information cascades**: Do media headlines create herding behavior across consumers, funders, and policymakers?
 
 ---
 
@@ -795,21 +948,21 @@ The simulation is designed to investigate:
 eval_sim/
 ├── actors/
 │   ├── __init__.py
-│   ├── model_provider.py    # ModelProvider class
-│   ├── evaluator.py         # Evaluator class (active benchmark evolution)
-│   ├── consumer.py          # Consumer class
-│   ├── policymaker.py       # Policymaker class
-│   └── funder.py            # Funder class (VC, Gov, Foundation)
+│   ├── model_provider.py    # ModelProvider class (per-provider visibility)
+│   ├── evaluator.py         # Evaluator class (benchmark evolution + introduction)
+│   ├── consumer.py          # ConsumerMarket + MarketSegment (proportional switching)
+│   ├── policymaker.py       # Policymaker class (media-aware)
+│   ├── funder.py            # Funder class (VC, Gov, Foundation; media-aware)
+│   └── media.py             # Media actor (TechPress; coverage + influence)
 ├── visibility.py            # Visibility system (public/private/ground truth)
-├── simulation.py            # Main simulation loop
-├── llm.py                   # Multi-provider LLM integration (OpenAI, Anthropic, Ollama)
+├── simulation.py            # Main simulation loop, r4() precision utility
+├── llm.py                   # Multi-provider LLM integration (OpenAI, Anthropic, Ollama, Gemini)
 ├── experiment_logger.py     # Experiment logging and tracking
 ├── game_log.py              # Game log markdown generator
-├── plotting.py              # Visualization utilities
-├── run_experiments.py       # Script to run predefined experiments
-├── run_llm_now.py           # Quick test script
+├── plotting.py              # Visualization dashboards (market shares as proportions)
+├── run_experiment.py        # Editable experiment config file
+├── run_llm_now.py           # CLI-driven quick experiment runner
 ├── stakeholders.md          # This document
-├── IMPLEMENTATION_SUMMARY.md # Implementation notes
 ├── .env                     # API keys (not committed)
 └── experiments/             # Experiment results
     ├── index.json           # Experiment index

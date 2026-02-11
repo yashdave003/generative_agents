@@ -23,24 +23,28 @@ class Benchmark:
     Represents a benchmark with properties that determine scoring behavior.
 
     The scoring model with investment portfolio:
-        score ~ Normal(α × true_capability + β × eval_engineering × exploitability, σ²)
+        score ~ Normal(true_capability + eval_engineering × exploitability, (σ/√α)²)
 
     Where:
-    - α (validity): How well benchmark measures true capability
-    - β (exploitability): How much evaluation engineering inflates scores
+    - α (validity): Measurement precision — higher = lower noise (0-1)
+    - exploitability: How much evaluation engineering inflates scores (0-1)
     - eval_engineering: Provider's investment in benchmark-specific optimization
+    - σ (noise_level): Base noise standard deviation
+    - Gaming (eval_eng × exploitability) inflates scores ABOVE true capability
+    - Validity controls noise magnitude, not signal scaling
     """
     name: str = "default_benchmark"
 
-    # How well the benchmark measures true capability (0-1)
-    # Higher = benchmark is a better proxy for actual capability
+    # Measurement precision (0-1)
+    # Higher = less noise, benchmark more reliably measures true capability
+    # Lower = noisier scores, less discriminating between providers
     validity: float = 0.7
 
     # How much evaluation engineering affects scores (0-1)
     # Higher = easier to inflate scores through benchmark optimization
     exploitability: float = 0.5
 
-    # Standard deviation of score noise
+    # Base standard deviation of score noise (scaled by 1/√validity)
     noise_level: float = 0.1
 
     # Optional: decay of validity over time as providers adapt
@@ -97,8 +101,9 @@ class Evaluator:
     - Providers are scored on all benchmarks
     - Composite score can be computed as weighted average
 
-    In the initial implementation, the Evaluator is passive (doesn't adapt).
-    Future versions could have the Evaluator actively update benchmarks.
+    Scoring model:
+        score ~ Normal(true_capability + eval_engineering × exploitability, (σ/√α)²)
+    Gaming inflates scores above true capability. Validity controls noise precision.
     """
 
     def __init__(
@@ -115,9 +120,9 @@ class Evaluator:
 
         Args:
             benchmark_name: Name of the primary benchmark (ignored if benchmarks provided)
-            validity: α - how well benchmark measures true capability (0-1)
-            exploitability: β - how much eval engineering affects scores (0-1)
-            noise_level: σ - standard deviation of score noise
+            validity: α - measurement precision, controls noise (0-1)
+            exploitability: how much eval engineering inflates scores (0-1)
+            noise_level: σ - base standard deviation of score noise
             seed: Random seed for reproducibility
             benchmarks: Optional list of benchmark configs for multi-benchmark mode.
                        Each dict should have: name, validity, exploitability, noise_level, weight
@@ -172,6 +177,12 @@ class Evaluator:
         # Active regulations (from policymakers)
         self.active_regulations: list[Regulation] = []
 
+        # Benchmark introduction parameters
+        self.benchmark_introduction_cooldown: int = 8
+        self.last_introduction_round: int = -8  # allows first introduction immediately
+        self.max_benchmarks: int = 6
+        self.introduction_history: list[dict] = []  # [{round, benchmark_name, trigger}]
+
     def evaluate(
         self,
         true_capability: float,
@@ -182,7 +193,10 @@ class Evaluator:
         Generate a benchmark score for a model on a specific benchmark.
 
         The scoring model:
-            score ~ Normal(α × true_capability + β × eval_engineering × exploitability, σ²)
+            score ~ Normal(true_capability + eval_engineering × exploitability, (σ/√α)²)
+
+        Gaming (eval_engineering × exploitability) inflates scores above true capability.
+        Validity (α) controls noise — lower validity = noisier, less discriminating scores.
 
         Args:
             true_capability: The model's actual capability level (from ground truth)
@@ -195,18 +209,12 @@ class Evaluator:
         if benchmark is None:
             benchmark = self.benchmark
 
-        α = benchmark.validity
-        β = benchmark.exploitability
-        σ = benchmark.noise_level
+        # Expected score: true capability + gaming inflation
+        mean_score = true_capability + evaluation_engineering * benchmark.exploitability
 
-        # Expected score based on capability and evaluation engineering
-        mean_score = (
-            α * true_capability +
-            β * evaluation_engineering * benchmark.exploitability
-        )
-
-        # Add noise
-        score = self.rng.normal(mean_score, σ)
+        # Noise scaled by validity: lower validity = more noise
+        noise_std = benchmark.noise_level / np.sqrt(max(benchmark.validity, 0.05))
+        score = self.rng.normal(mean_score, noise_std)
 
         # Clamp to [0, 1] range
         score = max(0.0, min(1.0, score))
@@ -431,6 +439,70 @@ class Evaluator:
         # Keep primary benchmark reference in sync
         self.benchmark = self.benchmarks[0]
 
+    def consider_new_benchmark(self, round_num: int) -> Optional[Benchmark]:
+        """
+        Consider introducing a new benchmark based on ecosystem conditions.
+
+        Triggers:
+        - Any existing benchmark validity drops below 0.4 (degraded signal)
+        - Periodic innovation every 15 rounds
+
+        Constraints:
+        - 8-round cooldown between introductions
+        - Maximum of max_benchmarks total benchmarks
+
+        Returns:
+            New Benchmark if introduced, None otherwise
+        """
+        # Check constraints
+        if len(self.benchmarks) >= self.max_benchmarks:
+            return None
+        if round_num - self.last_introduction_round < self.benchmark_introduction_cooldown:
+            return None
+
+        # Check trigger conditions
+        trigger = None
+
+        # Trigger 1: Validity degradation
+        for bm in self.benchmarks:
+            if bm.validity < 0.4:
+                trigger = f"validity_decay:{bm.name}={bm.validity:.2f}"
+                break
+
+        # Trigger 2: Periodic innovation (every 15 rounds)
+        if trigger is None and round_num > 0 and round_num % 15 == 0:
+            trigger = f"periodic_innovation:round_{round_num}"
+
+        if trigger is None:
+            return None
+
+        # Create new benchmark with fresh properties
+        new_name = f"benchmark_r{round_num}"
+        new_bm = Benchmark(
+            name=new_name,
+            validity=0.85,
+            exploitability=0.15,
+            noise_level=0.08,
+            validity_decay_rate=self.benchmarks[0].validity_decay_rate,
+            exploitability_growth_rate=self.benchmarks[0].exploitability_growth_rate,
+        )
+
+        # Weight = average of existing benchmark weights
+        avg_weight = sum(self.benchmark_weights.values()) / len(self.benchmark_weights)
+        self.benchmarks.append(new_bm)
+        self.benchmark_weights[new_name] = avg_weight
+        self.benchmark_score_history[new_name] = []
+
+        # Record introduction
+        self.last_introduction_round = round_num
+        self.introduction_history.append({
+            "round": round_num,
+            "benchmark_name": new_name,
+            "trigger": trigger,
+        })
+
+        return new_bm
+
     def compute_validity_correlation(self) -> Optional[float]:
         """
         Compute correlation between scores and true capabilities across history.
@@ -542,6 +614,10 @@ class Evaluator:
             "benchmark_score_history": self.benchmark_score_history,
             "capability_history": self.capability_history,
             "current_round": self.current_round,
+            "benchmark_introduction_cooldown": self.benchmark_introduction_cooldown,
+            "last_introduction_round": self.last_introduction_round,
+            "max_benchmarks": self.max_benchmarks,
+            "introduction_history": self.introduction_history,
             "regulations": [
                 {
                     "name": r.name,
@@ -588,6 +664,12 @@ class Evaluator:
         # Load benchmark score history if present
         if "benchmark_score_history" in data:
             evaluator.benchmark_score_history = data["benchmark_score_history"]
+
+        # Load benchmark introduction state if present
+        evaluator.benchmark_introduction_cooldown = data.get("benchmark_introduction_cooldown", 8)
+        evaluator.last_introduction_round = data.get("last_introduction_round", -8)
+        evaluator.max_benchmarks = data.get("max_benchmarks", 6)
+        evaluator.introduction_history = data.get("introduction_history", [])
 
         # Load regulations if present
         if "regulations" in data:

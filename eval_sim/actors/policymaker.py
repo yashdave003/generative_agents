@@ -131,6 +131,7 @@ class Policymaker:
         consumer_satisfaction: Optional[float],
         validity_correlation: Optional[float],
         round_num: int,
+        media_coverage: Optional[dict] = None,
     ):
         """
         Observe the current ecosystem state.
@@ -140,6 +141,7 @@ class Policymaker:
             consumer_satisfaction: Average consumer satisfaction (0-1)
             validity_correlation: Correlation between scores and true capability
             round_num: Current simulation round
+            media_coverage: Optional media coverage dict with risk_signals, sentiment
         """
         self.public_state.current_round = round_num
 
@@ -181,6 +183,24 @@ class Policymaker:
                 self.private_state.risk_beliefs["consumer_harm_risk"] = max(
                     0.0,
                     self.private_state.risk_beliefs["consumer_harm_risk"] - 0.05
+                )
+
+        # Media coverage amplifies risk perception
+        if media_coverage:
+            risk_signals = media_coverage.get("risk_signals", [])
+            if risk_signals:
+                # Each risk signal nudges gaming/validity risk beliefs up
+                risk_bump = min(0.15, len(risk_signals) * 0.05)
+                self.private_state.risk_beliefs["gaming_risk"] = min(
+                    1.0, self.private_state.risk_beliefs["gaming_risk"] + risk_bump
+                )
+
+            # Critical media sentiment increases policymaker vigilance
+            sentiment = media_coverage.get("sentiment", 0.0)
+            if sentiment < -0.3:
+                self.private_state.risk_beliefs["validity_degradation_risk"] = min(
+                    1.0,
+                    self.private_state.risk_beliefs["validity_degradation_risk"] + 0.05,
                 )
 
         # Record observation
