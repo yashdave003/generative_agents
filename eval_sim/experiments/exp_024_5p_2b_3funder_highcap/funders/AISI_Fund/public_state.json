@@ -1,0 +1,46 @@
+{
+  "name": "AISI_Fund",
+  "current_round": 9,
+  "published_scores": [
+    [
+      0,
+      "Round 0: Funded Anthropic, OpenAI, DeepMind, Meta_AI, NovaMind"
+    ],
+    [
+      1,
+      "Round 1: Funded Anthropic, OpenAI, DeepMind, Meta_AI, NovaMind"
+    ],
+    [
+      2,
+      "Round 2: Funded OpenAI, DeepMind, NovaMind, Meta_AI"
+    ],
+    [
+      3,
+      "Round 3: Funded OpenAI, DeepMind, NovaMind, Meta_AI"
+    ],
+    [
+      4,
+      "Round 4: Funded OpenAI, DeepMind, Anthropic"
+    ],
+    [
+      5,
+      "Round 5: Funded OpenAI, DeepMind, Anthropic"
+    ],
+    [
+      6,
+      "Round 6: Funded OpenAI, DeepMind, Anthropic, Meta_AI"
+    ],
+    [
+      7,
+      "Round 7: Funded OpenAI, DeepMind, Anthropic, Meta_AI"
+    ],
+    [
+      8,
+      "Round 8: Funded OpenAI, DeepMind, Anthropic, Meta_AI, NovaMind"
+    ],
+    [
+      9,
+      "Round 9: Funded OpenAI, DeepMind, Anthropic, Meta_AI, NovaMind"
+    ]
+  ]
+}

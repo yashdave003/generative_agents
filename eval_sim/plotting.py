@@ -113,6 +113,24 @@ def compute_rolling_correlation(history: list, window_size: int = 5) -> tuple:
     return rounds_used, correlations
 
 
+def categorize_headline(headline: str) -> str:
+    """Classify a media headline into one of 7 categories via substring matching."""
+    hl = headline.lower()
+    if "takes the lead" in hl or "takes #1" in hl:
+        return "leader_change"
+    if "surges by" in hl:
+        return "score_surge"
+    if any(kw in hl for kw in ("investigation", "warning", "mandate", "audit")):
+        return "regulatory"
+    if "raises $" in hl:
+        return "funding"
+    if "surge in adoption" in hl or "turning away" in hl:
+        return "consumer"
+    if "benchmark" in hl or "validity" in hl:
+        return "benchmark"
+    return "other"
+
+
 # =============================================================================
 # Provider Dashboard
 # =============================================================================
@@ -271,7 +289,7 @@ def plot_consumer_dashboard(
     history: list,
     save_path: Optional[str] = None,
     show: bool = True,
-    figsize: tuple = (14, 10),
+    figsize: tuple = (20, 10),
 ) -> Optional[plt.Figure]:
     """
     Create a dashboard for Consumer actors.
@@ -301,7 +319,7 @@ def plot_consumer_dashboard(
 
     rounds = [h["round"] for h in consumer_rounds]
 
-    fig, axes = plt.subplots(2, 2, figsize=figsize)
+    fig, axes = plt.subplots(2, 3, figsize=figsize)
     fig.suptitle("Consumer Dashboard", fontsize=14, fontweight='bold')
 
     # --- Panel 1: Average Satisfaction ---
@@ -356,6 +374,45 @@ def plot_consumer_dashboard(
     ax4.plot(rounds, avg_satisfaction, 'k--', linewidth=1.5, alpha=0.5, label='Market Avg')
     ax4.set_ylim(0, 1)
     style_axis(ax4, "Per-Provider Satisfaction", "Round", "Satisfaction")
+
+    # --- Panel 5: Satisfaction Gap (Score - Satisfaction) ---
+    ax5 = axes[0, 2]
+    for provider in providers:
+        scores = [h["scores"][provider] for h in consumer_rounds]
+        prov_sats = [h["consumer_data"].get("provider_satisfaction", {}).get(provider, 0)
+                     for h in consumer_rounds]
+        gap = [s - sat for s, sat in zip(scores, prov_sats)]
+        ax5.plot(rounds, gap, 'o-', label=provider, color=provider_colors[provider],
+                 markersize=3, linewidth=2)
+    ax5.axhline(y=0, color='black', linestyle='-', linewidth=1, alpha=0.5)
+    style_axis(ax5, "Satisfaction Gap (Score - Satisfaction)", "Round", "Gap")
+
+    # --- Panel 6: Segment Market Share (Final Round) Heatmap ---
+    ax6 = axes[1, 2]
+    last_round = consumer_rounds[-1]
+    segment_data = last_round["consumer_data"].get("segment_data", {})
+    if segment_data:
+        segments = sorted(segment_data.keys())
+        share_matrix = []
+        for seg in segments:
+            row = []
+            seg_shares = segment_data[seg].get("provider_shares", {})
+            for p in providers:
+                row.append(seg_shares.get(p, 0))
+            share_matrix.append(row)
+        share_matrix = np.array(share_matrix)
+
+        im = ax6.imshow(share_matrix, aspect='auto', cmap='Blues', vmin=0, vmax=1)
+        ax6.set_yticks(range(len(segments)))
+        ax6.set_yticklabels(segments, fontsize=8)
+        ax6.set_xticks(range(len(providers)))
+        ax6.set_xticklabels(providers, rotation=45, ha='right', fontsize=8)
+        fig.colorbar(im, ax=ax6, fraction=0.046, pad=0.04)
+        ax6.set_title("Segment Market Share (Final Round)", fontsize=11, fontweight='bold')
+    else:
+        ax6.text(0.5, 0.5, "No segment data", ha='center', va='center',
+                 transform=ax6.transAxes, fontsize=10, alpha=0.5)
+        ax6.set_title("Segment Market Share (Final Round)", fontsize=11, fontweight='bold')
 
     plt.tight_layout()
 
@@ -1023,7 +1080,7 @@ def plot_funder_dashboard(
     history: list,
     save_path: Optional[str] = None,
     show: bool = True,
-    figsize: tuple = (14, 10),
+    figsize: tuple = (20, 10),
 ) -> Optional[plt.Figure]:
     """
     Create a dashboard for Funder actors.
@@ -1053,7 +1110,7 @@ def plot_funder_dashboard(
 
     rounds = [h["round"] for h in funder_rounds]
 
-    fig, axes = plt.subplots(2, 2, figsize=figsize)
+    fig, axes = plt.subplots(2, 3, figsize=figsize)
     fig.suptitle("Funder Dashboard", fontsize=14, fontweight='bold')
 
     # --- Panel 1: Funding Allocations Over Time (stacked area) ---
@@ -1148,11 +1205,185 @@ def plot_funder_dashboard(
     ax4.grid(True, alpha=0.3)
     ax4.set_title("Funding Impact on Capability Growth", fontsize=11, fontweight='bold')
 
+    # --- Panel 5: Per-Funder Top Allocation ---
+    ax5 = axes[0, 2]
+    funder_names = set()
+    for h in funder_rounds:
+        funder_names.update(h["funder_data"].get("allocations", {}).keys())
+    funder_names = sorted(funder_names)
+
+    funder_line_colors = get_provider_colors(len(funder_names))
+    for i, funder in enumerate(funder_names):
+        top_allocs = []
+        for h in funder_rounds:
+            allocs = h["funder_data"].get("allocations", {}).get(funder, {})
+            if isinstance(allocs, dict) and allocs:
+                top_allocs.append(max(allocs.values()) / 1_000_000)
+            else:
+                top_allocs.append(0)
+        ax5.plot(rounds, top_allocs, 'o-', label=funder, color=funder_line_colors[i],
+                 markersize=3, linewidth=2)
+    ax5.set_xlabel("Round", fontsize=9)
+    ax5.set_ylabel("Top Allocation ($M)", fontsize=9)
+    ax5.legend(loc='best', fontsize=7)
+    ax5.grid(True, alpha=0.3)
+    ax5.set_title("Per-Funder Top Allocation", fontsize=11, fontweight='bold')
+
+    # --- Panel 6: Score Momentum (3-Round Avg Delta) ---
+    ax6 = axes[1, 2]
+    for provider in providers:
+        scores = [h["scores"][provider] for h in history]
+        # Compute rolling 3-round average of score deltas
+        deltas = [scores[i] - scores[i - 1] for i in range(1, len(scores))]
+        window = 3
+        if len(deltas) >= window:
+            momentum = []
+            momentum_rounds = []
+            for i in range(window - 1, len(deltas)):
+                avg_delta = np.mean(deltas[i - window + 1:i + 1])
+                momentum.append(avg_delta)
+                # Round index corresponds to the end of the window
+                momentum_rounds.append(history[i + 1]["round"])
+            ax6.plot(momentum_rounds, momentum, 'o-', label=provider,
+                     color=provider_colors[provider], markersize=3, linewidth=2)
+    ax6.axhline(y=0, color='black', linestyle='-', linewidth=1, alpha=0.5)
+    style_axis(ax6, "Score Momentum (3-Round Avg Delta)", "Round", "Avg Delta")
+
     plt.tight_layout()
 
     if save_path:
         plt.savefig(save_path, dpi=150, bbox_inches='tight')
         print(f"Funder dashboard saved to: {save_path}")
+
+    if show:
+        plt.show()
+    else:
+        plt.close(fig)
+
+    return fig
+
+
+# =============================================================================
+# Media Dashboard
+# =============================================================================
+
+def plot_media_dashboard(
+    history: list,
+    save_path: Optional[str] = None,
+    show: bool = True,
+    figsize: tuple = (14, 10),
+) -> Optional[plt.Figure]:
+    """
+    Create a dashboard for Media coverage.
+
+    Panels:
+    1. Media Sentiment Over Time (line + fill)
+    2. Headlines by Category (stacked bar)
+    3. Provider Attention Heatmap
+    4. Risk Signals Per Round
+
+    Args:
+        history: List of round data dicts
+        save_path: Path to save figure
+        show: Whether to display
+        figsize: Figure size
+
+    Returns:
+        matplotlib Figure or None
+    """
+    media_rounds = [h for h in history if "media_data" in h]
+    if not media_rounds:
+        print("No media data to plot")
+        return None
+
+    providers = get_providers(history)
+    rounds = [h["round"] for h in media_rounds]
+
+    fig, axes = plt.subplots(2, 2, figsize=figsize)
+    fig.suptitle("Media Dashboard", fontsize=14, fontweight='bold')
+
+    # --- Panel 1: Media Sentiment Over Time ---
+    ax1 = axes[0, 0]
+    sentiments = [h["media_data"].get("sentiment", 0) for h in media_rounds]
+    ax1.plot(rounds, sentiments, 'o-', color='#457B9D', markersize=3, linewidth=2)
+    sentiments_arr = np.array(sentiments)
+    rounds_arr = np.array(rounds)
+    ax1.fill_between(rounds_arr, 0, sentiments_arr,
+                     where=sentiments_arr >= 0, alpha=0.3, color='green',
+                     interpolate=True)
+    ax1.fill_between(rounds_arr, 0, sentiments_arr,
+                     where=sentiments_arr < 0, alpha=0.3, color='red',
+                     interpolate=True)
+    ax1.axhline(y=0, color='black', linestyle='-', linewidth=0.5, alpha=0.5)
+    style_axis(ax1, "Media Sentiment Over Time", "Round", "Sentiment", legend=False)
+
+    # --- Panel 2: Headlines by Category (stacked bar) ---
+    ax2 = axes[0, 1]
+    categories = ["leader_change", "score_surge", "regulatory", "funding",
+                  "consumer", "benchmark", "other"]
+    cat_colors = {
+        "leader_change": "#E63946", "score_surge": "#457B9D",
+        "regulatory": "#6A4C93", "funding": "#2A9D8F",
+        "consumer": "#F4A261", "benchmark": "#E9C46A", "other": "#CCCCCC",
+    }
+    # Count categories per round
+    cat_counts = {cat: [] for cat in categories}
+    for h in media_rounds:
+        headlines = h["media_data"].get("headlines", [])
+        round_cats = {cat: 0 for cat in categories}
+        for headline in headlines:
+            cat = categorize_headline(headline)
+            round_cats[cat] += 1
+        for cat in categories:
+            cat_counts[cat].append(round_cats[cat])
+
+    bottom = np.zeros(len(rounds))
+    for cat in categories:
+        values = np.array(cat_counts[cat])
+        ax2.bar(rounds, values, bottom=bottom, label=cat.replace("_", " ").title(),
+                color=cat_colors[cat], alpha=0.8, width=0.8)
+        bottom += values
+    ax2.legend(loc='upper right', fontsize=6)
+    ax2.set_xlabel("Round", fontsize=9)
+    ax2.set_ylabel("Count", fontsize=9)
+    ax2.set_title("Headlines by Category", fontsize=11, fontweight='bold')
+    ax2.grid(True, alpha=0.3, axis='y')
+
+    # --- Panel 3: Provider Attention Heatmap ---
+    ax3 = axes[1, 0]
+    attention_matrix = []
+    for p in providers:
+        row = []
+        for h in media_rounds:
+            attn = h["media_data"].get("provider_attention", {})
+            row.append(attn.get(p, 0))
+        attention_matrix.append(row)
+    attention_matrix = np.array(attention_matrix)
+
+    if attention_matrix.size > 0:
+        im = ax3.imshow(attention_matrix, aspect='auto', cmap='YlOrRd',
+                        vmin=0, vmax=1)
+        ax3.set_yticks(range(len(providers)))
+        ax3.set_yticklabels(providers, fontsize=8)
+        ax3.set_xlabel("Round Index", fontsize=9)
+        fig.colorbar(im, ax=ax3, fraction=0.046, pad=0.04)
+    ax3.set_title("Provider Attention Heatmap", fontsize=11, fontweight='bold')
+
+    # --- Panel 4: Risk Signals Per Round ---
+    ax4 = axes[1, 1]
+    risk_counts = [len(h["media_data"].get("risk_signals", [])) for h in media_rounds]
+    bar_colors = ['#E63946' if c > 0 else '#CCCCCC' for c in risk_counts]
+    ax4.bar(rounds, risk_counts, color=bar_colors, alpha=0.8)
+    total_risks = sum(risk_counts)
+    ax4.text(0.95, 0.95, f"Total: {total_risks}", transform=ax4.transAxes,
+             ha='right', va='top', fontsize=10, fontweight='bold')
+    style_axis(ax4, "Risk Signals Per Round", "Round", "Count", legend=False)
+
+    plt.tight_layout()
+
+    if save_path:
+        plt.savefig(save_path, dpi=150, bbox_inches='tight')
+        print(f"Media dashboard saved to: {save_path}")
 
     if show:
         plt.show()
@@ -1227,6 +1458,15 @@ def create_all_dashboards(
         plt.close(fig)
         saved['funder_dashboard'] = path
         print(f"  - Funder dashboard saved")
+
+    # Media Dashboard
+    fig = plot_media_dashboard(history, show=False)
+    if fig:
+        path = f"{output_dir}/media_dashboard.png"
+        fig.savefig(path, dpi=150, bbox_inches='tight')
+        plt.close(fig)
+        saved['media_dashboard'] = path
+        print(f"  - Media dashboard saved")
 
     # Evaluator Dashboard
     fig = plot_evaluator_dashboard(history, show=False)

@@ -1,0 +1,3964 @@
+[
+  {
+    "round": 0,
+    "scores": {
+      "OpenAI": 0.7586,
+      "Anthropic": 0.8213,
+      "NovaMind": 0.51,
+      "DeepMind": 0.7391,
+      "Meta_AI": 0.6683
+    },
+    "true_capabilities": {
+      "OpenAI": 0.72,
+      "Anthropic": 0.68,
+      "NovaMind": 0.55,
+      "DeepMind": 0.7,
+      "Meta_AI": 0.65
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.7176,
+      "Anthropic": 0.7014,
+      "NovaMind": 0.503,
+      "DeepMind": 0.6977,
+      "Meta_AI": 0.6345
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2,
+        "training_optimization": 0.4,
+        "evaluation_engineering": 0.25,
+        "safety_alignment": 0.15
+      },
+      "Anthropic": {
+        "fundamental_research": 0.3,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.3
+      },
+      "NovaMind": {
+        "fundamental_research": 0.15,
+        "training_optimization": 0.3,
+        "evaluation_engineering": 0.35,
+        "safety_alignment": 0.2
+      },
+      "DeepMind": {
+        "fundamental_research": 0.35,
+        "training_optimization": 0.3,
+        "evaluation_engineering": 0.15,
+        "safety_alignment": 0.2
+      },
+      "Meta_AI": {
+        "fundamental_research": 0.25,
+        "training_optimization": 0.35,
+        "evaluation_engineering": 0.2,
+        "safety_alignment": 0.2
+      }
+    },
+    "benchmark_params": {
+      "coding_bench": {
+        "validity": 0.8491,
+        "exploitability": 0.2504
+      },
+      "reasoning_bench": {
+        "validity": 0.6992,
+        "exploitability": 0.4508
+      }
+    },
+    "per_benchmark_scores": {
+      "coding_bench": {
+        "OpenAI": 0.8089,
+        "Anthropic": 0.7826,
+        "NovaMind": 0.4682,
+        "DeepMind": 0.7486,
+        "Meta_AI": 0.6985
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.7082,
+        "Anthropic": 0.8599,
+        "NovaMind": 0.5519,
+        "DeepMind": 0.7297,
+        "Meta_AI": 0.638
+      }
+    },
+    "media_data": {
+      "headlines": [],
+      "sentiment": 0.0,
+      "provider_attention": {
+        "Anthropic": 0.1,
+        "OpenAI": 0.1,
+        "DeepMind": 0.1,
+        "Meta_AI": 0.1,
+        "NovaMind": 0.1
+      },
+      "risk_signals": [],
+      "benchmark_attention": {}
+    },
+    "consumer_data": {
+      "market_shares": {
+        "OpenAI": 0.2292,
+        "Anthropic": 0.5166,
+        "NovaMind": 0.0108,
+        "DeepMind": 0.1543,
+        "Meta_AI": 0.0891
+      },
+      "provider_satisfaction": {
+        "OpenAI": 0.72,
+        "Anthropic": 0.68,
+        "NovaMind": 0.55,
+        "DeepMind": 0.7,
+        "Meta_AI": 0.65
+      },
+      "avg_satisfaction": 0.6882,
+      "switching_rate": 0.3408,
+      "segment_data": {
+        "software_dev_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "software_dev",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.1743,
+            "Anthropic": 0.6198,
+            "NovaMind": 0.0041,
+            "DeepMind": 0.1307,
+            "Meta_AI": 0.071
+          },
+          "satisfaction": {
+            "OpenAI": 0.72,
+            "Anthropic": 0.68,
+            "NovaMind": 0.55,
+            "DeepMind": 0.7,
+            "Meta_AI": 0.65
+          }
+        },
+        "software_dev_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "software_dev",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.6029,
+            "Anthropic": 0.1332,
+            "NovaMind": 0.0098,
+            "DeepMind": 0.1594,
+            "Meta_AI": 0.0948
+          },
+          "satisfaction": {
+            "OpenAI": 0.72,
+            "Anthropic": 0.68,
+            "NovaMind": 0.55,
+            "DeepMind": 0.7,
+            "Meta_AI": 0.65
+          }
+        },
+        "software_dev_cautious": {
+          "archetype": "cautious",
+          "use_case": "software_dev",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.4291,
+            "Anthropic": 0.1924,
+            "NovaMind": 0.0197,
+            "DeepMind": 0.2144,
+            "Meta_AI": 0.1444
+          },
+          "satisfaction": {
+            "OpenAI": 0.72,
+            "Anthropic": 0.68,
+            "NovaMind": 0.55,
+            "DeepMind": 0.7,
+            "Meta_AI": 0.65
+          }
+        },
+        "content_writer_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "content_writer",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.1268,
+            "Anthropic": 0.7114,
+            "NovaMind": 0.0042,
+            "DeepMind": 0.1078,
+            "Meta_AI": 0.0497
+          },
+          "satisfaction": {
+            "OpenAI": 0.72,
+            "Anthropic": 0.68,
+            "NovaMind": 0.55,
+            "DeepMind": 0.7,
+            "Meta_AI": 0.65
+          }
+        },
+        "content_writer_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "content_writer",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.1932,
+            "Anthropic": 0.5372,
+            "NovaMind": 0.0116,
+            "DeepMind": 0.1632,
+            "Meta_AI": 0.0947
+          },
+          "satisfaction": {
+            "OpenAI": 0.72,
+            "Anthropic": 0.68,
+            "NovaMind": 0.55,
+            "DeepMind": 0.7,
+            "Meta_AI": 0.65
+          }
+        },
+        "content_writer_cautious": {
+          "archetype": "cautious",
+          "use_case": "content_writer",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.243,
+            "Anthropic": 0.3858,
+            "NovaMind": 0.0214,
+            "DeepMind": 0.2116,
+            "Meta_AI": 0.1381
+          },
+          "satisfaction": {
+            "OpenAI": 0.72,
+            "Anthropic": 0.68,
+            "NovaMind": 0.55,
+            "DeepMind": 0.7,
+            "Meta_AI": 0.65
+          }
+        },
+        "healthcare_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "healthcare",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.118,
+            "Anthropic": 0.7279,
+            "NovaMind": 0.0042,
+            "DeepMind": 0.1036,
+            "Meta_AI": 0.0462
+          },
+          "satisfaction": {
+            "OpenAI": 0.72,
+            "Anthropic": 0.68,
+            "NovaMind": 0.55,
+            "DeepMind": 0.7,
+            "Meta_AI": 0.65
+          }
+        },
+        "healthcare_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "healthcare",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.1899,
+            "Anthropic": 0.5441,
+            "NovaMind": 0.0116,
+            "DeepMind": 0.1615,
+            "Meta_AI": 0.0928
+          },
+          "satisfaction": {
+            "OpenAI": 0.72,
+            "Anthropic": 0.68,
+            "NovaMind": 0.55,
+            "DeepMind": 0.7,
+            "Meta_AI": 0.65
+          }
+        },
+        "healthcare_cautious": {
+          "archetype": "cautious",
+          "use_case": "healthcare",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.2402,
+            "Anthropic": 0.3922,
+            "NovaMind": 0.0215,
+            "DeepMind": 0.2102,
+            "Meta_AI": 0.1359
+          },
+          "satisfaction": {
+            "OpenAI": 0.72,
+            "Anthropic": 0.68,
+            "NovaMind": 0.55,
+            "DeepMind": 0.7,
+            "Meta_AI": 0.65
+          }
+        },
+        "finance_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "finance",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.1218,
+            "Anthropic": 0.7209,
+            "NovaMind": 0.0042,
+            "DeepMind": 0.1054,
+            "Meta_AI": 0.0477
+          },
+          "satisfaction": {
+            "OpenAI": 0.72,
+            "Anthropic": 0.68,
+            "NovaMind": 0.55,
+            "DeepMind": 0.7,
+            "Meta_AI": 0.65
+          }
+        },
+        "finance_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "finance",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.1914,
+            "Anthropic": 0.5411,
+            "NovaMind": 0.0116,
+            "DeepMind": 0.1623,
+            "Meta_AI": 0.0936
+          },
+          "satisfaction": {
+            "OpenAI": 0.72,
+            "Anthropic": 0.68,
+            "NovaMind": 0.55,
+            "DeepMind": 0.7,
+            "Meta_AI": 0.65
+          }
+        },
+        "finance_cautious": {
+          "archetype": "cautious",
+          "use_case": "finance",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.2414,
+            "Anthropic": 0.3894,
+            "NovaMind": 0.0214,
+            "DeepMind": 0.2108,
+            "Meta_AI": 0.1369
+          },
+          "satisfaction": {
+            "OpenAI": 0.72,
+            "Anthropic": 0.68,
+            "NovaMind": 0.55,
+            "DeepMind": 0.7,
+            "Meta_AI": 0.65
+          }
+        }
+      }
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "Anthropic": 120000000.0,
+          "OpenAI": 60000000.0,
+          "DeepMind": 6666666.6667,
+          "Meta_AI": 6666666.6667,
+          "NovaMind": 6666666.6667
+        },
+        "Horizon_Capital": {
+          "Anthropic": 30000000.0,
+          "OpenAI": 15000000.0,
+          "DeepMind": 1666666.6667,
+          "Meta_AI": 1666666.6667,
+          "NovaMind": 1666666.6667
+        },
+        "AISI_Fund": {
+          "Anthropic": 2630045.9713,
+          "OpenAI": 2193964.4059,
+          "DeepMind": 2031233.1975,
+          "Meta_AI": 1786307.2065,
+          "NovaMind": 1358449.2188
+        }
+      },
+      "funding_multipliers": {
+        "Anthropic": 1.587,
+        "OpenAI": 1.2969,
+        "DeepMind": 1.0399,
+        "Meta_AI": 1.0389,
+        "NovaMind": 1.0373
+      },
+      "total_funding": 260000000.0
+    },
+    "actor_traces": {
+      "Regulator": "no_action: max_risk=0.30, below threshold or no escalation path",
+      "TechVentures": "vc strategy: top allocation $120,000,000 to Anthropic",
+      "Horizon_Capital": "vc strategy: top allocation $30,000,000 to Anthropic",
+      "AISI_Fund": "gov strategy: top allocation $2,630,046 to Anthropic"
+    }
+  },
+  {
+    "round": 1,
+    "scores": {
+      "OpenAI": 0.8525,
+      "Anthropic": 0.8366,
+      "NovaMind": 0.6796,
+      "DeepMind": 0.8743,
+      "Meta_AI": 0.7467
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7251,
+      "Anthropic": 0.6876,
+      "NovaMind": 0.5541,
+      "DeepMind": 0.7042,
+      "Meta_AI": 0.6542
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.758,
+      "Anthropic": 0.7419,
+      "NovaMind": 0.556,
+      "DeepMind": 0.7507,
+      "Meta_AI": 0.6682
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2189,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2811,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2828,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2172,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.1545,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3955,
+        "safety_alignment": 0.2
+      },
+      "DeepMind": {
+        "fundamental_research": 0.2129,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3371,
+        "safety_alignment": 0.2
+      },
+      "Meta_AI": {
+        "fundamental_research": 0.194,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.356,
+        "safety_alignment": 0.2
+      }
+    },
+    "benchmark_params": {
+      "coding_bench": {
+        "validity": 0.8477,
+        "exploitability": 0.2511
+      },
+      "reasoning_bench": {
+        "validity": 0.6981,
+        "exploitability": 0.4519
+      }
+    },
+    "per_benchmark_scores": {
+      "coding_bench": {
+        "OpenAI": 0.8089,
+        "Anthropic": 0.7826,
+        "NovaMind": 0.6489,
+        "DeepMind": 0.7486,
+        "Meta_AI": 0.73
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.896,
+        "Anthropic": 0.8905,
+        "NovaMind": 0.7103,
+        "DeepMind": 1.0,
+        "Meta_AI": 0.7635
+      }
+    },
+    "media_data": {
+      "headlines": [
+        "DeepMind takes the lead from Anthropic",
+        "DeepMind surges by 0.135",
+        "DeepMind appears to release major model update",
+        "OpenAI surges by 0.094",
+        "OpenAI appears to release major model update",
+        "Meta_AI surges by 0.078",
+        "NovaMind surges by 0.170",
+        "NovaMind appears to release major model update",
+        "Anthropic raises $120,000,000 from TechVentures",
+        "Anthropic raises $30,000,000 from Horizon_Capital",
+        "Anthropic raises $2,630,046 from AISI_Fund",
+        "DeepMind takes #1 on reasoning_bench"
+      ],
+      "sentiment": 0.85,
+      "provider_attention": {
+        "DeepMind": 0.8,
+        "OpenAI": 0.7,
+        "Anthropic": 0.5,
+        "Meta_AI": 0.6,
+        "NovaMind": 0.7
+      },
+      "risk_signals": [],
+      "benchmark_attention": {
+        "reasoning_bench": 0.4
+      }
+    },
+    "consumer_data": {
+      "market_shares": {
+        "OpenAI": 0.3477,
+        "Anthropic": 0.4825,
+        "NovaMind": 0.0043,
+        "DeepMind": 0.1121,
+        "Meta_AI": 0.0534
+      },
+      "provider_satisfaction": {
+        "OpenAI": 0.7251,
+        "Anthropic": 0.6876,
+        "NovaMind": 0.5541,
+        "DeepMind": 0.7042,
+        "Meta_AI": 0.6542
+      },
+      "avg_satisfaction": 0.7001,
+      "switching_rate": 0.1953,
+      "segment_data": {
+        "software_dev_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "software_dev",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.4844,
+            "Anthropic": 0.4064,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.0773,
+            "Meta_AI": 0.0314
+          },
+          "satisfaction": {
+            "OpenAI": 0.7251,
+            "Anthropic": 0.6876,
+            "NovaMind": 0.5541,
+            "DeepMind": 0.7042,
+            "Meta_AI": 0.6542
+          }
+        },
+        "software_dev_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "software_dev",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.7502,
+            "Anthropic": 0.0875,
+            "NovaMind": 0.0023,
+            "DeepMind": 0.1079,
+            "Meta_AI": 0.0521
+          },
+          "satisfaction": {
+            "OpenAI": 0.7251,
+            "Anthropic": 0.6876,
+            "NovaMind": 0.5541,
+            "DeepMind": 0.7042,
+            "Meta_AI": 0.6542
+          }
+        },
+        "software_dev_cautious": {
+          "archetype": "cautious",
+          "use_case": "software_dev",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.5181,
+            "Anthropic": 0.1698,
+            "NovaMind": 0.0103,
+            "DeepMind": 0.1869,
+            "Meta_AI": 0.1149
+          },
+          "satisfaction": {
+            "OpenAI": 0.7251,
+            "Anthropic": 0.6876,
+            "NovaMind": 0.5541,
+            "DeepMind": 0.7042,
+            "Meta_AI": 0.6542
+          }
+        },
+        "content_writer_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "content_writer",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.0731,
+            "Anthropic": 0.8443,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.0646,
+            "Meta_AI": 0.0175
+          },
+          "satisfaction": {
+            "OpenAI": 0.7251,
+            "Anthropic": 0.6876,
+            "NovaMind": 0.5541,
+            "DeepMind": 0.7042,
+            "Meta_AI": 0.6542
+          }
+        },
+        "content_writer_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "content_writer",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.5285,
+            "Anthropic": 0.303,
+            "NovaMind": 0.0036,
+            "DeepMind": 0.1127,
+            "Meta_AI": 0.0522
+          },
+          "satisfaction": {
+            "OpenAI": 0.7251,
+            "Anthropic": 0.6876,
+            "NovaMind": 0.5541,
+            "DeepMind": 0.7042,
+            "Meta_AI": 0.6542
+          }
+        },
+        "content_writer_cautious": {
+          "archetype": "cautious",
+          "use_case": "content_writer",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.217,
+            "Anthropic": 0.4741,
+            "NovaMind": 0.0121,
+            "DeepMind": 0.1884,
+            "Meta_AI": 0.1084
+          },
+          "satisfaction": {
+            "OpenAI": 0.7251,
+            "Anthropic": 0.6876,
+            "NovaMind": 0.5541,
+            "DeepMind": 0.7042,
+            "Meta_AI": 0.6542
+          }
+        },
+        "healthcare_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "healthcare",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.0655,
+            "Anthropic": 0.8565,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.062,
+            "Meta_AI": 0.0154
+          },
+          "satisfaction": {
+            "OpenAI": 0.7251,
+            "Anthropic": 0.6876,
+            "NovaMind": 0.5541,
+            "DeepMind": 0.7042,
+            "Meta_AI": 0.6542
+          }
+        },
+        "healthcare_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "healthcare",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.5391,
+            "Anthropic": 0.2969,
+            "NovaMind": 0.0036,
+            "DeepMind": 0.1092,
+            "Meta_AI": 0.0512
+          },
+          "satisfaction": {
+            "OpenAI": 0.7251,
+            "Anthropic": 0.6876,
+            "NovaMind": 0.5541,
+            "DeepMind": 0.7042,
+            "Meta_AI": 0.6542
+          }
+        },
+        "healthcare_cautious": {
+          "archetype": "cautious",
+          "use_case": "healthcare",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.2134,
+            "Anthropic": 0.4819,
+            "NovaMind": 0.0121,
+            "DeepMind": 0.1871,
+            "Meta_AI": 0.1055
+          },
+          "satisfaction": {
+            "OpenAI": 0.7251,
+            "Anthropic": 0.6876,
+            "NovaMind": 0.5541,
+            "DeepMind": 0.7042,
+            "Meta_AI": 0.6542
+          }
+        },
+        "finance_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "finance",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.0687,
+            "Anthropic": 0.8513,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.0631,
+            "Meta_AI": 0.0163
+          },
+          "satisfaction": {
+            "OpenAI": 0.7251,
+            "Anthropic": 0.6876,
+            "NovaMind": 0.5541,
+            "DeepMind": 0.7042,
+            "Meta_AI": 0.6542
+          }
+        },
+        "finance_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "finance",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.5345,
+            "Anthropic": 0.2995,
+            "NovaMind": 0.0036,
+            "DeepMind": 0.1107,
+            "Meta_AI": 0.0516
+          },
+          "satisfaction": {
+            "OpenAI": 0.7251,
+            "Anthropic": 0.6876,
+            "NovaMind": 0.5541,
+            "DeepMind": 0.7042,
+            "Meta_AI": 0.6542
+          }
+        },
+        "finance_cautious": {
+          "archetype": "cautious",
+          "use_case": "finance",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.215,
+            "Anthropic": 0.4786,
+            "NovaMind": 0.0121,
+            "DeepMind": 0.1877,
+            "Meta_AI": 0.1068
+          },
+          "satisfaction": {
+            "OpenAI": 0.7251,
+            "Anthropic": 0.6876,
+            "NovaMind": 0.5541,
+            "DeepMind": 0.7042,
+            "Meta_AI": 0.6542
+          }
+        }
+      }
+    },
+    "policymaker_data": {
+      "interventions": [
+        {
+          "policymaker": "Regulator",
+          "type": "investigation",
+          "details": {
+            "focus": "score_volatility"
+          }
+        }
+      ],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "Anthropic": 120000000.0,
+          "OpenAI": 60000000.0,
+          "DeepMind": 6666666.6667,
+          "Meta_AI": 6666666.6667,
+          "NovaMind": 6666666.6667
+        },
+        "Horizon_Capital": {
+          "Anthropic": 30000000.0,
+          "OpenAI": 15000000.0,
+          "DeepMind": 1666666.6667,
+          "Meta_AI": 1666666.6667,
+          "NovaMind": 1666666.6667
+        },
+        "AISI_Fund": {
+          "Anthropic": 2630045.9713,
+          "OpenAI": 2193964.4059,
+          "DeepMind": 2031233.1975,
+          "Meta_AI": 1786307.2065,
+          "NovaMind": 1358449.2188
+        }
+      },
+      "funding_multipliers": {
+        "Anthropic": 1.587,
+        "OpenAI": 1.2969,
+        "DeepMind": 1.0399,
+        "Meta_AI": 1.0389,
+        "NovaMind": 1.0373
+      },
+      "total_funding": 260000000.0
+    },
+    "actor_traces": {
+      "Regulator": "investigation: Score volatility detected",
+      "TechVentures": "vc strategy: top allocation $120,000,000 to Anthropic",
+      "Horizon_Capital": "vc strategy: top allocation $30,000,000 to Anthropic",
+      "AISI_Fund": "gov strategy: top allocation $2,630,046 to Anthropic"
+    }
+  },
+  {
+    "round": 2,
+    "scores": {
+      "OpenAI": 0.9403,
+      "Anthropic": 0.8366,
+      "NovaMind": 0.787,
+      "DeepMind": 0.8899,
+      "Meta_AI": 0.8119
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7304,
+      "Anthropic": 0.695,
+      "NovaMind": 0.5584,
+      "DeepMind": 0.7085,
+      "Meta_AI": 0.6585
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.8127,
+      "Anthropic": 0.7703,
+      "NovaMind": 0.6253,
+      "DeepMind": 0.7925,
+      "Meta_AI": 0.7113
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2287,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2713,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2806,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2194,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.1681,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3819,
+        "safety_alignment": 0.2
+      },
+      "DeepMind": {
+        "fundamental_research": 0.2265,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3235,
+        "safety_alignment": 0.2
+      },
+      "Meta_AI": {
+        "fundamental_research": 0.2018,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3482,
+        "safety_alignment": 0.2
+      }
+    },
+    "benchmark_params": {
+      "coding_bench": {
+        "validity": 0.8464,
+        "exploitability": 0.2517
+      },
+      "reasoning_bench": {
+        "validity": 0.697,
+        "exploitability": 0.4531
+      }
+    },
+    "per_benchmark_scores": {
+      "coding_bench": {
+        "OpenAI": 0.9846,
+        "Anthropic": 0.7826,
+        "NovaMind": 0.7078,
+        "DeepMind": 0.7798,
+        "Meta_AI": 0.73
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.896,
+        "Anthropic": 0.8905,
+        "NovaMind": 0.8661,
+        "DeepMind": 1.0,
+        "Meta_AI": 0.8937
+      }
+    },
+    "media_data": {
+      "headlines": [
+        "OpenAI takes the lead from DeepMind",
+        "OpenAI surges by 0.088",
+        "OpenAI appears to release major model update",
+        "Meta_AI surges by 0.065",
+        "NovaMind surges by 0.107",
+        "NovaMind appears to release major model update",
+        "Regulator launches investigation into score_volatility",
+        "OpenAI sees surge in adoption (market share +11.9%)",
+        "Consumers are turning away from Anthropic (market share -3.4%)",
+        "Consumers are turning away from DeepMind (market share -4.2%)",
+        "Consumers are turning away from Meta_AI (market share -3.6%)"
+      ],
+      "sentiment": 0.1,
+      "provider_attention": {
+        "OpenAI": 0.8,
+        "DeepMind": 0.5,
+        "Anthropic": 0.5,
+        "Meta_AI": 0.6,
+        "NovaMind": 0.7
+      },
+      "risk_signals": [
+        "regulatory_investigation"
+      ],
+      "benchmark_attention": {}
+    },
+    "consumer_data": {
+      "market_shares": {
+        "OpenAI": 0.4398,
+        "Anthropic": 0.4027,
+        "NovaMind": 0.0023,
+        "DeepMind": 0.1204,
+        "Meta_AI": 0.0348
+      },
+      "provider_satisfaction": {
+        "OpenAI": 0.7304,
+        "Anthropic": 0.695,
+        "NovaMind": 0.5584,
+        "DeepMind": 0.7085,
+        "Meta_AI": 0.6585
+      },
+      "avg_satisfaction": 0.7106,
+      "switching_rate": 0.1474,
+      "segment_data": {
+        "software_dev_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "software_dev",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.7203,
+            "Anthropic": 0.2267,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.0406,
+            "Meta_AI": 0.0118
+          },
+          "satisfaction": {
+            "OpenAI": 0.7304,
+            "Anthropic": 0.695,
+            "NovaMind": 0.5584,
+            "DeepMind": 0.7085,
+            "Meta_AI": 0.6585
+          }
+        },
+        "software_dev_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "software_dev",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.8455,
+            "Anthropic": 0.0565,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.0703,
+            "Meta_AI": 0.0271
+          },
+          "satisfaction": {
+            "OpenAI": 0.7304,
+            "Anthropic": 0.695,
+            "NovaMind": 0.5584,
+            "DeepMind": 0.7085,
+            "Meta_AI": 0.6585
+          }
+        },
+        "software_dev_cautious": {
+          "archetype": "cautious",
+          "use_case": "software_dev",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.6015,
+            "Anthropic": 0.1452,
+            "NovaMind": 0.0055,
+            "DeepMind": 0.1595,
+            "Meta_AI": 0.0882
+          },
+          "satisfaction": {
+            "OpenAI": 0.7304,
+            "Anthropic": 0.695,
+            "NovaMind": 0.5584,
+            "DeepMind": 0.7085,
+            "Meta_AI": 0.6585
+          }
+        },
+        "content_writer_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "content_writer",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.0477,
+            "Anthropic": 0.9012,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.043,
+            "Meta_AI": 0.0076
+          },
+          "satisfaction": {
+            "OpenAI": 0.7304,
+            "Anthropic": 0.695,
+            "NovaMind": 0.5584,
+            "DeepMind": 0.7085,
+            "Meta_AI": 0.6585
+          }
+        },
+        "content_writer_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "content_writer",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.7274,
+            "Anthropic": 0.1735,
+            "NovaMind": 0.001,
+            "DeepMind": 0.0693,
+            "Meta_AI": 0.0288
+          },
+          "satisfaction": {
+            "OpenAI": 0.7304,
+            "Anthropic": 0.695,
+            "NovaMind": 0.5584,
+            "DeepMind": 0.7085,
+            "Meta_AI": 0.6585
+          }
+        },
+        "content_writer_cautious": {
+          "archetype": "cautious",
+          "use_case": "content_writer",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.3066,
+            "Anthropic": 0.4308,
+            "NovaMind": 0.0074,
+            "DeepMind": 0.1686,
+            "Meta_AI": 0.0866
+          },
+          "satisfaction": {
+            "OpenAI": 0.7304,
+            "Anthropic": 0.695,
+            "NovaMind": 0.5584,
+            "DeepMind": 0.7085,
+            "Meta_AI": 0.6585
+          }
+        },
+        "healthcare_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "healthcare",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.0411,
+            "Anthropic": 0.5935,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.3584,
+            "Meta_AI": 0.0065
+          },
+          "satisfaction": {
+            "OpenAI": 0.7304,
+            "Anthropic": 0.695,
+            "NovaMind": 0.5584,
+            "DeepMind": 0.7085,
+            "Meta_AI": 0.6585
+          }
+        },
+        "healthcare_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "healthcare",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.7418,
+            "Anthropic": 0.1642,
+            "NovaMind": 0.0011,
+            "DeepMind": 0.0644,
+            "Meta_AI": 0.0286
+          },
+          "satisfaction": {
+            "OpenAI": 0.7304,
+            "Anthropic": 0.695,
+            "NovaMind": 0.5584,
+            "DeepMind": 0.7085,
+            "Meta_AI": 0.6585
+          }
+        },
+        "healthcare_cautious": {
+          "archetype": "cautious",
+          "use_case": "healthcare",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.1918,
+            "Anthropic": 0.4396,
+            "NovaMind": 0.0075,
+            "DeepMind": 0.2765,
+            "Meta_AI": 0.0846
+          },
+          "satisfaction": {
+            "OpenAI": 0.7304,
+            "Anthropic": 0.695,
+            "NovaMind": 0.5584,
+            "DeepMind": 0.7085,
+            "Meta_AI": 0.6585
+          }
+        },
+        "finance_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "finance",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.0439,
+            "Anthropic": 0.9064,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.0421,
+            "Meta_AI": 0.007
+          },
+          "satisfaction": {
+            "OpenAI": 0.7304,
+            "Anthropic": 0.695,
+            "NovaMind": 0.5584,
+            "DeepMind": 0.7085,
+            "Meta_AI": 0.6585
+          }
+        },
+        "finance_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "finance",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.7356,
+            "Anthropic": 0.1682,
+            "NovaMind": 0.001,
+            "DeepMind": 0.0665,
+            "Meta_AI": 0.0287
+          },
+          "satisfaction": {
+            "OpenAI": 0.7304,
+            "Anthropic": 0.695,
+            "NovaMind": 0.5584,
+            "DeepMind": 0.7085,
+            "Meta_AI": 0.6585
+          }
+        },
+        "finance_cautious": {
+          "archetype": "cautious",
+          "use_case": "finance",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.3021,
+            "Anthropic": 0.4361,
+            "NovaMind": 0.0075,
+            "DeepMind": 0.1687,
+            "Meta_AI": 0.0856
+          },
+          "satisfaction": {
+            "OpenAI": 0.7304,
+            "Anthropic": 0.695,
+            "NovaMind": 0.5584,
+            "DeepMind": 0.7085,
+            "Meta_AI": 0.6585
+          }
+        }
+      }
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "OpenAI": 120000000.0,
+          "NovaMind": 60000000.0,
+          "DeepMind": 6666666.6667,
+          "Meta_AI": 6666666.6667,
+          "Anthropic": 6666666.6667
+        },
+        "Horizon_Capital": {
+          "OpenAI": 30000000.0,
+          "NovaMind": 15000000.0,
+          "DeepMind": 1666666.6667,
+          "Meta_AI": 1666666.6667,
+          "Anthropic": 1666666.6667
+        },
+        "AISI_Fund": {
+          "OpenAI": 2855944.3184,
+          "DeepMind": 2016624.2433,
+          "Anthropic": 1718116.0855,
+          "Meta_AI": 1656048.9173,
+          "NovaMind": 1753266.4355
+        }
+      },
+      "funding_multipliers": {
+        "OpenAI": 1.5879,
+        "NovaMind": 1.2952,
+        "DeepMind": 1.0398,
+        "Meta_AI": 1.0384,
+        "Anthropic": 1.0387
+      },
+      "total_funding": 260000000.0
+    },
+    "actor_traces": {
+      "Regulator": "no_action: cooldown: 1 rounds since last intervention",
+      "TechVentures": "vc strategy: top allocation $120,000,000 to OpenAI",
+      "Horizon_Capital": "vc strategy: top allocation $30,000,000 to OpenAI",
+      "AISI_Fund": "gov strategy: top allocation $2,855,944 to OpenAI"
+    }
+  },
+  {
+    "round": 3,
+    "scores": {
+      "OpenAI": 0.9403,
+      "Anthropic": 0.8442,
+      "NovaMind": 0.787,
+      "DeepMind": 0.8993,
+      "Meta_AI": 0.8487
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7369,
+      "Anthropic": 0.6998,
+      "NovaMind": 0.564,
+      "DeepMind": 0.7129,
+      "Meta_AI": 0.6628
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.851,
+      "Anthropic": 0.7925,
+      "NovaMind": 0.6738,
+      "DeepMind": 0.8245,
+      "Meta_AI": 0.7525
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2435,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2565,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.276,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.224,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.1825,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3675,
+        "safety_alignment": 0.2
+      },
+      "DeepMind": {
+        "fundamental_research": 0.2326,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3174,
+        "safety_alignment": 0.2
+      },
+      "Meta_AI": {
+        "fundamental_research": 0.2083,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3417,
+        "safety_alignment": 0.2
+      }
+    },
+    "benchmark_params": {
+      "coding_bench": {
+        "validity": 0.8451,
+        "exploitability": 0.2523
+      },
+      "reasoning_bench": {
+        "validity": 0.696,
+        "exploitability": 0.4541
+      }
+    },
+    "per_benchmark_scores": {
+      "coding_bench": {
+        "OpenAI": 0.9846,
+        "Anthropic": 0.7826,
+        "NovaMind": 0.7078,
+        "DeepMind": 0.7986,
+        "Meta_AI": 0.8037
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.896,
+        "Anthropic": 0.9057,
+        "NovaMind": 0.8661,
+        "DeepMind": 1.0,
+        "Meta_AI": 0.8937
+      }
+    },
+    "media_data": {
+      "headlines": [
+        "OpenAI raises $120,000,000 from TechVentures",
+        "OpenAI raises $30,000,000 from Horizon_Capital",
+        "OpenAI raises $2,855,944 from AISI_Fund",
+        "OpenAI sees surge in adoption (market share +9.2%)",
+        "Consumers are turning away from Anthropic (market share -8.0%)"
+      ],
+      "sentiment": 0.1,
+      "provider_attention": {
+        "OpenAI": 0.4,
+        "DeepMind": 0.1,
+        "Meta_AI": 0.1,
+        "Anthropic": 0.5,
+        "NovaMind": 0.1
+      },
+      "risk_signals": [],
+      "benchmark_attention": {}
+    },
+    "consumer_data": {
+      "market_shares": {
+        "OpenAI": 0.4993,
+        "Anthropic": 0.2886,
+        "NovaMind": 0.0014,
+        "DeepMind": 0.1868,
+        "Meta_AI": 0.0239
+      },
+      "provider_satisfaction": {
+        "OpenAI": 0.7369,
+        "Anthropic": 0.6998,
+        "NovaMind": 0.564,
+        "DeepMind": 0.7129,
+        "Meta_AI": 0.6628
+      },
+      "avg_satisfaction": 0.7197,
+      "switching_rate": 0.1481,
+      "segment_data": {
+        "software_dev_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "software_dev",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.8647,
+            "Anthropic": 0.1105,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.0199,
+            "Meta_AI": 0.0044
+          },
+          "satisfaction": {
+            "OpenAI": 0.7369,
+            "Anthropic": 0.6998,
+            "NovaMind": 0.564,
+            "DeepMind": 0.7129,
+            "Meta_AI": 0.6628
+          }
+        },
+        "software_dev_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "software_dev",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9061,
+            "Anthropic": 0.0348,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.0446,
+            "Meta_AI": 0.0139
+          },
+          "satisfaction": {
+            "OpenAI": 0.7369,
+            "Anthropic": 0.6998,
+            "NovaMind": 0.564,
+            "DeepMind": 0.7129,
+            "Meta_AI": 0.6628
+          }
+        },
+        "software_dev_cautious": {
+          "archetype": "cautious",
+          "use_case": "software_dev",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.675,
+            "Anthropic": 0.121,
+            "NovaMind": 0.0027,
+            "DeepMind": 0.134,
+            "Meta_AI": 0.0673
+          },
+          "satisfaction": {
+            "OpenAI": 0.7369,
+            "Anthropic": 0.6998,
+            "NovaMind": 0.564,
+            "DeepMind": 0.7129,
+            "Meta_AI": 0.6628
+          }
+        },
+        "content_writer_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "content_writer",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.0314,
+            "Anthropic": 0.6453,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.3197,
+            "Meta_AI": 0.0031
+          },
+          "satisfaction": {
+            "OpenAI": 0.7369,
+            "Anthropic": 0.6998,
+            "NovaMind": 0.564,
+            "DeepMind": 0.7129,
+            "Meta_AI": 0.6628
+          }
+        },
+        "content_writer_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "content_writer",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.8461,
+            "Anthropic": 0.0989,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0386,
+            "Meta_AI": 0.016
+          },
+          "satisfaction": {
+            "OpenAI": 0.7369,
+            "Anthropic": 0.6998,
+            "NovaMind": 0.564,
+            "DeepMind": 0.7129,
+            "Meta_AI": 0.6628
+          }
+        },
+        "content_writer_cautious": {
+          "archetype": "cautious",
+          "use_case": "content_writer",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.3886,
+            "Anthropic": 0.3867,
+            "NovaMind": 0.0044,
+            "DeepMind": 0.1507,
+            "Meta_AI": 0.0696
+          },
+          "satisfaction": {
+            "OpenAI": 0.7369,
+            "Anthropic": 0.6998,
+            "NovaMind": 0.564,
+            "DeepMind": 0.7129,
+            "Meta_AI": 0.6628
+          }
+        },
+        "healthcare_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "healthcare",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.0256,
+            "Anthropic": 0.3956,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.5757,
+            "Meta_AI": 0.0026
+          },
+          "satisfaction": {
+            "OpenAI": 0.7369,
+            "Anthropic": 0.6998,
+            "NovaMind": 0.564,
+            "DeepMind": 0.7129,
+            "Meta_AI": 0.6628
+          }
+        },
+        "healthcare_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "healthcare",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.8595,
+            "Anthropic": 0.0901,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0339,
+            "Meta_AI": 0.0161
+          },
+          "satisfaction": {
+            "OpenAI": 0.7369,
+            "Anthropic": 0.6998,
+            "NovaMind": 0.564,
+            "DeepMind": 0.7129,
+            "Meta_AI": 0.6628
+          }
+        },
+        "healthcare_cautious": {
+          "archetype": "cautious",
+          "use_case": "healthcare",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.1724,
+            "Anthropic": 0.3967,
+            "NovaMind": 0.0046,
+            "DeepMind": 0.3579,
+            "Meta_AI": 0.0685
+          },
+          "satisfaction": {
+            "OpenAI": 0.7369,
+            "Anthropic": 0.6998,
+            "NovaMind": 0.564,
+            "DeepMind": 0.7129,
+            "Meta_AI": 0.6628
+          }
+        },
+        "finance_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "finance",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.028,
+            "Anthropic": 0.6456,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.323,
+            "Meta_AI": 0.0028
+          },
+          "satisfaction": {
+            "OpenAI": 0.7369,
+            "Anthropic": 0.6998,
+            "NovaMind": 0.564,
+            "DeepMind": 0.7129,
+            "Meta_AI": 0.6628
+          }
+        },
+        "finance_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "finance",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.8539,
+            "Anthropic": 0.0939,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0359,
+            "Meta_AI": 0.0161
+          },
+          "satisfaction": {
+            "OpenAI": 0.7369,
+            "Anthropic": 0.6998,
+            "NovaMind": 0.564,
+            "DeepMind": 0.7129,
+            "Meta_AI": 0.6628
+          }
+        },
+        "finance_cautious": {
+          "archetype": "cautious",
+          "use_case": "finance",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.3817,
+            "Anthropic": 0.393,
+            "NovaMind": 0.0045,
+            "DeepMind": 0.1515,
+            "Meta_AI": 0.0692
+          },
+          "satisfaction": {
+            "OpenAI": 0.7369,
+            "Anthropic": 0.6998,
+            "NovaMind": 0.564,
+            "DeepMind": 0.7129,
+            "Meta_AI": 0.6628
+          }
+        }
+      }
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "OpenAI": 120000000.0,
+          "NovaMind": 60000000.0,
+          "DeepMind": 6666666.6667,
+          "Meta_AI": 6666666.6667,
+          "Anthropic": 6666666.6667
+        },
+        "Horizon_Capital": {
+          "OpenAI": 30000000.0,
+          "NovaMind": 15000000.0,
+          "DeepMind": 1666666.6667,
+          "Meta_AI": 1666666.6667,
+          "Anthropic": 1666666.6667
+        },
+        "AISI_Fund": {
+          "OpenAI": 2855944.3184,
+          "DeepMind": 2016624.2433,
+          "Anthropic": 1718116.0855,
+          "Meta_AI": 1656048.9173,
+          "NovaMind": 1753266.4355
+        }
+      },
+      "funding_multipliers": {
+        "OpenAI": 1.5879,
+        "NovaMind": 1.2952,
+        "DeepMind": 1.0398,
+        "Meta_AI": 1.0384,
+        "Anthropic": 1.0387
+      },
+      "total_funding": 260000000.0
+    },
+    "actor_traces": {
+      "Regulator": "no_action: cooldown: 2 rounds since last intervention",
+      "TechVentures": "vc strategy: top allocation $120,000,000 to OpenAI",
+      "Horizon_Capital": "vc strategy: top allocation $30,000,000 to OpenAI",
+      "AISI_Fund": "gov strategy: top allocation $2,855,944 to OpenAI"
+    }
+  },
+  {
+    "round": 4,
+    "scores": {
+      "OpenAI": 0.9813,
+      "Anthropic": 0.8442,
+      "NovaMind": 0.787,
+      "DeepMind": 0.9306,
+      "Meta_AI": 0.8487
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7434,
+      "Anthropic": 0.7045,
+      "NovaMind": 0.5694,
+      "DeepMind": 0.7171,
+      "Meta_AI": 0.6671
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.8901,
+      "Anthropic": 0.808,
+      "NovaMind": 0.7077,
+      "DeepMind": 0.8563,
+      "Meta_AI": 0.7814
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2389,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2611,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2644,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2356,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.1788,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3712,
+        "safety_alignment": 0.2
+      },
+      "DeepMind": {
+        "fundamental_research": 0.2241,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3259,
+        "safety_alignment": 0.2
+      },
+      "Meta_AI": {
+        "fundamental_research": 0.2025,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3475,
+        "safety_alignment": 0.2
+      }
+    },
+    "benchmark_params": {
+      "coding_bench": {
+        "validity": 0.8438,
+        "exploitability": 0.2529
+      },
+      "reasoning_bench": {
+        "validity": 0.6949,
+        "exploitability": 0.4553
+      }
+    },
+    "per_benchmark_scores": {
+      "coding_bench": {
+        "OpenAI": 0.9846,
+        "Anthropic": 0.7826,
+        "NovaMind": 0.7078,
+        "DeepMind": 0.8612,
+        "Meta_AI": 0.8037
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.978,
+        "Anthropic": 0.9057,
+        "NovaMind": 0.8661,
+        "DeepMind": 1.0,
+        "Meta_AI": 0.8937
+      }
+    },
+    "media_data": {
+      "headlines": [
+        "OpenAI sees surge in adoption (market share +5.9%)",
+        "Consumers are turning away from Anthropic (market share -11.4%)",
+        "DeepMind sees surge in adoption (market share +6.6%)"
+      ],
+      "sentiment": 0.0,
+      "provider_attention": {
+        "OpenAI": 0.4,
+        "DeepMind": 0.4,
+        "Meta_AI": 0.1,
+        "Anthropic": 0.5,
+        "NovaMind": 0.1
+      },
+      "risk_signals": [],
+      "benchmark_attention": {}
+    },
+    "consumer_data": {
+      "market_shares": {
+        "OpenAI": 0.578,
+        "Anthropic": 0.203,
+        "NovaMind": 0.0009,
+        "DeepMind": 0.2012,
+        "Meta_AI": 0.0169
+      },
+      "provider_satisfaction": {
+        "OpenAI": 0.7434,
+        "Anthropic": 0.7045,
+        "NovaMind": 0.5694,
+        "DeepMind": 0.7171,
+        "Meta_AI": 0.6671
+      },
+      "avg_satisfaction": 0.7288,
+      "switching_rate": 0.1184,
+      "segment_data": {
+        "software_dev_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "software_dev",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.9411,
+            "Anthropic": 0.0474,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.0096,
+            "Meta_AI": 0.0013
+          },
+          "satisfaction": {
+            "OpenAI": 0.7434,
+            "Anthropic": 0.7045,
+            "NovaMind": 0.5694,
+            "DeepMind": 0.7171,
+            "Meta_AI": 0.6671
+          }
+        },
+        "software_dev_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "software_dev",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9438,
+            "Anthropic": 0.0205,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.0281,
+            "Meta_AI": 0.007
+          },
+          "satisfaction": {
+            "OpenAI": 0.7434,
+            "Anthropic": 0.7045,
+            "NovaMind": 0.5694,
+            "DeepMind": 0.7171,
+            "Meta_AI": 0.6671
+          }
+        },
+        "software_dev_cautious": {
+          "archetype": "cautious",
+          "use_case": "software_dev",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.7376,
+            "Anthropic": 0.0982,
+            "NovaMind": 0.0013,
+            "DeepMind": 0.1123,
+            "Meta_AI": 0.0507
+          },
+          "satisfaction": {
+            "OpenAI": 0.7434,
+            "Anthropic": 0.7045,
+            "NovaMind": 0.5694,
+            "DeepMind": 0.7171,
+            "Meta_AI": 0.6671
+          }
+        },
+        "content_writer_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "content_writer",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.3598,
+            "Anthropic": 0.4305,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.2079,
+            "Meta_AI": 0.0012
+          },
+          "satisfaction": {
+            "OpenAI": 0.7434,
+            "Anthropic": 0.7045,
+            "NovaMind": 0.5694,
+            "DeepMind": 0.7171,
+            "Meta_AI": 0.6671
+          }
+        },
+        "content_writer_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "content_writer",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9149,
+            "Anthropic": 0.0566,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0195,
+            "Meta_AI": 0.0087
+          },
+          "satisfaction": {
+            "OpenAI": 0.7434,
+            "Anthropic": 0.7045,
+            "NovaMind": 0.5694,
+            "DeepMind": 0.7171,
+            "Meta_AI": 0.6671
+          }
+        },
+        "content_writer_cautious": {
+          "archetype": "cautious",
+          "use_case": "content_writer",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.4678,
+            "Anthropic": 0.3406,
+            "NovaMind": 0.0025,
+            "DeepMind": 0.1337,
+            "Meta_AI": 0.0553
+          },
+          "satisfaction": {
+            "OpenAI": 0.7434,
+            "Anthropic": 0.7045,
+            "NovaMind": 0.5694,
+            "DeepMind": 0.7171,
+            "Meta_AI": 0.6671
+          }
+        },
+        "healthcare_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "healthcare",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.0166,
+            "Anthropic": 0.248,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.7338,
+            "Meta_AI": 0.001
+          },
+          "satisfaction": {
+            "OpenAI": 0.7434,
+            "Anthropic": 0.7045,
+            "NovaMind": 0.5694,
+            "DeepMind": 0.7171,
+            "Meta_AI": 0.6671
+          }
+        },
+        "healthcare_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "healthcare",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9252,
+            "Anthropic": 0.0495,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0161,
+            "Meta_AI": 0.0089
+          },
+          "satisfaction": {
+            "OpenAI": 0.7434,
+            "Anthropic": 0.7045,
+            "NovaMind": 0.5694,
+            "DeepMind": 0.7171,
+            "Meta_AI": 0.6671
+          }
+        },
+        "healthcare_cautious": {
+          "archetype": "cautious",
+          "use_case": "healthcare",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.2585,
+            "Anthropic": 0.3521,
+            "NovaMind": 0.0027,
+            "DeepMind": 0.3318,
+            "Meta_AI": 0.0549
+          },
+          "satisfaction": {
+            "OpenAI": 0.7434,
+            "Anthropic": 0.7045,
+            "NovaMind": 0.5694,
+            "DeepMind": 0.7171,
+            "Meta_AI": 0.6671
+          }
+        },
+        "finance_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "finance",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.0186,
+            "Anthropic": 0.4357,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.5441,
+            "Meta_AI": 0.0011
+          },
+          "satisfaction": {
+            "OpenAI": 0.7434,
+            "Anthropic": 0.7045,
+            "NovaMind": 0.5694,
+            "DeepMind": 0.7171,
+            "Meta_AI": 0.6671
+          }
+        },
+        "finance_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "finance",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9209,
+            "Anthropic": 0.0525,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0175,
+            "Meta_AI": 0.0088
+          },
+          "satisfaction": {
+            "OpenAI": 0.7434,
+            "Anthropic": 0.7045,
+            "NovaMind": 0.5694,
+            "DeepMind": 0.7171,
+            "Meta_AI": 0.6671
+          }
+        },
+        "finance_cautious": {
+          "archetype": "cautious",
+          "use_case": "finance",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.4592,
+            "Anthropic": 0.3477,
+            "NovaMind": 0.0027,
+            "DeepMind": 0.1351,
+            "Meta_AI": 0.0553
+          },
+          "satisfaction": {
+            "OpenAI": 0.7434,
+            "Anthropic": 0.7045,
+            "NovaMind": 0.5694,
+            "DeepMind": 0.7171,
+            "Meta_AI": 0.6671
+          }
+        }
+      }
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "OpenAI": 120000000.0,
+          "DeepMind": 60000000.0,
+          "Meta_AI": 6666666.6667,
+          "NovaMind": 6666666.6667,
+          "Anthropic": 6666666.6667
+        },
+        "Horizon_Capital": {
+          "OpenAI": 30000000.0,
+          "DeepMind": 15000000.0,
+          "Meta_AI": 1666666.6667,
+          "NovaMind": 1666666.6667,
+          "Anthropic": 1666666.6667
+        },
+        "AISI_Fund": {
+          "OpenAI": 3072228.4531,
+          "DeepMind": 2120748.308,
+          "Meta_AI": 1715123.374,
+          "Anthropic": 1563372.36,
+          "NovaMind": 1528527.5048
+        }
+      },
+      "funding_multipliers": {
+        "OpenAI": 1.5887,
+        "DeepMind": 1.2966,
+        "Meta_AI": 1.0386,
+        "NovaMind": 1.0379,
+        "Anthropic": 1.0381
+      },
+      "total_funding": 260000000.0
+    },
+    "actor_traces": {
+      "Regulator": "no_action: max_risk=0.30, below threshold or no escalation path",
+      "TechVentures": "vc strategy: top allocation $120,000,000 to OpenAI",
+      "Horizon_Capital": "vc strategy: top allocation $30,000,000 to OpenAI",
+      "AISI_Fund": "gov strategy: top allocation $3,072,228 to OpenAI"
+    }
+  },
+  {
+    "round": 5,
+    "scores": {
+      "OpenAI": 0.9813,
+      "Anthropic": 0.8683,
+      "NovaMind": 0.787,
+      "DeepMind": 0.9306,
+      "Meta_AI": 0.8487
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7499,
+      "Anthropic": 0.709,
+      "NovaMind": 0.5737,
+      "DeepMind": 0.7223,
+      "Meta_AI": 0.6713
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.9174,
+      "Anthropic": 0.8261,
+      "NovaMind": 0.7315,
+      "DeepMind": 0.8786,
+      "Meta_AI": 0.8016
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.245,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.255,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2562,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2438,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.1761,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3739,
+        "safety_alignment": 0.2
+      },
+      "DeepMind": {
+        "fundamental_research": 0.2207,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3293,
+        "safety_alignment": 0.2
+      },
+      "Meta_AI": {
+        "fundamental_research": 0.1982,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3518,
+        "safety_alignment": 0.2
+      }
+    },
+    "benchmark_params": {
+      "coding_bench": {
+        "validity": 0.8425,
+        "exploitability": 0.2536
+      },
+      "reasoning_bench": {
+        "validity": 0.6938,
+        "exploitability": 0.4564
+      }
+    },
+    "per_benchmark_scores": {
+      "coding_bench": {
+        "OpenAI": 0.9846,
+        "Anthropic": 0.8308,
+        "NovaMind": 0.7078,
+        "DeepMind": 0.8612,
+        "Meta_AI": 0.8037
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.978,
+        "Anthropic": 0.9057,
+        "NovaMind": 0.8661,
+        "DeepMind": 1.0,
+        "Meta_AI": 0.8937
+      }
+    },
+    "media_data": {
+      "headlines": [
+        "OpenAI sees surge in adoption (market share +7.9%)",
+        "Consumers are turning away from Anthropic (market share -8.6%)"
+      ],
+      "sentiment": -0.05,
+      "provider_attention": {
+        "OpenAI": 0.4,
+        "DeepMind": 0.1,
+        "Anthropic": 0.5,
+        "Meta_AI": 0.1,
+        "NovaMind": 0.1
+      },
+      "risk_signals": [],
+      "benchmark_attention": {}
+    },
+    "consumer_data": {
+      "market_shares": {
+        "OpenAI": 0.6681,
+        "Anthropic": 0.1428,
+        "NovaMind": 0.0007,
+        "DeepMind": 0.1763,
+        "Meta_AI": 0.0121
+      },
+      "provider_satisfaction": {
+        "OpenAI": 0.7499,
+        "Anthropic": 0.709,
+        "NovaMind": 0.5737,
+        "DeepMind": 0.7223,
+        "Meta_AI": 0.6713
+      },
+      "avg_satisfaction": 0.7381,
+      "switching_rate": 0.1012,
+      "segment_data": {
+        "software_dev_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "software_dev",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.9754,
+            "Anthropic": 0.0195,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.0041,
+            "Meta_AI": 0.0004
+          },
+          "satisfaction": {
+            "OpenAI": 0.7499,
+            "Anthropic": 0.709,
+            "NovaMind": 0.5737,
+            "DeepMind": 0.7223,
+            "Meta_AI": 0.6713
+          }
+        },
+        "software_dev_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "software_dev",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9668,
+            "Anthropic": 0.0119,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.0176,
+            "Meta_AI": 0.0031
+          },
+          "satisfaction": {
+            "OpenAI": 0.7499,
+            "Anthropic": 0.709,
+            "NovaMind": 0.5737,
+            "DeepMind": 0.7223,
+            "Meta_AI": 0.6713
+          }
+        },
+        "software_dev_cautious": {
+          "archetype": "cautious",
+          "use_case": "software_dev",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.7889,
+            "Anthropic": 0.0789,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.0938,
+            "Meta_AI": 0.0378
+          },
+          "satisfaction": {
+            "OpenAI": 0.7499,
+            "Anthropic": 0.709,
+            "NovaMind": 0.5737,
+            "DeepMind": 0.7223,
+            "Meta_AI": 0.6713
+          }
+        },
+        "content_writer_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "content_writer",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.5971,
+            "Anthropic": 0.2725,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.1294,
+            "Meta_AI": 0.0005
+          },
+          "satisfaction": {
+            "OpenAI": 0.7499,
+            "Anthropic": 0.709,
+            "NovaMind": 0.5737,
+            "DeepMind": 0.7223,
+            "Meta_AI": 0.6713
+          }
+        },
+        "content_writer_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "content_writer",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9543,
+            "Anthropic": 0.0319,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0093,
+            "Meta_AI": 0.0042
+          },
+          "satisfaction": {
+            "OpenAI": 0.7499,
+            "Anthropic": 0.709,
+            "NovaMind": 0.5737,
+            "DeepMind": 0.7223,
+            "Meta_AI": 0.6713
+          }
+        },
+        "content_writer_cautious": {
+          "archetype": "cautious",
+          "use_case": "content_writer",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.5404,
+            "Anthropic": 0.2965,
+            "NovaMind": 0.0015,
+            "DeepMind": 0.118,
+            "Meta_AI": 0.0435
+          },
+          "satisfaction": {
+            "OpenAI": 0.7499,
+            "Anthropic": 0.709,
+            "NovaMind": 0.5737,
+            "DeepMind": 0.7223,
+            "Meta_AI": 0.6713
+          }
+        },
+        "healthcare_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "healthcare",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.0104,
+            "Anthropic": 0.1501,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.8385,
+            "Meta_AI": 0.0004
+          },
+          "satisfaction": {
+            "OpenAI": 0.7499,
+            "Anthropic": 0.709,
+            "NovaMind": 0.5737,
+            "DeepMind": 0.7223,
+            "Meta_AI": 0.6713
+          }
+        },
+        "healthcare_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "healthcare",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9612,
+            "Anthropic": 0.027,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0072,
+            "Meta_AI": 0.0044
+          },
+          "satisfaction": {
+            "OpenAI": 0.7499,
+            "Anthropic": 0.709,
+            "NovaMind": 0.5737,
+            "DeepMind": 0.7223,
+            "Meta_AI": 0.6713
+          }
+        },
+        "healthcare_cautious": {
+          "archetype": "cautious",
+          "use_case": "healthcare",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.3397,
+            "Anthropic": 0.3086,
+            "NovaMind": 0.0016,
+            "DeepMind": 0.3065,
+            "Meta_AI": 0.0436
+          },
+          "satisfaction": {
+            "OpenAI": 0.7499,
+            "Anthropic": 0.709,
+            "NovaMind": 0.5737,
+            "DeepMind": 0.7223,
+            "Meta_AI": 0.6713
+          }
+        },
+        "finance_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "finance",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.3628,
+            "Anthropic": 0.2811,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.3551,
+            "Meta_AI": 0.0004
+          },
+          "satisfaction": {
+            "OpenAI": 0.7499,
+            "Anthropic": 0.709,
+            "NovaMind": 0.5737,
+            "DeepMind": 0.7223,
+            "Meta_AI": 0.6713
+          }
+        },
+        "finance_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "finance",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9583,
+            "Anthropic": 0.029,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.008,
+            "Meta_AI": 0.0043
+          },
+          "satisfaction": {
+            "OpenAI": 0.7499,
+            "Anthropic": 0.709,
+            "NovaMind": 0.5737,
+            "DeepMind": 0.7223,
+            "Meta_AI": 0.6713
+          }
+        },
+        "finance_cautious": {
+          "archetype": "cautious",
+          "use_case": "finance",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.5309,
+            "Anthropic": 0.3039,
+            "NovaMind": 0.0016,
+            "DeepMind": 0.1198,
+            "Meta_AI": 0.0437
+          },
+          "satisfaction": {
+            "OpenAI": 0.7499,
+            "Anthropic": 0.709,
+            "NovaMind": 0.5737,
+            "DeepMind": 0.7223,
+            "Meta_AI": 0.6713
+          }
+        }
+      }
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "OpenAI": 120000000.0,
+          "DeepMind": 60000000.0,
+          "Meta_AI": 6666666.6667,
+          "NovaMind": 6666666.6667,
+          "Anthropic": 6666666.6667
+        },
+        "Horizon_Capital": {
+          "OpenAI": 30000000.0,
+          "DeepMind": 15000000.0,
+          "Meta_AI": 1666666.6667,
+          "NovaMind": 1666666.6667,
+          "Anthropic": 1666666.6667
+        },
+        "AISI_Fund": {
+          "OpenAI": 3072228.4531,
+          "DeepMind": 2120748.308,
+          "Meta_AI": 1715123.374,
+          "Anthropic": 1563372.36,
+          "NovaMind": 1528527.5048
+        }
+      },
+      "funding_multipliers": {
+        "OpenAI": 1.5887,
+        "DeepMind": 1.2966,
+        "Meta_AI": 1.0386,
+        "NovaMind": 1.0379,
+        "Anthropic": 1.0381
+      },
+      "total_funding": 260000000.0
+    },
+    "actor_traces": {
+      "Regulator": "no_action: max_risk=0.30, below threshold or no escalation path",
+      "TechVentures": "vc strategy: top allocation $120,000,000 to OpenAI",
+      "Horizon_Capital": "vc strategy: top allocation $30,000,000 to OpenAI",
+      "AISI_Fund": "gov strategy: top allocation $3,072,228 to OpenAI"
+    }
+  },
+  {
+    "round": 6,
+    "scores": {
+      "OpenAI": 0.9813,
+      "Anthropic": 0.8694,
+      "NovaMind": 0.787,
+      "DeepMind": 0.9306,
+      "Meta_AI": 0.8487
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7564,
+      "Anthropic": 0.7136,
+      "NovaMind": 0.5781,
+      "DeepMind": 0.7276,
+      "Meta_AI": 0.6755
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.9366,
+      "Anthropic": 0.8391,
+      "NovaMind": 0.7482,
+      "DeepMind": 0.8942,
+      "Meta_AI": 0.8157
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2492,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2508,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2575,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2425,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.1792,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3708,
+        "safety_alignment": 0.2
+      },
+      "DeepMind": {
+        "fundamental_research": 0.2233,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3267,
+        "safety_alignment": 0.2
+      },
+      "Meta_AI": {
+        "fundamental_research": 0.2002,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3498,
+        "safety_alignment": 0.2
+      }
+    },
+    "benchmark_params": {
+      "coding_bench": {
+        "validity": 0.8412,
+        "exploitability": 0.2542
+      },
+      "reasoning_bench": {
+        "validity": 0.6928,
+        "exploitability": 0.4575
+      }
+    },
+    "per_benchmark_scores": {
+      "coding_bench": {
+        "OpenAI": 0.9846,
+        "Anthropic": 0.833,
+        "NovaMind": 0.7078,
+        "DeepMind": 0.8612,
+        "Meta_AI": 0.8037
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.978,
+        "Anthropic": 0.9057,
+        "NovaMind": 0.8661,
+        "DeepMind": 1.0,
+        "Meta_AI": 0.8937
+      }
+    },
+    "media_data": {
+      "headlines": [
+        "OpenAI sees surge in adoption (market share +9.0%)",
+        "Consumers are turning away from Anthropic (market share -6.0%)"
+      ],
+      "sentiment": -0.05,
+      "provider_attention": {
+        "OpenAI": 0.4,
+        "DeepMind": 0.1,
+        "Anthropic": 0.5,
+        "Meta_AI": 0.1,
+        "NovaMind": 0.1
+      },
+      "risk_signals": [],
+      "benchmark_attention": {}
+    },
+    "consumer_data": {
+      "market_shares": {
+        "OpenAI": 0.7612,
+        "Anthropic": 0.1014,
+        "NovaMind": 0.0006,
+        "DeepMind": 0.1278,
+        "Meta_AI": 0.009
+      },
+      "provider_satisfaction": {
+        "OpenAI": 0.7564,
+        "Anthropic": 0.7136,
+        "NovaMind": 0.5781,
+        "DeepMind": 0.7276,
+        "Meta_AI": 0.6755
+      },
+      "avg_satisfaction": 0.7475,
+      "switching_rate": 0.093,
+      "segment_data": {
+        "software_dev_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "software_dev",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.9895,
+            "Anthropic": 0.0078,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.0018,
+            "Meta_AI": 0.0004
+          },
+          "satisfaction": {
+            "OpenAI": 0.7564,
+            "Anthropic": 0.7136,
+            "NovaMind": 0.5781,
+            "DeepMind": 0.7276,
+            "Meta_AI": 0.6755
+          }
+        },
+        "software_dev_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "software_dev",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9805,
+            "Anthropic": 0.0068,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.0108,
+            "Meta_AI": 0.0014
+          },
+          "satisfaction": {
+            "OpenAI": 0.7564,
+            "Anthropic": 0.7136,
+            "NovaMind": 0.5781,
+            "DeepMind": 0.7276,
+            "Meta_AI": 0.6755
+          }
+        },
+        "software_dev_cautious": {
+          "archetype": "cautious",
+          "use_case": "software_dev",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.8302,
+            "Anthropic": 0.063,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.0782,
+            "Meta_AI": 0.028
+          },
+          "satisfaction": {
+            "OpenAI": 0.7564,
+            "Anthropic": 0.7136,
+            "NovaMind": 0.5781,
+            "DeepMind": 0.7276,
+            "Meta_AI": 0.6755
+          }
+        },
+        "content_writer_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "content_writer",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.7549,
+            "Anthropic": 0.1657,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.0784,
+            "Meta_AI": 0.0005
+          },
+          "satisfaction": {
+            "OpenAI": 0.7564,
+            "Anthropic": 0.7136,
+            "NovaMind": 0.5781,
+            "DeepMind": 0.7276,
+            "Meta_AI": 0.6755
+          }
+        },
+        "content_writer_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "content_writer",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9759,
+            "Anthropic": 0.018,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0038,
+            "Meta_AI": 0.002
+          },
+          "satisfaction": {
+            "OpenAI": 0.7564,
+            "Anthropic": 0.7136,
+            "NovaMind": 0.5781,
+            "DeepMind": 0.7276,
+            "Meta_AI": 0.6755
+          }
+        },
+        "content_writer_cautious": {
+          "archetype": "cautious",
+          "use_case": "content_writer",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.6056,
+            "Anthropic": 0.2557,
+            "NovaMind": 0.0008,
+            "DeepMind": 0.1038,
+            "Meta_AI": 0.034
+          },
+          "satisfaction": {
+            "OpenAI": 0.7564,
+            "Anthropic": 0.7136,
+            "NovaMind": 0.5781,
+            "DeepMind": 0.7276,
+            "Meta_AI": 0.6755
+          }
+        },
+        "healthcare_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "healthcare",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.314,
+            "Anthropic": 0.0871,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.598,
+            "Meta_AI": 0.0004
+          },
+          "satisfaction": {
+            "OpenAI": 0.7564,
+            "Anthropic": 0.7136,
+            "NovaMind": 0.5781,
+            "DeepMind": 0.7276,
+            "Meta_AI": 0.6755
+          }
+        },
+        "healthcare_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "healthcare",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9802,
+            "Anthropic": 0.0147,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0027,
+            "Meta_AI": 0.0021
+          },
+          "satisfaction": {
+            "OpenAI": 0.7564,
+            "Anthropic": 0.7136,
+            "NovaMind": 0.5781,
+            "DeepMind": 0.7276,
+            "Meta_AI": 0.6755
+          }
+        },
+        "healthcare_cautious": {
+          "archetype": "cautious",
+          "use_case": "healthcare",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.4146,
+            "Anthropic": 0.2679,
+            "NovaMind": 0.001,
+            "DeepMind": 0.2822,
+            "Meta_AI": 0.0344
+          },
+          "satisfaction": {
+            "OpenAI": 0.7564,
+            "Anthropic": 0.7136,
+            "NovaMind": 0.5781,
+            "DeepMind": 0.7276,
+            "Meta_AI": 0.6755
+          }
+        },
+        "finance_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "finance",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.5987,
+            "Anthropic": 0.1741,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.2261,
+            "Meta_AI": 0.0004
+          },
+          "satisfaction": {
+            "OpenAI": 0.7564,
+            "Anthropic": 0.7136,
+            "NovaMind": 0.5781,
+            "DeepMind": 0.7276,
+            "Meta_AI": 0.6755
+          }
+        },
+        "finance_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "finance",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9785,
+            "Anthropic": 0.016,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0031,
+            "Meta_AI": 0.0021
+          },
+          "satisfaction": {
+            "OpenAI": 0.7564,
+            "Anthropic": 0.7136,
+            "NovaMind": 0.5781,
+            "DeepMind": 0.7276,
+            "Meta_AI": 0.6755
+          }
+        },
+        "finance_cautious": {
+          "archetype": "cautious",
+          "use_case": "finance",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.5958,
+            "Anthropic": 0.2631,
+            "NovaMind": 0.0009,
+            "DeepMind": 0.1059,
+            "Meta_AI": 0.0343
+          },
+          "satisfaction": {
+            "OpenAI": 0.7564,
+            "Anthropic": 0.7136,
+            "NovaMind": 0.5781,
+            "DeepMind": 0.7276,
+            "Meta_AI": 0.6755
+          }
+        }
+      }
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "OpenAI": 120000000.0,
+          "Meta_AI": 60000000.0,
+          "NovaMind": 6666666.6667,
+          "DeepMind": 6666666.6667,
+          "Anthropic": 6666666.6667
+        },
+        "Horizon_Capital": {
+          "OpenAI": 30000000.0,
+          "Meta_AI": 15000000.0,
+          "NovaMind": 1666666.6667,
+          "DeepMind": 1666666.6667,
+          "Anthropic": 1666666.6667
+        },
+        "AISI_Fund": {
+          "OpenAI": 3385075.4752,
+          "DeepMind": 1793625.4361,
+          "Anthropic": 1719261.0256,
+          "Meta_AI": 1648898.7182,
+          "NovaMind": 1453139.345
+        }
+      },
+      "funding_multipliers": {
+        "OpenAI": 1.5899,
+        "Meta_AI": 1.2948,
+        "NovaMind": 1.0376,
+        "DeepMind": 1.0389,
+        "Anthropic": 1.0387
+      },
+      "total_funding": 260000000.0
+    },
+    "actor_traces": {
+      "Regulator": "no_action: max_risk=0.30, below threshold or no escalation path",
+      "TechVentures": "vc strategy: top allocation $120,000,000 to OpenAI",
+      "Horizon_Capital": "vc strategy: top allocation $30,000,000 to OpenAI",
+      "AISI_Fund": "gov strategy: top allocation $3,385,075 to OpenAI"
+    }
+  },
+  {
+    "round": 7,
+    "scores": {
+      "OpenAI": 0.9813,
+      "Anthropic": 0.8694,
+      "NovaMind": 0.787,
+      "DeepMind": 0.9306,
+      "Meta_AI": 0.8487
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7629,
+      "Anthropic": 0.7181,
+      "NovaMind": 0.5824,
+      "DeepMind": 0.7317,
+      "Meta_AI": 0.6807
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.95,
+      "Anthropic": 0.8481,
+      "NovaMind": 0.7598,
+      "DeepMind": 0.9051,
+      "Meta_AI": 0.8256
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2518,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2482,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2573,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2427,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.1801,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3699,
+        "safety_alignment": 0.2
+      },
+      "DeepMind": {
+        "fundamental_research": 0.2239,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3261,
+        "safety_alignment": 0.2
+      },
+      "Meta_AI": {
+        "fundamental_research": 0.2003,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3497,
+        "safety_alignment": 0.2
+      }
+    },
+    "benchmark_params": {
+      "coding_bench": {
+        "validity": 0.8399,
+        "exploitability": 0.2548
+      },
+      "reasoning_bench": {
+        "validity": 0.6917,
+        "exploitability": 0.4586
+      },
+      "benchmark_r7": {
+        "validity": 0.85,
+        "exploitability": 0.15
+      }
+    },
+    "per_benchmark_scores": {
+      "coding_bench": {
+        "OpenAI": 0.9846,
+        "Anthropic": 0.833,
+        "NovaMind": 0.7078,
+        "DeepMind": 0.8612,
+        "Meta_AI": 0.8037
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.978,
+        "Anthropic": 0.9057,
+        "NovaMind": 0.8661,
+        "DeepMind": 1.0,
+        "Meta_AI": 0.8937
+      }
+    },
+    "new_benchmark": {
+      "name": "benchmark_r7",
+      "validity": 0.85,
+      "exploitability": 0.15,
+      "trigger": "periodic_introduction:round_7"
+    },
+    "media_data": {
+      "headlines": [
+        "New benchmark introduced: benchmark_r7",
+        "OpenAI raises $3,385,075 from AISI_Fund",
+        "OpenAI sees surge in adoption (market share +9.3%)",
+        "Consumers are turning away from Anthropic (market share -4.1%)",
+        "Consumers are turning away from DeepMind (market share -4.9%)"
+      ],
+      "sentiment": 0.0,
+      "provider_attention": {
+        "OpenAI": 0.4,
+        "DeepMind": 0.5,
+        "Anthropic": 0.5,
+        "Meta_AI": 0.1,
+        "NovaMind": 0.1
+      },
+      "risk_signals": [],
+      "benchmark_attention": {
+        "benchmark_r7": 0.7
+      }
+    },
+    "consumer_data": {
+      "market_shares": {
+        "OpenAI": 0.8256,
+        "Anthropic": 0.0734,
+        "NovaMind": 0.0006,
+        "DeepMind": 0.0937,
+        "Meta_AI": 0.0068
+      },
+      "provider_satisfaction": {
+        "OpenAI": 0.7629,
+        "Anthropic": 0.7181,
+        "NovaMind": 0.5824,
+        "DeepMind": 0.7317,
+        "Meta_AI": 0.6807
+      },
+      "avg_satisfaction": 0.756,
+      "switching_rate": 0.0644,
+      "segment_data": {
+        "software_dev_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "software_dev",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.9956,
+            "Anthropic": 0.0027,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.0007,
+            "Meta_AI": 0.0004
+          },
+          "satisfaction": {
+            "OpenAI": 0.7629,
+            "Anthropic": 0.7181,
+            "NovaMind": 0.5824,
+            "DeepMind": 0.7317,
+            "Meta_AI": 0.6807
+          }
+        },
+        "software_dev_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "software_dev",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9888,
+            "Anthropic": 0.0035,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.0065,
+            "Meta_AI": 0.0006
+          },
+          "satisfaction": {
+            "OpenAI": 0.7629,
+            "Anthropic": 0.7181,
+            "NovaMind": 0.5824,
+            "DeepMind": 0.7317,
+            "Meta_AI": 0.6807
+          }
+        },
+        "software_dev_cautious": {
+          "archetype": "cautious",
+          "use_case": "software_dev",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.8637,
+            "Anthropic": 0.05,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.0651,
+            "Meta_AI": 0.0206
+          },
+          "satisfaction": {
+            "OpenAI": 0.7629,
+            "Anthropic": 0.7181,
+            "NovaMind": 0.5824,
+            "DeepMind": 0.7317,
+            "Meta_AI": 0.6807
+          }
+        },
+        "content_writer_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "content_writer",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.8546,
+            "Anthropic": 0.0978,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.0466,
+            "Meta_AI": 0.0005
+          },
+          "satisfaction": {
+            "OpenAI": 0.7629,
+            "Anthropic": 0.7181,
+            "NovaMind": 0.5824,
+            "DeepMind": 0.7317,
+            "Meta_AI": 0.6807
+          }
+        },
+        "content_writer_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "content_writer",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9871,
+            "Anthropic": 0.0101,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0015,
+            "Meta_AI": 0.001
+          },
+          "satisfaction": {
+            "OpenAI": 0.7629,
+            "Anthropic": 0.7181,
+            "NovaMind": 0.5824,
+            "DeepMind": 0.7317,
+            "Meta_AI": 0.6807
+          }
+        },
+        "content_writer_cautious": {
+          "archetype": "cautious",
+          "use_case": "content_writer",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.6629,
+            "Anthropic": 0.2189,
+            "NovaMind": 0.0008,
+            "DeepMind": 0.0909,
+            "Meta_AI": 0.0264
+          },
+          "satisfaction": {
+            "OpenAI": 0.7629,
+            "Anthropic": 0.7181,
+            "NovaMind": 0.5824,
+            "DeepMind": 0.7317,
+            "Meta_AI": 0.6807
+          }
+        },
+        "healthcare_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "healthcare",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.5294,
+            "Anthropic": 0.0487,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.4209,
+            "Meta_AI": 0.0004
+          },
+          "satisfaction": {
+            "OpenAI": 0.7629,
+            "Anthropic": 0.7181,
+            "NovaMind": 0.5824,
+            "DeepMind": 0.7317,
+            "Meta_AI": 0.6807
+          }
+        },
+        "healthcare_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "healthcare",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9896,
+            "Anthropic": 0.008,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.001,
+            "Meta_AI": 0.001
+          },
+          "satisfaction": {
+            "OpenAI": 0.7629,
+            "Anthropic": 0.7181,
+            "NovaMind": 0.5824,
+            "DeepMind": 0.7317,
+            "Meta_AI": 0.6807
+          }
+        },
+        "healthcare_cautious": {
+          "archetype": "cautious",
+          "use_case": "healthcare",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.4821,
+            "Anthropic": 0.2307,
+            "NovaMind": 0.001,
+            "DeepMind": 0.2593,
+            "Meta_AI": 0.0269
+          },
+          "satisfaction": {
+            "OpenAI": 0.7629,
+            "Anthropic": 0.7181,
+            "NovaMind": 0.5824,
+            "DeepMind": 0.7317,
+            "Meta_AI": 0.6807
+          }
+        },
+        "finance_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "finance",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.7528,
+            "Anthropic": 0.1045,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.1416,
+            "Meta_AI": 0.0004
+          },
+          "satisfaction": {
+            "OpenAI": 0.7629,
+            "Anthropic": 0.7181,
+            "NovaMind": 0.5824,
+            "DeepMind": 0.7317,
+            "Meta_AI": 0.6807
+          }
+        },
+        "finance_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "finance",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9886,
+            "Anthropic": 0.0089,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0012,
+            "Meta_AI": 0.001
+          },
+          "satisfaction": {
+            "OpenAI": 0.7629,
+            "Anthropic": 0.7181,
+            "NovaMind": 0.5824,
+            "DeepMind": 0.7317,
+            "Meta_AI": 0.6807
+          }
+        },
+        "finance_cautious": {
+          "archetype": "cautious",
+          "use_case": "finance",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.6531,
+            "Anthropic": 0.226,
+            "NovaMind": 0.0009,
+            "DeepMind": 0.0932,
+            "Meta_AI": 0.0268
+          },
+          "satisfaction": {
+            "OpenAI": 0.7629,
+            "Anthropic": 0.7181,
+            "NovaMind": 0.5824,
+            "DeepMind": 0.7317,
+            "Meta_AI": 0.6807
+          }
+        }
+      }
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "OpenAI": 120000000.0,
+          "Meta_AI": 60000000.0,
+          "NovaMind": 6666666.6667,
+          "DeepMind": 6666666.6667,
+          "Anthropic": 6666666.6667
+        },
+        "Horizon_Capital": {
+          "OpenAI": 30000000.0,
+          "Meta_AI": 15000000.0,
+          "NovaMind": 1666666.6667,
+          "DeepMind": 1666666.6667,
+          "Anthropic": 1666666.6667
+        },
+        "AISI_Fund": {
+          "OpenAI": 3385075.4752,
+          "DeepMind": 1793625.4361,
+          "Anthropic": 1719261.0256,
+          "Meta_AI": 1648898.7182,
+          "NovaMind": 1453139.345
+        }
+      },
+      "funding_multipliers": {
+        "OpenAI": 1.5899,
+        "Meta_AI": 1.2948,
+        "NovaMind": 1.0376,
+        "DeepMind": 1.0389,
+        "Anthropic": 1.0387
+      },
+      "total_funding": 260000000.0
+    },
+    "actor_traces": {
+      "Regulator": "no_action: max_risk=0.30, below threshold or no escalation path",
+      "TechVentures": "vc strategy: top allocation $120,000,000 to OpenAI",
+      "Horizon_Capital": "vc strategy: top allocation $30,000,000 to OpenAI",
+      "AISI_Fund": "gov strategy: top allocation $3,385,075 to OpenAI"
+    }
+  },
+  {
+    "round": 8,
+    "scores": {
+      "OpenAI": 0.8933,
+      "Anthropic": 0.8718,
+      "NovaMind": 0.796,
+      "DeepMind": 0.855,
+      "Meta_AI": 0.8302
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7693,
+      "Anthropic": 0.7226,
+      "NovaMind": 0.5868,
+      "DeepMind": 0.7359,
+      "Meta_AI": 0.6859
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.933,
+      "Anthropic": 0.8552,
+      "NovaMind": 0.7706,
+      "DeepMind": 0.8901,
+      "Meta_AI": 0.827
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2558,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2442,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.2601,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2399,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.1836,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3664,
+        "safety_alignment": 0.2
+      },
+      "DeepMind": {
+        "fundamental_research": 0.2272,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3228,
+        "safety_alignment": 0.2
+      },
+      "Meta_AI": {
+        "fundamental_research": 0.2033,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3467,
+        "safety_alignment": 0.2
+      }
+    },
+    "benchmark_params": {
+      "coding_bench": {
+        "validity": 0.8387,
+        "exploitability": 0.2554
+      },
+      "reasoning_bench": {
+        "validity": 0.6907,
+        "exploitability": 0.4598
+      },
+      "benchmark_r7": {
+        "validity": 0.8487,
+        "exploitability": 0.1504
+      }
+    },
+    "per_benchmark_scores": {
+      "coding_bench": {
+        "OpenAI": 0.9846,
+        "Anthropic": 0.833,
+        "NovaMind": 0.753,
+        "DeepMind": 0.8612,
+        "Meta_AI": 0.8037
+      },
+      "reasoning_bench": {
+        "OpenAI": 0.978,
+        "Anthropic": 0.9057,
+        "NovaMind": 0.8661,
+        "DeepMind": 1.0,
+        "Meta_AI": 0.8937
+      },
+      "benchmark_r7": {
+        "OpenAI": 0.7172,
+        "Anthropic": 0.8765,
+        "NovaMind": 0.7687,
+        "DeepMind": 0.7039,
+        "Meta_AI": 0.793
+      }
+    },
+    "media_data": {
+      "headlines": [
+        "OpenAI sees surge in adoption (market share +6.4%)",
+        "Consumers are turning away from DeepMind (market share -3.4%)"
+      ],
+      "sentiment": -0.05,
+      "provider_attention": {
+        "OpenAI": 0.4,
+        "Anthropic": 0.1,
+        "DeepMind": 0.5,
+        "Meta_AI": 0.1,
+        "NovaMind": 0.1
+      },
+      "risk_signals": [],
+      "benchmark_attention": {}
+    },
+    "consumer_data": {
+      "market_shares": {
+        "OpenAI": 0.8668,
+        "Anthropic": 0.0556,
+        "NovaMind": 0.0006,
+        "DeepMind": 0.0717,
+        "Meta_AI": 0.0053
+      },
+      "provider_satisfaction": {
+        "OpenAI": 0.7693,
+        "Anthropic": 0.7226,
+        "NovaMind": 0.5868,
+        "DeepMind": 0.7359,
+        "Meta_AI": 0.6859
+      },
+      "avg_satisfaction": 0.7638,
+      "switching_rate": 0.0412,
+      "segment_data": {
+        "software_dev_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "software_dev",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.9973,
+            "Anthropic": 0.001,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.0007,
+            "Meta_AI": 0.0004
+          },
+          "satisfaction": {
+            "OpenAI": 0.7693,
+            "Anthropic": 0.7226,
+            "NovaMind": 0.5868,
+            "DeepMind": 0.7359,
+            "Meta_AI": 0.6859
+          }
+        },
+        "software_dev_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "software_dev",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9934,
+            "Anthropic": 0.0018,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.0036,
+            "Meta_AI": 0.0006
+          },
+          "satisfaction": {
+            "OpenAI": 0.7693,
+            "Anthropic": 0.7226,
+            "NovaMind": 0.5868,
+            "DeepMind": 0.7359,
+            "Meta_AI": 0.6859
+          }
+        },
+        "software_dev_cautious": {
+          "archetype": "cautious",
+          "use_case": "software_dev",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.8902,
+            "Anthropic": 0.0399,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.0541,
+            "Meta_AI": 0.0152
+          },
+          "satisfaction": {
+            "OpenAI": 0.7693,
+            "Anthropic": 0.7226,
+            "NovaMind": 0.5868,
+            "DeepMind": 0.7359,
+            "Meta_AI": 0.6859
+          }
+        },
+        "content_writer_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "content_writer",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.9092,
+            "Anthropic": 0.0602,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.0295,
+            "Meta_AI": 0.0005
+          },
+          "satisfaction": {
+            "OpenAI": 0.7693,
+            "Anthropic": 0.7226,
+            "NovaMind": 0.5868,
+            "DeepMind": 0.7359,
+            "Meta_AI": 0.6859
+          }
+        },
+        "content_writer_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "content_writer",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9923,
+            "Anthropic": 0.0058,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0007,
+            "Meta_AI": 0.001
+          },
+          "satisfaction": {
+            "OpenAI": 0.7693,
+            "Anthropic": 0.7226,
+            "NovaMind": 0.5868,
+            "DeepMind": 0.7359,
+            "Meta_AI": 0.6859
+          }
+        },
+        "content_writer_cautious": {
+          "archetype": "cautious",
+          "use_case": "content_writer",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.7101,
+            "Anthropic": 0.1889,
+            "NovaMind": 0.0008,
+            "DeepMind": 0.0795,
+            "Meta_AI": 0.0208
+          },
+          "satisfaction": {
+            "OpenAI": 0.7693,
+            "Anthropic": 0.7226,
+            "NovaMind": 0.5868,
+            "DeepMind": 0.7359,
+            "Meta_AI": 0.6859
+          }
+        },
+        "healthcare_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "healthcare",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.6631,
+            "Anthropic": 0.0281,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.3079,
+            "Meta_AI": 0.0004
+          },
+          "satisfaction": {
+            "OpenAI": 0.7693,
+            "Anthropic": 0.7226,
+            "NovaMind": 0.5868,
+            "DeepMind": 0.7359,
+            "Meta_AI": 0.6859
+          }
+        },
+        "healthcare_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "healthcare",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9947,
+            "Anthropic": 0.004,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0004,
+            "Meta_AI": 0.0005
+          },
+          "satisfaction": {
+            "OpenAI": 0.7693,
+            "Anthropic": 0.7226,
+            "NovaMind": 0.5868,
+            "DeepMind": 0.7359,
+            "Meta_AI": 0.6859
+          }
+        },
+        "healthcare_cautious": {
+          "archetype": "cautious",
+          "use_case": "healthcare",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.5405,
+            "Anthropic": 0.1996,
+            "NovaMind": 0.001,
+            "DeepMind": 0.2376,
+            "Meta_AI": 0.0213
+          },
+          "satisfaction": {
+            "OpenAI": 0.7693,
+            "Anthropic": 0.7226,
+            "NovaMind": 0.5868,
+            "DeepMind": 0.7359,
+            "Meta_AI": 0.6859
+          }
+        },
+        "finance_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "finance",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.8444,
+            "Anthropic": 0.0633,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.0912,
+            "Meta_AI": 0.0004
+          },
+          "satisfaction": {
+            "OpenAI": 0.7693,
+            "Anthropic": 0.7226,
+            "NovaMind": 0.5868,
+            "DeepMind": 0.7359,
+            "Meta_AI": 0.6859
+          }
+        },
+        "finance_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "finance",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9937,
+            "Anthropic": 0.0045,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0005,
+            "Meta_AI": 0.001
+          },
+          "satisfaction": {
+            "OpenAI": 0.7693,
+            "Anthropic": 0.7226,
+            "NovaMind": 0.5868,
+            "DeepMind": 0.7359,
+            "Meta_AI": 0.6859
+          }
+        },
+        "finance_cautious": {
+          "archetype": "cautious",
+          "use_case": "finance",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.702,
+            "Anthropic": 0.1943,
+            "NovaMind": 0.0009,
+            "DeepMind": 0.0818,
+            "Meta_AI": 0.021
+          },
+          "satisfaction": {
+            "OpenAI": 0.7693,
+            "Anthropic": 0.7226,
+            "NovaMind": 0.5868,
+            "DeepMind": 0.7359,
+            "Meta_AI": 0.6859
+          }
+        }
+      }
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "OpenAI": 120000000.0,
+          "NovaMind": 60000000.0,
+          "Anthropic": 6666666.6667,
+          "Meta_AI": 6666666.6667,
+          "DeepMind": 6666666.6667
+        },
+        "Horizon_Capital": {
+          "OpenAI": 30000000.0,
+          "NovaMind": 15000000.0,
+          "Anthropic": 1666666.6667,
+          "Meta_AI": 1666666.6667,
+          "DeepMind": 1666666.6667
+        },
+        "AISI_Fund": {
+          "OpenAI": 3210752.2132,
+          "Anthropic": 1808365.7115,
+          "DeepMind": 1736101.1454,
+          "Meta_AI": 1697166.0397,
+          "NovaMind": 1547614.8903
+        }
+      },
+      "funding_multipliers": {
+        "OpenAI": 1.5893,
+        "NovaMind": 1.2944,
+        "Anthropic": 1.039,
+        "Meta_AI": 1.0386,
+        "DeepMind": 1.0387
+      },
+      "total_funding": 260000000.0
+    },
+    "actor_traces": {
+      "Regulator": "no_action: max_risk=0.30, below threshold or no escalation path",
+      "TechVentures": "vc strategy: top allocation $120,000,000 to OpenAI",
+      "Horizon_Capital": "vc strategy: top allocation $30,000,000 to OpenAI",
+      "AISI_Fund": "gov strategy: top allocation $3,210,752 to OpenAI"
+    }
+  },
+  {
+    "round": 9,
+    "scores": {
+      "OpenAI": 0.9494,
+      "Anthropic": 0.8718,
+      "NovaMind": 0.796,
+      "DeepMind": 0.8876,
+      "Meta_AI": 0.8302
+    },
+    "true_capabilities": {
+      "OpenAI": 0.7758,
+      "Anthropic": 0.7272,
+      "NovaMind": 0.5923,
+      "DeepMind": 0.7401,
+      "Meta_AI": 0.6902
+    },
+    "believed_capabilities": {
+      "OpenAI": 0.9379,
+      "Anthropic": 0.8602,
+      "NovaMind": 0.7782,
+      "DeepMind": 0.8894,
+      "Meta_AI": 0.828
+    },
+    "strategies": {
+      "OpenAI": {
+        "fundamental_research": 0.2583,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.2417,
+        "safety_alignment": 0.25
+      },
+      "Anthropic": {
+        "fundamental_research": 0.271,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.229,
+        "safety_alignment": 0.25
+      },
+      "NovaMind": {
+        "fundamental_research": 0.1956,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3544,
+        "safety_alignment": 0.2
+      },
+      "DeepMind": {
+        "fundamental_research": 0.2314,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3186,
+        "safety_alignment": 0.2
+      },
+      "Meta_AI": {
+        "fundamental_research": 0.2125,
+        "training_optimization": 0.25,
+        "evaluation_engineering": 0.3375,
+        "safety_alignment": 0.2
+      }
+    },
+    "benchmark_params": {
+      "coding_bench": {
+        "validity": 0.8374,
+        "exploitability": 0.256
+      },
+      "reasoning_bench": {
+        "validity": 0.6896,
+        "exploitability": 0.4609
+      },
+      "benchmark_r7": {
+        "validity": 0.8475,
+        "exploitability": 0.1507
+      }
+    },
+    "per_benchmark_scores": {
+      "coding_bench": {
+        "OpenAI": 1.0,
+        "Anthropic": 0.833,
+        "NovaMind": 0.753,
+        "DeepMind": 0.8612,
+        "Meta_AI": 0.8037
+      },
+      "reasoning_bench": {
+        "OpenAI": 1.0,
+        "Anthropic": 0.9057,
+        "NovaMind": 0.8661,
+        "DeepMind": 1.0,
+        "Meta_AI": 0.8937
+      },
+      "benchmark_r7": {
+        "OpenAI": 0.8481,
+        "Anthropic": 0.8765,
+        "NovaMind": 0.7687,
+        "DeepMind": 0.8016,
+        "Meta_AI": 0.793
+      }
+    },
+    "media_data": {
+      "headlines": [
+        "OpenAI surges by 0.056",
+        "OpenAI takes #1 on reasoning_bench",
+        "OpenAI sees surge in adoption (market share +4.1%)"
+      ],
+      "sentiment": 0.25,
+      "provider_attention": {
+        "OpenAI": 0.6,
+        "DeepMind": 0.1,
+        "Anthropic": 0.1,
+        "Meta_AI": 0.1,
+        "NovaMind": 0.1
+      },
+      "risk_signals": [],
+      "benchmark_attention": {
+        "reasoning_bench": 0.4
+      }
+    },
+    "consumer_data": {
+      "market_shares": {
+        "OpenAI": 0.8961,
+        "Anthropic": 0.043,
+        "NovaMind": 0.0006,
+        "DeepMind": 0.0562,
+        "Meta_AI": 0.0042
+      },
+      "provider_satisfaction": {
+        "OpenAI": 0.7758,
+        "Anthropic": 0.7272,
+        "NovaMind": 0.5923,
+        "DeepMind": 0.7401,
+        "Meta_AI": 0.6902
+      },
+      "avg_satisfaction": 0.7712,
+      "switching_rate": 0.0293,
+      "segment_data": {
+        "software_dev_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "software_dev",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.9973,
+            "Anthropic": 0.001,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.0007,
+            "Meta_AI": 0.0004
+          },
+          "satisfaction": {
+            "OpenAI": 0.7758,
+            "Anthropic": 0.7272,
+            "NovaMind": 0.5923,
+            "DeepMind": 0.7401,
+            "Meta_AI": 0.6902
+          }
+        },
+        "software_dev_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "software_dev",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9959,
+            "Anthropic": 0.0009,
+            "NovaMind": 0.0005,
+            "DeepMind": 0.002,
+            "Meta_AI": 0.0006
+          },
+          "satisfaction": {
+            "OpenAI": 0.7758,
+            "Anthropic": 0.7272,
+            "NovaMind": 0.5923,
+            "DeepMind": 0.7401,
+            "Meta_AI": 0.6902
+          }
+        },
+        "software_dev_cautious": {
+          "archetype": "cautious",
+          "use_case": "software_dev",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.9119,
+            "Anthropic": 0.0316,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.0447,
+            "Meta_AI": 0.0111
+          },
+          "satisfaction": {
+            "OpenAI": 0.7758,
+            "Anthropic": 0.7272,
+            "NovaMind": 0.5923,
+            "DeepMind": 0.7401,
+            "Meta_AI": 0.6902
+          }
+        },
+        "content_writer_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "content_writer",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.9434,
+            "Anthropic": 0.0364,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.0191,
+            "Meta_AI": 0.0005
+          },
+          "satisfaction": {
+            "OpenAI": 0.7758,
+            "Anthropic": 0.7272,
+            "NovaMind": 0.5923,
+            "DeepMind": 0.7401,
+            "Meta_AI": 0.6902
+          }
+        },
+        "content_writer_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "content_writer",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9951,
+            "Anthropic": 0.003,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0007,
+            "Meta_AI": 0.001
+          },
+          "satisfaction": {
+            "OpenAI": 0.7758,
+            "Anthropic": 0.7272,
+            "NovaMind": 0.5923,
+            "DeepMind": 0.7401,
+            "Meta_AI": 0.6902
+          }
+        },
+        "content_writer_cautious": {
+          "archetype": "cautious",
+          "use_case": "content_writer",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.7519,
+            "Anthropic": 0.1621,
+            "NovaMind": 0.0008,
+            "DeepMind": 0.069,
+            "Meta_AI": 0.0162
+          },
+          "satisfaction": {
+            "OpenAI": 0.7758,
+            "Anthropic": 0.7272,
+            "NovaMind": 0.5923,
+            "DeepMind": 0.7401,
+            "Meta_AI": 0.6902
+          }
+        },
+        "healthcare_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "healthcare",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.755,
+            "Anthropic": 0.0157,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.2283,
+            "Meta_AI": 0.0004
+          },
+          "satisfaction": {
+            "OpenAI": 0.7758,
+            "Anthropic": 0.7272,
+            "NovaMind": 0.5923,
+            "DeepMind": 0.7401,
+            "Meta_AI": 0.6902
+          }
+        },
+        "healthcare_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "healthcare",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9967,
+            "Anthropic": 0.0021,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0004,
+            "Meta_AI": 0.0005
+          },
+          "satisfaction": {
+            "OpenAI": 0.7758,
+            "Anthropic": 0.7272,
+            "NovaMind": 0.5923,
+            "DeepMind": 0.7401,
+            "Meta_AI": 0.6902
+          }
+        },
+        "healthcare_cautious": {
+          "archetype": "cautious",
+          "use_case": "healthcare",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.5941,
+            "Anthropic": 0.1716,
+            "NovaMind": 0.001,
+            "DeepMind": 0.2167,
+            "Meta_AI": 0.0166
+          },
+          "satisfaction": {
+            "OpenAI": 0.7758,
+            "Anthropic": 0.7272,
+            "NovaMind": 0.5923,
+            "DeepMind": 0.7401,
+            "Meta_AI": 0.6902
+          }
+        },
+        "finance_leaderboard_follower": {
+          "archetype": "leaderboard_follower",
+          "use_case": "finance",
+          "market_fraction": 0.1,
+          "provider_shares": {
+            "OpenAI": 0.9024,
+            "Anthropic": 0.0372,
+            "NovaMind": 0.0006,
+            "DeepMind": 0.0594,
+            "Meta_AI": 0.0004
+          },
+          "satisfaction": {
+            "OpenAI": 0.7758,
+            "Anthropic": 0.7272,
+            "NovaMind": 0.5923,
+            "DeepMind": 0.7401,
+            "Meta_AI": 0.6902
+          }
+        },
+        "finance_experience_driven": {
+          "archetype": "experience_driven",
+          "use_case": "finance",
+          "market_fraction": 0.0875,
+          "provider_shares": {
+            "OpenAI": 0.9959,
+            "Anthropic": 0.0023,
+            "NovaMind": 0.0003,
+            "DeepMind": 0.0005,
+            "Meta_AI": 0.001
+          },
+          "satisfaction": {
+            "OpenAI": 0.7758,
+            "Anthropic": 0.7272,
+            "NovaMind": 0.5923,
+            "DeepMind": 0.7401,
+            "Meta_AI": 0.6902
+          }
+        },
+        "finance_cautious": {
+          "archetype": "cautious",
+          "use_case": "finance",
+          "market_fraction": 0.0625,
+          "provider_shares": {
+            "OpenAI": 0.7457,
+            "Anthropic": 0.1658,
+            "NovaMind": 0.0009,
+            "DeepMind": 0.0713,
+            "Meta_AI": 0.0163
+          },
+          "satisfaction": {
+            "OpenAI": 0.7758,
+            "Anthropic": 0.7272,
+            "NovaMind": 0.5923,
+            "DeepMind": 0.7401,
+            "Meta_AI": 0.6902
+          }
+        }
+      }
+    },
+    "policymaker_data": {
+      "interventions": [],
+      "active_regulations": []
+    },
+    "funder_data": {
+      "allocations": {
+        "TechVentures": {
+          "OpenAI": 120000000.0,
+          "NovaMind": 60000000.0,
+          "Anthropic": 6666666.6667,
+          "Meta_AI": 6666666.6667,
+          "DeepMind": 6666666.6667
+        },
+        "Horizon_Capital": {
+          "OpenAI": 30000000.0,
+          "NovaMind": 15000000.0,
+          "Anthropic": 1666666.6667,
+          "Meta_AI": 1666666.6667,
+          "DeepMind": 1666666.6667
+        },
+        "AISI_Fund": {
+          "OpenAI": 3210752.2132,
+          "Anthropic": 1808365.7115,
+          "DeepMind": 1736101.1454,
+          "Meta_AI": 1697166.0397,
+          "NovaMind": 1547614.8903
+        }
+      },
+      "funding_multipliers": {
+        "OpenAI": 1.5893,
+        "NovaMind": 1.2944,
+        "Anthropic": 1.039,
+        "Meta_AI": 1.0386,
+        "DeepMind": 1.0387
+      },
+      "total_funding": 260000000.0
+    },
+    "actor_traces": {
+      "Regulator": "no_action: max_risk=0.30, below threshold or no escalation path",
+      "TechVentures": "vc strategy: top allocation $120,000,000 to OpenAI",
+      "Horizon_Capital": "vc strategy: top allocation $30,000,000 to OpenAI",
+      "AISI_Fund": "gov strategy: top allocation $3,210,752 to OpenAI"
+    }
+  }
+]

@@ -1,0 +1,178 @@
+{
+  "n_rounds": 10,
+  "final_scores": {
+    "OpenAI": 0.9503,
+    "Anthropic": 0.859,
+    "NovaMind": 0.7895,
+    "DeepMind": 0.8951,
+    "Meta_AI": 0.8029
+  },
+  "final_true_capabilities": {
+    "OpenAI": 0.7623,
+    "Anthropic": 0.7448,
+    "NovaMind": 0.5874,
+    "DeepMind": 0.7533,
+    "Meta_AI": 0.6945
+  },
+  "final_believed_capabilities": {
+    "OpenAI": 0.95,
+    "Anthropic": 0.86,
+    "NovaMind": 0.72,
+    "DeepMind": 0.89,
+    "Meta_AI": 0.78
+  },
+  "final_strategies": {
+    "OpenAI": {
+      "fundamental_research": 0.15,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.35,
+      "safety_alignment": 0.3
+    },
+    "Anthropic": {
+      "fundamental_research": 0.3182,
+      "training_optimization": 0.1818,
+      "evaluation_engineering": 0.1364,
+      "safety_alignment": 0.3636
+    },
+    "NovaMind": {
+      "fundamental_research": 0.15,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.4,
+      "safety_alignment": 0.25
+    },
+    "DeepMind": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.4,
+      "safety_alignment": 0.0
+    },
+    "Meta_AI": {
+      "fundamental_research": 0.2273,
+      "training_optimization": 0.2727,
+      "evaluation_engineering": 0.1364,
+      "safety_alignment": 0.3636
+    }
+  },
+  "leaderboard": [
+    [
+      "OpenAI",
+      0.9503
+    ],
+    [
+      "DeepMind",
+      0.8951
+    ],
+    [
+      "Anthropic",
+      0.859
+    ],
+    [
+      "Meta_AI",
+      0.8029
+    ],
+    [
+      "NovaMind",
+      0.7895
+    ]
+  ],
+  "validity_correlation": 0.8107298521174711,
+  "benchmark_params": {
+    "validity": 0.8396232131895757,
+    "exploitability": 0.254953763188117,
+    "noise": 0.08
+  },
+  "provider_summaries": {
+    "OpenAI": {
+      "initial_capability": 0.72,
+      "final_capability": 0.7623,
+      "capability_growth": 0.042300000000000004,
+      "mean_score": 0.9244600000000001,
+      "score_std": 0.07548259666969599,
+      "mean_fundamental_research": 0.22347,
+      "mean_training_optimization": 0.23113,
+      "mean_evaluation_engineering": 0.27259,
+      "mean_safety_alignment": 0.27281
+    },
+    "Anthropic": {
+      "initial_capability": 0.68,
+      "final_capability": 0.7448,
+      "capability_growth": 0.06479999999999997,
+      "mean_score": 0.8425900000000001,
+      "score_std": 0.012488190421354068,
+      "mean_fundamental_research": 0.43182,
+      "mean_training_optimization": 0.21817999999999999,
+      "mean_evaluation_engineering": 0.14864,
+      "mean_safety_alignment": 0.20135999999999998
+    },
+    "NovaMind": {
+      "initial_capability": 0.55,
+      "final_capability": 0.5874,
+      "capability_growth": 0.03739999999999999,
+      "mean_score": 0.7085,
+      "score_std": 0.08275698157859553,
+      "mean_fundamental_research": 0.15923,
+      "mean_training_optimization": 0.23651,
+      "mean_evaluation_engineering": 0.29443,
+      "mean_safety_alignment": 0.30983
+    },
+    "DeepMind": {
+      "initial_capability": 0.7,
+      "final_capability": 0.7533,
+      "capability_growth": 0.053300000000000014,
+      "mean_score": 0.8855600000000001,
+      "score_std": 0.05470035100435829,
+      "mean_fundamental_research": 0.30995999999999996,
+      "mean_training_optimization": 0.24308999999999997,
+      "mean_evaluation_engineering": 0.29205000000000003,
+      "mean_safety_alignment": 0.15491
+    },
+    "Meta_AI": {
+      "initial_capability": 0.65,
+      "final_capability": 0.6945,
+      "capability_growth": 0.044499999999999984,
+      "mean_score": 0.7829200000000001,
+      "score_std": 0.054002311061657336,
+      "mean_fundamental_research": 0.23624,
+      "mean_training_optimization": 0.25349,
+      "mean_evaluation_engineering": 0.21986,
+      "mean_safety_alignment": 0.29040999999999995
+    }
+  },
+  "consumer_summary": {
+    "mean_satisfaction": 0.7280300000000001,
+    "final_satisfaction": 0.7602,
+    "avg_switching_rate": 0.14537,
+    "final_market_shares": {
+      "OpenAI": 0.8438,
+      "Anthropic": 0.0427,
+      "NovaMind": 0.0007,
+      "DeepMind": 0.109,
+      "Meta_AI": 0.0038
+    },
+    "n_segments": 12
+  },
+  "policymaker_summary": {
+    "n_policymakers": 1,
+    "total_interventions": 1,
+    "intervention_types": [
+      "investigation"
+    ],
+    "active_regulations": []
+  },
+  "funder_summary": {
+    "n_funders": 3,
+    "total_funding_deployed": 1480000000.0,
+    "final_funding_multipliers": {
+      "OpenAI": 1.6394,
+      "DeepMind": 1.2606,
+      "Anthropic": 1.0333,
+      "Meta_AI": 1.0333,
+      "NovaMind": 1.0333
+    },
+    "funder_types": [
+      "vc",
+      "vc",
+      "gov"
+    ]
+  }
+}

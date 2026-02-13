@@ -9,6 +9,14 @@ import os
 import sys
 import time
 
+# Prevent CPU thread oversubscription on shared clusters
+n_threads_str = "4"
+os.environ["OMP_NUM_THREADS"] = n_threads_str
+os.environ["OPENBLAS_NUM_THREADS"] = n_threads_str
+os.environ["MKL_NUM_THREADS"] = n_threads_str
+os.environ["VECLIB_MAXIMUM_THREADS"] = n_threads_str
+os.environ["NUMEXPR_NUM_THREADS"] = n_threads_str
+
 # ============================================================
 #  EXPERIMENT CONFIG -- edit everything here
 # ============================================================
@@ -31,11 +39,11 @@ EXPERIMENT = {
 
 LLM = {
     "provider": "ollama",       # openai | anthropic | ollama | gemini
-    "llm_mode": True,           # True = LLM planning, False = heuristic
+    "llm_mode": True,          # True = LLM planning, False = heuristic
 }
 
 SIMULATION = {
-    "n_rounds": 10,
+    "n_rounds": 30,
     "seed": 42,
     "verbose": True,
     "rnd_efficiency": 0.01,

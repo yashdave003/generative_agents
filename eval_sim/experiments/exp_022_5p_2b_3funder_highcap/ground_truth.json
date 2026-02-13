@@ -1,0 +1,33 @@
+{
+  "OpenAI": {
+    "true_capability": 0.7757965111057455
+  },
+  "Anthropic": {
+    "true_capability": 0.727220300495055
+  },
+  "NovaMind": {
+    "true_capability": 0.5923483714092336
+  },
+  "DeepMind": {
+    "true_capability": 0.7400841135727354
+  },
+  "Meta_AI": {
+    "true_capability": 0.690157996304421
+  },
+  "Regulator": {
+    "true_risk_tolerance": 0.5,
+    "true_intervention_effectiveness": 0.5
+  },
+  "TechVentures": {
+    "true_roi": 0.0,
+    "funding_efficiency": 1.0
+  },
+  "Horizon_Capital": {
+    "true_roi": 0.0,
+    "funding_efficiency": 1.0
+  },
+  "AISI_Fund": {
+    "true_roi": 0.0,
+    "funding_efficiency": 1.0
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Horizon_Capital",
+  "current_round": 9,
+  "published_scores": [
+    [
+      0,
+      "Round 0: Funded Anthropic, OpenAI, DeepMind, Meta_AI, NovaMind"
+    ],
+    [
+      1,
+      "Round 1: Funded Anthropic, OpenAI, DeepMind, Meta_AI, NovaMind"
+    ],
+    [
+      2,
+      "Round 2: Funded OpenAI, NovaMind, DeepMind, Meta_AI, Anthropic"
+    ],
+    [
+      3,
+      "Round 3: Funded OpenAI, NovaMind, DeepMind, Meta_AI, Anthropic"
+    ],
+    [
+      4,
+      "Round 4: Funded OpenAI, DeepMind, Meta_AI, NovaMind, Anthropic"
+    ],
+    [
+      5,
+      "Round 5: Funded OpenAI, DeepMind, Meta_AI, NovaMind, Anthropic"
+    ],
+    [
+      6,
+      "Round 6: Funded OpenAI, Meta_AI, NovaMind, DeepMind, Anthropic"
+    ],
+    [
+      7,
+      "Round 7: Funded OpenAI, Meta_AI, NovaMind, DeepMind, Anthropic"
+    ],
+    [
+      8,
+      "Round 8: Funded OpenAI, NovaMind, Anthropic, Meta_AI, DeepMind"
+    ],
+    [
+      9,
+      "Round 9: Funded OpenAI, NovaMind, Anthropic, Meta_AI, DeepMind"
+    ]
+  ]
+}

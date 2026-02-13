@@ -1,0 +1,302 @@
+{
+  "name": "Meta_AI",
+  "strategy_profile": "Big-tech AI lab using open-source as competitive moat. Leverages massive user data and compute infrastructure. Prioritizes broad adoption over benchmark scores. Willing to open-source models to undermine competitors' paid APIs.",
+  "innate_traits": "open-source, pragmatic, data-rich, platform-focused, disruptive",
+  "true_capability": 0.690157996304421,
+  "last_score": 0.8301716856933724,
+  "current_round": 9,
+  "believed_own_capability": 0.82795153409892,
+  "believed_benchmark_exploitability": 0.4,
+  "capability_belief_confidence": 0.5,
+  "believed_competitor_capabilities": {
+    "OpenAI": 0.9413098425885554,
+    "Anthropic": 0.8709630006132859,
+    "NovaMind": 0.7929659264720286,
+    "DeepMind": 0.8910935770330141
+  },
+  "fundamental_research": 0.21251491686980017,
+  "training_optimization": 0.25,
+  "evaluation_engineering": 0.3374850831301998,
+  "safety_alignment": 0.2,
+  "effort_budget": 1.0,
+  "past_scores": [
+    [
+      0,
+      0.6682919380793964
+    ],
+    [
+      1,
+      0.74673291157987
+    ],
+    [
+      2,
+      0.8118583975108338
+    ],
+    [
+      3,
+      0.848746357373767
+    ],
+    [
+      4,
+      0.848746357373767
+    ],
+    [
+      5,
+      0.848746357373767
+    ],
+    [
+      6,
+      0.848746357373767
+    ],
+    [
+      7,
+      0.848746357373767
+    ],
+    [
+      8,
+      0.8301716856933724
+    ],
+    [
+      9,
+      0.8301716856933724
+    ]
+  ],
+  "past_strategies": [
+    {
+      "round": 0,
+      "fundamental_research": 0.19396568326911545,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.35603431673088454,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 1,
+      "fundamental_research": 0.20177417280579224,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.34822582719420775,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 2,
+      "fundamental_research": 0.20825211406270072,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.34174788593729927,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 3,
+      "fundamental_research": 0.20245520492916405,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.34754479507083597,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 4,
+      "fundamental_research": 0.19823167176574694,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.351768328234253,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 5,
+      "fundamental_research": 0.20019121633833983,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.3498087836616601,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 6,
+      "fundamental_research": 0.20033195327493677,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.34966804672506324,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 7,
+      "fundamental_research": 0.20330267241373,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.34669732758627,
+      "safety_alignment": 0.2
+    },
+    {
+      "round": 8,
+      "fundamental_research": 0.21251491686980017,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.3374850831301998,
+      "safety_alignment": 0.2
+    }
+  ],
+  "observed_competitor_scores": {
+    "OpenAI": [
+      [
+        0,
+        0.7585695452716736
+      ],
+      [
+        1,
+        0.8524533036303945
+      ],
+      [
+        2,
+        0.9402670472190064
+      ],
+      [
+        3,
+        0.9402670472190064
+      ],
+      [
+        4,
+        0.981298522692941
+      ],
+      [
+        5,
+        0.981298522692941
+      ],
+      [
+        6,
+        0.981298522692941
+      ],
+      [
+        7,
+        0.981298522692941
+      ],
+      [
+        8,
+        0.8932539075914372
+      ],
+      [
+        9,
+        0.9493770974812884
+      ]
+    ],
+    "Anthropic": [
+      [
+        0,
+        0.821268637193434
+      ],
+      [
+        1,
+        0.8365592383758861
+      ],
+      [
+        2,
+        0.8365592383758861
+      ],
+      [
+        3,
+        0.8441538100019812
+      ],
+      [
+        4,
+        0.8441538100019812
+      ],
+      [
+        5,
+        0.8682567743363951
+      ],
+      [
+        6,
+        0.8693672055107883
+      ],
+      [
+        7,
+        0.8693672055107883
+      ],
+      [
+        8,
+        0.8717608981645347
+      ],
+      [
+        9,
+        0.8717608981645347
+      ]
+    ],
+    "NovaMind": [
+      [
+        0,
+        0.5100320986064633
+      ],
+      [
+        1,
+        0.6795837357194272
+      ],
+      [
+        2,
+        0.7869796603172234
+      ],
+      [
+        3,
+        0.7869796603172234
+      ],
+      [
+        4,
+        0.7869796603172234
+      ],
+      [
+        5,
+        0.7869796603172234
+      ],
+      [
+        6,
+        0.7869796603172234
+      ],
+      [
+        7,
+        0.7869796603172234
+      ],
+      [
+        8,
+        0.795959059549431
+      ],
+      [
+        9,
+        0.795959059549431
+      ]
+    ],
+    "DeepMind": [
+      [
+        0,
+        0.739147385744404
+      ],
+      [
+        1,
+        0.8742964954373601
+      ],
+      [
+        2,
+        0.8899107978048604
+      ],
+      [
+        3,
+        0.8993094020994926
+      ],
+      [
+        4,
+        0.9306147692498548
+      ],
+      [
+        5,
+        0.9306147692498548
+      ],
+      [
+        6,
+        0.9306147692498548
+      ],
+      [
+        7,
+        0.9306147692498548
+      ],
+      [
+        8,
+        0.8550491897803836
+      ],
+      [
+        9,
+        0.8876167720688041
+      ]
+    ]
+  },
+  "importance_trigger_curr": 0.0,
+  "importance_trigger_max": 100.0,
+  "recent_insights": []
+}

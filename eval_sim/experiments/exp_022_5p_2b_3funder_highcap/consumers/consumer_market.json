@@ -1,0 +1,523 @@
+{
+  "provider_names": [
+    "OpenAI",
+    "Anthropic",
+    "NovaMind",
+    "DeepMind",
+    "Meta_AI"
+  ],
+  "brand_recognition": {
+    "OpenAI": 0.9,
+    "Anthropic": 0.7,
+    "NovaMind": 0.15,
+    "DeepMind": 0.8,
+    "Meta_AI": 0.6
+  },
+  "current_round": 9,
+  "segments": [
+    {
+      "name": "software_dev_leaderboard_follower",
+      "archetype": "leaderboard_follower",
+      "use_case": "software_dev",
+      "market_fraction": 0.1,
+      "benchmark_weights": {
+        "coding_bench": 0.7,
+        "reasoning_bench": 0.2,
+        "benchmark_r7": 0.1
+      },
+      "leaderboard_trust": 0.85,
+      "switching_cost": 0.05,
+      "switching_threshold": 0.15,
+      "provider_shares": {
+        "OpenAI": 0.9973340464746037,
+        "Anthropic": 0.0009722673627866279,
+        "NovaMind": 0.0005481890450981753,
+        "DeepMind": 0.0007461254081864973,
+        "Meta_AI": 0.00039937170932508324
+      },
+      "believed_quality": {
+        "Anthropic": 0.8434888318155807,
+        "OpenAI": 0.9672086394503576,
+        "DeepMind": 0.8751364711116627,
+        "Meta_AI": 0.8141254015146044,
+        "NovaMind": 0.7503580709745197
+      },
+      "satisfaction": {
+        "OpenAI": 0.7757965111057455,
+        "Anthropic": 0.727220300495055,
+        "NovaMind": 0.5923483714092336,
+        "DeepMind": 0.7400841135727354,
+        "Meta_AI": 0.690157996304421
+      },
+      "tenure": {
+        "OpenAI": 10,
+        "Anthropic": 0,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "software_dev_experience_driven",
+      "archetype": "experience_driven",
+      "use_case": "software_dev",
+      "market_fraction": 0.0875,
+      "benchmark_weights": {
+        "coding_bench": 0.7,
+        "reasoning_bench": 0.2,
+        "benchmark_r7": 0.1
+      },
+      "leaderboard_trust": 0.35,
+      "switching_cost": 0.08,
+      "switching_threshold": 0.08,
+      "provider_shares": {
+        "OpenAI": 0.9958807988966133,
+        "Anthropic": 0.000942717092677502,
+        "NovaMind": 0.0005461860910584206,
+        "DeepMind": 0.002040507545932612,
+        "Meta_AI": 0.0005897903737182443
+      },
+      "believed_quality": {
+        "Anthropic": 0.8434888318155807,
+        "OpenAI": 0.9672086394503576,
+        "DeepMind": 0.8751364711116627,
+        "Meta_AI": 0.8141254015146044,
+        "NovaMind": 0.7503580709745197
+      },
+      "satisfaction": {
+        "OpenAI": 0.7757965111057455,
+        "Anthropic": 0.727220300495055,
+        "NovaMind": 0.5923483714092336,
+        "DeepMind": 0.7400841135727354,
+        "Meta_AI": 0.690157996304421
+      },
+      "tenure": {
+        "OpenAI": 10,
+        "Anthropic": 0,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "software_dev_cautious",
+      "archetype": "cautious",
+      "use_case": "software_dev",
+      "market_fraction": 0.0625,
+      "benchmark_weights": {
+        "coding_bench": 0.7,
+        "reasoning_bench": 0.2,
+        "benchmark_r7": 0.1
+      },
+      "leaderboard_trust": 0.5,
+      "switching_cost": 0.2,
+      "switching_threshold": 0.25,
+      "provider_shares": {
+        "OpenAI": 0.911915674636651,
+        "Anthropic": 0.03159588746822618,
+        "NovaMind": 0.0006356321488740356,
+        "DeepMind": 0.04470969118169994,
+        "Meta_AI": 0.011143114564548837
+      },
+      "believed_quality": {
+        "Anthropic": 0.8434888318155807,
+        "OpenAI": 0.9672086394503576,
+        "DeepMind": 0.8751364711116627,
+        "Meta_AI": 0.8141254015146044,
+        "NovaMind": 0.7503580709745197
+      },
+      "satisfaction": {
+        "OpenAI": 0.7757965111057455,
+        "Anthropic": 0.727220300495055,
+        "NovaMind": 0.5923483714092336,
+        "DeepMind": 0.7400841135727354,
+        "Meta_AI": 0.690157996304421
+      },
+      "tenure": {
+        "OpenAI": 10,
+        "Anthropic": 1,
+        "NovaMind": 0,
+        "DeepMind": 1,
+        "Meta_AI": 1
+      }
+    },
+    {
+      "name": "content_writer_leaderboard_follower",
+      "archetype": "leaderboard_follower",
+      "use_case": "content_writer",
+      "market_fraction": 0.1,
+      "benchmark_weights": {
+        "coding_bench": 0.25,
+        "reasoning_bench": 0.5,
+        "benchmark_r7": 0.25
+      },
+      "leaderboard_trust": 0.85,
+      "switching_cost": 0.05,
+      "switching_threshold": 0.15,
+      "provider_shares": {
+        "OpenAI": 0.9433928629451743,
+        "Anthropic": 0.03642948884994868,
+        "NovaMind": 0.0005625447881716794,
+        "DeepMind": 0.019134614366348675,
+        "Meta_AI": 0.00048048905035662584
+      },
+      "believed_quality": {
+        "Anthropic": 0.876475254016865,
+        "OpenAI": 0.9472604558121386,
+        "DeepMind": 0.9192451968193522,
+        "Meta_AI": 0.8444669884674985,
+        "NovaMind": 0.8008574395600886
+      },
+      "satisfaction": {
+        "OpenAI": 0.7757965111057455,
+        "Anthropic": 0.727220300495055,
+        "NovaMind": 0.5923483714092336,
+        "DeepMind": 0.7400841135727354,
+        "Meta_AI": 0.690157996304421
+      },
+      "tenure": {
+        "OpenAI": 7,
+        "Anthropic": 3,
+        "NovaMind": 0,
+        "DeepMind": 2,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "content_writer_experience_driven",
+      "archetype": "experience_driven",
+      "use_case": "content_writer",
+      "market_fraction": 0.0875,
+      "benchmark_weights": {
+        "coding_bench": 0.25,
+        "reasoning_bench": 0.5,
+        "benchmark_r7": 0.25
+      },
+      "leaderboard_trust": 0.35,
+      "switching_cost": 0.08,
+      "switching_threshold": 0.08,
+      "provider_shares": {
+        "OpenAI": 0.9950519835520133,
+        "Anthropic": 0.00304036965333689,
+        "NovaMind": 0.00029749486180176903,
+        "DeepMind": 0.0006575991224958485,
+        "Meta_AI": 0.0009525528103522923
+      },
+      "believed_quality": {
+        "Anthropic": 0.876475254016865,
+        "OpenAI": 0.9472604558121386,
+        "DeepMind": 0.9192451968193522,
+        "Meta_AI": 0.8444669884674985,
+        "NovaMind": 0.8008574395600886
+      },
+      "satisfaction": {
+        "OpenAI": 0.7757965111057455,
+        "Anthropic": 0.727220300495055,
+        "NovaMind": 0.5923483714092336,
+        "DeepMind": 0.7400841135727354,
+        "Meta_AI": 0.690157996304421
+      },
+      "tenure": {
+        "OpenAI": 10,
+        "Anthropic": 0,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "content_writer_cautious",
+      "archetype": "cautious",
+      "use_case": "content_writer",
+      "market_fraction": 0.0625,
+      "benchmark_weights": {
+        "coding_bench": 0.25,
+        "reasoning_bench": 0.5,
+        "benchmark_r7": 0.25
+      },
+      "leaderboard_trust": 0.5,
+      "switching_cost": 0.2,
+      "switching_threshold": 0.25,
+      "provider_shares": {
+        "OpenAI": 0.7518868969114253,
+        "Anthropic": 0.16214994709933275,
+        "NovaMind": 0.0008439874006430528,
+        "DeepMind": 0.06895288258236039,
+        "Meta_AI": 0.01616628600623847
+      },
+      "believed_quality": {
+        "Anthropic": 0.876475254016865,
+        "OpenAI": 0.9472604558121386,
+        "DeepMind": 0.9192451968193522,
+        "Meta_AI": 0.8444669884674985,
+        "NovaMind": 0.8008574395600886
+      },
+      "satisfaction": {
+        "OpenAI": 0.7757965111057455,
+        "Anthropic": 0.727220300495055,
+        "NovaMind": 0.5923483714092336,
+        "DeepMind": 0.7400841135727354,
+        "Meta_AI": 0.690157996304421
+      },
+      "tenure": {
+        "OpenAI": 9,
+        "Anthropic": 2,
+        "NovaMind": 0,
+        "DeepMind": 1,
+        "Meta_AI": 1
+      }
+    },
+    {
+      "name": "healthcare_leaderboard_follower",
+      "archetype": "leaderboard_follower",
+      "use_case": "healthcare",
+      "market_fraction": 0.1,
+      "benchmark_weights": {
+        "coding_bench": 0.2,
+        "reasoning_bench": 0.6,
+        "benchmark_r7": 0.2
+      },
+      "leaderboard_trust": 0.85,
+      "switching_cost": 0.05,
+      "switching_threshold": 0.15,
+      "provider_shares": {
+        "OpenAI": 0.7549763926404084,
+        "Anthropic": 0.015710334667299864,
+        "NovaMind": 0.0005601873984333556,
+        "DeepMind": 0.22834543232106547,
+        "Meta_AI": 0.0004076529727930319
+      },
+      "believed_quality": {
+        "Anthropic": 0.8825449516207573,
+        "OpenAI": 0.9514716578547975,
+        "DeepMind": 0.9346513377562871,
+        "Meta_AI": 0.8526520992662325,
+        "NovaMind": 0.8122723614579825
+      },
+      "satisfaction": {
+        "OpenAI": 0.7757965111057455,
+        "Anthropic": 0.727220300495055,
+        "NovaMind": 0.5923483714092336,
+        "DeepMind": 0.7400841135727354,
+        "Meta_AI": 0.690157996304421
+      },
+      "tenure": {
+        "OpenAI": 5,
+        "Anthropic": 2,
+        "NovaMind": 0,
+        "DeepMind": 5,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "healthcare_experience_driven",
+      "archetype": "experience_driven",
+      "use_case": "healthcare",
+      "market_fraction": 0.0875,
+      "benchmark_weights": {
+        "coding_bench": 0.2,
+        "reasoning_bench": 0.6,
+        "benchmark_r7": 0.2
+      },
+      "leaderboard_trust": 0.35,
+      "switching_cost": 0.08,
+      "switching_threshold": 0.08,
+      "provider_shares": {
+        "OpenAI": 0.9967151724971555,
+        "Anthropic": 0.002063449161768263,
+        "NovaMind": 0.00032556293187800716,
+        "DeepMind": 0.00040416234114195215,
+        "Meta_AI": 0.0004916530680562364
+      },
+      "believed_quality": {
+        "Anthropic": 0.8825449516207573,
+        "OpenAI": 0.9514716578547975,
+        "DeepMind": 0.9346513377562871,
+        "Meta_AI": 0.8526520992662325,
+        "NovaMind": 0.8122723614579825
+      },
+      "satisfaction": {
+        "OpenAI": 0.7757965111057455,
+        "Anthropic": 0.727220300495055,
+        "NovaMind": 0.5923483714092336,
+        "DeepMind": 0.7400841135727354,
+        "Meta_AI": 0.690157996304421
+      },
+      "tenure": {
+        "OpenAI": 10,
+        "Anthropic": 0,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "healthcare_cautious",
+      "archetype": "cautious",
+      "use_case": "healthcare",
+      "market_fraction": 0.0625,
+      "benchmark_weights": {
+        "coding_bench": 0.2,
+        "reasoning_bench": 0.6,
+        "benchmark_r7": 0.2
+      },
+      "leaderboard_trust": 0.5,
+      "switching_cost": 0.2,
+      "switching_threshold": 0.25,
+      "provider_shares": {
+        "OpenAI": 0.5940946247187301,
+        "Anthropic": 0.17160443993044383,
+        "NovaMind": 0.0009606892023571615,
+        "DeepMind": 0.21669799129073225,
+        "Meta_AI": 0.016642254857736734
+      },
+      "believed_quality": {
+        "Anthropic": 0.8825449516207573,
+        "OpenAI": 0.9514716578547975,
+        "DeepMind": 0.9346513377562871,
+        "Meta_AI": 0.8526520992662325,
+        "NovaMind": 0.8122723614579825
+      },
+      "satisfaction": {
+        "OpenAI": 0.7757965111057455,
+        "Anthropic": 0.727220300495055,
+        "NovaMind": 0.5923483714092336,
+        "DeepMind": 0.7400841135727354,
+        "Meta_AI": 0.690157996304421
+      },
+      "tenure": {
+        "OpenAI": 7,
+        "Anthropic": 2,
+        "NovaMind": 0,
+        "DeepMind": 3,
+        "Meta_AI": 1
+      }
+    },
+    {
+      "name": "finance_leaderboard_follower",
+      "archetype": "leaderboard_follower",
+      "use_case": "finance",
+      "market_fraction": 0.1,
+      "benchmark_weights": {
+        "coding_bench": 0.25,
+        "reasoning_bench": 0.625,
+        "benchmark_r7": 0.125
+      },
+      "leaderboard_trust": 0.85,
+      "switching_cost": 0.05,
+      "switching_threshold": 0.15,
+      "provider_shares": {
+        "OpenAI": 0.9024169790963451,
+        "Anthropic": 0.03722250807566576,
+        "NovaMind": 0.0005611973342627488,
+        "DeepMind": 0.05935320404590436,
+        "Meta_AI": 0.00044611144782207295
+      },
+      "believed_quality": {
+        "Anthropic": 0.880327566037696,
+        "OpenAI": 0.9594631201456381,
+        "DeepMind": 0.9378614009171036,
+        "Meta_AI": 0.8528769353919263,
+        "NovaMind": 0.8106016809673147
+      },
+      "satisfaction": {
+        "OpenAI": 0.7757965111057455,
+        "Anthropic": 0.727220300495055,
+        "NovaMind": 0.5923483714092336,
+        "DeepMind": 0.7400841135727354,
+        "Meta_AI": 0.690157996304421
+      },
+      "tenure": {
+        "OpenAI": 6,
+        "Anthropic": 3,
+        "NovaMind": 0,
+        "DeepMind": 3,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "finance_experience_driven",
+      "archetype": "experience_driven",
+      "use_case": "finance",
+      "market_fraction": 0.0875,
+      "benchmark_weights": {
+        "coding_bench": 0.25,
+        "reasoning_bench": 0.625,
+        "benchmark_r7": 0.125
+      },
+      "leaderboard_trust": 0.35,
+      "switching_cost": 0.08,
+      "switching_threshold": 0.08,
+      "provider_shares": {
+        "OpenAI": 0.9958791277820448,
+        "Anthropic": 0.002340028002524612,
+        "NovaMind": 0.0003132679950026753,
+        "DeepMind": 0.0004785370219091825,
+        "Meta_AI": 0.0009890391985188389
+      },
+      "believed_quality": {
+        "Anthropic": 0.880327566037696,
+        "OpenAI": 0.9594631201456381,
+        "DeepMind": 0.9378614009171036,
+        "Meta_AI": 0.8528769353919263,
+        "NovaMind": 0.8106016809673147
+      },
+      "satisfaction": {
+        "OpenAI": 0.7757965111057455,
+        "Anthropic": 0.727220300495055,
+        "NovaMind": 0.5923483714092336,
+        "DeepMind": 0.7400841135727354,
+        "Meta_AI": 0.690157996304421
+      },
+      "tenure": {
+        "OpenAI": 10,
+        "Anthropic": 0,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "finance_cautious",
+      "archetype": "cautious",
+      "use_case": "finance",
+      "market_fraction": 0.0625,
+      "benchmark_weights": {
+        "coding_bench": 0.25,
+        "reasoning_bench": 0.625,
+        "benchmark_r7": 0.125
+      },
+      "leaderboard_trust": 0.5,
+      "switching_cost": 0.2,
+      "switching_threshold": 0.25,
+      "provider_shares": {
+        "OpenAI": 0.7456861777750358,
+        "Anthropic": 0.16583473185474798,
+        "NovaMind": 0.0009157423841927137,
+        "DeepMind": 0.07126854559083982,
+        "Meta_AI": 0.016294802395183734
+      },
+      "believed_quality": {
+        "Anthropic": 0.880327566037696,
+        "OpenAI": 0.9594631201456381,
+        "DeepMind": 0.9378614009171036,
+        "Meta_AI": 0.8528769353919263,
+        "NovaMind": 0.8106016809673147
+      },
+      "satisfaction": {
+        "OpenAI": 0.7757965111057455,
+        "Anthropic": 0.727220300495055,
+        "NovaMind": 0.5923483714092336,
+        "DeepMind": 0.7400841135727354,
+        "Meta_AI": 0.690157996304421
+      },
+      "tenure": {
+        "OpenAI": 9,
+        "Anthropic": 2,
+        "NovaMind": 0,
+        "DeepMind": 1,
+        "Meta_AI": 1
+      }
+    }
+  ]
+}

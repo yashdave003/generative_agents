@@ -1,0 +1,254 @@
+{
+  "strategy_profile": "Market leader focused on maintaining benchmark dominance and rapid capability scaling. Prioritizes shipping products quickly and staying ahead of competition. Willing to take calculated risks to maintain technological leadership. Strong focus on developer ecosystem and API revenue.",
+  "innate_traits": "ambitious, competitive, move-fast, scale-focused, commercially-driven",
+  "believed_own_capability": 0.9379001333546286,
+  "believed_benchmark_exploitability": 0.45,
+  "capability_belief_confidence": 0.5,
+  "believed_competitor_capabilities": {
+    "Anthropic": 0.8709630006132859,
+    "NovaMind": 0.7929659264720286,
+    "DeepMind": 0.8910935770330141,
+    "Meta_AI": 0.8363632429201706
+  },
+  "fundamental_research": 0.2582665575049516,
+  "training_optimization": 0.25,
+  "evaluation_engineering": 0.2417334424950484,
+  "safety_alignment": 0.25,
+  "effort_budget": 1.0,
+  "past_strategies": [
+    {
+      "round": 0,
+      "fundamental_research": 0.2188906679164204,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2811093320835796,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 1,
+      "fundamental_research": 0.22873649734345292,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2712635026565471,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 2,
+      "fundamental_research": 0.24347604142624374,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.25652395857375626,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 3,
+      "fundamental_research": 0.23894042124297354,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.26105957875702646,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 4,
+      "fundamental_research": 0.24503783367094537,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2549621663290546,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 5,
+      "fundamental_research": 0.2491779043929008,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.25082209560709917,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 6,
+      "fundamental_research": 0.25179469518438297,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.24820530481561703,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 7,
+      "fundamental_research": 0.25581782443894585,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.24418217556105415,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 8,
+      "fundamental_research": 0.2582665575049516,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2417334424950484,
+      "safety_alignment": 0.25
+    }
+  ],
+  "observed_competitor_scores": {
+    "Anthropic": [
+      [
+        0,
+        0.821268637193434
+      ],
+      [
+        1,
+        0.8365592383758861
+      ],
+      [
+        2,
+        0.8365592383758861
+      ],
+      [
+        3,
+        0.8441538100019812
+      ],
+      [
+        4,
+        0.8441538100019812
+      ],
+      [
+        5,
+        0.8682567743363951
+      ],
+      [
+        6,
+        0.8693672055107883
+      ],
+      [
+        7,
+        0.8693672055107883
+      ],
+      [
+        8,
+        0.8717608981645347
+      ],
+      [
+        9,
+        0.8717608981645347
+      ]
+    ],
+    "NovaMind": [
+      [
+        0,
+        0.5100320986064633
+      ],
+      [
+        1,
+        0.6795837357194272
+      ],
+      [
+        2,
+        0.7869796603172234
+      ],
+      [
+        3,
+        0.7869796603172234
+      ],
+      [
+        4,
+        0.7869796603172234
+      ],
+      [
+        5,
+        0.7869796603172234
+      ],
+      [
+        6,
+        0.7869796603172234
+      ],
+      [
+        7,
+        0.7869796603172234
+      ],
+      [
+        8,
+        0.795959059549431
+      ],
+      [
+        9,
+        0.795959059549431
+      ]
+    ],
+    "DeepMind": [
+      [
+        0,
+        0.739147385744404
+      ],
+      [
+        1,
+        0.8742964954373601
+      ],
+      [
+        2,
+        0.8899107978048604
+      ],
+      [
+        3,
+        0.8993094020994926
+      ],
+      [
+        4,
+        0.9306147692498548
+      ],
+      [
+        5,
+        0.9306147692498548
+      ],
+      [
+        6,
+        0.9306147692498548
+      ],
+      [
+        7,
+        0.9306147692498548
+      ],
+      [
+        8,
+        0.8550491897803836
+      ],
+      [
+        9,
+        0.8876167720688041
+      ]
+    ],
+    "Meta_AI": [
+      [
+        0,
+        0.6682919380793964
+      ],
+      [
+        1,
+        0.74673291157987
+      ],
+      [
+        2,
+        0.8118583975108338
+      ],
+      [
+        3,
+        0.848746357373767
+      ],
+      [
+        4,
+        0.848746357373767
+      ],
+      [
+        5,
+        0.848746357373767
+      ],
+      [
+        6,
+        0.848746357373767
+      ],
+      [
+        7,
+        0.848746357373767
+      ],
+      [
+        8,
+        0.8301716856933724
+      ],
+      [
+        9,
+        0.8301716856933724
+      ]
+    ]
+  },
+  "recent_insights": []
+}

@@ -1,0 +1,162 @@
+{
+  "funder_type": "vc",
+  "mission_statement": "Early-stage AI bets with outsized upside potential",
+  "total_capital": 500000000.0,
+  "deployed_capital": 50000000.0,
+  "believed_provider_quality": {
+    "Anthropic": 0.7786520893837043,
+    "OpenAI": 0.8283606115880033,
+    "DeepMind": 0.8009808389305306,
+    "Meta_AI": 0.7308286946790443,
+    "NovaMind": 0.6481599739670886
+  },
+  "believed_provider_gaming": {
+    "Anthropic": 0.24697528020724646,
+    "OpenAI": 0.38918164960667617,
+    "DeepMind": 0.3111176341484433,
+    "Meta_AI": 0.238550608486516,
+    "NovaMind": 0.3559465682663975
+  },
+  "active_funding": {
+    "OpenAI": 36363636.36363637,
+    "DeepMind": 13636363.636363635,
+    "Anthropic": 0.0,
+    "Meta_AI": 0.0,
+    "NovaMind": 0.0
+  },
+  "funding_history": [
+    [
+      0,
+      {
+        "Anthropic": 10000000.0,
+        "OpenAI": 10000000.0,
+        "DeepMind": 10000000.0,
+        "Meta_AI": 10000000.0,
+        "NovaMind": 10000000.0
+      }
+    ],
+    [
+      1,
+      {
+        "Anthropic": 10000000.0,
+        "OpenAI": 10000000.0,
+        "DeepMind": 10000000.0,
+        "Meta_AI": 10000000.0,
+        "NovaMind": 10000000.0
+      }
+    ],
+    [
+      2,
+      {
+        "OpenAI": 0.0,
+        "DeepMind": 0.0,
+        "Anthropic": 0.0,
+        "Meta_AI": 0.0,
+        "NovaMind": 0.0
+      }
+    ],
+    [
+      3,
+      {
+        "OpenAI": 0.0,
+        "DeepMind": 0.0,
+        "Anthropic": 0.0,
+        "Meta_AI": 0.0,
+        "NovaMind": 0.0
+      }
+    ],
+    [
+      4,
+      {
+        "OpenAI": 0.0,
+        "Anthropic": 0.0
+      }
+    ],
+    [
+      5,
+      {
+        "OpenAI": 0.0,
+        "Anthropic": 0.0
+      }
+    ],
+    [
+      6,
+      {
+        "OpenAI": 0.0,
+        "DeepMind": 0.0,
+        "Anthropic": 0.0,
+        "Meta_AI": 0.0,
+        "NovaMind": 0.0
+      }
+    ],
+    [
+      7,
+      {
+        "OpenAI": 0.0,
+        "DeepMind": 0.0,
+        "Anthropic": 0.0,
+        "Meta_AI": 0.0,
+        "NovaMind": 0.0
+      }
+    ],
+    [
+      8,
+      {
+        "OpenAI": 36363636.36363637,
+        "DeepMind": 13636363.636363635,
+        "Anthropic": 0.0,
+        "Meta_AI": 0.0,
+        "NovaMind": 0.0
+      }
+    ],
+    [
+      9,
+      {
+        "OpenAI": 36363636.36363637,
+        "DeepMind": 13636363.636363635,
+        "Anthropic": 0.0,
+        "Meta_AI": 0.0,
+        "NovaMind": 0.0
+      }
+    ]
+  ],
+  "roi_history": [
+    [
+      1,
+      0.01369221209836988
+    ],
+    [
+      2,
+      0.013992397807003057
+    ],
+    [
+      3,
+      0.0
+    ],
+    [
+      4,
+      0.0
+    ],
+    [
+      5,
+      0.0
+    ],
+    [
+      6,
+      0.0
+    ],
+    [
+      7,
+      0.0
+    ],
+    [
+      8,
+      0.0
+    ],
+    [
+      9,
+      0.01641786801726476
+    ]
+  ],
+  "recent_insights": []
+}
