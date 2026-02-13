@@ -1,0 +1,714 @@
+{
+  "strategy_profile": "Market leader focused on maintaining benchmark dominance and rapid capability scaling. Prioritizes shipping products quickly and staying ahead of competition. Willing to take calculated risks to maintain technological leadership. Strong focus on developer ecosystem and API revenue.",
+  "innate_traits": "ambitious, competitive, move-fast, scale-focused, commercially-driven",
+  "believed_own_capability": 0.992856864358314,
+  "believed_benchmark_exploitability": 0.45,
+  "capability_belief_confidence": 0.5,
+  "believed_competitor_capabilities": {
+    "Anthropic": 0.9806912857767869,
+    "NovaMind": 0.864751344615491,
+    "DeepMind": 0.957257128400571,
+    "Meta_AI": 0.966613829061984
+  },
+  "fundamental_research": 0.25207858511819053,
+  "training_optimization": 0.25,
+  "evaluation_engineering": 0.24792141488180947,
+  "safety_alignment": 0.25,
+  "effort_budget": 1.0,
+  "past_strategies": [
+    {
+      "round": 0,
+      "fundamental_research": 0.2188906679164204,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2811093320835796,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 1,
+      "fundamental_research": 0.22873671737136875,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.27126328262863125,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 2,
+      "fundamental_research": 0.24347592997118564,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.25652407002881433,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 3,
+      "fundamental_research": 0.23894024983702752,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2610597501629725,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 4,
+      "fundamental_research": 0.2450372786823882,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.25496272131761183,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 5,
+      "fundamental_research": 0.24917708284602225,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.25082291715397775,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 6,
+      "fundamental_research": 0.2517936883335228,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.24820631166647722,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 7,
+      "fundamental_research": 0.25581668684593745,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.24418331315406258,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 8,
+      "fundamental_research": 0.25808054663697794,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.24191945336302204,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 9,
+      "fundamental_research": 0.2647882154533157,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2352117845466843,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 10,
+      "fundamental_research": 0.26092910434889965,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.23907089565110035,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 11,
+      "fundamental_research": 0.25555059048020456,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.24444940951979544,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 12,
+      "fundamental_research": 0.25009572532969954,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.24990427467030044,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 13,
+      "fundamental_research": 0.24964543539627185,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2503545646037282,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 14,
+      "fundamental_research": 0.24862329684913753,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.25137670315086247,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 15,
+      "fundamental_research": 0.23735868356255588,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.26264131643744415,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 16,
+      "fundamental_research": 0.2312309267784654,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2687690732215346,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 17,
+      "fundamental_research": 0.23334234070584936,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.26665765929415064,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 18,
+      "fundamental_research": 0.23659550630501913,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.26340449369498087,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 19,
+      "fundamental_research": 0.24127961667126796,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.25872038332873204,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 20,
+      "fundamental_research": 0.24455849392764217,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2554415060723578,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 21,
+      "fundamental_research": 0.2468537080071041,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2531462919928959,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 22,
+      "fundamental_research": 0.2508387520536171,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2491612479463829,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 23,
+      "fundamental_research": 0.2517991595503805,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2482008404496195,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 24,
+      "fundamental_research": 0.2526113236875298,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.24738867631247016,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 25,
+      "fundamental_research": 0.25073000112212446,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.24926999887787551,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 26,
+      "fundamental_research": 0.2520453811570195,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.24795461884298048,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 27,
+      "fundamental_research": 0.25259756962739977,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.24740243037260023,
+      "safety_alignment": 0.25
+    },
+    {
+      "round": 28,
+      "fundamental_research": 0.25207858511819053,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.24792141488180947,
+      "safety_alignment": 0.25
+    }
+  ],
+  "observed_competitor_scores": {
+    "Anthropic": [
+      [
+        0,
+        0.821268637193434
+      ],
+      [
+        1,
+        0.836557580308388
+      ],
+      [
+        2,
+        0.836557580308388
+      ],
+      [
+        3,
+        0.8441516213393319
+      ],
+      [
+        4,
+        0.8441516213393319
+      ],
+      [
+        5,
+        0.8682549233877229
+      ],
+      [
+        6,
+        0.8693668506421353
+      ],
+      [
+        7,
+        0.8693668506421353
+      ],
+      [
+        8,
+        0.8729612543288499
+      ],
+      [
+        9,
+        0.8729612543288499
+      ],
+      [
+        10,
+        0.9106659990051871
+      ],
+      [
+        11,
+        0.9292914357427955
+      ],
+      [
+        12,
+        0.9292914357427955
+      ],
+      [
+        13,
+        0.9326744220871701
+      ],
+      [
+        14,
+        0.9326744220871701
+      ],
+      [
+        15,
+        0.8777004235882049
+      ],
+      [
+        16,
+        0.8898351821974847
+      ],
+      [
+        17,
+        0.9553218460260214
+      ],
+      [
+        18,
+        0.9553218460260214
+      ],
+      [
+        19,
+        0.9553218460260214
+      ],
+      [
+        20,
+        0.9607075157862878
+      ],
+      [
+        21,
+        0.9607075157862878
+      ],
+      [
+        22,
+        0.9161315262178986
+      ],
+      [
+        23,
+        0.9233052755989684
+      ],
+      [
+        24,
+        0.9233052755989684
+      ],
+      [
+        25,
+        0.9751100986091898
+      ],
+      [
+        26,
+        0.9751100986091898
+      ],
+      [
+        27,
+        0.9867453058722684
+      ],
+      [
+        28,
+        0.9867453058722684
+      ],
+      [
+        29,
+        0.968583245585824
+      ]
+    ],
+    "NovaMind": [
+      [
+        0,
+        0.5100320986064633
+      ],
+      [
+        1,
+        0.6795861498705993
+      ],
+      [
+        2,
+        0.7869844027151338
+      ],
+      [
+        3,
+        0.7869844027151338
+      ],
+      [
+        4,
+        0.7869844027151338
+      ],
+      [
+        5,
+        0.7869844027151338
+      ],
+      [
+        6,
+        0.7869844027151338
+      ],
+      [
+        7,
+        0.7869844027151338
+      ],
+      [
+        8,
+        0.7891535944437238
+      ],
+      [
+        9,
+        0.7891535944437238
+      ],
+      [
+        10,
+        0.7891535944437238
+      ],
+      [
+        11,
+        0.8048268650463916
+      ],
+      [
+        12,
+        0.8048268650463916
+      ],
+      [
+        13,
+        0.8048268650463916
+      ],
+      [
+        14,
+        0.8048268650463916
+      ],
+      [
+        15,
+        0.7891614363914016
+      ],
+      [
+        16,
+        0.7891614363914016
+      ],
+      [
+        17,
+        0.8124985412075328
+      ],
+      [
+        18,
+        0.82181165841146
+      ],
+      [
+        19,
+        0.82181165841146
+      ],
+      [
+        20,
+        0.82181165841146
+      ],
+      [
+        21,
+        0.82181165841146
+      ],
+      [
+        22,
+        0.8043579322306605
+      ],
+      [
+        23,
+        0.8270648101007179
+      ],
+      [
+        24,
+        0.8543724892263873
+      ],
+      [
+        25,
+        0.8590057555531847
+      ],
+      [
+        26,
+        0.8590057555531847
+      ],
+      [
+        27,
+        0.8621862126691824
+      ],
+      [
+        28,
+        0.8621862126691824
+      ],
+      [
+        29,
+        0.8698816085081083
+      ]
+    ],
+    "DeepMind": [
+      [
+        0,
+        0.739147385744404
+      ],
+      [
+        1,
+        0.8742964954373601
+      ],
+      [
+        2,
+        0.8899108245304262
+      ],
+      [
+        3,
+        0.8993094409063234
+      ],
+      [
+        4,
+        0.9306147933515273
+      ],
+      [
+        5,
+        0.9306147933515273
+      ],
+      [
+        6,
+        0.9306147933515273
+      ],
+      [
+        7,
+        0.9306147933515273
+      ],
+      [
+        8,
+        0.817267836018885
+      ],
+      [
+        9,
+        0.8660483056896529
+      ],
+      [
+        10,
+        0.8772120511218908
+      ],
+      [
+        11,
+        0.8772120511218908
+      ],
+      [
+        12,
+        0.8772120511218908
+      ],
+      [
+        13,
+        0.8887044280185239
+      ],
+      [
+        14,
+        0.8887044280185239
+      ],
+      [
+        15,
+        0.8633195247352057
+      ],
+      [
+        16,
+        0.9103756713211894
+      ],
+      [
+        17,
+        0.914666093383326
+      ],
+      [
+        18,
+        0.9217495306629493
+      ],
+      [
+        19,
+        0.9217495306629493
+      ],
+      [
+        20,
+        0.9217495306629493
+      ],
+      [
+        21,
+        0.9508302042671491
+      ],
+      [
+        22,
+        0.9537378980539561
+      ],
+      [
+        23,
+        0.954739466594864
+      ],
+      [
+        24,
+        0.9631226532003618
+      ],
+      [
+        25,
+        0.9631226532003618
+      ],
+      [
+        26,
+        0.9645469586510015
+      ],
+      [
+        27,
+        0.9730935710503982
+      ],
+      [
+        28,
+        0.9730935710503982
+      ],
+      [
+        29,
+        0.9255842431009167
+      ]
+    ],
+    "Meta_AI": [
+      [
+        0,
+        0.6682919380793964
+      ],
+      [
+        1,
+        0.7467338829200588
+      ],
+      [
+        2,
+        0.8118597854873136
+      ],
+      [
+        3,
+        0.8487487264284922
+      ],
+      [
+        4,
+        0.8487487264284922
+      ],
+      [
+        5,
+        0.8487487264284922
+      ],
+      [
+        6,
+        0.8487487264284922
+      ],
+      [
+        7,
+        0.8487487264284922
+      ],
+      [
+        8,
+        0.8208888530206981
+      ],
+      [
+        9,
+        0.8208888530206981
+      ],
+      [
+        10,
+        0.8208888530206981
+      ],
+      [
+        11,
+        0.878061888078637
+      ],
+      [
+        12,
+        0.8976399719698412
+      ],
+      [
+        13,
+        0.9160925736976563
+      ],
+      [
+        14,
+        1.0
+      ],
+      [
+        15,
+        0.9824225388305602
+      ],
+      [
+        16,
+        0.9824225388305602
+      ],
+      [
+        17,
+        0.9824225388305602
+      ],
+      [
+        18,
+        0.9824225388305602
+      ],
+      [
+        19,
+        0.9824225388305602
+      ],
+      [
+        20,
+        0.9824225388305602
+      ],
+      [
+        21,
+        0.9824225388305602
+      ],
+      [
+        22,
+        0.9496313059661
+      ],
+      [
+        23,
+        0.9777599091833952
+      ],
+      [
+        24,
+        0.9777599091833952
+      ],
+      [
+        25,
+        0.9777599091833952
+      ],
+      [
+        26,
+        0.9777599091833952
+      ],
+      [
+        27,
+        0.9777599091833952
+      ],
+      [
+        28,
+        0.992242687089619
+      ],
+      [
+        29,
+        0.9298388909129377
+      ]
+    ]
+  },
+  "recent_insights": []
+}

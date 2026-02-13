@@ -645,20 +645,46 @@ def plot_evaluator_dashboard(
     # --- Panel 3: Per-Benchmark Scores or Score Trends ---
     ax3 = axes[1, 0]
     if has_multi_benchmark:
-        benchmark_names = list(history[0].get("benchmark_params", {}).keys())
+        # Collect ALL benchmark names across all rounds (handles mid-simulation introductions)
+        all_benchmark_names = set()
+        for h in history:
+            if "benchmark_params" in h:
+                all_benchmark_names.update(h["benchmark_params"].keys())
+
+        # Sort benchmarks by first appearance (maintains introduction order)
+        benchmark_first_appearance = {}
+        for h in history:
+            if "benchmark_params" in h:
+                for bm in h["benchmark_params"].keys():
+                    if bm not in benchmark_first_appearance:
+                        benchmark_first_appearance[bm] = h["round"]
+
+        benchmark_names = sorted(all_benchmark_names,
+                                 key=lambda bm: benchmark_first_appearance.get(bm, 0))
         bench_colors = get_provider_colors(len(benchmark_names))
 
         # Plot average score per benchmark over time
         for i, bench_name in enumerate(benchmark_names):
             bench_avgs = []
+            bench_rounds = []  # Track rounds where this benchmark exists
             for h in history:
-                bench_scores = h["per_benchmark_scores"].get(bench_name, {})
+                bench_scores = h.get("per_benchmark_scores", {}).get(bench_name, {})
                 if bench_scores:
                     bench_avgs.append(np.mean(list(bench_scores.values())))
-                else:
-                    bench_avgs.append(0)
-            ax3.plot(rounds, bench_avgs, 'o-', label=bench_name, color=bench_colors[i],
-                    markersize=3, linewidth=2)
+                    bench_rounds.append(h["round"])
+
+            # Only plot if benchmark has data
+            if bench_avgs:
+                ax3.plot(bench_rounds, bench_avgs, 'o-', label=bench_name,
+                        color=bench_colors[i], markersize=3, linewidth=2)
+
+                # Mark introduction round if not round 0
+                intro_round = benchmark_first_appearance[bench_name]
+                if intro_round > 0:
+                    ax3.axvline(x=intro_round, color=bench_colors[i],
+                               linestyle=':', alpha=0.3, linewidth=1)
+
+        ax3.set_ylim(0, 1.05)
         style_axis(ax3, "Average Score by Benchmark", "Round", "Score")
     else:
         # Single benchmark - show score trends

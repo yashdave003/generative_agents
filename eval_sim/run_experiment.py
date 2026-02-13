@@ -61,10 +61,10 @@ SIMULATION = {
     "max_benchmarks": 6,
     # Pre-defined benchmark sequence (meaningful names instead of auto-generated)
     "benchmark_sequence": [
-        {"name": "reasoning", "validity": 0.85, "exploitability": 0.15, "noise_level": 0.08, "weight": 1.0},
+        {"name": "reasoning", "validity": 0.5, "exploitability": 0.15, "noise_level": 0.08, "weight": 1.0},
         {"name": "question_answering", "validity": 0.85, "exploitability": 0.15, "noise_level": 0.08, "weight": 1.0},
-        {"name": "factual_recall", "validity": 0.82, "exploitability": 0.20, "noise_level": 0.09, "weight": 1.0},
-        {"name": "accounting", "validity": 0.80, "exploitability": 0.25, "noise_level": 0.10, "weight": 1.0},
+        {"name": "factual_recall", "validity": 0.4, "exploitability": 0.50, "noise_level": 0.09, "weight": 1.0},
+        {"name": "accounting", "validity": 0.70, "exploitability": 0.25, "noise_level": 0.10, "weight": 1.0},
     ],
     # To disable sequence and use auto-generation, set to None:
     # "benchmark_sequence": None,
@@ -76,7 +76,7 @@ SIMULATION = {
 
 # 2 benchmarks: coding (high validity, harder to game) and reasoning (more exploitable)
 BENCHMARKS = [
-    {"name": "coding_bench", "validity": 0.85, "exploitability": 0.25,
+    {"name": "coding_bench", "validity": 0.55, "exploitability": 0.35,
      "noise_level": 0.08, "weight": 0.5},
     {"name": "reasoning_bench", "validity": 0.7, "exploitability": 0.45,
      "noise_level": 0.1, "weight": 0.5},
