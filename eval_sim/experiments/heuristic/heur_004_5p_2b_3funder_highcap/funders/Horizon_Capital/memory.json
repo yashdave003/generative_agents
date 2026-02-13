@@ -1,0 +1,1757 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.8666858203379105
+      ],
+      [
+        "OpenAI",
+        0.7742842792092661
+      ],
+      [
+        "DeepMind",
+        0.747996088885654
+      ],
+      [
+        "Meta_AI",
+        0.6781146875909648
+      ],
+      [
+        "NovaMind",
+        0.5069488774773513
+      ]
+    ],
+    "avg_satisfaction": 0.7043081521659853,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "avg_believed_gaming": 0.11483235040951816,
+    "beliefs": {
+      "Anthropic": 0.7726743281351642,
+      "OpenAI": 0.7417137116837065,
+      "DeepMind": 0.7191984355542617,
+      "Meta_AI": 0.661245875036386,
+      "NovaMind": 0.5327795509909407
+    }
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "funder_type": "vc",
+    "allocations": {
+      "Anthropic": 30000000.0,
+      "OpenAI": 15000000.0,
+      "DeepMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "reason": "vc strategy: top allocation $30,000,000 to Anthropic"
+  },
+  {
+    "type": "execution",
+    "round": 0,
+    "allocations": {
+      "Anthropic": 30000000.0,
+      "OpenAI": 15000000.0,
+      "DeepMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.8831451985786103
+      ],
+      [
+        "Anthropic",
+        0.8819908464846813
+      ],
+      [
+        "OpenAI",
+        0.8708469396202394
+      ],
+      [
+        "Meta_AI",
+        0.767910204625667
+      ],
+      [
+        "NovaMind",
+        0.7042835832270702
+      ]
+    ],
+    "avg_satisfaction": 0.7137678143407549,
+    "interventions": 1
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "avg_believed_gaming": 0.17082920384854228,
+    "beliefs": {
+      "Anthropic": 0.7758251586963224,
+      "OpenAI": 0.7542009885864022,
+      "DeepMind": 0.7361494702240198,
+      "Meta_AI": 0.672757767292889,
+      "NovaMind": 0.5571781400987488
+    }
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "allocations": {
+      "Anthropic": 30000000.0,
+      "OpenAI": 15000000.0,
+      "DeepMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9506617225593883
+      ],
+      [
+        "DeepMind",
+        0.9069894247811666
+      ],
+      [
+        "Anthropic",
+        0.8819908464846813
+      ],
+      [
+        "Meta_AI",
+        0.8326244090590715
+      ],
+      [
+        "NovaMind",
+        0.8170595374322518
+      ]
+    ],
+    "avg_satisfaction": 0.7222922812932521,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "avg_believed_gaming": 0.30078094524548005,
+    "beliefs": {
+      "Anthropic": 0.7793352727486769,
+      "OpenAI": 0.7734377567730706,
+      "DeepMind": 0.7516310195646801,
+      "Meta_AI": 0.6893327104884421,
+      "NovaMind": 0.5885383361217149
+    }
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "funder_type": "vc",
+    "allocations": {
+      "NovaMind": 30000000.0,
+      "OpenAI": 15000000.0,
+      "Anthropic": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667
+    },
+    "reason": "vc strategy: top allocation $30,000,000 to NovaMind"
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "allocations": {
+      "NovaMind": 30000000.0,
+      "OpenAI": 15000000.0,
+      "Anthropic": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9506617225593883
+      ],
+      [
+        "DeepMind",
+        0.9168215791027601
+      ],
+      [
+        "Anthropic",
+        0.8882744175886466
+      ],
+      [
+        "Meta_AI",
+        0.8756462437677663
+      ],
+      [
+        "NovaMind",
+        0.8170595374322518
+      ]
+    ],
+    "avg_satisfaction": 0.7281662287774099,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "avg_believed_gaming": 0.3358164751135506,
+    "beliefs": {
+      "Anthropic": 0.7833910482990258,
+      "OpenAI": 0.7878493041448306,
+      "DeepMind": 0.7644209321729589,
+      "Meta_AI": 0.7068696779342546,
+      "NovaMind": 0.6116959344092112
+    }
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "allocations": {
+      "NovaMind": 30000000.0,
+      "OpenAI": 15000000.0,
+      "Anthropic": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9879662571859941
+      ],
+      [
+        "DeepMind",
+        0.9545539605124508
+      ],
+      [
+        "Anthropic",
+        0.8882744175886466
+      ],
+      [
+        "Meta_AI",
+        0.8756462437677663
+      ],
+      [
+        "NovaMind",
+        0.8170595374322518
+      ]
+    ],
+    "avg_satisfaction": 0.7336088737729687,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "avg_believed_gaming": 0.3663411945779339,
+    "beliefs": {
+      "Anthropic": 0.7870534547720153,
+      "OpenAI": 0.8033618533382156,
+      "DeepMind": 0.7786645128249376,
+      "Meta_AI": 0.7199133847551731,
+      "NovaMind": 0.6291112541303151
+    }
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "funder_type": "vc",
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "DeepMind": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667
+    },
+    "reason": "vc strategy: top allocation $30,000,000 to OpenAI"
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "DeepMind": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9879662571859941
+      ],
+      [
+        "DeepMind",
+        0.9545539605124508
+      ],
+      [
+        "Anthropic",
+        0.9147616256246642
+      ],
+      [
+        "Meta_AI",
+        0.8756462437677663
+      ],
+      [
+        "NovaMind",
+        0.8170595374322518
+      ]
+    ],
+    "avg_satisfaction": 0.7402814580347007,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 5,
+    "avg_believed_gaming": 0.3879132845520732,
+    "beliefs": {
+      "Anthropic": 0.7936026953326001,
+      "OpenAI": 0.8153840312391218,
+      "DeepMind": 0.7895795253755332,
+      "Meta_AI": 0.7298048435182841,
+      "NovaMind": 0.6420866412445793
+    }
+  },
+  {
+    "type": "execution",
+    "round": 5,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "DeepMind": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9879662571859941
+      ],
+      [
+        "DeepMind",
+        0.9545539605124508
+      ],
+      [
+        "Anthropic",
+        0.9153236508610219
+      ],
+      [
+        "Meta_AI",
+        0.8756462437677663
+      ],
+      [
+        "NovaMind",
+        0.8170595374322518
+      ]
+    ],
+    "avg_satisfaction": 0.7469501543646926,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 6,
+    "avg_believed_gaming": 0.40010220220103837,
+    "beliefs": {
+      "Anthropic": 0.7990613950870481,
+      "OpenAI": 0.8249614705073586,
+      "DeepMind": 0.7981666973137417,
+      "Meta_AI": 0.7374918898261866,
+      "NovaMind": 0.6519595033687124
+    }
+  },
+  {
+    "type": "planning",
+    "round": 6,
+    "funder_type": "vc",
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "DeepMind": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667
+    },
+    "reason": "vc strategy: top allocation $30,000,000 to OpenAI"
+  },
+  {
+    "type": "execution",
+    "round": 6,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "DeepMind": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9879662571859941
+      ],
+      [
+        "DeepMind",
+        0.9545539605124508
+      ],
+      [
+        "Anthropic",
+        0.9153236508610219
+      ],
+      [
+        "Meta_AI",
+        0.8756462437677663
+      ],
+      [
+        "NovaMind",
+        0.8170595374322518
+      ]
+    ],
+    "avg_satisfaction": 0.7544814554958408,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 7,
+    "avg_believed_gaming": 0.4056637400989195,
+    "beliefs": {
+      "Anthropic": 0.8036859080014277,
+      "OpenAI": 0.832822678964374,
+      "DeepMind": 0.8051215073462413,
+      "Meta_AI": 0.7436340802603062,
+      "NovaMind": 0.6596610917903404
+    }
+  },
+  {
+    "type": "execution",
+    "round": 7,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "DeepMind": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.9275828638912588
+      ],
+      [
+        "Meta_AI",
+        0.8412335357234995
+      ],
+      [
+        "OpenAI",
+        0.8379670387619063
+      ],
+      [
+        "NovaMind",
+        0.8241838352334361
+      ],
+      [
+        "DeepMind",
+        0.8176558438344236
+      ]
+    ],
+    "avg_satisfaction": 0.7615503125725089,
+    "interventions": 1
+  },
+  {
+    "type": "reflection",
+    "round": 8,
+    "avg_believed_gaming": 0.39634889038275845,
+    "beliefs": {
+      "Anthropic": 0.8091980693063875,
+      "OpenAI": 0.8214822500174632,
+      "DeepMind": 0.7945075312791658,
+      "Meta_AI": 0.7445679197230881,
+      "NovaMind": 0.6667024428908629
+    }
+  },
+  {
+    "type": "planning",
+    "round": 8,
+    "funder_type": "vc",
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "NovaMind": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667
+    },
+    "reason": "vc strategy: top allocation $30,000,000 to OpenAI"
+  },
+  {
+    "type": "execution",
+    "round": 8,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "NovaMind": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.928586273196808
+      ],
+      [
+        "Anthropic",
+        0.9275828638912588
+      ],
+      [
+        "DeepMind",
+        0.880738576188158
+      ],
+      [
+        "Meta_AI",
+        0.8412335357234995
+      ],
+      [
+        "NovaMind",
+        0.8241838352334361
+      ]
+    ],
+    "avg_satisfaction": 0.7684295601811755,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 9,
+    "avg_believed_gaming": 0.4172355954661316,
+    "beliefs": {
+      "Anthropic": 0.8138862219468179,
+      "OpenAI": 0.8255646108746004,
+      "DeepMind": 0.7954088701703202,
+      "Meta_AI": 0.7460073260544038,
+      "NovaMind": 0.672664187178382
+    }
+  },
+  {
+    "type": "execution",
+    "round": 9,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "NovaMind": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 10,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.9576618254305109
+      ],
+      [
+        "OpenAI",
+        0.928586273196808
+      ],
+      [
+        "DeepMind",
+        0.8931305703602708
+      ],
+      [
+        "Meta_AI",
+        0.8412335357234995
+      ],
+      [
+        "NovaMind",
+        0.8241838352334361
+      ]
+    ],
+    "avg_satisfaction": 0.7751829575305689,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 10,
+    "avg_believed_gaming": 0.42190771986935227,
+    "beliefs": {
+      "Anthropic": 0.821615358911939,
+      "OpenAI": 0.8295566531590078,
+      "DeepMind": 0.7982892460842457,
+      "Meta_AI": 0.7478037148155514,
+      "NovaMind": 0.6778814858051903
+    }
+  },
+  {
+    "type": "planning",
+    "round": 10,
+    "funder_type": "vc",
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "Anthropic": 15000000.0,
+      "NovaMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667
+    },
+    "reason": "vc strategy: top allocation $30,000,000 to OpenAI"
+  },
+  {
+    "type": "execution",
+    "round": 10,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "Anthropic": 15000000.0,
+      "NovaMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 11,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.9777664273625216
+      ],
+      [
+        "OpenAI",
+        0.928586273196808
+      ],
+      [
+        "Meta_AI",
+        0.9019620269119354
+      ],
+      [
+        "DeepMind",
+        0.8931305703602708
+      ],
+      [
+        "NovaMind",
+        0.8447092187395461
+      ]
+    ],
+    "avg_satisfaction": 0.7811307952490424,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 11,
+    "avg_believed_gaming": 0.4283211734675315,
+    "beliefs": {
+      "Anthropic": 0.8304966824583793,
+      "OpenAI": 0.8334652399903233,
+      "DeepMind": 0.8010576146048991,
+      "Meta_AI": 0.757125584706468,
+      "NovaMind": 0.6848251000159313
+    }
+  },
+  {
+    "type": "execution",
+    "round": 11,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "Anthropic": 15000000.0,
+      "NovaMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 12,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.9777664273625216
+      ],
+      [
+        "OpenAI",
+        0.928586273196808
+      ],
+      [
+        "Meta_AI",
+        0.9258877159411893
+      ],
+      [
+        "DeepMind",
+        0.8931305703602708
+      ],
+      [
+        "NovaMind",
+        0.8447092187395461
+      ]
+    ],
+    "avg_satisfaction": 0.7866216661656208,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 12,
+    "avg_believed_gaming": 0.4127026516716207,
+    "beliefs": {
+      "Anthropic": 0.8377547222101359,
+      "OpenAI": 0.8372936212477241,
+      "DeepMind": 0.8037355152562786,
+      "Meta_AI": 0.7672956097037149,
+      "NovaMind": 0.6905070031389247
+    }
+  },
+  {
+    "type": "planning",
+    "round": 12,
+    "funder_type": "vc",
+    "allocations": {
+      "Anthropic": 30000000.0,
+      "OpenAI": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "reason": "vc strategy: top allocation $30,000,000 to Anthropic"
+  },
+  {
+    "type": "execution",
+    "round": 12,
+    "allocations": {
+      "Anthropic": 30000000.0,
+      "OpenAI": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 13,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.9820395853448266
+      ],
+      [
+        "OpenAI",
+        0.9486157274712932
+      ],
+      [
+        "Meta_AI",
+        0.9273361028688702
+      ],
+      [
+        "DeepMind",
+        0.9064875006820448
+      ],
+      [
+        "NovaMind",
+        0.8447092187395461
+      ]
+    ],
+    "avg_satisfaction": 0.7915851916791544,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 13,
+    "avg_believed_gaming": 0.4214903129679445,
+    "beliefs": {
+      "Anthropic": 0.8446189654868939,
+      "OpenAI": 0.8432524813171516,
+      "DeepMind": 0.8079409091559732,
+      "Meta_AI": 0.7753601026870398,
+      "NovaMind": 0.6952968267779455
+    }
+  },
+  {
+    "type": "execution",
+    "round": 13,
+    "allocations": {
+      "Anthropic": 30000000.0,
+      "OpenAI": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 14,
+    "leaderboard": [
+      [
+        "Meta_AI",
+        1.0
+      ],
+      [
+        "Anthropic",
+        0.9820395853448266
+      ],
+      [
+        "OpenAI",
+        0.9486157274712932
+      ],
+      [
+        "DeepMind",
+        0.9064875006820448
+      ],
+      [
+        "NovaMind",
+        0.8447092187395461
+      ]
+    ],
+    "avg_satisfaction": 0.7966858693995339,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 14,
+    "avg_believed_gaming": 0.44140955146033434,
+    "beliefs": {
+      "Anthropic": 0.8506832837999565,
+      "OpenAI": 0.8482913564331037,
+      "DeepMind": 0.8116068556810854,
+      "Meta_AI": 0.7904959165899033,
+      "NovaMind": 0.6994571983906069
+    }
+  },
+  {
+    "type": "planning",
+    "round": 14,
+    "funder_type": "vc",
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "Anthropic": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "reason": "vc strategy: top allocation $30,000,000 to OpenAI"
+  },
+  {
+    "type": "execution",
+    "round": 14,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "Anthropic": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 15,
+    "leaderboard": [
+      [
+        "Meta_AI",
+        0.9810361609248123
+      ],
+      [
+        "Anthropic",
+        0.9208572160111682
+      ],
+      [
+        "OpenAI",
+        0.9036237018727696
+      ],
+      [
+        "DeepMind",
+        0.8760808221711814
+      ],
+      [
+        "NovaMind",
+        0.8173483602077928
+      ]
+    ],
+    "avg_satisfaction": 0.8023006445126237,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 15,
+    "avg_believed_gaming": 0.4124875129382134,
+    "beliefs": {
+      "Anthropic": 0.8486000230196304,
+      "OpenAI": 0.8474737208922607,
+      "DeepMind": 0.8112431543000279,
+      "Meta_AI": 0.7995983982643023,
+      "NovaMind": 0.6998915691323856
+    }
+  },
+  {
+    "type": "execution",
+    "round": 15,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "Anthropic": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 16,
+    "leaderboard": [
+      [
+        "Meta_AI",
+        0.9810361609248123
+      ],
+      [
+        "Anthropic",
+        0.932007852628235
+      ],
+      [
+        "OpenAI",
+        0.9303528422091759
+      ],
+      [
+        "DeepMind",
+        0.9212006807118224
+      ],
+      [
+        "NovaMind",
+        0.8173483602077928
+      ]
+    ],
+    "avg_satisfaction": 0.807815766315026,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 16,
+    "avg_believed_gaming": 0.40130214211039617,
+    "beliefs": {
+      "Anthropic": 0.8494656971077532,
+      "OpenAI": 0.8511532139134561,
+      "DeepMind": 0.8171198475285157,
+      "Meta_AI": 0.8067675852358814,
+      "NovaMind": 0.7010009065644993
+    }
+  },
+  {
+    "type": "planning",
+    "round": 16,
+    "funder_type": "vc",
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "Anthropic": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "reason": "vc strategy: top allocation $30,000,000 to OpenAI"
+  },
+  {
+    "type": "execution",
+    "round": 16,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "Anthropic": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 17,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.9943963453469614
+      ],
+      [
+        "Meta_AI",
+        0.9810361609248123
+      ],
+      [
+        "OpenAI",
+        0.9303528422091759
+      ],
+      [
+        "DeepMind",
+        0.9253667517030579
+      ],
+      [
+        "NovaMind",
+        0.842003999057671
+      ]
+    ],
+    "avg_satisfaction": 0.813122965120001,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 17,
+    "avg_believed_gaming": 0.4175569042570251,
+    "beliefs": {
+      "Anthropic": 0.8585214203244247,
+      "OpenAI": 0.8547508344685184,
+      "DeepMind": 0.8224419324629995,
+      "Meta_AI": 0.8125938404205537,
+      "NovaMind": 0.7055257701714595
+    }
+  },
+  {
+    "type": "execution",
+    "round": 17,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "Anthropic": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "DeepMind": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 18,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.9943963453469614
+      ],
+      [
+        "Meta_AI",
+        0.9810361609248123
+      ],
+      [
+        "OpenAI",
+        0.964250347560618
+      ],
+      [
+        "DeepMind",
+        0.9337791258669176
+      ],
+      [
+        "NovaMind",
+        0.8508285242253125
+      ]
+    ],
+    "avg_satisfaction": 0.8181568874852794,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 18,
+    "avg_believed_gaming": 0.4162103015503087,
+    "beliefs": {
+      "Anthropic": 0.8658267278793159,
+      "OpenAI": 0.8623530924965499,
+      "DeepMind": 0.8278877872857642,
+      "Meta_AI": 0.8174777344145369,
+      "NovaMind": 0.7105447647392018
+    }
+  },
+  {
+    "type": "planning",
+    "round": 18,
+    "funder_type": "vc",
+    "allocations": {
+      "Anthropic": 30000000.0,
+      "OpenAI": 15000000.0,
+      "DeepMind": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667
+    },
+    "reason": "vc strategy: top allocation $30,000,000 to Anthropic"
+  },
+  {
+    "type": "execution",
+    "round": 18,
+    "allocations": {
+      "Anthropic": 30000000.0,
+      "OpenAI": 15000000.0,
+      "DeepMind": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 19,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9954446476563049
+      ],
+      [
+        "Anthropic",
+        0.9943963453469614
+      ],
+      [
+        "Meta_AI",
+        0.9810361609248123
+      ],
+      [
+        "DeepMind",
+        0.9337791258669176
+      ],
+      [
+        "NovaMind",
+        0.8508285242253125
+      ]
+    ],
+    "avg_satisfaction": 0.8230718048323338,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 19,
+    "avg_believed_gaming": 0.43214394354807883,
+    "beliefs": {
+      "Anthropic": 0.8721183405385374,
+      "OpenAI": 0.8722463729275679,
+      "DeepMind": 0.8324102338931529,
+      "Meta_AI": 0.8216875751428934,
+      "NovaMind": 0.7148508947804048
+    }
+  },
+  {
+    "type": "execution",
+    "round": 19,
+    "allocations": {
+      "Anthropic": 30000000.0,
+      "OpenAI": 15000000.0,
+      "DeepMind": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 20,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9954446476563049
+      ],
+      [
+        "Anthropic",
+        0.9952193185000103
+      ],
+      [
+        "Meta_AI",
+        0.9810361609248123
+      ],
+      [
+        "DeepMind",
+        0.9337791258669176
+      ],
+      [
+        "NovaMind",
+        0.8508285242253125
+      ]
+    ],
+    "avg_satisfaction": 0.828432056058128,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 20,
+    "avg_believed_gaming": 0.4225581752043732,
+    "beliefs": {
+      "Anthropic": 0.8777903245995679,
+      "OpenAI": 0.8799946189750981,
+      "DeepMind": 0.8362782642973314,
+      "Meta_AI": 0.8254127666068176,
+      "NovaMind": 0.7186496286899045
+    }
+  },
+  {
+    "type": "planning",
+    "round": 20,
+    "funder_type": "vc",
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "Anthropic": 15000000.0,
+      "DeepMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "reason": "vc strategy: top allocation $30,000,000 to OpenAI"
+  },
+  {
+    "type": "execution",
+    "round": 20,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "Anthropic": 15000000.0,
+      "DeepMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 21,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9954446476563049
+      ],
+      [
+        "Anthropic",
+        0.9952193185000103
+      ],
+      [
+        "Meta_AI",
+        0.9810361609248123
+      ],
+      [
+        "DeepMind",
+        0.9702491639870904
+      ],
+      [
+        "NovaMind",
+        0.8508285242253125
+      ]
+    ],
+    "avg_satisfaction": 0.833987210683429,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 21,
+    "avg_believed_gaming": 0.4174193070949565,
+    "beliefs": {
+      "Anthropic": 0.882706171450174,
+      "OpenAI": 0.8864230419455197,
+      "DeepMind": 0.8440619165120776,
+      "Meta_AI": 0.8287958393901607,
+      "NovaMind": 0.7220914208303875
+    }
+  },
+  {
+    "type": "execution",
+    "round": 21,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "Anthropic": 15000000.0,
+      "DeepMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 22,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9965834857422287
+      ],
+      [
+        "DeepMind",
+        0.9776868729903178
+      ],
+      [
+        "Meta_AI",
+        0.9725807798462537
+      ],
+      [
+        "Anthropic",
+        0.9607425429939438
+      ],
+      [
+        "NovaMind",
+        0.8564082385731597
+      ]
+    ],
+    "avg_satisfaction": 0.8397074577928184,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 22,
+    "avg_believed_gaming": 0.399579579538783,
+    "beliefs": {
+      "Anthropic": 0.8829424226168432,
+      "OpenAI": 0.8920581007299441,
+      "DeepMind": 0.8511043239364566,
+      "Meta_AI": 0.8309211187860146,
+      "NovaMind": 0.725950386205866
+    }
+  },
+  {
+    "type": "planning",
+    "round": 22,
+    "funder_type": "vc",
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "DeepMind": 15000000.0,
+      "Anthropic": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "reason": "vc strategy: top allocation $30,000,000 to OpenAI"
+  },
+  {
+    "type": "execution",
+    "round": 22,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "DeepMind": 15000000.0,
+      "Anthropic": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 23,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9965834857422287
+      ],
+      [
+        "Meta_AI",
+        0.9857771206936092
+      ],
+      [
+        "DeepMind",
+        0.9776868729903178
+      ],
+      [
+        "Anthropic",
+        0.9706877294940867
+      ],
+      [
+        "NovaMind",
+        0.8808143204284229
+      ]
+    ],
+    "avg_satisfaction": 0.8455472607245293,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 23,
+    "avg_believed_gaming": 0.39002701911190074,
+    "beliefs": {
+      "Anthropic": 0.8850378906119578,
+      "OpenAI": 0.8970007689022546,
+      "DeepMind": 0.8569097483024923,
+      "Meta_AI": 0.8347591003371444,
+      "NovaMind": 0.7323588270912085
+    }
+  },
+  {
+    "type": "execution",
+    "round": 23,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "DeepMind": 15000000.0,
+      "Anthropic": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 24,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9965834857422287
+      ],
+      [
+        "Meta_AI",
+        0.9857771206936092
+      ],
+      [
+        "DeepMind",
+        0.9776868729903178
+      ],
+      [
+        "Anthropic",
+        0.9706877294940867
+      ],
+      [
+        "NovaMind",
+        0.9141587586285307
+      ]
+    ],
+    "avg_satisfaction": 0.8513503728629603,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 24,
+    "avg_believed_gaming": 0.40258288984899354,
+    "beliefs": {
+      "Anthropic": 0.8872341203349581,
+      "OpenAI": 0.9014519953489587,
+      "DeepMind": 0.8618468229168997,
+      "Meta_AI": 0.8382094855266768,
+      "NovaMind": 0.7416262361026841
+    }
+  },
+  {
+    "type": "planning",
+    "round": 24,
+    "funder_type": "vc",
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "NovaMind": 15000000.0,
+      "DeepMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667
+    },
+    "reason": "vc strategy: top allocation $30,000,000 to OpenAI"
+  },
+  {
+    "type": "execution",
+    "round": 24,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "NovaMind": 15000000.0,
+      "DeepMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 25,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9988798969348169
+      ],
+      [
+        "Anthropic",
+        0.9964144888750077
+      ],
+      [
+        "Meta_AI",
+        0.9857771206936092
+      ],
+      [
+        "DeepMind",
+        0.9776868729903178
+      ],
+      [
+        "NovaMind",
+        0.9180869666278508
+      ]
+    ],
+    "avg_satisfaction": 0.8570861772482876,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 25,
+    "avg_believed_gaming": 0.4144462940101688,
+    "beliefs": {
+      "Anthropic": 0.8925806733743589,
+      "OpenAI": 0.9058237133300224,
+      "DeepMind": 0.865999851995185,
+      "Meta_AI": 0.8413851320948801,
+      "NovaMind": 0.7495648885293482
+    }
+  },
+  {
+    "type": "execution",
+    "round": 25,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "NovaMind": 15000000.0,
+      "DeepMind": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 26,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9988798969348169
+      ],
+      [
+        "Anthropic",
+        0.9964144888750077
+      ],
+      [
+        "Meta_AI",
+        0.9857771206936092
+      ],
+      [
+        "DeepMind",
+        0.9776868729903178
+      ],
+      [
+        "NovaMind",
+        0.9180869666278508
+      ]
+    ],
+    "avg_satisfaction": 0.8627404612412894,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 26,
+    "avg_believed_gaming": 0.4180050681176376,
+    "beliefs": {
+      "Anthropic": 0.8970415761044771,
+      "OpenAI": 0.9098507376947917,
+      "DeepMind": 0.8696009079980651,
+      "Meta_AI": 0.8443644734323836,
+      "NovaMind": 0.7561048966676402
+    }
+  },
+  {
+    "type": "planning",
+    "round": 26,
+    "funder_type": "vc",
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "NovaMind": 15000000.0,
+      "DeepMind": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667
+    },
+    "reason": "vc strategy: top allocation $30,000,000 to OpenAI"
+  },
+  {
+    "type": "execution",
+    "round": 26,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "NovaMind": 15000000.0,
+      "DeepMind": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 27,
+    "leaderboard": [
+      [
+        "Anthropic",
+        1.0
+      ],
+      [
+        "OpenAI",
+        0.9988798969348169
+      ],
+      [
+        "Meta_AI",
+        0.9857771206936092
+      ],
+      [
+        "DeepMind",
+        0.9797278325327221
+      ],
+      [
+        "NovaMind",
+        0.9220314367100106
+      ]
+    ],
+    "avg_satisfaction": 0.8683074343802532,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 27,
+    "avg_believed_gaming": 0.42691588822798254,
+    "beliefs": {
+      "Anthropic": 0.9013082590304318,
+      "OpenAI": 0.9136238689575655,
+      "DeepMind": 0.8730567131095462,
+      "Meta_AI": 0.84720211769629,
+      "NovaMind": 0.76213923077721
+    }
+  },
+  {
+    "type": "execution",
+    "round": 27,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "NovaMind": 15000000.0,
+      "DeepMind": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667,
+      "Meta_AI": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 28,
+    "leaderboard": [
+      [
+        "Anthropic",
+        1.0
+      ],
+      [
+        "OpenAI",
+        0.9988798969348169
+      ],
+      [
+        "Meta_AI",
+        0.9895334275574226
+      ],
+      [
+        "DeepMind",
+        0.9797278325327221
+      ],
+      [
+        "NovaMind",
+        0.9220314367100106
+      ]
+    ],
+    "avg_satisfaction": 0.8737587917738523,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 28,
+    "avg_believed_gaming": 0.4048967364787514,
+    "beliefs": {
+      "Anthropic": 0.905003911009078,
+      "OpenAI": 0.9172014122435692,
+      "DeepMind": 0.8761620275850379,
+      "Meta_AI": 0.8503869026266608,
+      "NovaMind": 0.7673452352771306
+    }
+  },
+  {
+    "type": "planning",
+    "round": 28,
+    "funder_type": "vc",
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "DeepMind": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "reason": "vc strategy: top allocation $30,000,000 to OpenAI"
+  },
+  {
+    "type": "execution",
+    "round": 28,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "DeepMind": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  },
+  {
+    "type": "observation",
+    "round": 29,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9991039175478535
+      ],
+      [
+        "Anthropic",
+        0.986008193562441
+      ],
+      [
+        "DeepMind",
+        0.9280741472099898
+      ],
+      [
+        "Meta_AI",
+        0.9230314724644149
+      ],
+      [
+        "NovaMind",
+        0.9204763288655583
+      ]
+    ],
+    "avg_satisfaction": 0.8791214436482836,
+    "interventions": 0
+  },
+  {
+    "type": "reflection",
+    "round": 29,
+    "avg_believed_gaming": 0.39679408142896755,
+    "beliefs": {
+      "Anthropic": 0.9066155896404459,
+      "OpenAI": 0.9206560584421648,
+      "DeepMind": 0.872988021346417,
+      "Meta_AI": 0.8453800863262417,
+      "NovaMind": 0.7715885554180791
+    }
+  },
+  {
+    "type": "execution",
+    "round": 29,
+    "allocations": {
+      "OpenAI": 30000000.0,
+      "DeepMind": 15000000.0,
+      "Meta_AI": 1666666.6666666667,
+      "Anthropic": 1666666.6666666667,
+      "NovaMind": 1666666.6666666667
+    },
+    "total_deployed": 50000000.0
+  }
+]

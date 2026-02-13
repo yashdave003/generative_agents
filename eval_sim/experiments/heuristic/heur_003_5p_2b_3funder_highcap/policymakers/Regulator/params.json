@@ -1,0 +1,5 @@
+{
+  "intervention_threshold": 0.3,
+  "risk_tolerance": 0.5,
+  "llm_mode": false
+}

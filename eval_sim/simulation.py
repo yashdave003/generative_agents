@@ -1203,7 +1203,7 @@ def get_default_provider_configs() -> list[dict]:
                 "Research-driven culture with academic rigor."
             ),
             "innate_traits": "safety-conscious, research-driven, cautious, long-term focused, principled",
-            "initial_capability": 0.68,  # Claude competitive but slightly behind GPT-4
+            "initial_capability": 0.72,  # Claude competitive but slightly behind GPT-4
             "initial_believed_capability": 0.65,
             "initial_believed_exploitability": 0.30,  # Less focused on gaming benchmarks
             "initial_strategy": {
