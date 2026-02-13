@@ -72,6 +72,8 @@ class SimulationConfig:
     # Benchmark introduction (evaluator introduces new benchmarks mid-simulation)
     benchmark_introduction_cooldown: int = 7
     max_benchmarks: int = 6
+    benchmark_sequence: Optional[list] = None  # Ordered list of benchmark dicts to introduce
+    # Each dict: {"name": str, "validity": float, "exploitability": float, "noise_level": float, "weight": float}
 
     # Planning mode
     llm_mode: bool = False  # If True, use LLM for planning; if False, use heuristics
@@ -219,6 +221,7 @@ class EvalEcosystemSimulation:
             self.evaluator = Evaluator(
                 benchmarks=self.config.benchmarks,
                 seed=self.config.seed,
+                benchmark_sequence=self.config.benchmark_sequence,
             )
         else:
             # Single benchmark mode
@@ -228,6 +231,7 @@ class EvalEcosystemSimulation:
                 exploitability=self.config.benchmark_exploitability,
                 noise_level=self.config.benchmark_noise,
                 seed=self.config.seed,
+                benchmark_sequence=self.config.benchmark_sequence,
             )
 
         # Apply benchmark evolution rates to all benchmarks
@@ -836,9 +840,19 @@ class EvalEcosystemSimulation:
 
         all_allocations = {}
 
+        # Collect other funders' current allocations for diversification awareness
+        other_funder_allocations = {}
         for funder in self.funders:
             if not isinstance(funder, Funder):
                 continue
+            other_funder_allocations[funder.name] = dict(funder.private_state.active_funding)
+
+        for funder in self.funders:
+            if not isinstance(funder, Funder):
+                continue
+
+            # Prepare other funders' allocations (excluding self)
+            others = {k: v for k, v in other_funder_allocations.items() if k != funder.name}
 
             # Funder observes ecosystem state (public signals only)
             funder.observe(
@@ -847,6 +861,7 @@ class EvalEcosystemSimulation:
                 policymaker_data=policymaker_data,
                 round_num=round_num,
                 media_coverage=media_coverage,
+                other_funder_allocations=others,
             )
 
             # Funder reflects on observations
@@ -925,6 +940,16 @@ class EvalEcosystemSimulation:
         if "benchmark_params" in round_data:
             for bm_name, params in round_data["benchmark_params"].items():
                 print(f"  Benchmark [{bm_name}]: validity={params['validity']:.3f}, exploitability={params['exploitability']:.3f}")
+
+        # Print per-benchmark scores if available
+        if "per_benchmark_scores" in round_data:
+            print("\n  Per-Benchmark Scores:")
+            for bm_name, provider_scores in round_data["per_benchmark_scores"].items():
+                bm_leaderboard = sorted(provider_scores.items(), key=lambda x: x[1], reverse=True)
+                print(f"    [{bm_name}]:")
+                for rank, (name, score) in enumerate(bm_leaderboard, 1):
+                    print(f"      {rank}. {name}: {score:.3f}")
+            print()  # Add blank line for readability
 
         # Print LLM reasoning traces if available
         if self.config.llm_mode:

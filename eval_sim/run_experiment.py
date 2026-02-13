@@ -24,22 +24,23 @@ os.environ["NUMEXPR_NUM_THREADS"] = n_threads_str
 EXPERIMENT = {
     "name": "5p_2b_3funder_highcap",
     "description": (
-        "Full ecosystem v5: 5 providers, 2 benchmarks (coding + reasoning), "
+        "Full ecosystem v6: 5 providers, 2 benchmarks (coding + reasoning), "
         "12 consumer segments (4 use-cases × 3 archetypes), 1 policymaker, "
         "3 funders (2 VC + 1 Gov) with high capital ($2B/$500M/$100M). "
+        "NEW v6 features: funder diversification (observe other funders' allocations), "
+        "per-benchmark score reporting (console output), optional benchmark sequence. "
         "Funder rework: 10% per-round deployment cap, 2-round cooldown, "
-        "momentum-based scoring (no direct gaming penalty), "
-        "media headline dedup, cleaned round_data. "
+        "momentum-based scoring with diversification signal. "
         "LLM mode via Ollama."
     ),
     "tags": ["llm", "ollama", "5-provider", "2-benchmark", "12-segments",
-             "3-funder", "high-capital", "momentum-scoring", "funder-cap",
-             "funder-cooldown", "media-dedup", "full-ecosystem-v5"],
+             "3-funder", "high-capital", "funder-diversification", "per-benchmark-reporting",
+             "full-ecosystem-v6"],
 }
 
 LLM = {
     "provider": "ollama",       # openai | anthropic | ollama | gemini
-    "llm_mode": True,          # True = LLM planning, False = heuristic
+    "llm_mode": False,          # True = LLM planning, False = heuristic
 }
 
 SIMULATION = {
@@ -58,6 +59,15 @@ SIMULATION = {
     # Benchmark introduction
     "benchmark_introduction_cooldown": 7,
     "max_benchmarks": 6,
+    # Pre-defined benchmark sequence (meaningful names instead of auto-generated)
+    "benchmark_sequence": [
+        {"name": "reasoning", "validity": 0.85, "exploitability": 0.15, "noise_level": 0.08, "weight": 1.0},
+        {"name": "question_answering", "validity": 0.85, "exploitability": 0.15, "noise_level": 0.08, "weight": 1.0},
+        {"name": "factual_recall", "validity": 0.82, "exploitability": 0.20, "noise_level": 0.09, "weight": 1.0},
+        {"name": "accounting", "validity": 0.80, "exploitability": 0.25, "noise_level": 0.10, "weight": 1.0},
+    ],
+    # To disable sequence and use auto-generation, set to None:
+    # "benchmark_sequence": None,
     # Media
     "enable_media": True,
     # Consumer market: 4 use-cases × 3 archetypes = 12 segments
@@ -196,6 +206,7 @@ def run():
         benchmark_exploitability_growth_rate=SIMULATION.get("benchmark_exploitability_growth_rate", 0.008),
         benchmark_introduction_cooldown=SIMULATION.get("benchmark_introduction_cooldown", 6),
         max_benchmarks=SIMULATION.get("max_benchmarks", 6),
+        benchmark_sequence=SIMULATION.get("benchmark_sequence"),
         llm_mode=LLM["llm_mode"],
         enable_consumers=CONSUMERS["enabled"],
         enable_policymakers=POLICYMAKERS["enabled"],

@@ -128,6 +128,7 @@ class Funder:
         policymaker_data: dict,
         round_num: int,
         media_coverage: Optional[dict] = None,
+        other_funder_allocations: Optional[dict] = None,
     ):
         """
         Observe the current ecosystem state.
@@ -137,6 +138,7 @@ class Funder:
         - Consumer satisfaction (true quality proxy)
         - Regulatory interventions (compliance/safety risk)
         - Media coverage (sentiment, risk signals)
+        - Other funders' allocations (for portfolio diversification)
 
         Args:
             leaderboard: List of (provider_name, score) tuples
@@ -144,6 +146,7 @@ class Funder:
             policymaker_data: Dict with interventions, active_regulations
             round_num: Current simulation round
             media_coverage: Optional media coverage dict
+            other_funder_allocations: Dict of {funder_name: {provider: amount}}
         """
         self.public_state.current_round = round_num
 
@@ -151,6 +154,7 @@ class Funder:
         self._last_leaderboard = leaderboard
         self._last_consumer_data = consumer_data
         self._last_policymaker_data = policymaker_data
+        self._other_funder_allocations = other_funder_allocations or {}
 
         # Update beliefs about provider quality using public signals
         for provider_name, score in leaderboard:
@@ -384,12 +388,35 @@ class Funder:
                 deltas.append(curr - prev)
         return sum(deltas) / len(deltas) if deltas else 0.0
 
+    def _compute_portfolio_concentration(self, provider: str) -> float:
+        """
+        Compute how concentrated other funders are on this provider.
+
+        Returns:
+            Value 0-1 where 1 = highly concentrated (all funders funding it)
+        """
+        if not self._other_funder_allocations:
+            return 0.0  # No concentration data available
+
+        total_funders = len(self._other_funder_allocations)
+        if total_funders == 0:
+            return 0.0
+
+        # Count how many other funders are funding this provider
+        funders_funding_provider = 0
+        for funder_name, allocations in self._other_funder_allocations.items():
+            if provider in allocations and allocations[provider] > 0:
+                funders_funding_provider += 1
+
+        # Concentration = fraction of other funders funding this provider
+        return funders_funding_provider / total_funders
+
     def _score_providers(self, providers: list, weights: dict) -> dict:
         """Score providers using publicly observable momentum signals.
 
         Args:
             providers: List of provider names
-            weights: dict with keys quality, score_momentum, market_traction, market_momentum
+            weights: dict with keys quality, score_momentum, market_traction, market_momentum, diversification
 
         Returns:
             Dict of {provider: composite_score}
@@ -402,11 +429,16 @@ class Funder:
             traction = market_shares.get(provider, 0)
             market_mom = getattr(self, "_current_market_momentum", {}).get(provider, 0)
 
+            # Diversification signal: high concentration reduces score
+            concentration = self._compute_portfolio_concentration(provider)
+            diversification_score = 1.0 - concentration  # Higher when less concentrated
+
             composite = (
                 weights["quality"] * quality
                 + weights["score_momentum"] * score_mom * 10  # Scale: deltas ~0.01-0.05
                 + weights["market_traction"] * traction
                 + weights["market_momentum"] * market_mom * 10
+                + weights.get("diversification", 0.0) * diversification_score
             )
             scores[provider] = max(0, composite)
         return scores
@@ -417,10 +449,12 @@ class Funder:
 
         Uses momentum signals — gaming effects emerge indirectly through
         declining market traction when scores don't match real quality.
+        Includes diversification signal to avoid over-saturated opportunities.
         """
         scores = self._score_providers(providers, {
-            "quality": 0.20, "score_momentum": 0.30,
-            "market_traction": 0.25, "market_momentum": 0.25,
+            "quality": 0.20, "score_momentum": 0.25,
+            "market_traction": 0.20, "market_momentum": 0.20,
+            "diversification": 0.15,
         })
 
         ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)
@@ -448,10 +482,12 @@ class Funder:
         Weights quality heavily, with moderate market traction signal.
         Gaming effects surface indirectly through low market share or
         declining traction when consumers notice quality gaps.
+        Moderate diversification to support ecosystem stability.
         """
         scores = self._score_providers(providers, {
             "quality": 0.50, "score_momentum": 0.10,
-            "market_traction": 0.30, "market_momentum": 0.10,
+            "market_traction": 0.25, "market_momentum": 0.05,
+            "diversification": 0.10,
         })
 
         # Penalize providers with active regulatory interventions
@@ -477,11 +513,12 @@ class Funder:
         Balances quality with score momentum (genuine improvement).
         Gaming effects emerge indirectly: gaming providers have high scores
         but stalling momentum and declining market traction.
-        Includes underdog bonus for lower-quality providers with potential.
+        Includes underdog bonus and strong diversification to support ecosystem health.
         """
         scores = self._score_providers(providers, {
-            "quality": 0.40, "score_momentum": 0.25,
-            "market_traction": 0.20, "market_momentum": 0.15,
+            "quality": 0.35, "score_momentum": 0.20,
+            "market_traction": 0.15, "market_momentum": 0.10,
+            "diversification": 0.20,
         })
 
         # Underdog bonus: lower quality providers get a boost

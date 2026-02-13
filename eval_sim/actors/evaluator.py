@@ -114,6 +114,7 @@ class Evaluator:
         noise_level: float = 0.1,
         seed: Optional[int] = None,
         benchmarks: Optional[list[dict]] = None,
+        benchmark_sequence: Optional[list[dict]] = None,
     ):
         """
         Initialize an Evaluator.
@@ -126,6 +127,8 @@ class Evaluator:
             seed: Random seed for reproducibility
             benchmarks: Optional list of benchmark configs for multi-benchmark mode.
                        Each dict should have: name, validity, exploitability, noise_level, weight
+            benchmark_sequence: Optional ordered list of benchmark dicts to introduce mid-simulation.
+                       Each dict should have: name, validity, exploitability, noise_level, weight (optional)
         """
         # Support for multiple benchmarks
         self.benchmarks: list[Benchmark] = []
@@ -182,6 +185,10 @@ class Evaluator:
         self.last_introduction_round: int = 0  # first introduction at round 8
         self.max_benchmarks: int = 6
         self.introduction_history: list[dict] = []  # [{round, benchmark_name, trigger}]
+
+        # Benchmark sequence (pre-defined benchmarks to introduce in order)
+        self.benchmark_sequence: list[dict] = benchmark_sequence or []
+        self._sequence_index: int = 0  # Track position in sequence
 
         # Per-benchmark best published scores (monotonicity enforcement)
         self._best_published_scores: dict[str, dict[str, float]] = {
@@ -487,21 +494,41 @@ class Evaluator:
         if trigger is None:
             return None
 
-        # Create new benchmark with fresh properties
-        new_name = f"benchmark_r{round_num}"
-        new_bm = Benchmark(
-            name=new_name,
-            validity=0.85,
-            exploitability=0.15,
-            noise_level=0.08,
-            validity_decay_rate=self.benchmarks[0].validity_decay_rate,
-            exploitability_growth_rate=self.benchmarks[0].exploitability_growth_rate,
-        )
+        # Create new benchmark - use sequence if available, otherwise auto-generate
+        if self.benchmark_sequence and self._sequence_index < len(self.benchmark_sequence):
+            # Pull from pre-defined sequence
+            bm_config = self.benchmark_sequence[self._sequence_index]
+            new_name = bm_config.get("name", f"benchmark_r{round_num}")
+            new_bm = Benchmark(
+                name=new_name,
+                validity=bm_config.get("validity", 0.85),
+                exploitability=bm_config.get("exploitability", 0.15),
+                noise_level=bm_config.get("noise_level", 0.08),
+                validity_decay_rate=self.benchmarks[0].validity_decay_rate,
+                exploitability_growth_rate=self.benchmarks[0].exploitability_growth_rate,
+            )
+            # Use configured weight or average
+            if "weight" in bm_config:
+                new_weight = bm_config["weight"]
+            else:
+                new_weight = sum(self.benchmark_weights.values()) / len(self.benchmark_weights)
+            self._sequence_index += 1
+        else:
+            # Auto-generate (backwards compatible)
+            new_name = f"benchmark_r{round_num}"
+            new_bm = Benchmark(
+                name=new_name,
+                validity=0.85,
+                exploitability=0.15,
+                noise_level=0.08,
+                validity_decay_rate=self.benchmarks[0].validity_decay_rate,
+                exploitability_growth_rate=self.benchmarks[0].exploitability_growth_rate,
+            )
+            new_weight = sum(self.benchmark_weights.values()) / len(self.benchmark_weights)
 
-        # Weight = average of existing benchmark weights
-        avg_weight = sum(self.benchmark_weights.values()) / len(self.benchmark_weights)
+        # Add to evaluator state
         self.benchmarks.append(new_bm)
-        self.benchmark_weights[new_name] = avg_weight
+        self.benchmark_weights[new_name] = new_weight
         self.benchmark_score_history[new_name] = []
         self._best_published_scores[new_name] = {}
 

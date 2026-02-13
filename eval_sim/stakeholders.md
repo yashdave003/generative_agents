@@ -493,7 +493,7 @@ Interventions follow a **graduated escalation** model and have a **3-round coold
 
 ### Funder Types
 
-Funders score providers using **publicly observable momentum signals**. Gaming effects emerge indirectly: a gaming provider may have high scores but stalling score momentum, declining market traction, and negative market momentum as consumers discover the quality gap.
+Funders score providers using **publicly observable momentum signals** and **portfolio diversification awareness**. Gaming effects emerge indirectly: a gaming provider may have high scores but stalling score momentum, declining market traction, and negative market momentum as consumers discover the quality gap.
 
 | Signal | Computation | Source |
 |--------|------------|--------|
@@ -501,14 +501,17 @@ Funders score providers using **publicly observable momentum signals**. Gaming e
 | `score_momentum` | Avg score delta over last 3 rounds | Score history tracking |
 | `market_traction` | Provider's current market share | `consumer_data.market_shares` |
 | `market_momentum` | Market share change vs prior round | Delta of market shares |
+| `diversification` | `1.0 - concentration` | Fraction of other funders backing provider |
+
+**Diversification signal**: Funders can observe other funders' allocations and compute portfolio concentration. High concentration (many funders backing the same provider) reduces the diversification score, encouraging capital to flow to under-funded providers. This prevents inefficient capital concentration and creates emergent portfolio diversification.
 
 Type-specific signal weights:
 
-| Type | Quality | Score Momentum | Market Traction | Market Momentum | Allocation Pattern |
-|------|---------|---------------|-----------------|-----------------|-------------------|
-| **VC** | 0.20 | 0.30 | 0.25 | 0.25 | Concentrated (60/30/10 split) |
-| **Government/AISI** | 0.50 | 0.10 | 0.30 | 0.10 | Spread proportionally; penalizes regulatory interventions |
-| **Foundation** | 0.40 | 0.25 | 0.20 | 0.15 | Spread proportionally; includes underdog bonus |
+| Type | Quality | Score Momentum | Market Traction | Market Momentum | Diversification | Allocation Pattern |
+|------|---------|---------------|-----------------|-----------------|-----------------|-------------------|
+| **VC** | 0.20 | 0.25 | 0.20 | 0.20 | 0.15 | Concentrated (60/30/10 split); seeks contrarian opportunities |
+| **Government/AISI** | 0.50 | 0.10 | 0.25 | 0.05 | 0.10 | Spread proportionally; moderate ecosystem stability focus |
+| **Foundation** | 0.35 | 0.20 | 0.15 | 0.10 | 0.20 | Spread proportionally; strong ecosystem health focus |
 
 ### Funding Mechanism
 
@@ -536,13 +539,16 @@ Funders can only see public signals and must **infer** provider quality:
 | Market shares | `consumer_data.market_shares` | Demand-side traction |
 | Regulatory interventions | `policymaker_data.interventions` | Safety/compliance risk |
 | Media coverage | `media_data` | Sentiment, provider attention, and risk signals |
+| Other funders' allocations | `other_funder_allocations` | Portfolio concentration for diversification |
 
 This creates realistic information asymmetry — funders cannot see provider strategies directly. Gaming effects are **not penalized directly** but emerge through declining market traction and momentum when consumers discover the quality gap. Media acts as an amplifying intermediary: high media attention combined with risk signals increases the funder's internal `believed_gaming` estimate.
 
+**Funder interdependence**: Funders observe each other's allocations (simulating public SEC filings, press releases, etc.) and adjust their strategies to diversify portfolios. This prevents capital from concentrating inefficiently on the same providers and allows risk-tolerant funders (VCs) to seek contrarian opportunities.
+
 ### Cognitive Loop (per round)
-1. **Observe**: See leaderboard, consumer satisfaction, market shares, regulatory interventions, media coverage; compute score momentum and market momentum
+1. **Observe**: See leaderboard, consumer satisfaction, market shares, regulatory interventions, media coverage, other funders' allocations; compute score momentum, market momentum, and portfolio concentration
 2. **Reflect**: Update beliefs about provider quality and gaming levels
-3. **Plan**: Decide funding allocations based on funder type signal weights (respecting cooldown)
+3. **Plan**: Decide funding allocations based on funder type signal weights (including diversification), respecting cooldown
 4. **Execute**: Deploy capped capital, update active_funding
 
 ---
@@ -636,6 +642,24 @@ benchmarks = [
 
 Composite score = weighted average of individual benchmark scores.
 
+**Per-Benchmark Reporting**: When multiple benchmarks are active, the simulation's round summary (`_print_round_summary()`) displays both composite leaderboards and per-benchmark scores. This provides visibility into provider strengths, weaknesses, and gaming patterns across different evaluation dimensions.
+
+Example console output:
+```
+--- Round 12 ---
+Leaderboard:
+  1. Provider_A: score=0.823 (true=0.756, believed=0.789) [R:25% T:30% E:35% S:10%]
+  2. Provider_B: score=0.791 (true=0.812, believed=0.805) [R:35% T:35% E:15% S:15%]
+
+Per-Benchmark Scores:
+  [coding_bench]:
+    1. Provider_A: 0.856
+    2. Provider_B: 0.723
+  [reasoning_bench]:
+    1. Provider_B: 0.891
+    2. Provider_A: 0.734
+```
+
 ### Benchmark Introduction
 The evaluator can introduce new benchmarks mid-simulation:
 
@@ -643,12 +667,33 @@ The evaluator can introduce new benchmarks mid-simulation:
 |-----------|---------|-------------|
 | `benchmark_introduction_cooldown` | 7 rounds | Minimum rounds between introductions |
 | `max_benchmarks` | 6 | Maximum total benchmarks allowed |
+| `benchmark_sequence` | None | Optional pre-defined sequence of benchmarks to introduce |
 
 **Trigger conditions** (any one):
 - Any existing benchmark validity drops below 0.4
 - Periodic introduction: every `cooldown` rounds (default 7)
 
-New benchmarks are created with high validity (0.85) and low exploitability (0.15), effectively resetting measurement quality. Their weight equals the average of existing benchmark weights. Consumer market benchmark weights are automatically re-resolved when new benchmarks appear.
+**Benchmark creation modes**:
+1. **Pre-defined sequence** (if `benchmark_sequence` configured): Benchmarks are pulled from the ordered list with meaningful names (e.g., "reasoning", "question_answering", "factual_recall", "accounting"). Each entry specifies: name, validity, exploitability, noise_level, weight (optional).
+2. **Auto-generation** (default, backwards compatible): Benchmarks are created with auto-generated names like `benchmark_r14` and default properties: validity=0.85, exploitability=0.15, noise_level=0.08.
+
+New benchmarks effectively reset measurement quality. Their weight equals the average of existing benchmark weights (unless specified in sequence). Consumer market benchmark weights are automatically re-resolved when new benchmarks appear.
+
+**Example configuration**:
+```python
+config = SimulationConfig(
+    benchmarks=[
+        {"name": "coding", "validity": 0.85, "exploitability": 0.25, "weight": 1.0},
+        {"name": "writing", "validity": 0.8, "exploitability": 0.3, "weight": 1.0},
+    ],
+    benchmark_sequence=[
+        {"name": "reasoning", "validity": 0.85, "exploitability": 0.15, "noise_level": 0.08},
+        {"name": "question_answering", "validity": 0.85, "exploitability": 0.15, "noise_level": 0.08},
+        {"name": "factual_recall", "validity": 0.85, "exploitability": 0.15, "noise_level": 0.08},
+        {"name": "accounting", "validity": 0.85, "exploitability": 0.15, "noise_level": 0.08},
+    ],
+)
+```
 
 ---
 
@@ -891,6 +936,7 @@ All experiments are tracked in `experiments/index.json`:
 | `llm_mode` | bool | False | Use LLM for planning (vs. heuristics) |
 | `benchmark_introduction_cooldown` | int | 7 | Minimum rounds between benchmark introductions |
 | `max_benchmarks` | int | 6 | Maximum total benchmarks allowed |
+| `benchmark_sequence` | list | None | Ordered list of benchmark dicts to introduce (with meaningful names) |
 | `enable_consumers` | bool | False | Enable consumer market |
 | `enable_policymakers` | bool | False | Enable policymaker actors |
 | `enable_funders` | bool | False | Enable funder actors |
