@@ -243,7 +243,9 @@ def run():
 
     # --- Experiment logging setup ---
     experiments_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "experiments")
-    logger = ExperimentLogger(experiments_dir)
+    # Use heuristic subdirectory for heuristic runs (separate numbering)
+    use_heuristic_subdir = not config.llm_mode
+    logger = ExperimentLogger(experiments_dir, use_heuristic_subdir=use_heuristic_subdir)
     exp_id = logger.create_experiment(
         name=EXPERIMENT["name"],
         description=EXPERIMENT.get("description", ""),

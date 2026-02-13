@@ -75,14 +75,32 @@ class ExperimentLogger:
         logger.finalize()
     """
 
-    def __init__(self, base_dir: str = "./experiments"):
-        self.base_dir = base_dir
-        self.index_file = os.path.join(base_dir, "index.json")
+    def __init__(self, base_dir: str = "./experiments", use_heuristic_subdir: bool = False):
+        """
+        Initialize ExperimentLogger.
+
+        Args:
+            base_dir: Base experiments directory
+            use_heuristic_subdir: If True, uses experiments/heuristic/ with separate numbering
+        """
+        self.base_experiments_dir = base_dir
+        self.use_heuristic_subdir = use_heuristic_subdir
+
+        # Set paths based on whether using heuristic subdir
+        if use_heuristic_subdir:
+            self.base_dir = os.path.join(base_dir, "heuristic")
+            self.index_file = os.path.join(self.base_dir, "heuristic_index.json")
+            self.exp_prefix = "heur"
+        else:
+            self.base_dir = base_dir
+            self.index_file = os.path.join(base_dir, "index.json")
+            self.exp_prefix = "exp"
+
         self.current_experiment: Optional[str] = None
         self.current_metadata: Optional[ExperimentMetadata] = None
 
         # Ensure base directory exists
-        os.makedirs(base_dir, exist_ok=True)
+        os.makedirs(self.base_dir, exist_ok=True)
 
         # Load or create index
         self.index = self._load_index()
@@ -137,7 +155,7 @@ class ExperimentLogger:
         """
         exp_num = self._get_next_id()
         sanitized_name = self._sanitize_name(name)
-        experiment_id = f"exp_{exp_num:03d}_{sanitized_name}"
+        experiment_id = f"{self.exp_prefix}_{exp_num:03d}_{sanitized_name}"
 
         # Create experiment directory
         exp_dir = os.path.join(self.base_dir, experiment_id)

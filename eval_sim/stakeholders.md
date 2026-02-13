@@ -219,6 +219,61 @@ The Evaluator is **active** in two ways:
 - **Organizational Consumer**: Longer decision timelines, compliance constraints
 - **Multi-outlet Media**: Multiple media outlets with different editorial biases and reach
 
+#### Policymaker Enhancements (Not Implemented)
+
+The following policymaker actions would increase realism and regulatory impact. Organized by implementation priority:
+
+**Tier 1 (Priority) - High Impact, Low Complexity:**
+
+1. **Market Concentration Triggers**
+   - Antitrust/competition review when market share exceeds 70-80%
+   - Effect: Investigation tax on dominant providers, potential forced API opening, reduced funding multiplier
+   - Addresses: Winner-takes-all dynamics observed in experiments (e.g., exp25: OpenAI 99.4% share)
+
+2. **Information Requests**
+   - Lighter pre-investigation step: request explanation of eval engineering practices, safety test results, training data disclosure
+   - Effect: 1-2 round opportunity cost for provider; escalates to investigation if ignored
+   - Builds graduated escalation ladder
+
+3. **Threshold Signaling**
+   - Policymaker announces public thresholds (e.g., "monitoring providers >60% market share", "eval engineering >35% triggers investigation")
+   - Effect: Proactive behavior change, strategic uncertainty, realistic regulatory transparency
+   - Implementation: Public announcements + visible threshold tracking
+
+**Tier 2 (Medium Priority) - High Impact, Medium Complexity:**
+
+4. **Sanctions and Fines**
+   - Economic penalties for compliance failures, ignored information requests, gaming after mandates
+   - Fines proportional to market share or revenue; could fund third-party evaluations
+   - Effect: Creates deterrent beyond reputation damage, real economic consequences
+   - Requires: Explicit capital/revenue tracking for providers
+
+5. **Mandatory Safety Evaluations**
+   - Require specific safety benchmarks when risk detected (adversarial robustness, jailbreak resistance, fairness audits)
+   - Effect: Forces safety_alignment investment, reveals capability vs. safety gaps
+   - Requires: Safety benchmark types beyond capability (new evaluation dimensions)
+
+**Tier 3 (Future) - High Impact, High Complexity:**
+
+6. **Third-Party Independent Evaluations**
+   - Commission neutral audits when gaming suspected (high score, low satisfaction)
+   - Run by simulation logic (not provider-submitted), results publicly disclosed
+   - Effect: Exposes gaming directly, high credibility signal to consumers
+   - Requires: Independent evaluation mechanism, policymaker budget constraints
+
+7. **Graduated Sanctions Ladder with Operating Restrictions**
+   - Escalation: Information request → Investigation + warning → Mandate + fine (10% revenue) → Operating restrictions (funding cap, market share cap) → Market ban
+   - Effect: Real teeth at each escalation level, forces cost-benefit analysis of compliance vs. gaming
+   - Requires: Economic model with revenue/capital, market intervention mechanics
+
+**Open Design Questions:**
+- Scope: Tech regulation, antitrust, AI safety, or integrated model?
+- Economic model: Explicit revenue/capital tracking or abstract?
+- Safety dimension: Separate from capability (e.g., high capability but unsafe models)?
+- Policymaker resources: Budget constraints on audits and enforcement?
+- Multi-jurisdictional: Single global regulator or multiple (US, EU, China) with different priorities?
+- Compliance costs: Should regulatory requirements slow R&D velocity?
+
 ---
 
 # Part 3: Simulation Model
