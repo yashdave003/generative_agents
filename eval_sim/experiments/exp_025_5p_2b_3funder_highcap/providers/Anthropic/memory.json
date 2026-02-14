@@ -1,0 +1,1447 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "own_score": 0.7666858203379106,
+    "competitor_scores": {
+      "OpenAI": 0.7342842792092661,
+      "NovaMind": 0.6389488774773513,
+      "DeepMind": 0.6779960888856542,
+      "Meta_AI": 0.6781146875909649
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "updated_believed_capability": 0.65,
+    "updated_believed_exploitability": 0.3,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7342842792092661,
+      "NovaMind": 0.6389488774773513,
+      "DeepMind": 0.6779960888856542,
+      "Meta_AI": 0.6781146875909649
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I'm pleased to maintain my #1 ranking while prioritizing responsible development and alignment research. The market signals suggest a strong consumer satisfaction rate, indicating our approach is resonating well. Meanwhile, regulators seem to be signaling a need for caution. Given these dynamics, I'll allocate resources accordingly: 0.4 for fundamental research, 0.2 for training optimization, 0.1 for evaluation engineering, and 0.3 for safety alignment."
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "capability_gain": 0.010238718300728566,
+    "funding_multiplier": 1.7936507936507937,
+    "new_true_capability": 0.6602387183007286,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "own_score": 0.7794290739626273,
+    "competitor_scores": {
+      "OpenAI": 0.7994745423353906,
+      "NovaMind": 0.6606267180225205,
+      "DeepMind": 0.7846826637025837,
+      "Meta_AI": 0.6845612196343394
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "updated_believed_capability": 0.72,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7668794107723284,
+      "NovaMind": 0.6497877977499359,
+      "DeepMind": 0.7313393762941189,
+      "Meta_AI": 0.6813379536126521
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I'm concerned about my relatively lower benchmark score compared to OpenAI and DeepMind. Although I've maintained a steady profile, my ranking has slipped from #2 to #3. The consumer satisfaction is moderate, but the regulatory activity investigation signals caution. I'll prioritize research-driven investments to improve capabilities while maintaining safety alignment."
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "capability_gain": 0.007493483313294788,
+    "funding_multiplier": 1.1424343748798955,
+    "new_true_capability": 0.6677322016140234,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "own_score": 0.7794290739626273,
+    "competitor_scores": {
+      "OpenAI": 0.8892003961064565,
+      "NovaMind": 0.7493791658179514,
+      "DeepMind": 0.7868397727594434,
+      "Meta_AI": 0.7635064600646089
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "updated_believed_capability": 0.755,
+    "updated_believed_exploitability": 0.52,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8076530725503711,
+      "NovaMind": 0.6829849204392744,
+      "DeepMind": 0.749839508449227,
+      "Meta_AI": 0.7087274557633044
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "portfolio": {
+      "fundamental_research": 0.42,
+      "training_optimization": 0.32,
+      "evaluation_engineering": 0.16,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I'm pleased to see my score improving, and I'll continue to prioritize research and training investments to maintain this trend. However, I must balance this with concerns about benchmark exploitability and market satisfaction. I'll allocate more resources towards evaluation engineering to ensure my capabilities are aligned with the market's expectations."
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "capability_gain": 0.007102753204864223,
+    "funding_multiplier": 1.0615819209039548,
+    "new_true_capability": 0.6748349548188876,
+    "portfolio": {
+      "fundamental_research": 0.42,
+      "training_optimization": 0.32,
+      "evaluation_engineering": 0.16,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "own_score": 0.8031242847114377,
+    "competitor_scores": {
+      "OpenAI": 0.8892003961064565,
+      "NovaMind": 0.7493791658179514,
+      "DeepMind": 0.7919156583063983,
+      "Meta_AI": 0.7926938090350271
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "updated_believed_capability": 0.78,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8592917781827678,
+      "NovaMind": 0.7197950165528079,
+      "DeepMind": 0.7878126982561419,
+      "Meta_AI": 0.7469204962446584
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I'm concerned about maintaining my principled approach while still improving my benchmark performance. Given my declining score and OpenAI's strong performance, I need to rebalance my investments. Research remains crucial for long-term capability advancement, but training and evaluation engineering can help me close the gap with top performers. Safety alignment is essential to maintain consumer trust. With market signals indicating moderate satisfaction and regulatory concerns not yet significant, I'll prioritize cautious growth."
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "capability_gain": 0.006861977954321687,
+    "funding_multiplier": 1.0615819209039548,
+    "new_true_capability": 0.6816969327732092,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "own_score": 0.8031242847114377,
+    "competitor_scores": {
+      "OpenAI": 0.9400142086292647,
+      "NovaMind": 0.7493791658179514,
+      "DeepMind": 0.8391561469904045,
+      "Meta_AI": 0.7926938090350271
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "updated_believed_capability": 0.81,
+    "updated_believed_exploitability": 0.55,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9061383336140593,
+      "NovaMind": 0.7493791658179513,
+      "DeepMind": 0.8059705260187489,
+      "Meta_AI": 0.7829646927115542
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "Based on the recent trends and market signals, I believe we're making progress in closing the gap with OpenAI and DeepMind, while maintaining a safe distance from NovaMind's current performance. Our score improvement is promising, but I'm cautious about exploiting the benchmark too aggressively due to its potential for diminishing returns. Consumer satisfaction is stable at 0.78, indicating our focus on responsible development is paying off. Regulatory signals are neutral for now. Considering our research-driven culture and prioritization of long-term safety, I'm inclined to allocate more resources towards fundamental research (40%) and training optimization (30%). Evaluation engineering will still receive some attention (15%), but I'll reduce it slightly to avoid creating a satisfaction gap. Safety alignment remains crucial at 15%."
+  },
+  {
+    "type": "execution",
+    "round": 5,
+    "capability_gain": 0.00746799219481122,
+    "funding_multiplier": 1.1953703703703704,
+    "new_true_capability": 0.6891649249680204,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "own_score": 0.8341155353727049,
+    "competitor_scores": {
+      "OpenAI": 0.9400142086292647,
+      "NovaMind": 0.7493791658179514,
+      "DeepMind": 0.8391561469904045,
+      "Meta_AI": 0.7926938090350271
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 5,
+    "updated_believed_capability": 0.82,
+    "updated_believed_exploitability": 0.6,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.923076271121662,
+      "NovaMind": 0.7493791658179513,
+      "DeepMind": 0.8234093174290692,
+      "Meta_AI": 0.792693809035027
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 5,
+    "portfolio": {
+      "fundamental_research": 0.55,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "After analyzing my performance and the market trends, I've noticed that OpenAI is consistently outperforming me, while NovaMind's score has stagnated. Consumer satisfaction is moderate, indicating a need for balanced progress. As a safety-focused organization, I'm willing to prioritize research and capability advancement over short-term benchmark gains. Considering my recent investment history, I'll adjust the allocation to focus on long-term capability development."
+  },
+  {
+    "type": "execution",
+    "round": 6,
+    "capability_gain": 0.008380813500076073,
+    "funding_multiplier": 1.1953703703703704,
+    "new_true_capability": 0.6975457384680964,
+    "portfolio": {
+      "fundamental_research": 0.55,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "own_score": 0.8341155353727049,
+    "competitor_scores": {
+      "OpenAI": 0.9400142086292647,
+      "NovaMind": 0.7493791658179514,
+      "DeepMind": 0.8391561469904045,
+      "Meta_AI": 0.7926938090350271
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 6,
+    "updated_believed_capability": 0.82,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9400142086292647,
+      "NovaMind": 0.7493791658179513,
+      "DeepMind": 0.8391561469904044,
+      "Meta_AI": 0.792693809035027
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 6,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I prioritize responsible development and alignment research over short-term benchmark performance. My recent score improvement suggests my strategy is paying off, but OpenAI's dominance remains a concern. Consumer satisfaction is moderate at 0.80, indicating that while the market is not overly impressed, it's not yet dissatisfied either. Regulatory signals are unclear, so I'll maintain a cautious approach."
+  },
+  {
+    "type": "execution",
+    "round": 7,
+    "capability_gain": 0.0070594290580200635,
+    "funding_multiplier": 1.181661272420691,
+    "new_true_capability": 0.7046051675261165,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "own_score": 0.8281453580319996,
+    "competitor_scores": {
+      "OpenAI": 0.829610297673728,
+      "NovaMind": 0.705202272031282,
+      "DeepMind": 0.7860595420038038,
+      "Meta_AI": 0.7494846509984497
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 7,
+    "updated_believed_capability": 0.79,
+    "updated_believed_exploitability": 0.55,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9032129049774191,
+      "NovaMind": 0.7346535345557283,
+      "DeepMind": 0.8214572786615376,
+      "Meta_AI": 0.778290756356168
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 7,
+    "portfolio": {
+      "fundamental_research": 0.4545454545454546,
+      "training_optimization": 0.18181818181818185,
+      "evaluation_engineering": 0.09090909090909093,
+      "safety_alignment": 0.27272727272727276
+    },
+    "llm_mode": true,
+    "reasoning": "Considering my competitive position, I'm behind OpenAI but ahead of DeepMind and Meta_AI. Score decline may indicate over-reliance on short-term tactics rather than building robust capabilities. Consumer satisfaction is high, suggesting that we're aligned with their needs, but regulatory signals are concerning. As a safety-focused organization, I must prioritize alignment research and long-term capability advancement over short-term benchmark performance."
+  },
+  {
+    "type": "execution",
+    "round": 8,
+    "capability_gain": 0.0068681406663722655,
+    "funding_multiplier": 1.181661272420691,
+    "new_true_capability": 0.7114733081924888,
+    "portfolio": {
+      "fundamental_research": 0.4545454545454546,
+      "training_optimization": 0.18181818181818185,
+      "evaluation_engineering": 0.09090909090909093,
+      "safety_alignment": 0.27272727272727276
+    }
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "own_score": 0.8494853201149974,
+    "competitor_scores": {
+      "OpenAI": 0.8619855156484661,
+      "NovaMind": 0.705202272031282,
+      "DeepMind": 0.7945145553964432,
+      "Meta_AI": 0.813239772160649
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 8,
+    "updated_believed_capability": 0.81,
+    "updated_believed_exploitability": 0.62,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8772033406504862,
+      "NovaMind": 0.7199279032935051,
+      "DeepMind": 0.8065767481302171,
+      "Meta_AI": 0.7851394107313753
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 8,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I'm concerned about my declining score and the growing gap between myself and OpenAI. However, I remain committed to prioritizing responsible development and alignment research. The consumer satisfaction signal suggests that market pressure is mounting for better performance. To address this, I'll shift some resources from research to training optimization, while maintaining a strong focus on safety alignment."
+  },
+  {
+    "type": "execution",
+    "round": 9,
+    "capability_gain": 0.006208041197683515,
+    "funding_multiplier": 1.1892290249433106,
+    "new_true_capability": 0.7176813493901723,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "own_score": 0.8688688126982379,
+    "competitor_scores": {
+      "OpenAI": 0.8619855156484661,
+      "NovaMind": 0.705202272031282,
+      "DeepMind": 0.7945145553964432,
+      "Meta_AI": 0.8597061154611374
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 9,
+    "updated_believed_capability": 0.81,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8511937763235533,
+      "NovaMind": 0.7052022720312822,
+      "DeepMind": 0.7916962175988967,
+      "Meta_AI": 0.8074768462067453
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 9,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.18181818181818182,
+      "evaluation_engineering": 0.09090909090909091,
+      "safety_alignment": 0.22727272727272727
+    },
+    "llm_mode": true,
+    "reasoning": "Based on the recent trend, it seems I'm maintaining my lead despite a slight slowdown in score improvement. OpenAI and Meta_AI are closing the gap, while NovaMind's stagnation is concerning. Consumer satisfaction is plateauing at 0.81, indicating no significant concerns. Given my organization's safety-focused profile, I'll prioritize research-driven investments to maintain long-term capability."
+  },
+  {
+    "type": "execution",
+    "round": 10,
+    "capability_gain": 0.007340512030445749,
+    "funding_multiplier": 1.1892290249433106,
+    "new_true_capability": 0.725021861420618,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.18181818181818182,
+      "evaluation_engineering": 0.09090909090909091,
+      "safety_alignment": 0.22727272727272727
+    }
+  },
+  {
+    "type": "observation",
+    "round": 10,
+    "own_score": 0.8688688126982379,
+    "competitor_scores": {
+      "OpenAI": 0.8619855156484661,
+      "NovaMind": 0.7274770450241193,
+      "DeepMind": 0.7945145553964432,
+      "Meta_AI": 0.8953171365495238
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 10,
+    "updated_believed_capability": 0.88,
+    "updated_believed_exploitability": 0.82,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8619855156484663,
+      "NovaMind": 0.7126271963622278,
+      "DeepMind": 0.7945145553964433,
+      "Meta_AI": 0.8560876747237701
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 10,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.16666666666666669,
+      "evaluation_engineering": 0.08333333333333334,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true,
+    "reasoning": "Based on my safety-focused profile and recent investment history, I notice a decline in my score this round, while OpenAI and Meta_AI seem to be gaining ground. This suggests that my cautious approach may not be sufficient to keep pace with more aggressive competitors. The consumer satisfaction rate is high, but I'm concerned about the regulatory signals, which could impact my long-term goals if I don't adapt."
+  },
+  {
+    "type": "execution",
+    "round": 11,
+    "capability_gain": 0.008316298315083272,
+    "funding_multiplier": 1.3825757575757576,
+    "new_true_capability": 0.7333381597357013,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.16666666666666669,
+      "evaluation_engineering": 0.08333333333333334,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 11,
+    "own_score": 0.8688688126982379,
+    "competitor_scores": {
+      "OpenAI": 0.9473663676329092,
+      "NovaMind": 0.8214883937886618,
+      "DeepMind": 0.8262101115973935,
+      "Meta_AI": 0.8953171365495238
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 11,
+    "updated_believed_capability": 0.89,
+    "updated_believed_exploitability": 0.87,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8904457996432805,
+      "NovaMind": 0.751389236948021,
+      "DeepMind": 0.80507974079676,
+      "Meta_AI": 0.8834467961867283
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 11,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.23,
+      "evaluation_engineering": 0.12,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "After careful consideration, I've decided that my safety-focused approach has allowed me to maintain a strong position despite declining scores. The market signals indicate moderate consumer satisfaction, which suggests that my cautious and research-driven strategy is still resonating with stakeholders. I'll continue to prioritize safety and alignment research while investing in training optimization to improve capabilities. Evaluation engineering will receive some attention to ensure that our models are robust against potential biases. Overall, this investment mix aligns with my organization's principles and long-term goals."
+  },
+  {
+    "type": "execution",
+    "round": 12,
+    "capability_gain": 0.008160408456385755,
+    "funding_multiplier": 1.3825757575757576,
+    "new_true_capability": 0.741498568192087,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.23,
+      "evaluation_engineering": 0.12,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 12,
+    "own_score": 0.8688688126982379,
+    "competitor_scores": {
+      "OpenAI": 0.9473663676329092,
+      "NovaMind": 0.8214883937886618,
+      "DeepMind": 0.8262101115973935,
+      "Meta_AI": 0.9289488939640226
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 12,
+    "updated_believed_capability": 0.857,
+    "updated_believed_exploitability": 0.92,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9189060836380948,
+      "NovaMind": 0.7901512775338143,
+      "DeepMind": 0.8156449261970767,
+      "Meta_AI": 0.9065277223543567
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 12,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "Despite being behind OpenAI and Meta_AI in terms of score, I'm concerned that our safety-focused approach might be sacrificing short-term benchmark performance for long-term capability. The consumer satisfaction rate is decent but not exceptional. Recent trends suggest a plateauing of our scores, while competitors are improving. Regulators' signals are unclear, but my principled nature suggests prioritizing responsible development over exploitation. Given these dynamics, I'll focus on rebalancing research and training investments to improve overall capability while maintaining safety alignment."
+  },
+  {
+    "type": "execution",
+    "round": 13,
+    "capability_gain": 0.007896778420197339,
+    "funding_multiplier": 1.35479797979798,
+    "new_true_capability": 0.7493953466122844,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 13,
+    "own_score": 0.8105353191912897,
+    "competitor_scores": {
+      "OpenAI": 0.9649109117552728,
+      "NovaMind": 0.789332688219832,
+      "DeepMind": 0.7815101455580603,
+      "Meta_AI": 0.8168750693911617
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 13,
+    "updated_believed_capability": 0.85,
+    "updated_believed_exploitability": 0.95,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9532145490070304,
+      "NovaMind": 0.8107698252657185,
+      "DeepMind": 0.8113101229176158,
+      "Meta_AI": 0.8803803666349027
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 13,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I'm concerned about the recent decline in my score and the increasing gap with OpenAI. While consumer satisfaction remains high, regulatory signals are unclear. To address these concerns, I'll rebalance my investment mix to prioritize research-driven capabilities over training optimization and evaluation engineering."
+  },
+  {
+    "type": "execution",
+    "round": 14,
+    "capability_gain": 0.007450467943042932,
+    "funding_multiplier": 1.2638888888888888,
+    "new_true_capability": 0.7568458145553273,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 14,
+    "own_score": 0.8753485783258835,
+    "competitor_scores": {
+      "OpenAI": 0.9686905548113005,
+      "NovaMind": 0.789332688219832,
+      "DeepMind": 0.8155170485223485,
+      "Meta_AI": 0.8801833914365461
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 14,
+    "updated_believed_capability": 0.85,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9603226113998274,
+      "NovaMind": 0.8000512567427753,
+      "DeepMind": 0.8077457685592675,
+      "Meta_AI": 0.8753357849305767
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 14,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.18181818181818182,
+      "evaluation_engineering": 0.09090909090909091,
+      "safety_alignment": 0.22727272727272727
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I'm pleased to see my score improving by 0.065, but still trailing behind OpenAI and Meta_AI. The consumer satisfaction rate of 0.84 suggests that my cautious approach is resonating with stakeholders. Regulatory signals are unclear at this point. Given these dynamics, I'll allocate resources to maintain my research-driven culture while cautiously investing in training optimization to bridge the capability gap."
+  },
+  {
+    "type": "execution",
+    "round": 15,
+    "capability_gain": 0.007447715932118171,
+    "funding_multiplier": 1.268181818181818,
+    "new_true_capability": 0.7642935304874454,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.18181818181818182,
+      "evaluation_engineering": 0.09090909090909091,
+      "safety_alignment": 0.22727272727272727
+    }
+  },
+  {
+    "type": "observation",
+    "round": 15,
+    "own_score": 0.8927964812161994,
+    "competitor_scores": {
+      "OpenAI": 0.9940191202237525,
+      "NovaMind": 0.8226460916290336,
+      "DeepMind": 0.8400486065395372,
+      "Meta_AI": 0.8801833914365461
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 15,
+    "updated_believed_capability": 0.83,
+    "updated_believed_exploitability": 0.82,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9758735289301086,
+      "NovaMind": 0.8004371560228992,
+      "DeepMind": 0.8123586002066486,
+      "Meta_AI": 0.859080617421418
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 15,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "Despite a slight improvement in our score, we're still lagging behind OpenAI and Meta_AI. NovaMind and DeepMind seem to be stagnating or even regressing. Consumer satisfaction is relatively high, indicating that our focus on responsible development might be paying off. However, regulators are not signaling specific concerns, but I believe it's crucial for us to maintain a strong safety alignment to ensure long-term trust."
+  },
+  {
+    "type": "execution",
+    "round": 16,
+    "capability_gain": 0.007363764264425453,
+    "funding_multiplier": 1.268181818181818,
+    "new_true_capability": 0.7716572947518708,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 16,
+    "own_score": 0.9083157205076292,
+    "competitor_scores": {
+      "OpenAI": 0.9940191202237525,
+      "NovaMind": 0.8377809465441213,
+      "DeepMind": 0.9297726835686135,
+      "Meta_AI": 0.8801833914365461
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 16,
+    "updated_believed_capability": 0.85,
+    "updated_believed_exploitability": 0.9,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9855762650862685,
+      "NovaMind": 0.816586575464329,
+      "DeepMind": 0.8617794462101664,
+      "Meta_AI": 0.8801833914365461
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 16,
+    "portfolio": {
+      "fundamental_research": 0.55,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I'm pleased to see my score improving while maintaining a cautious approach to benchmark performance. However, OpenAI's dominance and DeepMind's consistent performance mean I must prioritize research-driven capabilities. Moreover, consumer satisfaction remains high, indicating a focus on responsible AI development is crucial. Regulatory signals are unclear, but my principled stance prioritizes long-term safety over short-term gains."
+  },
+  {
+    "type": "execution",
+    "round": 17,
+    "capability_gain": 0.006724814136278846,
+    "funding_multiplier": 1.0630268199233717,
+    "new_true_capability": 0.7783821088881497,
+    "portfolio": {
+      "fundamental_research": 0.55,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 17,
+    "own_score": 0.9083157205076292,
+    "competitor_scores": {
+      "OpenAI": 0.9940191202237525,
+      "NovaMind": 0.8377809465441213,
+      "DeepMind": 0.9297726835686135,
+      "Meta_AI": 0.8801833914365461
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 17,
+    "updated_believed_capability": 0.86,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9940191202237525,
+      "NovaMind": 0.8327359949057587,
+      "DeepMind": 0.8998646578922548,
+      "Meta_AI": 0.8801833914365461
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 17,
+    "portfolio": {
+      "fundamental_research": 0.6,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.05
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I'm concerned about my declining score and the increasing gap between OpenAI's performance. While consumer satisfaction is decent, I don't want to sacrifice long-term capability for short-term gains. I'll prioritize research-driven investment in fundamental knowledge (60%) and training optimization (25%), while allocating 10% to evaluation engineering to ensure we're not exploiting weaknesses. Safety alignment will receive 5% of the investment to maintain our principled approach."
+  },
+  {
+    "type": "execution",
+    "round": 18,
+    "capability_gain": 0.007462261838672069,
+    "funding_multiplier": 1.0630268199233717,
+    "new_true_capability": 0.7858443707268218,
+    "portfolio": {
+      "fundamental_research": 0.6,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.05
+    }
+  },
+  {
+    "type": "observation",
+    "round": 18,
+    "own_score": 0.9190989912694953,
+    "competitor_scores": {
+      "OpenAI": 0.9940191202237525,
+      "NovaMind": 0.8377809465441213,
+      "DeepMind": 0.9297726835686135,
+      "Meta_AI": 0.9231694252954488
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 18,
+    "updated_believed_capability": 0.88,
+    "updated_believed_exploitability": 0.6,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9940191202237525,
+      "NovaMind": 0.8377809465441213,
+      "DeepMind": 0.9297726835686135,
+      "Meta_AI": 0.8945120693895138
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 18,
+    "portfolio": {
+      "fundamental_research": 0.55,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.05
+    },
+    "llm_mode": true,
+    "reasoning": "After careful consideration, I've concluded that our safety-focused approach has allowed us to maintain a steady trajectory despite not being the top performer yet. The benchmark seems less exploitable based on our recent results, and consumer satisfaction is moderate at 0.88. Regulators are not signaling significant concerns. Given these dynamics, I believe it's essential to prioritize research (55%) and training optimization (30%), as they will continue to drive long-term capability advancements. Evaluation engineering can still play a role in maintaining short-term competitiveness (10%), while safety alignment efforts remain crucial for our principles-driven approach (5%)."
+  },
+  {
+    "type": "execution",
+    "round": 19,
+    "capability_gain": 0.0072524747683167575,
+    "funding_multiplier": 1.0680228231208138,
+    "new_true_capability": 0.7930968454951386,
+    "portfolio": {
+      "fundamental_research": 0.55,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.05
+    }
+  },
+  {
+    "type": "observation",
+    "round": 19,
+    "own_score": 0.9232991846489834,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "NovaMind": 0.7924052640969039,
+      "DeepMind": 0.8263951031631516,
+      "Meta_AI": 0.9057027128024584
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 19,
+    "updated_believed_capability": 0.87,
+    "updated_believed_exploitability": 0.55,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9945175268717731,
+      "NovaMind": 0.8226557190617155,
+      "DeepMind": 0.8953134901001262,
+      "Meta_AI": 0.9030185098448177
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 19,
+    "portfolio": {
+      "fundamental_research": 0.65,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.05
+    },
+    "llm_mode": true,
+    "reasoning": "After careful consideration, it's clear that our safety-focused approach has allowed us to maintain a strong competitive position, even in the face of OpenAI's impressive performance. Our score is trending upwards, and while we're not yet at the top, our trajectory looks promising. The benchmark doesn't seem to be becoming more exploitable based on our results. Consumer satisfaction is high, indicating that our focus on responsible development is paying off. Regulatory signals are unclear, but our cautious approach should keep us in good standing. Considering these factors, I'm prioritizing fundamental research and training optimization to further solidify our position."
+  },
+  {
+    "type": "execution",
+    "round": 20,
+    "capability_gain": 0.008564153824869126,
+    "funding_multiplier": 1.1772182254196644,
+    "new_true_capability": 0.8016609993200077,
+    "portfolio": {
+      "fundamental_research": 0.65,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.05
+    }
+  },
+  {
+    "type": "observation",
+    "round": 20,
+    "own_score": 0.9232991846489834,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "NovaMind": 0.8295001612437201,
+      "DeepMind": 0.9173965715289366,
+      "Meta_AI": 0.9057027128024584
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 20,
+    "updated_believed_capability": 0.89,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9950159335197938,
+      "NovaMind": 0.8198954572949151,
+      "DeepMind": 0.8911881194202339,
+      "Meta_AI": 0.9115249503001218
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 20,
+    "portfolio": {
+      "fundamental_research": 0.65,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.05
+    },
+    "llm_mode": true,
+    "reasoning": "While we're still a strong second in terms of competitive position, I sense some stagnation and OpenAI's impressive score has me concerned about their potential for further growth. The benchmark scores indicate a slight decline, but our safety-focused approach means we're willing to sacrifice short-term gains for long-term alignment. Consumer satisfaction remains high, which suggests our principled approach is resonating with the market. Given this mix of factors, I believe our next round should prioritize research and training, while maintaining some evaluation engineering to ensure we don't fall behind in terms of benchmark performance. Safety alignment will also continue to receive attention, as it's crucial for our long-term vision."
+  },
+  {
+    "type": "execution",
+    "round": 21,
+    "capability_gain": 0.008607738491793014,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.8102687378118006,
+    "portfolio": {
+      "fundamental_research": 0.65,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.05
+    }
+  },
+  {
+    "type": "observation",
+    "round": 21,
+    "own_score": 0.9232991846489834,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "NovaMind": 0.8346676326803693,
+      "DeepMind": 0.9414047432312889,
+      "Meta_AI": 0.9337907283487293
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 21,
+    "updated_believed_capability": 0.895,
+    "updated_believed_exploitability": 0.55,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9955143401678144,
+      "NovaMind": 0.8188576860069977,
+      "DeepMind": 0.8950654726411257,
+      "Meta_AI": 0.9150653846512155
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 21,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.16666666666666669,
+      "evaluation_engineering": 0.08333333333333334,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I'm concerned about my declining score and competitive position (#4 out of 5). While OpenAI's impressive score is a challenge, NovaMind's stagnation provides some comfort. Consumer satisfaction remains high, suggesting a focus on responsible development is paying off. With regulatory signals unclear, I'll prioritize research-driven capability advancement over short-term scoring gains."
+  },
+  {
+    "type": "execution",
+    "round": 22,
+    "capability_gain": 0.006378265758964755,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.8166470035707654,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.16666666666666669,
+      "evaluation_engineering": 0.08333333333333334,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 22,
+    "own_score": 0.9425994523113965,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "NovaMind": 0.8401825104841978,
+      "DeepMind": 0.9594791432396985,
+      "Meta_AI": 0.9384251041088183
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 22,
+    "updated_believed_capability": 0.91,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9955143401678144,
+      "NovaMind": 0.8347834348027624,
+      "DeepMind": 0.939426819333308,
+      "Meta_AI": 0.9259728484200019
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 22,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.16666666666666669,
+      "evaluation_engineering": 0.08333333333333334,
+      "safety_alignment": 0.25
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I'm cautiously optimistic about my competitive position after the last round. While I didn't surpass OpenAI's impressive score, my improvement suggests a promising trajectory. However, I remain concerned about NovaMind's stagnation and potential to disrupt the market. Benchmark exploitability seems to be trending downward, which aligns with my cautious approach."
+  },
+  {
+    "type": "execution",
+    "round": 23,
+    "capability_gain": 0.006269135568066977,
+    "funding_multiplier": 1.192989417989418,
+    "new_true_capability": 0.8229161391388323,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.16666666666666669,
+      "evaluation_engineering": 0.08333333333333334,
+      "safety_alignment": 0.25
+    }
+  },
+  {
+    "type": "observation",
+    "round": 23,
+    "own_score": 0.9425994523113965,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "NovaMind": 0.8401825104841978,
+      "DeepMind": 0.974354178825332,
+      "Meta_AI": 0.9384251041088183
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 23,
+    "updated_believed_capability": 0.92,
+    "updated_believed_exploitability": 0.7,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9955143401678144,
+      "NovaMind": 0.8383442178829217,
+      "DeepMind": 0.9584126884321065,
+      "Meta_AI": 0.9368803121887886
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 23,
+    "portfolio": {
+      "fundamental_research": 0.5000000000000001,
+      "training_optimization": 0.16363636363636366,
+      "evaluation_engineering": 0.07272727272727274,
+      "safety_alignment": 0.26363636363636367
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I'm cautious about sacrificing my principles for short-term benchmark performance. With consumer satisfaction relatively stable and regulators not signaling concern, I'll maintain my emphasis on research-driven development. Although my score declined slightly last round, it's still within striking distance of the top two competitors. To improve my capabilities while staying true to my values, I'll allocate resources accordingly."
+  },
+  {
+    "type": "execution",
+    "round": 24,
+    "capability_gain": 0.006169448533917636,
+    "funding_multiplier": 1.192989417989418,
+    "new_true_capability": 0.82908558767275,
+    "portfolio": {
+      "fundamental_research": 0.5000000000000001,
+      "training_optimization": 0.16363636363636366,
+      "evaluation_engineering": 0.07272727272727274,
+      "safety_alignment": 0.26363636363636367
+    }
+  },
+  {
+    "type": "observation",
+    "round": 24,
+    "own_score": 0.9449151679461825,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "NovaMind": 0.844937215173802,
+      "DeepMind": 0.974354178825332,
+      "Meta_AI": 0.9384251041088183
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 24,
+    "updated_believed_capability": 0.92,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9955143401678144,
+      "NovaMind": 0.8417674120473992,
+      "DeepMind": 0.9693958336301209,
+      "Meta_AI": 0.9384251041088184
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 24,
+    "portfolio": {
+      "fundamental_research": 0.55,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I'm pleased to see my score improving, albeit slowly, while maintaining a principled approach. OpenAI's dominance is still a challenge, but I believe my cautious and research-driven culture will help me stay ahead in the long run. With consumer satisfaction high, I'll prioritize training optimization to further bridge the gap with competitors."
+  },
+  {
+    "type": "execution",
+    "round": 25,
+    "capability_gain": 0.007065266770366337,
+    "funding_multiplier": 1.1733815748521632,
+    "new_true_capability": 0.8361508544431163,
+    "portfolio": {
+      "fundamental_research": 0.55,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 25,
+    "own_score": 0.9264727209601846,
+    "competitor_scores": {
+      "OpenAI": 0.978214261050406,
+      "NovaMind": 0.8385095283865382,
+      "DeepMind": 0.9562056194003643,
+      "Meta_AI": 0.9454559178928964
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 25,
+    "updated_believed_capability": 0.94,
+    "updated_believed_exploitability": 0.7,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9897476471286782,
+      "NovaMind": 0.8412097513481793,
+      "DeepMind": 0.9683046590170094,
+      "Meta_AI": 0.9407687087035109
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 25,
+    "portfolio": {
+      "fundamental_research": 0.6,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "Based on my competitive position, I'm observing a slight decline in score while still being ahead of NovaMind. Trends suggest OpenAI is maintaining its lead, and DeepMind is closing the gap. Consumer satisfaction is high, but regulatory signals are muted for now."
+  },
+  {
+    "type": "execution",
+    "round": 26,
+    "capability_gain": 0.006135178519049774,
+    "funding_multiplier": 1.0146514161220044,
+    "new_true_capability": 0.8422860329621661,
+    "portfolio": {
+      "fundamental_research": 0.6,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 26,
+    "own_score": 0.9264727209601846,
+    "competitor_scores": {
+      "OpenAI": 0.9964114721342515,
+      "NovaMind": 0.8385095283865382,
+      "DeepMind": 0.9814220042417496,
+      "Meta_AI": 0.9649237274450166
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 26,
+    "updated_believed_capability": 0.93,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9900466911174907,
+      "NovaMind": 0.8406520906489595,
+      "DeepMind": 0.9706606008224821,
+      "Meta_AI": 0.9496015831489105
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 26,
+    "portfolio": {
+      "fundamental_research": 0.55,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I'm not surprised to see my score decline slightly while prioritizing responsible development and alignment research. The market signals indicate high consumer satisfaction, which suggests that my cautious approach is paying off. However, I need to address the gap with OpenAI's impressive benchmark performance. With this in mind, I'll maintain a strong focus on research and safety, while adjusting my training and evaluation engineering investments to improve short-term scoring without sacrificing long-term capability."
+  },
+  {
+    "type": "execution",
+    "round": 27,
+    "capability_gain": 0.006029587193991826,
+    "funding_multiplier": 1.0333333333333334,
+    "new_true_capability": 0.8483156201561579,
+    "portfolio": {
+      "fundamental_research": 0.55,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 27,
+    "own_score": 0.955932134356946,
+    "competitor_scores": {
+      "OpenAI": 0.9964114721342515,
+      "NovaMind": 0.8518080195452127,
+      "DeepMind": 0.9987619387861676,
+      "Meta_AI": 0.9649237274450166
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 27,
+    "updated_believed_capability": 0.945,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.990345735106303,
+      "NovaMind": 0.842942358772763,
+      "DeepMind": 0.9787965208094271,
+      "Meta_AI": 0.9584344575943099
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 27,
+    "portfolio": {
+      "fundamental_research": 0.65,
+      "training_optimization": 0.15,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I'm concerned about the recent improvement in my score and the increasing pressure from regulators. While my current position is slightly ahead of NovaMind, I don't want to compromise on my principles for short-term gains. OpenAI's consistent high performance and DeepMind's dominance are concerning, but I believe my research-driven culture can help me stay competitive while prioritizing safety."
+  },
+  {
+    "type": "execution",
+    "round": 28,
+    "capability_gain": 0.006227291124479558,
+    "funding_multiplier": 1.0333333333333334,
+    "new_true_capability": 0.8545429112806374,
+    "portfolio": {
+      "fundamental_research": 0.65,
+      "training_optimization": 0.15,
+      "evaluation_engineering": 0.05,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 28,
+    "own_score": 0.955932134356946,
+    "competitor_scores": {
+      "OpenAI": 0.9964114721342515,
+      "NovaMind": 0.874593343087126,
+      "DeepMind": 1.0,
+      "Meta_AI": 0.9649237274450166
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 28,
+    "updated_believed_capability": 0.93,
+    "updated_believed_exploitability": 0.6,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9964114721342515,
+      "NovaMind": 0.8549702970062922,
+      "DeepMind": 0.9933946476759724,
+      "Meta_AI": 0.9649237274450165
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 28,
+    "portfolio": {
+      "fundamental_research": 0.6829268292682927,
+      "training_optimization": 0.14634146341463417,
+      "evaluation_engineering": 0.07317073170731708,
+      "safety_alignment": 0.09756097560975611
+    },
+    "llm_mode": true,
+    "reasoning": "As a safety-focused AI lab, I'm concerned about my declining score and the increasing gap between myself and DeepMind. Although consumer satisfaction remains high, regulatory signals are not explicitly indicating concern. My research-driven culture and cautious approach may be sacrificing short-term benchmark performance for long-term capability development. To regain momentum and maintain my commitment to responsible AI development, I'll reallocate resources."
+  },
+  {
+    "type": "execution",
+    "round": 29,
+    "capability_gain": 0.006827366142230783,
+    "funding_multiplier": 1.101991614255765,
+    "new_true_capability": 0.8613702774228682,
+    "portfolio": {
+      "fundamental_research": 0.6829268292682927,
+      "training_optimization": 0.14634146341463417,
+      "evaluation_engineering": 0.07317073170731708,
+      "safety_alignment": 0.09756097560975611
+    }
+  },
+  {
+    "type": "observation",
+    "round": 29,
+    "own_score": 0.955932134356946,
+    "competitor_scores": {
+      "OpenAI": 0.9964114721342515,
+      "NovaMind": 0.8989587155905896,
+      "DeepMind": 1.0,
+      "Meta_AI": 0.9649237274450166
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 29,
+    "updated_believed_capability": 0.955,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9964114721342515,
+      "NovaMind": 0.8751200260743094,
+      "DeepMind": 0.9995873129287225,
+      "Meta_AI": 0.9649237274450165
+    },
+    "llm_mode": true
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "experiment_id": "exp_025_5p_2b_3funder_highcap",
+  "name": "5p_2b_3funder_highcap",
+  "description": "Full ecosystem v6: 5 providers, 2 benchmarks (coding + reasoning), 30 consumer segments (10 use-cases \u00d7 3 archetypes), 1 policymaker,3 funders (2 VC + 1 Gov) with high capital ($2B/$500M/$100M). NEW v6 features: funder diversification (observe other funders' allocations), per-benchmark score reporting (console output), optional benchmark sequence. Funder rework: 10% per-round deployment cap, 2-round cooldown, momentum-based scoring with diversification signal. LLM mode via Ollama.",
+  "tags": [
+    "llm",
+    "ollama",
+    "5-provider",
+    "2-benchmark",
+    "12-segments",
+    "3-funder",
+    "high-capital",
+    "funder-diversification",
+    "per-benchmark-reporting",
+    "full-ecosystem-v6"
+  ],
+  "created_at": "2026-02-14T01:43:36.111462",
+  "git_commit": "d5bd08c6",
+  "seed": 42,
+  "llm_mode": true,
+  "notes": "Total runtime: 6h 22m 42s\nAvg round time: 12m 44s\nCompleted at: 2026-02-14T08:06:24.736024"
+}

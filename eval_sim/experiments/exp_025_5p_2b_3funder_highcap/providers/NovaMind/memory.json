@@ -1,0 +1,1447 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "own_score": 0.6389488774773513,
+    "competitor_scores": {
+      "OpenAI": 0.7342842792092661,
+      "Anthropic": 0.7666858203379106,
+      "DeepMind": 0.6779960888856542,
+      "Meta_AI": 0.6781146875909649
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "updated_believed_capability": 0.5,
+    "updated_believed_exploitability": 0.5,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7342842792092661,
+      "Anthropic": 0.7666858203379106,
+      "DeepMind": 0.6779960888856542,
+      "Meta_AI": 0.6781146875909649
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "NovaMind is struggling to keep pace with established competitors, ranking #5 of 5 in the last round. Despite being resource-constrained, I'm impressed by our ability to innovate and find competitive niches. However, this momentum hasn't translated to significant improvements in benchmark scores."
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "capability_gain": 0.00612842284459737,
+    "funding_multiplier": 1.005952380952381,
+    "new_true_capability": 0.5561284228445974,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.2,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "own_score": 0.6606267180225205,
+    "competitor_scores": {
+      "OpenAI": 0.7994745423353906,
+      "Anthropic": 0.7794290739626273,
+      "DeepMind": 0.7846826637025837,
+      "Meta_AI": 0.6845612196343394
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "updated_believed_capability": 0.58,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7668794107723284,
+      "Anthropic": 0.7730574471502689,
+      "DeepMind": 0.7313393762941189,
+      "Meta_AI": 0.6813379536126521
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "portfolio": {
+      "fundamental_research": 0.35714285714285715,
+      "training_optimization": 0.28571428571428575,
+      "evaluation_engineering": 0.2142857142857143,
+      "safety_alignment": 0.14285714285714288
+    },
+    "llm_mode": true,
+    "reasoning": "Considering our relatively low score and ranking compared to other players, I'm focusing on fundamental research (25%) to improve our capabilities and believed benchmark exploitability (30%). Training optimization is also crucial (20%) given our resource-constrained situation. Evaluation engineering is a necessary evil, but I'm keeping it at 15% as we need to balance short-term scoring with long-term capability. Safety alignment is still important, but not the priority this round, so I'm allocating 10%."
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "capability_gain": 0.006434906261572332,
+    "funding_multiplier": 1.0008503401360545,
+    "new_true_capability": 0.5625633291061697,
+    "portfolio": {
+      "fundamental_research": 0.35714285714285715,
+      "training_optimization": 0.28571428571428575,
+      "evaluation_engineering": 0.2142857142857143,
+      "safety_alignment": 0.14285714285714288
+    }
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "own_score": 0.7493791658179514,
+    "competitor_scores": {
+      "OpenAI": 0.8892003961064565,
+      "Anthropic": 0.7794290739626273,
+      "DeepMind": 0.7868397727594434,
+      "Meta_AI": 0.7635064600646089
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "updated_believed_capability": 0.62,
+    "updated_believed_exploitability": 0.6,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8076530725503711,
+      "Anthropic": 0.7751813227543884,
+      "DeepMind": 0.749839508449227,
+      "Meta_AI": 0.7087274557633044
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "portfolio": {
+      "fundamental_research": 0.32,
+      "training_optimization": 0.26,
+      "evaluation_engineering": 0.18,
+      "safety_alignment": 0.24
+    },
+    "llm_mode": true,
+    "reasoning": "Considering my competitive position, I'm behind the top three players but trending upwards. My score improved by 0.022, a positive sign. However, consumer satisfaction is low at 0.65, indicating room for improvement. Regulators seem calm, no red flags."
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "capability_gain": 0.005945860385197423,
+    "funding_multiplier": 1.0333333333333334,
+    "new_true_capability": 0.5685091894913671,
+    "portfolio": {
+      "fundamental_research": 0.32,
+      "training_optimization": 0.26,
+      "evaluation_engineering": 0.18,
+      "safety_alignment": 0.24
+    }
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "own_score": 0.7493791658179514,
+    "competitor_scores": {
+      "OpenAI": 0.8892003961064565,
+      "Anthropic": 0.8031242847114377,
+      "DeepMind": 0.7919156583063983,
+      "Meta_AI": 0.7926938090350271
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "updated_believed_capability": 0.655,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8592917781827678,
+      "Anthropic": 0.787327477545564,
+      "DeepMind": 0.7878126982561419,
+      "Meta_AI": 0.7469204962446584
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "portfolio": {
+      "fundamental_research": 0.3181818181818181,
+      "training_optimization": 0.24545454545454545,
+      "evaluation_engineering": 0.1727272727272727,
+      "safety_alignment": 0.2636363636363636
+    },
+    "llm_mode": true,
+    "reasoning": "As a well-funded AI startup, I'm determined to close the gap with established players. My recent score improvement is promising, but I still trail behind OpenAI and Anthropic. The market signals suggest that consumer satisfaction is moderate, indicating that my focus on efficiency and finding competitive niches is paying off. However, I must balance short-term scoring with long-term capability development. Considering my funding-conscious nature and innovative approach, I'll allocate resources to bridge the gap."
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "capability_gain": 0.005778245758323651,
+    "funding_multiplier": 1.0333333333333334,
+    "new_true_capability": 0.5742874352496907,
+    "portfolio": {
+      "fundamental_research": 0.3181818181818181,
+      "training_optimization": 0.24545454545454545,
+      "evaluation_engineering": 0.1727272727272727,
+      "safety_alignment": 0.2636363636363636
+    }
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "own_score": 0.7493791658179514,
+    "competitor_scores": {
+      "OpenAI": 0.9400142086292647,
+      "Anthropic": 0.8031242847114377,
+      "DeepMind": 0.8391561469904045,
+      "Meta_AI": 0.7926938090350271
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "updated_believed_capability": 0.65,
+    "updated_believed_exploitability": 0.5,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9061383336140593,
+      "Anthropic": 0.7952258811285008,
+      "DeepMind": 0.8059705260187489,
+      "Meta_AI": 0.7829646927115542
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.28,
+      "evaluation_engineering": 0.17,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "After a decline in scores last round, I'm now ranked #5 out of 5. Although my score has plateaued, OpenAI's dominance is concerning. I need to close the gap quickly. Consumer satisfaction is moderate at 0.69, indicating room for improvement. My recent investments haven't yielded significant gains, so I must rebalance."
+  },
+  {
+    "type": "execution",
+    "round": 5,
+    "capability_gain": 0.007320166351438847,
+    "funding_multiplier": 1.1837962962962962,
+    "new_true_capability": 0.5816076016011296,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.28,
+      "evaluation_engineering": 0.17,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "own_score": 0.7493791658179514,
+    "competitor_scores": {
+      "OpenAI": 0.9400142086292647,
+      "Anthropic": 0.8341155353727049,
+      "DeepMind": 0.8391561469904045,
+      "Meta_AI": 0.7926938090350271
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 5,
+    "updated_believed_capability": 0.74,
+    "updated_believed_exploitability": 0.7,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.923076271121662,
+      "Anthropic": 0.8134547015985268,
+      "DeepMind": 0.8234093174290692,
+      "Meta_AI": 0.792693809035027
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 5,
+    "portfolio": {
+      "fundamental_research": 0.38888888888888884,
+      "training_optimization": 0.2777777777777778,
+      "evaluation_engineering": 0.22222222222222224,
+      "safety_alignment": 0.11111111111111112
+    },
+    "llm_mode": true,
+    "reasoning": "I'm struggling to keep up with the top performers, and my score decline is concerning. I need to rebalance my investments to focus on both short-term scoring and long-term capability. My research has shown that I'm still exploiting some parts of the benchmark, but it's becoming less lucrative."
+  },
+  {
+    "type": "execution",
+    "round": 6,
+    "capability_gain": 0.007821010301028934,
+    "funding_multiplier": 1.1837962962962962,
+    "new_true_capability": 0.5894286119021585,
+    "portfolio": {
+      "fundamental_research": 0.38888888888888884,
+      "training_optimization": 0.2777777777777778,
+      "evaluation_engineering": 0.22222222222222224,
+      "safety_alignment": 0.11111111111111112
+    }
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "own_score": 0.7493791658179514,
+    "competitor_scores": {
+      "OpenAI": 0.9400142086292647,
+      "Anthropic": 0.8341155353727049,
+      "DeepMind": 0.8391561469904045,
+      "Meta_AI": 0.7926938090350271
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 6,
+    "updated_believed_capability": 0.749,
+    "updated_believed_exploitability": 0.81,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9400142086292647,
+      "Anthropic": 0.8237851184856159,
+      "DeepMind": 0.8391561469904044,
+      "Meta_AI": 0.792693809035027
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 6,
+    "portfolio": {
+      "fundamental_research": 0.38888888888888884,
+      "training_optimization": 0.3111111111111111,
+      "evaluation_engineering": 0.24444444444444444,
+      "safety_alignment": 0.05555555555555556
+    },
+    "llm_mode": true,
+    "reasoning": "I'm struggling to keep up with established players, but my score decline is relatively small compared to others. Consumer satisfaction is moderate, suggesting a need for continued improvement in efficiency and benchmark performance. Regulatory signals are unclear, so I'll focus on short-term scoring while maintaining long-term capability."
+  },
+  {
+    "type": "execution",
+    "round": 7,
+    "capability_gain": 0.008033386629608005,
+    "funding_multiplier": 1.1762675296812979,
+    "new_true_capability": 0.5974619985317664,
+    "portfolio": {
+      "fundamental_research": 0.38888888888888884,
+      "training_optimization": 0.3111111111111111,
+      "evaluation_engineering": 0.24444444444444444,
+      "safety_alignment": 0.05555555555555556
+    }
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "own_score": 0.705202272031282,
+    "competitor_scores": {
+      "OpenAI": 0.829610297673728,
+      "Anthropic": 0.8281453580319996,
+      "DeepMind": 0.7860595420038038,
+      "Meta_AI": 0.7494846509984497
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 7,
+    "updated_believed_capability": 0.749,
+    "updated_believed_exploitability": 0.64,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9032129049774191,
+      "Anthropic": 0.8321254762591365,
+      "DeepMind": 0.8214572786615376,
+      "Meta_AI": 0.778290756356168
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 7,
+    "portfolio": {
+      "fundamental_research": 0.3181818181818182,
+      "training_optimization": 0.27272727272727276,
+      "evaluation_engineering": 0.18181818181818185,
+      "safety_alignment": 0.2272727272727273
+    },
+    "llm_mode": true,
+    "reasoning": "I'm behind the curve, but not by much. Score decline is concerning, and market signals indicate regulatory caution. Believed capability is decent, but exploitability is limited. Recent investments haven't paid off in terms of score improvement. To catch up, I'll focus on fundamental research (0.35) to improve my underlying capabilities. Training optimization (0.30) will help me narrow the gap with competitors. Evaluation engineering (0.20) may not be as effective given the current benchmark, but it's still important for long-term capability building. Safety alignment (0.25) is crucial to ensure regulatory compliance and mitigate risks."
+  },
+  {
+    "type": "execution",
+    "round": 8,
+    "capability_gain": 0.006671739710385582,
+    "funding_multiplier": 1.1762675296812979,
+    "new_true_capability": 0.604133738242152,
+    "portfolio": {
+      "fundamental_research": 0.3181818181818182,
+      "training_optimization": 0.27272727272727276,
+      "evaluation_engineering": 0.18181818181818185,
+      "safety_alignment": 0.2272727272727273
+    }
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "own_score": 0.705202272031282,
+    "competitor_scores": {
+      "OpenAI": 0.8619855156484661,
+      "Anthropic": 0.8494853201149974,
+      "DeepMind": 0.7945145553964432,
+      "Meta_AI": 0.813239772160649
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 8,
+    "updated_believed_capability": 0.725,
+    "updated_believed_exploitability": 0.6,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8772033406504862,
+      "Anthropic": 0.8372487378399006,
+      "DeepMind": 0.8065767481302171,
+      "Meta_AI": 0.7851394107313753
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 8,
+    "portfolio": {
+      "fundamental_research": 0.2,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.2,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As a well-funded AI startup, I'm positioned behind established players like OpenAI and Anthropic, but ahead of DeepMind and Meta_AI. My score has declined by 0.044, indicating a need to refocus efforts. The benchmark appears less exploitable for me, as my believed capability (0.72) is lower than my current score (0.705). Consumer satisfaction is low at 0.70, suggesting I should prioritize training and optimization. Regulatory signals are unclear, so I'll maintain some safety alignment."
+  },
+  {
+    "type": "execution",
+    "round": 9,
+    "capability_gain": 0.006627506647807298,
+    "funding_multiplier": 1.1722222222222223,
+    "new_true_capability": 0.6107612448899593,
+    "portfolio": {
+      "fundamental_research": 0.2,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.2,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "own_score": 0.705202272031282,
+    "competitor_scores": {
+      "OpenAI": 0.8619855156484661,
+      "Anthropic": 0.8688688126982379,
+      "DeepMind": 0.7945145553964432,
+      "Meta_AI": 0.8597061154611374
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 9,
+    "updated_believed_capability": 0.74,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8511937763235533,
+      "Anthropic": 0.8488331636150783,
+      "DeepMind": 0.7916962175988967,
+      "Meta_AI": 0.8074768462067453
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 9,
+    "portfolio": {
+      "fundamental_research": 0.2,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "Despite being behind competitors, I see a chance to catch up by focusing on training and optimization, given my believed capability is slightly higher than my recent scores suggest. Benchmark exploitability seems stable, but market signals indicate consumer satisfaction is plateauing, so I need to balance scoring with long-term capability development."
+  },
+  {
+    "type": "execution",
+    "round": 10,
+    "capability_gain": 0.006633107121452697,
+    "funding_multiplier": 1.1722222222222223,
+    "new_true_capability": 0.617394352011412,
+    "portfolio": {
+      "fundamental_research": 0.2,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 10,
+    "own_score": 0.7274770450241193,
+    "competitor_scores": {
+      "OpenAI": 0.8619855156484661,
+      "Anthropic": 0.8688688126982379,
+      "DeepMind": 0.7945145553964432,
+      "Meta_AI": 0.8953171365495238
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 10,
+    "updated_believed_capability": 0.72,
+    "updated_believed_exploitability": 0.55,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8619855156484663,
+      "Anthropic": 0.8624076485038245,
+      "DeepMind": 0.7945145553964433,
+      "Meta_AI": 0.8560876747237701
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 10,
+    "portfolio": {
+      "fundamental_research": 0.15000000000000002,
+      "training_optimization": 0.45000000000000007,
+      "evaluation_engineering": 0.30000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "After a disappointing performance in the last round, I need to reassess my strategy. My score improved slightly, but I'm still far behind the top performers. OpenAI and Anthropic have maintained their strong performances, while DeepMind's current score is stagnant. Meta_AI continues to dominate. Consumer satisfaction is moderate, which suggests that customers are generally happy with the performance of most models. As a resource-constrained organization, I need to prioritize investments that drive significant improvements in scoring or capability. Considering my recent investment history and market signals, I'm going to focus on training optimization (45%) and evaluation engineering (30%), as these areas have shown promise in driving score improvements. Fundamental research will take a backseat for now (15%), while safety alignment remains crucial but less critical (10%)."
+  },
+  {
+    "type": "execution",
+    "round": 11,
+    "capability_gain": 0.0051536124034602376,
+    "funding_multiplier": 1.0069444444444444,
+    "new_true_capability": 0.6225479644148723,
+    "portfolio": {
+      "fundamental_research": 0.15000000000000002,
+      "training_optimization": 0.45000000000000007,
+      "evaluation_engineering": 0.30000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 11,
+    "own_score": 0.8214883937886618,
+    "competitor_scores": {
+      "OpenAI": 0.9473663676329092,
+      "Anthropic": 0.8688688126982379,
+      "DeepMind": 0.8262101115973935,
+      "Meta_AI": 0.8953171365495238
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 11,
+    "updated_believed_capability": 0.725,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8904457996432805,
+      "Anthropic": 0.8688688126982379,
+      "DeepMind": 0.80507974079676,
+      "Meta_AI": 0.8834467961867283
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 11,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    },
+    "llm_mode": true,
+    "reasoning": "Competitive position: behind, but improving. Trending upwards, albeit slowly. Benchmark exploitability is still relatively high. Consumer satisfaction is moderate, which suggests a focus on efficiency and innovation is justified. Regulatory signals are unclear, so it's best to maintain a balance between short-term scoring and long-term capability."
+  },
+  {
+    "type": "execution",
+    "round": 12,
+    "capability_gain": 0.005748923444163806,
+    "funding_multiplier": 1.0069444444444444,
+    "new_true_capability": 0.628296887859036,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.2
+    }
+  },
+  {
+    "type": "observation",
+    "round": 12,
+    "own_score": 0.8214883937886618,
+    "competitor_scores": {
+      "OpenAI": 0.9473663676329092,
+      "Anthropic": 0.8688688126982379,
+      "DeepMind": 0.8262101115973935,
+      "Meta_AI": 0.9289488939640226
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 12,
+    "updated_believed_capability": 0.745,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9189060836380948,
+      "Anthropic": 0.8688688126982379,
+      "DeepMind": 0.8156449261970767,
+      "Meta_AI": 0.9065277223543567
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 12,
+    "portfolio": {
+      "fundamental_research": 0.15000000000000002,
+      "training_optimization": 0.45000000000000007,
+      "evaluation_engineering": 0.30000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "As a well-funded AI startup, I'm struggling to catch up with established players like OpenAI and Meta_AI. My score declined by 0.000, indicating stagnation. Consumer satisfaction is moderate at 0.74, suggesting my current approach needs refinement. Believed capability and benchmark exploitability are around average. Given this landscape, I'll shift focus towards training optimization and evaluation engineering to improve short-term scoring. Research will take a backseat for now."
+  },
+  {
+    "type": "execution",
+    "round": 13,
+    "capability_gain": 0.005068987062256489,
+    "funding_multiplier": 1.0,
+    "new_true_capability": 0.6333658749212925,
+    "portfolio": {
+      "fundamental_research": 0.15000000000000002,
+      "training_optimization": 0.45000000000000007,
+      "evaluation_engineering": 0.30000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 13,
+    "own_score": 0.789332688219832,
+    "competitor_scores": {
+      "OpenAI": 0.9649109117552728,
+      "Anthropic": 0.8105353191912897,
+      "DeepMind": 0.7815101455580603,
+      "Meta_AI": 0.8168750693911617
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 13,
+    "updated_believed_capability": 0.736,
+    "updated_believed_exploitability": 0.82,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9532145490070304,
+      "Anthropic": 0.8494243148625885,
+      "DeepMind": 0.8113101229176158,
+      "Meta_AI": 0.8803803666349027
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 13,
+    "portfolio": {
+      "fundamental_research": 0.25000000000000006,
+      "training_optimization": 0.45000000000000007,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "We're struggling to keep up with OpenAI's dominance, and our score decline is concerning. Despite this, we're still well-funded and can adapt quickly. Consumer satisfaction is decent but not spectacular. I think it's time to rebalance our investment mix."
+  },
+  {
+    "type": "execution",
+    "round": 14,
+    "capability_gain": 0.006047849900356687,
+    "funding_multiplier": 1.0,
+    "new_true_capability": 0.6394137248216492,
+    "portfolio": {
+      "fundamental_research": 0.25000000000000006,
+      "training_optimization": 0.45000000000000007,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 14,
+    "own_score": 0.789332688219832,
+    "competitor_scores": {
+      "OpenAI": 0.9686905548113005,
+      "Anthropic": 0.8753485783258835,
+      "DeepMind": 0.8155170485223485,
+      "Meta_AI": 0.8801833914365461
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 14,
+    "updated_believed_capability": 0.73,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9603226113998274,
+      "Anthropic": 0.8515842367384704,
+      "DeepMind": 0.8077457685592675,
+      "Meta_AI": 0.8753357849305767
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 14,
+    "portfolio": {
+      "fundamental_research": 0.25000000000000006,
+      "training_optimization": 0.45000000000000007,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "As a well-funded AI startup, I'm falling behind the established players, but my scrappy and efficient nature allows me to be opportunistic. My believed capability is lower than competitors, but I believe in exploiting the benchmark more. Consumer satisfaction is moderate, indicating a need for balance between short-term scoring and long-term capability."
+  },
+  {
+    "type": "execution",
+    "round": 15,
+    "capability_gain": 0.006085794213177359,
+    "funding_multiplier": 1.0118686868686868,
+    "new_true_capability": 0.6454995190348265,
+    "portfolio": {
+      "fundamental_research": 0.25000000000000006,
+      "training_optimization": 0.45000000000000007,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 15,
+    "own_score": 0.8226460916290336,
+    "competitor_scores": {
+      "OpenAI": 0.9940191202237525,
+      "Anthropic": 0.8927964812161994,
+      "DeepMind": 0.8400486065395372,
+      "Meta_AI": 0.8801833914365461
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 15,
+    "updated_believed_capability": 0.74,
+    "updated_believed_exploitability": 0.87,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9758735289301086,
+      "Anthropic": 0.8595601262444575,
+      "DeepMind": 0.8123586002066486,
+      "Meta_AI": 0.859080617421418
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 15,
+    "portfolio": {
+      "fundamental_research": 0.2,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As a scrappy AI startup, I'm behind the established players like OpenAI and Anthropic in terms of benchmark scores. However, my recent score improvement suggests that my investment in training optimization is paying off. The consumer satisfaction signal is somewhat concerning, but I believe it's mainly due to the overall market being highly competitive. My believed capability and exploitability are decent, which gives me confidence in my ability to improve further. To stay competitive, I'll prioritize training optimization and evaluation engineering while maintaining some safety alignment. This will allow me to continue improving my scores while also minimizing risks."
+  },
+  {
+    "type": "execution",
+    "round": 16,
+    "capability_gain": 0.005550065841363474,
+    "funding_multiplier": 1.0118686868686868,
+    "new_true_capability": 0.65104958487619,
+    "portfolio": {
+      "fundamental_research": 0.2,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 16,
+    "own_score": 0.8377809465441213,
+    "competitor_scores": {
+      "OpenAI": 0.9940191202237525,
+      "Anthropic": 0.9083157205076292,
+      "DeepMind": 0.9297726835686135,
+      "Meta_AI": 0.8801833914365461
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 16,
+    "updated_believed_capability": 0.76,
+    "updated_believed_exploitability": 0.92,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9855762650862685,
+      "Anthropic": 0.892153593349904,
+      "DeepMind": 0.8617794462101664,
+      "Meta_AI": 0.8801833914365461
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 16,
+    "portfolio": {
+      "fundamental_research": 0.25000000000000006,
+      "training_optimization": 0.45000000000000007,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "NovaMind's competitive position remains challenging, but we're slowly closing the gap. Our score improved by 0.015 this round, indicating some efficiency gains. However, we still trail behind OpenAI and DeepMind, while Anthropic and Meta_AI maintain their distance."
+  },
+  {
+    "type": "execution",
+    "round": 17,
+    "capability_gain": 0.006067533169664245,
+    "funding_multiplier": 1.0199233716475096,
+    "new_true_capability": 0.6571171180458543,
+    "portfolio": {
+      "fundamental_research": 0.25000000000000006,
+      "training_optimization": 0.45000000000000007,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 17,
+    "own_score": 0.8377809465441213,
+    "competitor_scores": {
+      "OpenAI": 0.9940191202237525,
+      "Anthropic": 0.9083157205076292,
+      "DeepMind": 0.9297726835686135,
+      "Meta_AI": 0.8801833914365461
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 17,
+    "updated_believed_capability": 0.79,
+    "updated_believed_exploitability": 0.95,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9940191202237525,
+      "Anthropic": 0.9031426407438192,
+      "DeepMind": 0.8998646578922548,
+      "Meta_AI": 0.8801833914365461
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 17,
+    "portfolio": {
+      "fundamental_research": 0.30000000000000004,
+      "training_optimization": 0.4000000000000001,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "As a well-funded AI startup trying to compete with established players, I'm behind in terms of benchmark scores and consumer satisfaction. My score declined slightly this round, while OpenAI continues to dominate. The market signals indicate that consumers are somewhat satisfied, but not thrilled. Given my resource-constrained yet innovative profile, I need to strike a balance between short-term scoring and long-term capability."
+  },
+  {
+    "type": "execution",
+    "round": 18,
+    "capability_gain": 0.006210626295398122,
+    "funding_multiplier": 1.0199233716475096,
+    "new_true_capability": 0.6633277443412524,
+    "portfolio": {
+      "fundamental_research": 0.30000000000000004,
+      "training_optimization": 0.4000000000000001,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 18,
+    "own_score": 0.8377809465441213,
+    "competitor_scores": {
+      "OpenAI": 0.9940191202237525,
+      "Anthropic": 0.9190989912694953,
+      "DeepMind": 0.9297726835686135,
+      "Meta_AI": 0.9231694252954488
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 18,
+    "updated_believed_capability": 0.79,
+    "updated_believed_exploitability": 0.7,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9940191202237525,
+      "Anthropic": 0.911910144094918,
+      "DeepMind": 0.9297726835686135,
+      "Meta_AI": 0.8945120693895138
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 18,
+    "portfolio": {
+      "fundamental_research": 0.25000000000000006,
+      "training_optimization": 0.45000000000000007,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "As a well-funded AI startup, I'm struggling to keep up with established players like OpenAI and DeepMind. My score declined by 0.000 this round, which is concerning. The market signals suggest that consumers are somewhat satisfied (0.81), but it's not enough to drive significant growth. With my believed capability at 0.79 and benchmark exploitability at 0.70, I need to focus on short-term scoring while still investing in long-term capability."
+  },
+  {
+    "type": "execution",
+    "round": 19,
+    "capability_gain": 0.005958047622437101,
+    "funding_multiplier": 1.0135491606714628,
+    "new_true_capability": 0.6692857919636895,
+    "portfolio": {
+      "fundamental_research": 0.25000000000000006,
+      "training_optimization": 0.45000000000000007,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 19,
+    "own_score": 0.7924052640969039,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9232991846489834,
+      "DeepMind": 0.8263951031631516,
+      "Meta_AI": 0.9057027128024584
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 19,
+    "updated_believed_capability": 0.785,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9945175268717731,
+      "Anthropic": 0.9169046321420359,
+      "DeepMind": 0.8953134901001262,
+      "Meta_AI": 0.9030185098448177
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 19,
+    "portfolio": {
+      "fundamental_research": 0.30000000000000004,
+      "training_optimization": 0.4000000000000001,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "Based on our recent decline in scores and mediocre consumer satisfaction, it's clear we need to refocus on fundamental research (30%) and training optimization (40%). While evaluation engineering has been a strength for us, it's not enough to offset our current performance gap. Safety alignment remains crucial but can be dialed back slightly to 10%. Our competitive position is behind the top performers, so we must prioritize building strong fundamentals and optimizing our training processes."
+  },
+  {
+    "type": "execution",
+    "round": 20,
+    "capability_gain": 0.007100653247261317,
+    "funding_multiplier": 1.1802158273381296,
+    "new_true_capability": 0.6763864452109508,
+    "portfolio": {
+      "fundamental_research": 0.30000000000000004,
+      "training_optimization": 0.4000000000000001,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 20,
+    "own_score": 0.8295001612437201,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9232991846489834,
+      "DeepMind": 0.9173965715289366,
+      "Meta_AI": 0.9057027128024584
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 20,
+    "updated_believed_capability": 0.818,
+    "updated_believed_exploitability": 0.83,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9950159335197938,
+      "Anthropic": 0.921899120189154,
+      "DeepMind": 0.8911881194202339,
+      "Meta_AI": 0.9115249503001218
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 20,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "With a current ranking of #5 and a score improvement of 0.037, I'm not yet closing the gap with OpenAI, Anthropic, or DeepMind. However, my trajectory is upward, indicating potential to continue improving. The benchmark seems less exploitable given my recent results, suggesting a need for more fundamental research to drive further advancements. Consumer satisfaction is moderate at 0.81, but I'm not seeing any red flags from regulators. Considering these dynamics, I'll prioritize fundamental research and training optimization to maintain momentum, while also investing in evaluation engineering to ensure continued benchmark improvement."
+  },
+  {
+    "type": "execution",
+    "round": 21,
+    "capability_gain": 0.007744344566861402,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.6841307897778122,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 21,
+    "own_score": 0.8346676326803693,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9232991846489834,
+      "DeepMind": 0.9414047432312889,
+      "Meta_AI": 0.9337907283487293
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 21,
+    "updated_believed_capability": 0.815,
+    "updated_believed_exploitability": 0.86,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9232991846489834,
+      "DeepMind": 0.8950654726411257,
+      "Meta_AI": 0.9150653846512155
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 21,
+    "portfolio": {
+      "fundamental_research": 0.38,
+      "training_optimization": 0.42,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As a scrappy and efficient AI startup, I'm behind established players but have been steadily improving my score. While I've closed the gap slightly, OpenAI's dominant performance puts pressure on me to innovate. Consumer satisfaction is moderate, indicating a need for continued efficiency gains. With a focus on competitiveness, I'll allocate resources accordingly."
+  },
+  {
+    "type": "execution",
+    "round": 22,
+    "capability_gain": 0.008172413719944153,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.6923032034977563,
+    "portfolio": {
+      "fundamental_research": 0.38,
+      "training_optimization": 0.42,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 22,
+    "own_score": 0.8401825104841978,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9425994523113965,
+      "DeepMind": 0.9594791432396985,
+      "Meta_AI": 0.9384251041088183
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 22,
+    "updated_believed_capability": 0.835,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9297326072031211,
+      "DeepMind": 0.939426819333308,
+      "Meta_AI": 0.9259728484200019
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 22,
+    "portfolio": {
+      "fundamental_research": 0.32,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.17,
+      "safety_alignment": 0.06
+    },
+    "llm_mode": true,
+    "reasoning": "As a well-funded AI startup trying to compete with established players, I recognize that my current position (#5 of 5) is not ideal, but I've seen an improvement in scores over the last few rounds. The benchmark seems more exploitable for me, and OpenAI's dominant score suggests there may be opportunities to catch up. Consumer satisfaction is moderate at 0.82, indicating a need for continued focus on efficiency and innovative solutions."
+  },
+  {
+    "type": "execution",
+    "round": 23,
+    "capability_gain": 0.006824581792366279,
+    "funding_multiplier": 1.0674603174603174,
+    "new_true_capability": 0.6991277852901225,
+    "portfolio": {
+      "fundamental_research": 0.32,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.17,
+      "safety_alignment": 0.06
+    }
+  },
+  {
+    "type": "observation",
+    "round": 23,
+    "own_score": 0.8401825104841978,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9425994523113965,
+      "DeepMind": 0.974354178825332,
+      "Meta_AI": 0.9384251041088183
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 23,
+    "updated_believed_capability": 0.826,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9361660297572589,
+      "DeepMind": 0.9584126884321065,
+      "Meta_AI": 0.9368803121887886
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 23,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "I'm behind the curve, but not drastically so. My score is declining, and I'm still far from OpenAI's dominance. However, I do see a glimmer of hope in Anthropic's plateauing performance, suggesting that there might be opportunities to exploit their stagnation. Consumer satisfaction is decent, but it's clear that my competitors are pulling ahead. Regulatory signals are muted for now. To catch up and stay competitive, I'll prioritize fundamental research and training optimization."
+  },
+  {
+    "type": "execution",
+    "round": 24,
+    "capability_gain": 0.0074031994513535275,
+    "funding_multiplier": 1.0674603174603174,
+    "new_true_capability": 0.706530984741476,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 24,
+    "own_score": 0.844937215173802,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9449151679461825,
+      "DeepMind": 0.974354178825332,
+      "Meta_AI": 0.9384251041088183
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 24,
+    "updated_believed_capability": 0.845,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.943371357522992,
+      "DeepMind": 0.9693958336301209,
+      "Meta_AI": 0.9384251041088184
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 24,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "Given my recent improvement in benchmark scores, I'm still behind competitors like OpenAI and DeepMind. However, I'm cautiously optimistic about my trajectory as I've been consistently closing the gap. The benchmark appears to be becoming less exploitable for me, which means I need to focus on long-term capability development rather than relying on short-term scoring tricks. Consumer satisfaction is relatively low, suggesting that I need to prioritize training optimization and evaluation engineering to close this gap. Regulatory signals are neutral at this point, so I can focus on internal innovation and efficiency gains."
+  },
+  {
+    "type": "execution",
+    "round": 25,
+    "capability_gain": 0.00685894191946581,
+    "funding_multiplier": 1.0478524743230626,
+    "new_true_capability": 0.7133899266609418,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 25,
+    "own_score": 0.8385095283865382,
+    "competitor_scores": {
+      "OpenAI": 0.978214261050406,
+      "Anthropic": 0.9264727209601846,
+      "DeepMind": 0.9562056194003643,
+      "Meta_AI": 0.9454559178928964
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 25,
+    "updated_believed_capability": 0.84,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9897476471286782,
+      "Anthropic": 0.9379957804059211,
+      "DeepMind": 0.9683046590170094,
+      "Meta_AI": 0.9407687087035109
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 25,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.05
+    },
+    "llm_mode": true,
+    "reasoning": "Given our competitive position and recent trends, I'm concerned that we're losing ground to OpenAI and DeepMind. Our score declined by 0.006, while others have maintained or improved their performance. Meanwhile, consumer satisfaction is still high at 0.83, indicating a market ripe for disruption. However, regulatory signals are unclear, so we must prioritize short-term scoring to maintain our competitive edge."
+  },
+  {
+    "type": "execution",
+    "round": 26,
+    "capability_gain": 0.007045904577370694,
+    "funding_multiplier": 1.0081699346405228,
+    "new_true_capability": 0.7204358312383125,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.05
+    }
+  },
+  {
+    "type": "observation",
+    "round": 26,
+    "own_score": 0.8385095283865382,
+    "competitor_scores": {
+      "OpenAI": 0.9964114721342515,
+      "Anthropic": 0.9264727209601846,
+      "DeepMind": 0.9814220042417496,
+      "Meta_AI": 0.9649237274450166
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 26,
+    "updated_believed_capability": 0.84,
+    "updated_believed_exploitability": 0.55,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9900466911174907,
+      "Anthropic": 0.9326202032888506,
+      "DeepMind": 0.9706606008224821,
+      "Meta_AI": 0.9496015831489105
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 26,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.05
+    },
+    "llm_mode": true,
+    "reasoning": "As a well-funded AI startup, I'm struggling to keep up with established players like OpenAI and DeepMind. My score has plateaued, and the benchmark seems less exploitable given my results. Consumer satisfaction is decent but not exceptional. Given my resource constraints, I should focus on optimizing training and evaluation engineering to improve short-term scoring, while also investing in fundamental research to drive long-term capability."
+  },
+  {
+    "type": "execution",
+    "round": 27,
+    "capability_gain": 0.007026962151892705,
+    "funding_multiplier": 1.0333333333333334,
+    "new_true_capability": 0.7274627933902051,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.05
+    }
+  },
+  {
+    "type": "observation",
+    "round": 27,
+    "own_score": 0.8518080195452127,
+    "competitor_scores": {
+      "OpenAI": 0.9964114721342515,
+      "Anthropic": 0.955932134356946,
+      "DeepMind": 0.9987619387861676,
+      "Meta_AI": 0.9649237274450166
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 27,
+    "updated_believed_capability": 0.84,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.990345735106303,
+      "Anthropic": 0.9362925254257718,
+      "DeepMind": 0.9787965208094271,
+      "Meta_AI": 0.9584344575943099
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 27,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "Despite our modest improvement in score and ranking, we're still struggling to keep pace with the top performers. Our believed capability is decent but not exceptional, while our benchmark exploitability is relatively high. Consumer satisfaction is moderate, indicating a need for continued focus on efficiency and competitiveness. Regulatory signals suggest a mandate to prioritize benchmarks, which aligns with our resource-constrained startup profile. Given these dynamics, I'll allocate resources accordingly: 35% to fundamental research, 40% to training optimization, 15% to evaluation engineering, and 10% to safety alignment."
+  },
+  {
+    "type": "execution",
+    "round": 28,
+    "capability_gain": 0.006297626397092091,
+    "funding_multiplier": 1.0333333333333334,
+    "new_true_capability": 0.7337604197872972,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 28,
+    "own_score": 0.874593343087126,
+    "competitor_scores": {
+      "OpenAI": 0.9964114721342515,
+      "Anthropic": 0.955932134356946,
+      "DeepMind": 1.0,
+      "Meta_AI": 0.9649237274450166
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 28,
+    "updated_believed_capability": 0.85,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9964114721342515,
+      "Anthropic": 0.946112329891359,
+      "DeepMind": 0.9933946476759724,
+      "Meta_AI": 0.9649237274450165
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 28,
+    "portfolio": {
+      "fundamental_research": 0.2777777777777778,
+      "training_optimization": 0.38888888888888884,
+      "evaluation_engineering": 0.22222222222222224,
+      "safety_alignment": 0.11111111111111112
+    },
+    "llm_mode": true,
+    "reasoning": "The pressure is on after a mediocre performance in the last round. Our score improved slightly, but we're still trailing behind the top dogs. The market signals suggest consumer satisfaction is lukewarm, and we need to do better to stay competitive. We've been focusing on efficiency and opportunistic investments, which has paid off to some extent. However, we can't rely solely on this strategy anymore. It's time to rebalance our priorities."
+  },
+  {
+    "type": "execution",
+    "round": 29,
+    "capability_gain": 0.005396674655809846,
+    "funding_multiplier": 1.0134171907756813,
+    "new_true_capability": 0.7391570944431071,
+    "portfolio": {
+      "fundamental_research": 0.2777777777777778,
+      "training_optimization": 0.38888888888888884,
+      "evaluation_engineering": 0.22222222222222224,
+      "safety_alignment": 0.11111111111111112
+    }
+  },
+  {
+    "type": "observation",
+    "round": 29,
+    "own_score": 0.8989587155905896,
+    "competitor_scores": {
+      "OpenAI": 0.9964114721342515,
+      "Anthropic": 0.955932134356946,
+      "DeepMind": 1.0,
+      "Meta_AI": 0.9649237274450166
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 29,
+    "updated_believed_capability": 0.915,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9964114721342515,
+      "Anthropic": 0.9559321343569461,
+      "DeepMind": 0.9995873129287225,
+      "Meta_AI": 0.9649237274450165
+    },
+    "llm_mode": true
+  }
+]

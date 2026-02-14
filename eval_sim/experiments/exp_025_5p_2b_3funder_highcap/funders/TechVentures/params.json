@@ -1,0 +1,6 @@
+{
+  "risk_tolerance": 0.9,
+  "llm_mode": true,
+  "max_round_deployment": 0.15,
+  "funding_cooldown": 3
+}

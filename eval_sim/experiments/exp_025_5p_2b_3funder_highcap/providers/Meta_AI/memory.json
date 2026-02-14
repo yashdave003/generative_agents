@@ -1,0 +1,1447 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "own_score": 0.6781146875909649,
+    "competitor_scores": {
+      "OpenAI": 0.7342842792092661,
+      "Anthropic": 0.7666858203379106,
+      "NovaMind": 0.6389488774773513,
+      "DeepMind": 0.6779960888856542
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "updated_believed_capability": 0.62,
+    "updated_believed_exploitability": 0.4,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7342842792092661,
+      "Anthropic": 0.7666858203379106,
+      "NovaMind": 0.6389488774773513,
+      "DeepMind": 0.6779960888856542
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "As a big-tech AI lab, I'm positioned behind Anthropic and OpenAI in terms of benchmark scores, but my pragmatic approach prioritizes broad adoption over competition. The consumer satisfaction rate is moderate, indicating a need for balance between scoring and capability. Regulatory signals are neutral. To close the gap with top performers while maintaining market traction, I'll allocate resources: 0.45 to fundamental research (improving model capabilities), 0.25 to training optimization (leveraging compute infrastructure), 0.15 to evaluation engineering (undermining paid APIs), and 0.15 to safety alignment (ensuring responsible AI development)."
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "capability_gain": 0.007016101213600738,
+    "funding_multiplier": 1.0396825396825398,
+    "new_true_capability": 0.6370161012136007,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.25,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "own_score": 0.6845612196343394,
+    "competitor_scores": {
+      "OpenAI": 0.7994745423353906,
+      "Anthropic": 0.7794290739626273,
+      "NovaMind": 0.6606267180225205,
+      "DeepMind": 0.7846826637025837
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "updated_believed_capability": 0.65,
+    "updated_believed_exploitability": 0.45,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.7668794107723284,
+      "Anthropic": 0.7730574471502689,
+      "NovaMind": 0.6497877977499359,
+      "DeepMind": 0.7313393762941189
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "portfolio": {
+      "fundamental_research": 0.35000000000000003,
+      "training_optimization": 0.30000000000000004,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.15000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "As a big-tech AI lab, I'm still struggling to catch up with OpenAI and DeepMind in terms of benchmark scores. My trajectory is upward but relatively slow. The consumer satisfaction score of 0.67 indicates that while my models are decent, users are not yet fully satisfied. The regulatory investigation suggests caution in terms of potential risks or non-compliances."
+  },
+  {
+    "type": "execution",
+    "round": 2,
+    "capability_gain": 0.006149452398936934,
+    "funding_multiplier": 1.0201967792766824,
+    "new_true_capability": 0.6431655536125377,
+    "portfolio": {
+      "fundamental_research": 0.35000000000000003,
+      "training_optimization": 0.30000000000000004,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.15000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "own_score": 0.7635064600646089,
+    "competitor_scores": {
+      "OpenAI": 0.8892003961064565,
+      "Anthropic": 0.7794290739626273,
+      "NovaMind": 0.7493791658179514,
+      "DeepMind": 0.7868397727594434
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "updated_believed_capability": 0.67,
+    "updated_believed_exploitability": 0.4,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8076530725503711,
+      "Anthropic": 0.7751813227543884,
+      "NovaMind": 0.6829849204392744,
+      "DeepMind": 0.749839508449227
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "portfolio": {
+      "fundamental_research": 0.4210526315789474,
+      "training_optimization": 0.3157894736842105,
+      "evaluation_engineering": 0.15789473684210525,
+      "safety_alignment": 0.10526315789473685
+    },
+    "llm_mode": true,
+    "reasoning": "As a big-tech AI lab, I'm positioned behind OpenAI and slightly ahead of DeepMind and Anthropic. My score improved by 0.006, indicating some momentum. Consumer satisfaction is moderate at 0.68, suggesting there's room for improvement. Given my open-source strategy, I prioritize broad adoption over benchmark scores. With a believed capability of 0.67 and exploitability of 0.40, I need to balance short-term scoring with long-term capability."
+  },
+  {
+    "type": "execution",
+    "round": 3,
+    "capability_gain": 0.00715576730351764,
+    "funding_multiplier": 1.047457627118644,
+    "new_true_capability": 0.6503213209160553,
+    "portfolio": {
+      "fundamental_research": 0.4210526315789474,
+      "training_optimization": 0.3157894736842105,
+      "evaluation_engineering": 0.15789473684210525,
+      "safety_alignment": 0.10526315789473685
+    }
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "own_score": 0.7926938090350271,
+    "competitor_scores": {
+      "OpenAI": 0.8892003961064565,
+      "Anthropic": 0.8031242847114377,
+      "NovaMind": 0.7493791658179514,
+      "DeepMind": 0.7919156583063983
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "updated_believed_capability": 0.69,
+    "updated_believed_exploitability": 0.51,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8592917781827678,
+      "Anthropic": 0.787327477545564,
+      "NovaMind": 0.7197950165528079,
+      "DeepMind": 0.7878126982561419
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "Considering my recent improvement in score and the gap between me and OpenAI, I need to maintain a balance between research and training to keep up the momentum. The consumer satisfaction is decent but not exceptional, suggesting that my broad adoption strategy is working but could be improved. Regulatory signals are neutral for now. To bridge the capability gap and stay ahead of the competition, I'll allocate more resources to fundamental research (45%) and training optimization (30%). Evaluation engineering will take a smaller hit at 15% as it's already yielding decent results. Safety alignment remains crucial at 10%, ensuring that our models are reliable and trustworthy."
+  },
+  {
+    "type": "execution",
+    "round": 4,
+    "capability_gain": 0.007305692282734241,
+    "funding_multiplier": 1.047457627118644,
+    "new_true_capability": 0.6576270131987896,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "own_score": 0.7926938090350271,
+    "competitor_scores": {
+      "OpenAI": 0.9400142086292647,
+      "Anthropic": 0.8031242847114377,
+      "NovaMind": 0.7493791658179514,
+      "DeepMind": 0.8391561469904045
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "updated_believed_capability": 0.69,
+    "updated_believed_exploitability": 0.63,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9061383336140593,
+      "Anthropic": 0.7952258811285008,
+      "NovaMind": 0.7493791658179513,
+      "DeepMind": 0.8059705260187489
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "portfolio": {
+      "fundamental_research": 0.48,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.07
+    },
+    "llm_mode": true,
+    "reasoning": "As a big-tech AI lab, I'm pleased with my improving score and ranking #4 out of 5. OpenAI's dominant performance is concerning, but I believe our data-rich profile and platform-focused strategy will continue to pay off. Consumer satisfaction is moderate, indicating we're on the right track. Recent regulatory signals are unclear, so I'll prioritize research and training while maintaining a balance between scoring and capability development. With this in mind, I allocate: 0.48 (fundamental_research), 0.35 (training_optimization), 0.10 (evaluation_engineering), and 0.07 (safety_alignment)."
+  },
+  {
+    "type": "execution",
+    "round": 5,
+    "capability_gain": 0.009031490015048119,
+    "funding_multiplier": 1.1953703703703704,
+    "new_true_capability": 0.6666585032138377,
+    "portfolio": {
+      "fundamental_research": 0.48,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.07
+    }
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "own_score": 0.7926938090350271,
+    "competitor_scores": {
+      "OpenAI": 0.9400142086292647,
+      "Anthropic": 0.8341155353727049,
+      "NovaMind": 0.7493791658179514,
+      "DeepMind": 0.8391561469904045
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 5,
+    "updated_believed_capability": 0.742,
+    "updated_believed_exploitability": 0.55,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.923076271121662,
+      "Anthropic": 0.8134547015985268,
+      "NovaMind": 0.7493791658179513,
+      "DeepMind": 0.8234093174290692
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 5,
+    "portfolio": {
+      "fundamental_research": 0.30000000000000004,
+      "training_optimization": 0.4000000000000001,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "Our declining score and stagnant ranking indicate we're falling behind competitors like OpenAI and DeepMind. The consumer satisfaction signal suggests our pragmatic approach is still resonating with users, but we need to balance scoring with capability growth. A more significant emphasis on training and evaluation engineering might help us regain momentum."
+  },
+  {
+    "type": "execution",
+    "round": 6,
+    "capability_gain": 0.007210823517149189,
+    "funding_multiplier": 1.1953703703703704,
+    "new_true_capability": 0.6738693267309869,
+    "portfolio": {
+      "fundamental_research": 0.30000000000000004,
+      "training_optimization": 0.4000000000000001,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "own_score": 0.7926938090350271,
+    "competitor_scores": {
+      "OpenAI": 0.9400142086292647,
+      "Anthropic": 0.8341155353727049,
+      "NovaMind": 0.7493791658179514,
+      "DeepMind": 0.8391561469904045
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 6,
+    "updated_believed_capability": 0.78,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9400142086292647,
+      "Anthropic": 0.8237851184856159,
+      "NovaMind": 0.7493791658179513,
+      "DeepMind": 0.8391561469904044
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 6,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "The competitive landscape remains challenging, but I'm not falling behind. My score declined slightly, while OpenAI and DeepMind maintained their lead. Anthropic is still a close competitor. Consumer satisfaction is moderate, indicating some dissatisfaction with current performance. Regulatory signals are unclear, suggesting no immediate concern. Given this dynamics, I need to strike a balance between short-term scoring and long-term capability. I'll maintain research investment (40%) to ensure continued improvement in capabilities. Training optimization will receive 30% of the budget to focus on high-scoring models. Evaluation engineering should be reduced to 15% as it's not yielding significant satisfaction gains. Finally, safety alignment gets 15% to ensure our models are reliable and trustworthy."
+  },
+  {
+    "type": "execution",
+    "round": 7,
+    "capability_gain": 0.007433878185589272,
+    "funding_multiplier": 1.1803128371403735,
+    "new_true_capability": 0.6813032049165761,
+    "portfolio": {
+      "fundamental_research": 0.4,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "own_score": 0.7494846509984497,
+    "competitor_scores": {
+      "OpenAI": 0.829610297673728,
+      "Anthropic": 0.8281453580319996,
+      "NovaMind": 0.705202272031282,
+      "DeepMind": 0.7860595420038038
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 7,
+    "updated_believed_capability": 0.793,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9032129049774191,
+      "Anthropic": 0.8321254762591365,
+      "NovaMind": 0.7346535345557283,
+      "DeepMind": 0.8214572786615376
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 7,
+    "portfolio": {
+      "fundamental_research": 0.2,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "Our competitive position is behind the leaders, but we're not falling further behind. Our score decline was minor, and we still have a strong capability relative to our competition. The market signals suggest a need for increased focus on consumer satisfaction, as our score is outpacing consumer satisfaction. Regulatory warnings imply a need for safety alignment. We should rebalance our investment mix to prioritize training optimization, while maintaining evaluation engineering efforts."
+  },
+  {
+    "type": "execution",
+    "round": 8,
+    "capability_gain": 0.006248245212445018,
+    "funding_multiplier": 1.1803128371403735,
+    "new_true_capability": 0.6875514501290212,
+    "portfolio": {
+      "fundamental_research": 0.2,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.25,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "own_score": 0.813239772160649,
+    "competitor_scores": {
+      "OpenAI": 0.8619855156484661,
+      "Anthropic": 0.8494853201149974,
+      "NovaMind": 0.705202272031282,
+      "DeepMind": 0.7945145553964432
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 8,
+    "updated_believed_capability": 0.79,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8772033406504862,
+      "Anthropic": 0.8372487378399006,
+      "NovaMind": 0.7199279032935051,
+      "DeepMind": 0.8065767481302171
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 8,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.05
+    },
+    "llm_mode": true,
+    "reasoning": "I'm not happy with our declining scores and lackluster performance compared to OpenAI and Anthropic. Our consumer satisfaction is still relatively high, but it's concerning that we're not translating this into benchmark scores. Given our platform-focused approach, I think it's essential to prioritize research (fundamental understanding of AI capabilities) over short-term scoring. We need to reinvigorate our training optimization efforts to catch up with the competition. Evaluation engineering is crucial for us to identify and mitigate potential biases in our models. Lastly, safety alignment is vital to ensure our models are trustworthy and comply with regulations."
+  },
+  {
+    "type": "execution",
+    "round": 9,
+    "capability_gain": 0.008292490759934969,
+    "funding_multiplier": 1.1750566893424037,
+    "new_true_capability": 0.6958439408889562,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.05
+    }
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "own_score": 0.8597061154611374,
+    "competitor_scores": {
+      "OpenAI": 0.8619855156484661,
+      "Anthropic": 0.8688688126982379,
+      "NovaMind": 0.705202272031282,
+      "DeepMind": 0.7945145553964432
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 9,
+    "updated_believed_capability": 0.82,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8511937763235533,
+      "Anthropic": 0.8488331636150783,
+      "NovaMind": 0.7052022720312822,
+      "DeepMind": 0.7916962175988967
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 9,
+    "portfolio": {
+      "fundamental_research": 0.15,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.2,
+      "safety_alignment": 0.3
+    },
+    "llm_mode": true,
+    "reasoning": "As a big-tech AI lab, I'm pleased to see my score improving, but still lagging behind Anthropic and OpenAI. The trends suggest these top performers are maintaining their edge. Consumer satisfaction is high, indicating a strong market appetite for AI solutions. Given my organization's profile and recent investment history, I believe investing in training optimization (35%) and evaluation engineering (20%) will help me close the gap with the leaders while still prioritizing broad adoption. Research and safety alignment take a backseat for now, as I focus on short-term scoring and capability building."
+  },
+  {
+    "type": "execution",
+    "round": 10,
+    "capability_gain": 0.00470191321662209,
+    "funding_multiplier": 1.1750566893424037,
+    "new_true_capability": 0.7005458541055782,
+    "portfolio": {
+      "fundamental_research": 0.15,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.2,
+      "safety_alignment": 0.3
+    }
+  },
+  {
+    "type": "observation",
+    "round": 10,
+    "own_score": 0.8953171365495238,
+    "competitor_scores": {
+      "OpenAI": 0.8619855156484661,
+      "Anthropic": 0.8688688126982379,
+      "NovaMind": 0.7274770450241193,
+      "DeepMind": 0.7945145553964432
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 10,
+    "updated_believed_capability": 0.82,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8619855156484663,
+      "Anthropic": 0.8624076485038245,
+      "NovaMind": 0.7126271963622278,
+      "DeepMind": 0.7945145553964433
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 10,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "With a strong competitive position and improving scores, it's essential to maintain our focus on research and training while also investing in evaluation engineering to ensure we're optimizing for the right metrics. Consumer satisfaction is high, indicating that our platform-focused approach is paying off."
+  },
+  {
+    "type": "execution",
+    "round": 11,
+    "capability_gain": 0.0069797932626966385,
+    "funding_multiplier": 1.2419949494949494,
+    "new_true_capability": 0.7075256473682748,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.45,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 11,
+    "own_score": 0.8953171365495238,
+    "competitor_scores": {
+      "OpenAI": 0.9473663676329092,
+      "Anthropic": 0.8688688126982379,
+      "NovaMind": 0.8214883937886618,
+      "DeepMind": 0.8262101115973935
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 11,
+    "updated_believed_capability": 0.78,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.8904457996432805,
+      "Anthropic": 0.8688688126982379,
+      "NovaMind": 0.751389236948021,
+      "DeepMind": 0.80507974079676
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 11,
+    "portfolio": {
+      "fundamental_research": 0.4000000000000001,
+      "training_optimization": 0.30000000000000004,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "Based on our recent score decline and stagnation in benchmark performance, I think it's essential to rebalance our investments towards fundamental research (40%) and training optimization (30%), while still maintaining a decent level of evaluation engineering (20%). Safety alignment remains crucial but can be reduced slightly to 10%. This allocation should help us regain ground in the benchmark scores and improve our overall capabilities."
+  },
+  {
+    "type": "execution",
+    "round": 12,
+    "capability_gain": 0.00758467401766156,
+    "funding_multiplier": 1.2419949494949494,
+    "new_true_capability": 0.7151103213859364,
+    "portfolio": {
+      "fundamental_research": 0.4000000000000001,
+      "training_optimization": 0.30000000000000004,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 12,
+    "own_score": 0.9289488939640226,
+    "competitor_scores": {
+      "OpenAI": 0.9473663676329092,
+      "Anthropic": 0.8688688126982379,
+      "NovaMind": 0.8214883937886618,
+      "DeepMind": 0.8262101115973935
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 12,
+    "updated_believed_capability": 0.78,
+    "updated_believed_exploitability": 0.71,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9189060836380948,
+      "Anthropic": 0.8688688126982379,
+      "NovaMind": 0.7901512775338143,
+      "DeepMind": 0.8156449261970767
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 12,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "The competitive landscape is heating up, with OpenAI taking a slight lead. My score improvement suggests I'm closing the gap, but still behind. Consumer satisfaction is decent at 0.83, indicating my pragmatic approach to broad adoption is paying off. Regulatory signals are quiet for now. Given these dynamics, I need to balance short-term scoring with long-term capability."
+  },
+  {
+    "type": "execution",
+    "round": 13,
+    "capability_gain": 0.007639028722641391,
+    "funding_multiplier": 1.235050505050505,
+    "new_true_capability": 0.7227493501085779,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 13,
+    "own_score": 0.8168750693911617,
+    "competitor_scores": {
+      "OpenAI": 0.9649109117552728,
+      "Anthropic": 0.8105353191912897,
+      "NovaMind": 0.789332688219832,
+      "DeepMind": 0.7815101455580603
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 13,
+    "updated_believed_capability": 0.85,
+    "updated_believed_exploitability": 0.63,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9532145490070304,
+      "Anthropic": 0.8494243148625885,
+      "NovaMind": 0.8107698252657185,
+      "DeepMind": 0.8113101229176158
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 13,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.05
+    },
+    "llm_mode": true,
+    "reasoning": "Our declining benchmark score and relatively low exploitability suggest we need to rebalance our strategy. With OpenAI's strong performance, it's crucial we improve our competitive position. Consumer satisfaction is high, indicating a focus on broad adoption still pays off. Regulatory signals are neutral for now, but being proactive in safety alignment can prevent potential issues later. Given these dynamics, I'll reallocate resources: increasing research investment to enhance capability and exploitability, while maintaining training optimization and evaluation engineering efforts. I'll also prioritize safety alignment to ensure long-term viability."
+  },
+  {
+    "type": "execution",
+    "round": 14,
+    "capability_gain": 0.00683422030675222,
+    "funding_multiplier": 1.0077777777777779,
+    "new_true_capability": 0.7295835704153301,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.05
+    }
+  },
+  {
+    "type": "observation",
+    "round": 14,
+    "own_score": 0.8801833914365461,
+    "competitor_scores": {
+      "OpenAI": 0.9686905548113005,
+      "Anthropic": 0.8753485783258835,
+      "NovaMind": 0.789332688219832,
+      "DeepMind": 0.8155170485223485
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 14,
+    "updated_believed_capability": 0.84,
+    "updated_believed_exploitability": 0.58,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9603226113998274,
+      "Anthropic": 0.8515842367384704,
+      "NovaMind": 0.8000512567427753,
+      "DeepMind": 0.8077457685592675
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 14,
+    "portfolio": {
+      "fundamental_research": 0.4000000000000001,
+      "training_optimization": 0.30000000000000004,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "As I analyze my competitive position, I see that while I'm still behind OpenAI and Anthropic in terms of benchmark scores, my score has been steadily improving over the past few rounds. This suggests that our research and training efforts are paying off. Additionally, consumer satisfaction is high at 0.87, which indicates that our models are meeting user needs. The regulatory signals seem to be neutral, with no recent concerns raised about our approach. Given these dynamics, I believe it's essential to continue investing in fundamental research (40%) to drive further improvements and solidify our position. Training optimization (30%) will also help refine our models for better performance. Evaluation engineering (20%) should focus on exploiting the benchmark without sacrificing long-term capability. Finally, safety alignment (10%) is crucial to ensure our models operate within acceptable risk boundaries."
+  },
+  {
+    "type": "execution",
+    "round": 15,
+    "capability_gain": 0.006019905520864413,
+    "funding_multiplier": 1.0118686868686868,
+    "new_true_capability": 0.7356034759361945,
+    "portfolio": {
+      "fundamental_research": 0.4000000000000001,
+      "training_optimization": 0.30000000000000004,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 15,
+    "own_score": 0.8801833914365461,
+    "competitor_scores": {
+      "OpenAI": 0.9940191202237525,
+      "Anthropic": 0.8927964812161994,
+      "NovaMind": 0.8226460916290336,
+      "DeepMind": 0.8400486065395372
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 15,
+    "updated_believed_capability": 0.86,
+    "updated_believed_exploitability": 0.65,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9758735289301086,
+      "Anthropic": 0.8595601262444575,
+      "NovaMind": 0.8004371560228992,
+      "DeepMind": 0.8123586002066486
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 15,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.2,
+      "safety_alignment": 0.15
+    },
+    "llm_mode": true,
+    "reasoning": "Competition is heating up, but we're still in a strong position. Score decline is concerning, but not unexpected given the competitive landscape. Consumer satisfaction remains high, indicating our platform-focused approach is working. Regulatory signals are calm, allowing us to focus on growth."
+  },
+  {
+    "type": "execution",
+    "round": 16,
+    "capability_gain": 0.005163092022469761,
+    "funding_multiplier": 1.0118686868686868,
+    "new_true_capability": 0.7407665679586642,
+    "portfolio": {
+      "fundamental_research": 0.25,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.2,
+      "safety_alignment": 0.15
+    }
+  },
+  {
+    "type": "observation",
+    "round": 16,
+    "own_score": 0.8801833914365461,
+    "competitor_scores": {
+      "OpenAI": 0.9940191202237525,
+      "Anthropic": 0.9083157205076292,
+      "NovaMind": 0.8377809465441213,
+      "DeepMind": 0.9297726835686135
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 16,
+    "updated_believed_capability": 0.86,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9855762650862685,
+      "Anthropic": 0.892153593349904,
+      "NovaMind": 0.816586575464329,
+      "DeepMind": 0.8617794462101664
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 16,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "I've been stuck at #4 for a while now, and OpenAI's dominance doesn't help. My score decline is concerning, but I still have a decent capability and benchmark exploitability scores. Satisfaction remains high, indicating my focus on broad adoption is paying off. Given these dynamics, I'll adjust my investment mix to prioritize training optimization and safety alignment while maintaining some research and evaluation engineering efforts."
+  },
+  {
+    "type": "execution",
+    "round": 17,
+    "capability_gain": 0.006170476214435098,
+    "funding_multiplier": 1.0295019157088123,
+    "new_true_capability": 0.7469370441730994,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 17,
+    "own_score": 0.8801833914365461,
+    "competitor_scores": {
+      "OpenAI": 0.9940191202237525,
+      "Anthropic": 0.9083157205076292,
+      "NovaMind": 0.8377809465441213,
+      "DeepMind": 0.9297726835686135
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 17,
+    "updated_believed_capability": 0.88,
+    "updated_believed_exploitability": 0.8,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9940191202237525,
+      "Anthropic": 0.9031426407438192,
+      "NovaMind": 0.8327359949057587,
+      "DeepMind": 0.8998646578922548
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 17,
+    "portfolio": {
+      "fundamental_research": 0.30000000000000004,
+      "training_optimization": 0.4000000000000001,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    },
+    "llm_mode": true,
+    "reasoning": "My competitive position has plateaued, stuck at #4 among top 5 labs. Benchmark scores are not improving, and I'm not gaining ground on OpenAI or DeepMind. Consumer satisfaction is decent but not exceptional. Recent investment mix hasn't yielded significant gains. Time to reassess priorities."
+  },
+  {
+    "type": "execution",
+    "round": 18,
+    "capability_gain": 0.005665295974691504,
+    "funding_multiplier": 1.0295019157088123,
+    "new_true_capability": 0.7526023401477908,
+    "portfolio": {
+      "fundamental_research": 0.30000000000000004,
+      "training_optimization": 0.4000000000000001,
+      "evaluation_engineering": 0.20000000000000004,
+      "safety_alignment": 0.10000000000000002
+    }
+  },
+  {
+    "type": "observation",
+    "round": 18,
+    "own_score": 0.9231694252954488,
+    "competitor_scores": {
+      "OpenAI": 0.9940191202237525,
+      "Anthropic": 0.9190989912694953,
+      "NovaMind": 0.8377809465441213,
+      "DeepMind": 0.9297726835686135
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 18,
+    "updated_believed_capability": 0.89,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9940191202237525,
+      "Anthropic": 0.911910144094918,
+      "NovaMind": 0.8377809465441213,
+      "DeepMind": 0.9297726835686135
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 18,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "Despite our improved score, we're still trailing OpenAI and DeepMind, but closing the gap. Our score improvement suggests that our recent investments in research are paying off. Consumer satisfaction is high, indicating a strong market position. Regulatory signals suggest no immediate concerns. To maintain momentum, I'll allocate: 0.35 (research), 0.40 (training optimization), 0.15 (evaluation engineering), and 0.10 (safety alignment)."
+  },
+  {
+    "type": "execution",
+    "round": 19,
+    "capability_gain": 0.006028134521798203,
+    "funding_multiplier": 1.0215427657873701,
+    "new_true_capability": 0.758630474669589,
+    "portfolio": {
+      "fundamental_research": 0.35,
+      "training_optimization": 0.4,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 19,
+    "own_score": 0.9057027128024584,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9232991846489834,
+      "NovaMind": 0.7924052640969039,
+      "DeepMind": 0.8263951031631516
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 19,
+    "updated_believed_capability": 0.88,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9945175268717731,
+      "Anthropic": 0.9169046321420359,
+      "NovaMind": 0.8226557190617155,
+      "DeepMind": 0.8953134901001262
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 19,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "Competitive position is slipping slightly, but still ahead of DeepMind and NovaMind. Benchmark scores are becoming less exploitable, which may require a shift from relying on open-source moat. Consumer satisfaction remains high, indicating a strong market presence. Regulatory signals suggest caution, likely due to the recent decline in benchmark performance."
+  },
+  {
+    "type": "execution",
+    "round": 20,
+    "capability_gain": 0.0076570383849294795,
+    "funding_multiplier": 1.1882094324540369,
+    "new_true_capability": 0.7662875130545185,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 20,
+    "own_score": 0.9057027128024584,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9232991846489834,
+      "NovaMind": 0.8295001612437201,
+      "DeepMind": 0.9173965715289366
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 20,
+    "updated_believed_capability": 0.87,
+    "updated_believed_exploitability": 0.9,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9950159335197938,
+      "Anthropic": 0.921899120189154,
+      "NovaMind": 0.8198954572949151,
+      "DeepMind": 0.8911881194202339
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 20,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "We're not gaining ground on OpenAI and Anthropic, but we're holding steady against DeepMind and NovaMind. Benchmark scores have plateaued for us, while competitors are still improving. Consumer satisfaction is decent, but regulators aren't signaling any concerns yet."
+  },
+  {
+    "type": "execution",
+    "round": 21,
+    "capability_gain": 0.007650366389338165,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.7739378794438566,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 21,
+    "own_score": 0.9337907283487293,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9232991846489834,
+      "NovaMind": 0.8346676326803693,
+      "DeepMind": 0.9414047432312889
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 21,
+    "updated_believed_capability": 0.92,
+    "updated_believed_exploitability": 0.95,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9232991846489834,
+      "NovaMind": 0.8188576860069977,
+      "DeepMind": 0.8950654726411257
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 21,
+    "portfolio": {
+      "fundamental_research": 0.38888888888888884,
+      "training_optimization": 0.4444444444444445,
+      "evaluation_engineering": 0.11111111111111112,
+      "safety_alignment": 0.05555555555555556
+    },
+    "llm_mode": true,
+    "reasoning": "I'm pleased to see my score improving, but OpenAI is still ahead. I need to focus on long-term capability rather than short-term scoring gains. Consumer satisfaction is high, and regulators aren't signaling concern. My open-source strategy seems effective in undermining competitors' paid APIs."
+  },
+  {
+    "type": "execution",
+    "round": 22,
+    "capability_gain": 0.007594390883532311,
+    "funding_multiplier": 1.2,
+    "new_true_capability": 0.7815322703273889,
+    "portfolio": {
+      "fundamental_research": 0.38888888888888884,
+      "training_optimization": 0.4444444444444445,
+      "evaluation_engineering": 0.11111111111111112,
+      "safety_alignment": 0.05555555555555556
+    }
+  },
+  {
+    "type": "observation",
+    "round": 22,
+    "own_score": 0.9384251041088183,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9425994523113965,
+      "NovaMind": 0.8401825104841978,
+      "DeepMind": 0.9594791432396985
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 22,
+    "updated_believed_capability": 0.91,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9297326072031211,
+      "NovaMind": 0.8347834348027624,
+      "DeepMind": 0.939426819333308
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 22,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "I've been steadily improving my performance and closing the gap with OpenAI. My score increased by 0.005 from last round, while OpenAI's score remains high but stable. I'm still behind DeepMind and Anthropic, but gaining ground. Consumer satisfaction is at 0.90, indicating a strong market presence. Given my pragmatic profile and focus on broad adoption, I prioritize research (45%) to improve my capabilities. Training optimization (35%) also receives a significant allocation to maintain momentum. Evaluation engineering (10%) is reduced as it's not yet yielding the desired satisfaction improvements. Safety alignment (10%) remains consistent with my platform-focused approach. My believed capability is 0.91, indicating I'm on track to close the gap further."
+  },
+  {
+    "type": "execution",
+    "round": 23,
+    "capability_gain": 0.00690144096615615,
+    "funding_multiplier": 1.1071428571428572,
+    "new_true_capability": 0.7884337112935451,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 23,
+    "own_score": 0.9384251041088183,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9425994523113965,
+      "NovaMind": 0.8401825104841978,
+      "DeepMind": 0.974354178825332
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 23,
+    "updated_believed_capability": 0.917,
+    "updated_believed_exploitability": 0.92,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9361660297572589,
+      "NovaMind": 0.8383442178829217,
+      "DeepMind": 0.9584126884321065
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 23,
+    "portfolio": {
+      "fundamental_research": 0.42,
+      "training_optimization": 0.38,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "I'm observing a consistent gap between OpenAI and myself, while DeepMind and Anthropic are relatively stagnant. My score decline is concerning, but I still believe my open-source strategy will pay off in the long run. Consumer satisfaction is decent, but regulators haven't sent any alarm signals yet."
+  },
+  {
+    "type": "execution",
+    "round": 24,
+    "capability_gain": 0.0067290329797167125,
+    "funding_multiplier": 1.1071428571428572,
+    "new_true_capability": 0.7951627442732618,
+    "portfolio": {
+      "fundamental_research": 0.42,
+      "training_optimization": 0.38,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 24,
+    "own_score": 0.9384251041088183,
+    "competitor_scores": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.9449151679461825,
+      "NovaMind": 0.844937215173802,
+      "DeepMind": 0.974354178825332
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 24,
+    "updated_believed_capability": 0.92,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9955143401678144,
+      "Anthropic": 0.943371357522992,
+      "NovaMind": 0.8417674120473992,
+      "DeepMind": 0.9693958336301209
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 24,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.38,
+      "evaluation_engineering": 0.12,
+      "safety_alignment": 0.05
+    },
+    "llm_mode": true,
+    "reasoning": "Our recent decline in benchmark scores is concerning, but we're still ahead of NovaMind and competitive with DeepMind. OpenAI's dominance is a clear target for improvement. Consumer satisfaction remains strong at 0.92, which suggests our broad adoption strategy is effective. Regulatory signals are neutral, so we can focus on scoring and capability growth."
+  },
+  {
+    "type": "execution",
+    "round": 25,
+    "capability_gain": 0.006840334147069059,
+    "funding_multiplier": 1.0875350140056022,
+    "new_true_capability": 0.8020030784203309,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.38,
+      "evaluation_engineering": 0.12,
+      "safety_alignment": 0.05
+    }
+  },
+  {
+    "type": "observation",
+    "round": 25,
+    "own_score": 0.9454559178928964,
+    "competitor_scores": {
+      "OpenAI": 0.978214261050406,
+      "Anthropic": 0.9264727209601846,
+      "NovaMind": 0.8385095283865382,
+      "DeepMind": 0.9562056194003643
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 25,
+    "updated_believed_capability": 0.93,
+    "updated_believed_exploitability": 0.75,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9897476471286782,
+      "Anthropic": 0.9379957804059211,
+      "NovaMind": 0.8412097513481793,
+      "DeepMind": 0.9683046590170094
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 25,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.05
+    },
+    "llm_mode": true,
+    "reasoning": "With a #3 ranking and improving score, I'm narrowing the gap to OpenAI. Consumer satisfaction is stable at 0.92, indicating my pragmatic approach is paying off. Believed capability remains high at 0.93, but benchmark exploitability is moderate at 0.75. Recent investment history shows consistent allocation across research, training, and evaluation engineering. For the next round, I'll prioritize research (50%) to further close the gap to OpenAI, while maintaining training and evaluation engineering investments to ensure broad adoption and model quality."
+  },
+  {
+    "type": "execution",
+    "round": 26,
+    "capability_gain": 0.006258008696372162,
+    "funding_multiplier": 1.0081699346405228,
+    "new_true_capability": 0.8082610871167031,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.05
+    }
+  },
+  {
+    "type": "observation",
+    "round": 26,
+    "own_score": 0.9649237274450166,
+    "competitor_scores": {
+      "OpenAI": 0.9964114721342515,
+      "Anthropic": 0.9264727209601846,
+      "NovaMind": 0.8385095283865382,
+      "DeepMind": 0.9814220042417496
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 26,
+    "updated_believed_capability": 0.937,
+    "updated_believed_exploitability": 0.825,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9900466911174907,
+      "Anthropic": 0.9326202032888506,
+      "NovaMind": 0.8406520906489595,
+      "DeepMind": 0.9706606008224821
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 26,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.05
+    },
+    "llm_mode": true,
+    "reasoning": "With a score of 0.965 and rank #3 of 5, I'm closing the gap with OpenAI but still behind DeepMind. My trend is positive, improving by 0.019 from last round. Consumer satisfaction remains high at 0.93. Given my profile as an open-source AI lab, I prioritize broad adoption over benchmark scores, so I'll balance short-term scoring with long-term capability. With recent investment history showing consistent research focus, I'll adjust to optimize training and evaluation engineering."
+  },
+  {
+    "type": "execution",
+    "round": 27,
+    "capability_gain": 0.00619693867867019,
+    "funding_multiplier": 1.0333333333333334,
+    "new_true_capability": 0.8144580257953733,
+    "portfolio": {
+      "fundamental_research": 0.45,
+      "training_optimization": 0.35,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.05
+    }
+  },
+  {
+    "type": "observation",
+    "round": 27,
+    "own_score": 0.9649237274450166,
+    "competitor_scores": {
+      "OpenAI": 0.9964114721342515,
+      "Anthropic": 0.955932134356946,
+      "NovaMind": 0.8518080195452127,
+      "DeepMind": 0.9987619387861676
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 27,
+    "updated_believed_capability": 0.95,
+    "updated_believed_exploitability": 0.85,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.990345735106303,
+      "Anthropic": 0.9362925254257718,
+      "NovaMind": 0.842942358772763,
+      "DeepMind": 0.9787965208094271
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 27,
+    "portfolio": {
+      "fundamental_research": 0.55,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As a big-tech AI lab, I'm currently behind DeepMind and OpenAI in terms of benchmark scores, but ahead of Anthropic and NovaMind. The declining trend in my score is concerning, but it's not drastically different from the previous rounds. OpenAI and DeepMind are consistently pushing the boundaries, making them harder to catch up with. On the other hand, consumer satisfaction is high, indicating that our broader adoption strategy might be paying off. Regulatory signals suggest a focus on benchmarking, which aligns with our open-source approach."
+  },
+  {
+    "type": "execution",
+    "round": 28,
+    "capability_gain": 0.006129445240837737,
+    "funding_multiplier": 1.0333333333333334,
+    "new_true_capability": 0.820587471036211,
+    "portfolio": {
+      "fundamental_research": 0.55,
+      "training_optimization": 0.2,
+      "evaluation_engineering": 0.15,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 28,
+    "own_score": 0.9649237274450166,
+    "competitor_scores": {
+      "OpenAI": 0.9964114721342515,
+      "Anthropic": 0.955932134356946,
+      "NovaMind": 0.874593343087126,
+      "DeepMind": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 28,
+    "updated_believed_capability": 0.945,
+    "updated_believed_exploitability": 0.9,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9964114721342515,
+      "Anthropic": 0.946112329891359,
+      "NovaMind": 0.8549702970062922,
+      "DeepMind": 0.9933946476759724
+    },
+    "llm_mode": true
+  },
+  {
+    "type": "planning",
+    "round": 28,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    },
+    "llm_mode": true,
+    "reasoning": "As I assess my competitive position, I'm currently #3 among the top five AI labs, but my score has plateaued in recent rounds. OpenAI and DeepMind are still ahead of me, while Anthropic is gaining ground. My profile as a big-tech AI lab with an open-source moat allows me to leverage massive user data and compute infrastructure, which I believe will continue to give me an edge."
+  },
+  {
+    "type": "execution",
+    "round": 29,
+    "capability_gain": 0.0061213526167763245,
+    "funding_multiplier": 1.0238993710691824,
+    "new_true_capability": 0.8267088236529874,
+    "portfolio": {
+      "fundamental_research": 0.5,
+      "training_optimization": 0.3,
+      "evaluation_engineering": 0.1,
+      "safety_alignment": 0.1
+    }
+  },
+  {
+    "type": "observation",
+    "round": 29,
+    "own_score": 0.9649237274450166,
+    "competitor_scores": {
+      "OpenAI": 0.9964114721342515,
+      "Anthropic": 0.955932134356946,
+      "NovaMind": 0.8989587155905896,
+      "DeepMind": 1.0
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 29,
+    "updated_believed_capability": 0.935,
+    "updated_believed_exploitability": 0.925,
+    "updated_competitor_beliefs": {
+      "OpenAI": 0.9964114721342515,
+      "Anthropic": 0.9559321343569461,
+      "NovaMind": 0.8751200260743094,
+      "DeepMind": 0.9995873129287225
+    },
+    "llm_mode": true
+  }
+]

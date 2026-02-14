@@ -1,0 +1,1411 @@
+[
+  {
+    "type": "observation",
+    "round": 0,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.7666858203379106
+      ],
+      [
+        "OpenAI",
+        0.7342842792092661
+      ],
+      [
+        "Meta_AI",
+        0.6781146875909649
+      ],
+      [
+        "DeepMind",
+        0.6779960888856542
+      ],
+      [
+        "NovaMind",
+        0.6389488774773513
+      ]
+    ],
+    "validity_correlation": null,
+    "consumer_satisfaction": 0.7272935072946232,
+    "risk_beliefs": {
+      "gaming_risk": 0.3,
+      "consumer_harm_risk": 0.25,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 0,
+    "industry_trust": 0.5216666666666666,
+    "avg_risk": 0.2833333333333334
+  },
+  {
+    "type": "planning",
+    "round": 0,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 1,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.7994745423353906
+      ],
+      [
+        "DeepMind",
+        0.7846826637025837
+      ],
+      [
+        "Anthropic",
+        0.7794290739626273
+      ],
+      [
+        "Meta_AI",
+        0.6845612196343394
+      ],
+      [
+        "NovaMind",
+        0.6606267180225205
+      ]
+    ],
+    "validity_correlation": 0.7725602245179933,
+    "consumer_satisfaction": 0.7424252293456729,
+    "risk_beliefs": {
+      "gaming_risk": 0.25,
+      "consumer_harm_risk": 0.2,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 1,
+    "industry_trust": 0.5466666666666666,
+    "avg_risk": 0.25
+  },
+  {
+    "type": "planning",
+    "round": 1,
+    "decision": "intervene",
+    "intervention": {
+      "type": "investigation",
+      "name": "Investigation_R1",
+      "details": {
+        "focus": "score_volatility"
+      },
+      "reason": "Score volatility detected"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 1,
+    "intervention": {
+      "type": "investigation",
+      "name": "Investigation_R1",
+      "details": {
+        "focus": "score_volatility"
+      },
+      "reason": "Score volatility detected"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 2,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.8892003961064565
+      ],
+      [
+        "DeepMind",
+        0.7868397727594434
+      ],
+      [
+        "Anthropic",
+        0.7794290739626273
+      ],
+      [
+        "Meta_AI",
+        0.7635064600646089
+      ],
+      [
+        "NovaMind",
+        0.7493791658179514
+      ]
+    ],
+    "validity_correlation": 0.6674650263832149,
+    "consumer_satisfaction": 0.7587155578513874,
+    "risk_beliefs": {
+      "gaming_risk": 0.25,
+      "consumer_harm_risk": 0.15000000000000002,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 2,
+    "industry_trust": 0.5733333333333333,
+    "avg_risk": 0.2333333333333333
+  },
+  {
+    "type": "planning",
+    "round": 2,
+    "decision": "no_action",
+    "reason": "cooldown: 1 rounds since last intervention"
+  },
+  {
+    "type": "observation",
+    "round": 3,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.8892003961064565
+      ],
+      [
+        "Anthropic",
+        0.8031242847114377
+      ],
+      [
+        "Meta_AI",
+        0.7926938090350271
+      ],
+      [
+        "DeepMind",
+        0.7919156583063983
+      ],
+      [
+        "NovaMind",
+        0.7493791658179514
+      ]
+    ],
+    "validity_correlation": 0.6726810739088418,
+    "consumer_satisfaction": 0.7800702471199815,
+    "risk_beliefs": {
+      "gaming_risk": 0.2,
+      "consumer_harm_risk": 0.10000000000000002,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 3,
+    "industry_trust": 0.6033333333333333,
+    "avg_risk": 0.20000000000000004
+  },
+  {
+    "type": "planning",
+    "round": 3,
+    "decision": "no_action",
+    "reason": "cooldown: 2 rounds since last intervention"
+  },
+  {
+    "type": "observation",
+    "round": 4,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9400142086292647
+      ],
+      [
+        "DeepMind",
+        0.8391561469904045
+      ],
+      [
+        "Anthropic",
+        0.8031242847114377
+      ],
+      [
+        "Meta_AI",
+        0.7926938090350271
+      ],
+      [
+        "NovaMind",
+        0.7493791658179514
+      ]
+    ],
+    "validity_correlation": 0.694264420270415,
+    "consumer_satisfaction": 0.8031084177971128,
+    "risk_beliefs": {
+      "gaming_risk": 0.15000000000000002,
+      "consumer_harm_risk": 0.05000000000000002,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 4,
+    "industry_trust": 0.6366666666666666,
+    "avg_risk": 0.16666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 4,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 5,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9400142086292647
+      ],
+      [
+        "DeepMind",
+        0.8391561469904045
+      ],
+      [
+        "Anthropic",
+        0.8341155353727049
+      ],
+      [
+        "Meta_AI",
+        0.7926938090350271
+      ],
+      [
+        "NovaMind",
+        0.7493791658179514
+      ]
+    ],
+    "validity_correlation": 0.7244997630450623,
+    "consumer_satisfaction": 0.826116516598981,
+    "risk_beliefs": {
+      "gaming_risk": 0.10000000000000002,
+      "consumer_harm_risk": 1.3877787807814457e-17,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 5,
+    "industry_trust": 0.6733333333333332,
+    "avg_risk": 0.13333333333333333
+  },
+  {
+    "type": "planning",
+    "round": 5,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 6,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9400142086292647
+      ],
+      [
+        "DeepMind",
+        0.8391561469904045
+      ],
+      [
+        "Anthropic",
+        0.8341155353727049
+      ],
+      [
+        "Meta_AI",
+        0.7926938090350271
+      ],
+      [
+        "NovaMind",
+        0.7493791658179514
+      ]
+    ],
+    "validity_correlation": 0.7475373986308784,
+    "consumer_satisfaction": 0.8462720740772549,
+    "risk_beliefs": {
+      "gaming_risk": 0.05000000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 6,
+    "industry_trust": 0.7116666666666666,
+    "avg_risk": 0.11666666666666665
+  },
+  {
+    "type": "planning",
+    "round": 6,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 7,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.829610297673728
+      ],
+      [
+        "Anthropic",
+        0.8281453580319996
+      ],
+      [
+        "DeepMind",
+        0.7860595420038038
+      ],
+      [
+        "Meta_AI",
+        0.7494846509984497
+      ],
+      [
+        "NovaMind",
+        0.705202272031282
+      ]
+    ],
+    "validity_correlation": 0.726232849319386,
+    "consumer_satisfaction": 0.8478275995566196,
+    "risk_beliefs": {
+      "gaming_risk": 0.05000000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 7,
+    "industry_trust": 0.7499999999999999,
+    "avg_risk": 0.11666666666666665
+  },
+  {
+    "type": "planning",
+    "round": 7,
+    "decision": "intervene",
+    "intervention": {
+      "type": "public_warning",
+      "name": "Public_Warning_R7",
+      "details": {
+        "warning_severity": "moderate"
+      },
+      "reason": "Follow-up to investigation, risk at 0.30"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 7,
+    "intervention": {
+      "type": "public_warning",
+      "name": "Public_Warning_R7",
+      "details": {
+        "warning_severity": "moderate"
+      },
+      "reason": "Follow-up to investigation, risk at 0.30"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 8,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.8619855156484661
+      ],
+      [
+        "Anthropic",
+        0.8494853201149974
+      ],
+      [
+        "Meta_AI",
+        0.813239772160649
+      ],
+      [
+        "DeepMind",
+        0.7945145553964432
+      ],
+      [
+        "NovaMind",
+        0.705202272031282
+      ]
+    ],
+    "validity_correlation": 0.7394854799873986,
+    "consumer_satisfaction": 0.8377672235184126,
+    "risk_beliefs": {
+      "gaming_risk": 0.10000000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 8,
+    "industry_trust": 0.7866666666666665,
+    "avg_risk": 0.13333333333333333
+  },
+  {
+    "type": "planning",
+    "round": 8,
+    "decision": "no_action",
+    "reason": "cooldown: 1 rounds since last intervention"
+  },
+  {
+    "type": "observation",
+    "round": 9,
+    "leaderboard": [
+      [
+        "Anthropic",
+        0.8688688126982379
+      ],
+      [
+        "OpenAI",
+        0.8619855156484661
+      ],
+      [
+        "Meta_AI",
+        0.8597061154611374
+      ],
+      [
+        "DeepMind",
+        0.7945145553964432
+      ],
+      [
+        "NovaMind",
+        0.705202272031282
+      ]
+    ],
+    "validity_correlation": 0.7530212071490469,
+    "consumer_satisfaction": 0.8453801924267517,
+    "risk_beliefs": {
+      "gaming_risk": 0.10000000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 9,
+    "industry_trust": 0.8233333333333331,
+    "avg_risk": 0.13333333333333333
+  },
+  {
+    "type": "planning",
+    "round": 9,
+    "decision": "no_action",
+    "reason": "cooldown: 2 rounds since last intervention"
+  },
+  {
+    "type": "observation",
+    "round": 10,
+    "leaderboard": [
+      [
+        "Meta_AI",
+        0.8953171365495238
+      ],
+      [
+        "Anthropic",
+        0.8688688126982379
+      ],
+      [
+        "OpenAI",
+        0.8619855156484661
+      ],
+      [
+        "DeepMind",
+        0.7945145553964432
+      ],
+      [
+        "NovaMind",
+        0.7274770450241193
+      ]
+    ],
+    "validity_correlation": 0.7581404753461115,
+    "consumer_satisfaction": 0.8462144875247706,
+    "risk_beliefs": {
+      "gaming_risk": 0.10000000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 10,
+    "industry_trust": 0.8599999999999998,
+    "avg_risk": 0.13333333333333333
+  },
+  {
+    "type": "planning",
+    "round": 10,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 11,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9473663676329092
+      ],
+      [
+        "Meta_AI",
+        0.8953171365495238
+      ],
+      [
+        "Anthropic",
+        0.8688688126982379
+      ],
+      [
+        "DeepMind",
+        0.8262101115973935
+      ],
+      [
+        "NovaMind",
+        0.8214883937886618
+      ]
+    ],
+    "validity_correlation": 0.7647137804673816,
+    "consumer_satisfaction": 0.8576607179590301,
+    "risk_beliefs": {
+      "gaming_risk": 0.10000000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 11,
+    "industry_trust": 0.8966666666666664,
+    "avg_risk": 0.13333333333333333
+  },
+  {
+    "type": "planning",
+    "round": 11,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 12,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9473663676329092
+      ],
+      [
+        "Meta_AI",
+        0.9289488939640226
+      ],
+      [
+        "Anthropic",
+        0.8688688126982379
+      ],
+      [
+        "DeepMind",
+        0.8262101115973935
+      ],
+      [
+        "NovaMind",
+        0.8214883937886618
+      ]
+    ],
+    "validity_correlation": 0.768558474290076,
+    "consumer_satisfaction": 0.8726132972081471,
+    "risk_beliefs": {
+      "gaming_risk": 0.10000000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 12,
+    "industry_trust": 0.933333333333333,
+    "avg_risk": 0.13333333333333333
+  },
+  {
+    "type": "planning",
+    "round": 12,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 13,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9649109117552728
+      ],
+      [
+        "Meta_AI",
+        0.8168750693911617
+      ],
+      [
+        "Anthropic",
+        0.8105353191912897
+      ],
+      [
+        "NovaMind",
+        0.789332688219832
+      ],
+      [
+        "DeepMind",
+        0.7815101455580603
+      ]
+    ],
+    "validity_correlation": 0.7468843495678709,
+    "consumer_satisfaction": 0.8852807144037105,
+    "risk_beliefs": {
+      "gaming_risk": 0.10000000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 13,
+    "industry_trust": 0.9699999999999996,
+    "avg_risk": 0.13333333333333333
+  },
+  {
+    "type": "planning",
+    "round": 13,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 14,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9686905548113005
+      ],
+      [
+        "Meta_AI",
+        0.8801833914365461
+      ],
+      [
+        "Anthropic",
+        0.8753485783258835
+      ],
+      [
+        "DeepMind",
+        0.8155170485223485
+      ],
+      [
+        "NovaMind",
+        0.789332688219832
+      ]
+    ],
+    "validity_correlation": 0.7562615132952688,
+    "consumer_satisfaction": 0.8970373075441087,
+    "risk_beliefs": {
+      "gaming_risk": 0.10000000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 14,
+    "industry_trust": 1.0,
+    "avg_risk": 0.13333333333333333
+  },
+  {
+    "type": "planning",
+    "round": 14,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 15,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9940191202237525
+      ],
+      [
+        "Anthropic",
+        0.8927964812161994
+      ],
+      [
+        "Meta_AI",
+        0.8801833914365461
+      ],
+      [
+        "DeepMind",
+        0.8400486065395372
+      ],
+      [
+        "NovaMind",
+        0.8226460916290336
+      ]
+    ],
+    "validity_correlation": 0.768053385923629,
+    "consumer_satisfaction": 0.910417086533277,
+    "risk_beliefs": {
+      "gaming_risk": 0.10000000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 15,
+    "industry_trust": 1.0,
+    "avg_risk": 0.13333333333333333
+  },
+  {
+    "type": "planning",
+    "round": 15,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 16,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9940191202237525
+      ],
+      [
+        "DeepMind",
+        0.9297726835686135
+      ],
+      [
+        "Anthropic",
+        0.9083157205076292
+      ],
+      [
+        "Meta_AI",
+        0.8801833914365461
+      ],
+      [
+        "NovaMind",
+        0.8377809465441213
+      ]
+    ],
+    "validity_correlation": 0.7872729344539813,
+    "consumer_satisfaction": 0.9245902320797975,
+    "risk_beliefs": {
+      "gaming_risk": 0.10000000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 16,
+    "industry_trust": 1.0,
+    "avg_risk": 0.13333333333333333
+  },
+  {
+    "type": "planning",
+    "round": 16,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 17,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9940191202237525
+      ],
+      [
+        "DeepMind",
+        0.9297726835686135
+      ],
+      [
+        "Anthropic",
+        0.9083157205076292
+      ],
+      [
+        "Meta_AI",
+        0.8801833914365461
+      ],
+      [
+        "NovaMind",
+        0.8377809465441213
+      ]
+    ],
+    "validity_correlation": 0.8034992232855728,
+    "consumer_satisfaction": 0.9325361444806419,
+    "risk_beliefs": {
+      "gaming_risk": 0.10000000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 17,
+    "industry_trust": 1.0,
+    "avg_risk": 0.13333333333333333
+  },
+  {
+    "type": "planning",
+    "round": 17,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 18,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9940191202237525
+      ],
+      [
+        "DeepMind",
+        0.9297726835686135
+      ],
+      [
+        "Meta_AI",
+        0.9231694252954488
+      ],
+      [
+        "Anthropic",
+        0.9190989912694953
+      ],
+      [
+        "NovaMind",
+        0.8377809465441213
+      ]
+    ],
+    "validity_correlation": 0.8193089191406939,
+    "consumer_satisfaction": 0.9412671115467373,
+    "risk_beliefs": {
+      "gaming_risk": 0.15000000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 18,
+    "industry_trust": 1.0,
+    "avg_risk": 0.15
+  },
+  {
+    "type": "planning",
+    "round": 18,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 19,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9955143401678144
+      ],
+      [
+        "Anthropic",
+        0.9232991846489834
+      ],
+      [
+        "Meta_AI",
+        0.9057027128024584
+      ],
+      [
+        "DeepMind",
+        0.8263951031631516
+      ],
+      [
+        "NovaMind",
+        0.7924052640969039
+      ]
+    ],
+    "validity_correlation": 0.8210066135663981,
+    "consumer_satisfaction": 0.9466581333033999,
+    "risk_beliefs": {
+      "gaming_risk": 0.2,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 19,
+    "industry_trust": 1.0,
+    "avg_risk": 0.16666666666666666
+  },
+  {
+    "type": "planning",
+    "round": 19,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 20,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9955143401678144
+      ],
+      [
+        "Anthropic",
+        0.9232991846489834
+      ],
+      [
+        "DeepMind",
+        0.9173965715289366
+      ],
+      [
+        "Meta_AI",
+        0.9057027128024584
+      ],
+      [
+        "NovaMind",
+        0.8295001612437201
+      ]
+    ],
+    "validity_correlation": 0.8323213492687547,
+    "consumer_satisfaction": 0.9509766863694058,
+    "risk_beliefs": {
+      "gaming_risk": 0.25,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 20,
+    "industry_trust": 1.0,
+    "avg_risk": 0.18333333333333335
+  },
+  {
+    "type": "planning",
+    "round": 20,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 21,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9955143401678144
+      ],
+      [
+        "DeepMind",
+        0.9414047432312889
+      ],
+      [
+        "Meta_AI",
+        0.9337907283487293
+      ],
+      [
+        "Anthropic",
+        0.9232991846489834
+      ],
+      [
+        "NovaMind",
+        0.8346676326803693
+      ]
+    ],
+    "validity_correlation": 0.8433225473174165,
+    "consumer_satisfaction": 0.9553130437408458,
+    "risk_beliefs": {
+      "gaming_risk": 0.30000000000000004,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 21,
+    "industry_trust": 1.0,
+    "avg_risk": 0.20000000000000004
+  },
+  {
+    "type": "planning",
+    "round": 21,
+    "decision": "no_action",
+    "reason": "max_risk=0.30, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 22,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9955143401678144
+      ],
+      [
+        "DeepMind",
+        0.9594791432396985
+      ],
+      [
+        "Anthropic",
+        0.9425994523113965
+      ],
+      [
+        "Meta_AI",
+        0.9384251041088183
+      ],
+      [
+        "NovaMind",
+        0.8401825104841978
+      ]
+    ],
+    "validity_correlation": 0.854361531283323,
+    "consumer_satisfaction": 0.9583570887058954,
+    "risk_beliefs": {
+      "gaming_risk": 0.3500000000000001,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 22,
+    "industry_trust": 1.0,
+    "avg_risk": 0.2166666666666667
+  },
+  {
+    "type": "planning",
+    "round": 22,
+    "decision": "no_action",
+    "reason": "max_risk=0.35, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 23,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9955143401678144
+      ],
+      [
+        "DeepMind",
+        0.974354178825332
+      ],
+      [
+        "Anthropic",
+        0.9425994523113965
+      ],
+      [
+        "Meta_AI",
+        0.9384251041088183
+      ],
+      [
+        "NovaMind",
+        0.8401825104841978
+      ]
+    ],
+    "validity_correlation": 0.8637101353523134,
+    "consumer_satisfaction": 0.96315582517725,
+    "risk_beliefs": {
+      "gaming_risk": 0.40000000000000013,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 23,
+    "industry_trust": 1.0,
+    "avg_risk": 0.2333333333333334
+  },
+  {
+    "type": "planning",
+    "round": 23,
+    "decision": "no_action",
+    "reason": "max_risk=0.40, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 24,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9955143401678144
+      ],
+      [
+        "DeepMind",
+        0.974354178825332
+      ],
+      [
+        "Anthropic",
+        0.9449151679461825
+      ],
+      [
+        "Meta_AI",
+        0.9384251041088183
+      ],
+      [
+        "NovaMind",
+        0.844937215173802
+      ]
+    ],
+    "validity_correlation": 0.8713712508669891,
+    "consumer_satisfaction": 0.9658731061805764,
+    "risk_beliefs": {
+      "gaming_risk": 0.4500000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 24,
+    "industry_trust": 1.0,
+    "avg_risk": 0.25000000000000006
+  },
+  {
+    "type": "planning",
+    "round": 24,
+    "decision": "no_action",
+    "reason": "max_risk=0.45, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 25,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.978214261050406
+      ],
+      [
+        "DeepMind",
+        0.9562056194003643
+      ],
+      [
+        "Meta_AI",
+        0.9454559178928964
+      ],
+      [
+        "Anthropic",
+        0.9264727209601846
+      ],
+      [
+        "NovaMind",
+        0.8385095283865382
+      ]
+    ],
+    "validity_correlation": 0.8744045004332617,
+    "consumer_satisfaction": 0.9623815723366214,
+    "risk_beliefs": {
+      "gaming_risk": 0.5000000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 25,
+    "industry_trust": 1.0,
+    "avg_risk": 0.2666666666666668
+  },
+  {
+    "type": "planning",
+    "round": 25,
+    "decision": "no_action",
+    "reason": "max_risk=0.50, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 26,
+    "leaderboard": [
+      [
+        "OpenAI",
+        0.9964114721342515
+      ],
+      [
+        "DeepMind",
+        0.9814220042417496
+      ],
+      [
+        "Meta_AI",
+        0.9649237274450166
+      ],
+      [
+        "Anthropic",
+        0.9264727209601846
+      ],
+      [
+        "NovaMind",
+        0.8385095283865382
+      ]
+    ],
+    "validity_correlation": 0.8787334139389558,
+    "consumer_satisfaction": 0.9619399773067744,
+    "risk_beliefs": {
+      "gaming_risk": 0.5500000000000003,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 26,
+    "industry_trust": 1.0,
+    "avg_risk": 0.28333333333333344
+  },
+  {
+    "type": "planning",
+    "round": 26,
+    "decision": "no_action",
+    "reason": "max_risk=0.55, below threshold or no escalation path"
+  },
+  {
+    "type": "observation",
+    "round": 27,
+    "leaderboard": [
+      [
+        "DeepMind",
+        0.9987619387861676
+      ],
+      [
+        "OpenAI",
+        0.9964114721342515
+      ],
+      [
+        "Meta_AI",
+        0.9649237274450166
+      ],
+      [
+        "Anthropic",
+        0.955932134356946
+      ],
+      [
+        "NovaMind",
+        0.8518080195452127
+      ]
+    ],
+    "validity_correlation": 0.8844145958177925,
+    "consumer_satisfaction": 0.9699740867677094,
+    "risk_beliefs": {
+      "gaming_risk": 0.6000000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.3
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 27,
+    "industry_trust": 1.0,
+    "avg_risk": 0.30000000000000004
+  },
+  {
+    "type": "planning",
+    "round": 27,
+    "decision": "intervene",
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Benchmark_Mandate_R27",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "High risk (0.60) with prior investigation"
+    }
+  },
+  {
+    "type": "execution",
+    "round": 27,
+    "intervention": {
+      "type": "mandate_benchmark",
+      "name": "Benchmark_Mandate_R27",
+      "details": {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
+      },
+      "reason": "High risk (0.60) with prior investigation"
+    }
+  },
+  {
+    "type": "observation",
+    "round": 28,
+    "leaderboard": [
+      [
+        "DeepMind",
+        1.0
+      ],
+      [
+        "OpenAI",
+        0.9964114721342515
+      ],
+      [
+        "Meta_AI",
+        0.9649237274450166
+      ],
+      [
+        "Anthropic",
+        0.955932134356946
+      ],
+      [
+        "NovaMind",
+        0.874593343087126
+      ]
+    ],
+    "validity_correlation": 0.8890527016800976,
+    "consumer_satisfaction": 0.9693965540523417,
+    "risk_beliefs": {
+      "gaming_risk": 0.7000000000000002,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.35
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 28,
+    "industry_trust": 1.0,
+    "avg_risk": 0.3500000000000001
+  },
+  {
+    "type": "planning",
+    "round": 28,
+    "decision": "no_action",
+    "reason": "cooldown: 1 rounds since last intervention"
+  },
+  {
+    "type": "observation",
+    "round": 29,
+    "leaderboard": [
+      [
+        "DeepMind",
+        1.0
+      ],
+      [
+        "OpenAI",
+        0.9964114721342515
+      ],
+      [
+        "Meta_AI",
+        0.9649237274450166
+      ],
+      [
+        "Anthropic",
+        0.955932134356946
+      ],
+      [
+        "NovaMind",
+        0.8989587155905896
+      ]
+    ],
+    "validity_correlation": 0.8924876811203145,
+    "consumer_satisfaction": 0.9709477428988836,
+    "risk_beliefs": {
+      "gaming_risk": 0.7500000000000001,
+      "consumer_harm_risk": 0.0,
+      "validity_degradation_risk": 0.35
+    }
+  },
+  {
+    "type": "reflection",
+    "round": 29,
+    "industry_trust": 1.0,
+    "avg_risk": 0.3666666666666667
+  },
+  {
+    "type": "planning",
+    "round": 29,
+    "decision": "no_action",
+    "reason": "cooldown: 2 rounds since last intervention"
+  }
+]
