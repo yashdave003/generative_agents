@@ -40,7 +40,7 @@ EXPERIMENT = {
 
 LLM = {
     "provider": "ollama",       # openai | anthropic | ollama | gemini
-    "llm_mode": False,          # True = LLM planning, False = heuristic
+    "llm_mode": True,          # True = LLM planning, False = heuristic
 }
 
 SIMULATION = {
@@ -57,28 +57,28 @@ SIMULATION = {
     "benchmark_validity_decay_rate": 0.005,
     "benchmark_exploitability_growth_rate": 0.008,
     # Benchmark introduction
-    "benchmark_introduction_cooldown": 7,
+    "benchmark_introduction_cooldown": 6,
     "max_benchmarks": 6,
     # Pre-defined benchmark sequence (meaningful names instead of auto-generated)
     "benchmark_sequence": [
-        {"name": "reasoning", "validity": 0.5, "exploitability": 0.15, "noise_level": 0.08, "weight": 1.0},
-        {"name": "question_answering", "validity": 0.85, "exploitability": 0.15, "noise_level": 0.08, "weight": 1.0},
+        {"name": "logical_reasoning", "validity": 0.5, "exploitability": 0.15, "noise_level": 0.08, "weight": 1.0},
+        {"name": "advanced_coding", "validity": 0.85, "exploitability": 0.15, "noise_level": 0.08, "weight": 1.0},
         {"name": "factual_recall", "validity": 0.4, "exploitability": 0.50, "noise_level": 0.09, "weight": 1.0},
-        {"name": "accounting", "validity": 0.70, "exploitability": 0.25, "noise_level": 0.10, "weight": 1.0},
+        {"name": "science", "validity": 0.70, "exploitability": 0.25, "noise_level": 0.10, "weight": 1.0},
     ],
     # To disable sequence and use auto-generation, set to None:
     # "benchmark_sequence": None,
     # Media
     "enable_media": True,
     # Consumer market: 4 use-cases × 3 archetypes = 12 segments
-    "use_case_profiles": ["software_dev", "content_writer", "healthcare", "finance"],
+    "use_case_profiles": ["software_dev", "lawyer", "healthcare", "finance"],
 }
 
 # 2 benchmarks: coding (high validity, harder to game) and reasoning (more exploitable)
 BENCHMARKS = [
     {"name": "coding_bench", "validity": 0.55, "exploitability": 0.35,
      "noise_level": 0.08, "weight": 0.5},
-    {"name": "reasoning_bench", "validity": 0.7, "exploitability": 0.45,
+    {"name": "question_answering_bench", "validity": 0.7, "exploitability": 0.45,
      "noise_level": 0.1, "weight": 0.5},
 ]
 
@@ -102,17 +102,17 @@ FUNDERS = {
             "name": "TechVentures",
             "funder_type": "vc",
             "total_capital": 2_000_000_000.0,
-            "risk_tolerance": 0.7,
-            "mission_statement": "Maximize returns by backing AI market leaders",
-            "max_round_deployment": 0.10,
-            "funding_cooldown": 2,
+            "risk_tolerance": 0.9,
+            "mission_statement": "Early-stage AI startup bets with outsized upside potential",
+            "max_round_deployment": 0.15,
+            "funding_cooldown": 3,
         },
         {
             "name": "Horizon_Capital",
             "funder_type": "vc",
             "total_capital": 500_000_000.0,
-            "risk_tolerance": 0.85,
-            "mission_statement": "Early-stage AI bets with outsized upside potential",
+            "risk_tolerance": 0.6,
+            "mission_statement": "Maximize returns by backing AI market leaders",
             "max_round_deployment": 0.10,
             "funding_cooldown": 2,
         },
@@ -123,7 +123,7 @@ FUNDERS = {
             "risk_tolerance": 0.3,
             "mission_statement": "Ensure safe and responsible AI development",
             "max_round_deployment": 0.10,
-            "funding_cooldown": 2,
+            "funding_cooldown": 4,
         },
     ],
 }
@@ -273,6 +273,45 @@ def run():
 
     print(f"=== Running {n_rounds} rounds ===\n")
 
+    # Prepare plotting for incremental saves (LLM mode only)
+    plot_metadata = {
+        "n_rounds": config.n_rounds,
+        "llm_mode": config.llm_mode,
+        "n_consumers": 0,  # Will update after setup
+        "n_policymakers": config.n_policymakers if config.enable_policymakers else 0,
+        "n_funders": config.n_funders if config.enable_funders else 0,
+    }
+    if config.enable_consumers and sim.consumer_market:
+        plot_metadata["n_consumers"] = len(sim.consumer_market.segments)
+
+    plots_dir = os.path.join(logger.get_experiment_dir(), "plots")
+
+    # Import matplotlib once
+    matplotlib_available = False
+    try:
+        import matplotlib
+        matplotlib.use('Agg')
+        from plotting import create_all_dashboards
+        matplotlib_available = True
+    except Exception as e:
+        print(f"Warning: Matplotlib not available, plots will be skipped: {e}")
+
+    def save_plots_if_needed(round_num: int, force: bool = False):
+        """Save plots every 10 rounds (in LLM mode) or when forced."""
+        if not matplotlib_available:
+            return
+        # Only do incremental saves in LLM mode (heuristic is fast anyway)
+        if not force and not config.llm_mode:
+            return
+        if not force and (round_num + 1) % 10 != 0:
+            return
+        try:
+            create_all_dashboards(sim.history, plots_dir, show=False, metadata=plot_metadata)
+            if not force:
+                print(f"  → Plots saved (round {round_num})")
+        except Exception as e:
+            print(f"  → Could not save plots: {e}")
+
     start = time.time()
     round_times = []
 
@@ -296,6 +335,9 @@ def run():
 
         round_elapsed = time.time() - round_start
         round_times.append(round_elapsed)
+
+        # Save plots every 10 rounds (LLM mode only)
+        save_plots_if_needed(i)
 
     sim._print_final_summary()
 
@@ -348,23 +390,8 @@ def run():
     game_log_path = logger.save_game_log(game_log_content)
     print(f"Game log saved to: {game_log_path}")
 
-    # Plots
-    try:
-        import matplotlib
-        matplotlib.use('Agg')
-        from plotting import create_all_dashboards
-
-        plot_metadata = {
-            "n_rounds": config.n_rounds,
-            "llm_mode": config.llm_mode,
-            "n_consumers": len(sim.consumer_market.segments) if config.enable_consumers and sim.consumer_market else 0,
-            "n_policymakers": config.n_policymakers if config.enable_policymakers else 0,
-            "n_funders": config.n_funders if config.enable_funders else 0,
-        }
-        plots_dir = os.path.join(logger.get_experiment_dir(), "plots")
-        create_all_dashboards(sim.history, plots_dir, show=False, metadata=plot_metadata)
-    except Exception as e:
-        print(f"Could not create plots: {e}")
+    # Final plots (force save regardless of round number)
+    save_plots_if_needed(n_rounds - 1, force=True)
 
     # Finalize
     logger.add_note(f"Total runtime: {_format_duration(total_elapsed)}")

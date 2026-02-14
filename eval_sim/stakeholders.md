@@ -219,6 +219,18 @@ The Evaluator is **active** in two ways:
 - **Organizational Consumer**: Longer decision timelines, compliance constraints
 - **Multi-outlet Media**: Multiple media outlets with different editorial biases and reach
 
+#### Evaluator Enhancements (Not Implemented)
+
+**Benchmark Saturation & Retirement:**
+- When any provider achieves a perfect 1.000 score on a benchmark, that benchmark has been saturated/solved
+- Saturated benchmarks should be removed from the leaderboard within 1-2 rounds of saturation
+- Rationale: A saturated benchmark no longer provides signal for differentiation; keeping it active wastes eval engineering investment and clutters the leaderboard
+- Implementation considerations:
+  - Detection: Track max score per benchmark each round
+  - Retirement trigger: 1-2 round cooldown after first 1.000 score (allows confirmation, prevents premature removal due to noise)
+  - Replacement: Could trigger early introduction of next benchmark in sequence to maintain measurement diversity
+  - Logging: Mark benchmark as "saturated" in history with retirement round for analysis
+
 #### Policymaker Enhancements (Not Implemented)
 
 The following policymaker actions would increase realism and regulatory impact. Organized by implementation priority:

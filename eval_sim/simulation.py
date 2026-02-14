@@ -1178,7 +1178,7 @@ def get_default_provider_configs() -> list[dict]:
                 "Strong focus on developer ecosystem and API revenue."
             ),
             "innate_traits": "ambitious, competitive, move-fast, scale-focused, commercially-driven",
-            "initial_capability": 0.72,  # GPT-4 class, currently leading
+            "initial_capability": 0.66,  # GPT-4 class, currently leading
             "initial_believed_capability": 0.70,
             "initial_believed_exploitability": 0.45,  # Good understanding of benchmark dynamics
             "initial_strategy": {
@@ -1203,7 +1203,7 @@ def get_default_provider_configs() -> list[dict]:
                 "Research-driven culture with academic rigor."
             ),
             "innate_traits": "safety-conscious, research-driven, cautious, long-term focused, principled",
-            "initial_capability": 0.72,  # Claude competitive but slightly behind GPT-4
+            "initial_capability": 0.65,  # Claude competitive but slightly behind GPT-4
             "initial_believed_capability": 0.65,
             "initial_believed_exploitability": 0.30,  # Less focused on gaming benchmarks
             "initial_strategy": {
@@ -1231,10 +1231,10 @@ def get_default_provider_configs() -> list[dict]:
             "initial_believed_capability": 0.50,
             "initial_believed_exploitability": 0.50,  # Aware that gaming can help compete
             "initial_strategy": {
-                "fundamental_research": 0.15,  # Limited research budget
+                "fundamental_research": 0.10,  # Limited research budget
                 "training_optimization": 0.30,  # Focus on efficiency
-                "evaluation_engineering": 0.35,  # Higher gaming to punch above weight
-                "safety_alignment": 0.20,       # Some safety for credibility
+                "evaluation_engineering": 0.55,  # Higher gaming to punch above weight
+                "safety_alignment": 0.05,       # Some safety for credibility
             },
             "market_presence": 0.05,  # Unknown startup, almost no market presence
             "brand_recognition": 0.15,  # Very low brand awareness
@@ -1288,7 +1288,7 @@ def get_five_provider_configs() -> list[dict]:
                 "Balances scientific ambition with commercial urgency from parent company."
             ),
             "innate_traits": "research-first, methodical, well-resourced, scientifically-rigorous, patient",
-            "initial_capability": 0.70,
+            "initial_capability": 0.65,
             "initial_believed_capability": 0.68,
             "initial_believed_exploitability": 0.35,
             "initial_strategy": {
@@ -1312,7 +1312,7 @@ def get_five_provider_configs() -> list[dict]:
                 "Willing to open-source models to undermine competitors' paid APIs."
             ),
             "innate_traits": "open-source, pragmatic, data-rich, platform-focused, disruptive",
-            "initial_capability": 0.65,
+            "initial_capability": 0.63,
             "initial_believed_capability": 0.62,
             "initial_believed_exploitability": 0.40,
             "initial_strategy": {
