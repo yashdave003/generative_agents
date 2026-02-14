@@ -32,47 +32,47 @@ import numpy as np
 USE_CASE_PROFILES = {
     "software_dev": {
         "label": "Software Developer",
-        "benchmark_prefs": {"coding": 0.80, "reasoning": 0.15, "writing": 0.05},
+        "benchmark_prefs": {"coding": 0.90, "reasoning": 0.08, "writing": 0.02},
     },
     "content_writer": {
         "label": "Content Writer",
-        "benchmark_prefs": {"writing": 0.80, "reasoning": 0.15, "coding": 0.05},
+        "benchmark_prefs": {"writing": 0.90, "reasoning": 0.08, "coding": 0.02},
     },
     "legal": {
         "label": "Legal Professional",
-        "benchmark_prefs": {"reasoning": 0.65, "writing": 0.30, "safety": 0.05},
+        "benchmark_prefs": {"reasoning": 0.75, "writing": 0.20, "safety": 0.05},
     },
     "healthcare": {
         "label": "Healthcare Worker",
-        "benchmark_prefs": {"safety": 0.60, "reasoning": 0.25, "writing": 0.15},
+        "benchmark_prefs": {"safety": 0.75, "reasoning": 0.20, "writing": 0.05},
     },
     "finance": {
         "label": "Finance Analyst",
-        "benchmark_prefs": {"reasoning": 0.60, "safety": 0.25, "coding": 0.15},
+        "benchmark_prefs": {"reasoning": 0.70, "safety": 0.25, "coding": 0.05},
     },
     "educator": {
         "label": "Educator",
-        "benchmark_prefs": {"writing": 0.45, "reasoning": 0.40, "safety": 0.15},
+        "benchmark_prefs": {"writing": 0.50, "reasoning": 0.40, "safety": 0.10},
     },
     "customer_service": {
         "label": "Customer Service",
-        "benchmark_prefs": {"writing": 0.70, "reasoning": 0.25, "safety": 0.05},
+        "benchmark_prefs": {"writing": 0.85, "reasoning": 0.12, "safety": 0.03},
     },
     "researcher": {
         "label": "Researcher",
-        "benchmark_prefs": {"reasoning": 0.45, "coding": 0.45, "writing": 0.10},
+        "benchmark_prefs": {"reasoning": 0.50, "coding": 0.45, "writing": 0.05},
     },
     "creative": {
         "label": "Creative Professional",
-        "benchmark_prefs": {"writing": 0.70, "reasoning": 0.20, "coding": 0.10},
+        "benchmark_prefs": {"writing": 0.85, "reasoning": 0.10, "coding": 0.05},
     },
     "marketing": {
         "label": "Marketing Professional",
-        "benchmark_prefs": {"writing": 0.60, "reasoning": 0.30, "coding": 0.10},
+        "benchmark_prefs": {"writing": 0.75, "reasoning": 0.20, "coding": 0.05},
     },
     "service_worker": {
         "label": "Service Worker",
-        "benchmark_prefs": {"writing": 0.55, "reasoning": 0.30, "safety": 0.15},
+        "benchmark_prefs": {"writing": 0.65, "reasoning": 0.25, "safety": 0.10},
     },
 }
 
@@ -315,12 +315,15 @@ class ConsumerMarket:
     ):
         """Compute per-segment per-provider satisfaction from ground truth.
 
-        Satisfaction is based on:
-        1. True capability (base)
-        2. Use-case capability match (believed quality alignment with preferences)
-        3. Gaming detection penalty (score inflation above true capability)
-        4. Safety alignment match (provider safety investment × segment safety preference)
-        5. Media sentiment influence (negative coverage reduces satisfaction)
+        Satisfaction is now primarily based on believed_quality (use-case weighted
+        perceived performance), adjusted for:
+        1. Gaming detection penalty (score inflation above true capability)
+        2. Safety alignment match (provider safety investment × segment safety preference)
+        3. Media sentiment influence (negative coverage reduces satisfaction)
+
+        This creates natural differentiation across use cases: software developers
+        experience satisfaction based on coding performance, healthcare workers based
+        on safety/reasoning performance, etc.
 
         Args:
             ground_truth: {provider_name: ProviderGroundTruth}
@@ -334,29 +337,26 @@ class ConsumerMarket:
                     continue
 
                 gt = ground_truth[provider_name]
-                base_satisfaction = gt.true_capability
+                true_capability = gt.true_capability
 
-                # Factor 1: Use-Case Capability Match
-                # If provider's believed quality (use-case weighted scores) aligns with
-                # true capability, boost satisfaction slightly
-                use_case_bonus = 0.0
-                if provider_name in seg.believed_quality:
-                    believed = seg.believed_quality[provider_name]
-                    # Bonus if believed quality matches or exceeds true capability
-                    # (provider is good at what this segment cares about)
-                    if believed >= base_satisfaction:
-                        use_case_bonus = 0.05 * (believed - base_satisfaction)
-                    use_case_bonus = min(0.08, use_case_bonus)  # Cap bonus
+                # Base satisfaction: use-case weighted perceived quality
+                # This is what the segment actually experiences in their domain
+                base_satisfaction = seg.believed_quality.get(provider_name, true_capability)
 
-                # Factor 2: Gaming Detection Penalty
+                # If no believed_quality yet (early rounds), use true_capability
+                if provider_name not in seg.believed_quality:
+                    base_satisfaction = true_capability
+
+                # Factor 1: Gaming Detection Penalty
                 # If score >> true_capability, consumer experiences disappointment
+                # (high scores attracted them, but actual performance disappoints)
                 gaming_penalty = 0.0
                 if published_scores and provider_name in published_scores:
                     score = published_scores[provider_name]
-                    gap = max(0, score - base_satisfaction)
-                    gaming_penalty = 0.15 * gap  # 15% penalty per unit of inflation
+                    gap = max(0, score - true_capability)
+                    gaming_penalty = 0.20 * gap  # 20% penalty per unit of inflation
 
-                # Factor 3: Safety Alignment Match
+                # Factor 2: Safety Alignment Match
                 # Segments with high safety preferences value safety investment
                 safety_bonus = 0.0
                 if provider_strategies and provider_name in provider_strategies:
@@ -369,22 +369,21 @@ class ConsumerMarket:
                             safety_pref = weight
                             break
                     # Bonus scales with both provider investment and segment preference
-                    safety_bonus = 0.10 * safety_investment * safety_pref
+                    safety_bonus = 0.12 * safety_investment * safety_pref
 
-                # Factor 4: Media Sentiment Influence
-                # Negative media coverage reduces satisfaction
+                # Factor 3: Media Sentiment Influence
+                # Negative media coverage reduces satisfaction beyond objective metrics
                 media_penalty = 0.0
                 if media_coverage:
                     sentiment = media_coverage.get("sentiment", 0.0)
                     provider_attention = media_coverage.get("provider_attention", {}).get(provider_name, 0.0)
-                    # Only negative sentiment creates penalty (positive is already priced in via scores)
+                    # Only negative sentiment creates penalty
                     if sentiment < 0:
-                        media_penalty = 0.08 * abs(sentiment) * provider_attention
+                        media_penalty = 0.10 * abs(sentiment) * provider_attention
 
                 # Compute final satisfaction
                 satisfaction = (
                     base_satisfaction
-                    + use_case_bonus
                     - gaming_penalty
                     + safety_bonus
                     - media_penalty

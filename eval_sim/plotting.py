@@ -113,6 +113,58 @@ def compute_rolling_correlation(history: list, window_size: int = 5) -> tuple:
     return rounds_used, correlations
 
 
+def compute_per_benchmark_rolling_correlation(history: list, window_size: int = 5) -> dict:
+    """Compute rolling correlation per benchmark.
+
+    Returns {benchmark_name: (rounds, correlations)} where each benchmark
+    gets its own validity correlation over time.
+    """
+    if len(history) < window_size:
+        return {}
+
+    # Check if we have per-benchmark data
+    if not history or "per_benchmark_scores" not in history[0]:
+        return {}
+
+    providers = get_providers(history)
+
+    # Get all benchmark names across all rounds
+    all_benchmarks = set()
+    for h in history:
+        if "per_benchmark_scores" in h:
+            all_benchmarks.update(h["per_benchmark_scores"].keys())
+
+    benchmark_correlations = {}
+
+    for benchmark in all_benchmarks:
+        correlations = []
+        rounds_used = []
+
+        for i in range(window_size, len(history) + 1):
+            window = history[i - window_size:i]
+            benchmark_scores = []
+            benchmark_caps = []
+
+            for h in window:
+                per_bm = h.get("per_benchmark_scores", {})
+                if benchmark in per_bm:
+                    for provider in providers:
+                        if provider in per_bm[benchmark]:
+                            benchmark_scores.append(per_bm[benchmark][provider])
+                            benchmark_caps.append(h["true_capabilities"][provider])
+
+            if len(benchmark_scores) >= 2:
+                corr = np.corrcoef(benchmark_scores, benchmark_caps)[0, 1]
+                if not np.isnan(corr):
+                    correlations.append(corr)
+                    rounds_used.append(history[i - 1]["round"])
+
+        if correlations:
+            benchmark_correlations[benchmark] = (rounds_used, correlations)
+
+    return benchmark_correlations
+
+
 def categorize_headline(headline: str) -> str:
     """Classify a media headline into one of 7 categories via substring matching."""
     hl = headline.lower()
@@ -204,27 +256,65 @@ def plot_provider_dashboard(
     ax2.legend(handles=handles, loc='best', fontsize=7)
     style_axis(ax2, "True vs Believed Capability", "Round", "Capability", legend=False)
 
-    # --- Panel 3: Investment Portfolio (stacked area for first provider, lines for comparison) ---
+    # --- Panel 3: Investment Portfolio (all providers in grid) ---
     ax3 = axes[0, 2]
+    ax3.axis('off')  # Turn off main axis, we'll use subplots
+
     investment_types = ["fundamental_research", "training_optimization",
                         "evaluation_engineering", "safety_alignment"]
 
-    # Show stacked area for visual clarity of one provider
-    if n_providers >= 1:
-        provider = providers[0]
+    # Create grid of subplots within Panel 3
+    from matplotlib.gridspec import GridSpecFromSubplotSpec
+
+    # Determine grid layout based on number of providers
+    if n_providers <= 2:
+        grid_rows, grid_cols = 1, 2
+    elif n_providers <= 4:
+        grid_rows, grid_cols = 2, 2
+    elif n_providers <= 6:
+        grid_rows, grid_cols = 2, 3
+    else:
+        grid_rows, grid_cols = 3, 3
+
+    gs = GridSpecFromSubplotSpec(grid_rows, grid_cols, subplot_spec=ax3.get_subplotspec(),
+                                  hspace=0.4, wspace=0.3)
+
+    for idx, provider in enumerate(providers):
+        if idx >= grid_rows * grid_cols:
+            break
+
+        row = idx // grid_cols
+        col = idx % grid_cols
+        sub_ax = fig.add_subplot(gs[row, col])
+
+        # Stacked area chart for this provider
         bottom = np.zeros(len(rounds))
         for inv_type in investment_types:
             values = np.array(extract_investment(history, provider, inv_type))
-            ax3.fill_between(rounds, bottom, bottom + values,
-                            alpha=0.7, label=inv_type.replace("_", " ").title(),
-                            color=inv_colors[inv_type])
+            sub_ax.fill_between(rounds, bottom, bottom + values,
+                               alpha=0.7, color=inv_colors[inv_type])
             bottom += values
-        ax3.set_title(f"Investment Portfolio ({provider})", fontsize=11, fontweight='bold')
-    ax3.set_ylim(0, 1.05)
-    ax3.set_xlabel("Round", fontsize=9)
-    ax3.set_ylabel("Allocation", fontsize=9)
-    ax3.legend(loc='upper right', fontsize=7)
-    ax3.grid(True, alpha=0.3)
+
+        sub_ax.set_ylim(0, 1.05)
+        sub_ax.set_title(provider, fontsize=8, fontweight='bold')
+        sub_ax.tick_params(labelsize=6)
+        sub_ax.grid(True, alpha=0.2)
+
+        # Only show x-label on bottom row
+        if row == grid_rows - 1:
+            sub_ax.set_xlabel("Round", fontsize=7)
+        # Only show y-label on left column
+        if col == 0:
+            sub_ax.set_ylabel("Allocation", fontsize=7)
+
+    # Add single legend for all subplots (outside the grid)
+    legend_elements = [
+        mpatches.Patch(facecolor=inv_colors[inv_type], alpha=0.7,
+                      label=inv_type.replace("_", " ").title()[:12])
+        for inv_type in investment_types
+    ]
+    ax3.legend(handles=legend_elements, loc='upper center',
+              bbox_to_anchor=(0.5, 1.15), ncol=2, fontsize=7, frameon=False)
 
     # --- Panel 4: Evaluation Engineering (Gaming) Over Time ---
     ax4 = axes[1, 0]
@@ -440,6 +530,8 @@ def plot_consumer_dashboard(
     style_axis(ax3, "Switching Rate by Archetype", "Round", "Switching Rate (%)", legend=False)
 
     # --- Panel 4: Market Share Over Time ---
+    ax4 = axes[1, 0]
+
     # Use market_shares (proportions) from consumer_data
     market_share = {p: [] for p in providers}
     for h in consumer_rounds:
@@ -459,6 +551,8 @@ def plot_consumer_dashboard(
     style_axis(ax4, "Market Share", "Round", "Share")
 
     # --- Panel 5: Per-Provider Satisfaction ---
+    ax5 = axes[1, 1]
+
     avg_satisfaction = [h["consumer_data"].get("avg_satisfaction", 0) for h in consumer_rounds]
 
     for provider in providers:
@@ -474,6 +568,8 @@ def plot_consumer_dashboard(
     style_axis(ax5, "Per-Provider Satisfaction", "Round", "Satisfaction")
 
     # --- Panel 6: Satisfaction Gap (Score - Satisfaction) ---
+    ax6 = axes[1, 2]
+
     for provider in providers:
         scores = [h["scores"][provider] for h in consumer_rounds]
         prov_sats = [h["consumer_data"].get("provider_satisfaction", {}).get(provider, 0)
@@ -949,13 +1045,37 @@ def plot_summary_dashboard(
 
     # --- Panel 2,2: Validity Correlation ---
     ax = axes[1, 1]
-    validity_rounds, validity_values = compute_rolling_correlation(history)
-    if validity_values:
-        ax.plot(validity_rounds, validity_values, 'o-', color='#2A9D8F',
-                markersize=4, linewidth=2)
-        ax.axhline(y=0.7, color='green', linestyle='--', alpha=0.5)
-        ax.axhline(y=0.5, color='orange', linestyle='--', alpha=0.5)
-        ax.axhline(y=0.3, color='red', linestyle='--', alpha=0.5)
+
+    # Try per-benchmark correlations
+    per_benchmark = compute_per_benchmark_rolling_correlation(history)
+
+    if per_benchmark:
+        # Plot per-benchmark correlations
+        benchmark_names = sorted(per_benchmark.keys())
+        bm_colors = get_provider_colors(len(benchmark_names))
+
+        for i, benchmark in enumerate(benchmark_names):
+            bm_rounds, bm_corrs = per_benchmark[benchmark]
+            ax.plot(bm_rounds, bm_corrs, 'o-', label=benchmark,
+                   color=bm_colors[i], markersize=3, linewidth=1.5)
+
+        # Overall as dashed line
+        validity_rounds, validity_values = compute_rolling_correlation(history)
+        if validity_values:
+            ax.plot(validity_rounds, validity_values, '--', color='black',
+                   linewidth=2, alpha=0.5, label='Overall')
+
+        ax.legend(loc='best', fontsize=7)
+    else:
+        # Fallback to overall
+        validity_rounds, validity_values = compute_rolling_correlation(history)
+        if validity_values:
+            ax.plot(validity_rounds, validity_values, 'o-', color='#2A9D8F',
+                    markersize=4, linewidth=2)
+
+    ax.axhline(y=0.7, color='green', linestyle=':', alpha=0.3)
+    ax.axhline(y=0.5, color='orange', linestyle=':', alpha=0.3)
+    ax.axhline(y=0.3, color='red', linestyle=':', alpha=0.3)
     ax.set_ylim(-0.2, 1.0)
     style_axis(ax, "Benchmark Validity", "Round", "Correlation", legend=False)
 
@@ -1093,27 +1213,49 @@ def plot_validity_over_time(
     save_path: Optional[str] = None,
     show: bool = True,
 ) -> Optional[plt.Figure]:
-    """Plot rolling validity correlation."""
+    """Plot rolling validity correlation, broken down by benchmark if available."""
     if len(history) < window_size:
         print(f"Need at least {window_size} rounds")
         return None
 
-    validity_rounds, validity_values = compute_rolling_correlation(history, window_size)
+    # Try per-benchmark correlations first
+    per_benchmark = compute_per_benchmark_rolling_correlation(history, window_size)
 
-    if not validity_values:
-        return None
+    fig, ax = plt.subplots(figsize=(12, 6))
 
-    fig, ax = plt.subplots(figsize=(10, 5))
+    if per_benchmark:
+        # Plot per-benchmark correlations
+        benchmark_names = sorted(per_benchmark.keys())
+        colors = get_provider_colors(len(benchmark_names))
 
-    ax.plot(validity_rounds, validity_values, 'o-', color='#2A9D8F',
-            markersize=5, linewidth=2)
-    ax.axhline(y=0.7, color='green', linestyle='--', alpha=0.5, label='Good (0.7)')
-    ax.axhline(y=0.5, color='orange', linestyle='--', alpha=0.5, label='Moderate (0.5)')
-    ax.axhline(y=0.3, color='red', linestyle='--', alpha=0.5, label='Poor (0.3)')
+        for i, benchmark in enumerate(benchmark_names):
+            rounds, correlations = per_benchmark[benchmark]
+            ax.plot(rounds, correlations, 'o-', label=benchmark,
+                   color=colors[i], markersize=4, linewidth=2)
+
+        # Also plot overall correlation as a thicker dashed line
+        validity_rounds, validity_values = compute_rolling_correlation(history, window_size)
+        if validity_values:
+            ax.plot(validity_rounds, validity_values, '--', color='black',
+                   linewidth=2.5, alpha=0.6, label='Overall')
+
+        title = f"Benchmark Validity by Benchmark (window={window_size})"
+    else:
+        # Fallback to overall correlation
+        validity_rounds, validity_values = compute_rolling_correlation(history, window_size)
+        if not validity_values:
+            return None
+
+        ax.plot(validity_rounds, validity_values, 'o-', color='#2A9D8F',
+                markersize=5, linewidth=2, label='Overall')
+        title = f"Benchmark Validity Over Time (window={window_size})"
+
+    ax.axhline(y=0.7, color='green', linestyle=':', alpha=0.4, linewidth=1)
+    ax.axhline(y=0.5, color='orange', linestyle=':', alpha=0.4, linewidth=1)
+    ax.axhline(y=0.3, color='red', linestyle=':', alpha=0.4, linewidth=1)
     ax.set_ylim(-0.2, 1.0)
 
-    style_axis(ax, f"Benchmark Validity Over Time (window={window_size})",
-               "Round", "Correlation (Score vs True Capability)")
+    style_axis(ax, title, "Round", "Correlation (Score vs True Capability)")
 
     plt.tight_layout()
 

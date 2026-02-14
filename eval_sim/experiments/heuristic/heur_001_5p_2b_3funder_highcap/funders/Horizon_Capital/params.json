@@ -1,5 +1,5 @@
 {
-  "risk_tolerance": 0.85,
+  "risk_tolerance": 0.6,
   "llm_mode": false,
   "max_round_deployment": 0.1,
   "funding_cooldown": 2

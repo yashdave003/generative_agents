@@ -3,79 +3,7 @@
     {
       "id": "heur_001_5p_2b_3funder_highcap",
       "name": "5p_2b_3funder_highcap",
-      "created_at": "2026-02-13T14:12:38.404281",
-      "tags": [
-        "llm",
-        "ollama",
-        "5-provider",
-        "2-benchmark",
-        "12-segments",
-        "3-funder",
-        "high-capital",
-        "funder-diversification",
-        "per-benchmark-reporting",
-        "full-ecosystem-v6"
-      ],
-      "llm_mode": false
-    },
-    {
-      "id": "heur_002_5p_2b_3funder_highcap",
-      "name": "5p_2b_3funder_highcap",
-      "created_at": "2026-02-13T14:19:30.194489",
-      "tags": [
-        "llm",
-        "ollama",
-        "5-provider",
-        "2-benchmark",
-        "12-segments",
-        "3-funder",
-        "high-capital",
-        "funder-diversification",
-        "per-benchmark-reporting",
-        "full-ecosystem-v6"
-      ],
-      "llm_mode": false
-    },
-    {
-      "id": "heur_003_5p_2b_3funder_highcap",
-      "name": "5p_2b_3funder_highcap",
-      "created_at": "2026-02-13T14:21:28.147719",
-      "tags": [
-        "llm",
-        "ollama",
-        "5-provider",
-        "2-benchmark",
-        "12-segments",
-        "3-funder",
-        "high-capital",
-        "funder-diversification",
-        "per-benchmark-reporting",
-        "full-ecosystem-v6"
-      ],
-      "llm_mode": false
-    },
-    {
-      "id": "heur_004_5p_2b_3funder_highcap",
-      "name": "5p_2b_3funder_highcap",
-      "created_at": "2026-02-13T14:22:28.876970",
-      "tags": [
-        "llm",
-        "ollama",
-        "5-provider",
-        "2-benchmark",
-        "12-segments",
-        "3-funder",
-        "high-capital",
-        "funder-diversification",
-        "per-benchmark-reporting",
-        "full-ecosystem-v6"
-      ],
-      "llm_mode": false
-    },
-    {
-      "id": "heur_005_5p_2b_3funder_highcap",
-      "name": "5p_2b_3funder_highcap",
-      "created_at": "2026-02-13T14:26:52.910104",
+      "created_at": "2026-02-14T01:41:03.550103",
       "tags": [
         "llm",
         "ollama",
@@ -91,5 +19,5 @@
       "llm_mode": false
     }
   ],
-  "next_id": 6
+  "next_id": 2
 }

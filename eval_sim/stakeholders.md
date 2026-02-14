@@ -372,6 +372,20 @@ Providers allocate resources across four investment areas each round. These must
 - `evaluation_engineering` inflates scores without proportional capability gain
 - `safety_alignment` trades immediate benefit for consumer trust and regulatory standing
 
+### Initial Strategy Allocations (by Provider Archetype)
+
+Each provider starts with a distinct strategy reflecting their organizational philosophy:
+
+| Provider | Research | Training | Eval Eng | Safety | Strategy Philosophy |
+|----------|----------|----------|----------|--------|---------------------|
+| **OpenAI** | 15% | **50%** | 30% | 5% | Aggressive scaler - "GPT philosophy": massive training infrastructure, benchmark-focused, move fast, minimal safety investment |
+| **Anthropic** | 35% | 20% | **5%** | **40%** | Safety-first - Constitutional AI focus, research-driven, principled stance against gaming, high safety investment |
+| **NovaMind** | 5% | 25% | **68%** | 2% | Startup desperation - Resource-constrained, needs results to survive, very heavy gaming to compete, minimal safety budget |
+| **DeepMind** | **45%** | 30% | 10% | 15% | Pure research - AlphaGo/AlphaFold legacy, scientifically rigorous, low gaming, methodical approach |
+| **Meta_AI** | 20% | **45%** | 25% | 10% | Pragmatic scaler - Open-source strategy, massive compute advantage, moderate gaming, lower safety focus |
+
+**Design philosophy**: Initial allocations are intentionally extreme and differentiated to reflect real-world organizational strategies and create distinct competitive dynamics from round 0.
+
 ### Identity / Personality
 Providers have strategic profiles influencing decision-making:
 - `strategy_profile`: Natural language description (e.g., "aggressive competitor" vs. "quality-focused")
@@ -404,19 +418,21 @@ Providers receive a filtered view of the ecosystem — they see only their **own
 #### Use-Case Profiles (10 available, configurable subset)
 Each profile defines benchmark preferences — which capabilities matter most:
 
-| Profile | Key Benchmark Preferences |
-|---------|--------------------------|
-| `software_dev` | coding: 0.80, reasoning: 0.15, writing: 0.05 |
-| `content_writer` | writing: 0.80, reasoning: 0.15, coding: 0.05 |
-| `legal` | reasoning: 0.65, writing: 0.30, safety: 0.05 |
-| `healthcare` | safety: 0.60, reasoning: 0.25, writing: 0.15 |
-| `finance` | reasoning: 0.60, safety: 0.25, coding: 0.15 |
-| `educator` | writing: 0.45, reasoning: 0.40, safety: 0.15 |
-| `customer_service` | writing: 0.70, reasoning: 0.25, safety: 0.05 |
-| `researcher` | reasoning: 0.45, coding: 0.45, writing: 0.10 |
-| `creative` | writing: 0.70, reasoning: 0.20, coding: 0.10 |
-| `marketing` | writing: 0.60, reasoning: 0.30, coding: 0.10 |
-| `service_worker` | writing: 0.55, reasoning: 0.30, safety: 0.15 |
+| Profile | Key Benchmark Preferences | Specialization |
+|---------|--------------------------|----------------|
+| `software_dev` | coding: 0.90, reasoning: 0.08, writing: 0.02 | Highly specialized (coding-focused) |
+| `content_writer` | writing: 0.90, reasoning: 0.08, coding: 0.02 | Highly specialized (writing-focused) |
+| `legal` | reasoning: 0.75, writing: 0.20, safety: 0.05 | Specialized (reasoning-focused) |
+| `healthcare` | safety: 0.75, reasoning: 0.20, writing: 0.05 | Specialized (safety-focused) |
+| `finance` | reasoning: 0.70, safety: 0.25, coding: 0.05 | Specialized (reasoning + safety) |
+| `educator` | writing: 0.50, reasoning: 0.40, safety: 0.10 | Balanced (writing + reasoning) |
+| `customer_service` | writing: 0.85, reasoning: 0.12, safety: 0.03 | Highly specialized (writing-focused) |
+| `researcher` | reasoning: 0.50, coding: 0.45, writing: 0.05 | Balanced (reasoning + coding) |
+| `creative` | writing: 0.85, reasoning: 0.10, coding: 0.05 | Highly specialized (writing-focused) |
+| `marketing` | writing: 0.75, reasoning: 0.20, coding: 0.05 | Specialized (writing-focused) |
+| `service_worker` | writing: 0.65, reasoning: 0.25, safety: 0.10 | Moderately specialized (writing-focused) |
+
+**Design philosophy**: Use cases are highly specialized (primary benchmark weight 75-90%) to create sharp differentiation in satisfaction across segments. This ensures that providers excelling in different benchmarks generate clearly distinct satisfaction patterns across consumer types.
 
 Preference categories are mapped to actual benchmark names via substring matching (e.g., "coding" matches "coding_bench"). Unmatched benchmarks receive a small default weight (0.1). Weights are re-resolved when new benchmarks are introduced mid-simulation.
 
@@ -476,22 +492,28 @@ When media coverage is available:
 - Risk signals reduce `leaderboard_trust` by 5% for leaderboard-follower segments
 - Provider attention modulates brand awareness during switching decisions
 
-### Satisfaction Model (Enhanced)
+### Satisfaction Model (Use-Case Weighted)
 
-Consumer satisfaction is now computed from multiple factors:
+Consumer satisfaction is based on **use-case weighted perceived performance** (believed_quality), creating natural differentiation across segments. Software developers experience satisfaction based on coding performance, healthcare workers based on safety/reasoning performance, etc.
 
-1. **Base**: True capability (objective quality)
-2. **Use-Case Match**: Bonus if provider's believed quality (use-case weighted scores) aligns with/exceeds true capability (+0 to +0.08)
-3. **Gaming Penalty**: Score inflation above true capability reduces satisfaction (-15% per unit gap)
-4. **Safety Alignment**: Provider safety investment × segment safety preference (+0 to +0.10)
-5. **Media Influence**: Negative media sentiment × provider attention reduces satisfaction (-0 to -0.08)
-
-Formula:
+**Formula:**
 ```
-satisfaction = true_capability + use_case_bonus - gaming_penalty + safety_bonus - media_penalty
+satisfaction = believed_quality[provider] - gaming_penalty + safety_bonus - media_penalty
 ```
+
+**Factors:**
+
+1. **Base**: `believed_quality[provider]` — use-case weighted perceived quality from observed scores (automatically differentiated by segment preferences)
+2. **Gaming Penalty**: Score inflation above true capability reduces satisfaction (-20% per unit gap)
+   - Detects when high scores don't match actual performance
+3. **Safety Alignment**: Provider safety investment × segment safety preference (+0 to +0.12)
+   - Healthcare/finance segments value safety investment more
+4. **Media Influence**: Negative media sentiment × provider attention (-0 to -0.10)
+   - Bad press reduces satisfaction beyond objective metrics
 
 Clamped to [0, 1].
+
+**Key dynamic**: Since `believed_quality` is computed via `observe_per_benchmark()` with segment-specific benchmark weights, satisfaction naturally differs by use case even when all segments use the same provider. A provider strong in coding will have high satisfaction among developers but potentially lower among healthcare workers.
 
 ### Key Dynamic: The Satisfaction Gap
 When a provider games the benchmark:

@@ -1197,10 +1197,10 @@ def get_default_provider_configs() -> list[dict]:
             "initial_believed_capability": 0.70,
             "initial_believed_exploitability": 0.45,  # Good understanding of benchmark dynamics
             "initial_strategy": {
-                "fundamental_research": 0.20,  # Some research but not primary focus
-                "training_optimization": 0.40,  # Heavy scaling investment
-                "evaluation_engineering": 0.25,  # Significant benchmark optimization
-                "safety_alignment": 0.15,       # Present but not dominant
+                "fundamental_research": 0.15,  # Moderate research, not primary focus
+                "training_optimization": 0.50,  # VERY heavy scaling investment (GPT philosophy)
+                "evaluation_engineering": 0.30,  # Aggressive benchmark optimization
+                "safety_alignment": 0.05,       # Minimal (move fast, ship products)
             },
             "market_presence": 0.8,  # Established brand, most consumers start here
             "brand_recognition": 0.9,
@@ -1222,10 +1222,10 @@ def get_default_provider_configs() -> list[dict]:
             "initial_believed_capability": 0.65,
             "initial_believed_exploitability": 0.30,  # Less focused on gaming benchmarks
             "initial_strategy": {
-                "fundamental_research": 0.30,  # Strong research focus
-                "training_optimization": 0.25,  # Moderate scaling
-                "evaluation_engineering": 0.15,  # Lower benchmark optimization
-                "safety_alignment": 0.30,       # High safety investment
+                "fundamental_research": 0.35,  # Very strong research focus (Constitutional AI, interpretability)
+                "training_optimization": 0.20,  # Moderate scaling (more careful)
+                "evaluation_engineering": 0.05,  # Minimal benchmark gaming (principled)
+                "safety_alignment": 0.40,       # VERY high safety investment (core mission)
             },
             "market_presence": 0.6,
             "brand_recognition": 0.7,
@@ -1246,10 +1246,10 @@ def get_default_provider_configs() -> list[dict]:
             "initial_believed_capability": 0.50,
             "initial_believed_exploitability": 0.50,  # Aware that gaming can help compete
             "initial_strategy": {
-                "fundamental_research": 0.10,  # Limited research budget
-                "training_optimization": 0.30,  # Focus on efficiency
-                "evaluation_engineering": 0.55,  # Higher gaming to punch above weight
-                "safety_alignment": 0.05,       # Some safety for credibility
+                "fundamental_research": 0.05,  # Minimal research budget (startup constraints)
+                "training_optimization": 0.25,  # Focus on efficiency
+                "evaluation_engineering": 0.68,  # VERY heavy gaming to compete (desperate for results)
+                "safety_alignment": 0.02,       # Minimal safety (can't afford it)
             },
             "market_presence": 0.05,  # Unknown startup, almost no market presence
             "brand_recognition": 0.15,  # Very low brand awareness
@@ -1307,10 +1307,10 @@ def get_five_provider_configs() -> list[dict]:
             "initial_believed_capability": 0.68,
             "initial_believed_exploitability": 0.35,
             "initial_strategy": {
-                "fundamental_research": 0.35,
+                "fundamental_research": 0.45,  # VERY heavy research (AlphaGo, AlphaFold legacy)
                 "training_optimization": 0.30,
-                "evaluation_engineering": 0.15,
-                "safety_alignment": 0.20,
+                "evaluation_engineering": 0.10,  # Low gaming (scientifically rigorous)
+                "safety_alignment": 0.15,
             },
             "market_presence": 0.7,
             "brand_recognition": 0.8,
@@ -1331,10 +1331,10 @@ def get_five_provider_configs() -> list[dict]:
             "initial_believed_capability": 0.62,
             "initial_believed_exploitability": 0.40,
             "initial_strategy": {
-                "fundamental_research": 0.25,
-                "training_optimization": 0.35,
-                "evaluation_engineering": 0.20,
-                "safety_alignment": 0.20,
+                "fundamental_research": 0.20,
+                "training_optimization": 0.45,  # Heavy scaling (massive compute advantage)
+                "evaluation_engineering": 0.25,  # Moderate gaming (pragmatic)
+                "safety_alignment": 0.10,       # Lower safety (open-source strategy)
             },
             "market_presence": 0.5,
             "brand_recognition": 0.6,

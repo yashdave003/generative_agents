@@ -19,38 +19,38 @@
       "name": "software_dev_leaderboard_follower",
       "archetype": "leaderboard_follower",
       "use_case": "software_dev",
-      "market_fraction": 0.1,
+      "market_fraction": 0.04000000000000001,
       "benchmark_weights": {
-        "coding_bench": 0.5,
-        "reasoning_bench": 0.14285714285714288,
-        "reasoning": 0.14285714285714288,
-        "question_answering": 0.07142857142857144,
-        "factual_recall": 0.07142857142857144,
-        "accounting": 0.07142857142857144
+        "coding_bench": 0.4128440366972477,
+        "question_answering_bench": 0.045871559633027525,
+        "logical_reasoning": 0.03669724770642201,
+        "advanced_coding": 0.4128440366972477,
+        "factual_recall": 0.045871559633027525,
+        "science": 0.045871559633027525
       },
       "leaderboard_trust": 0.765,
       "switching_cost": 0.05,
       "switching_threshold": 0.15,
       "provider_shares": {
-        "OpenAI": 0.9979182253301031,
-        "Anthropic": 0.00038792868922851405,
-        "NovaMind": 0.0005481951087976335,
-        "DeepMind": 0.0007462392859674998,
-        "Meta_AI": 0.00039941158590323247
+        "OpenAI": 0.9981692589174013,
+        "Anthropic": 0.00031204372457677344,
+        "NovaMind": 0.0004421785131463766,
+        "DeepMind": 0.000588752785658559,
+        "Meta_AI": 0.0004877660592170711
       },
       "believed_quality": {
-        "Anthropic": 0.9752691508572877,
-        "OpenAI": 0.9974499641002263,
-        "DeepMind": 0.9678350803140336,
-        "Meta_AI": 0.9881608222782725,
-        "NovaMind": 0.8950481778267427
+        "Anthropic": 0.9356707222975045,
+        "OpenAI": 0.9976612564731939,
+        "Meta_AI": 0.9527058464667245,
+        "DeepMind": 0.9948098296698316,
+        "NovaMind": 0.8854282953525073
       },
       "satisfaction": {
-        "OpenAI": 0.8888567540493666,
-        "Anthropic": 0.8257298616204417,
-        "NovaMind": 0.6788560633545746,
-        "DeepMind": 0.8231847141529502,
-        "Meta_AI": 0.7848256177829972
+        "OpenAI": 0.9655263975896483,
+        "Anthropic": 0.9021993907615801,
+        "NovaMind": 0.8398559612796087,
+        "DeepMind": 0.9506316081384582,
+        "Meta_AI": 0.9110571081220028
       },
       "tenure": {
         "OpenAI": 30,
@@ -64,38 +64,38 @@
       "name": "software_dev_experience_driven",
       "archetype": "experience_driven",
       "use_case": "software_dev",
-      "market_fraction": 0.0875,
+      "market_fraction": 0.034999999999999996,
       "benchmark_weights": {
-        "coding_bench": 0.5,
-        "reasoning_bench": 0.14285714285714288,
-        "reasoning": 0.14285714285714288,
-        "question_answering": 0.07142857142857144,
-        "factual_recall": 0.07142857142857144,
-        "accounting": 0.07142857142857144
+        "coding_bench": 0.4128440366972477,
+        "question_answering_bench": 0.045871559633027525,
+        "logical_reasoning": 0.03669724770642201,
+        "advanced_coding": 0.4128440366972477,
+        "factual_recall": 0.045871559633027525,
+        "science": 0.045871559633027525
       },
       "leaderboard_trust": 0.315,
       "switching_cost": 0.08,
       "switching_threshold": 0.08,
       "provider_shares": {
-        "OpenAI": 0.9972261036287432,
-        "Anthropic": 0.0009865502450304145,
-        "NovaMind": 0.0005462161573930707,
-        "DeepMind": 0.0006510825651449239,
-        "Meta_AI": 0.0005900474036883756
+        "OpenAI": 0.9977080595019275,
+        "Anthropic": 0.0004749428125187615,
+        "NovaMind": 0.00024373879285595186,
+        "DeepMind": 0.0008811553702279364,
+        "Meta_AI": 0.0006921035224698188
       },
       "believed_quality": {
-        "Anthropic": 0.9752691508572877,
-        "OpenAI": 0.9974499641002263,
-        "DeepMind": 0.9678350803140336,
-        "Meta_AI": 0.9881608222782725,
-        "NovaMind": 0.8950481778267427
+        "Anthropic": 0.9356707222975045,
+        "OpenAI": 0.9976612564731939,
+        "Meta_AI": 0.9527058464667245,
+        "DeepMind": 0.9948098296698316,
+        "NovaMind": 0.8854282953525073
       },
       "satisfaction": {
-        "OpenAI": 0.8888567540493666,
-        "Anthropic": 0.8257298616204417,
-        "NovaMind": 0.6788560633545746,
-        "DeepMind": 0.8231847141529502,
-        "Meta_AI": 0.7848256177829972
+        "OpenAI": 0.9655263975896483,
+        "Anthropic": 0.9021993907615801,
+        "NovaMind": 0.8398559612796087,
+        "DeepMind": 0.9506316081384582,
+        "Meta_AI": 0.9110571081220028
       },
       "tenure": {
         "OpenAI": 30,
@@ -109,38 +109,38 @@
       "name": "software_dev_cautious",
       "archetype": "cautious",
       "use_case": "software_dev",
-      "market_fraction": 0.0625,
+      "market_fraction": 0.025,
       "benchmark_weights": {
-        "coding_bench": 0.5,
-        "reasoning_bench": 0.14285714285714288,
-        "reasoning": 0.14285714285714288,
-        "question_answering": 0.07142857142857144,
-        "factual_recall": 0.07142857142857144,
-        "accounting": 0.07142857142857144
+        "coding_bench": 0.4128440366972477,
+        "question_answering_bench": 0.045871559633027525,
+        "logical_reasoning": 0.03669724770642201,
+        "advanced_coding": 0.4128440366972477,
+        "factual_recall": 0.045871559633027525,
+        "science": 0.045871559633027525
       },
       "leaderboard_trust": 0.45,
       "switching_cost": 0.2,
       "switching_threshold": 0.25,
       "provider_shares": {
-        "OpenAI": 0.9965739003001619,
-        "Anthropic": 0.0009157262441854197,
-        "NovaMind": 0.0006357453041792278,
-        "DeepMind": 0.0008921992235002999,
-        "Meta_AI": 0.0009824289279731515
+        "OpenAI": 0.9968504837853175,
+        "Anthropic": 0.0009211952323486713,
+        "NovaMind": 0.0005443211564130633,
+        "DeepMind": 0.000763848252661252,
+        "Meta_AI": 0.0009201515732595236
       },
       "believed_quality": {
-        "Anthropic": 0.9752691508572877,
-        "OpenAI": 0.9974499641002263,
-        "DeepMind": 0.9678350803140336,
-        "Meta_AI": 0.9881608222782725,
-        "NovaMind": 0.8950481778267427
+        "Anthropic": 0.9356707222975045,
+        "OpenAI": 0.9976612564731939,
+        "Meta_AI": 0.9527058464667245,
+        "DeepMind": 0.9948098296698316,
+        "NovaMind": 0.8854282953525073
       },
       "satisfaction": {
-        "OpenAI": 0.8888567540493666,
-        "Anthropic": 0.8257298616204417,
-        "NovaMind": 0.6788560633545746,
-        "DeepMind": 0.8231847141529502,
-        "Meta_AI": 0.7848256177829972
+        "OpenAI": 0.9655263975896483,
+        "Anthropic": 0.9021993907615801,
+        "NovaMind": 0.8398559612796087,
+        "DeepMind": 0.9506316081384582,
+        "Meta_AI": 0.9110571081220028
       },
       "tenure": {
         "OpenAI": 30,
@@ -154,44 +154,44 @@
       "name": "content_writer_leaderboard_follower",
       "archetype": "leaderboard_follower",
       "use_case": "content_writer",
-      "market_fraction": 0.1,
+      "market_fraction": 0.04000000000000001,
       "benchmark_weights": {
-        "coding_bench": 0.125,
-        "reasoning_bench": 0.25,
-        "reasoning": 0.25,
-        "question_answering": 0.125,
-        "factual_recall": 0.125,
-        "accounting": 0.125
+        "coding_bench": 0.047619047619047616,
+        "question_answering_bench": 0.23809523809523808,
+        "logical_reasoning": 0.19047619047619047,
+        "advanced_coding": 0.047619047619047616,
+        "factual_recall": 0.23809523809523808,
+        "science": 0.23809523809523808
       },
       "leaderboard_trust": 0.765,
       "switching_cost": 0.05,
       "switching_threshold": 0.15,
       "provider_shares": {
-        "OpenAI": 0.997347960824594,
-        "Anthropic": 0.0009270103395781107,
-        "NovaMind": 0.0005625561938004485,
-        "DeepMind": 0.0006819321839188759,
-        "Meta_AI": 0.0004805404581086058
+        "OpenAI": 0.9962879756049352,
+        "Anthropic": 0.0008795690252262673,
+        "NovaMind": 0.0005536570287562584,
+        "DeepMind": 0.0017359711518458163,
+        "Meta_AI": 0.0005428271892364525
       },
       "believed_quality": {
-        "Anthropic": 0.9753399631244373,
-        "OpenAI": 0.99516590764876,
-        "DeepMind": 0.9611352255116792,
-        "Meta_AI": 0.979021688004701,
-        "NovaMind": 0.8832353925160824
+        "Anthropic": 0.9648292067337672,
+        "OpenAI": 0.9912517521350025,
+        "Meta_AI": 0.9632257313133508,
+        "DeepMind": 0.9866342702178303,
+        "NovaMind": 0.8989580937820859
       },
       "satisfaction": {
-        "OpenAI": 0.8888567540493666,
-        "Anthropic": 0.8257298616204417,
-        "NovaMind": 0.6788560633545746,
-        "DeepMind": 0.8231847141529502,
-        "Meta_AI": 0.7848256177829972
+        "OpenAI": 0.9591168932514569,
+        "Anthropic": 0.9313578751978427,
+        "NovaMind": 0.8533857597091873,
+        "DeepMind": 0.9424560486864569,
+        "Meta_AI": 0.921576992968629
       },
       "tenure": {
-        "OpenAI": 27,
+        "OpenAI": 20,
         "Anthropic": 0,
         "NovaMind": 0,
-        "DeepMind": 0,
+        "DeepMind": 1,
         "Meta_AI": 0
       }
     },
@@ -199,44 +199,44 @@
       "name": "content_writer_experience_driven",
       "archetype": "experience_driven",
       "use_case": "content_writer",
-      "market_fraction": 0.0875,
+      "market_fraction": 0.034999999999999996,
       "benchmark_weights": {
-        "coding_bench": 0.125,
-        "reasoning_bench": 0.25,
-        "reasoning": 0.25,
-        "question_answering": 0.125,
-        "factual_recall": 0.125,
-        "accounting": 0.125
+        "coding_bench": 0.047619047619047616,
+        "question_answering_bench": 0.23809523809523808,
+        "logical_reasoning": 0.19047619047619047,
+        "advanced_coding": 0.047619047619047616,
+        "factual_recall": 0.23809523809523808,
+        "science": 0.23809523809523808
       },
       "leaderboard_trust": 0.315,
       "switching_cost": 0.08,
       "switching_threshold": 0.08,
       "provider_shares": {
-        "OpenAI": 0.9972418920800923,
-        "Anthropic": 0.0008025727224771836,
-        "NovaMind": 0.00029752682833372924,
-        "DeepMind": 0.0007050425241416166,
-        "Meta_AI": 0.0009529658449552063
+        "OpenAI": 0.98835368100526,
+        "Anthropic": 0.0007732765483865024,
+        "NovaMind": 0.0006492395280618328,
+        "DeepMind": 0.009379457201782241,
+        "Meta_AI": 0.0008443457165094194
       },
       "believed_quality": {
-        "Anthropic": 0.9753399631244373,
-        "OpenAI": 0.99516590764876,
-        "DeepMind": 0.9611352255116792,
-        "Meta_AI": 0.979021688004701,
-        "NovaMind": 0.8832353925160824
+        "Anthropic": 0.9648292067337672,
+        "OpenAI": 0.9912517521350025,
+        "Meta_AI": 0.9632257313133508,
+        "DeepMind": 0.9866342702178303,
+        "NovaMind": 0.8989580937820859
       },
       "satisfaction": {
-        "OpenAI": 0.8888567540493666,
-        "Anthropic": 0.8257298616204417,
-        "NovaMind": 0.6788560633545746,
-        "DeepMind": 0.8231847141529502,
-        "Meta_AI": 0.7848256177829972
+        "OpenAI": 0.9591168932514569,
+        "Anthropic": 0.9313578751978427,
+        "NovaMind": 0.8533857597091873,
+        "DeepMind": 0.9424560486864569,
+        "Meta_AI": 0.921576992968629
       },
       "tenure": {
-        "OpenAI": 30,
+        "OpenAI": 19,
         "Anthropic": 0,
         "NovaMind": 0,
-        "DeepMind": 0,
+        "DeepMind": 7,
         "Meta_AI": 0
       }
     },
@@ -244,44 +244,179 @@
       "name": "content_writer_cautious",
       "archetype": "cautious",
       "use_case": "content_writer",
-      "market_fraction": 0.0625,
+      "market_fraction": 0.025,
       "benchmark_weights": {
-        "coding_bench": 0.125,
-        "reasoning_bench": 0.25,
-        "reasoning": 0.25,
-        "question_answering": 0.125,
-        "factual_recall": 0.125,
-        "accounting": 0.125
+        "coding_bench": 0.047619047619047616,
+        "question_answering_bench": 0.23809523809523808,
+        "logical_reasoning": 0.19047619047619047,
+        "advanced_coding": 0.047619047619047616,
+        "factual_recall": 0.23809523809523808,
+        "science": 0.23809523809523808
       },
       "leaderboard_trust": 0.45,
       "switching_cost": 0.2,
       "switching_threshold": 0.25,
       "provider_shares": {
-        "OpenAI": 0.9836843235727979,
-        "Anthropic": 0.012335546524017681,
-        "NovaMind": 0.0008441768573022888,
-        "DeepMind": 0.0022191898484393985,
-        "Meta_AI": 0.0009167631974427885
+        "OpenAI": 0.8271612753685817,
+        "Anthropic": 0.037017759462143654,
+        "NovaMind": 0.000855592648801968,
+        "DeepMind": 0.13411417306876372,
+        "Meta_AI": 0.0008511994517090053
       },
       "believed_quality": {
-        "Anthropic": 0.9753399631244373,
-        "OpenAI": 0.99516590764876,
-        "DeepMind": 0.9611352255116792,
-        "Meta_AI": 0.979021688004701,
-        "NovaMind": 0.8832353925160824
+        "Anthropic": 0.9648292067337672,
+        "OpenAI": 0.9912517521350025,
+        "Meta_AI": 0.9632257313133508,
+        "DeepMind": 0.9866342702178303,
+        "NovaMind": 0.8989580937820859
       },
       "satisfaction": {
-        "OpenAI": 0.8888567540493666,
-        "Anthropic": 0.8257298616204417,
-        "NovaMind": 0.6788560633545746,
-        "DeepMind": 0.8231847141529502,
-        "Meta_AI": 0.7848256177829972
+        "OpenAI": 0.9591168932514569,
+        "Anthropic": 0.9313578751978427,
+        "NovaMind": 0.8533857597091873,
+        "DeepMind": 0.9424560486864569,
+        "Meta_AI": 0.921576992968629
       },
       "tenure": {
-        "OpenAI": 29,
-        "Anthropic": 2,
+        "OpenAI": 21,
+        "Anthropic": 3,
+        "NovaMind": 0,
+        "DeepMind": 8,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "legal_leaderboard_follower",
+      "archetype": "leaderboard_follower",
+      "use_case": "legal",
+      "market_fraction": 0.04000000000000001,
+      "benchmark_weights": {
+        "coding_bench": 0.08,
+        "question_answering_bench": 0.08,
+        "logical_reasoning": 0.6,
+        "advanced_coding": 0.08,
+        "factual_recall": 0.08,
+        "science": 0.08
+      },
+      "leaderboard_trust": 0.765,
+      "switching_cost": 0.05,
+      "switching_threshold": 0.15,
+      "provider_shares": {
+        "OpenAI": 0.6586886918671693,
+        "Anthropic": 0.0008206012173243654,
+        "NovaMind": 0.0007281654887644786,
+        "DeepMind": 0.33915904295565413,
+        "Meta_AI": 0.0006034984710877436
+      },
+      "believed_quality": {
+        "Anthropic": 0.9750511890351176,
+        "OpenAI": 0.9805193976322482,
+        "Meta_AI": 0.9782517744637553,
+        "DeepMind": 0.9885066941415912,
+        "NovaMind": 0.8704920857802069
+      },
+      "satisfaction": {
+        "OpenAI": 0.9498845387487025,
+        "Anthropic": 0.9430798574991931,
+        "NovaMind": 0.8261197517073082,
+        "DeepMind": 0.9455284726102178,
+        "Meta_AI": 0.9378030361190336
+      },
+      "tenure": {
+        "OpenAI": 25,
+        "Anthropic": 0,
+        "NovaMind": 0,
+        "DeepMind": 2,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "legal_experience_driven",
+      "archetype": "experience_driven",
+      "use_case": "legal",
+      "market_fraction": 0.034999999999999996,
+      "benchmark_weights": {
+        "coding_bench": 0.08,
+        "question_answering_bench": 0.08,
+        "logical_reasoning": 0.6,
+        "advanced_coding": 0.08,
+        "factual_recall": 0.08,
+        "science": 0.08
+      },
+      "leaderboard_trust": 0.315,
+      "switching_cost": 0.08,
+      "switching_threshold": 0.08,
+      "provider_shares": {
+        "OpenAI": 0.9968740824237053,
+        "Anthropic": 0.0009911853803813058,
+        "NovaMind": 0.0006381891993014512,
+        "DeepMind": 0.0006874467194214024,
+        "Meta_AI": 0.0008090962771904992
+      },
+      "believed_quality": {
+        "Anthropic": 0.9750511890351176,
+        "OpenAI": 0.9805193976322482,
+        "Meta_AI": 0.9782517744637553,
+        "DeepMind": 0.9885066941415912,
+        "NovaMind": 0.8704920857802069
+      },
+      "satisfaction": {
+        "OpenAI": 0.9498845387487025,
+        "Anthropic": 0.9430798574991931,
+        "NovaMind": 0.8261197517073082,
+        "DeepMind": 0.9455284726102178,
+        "Meta_AI": 0.9378030361190336
+      },
+      "tenure": {
+        "OpenAI": 28,
+        "Anthropic": 0,
         "NovaMind": 0,
         "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "legal_cautious",
+      "archetype": "cautious",
+      "use_case": "legal",
+      "market_fraction": 0.025,
+      "benchmark_weights": {
+        "coding_bench": 0.08,
+        "question_answering_bench": 0.08,
+        "logical_reasoning": 0.6,
+        "advanced_coding": 0.08,
+        "factual_recall": 0.08,
+        "science": 0.08
+      },
+      "leaderboard_trust": 0.45,
+      "switching_cost": 0.2,
+      "switching_threshold": 0.25,
+      "provider_shares": {
+        "OpenAI": 0.9134053708380014,
+        "Anthropic": 0.03491221784263142,
+        "NovaMind": 0.000995430439843983,
+        "DeepMind": 0.04968720926417003,
+        "Meta_AI": 0.000999771615353233
+      },
+      "believed_quality": {
+        "Anthropic": 0.9750511890351176,
+        "OpenAI": 0.9805193976322482,
+        "Meta_AI": 0.9782517744637553,
+        "DeepMind": 0.9885066941415912,
+        "NovaMind": 0.8704920857802069
+      },
+      "satisfaction": {
+        "OpenAI": 0.9498845387487025,
+        "Anthropic": 0.9430798574991931,
+        "NovaMind": 0.8261197517073082,
+        "DeepMind": 0.9455284726102178,
+        "Meta_AI": 0.9378030361190336
+      },
+      "tenure": {
+        "OpenAI": 27,
+        "Anthropic": 3,
+        "NovaMind": 0,
+        "DeepMind": 1,
         "Meta_AI": 0
       }
     },
@@ -289,41 +424,41 @@
       "name": "healthcare_leaderboard_follower",
       "archetype": "leaderboard_follower",
       "use_case": "healthcare",
-      "market_fraction": 0.1,
+      "market_fraction": 0.04000000000000001,
       "benchmark_weights": {
-        "coding_bench": 0.1,
-        "reasoning_bench": 0.3,
-        "reasoning": 0.3,
-        "question_answering": 0.1,
-        "factual_recall": 0.1,
-        "accounting": 0.1
+        "coding_bench": 0.14285714285714285,
+        "question_answering_bench": 0.14285714285714285,
+        "logical_reasoning": 0.2857142857142857,
+        "advanced_coding": 0.14285714285714285,
+        "factual_recall": 0.14285714285714285,
+        "science": 0.14285714285714285
       },
       "leaderboard_trust": 0.765,
       "switching_cost": 0.05,
       "switching_threshold": 0.15,
       "provider_shares": {
-        "OpenAI": 0.9971957610363452,
-        "Anthropic": 0.0007174350896211752,
-        "NovaMind": 0.000560199200593955,
-        "DeepMind": 0.0008322416236530554,
-        "Meta_AI": 0.0006943630497866169
+        "OpenAI": 0.9972353067071769,
+        "Anthropic": 0.0006294989447342939,
+        "NovaMind": 0.0006961074549353784,
+        "DeepMind": 0.0008612557502146908,
+        "Meta_AI": 0.0005778311429388104
       },
       "believed_quality": {
-        "Anthropic": 0.9763767169672044,
-        "OpenAI": 0.9955146737314042,
-        "DeepMind": 0.9623436358119993,
-        "Meta_AI": 0.9833288049075648,
-        "NovaMind": 0.8889632177569882
+        "Anthropic": 0.9612197842364263,
+        "OpenAI": 0.989286764197612,
+        "Meta_AI": 0.965439166646345,
+        "DeepMind": 0.9891292865830661,
+        "NovaMind": 0.8862116426303411
       },
       "satisfaction": {
-        "OpenAI": 0.8888567540493666,
-        "Anthropic": 0.8257298616204417,
-        "NovaMind": 0.6788560633545746,
-        "DeepMind": 0.8231847141529502,
-        "Meta_AI": 0.7848256177829972
+        "OpenAI": 0.9796519053140663,
+        "Anthropic": 0.9502484527005018,
+        "NovaMind": 0.8586393085574425,
+        "DeepMind": 0.9629510650516927,
+        "Meta_AI": 0.9417904283016233
       },
       "tenure": {
-        "OpenAI": 23,
+        "OpenAI": 29,
         "Anthropic": 0,
         "NovaMind": 0,
         "DeepMind": 0,
@@ -334,41 +469,41 @@
       "name": "healthcare_experience_driven",
       "archetype": "experience_driven",
       "use_case": "healthcare",
-      "market_fraction": 0.0875,
+      "market_fraction": 0.034999999999999996,
       "benchmark_weights": {
-        "coding_bench": 0.1,
-        "reasoning_bench": 0.3,
-        "reasoning": 0.3,
-        "question_answering": 0.1,
-        "factual_recall": 0.1,
-        "accounting": 0.1
+        "coding_bench": 0.14285714285714285,
+        "question_answering_bench": 0.14285714285714285,
+        "logical_reasoning": 0.2857142857142857,
+        "advanced_coding": 0.14285714285714285,
+        "factual_recall": 0.14285714285714285,
+        "science": 0.14285714285714285
       },
       "leaderboard_trust": 0.315,
       "switching_cost": 0.08,
       "switching_threshold": 0.08,
       "provider_shares": {
-        "OpenAI": 0.9981928350230832,
-        "Anthropic": 0.0005249585253559828,
-        "NovaMind": 0.0003255974278109009,
-        "DeepMind": 0.00045218435680342335,
-        "Meta_AI": 0.0005044246669465715
+        "OpenAI": 0.9974733484332999,
+        "Anthropic": 0.0008693044460282398,
+        "NovaMind": 0.0005253906094769316,
+        "DeepMind": 0.0005936345360629473,
+        "Meta_AI": 0.0005383219751320447
       },
       "believed_quality": {
-        "Anthropic": 0.9763767169672044,
-        "OpenAI": 0.9955146737314042,
-        "DeepMind": 0.9623436358119993,
-        "Meta_AI": 0.9833288049075648,
-        "NovaMind": 0.8889632177569882
+        "Anthropic": 0.9612197842364263,
+        "OpenAI": 0.989286764197612,
+        "Meta_AI": 0.965439166646345,
+        "DeepMind": 0.9891292865830661,
+        "NovaMind": 0.8862116426303411
       },
       "satisfaction": {
-        "OpenAI": 0.8888567540493666,
-        "Anthropic": 0.8257298616204417,
-        "NovaMind": 0.6788560633545746,
-        "DeepMind": 0.8231847141529502,
-        "Meta_AI": 0.7848256177829972
+        "OpenAI": 0.9796519053140663,
+        "Anthropic": 0.9502484527005018,
+        "NovaMind": 0.8586393085574425,
+        "DeepMind": 0.9629510650516927,
+        "Meta_AI": 0.9417904283016233
       },
       "tenure": {
-        "OpenAI": 30,
+        "OpenAI": 29,
         "Anthropic": 0,
         "NovaMind": 0,
         "DeepMind": 0,
@@ -379,44 +514,44 @@
       "name": "healthcare_cautious",
       "archetype": "cautious",
       "use_case": "healthcare",
-      "market_fraction": 0.0625,
+      "market_fraction": 0.025,
       "benchmark_weights": {
-        "coding_bench": 0.1,
-        "reasoning_bench": 0.3,
-        "reasoning": 0.3,
-        "question_answering": 0.1,
-        "factual_recall": 0.1,
-        "accounting": 0.1
+        "coding_bench": 0.14285714285714285,
+        "question_answering_bench": 0.14285714285714285,
+        "logical_reasoning": 0.2857142857142857,
+        "advanced_coding": 0.14285714285714285,
+        "factual_recall": 0.14285714285714285,
+        "science": 0.14285714285714285
       },
       "leaderboard_trust": 0.45,
       "switching_cost": 0.2,
       "switching_threshold": 0.25,
       "provider_shares": {
-        "OpenAI": 0.9597546556651331,
-        "Anthropic": 0.013880761615736174,
-        "NovaMind": 0.0009608851366167517,
-        "DeepMind": 0.02440810995855637,
-        "Meta_AI": 0.0009955876239576607
+        "OpenAI": 0.985685423403082,
+        "Anthropic": 0.011717228938535565,
+        "NovaMind": 0.0008175906443084489,
+        "DeepMind": 0.0009112616212930008,
+        "Meta_AI": 0.0008684953927810738
       },
       "believed_quality": {
-        "Anthropic": 0.9763767169672044,
-        "OpenAI": 0.9955146737314042,
-        "DeepMind": 0.9623436358119993,
-        "Meta_AI": 0.9833288049075648,
-        "NovaMind": 0.8889632177569882
+        "Anthropic": 0.9612197842364263,
+        "OpenAI": 0.989286764197612,
+        "Meta_AI": 0.965439166646345,
+        "DeepMind": 0.9891292865830661,
+        "NovaMind": 0.8862116426303411
       },
       "satisfaction": {
-        "OpenAI": 0.8888567540493666,
-        "Anthropic": 0.8257298616204417,
-        "NovaMind": 0.6788560633545746,
-        "DeepMind": 0.8231847141529502,
-        "Meta_AI": 0.7848256177829972
+        "OpenAI": 0.9796519053140663,
+        "Anthropic": 0.9502484527005018,
+        "NovaMind": 0.8586393085574425,
+        "DeepMind": 0.9629510650516927,
+        "Meta_AI": 0.9417904283016233
       },
       "tenure": {
-        "OpenAI": 27,
+        "OpenAI": 29,
         "Anthropic": 2,
         "NovaMind": 0,
-        "DeepMind": 3,
+        "DeepMind": 0,
         "Meta_AI": 0
       }
     },
@@ -424,44 +559,44 @@
       "name": "finance_leaderboard_follower",
       "archetype": "leaderboard_follower",
       "use_case": "finance",
-      "market_fraction": 0.1,
+      "market_fraction": 0.04000000000000001,
       "benchmark_weights": {
-        "coding_bench": 0.13333333333333333,
-        "reasoning_bench": 0.3333333333333333,
-        "reasoning": 0.3333333333333333,
-        "question_answering": 0.06666666666666667,
-        "factual_recall": 0.06666666666666667,
-        "accounting": 0.06666666666666667
+        "coding_bench": 0.045454545454545456,
+        "question_answering_bench": 0.09090909090909091,
+        "logical_reasoning": 0.6363636363636362,
+        "advanced_coding": 0.045454545454545456,
+        "factual_recall": 0.09090909090909091,
+        "science": 0.09090909090909091
       },
       "leaderboard_trust": 0.765,
       "switching_cost": 0.05,
       "switching_threshold": 0.15,
       "provider_shares": {
-        "OpenAI": 0.9975092194391596,
-        "Anthropic": 0.0006399660198243184,
-        "NovaMind": 0.0005612089668099361,
-        "DeepMind": 0.0006674254955406034,
-        "Meta_AI": 0.0006221800786655999
+        "OpenAI": 0.6573383554352322,
+        "Anthropic": 0.0012252127869647742,
+        "NovaMind": 0.0004789195193716986,
+        "DeepMind": 0.34014907709461595,
+        "Meta_AI": 0.0008084351638153293
       },
       "believed_quality": {
-        "Anthropic": 0.9773456259869024,
-        "OpenAI": 0.9961999841698816,
-        "DeepMind": 0.9646107673025345,
-        "Meta_AI": 0.9889310998340708,
-        "NovaMind": 0.8962523089857843
+        "Anthropic": 0.9785035581611072,
+        "OpenAI": 0.9792965846379531,
+        "Meta_AI": 0.9800954531232178,
+        "DeepMind": 0.9877407356602041,
+        "NovaMind": 0.8703286011213216
       },
       "satisfaction": {
-        "OpenAI": 0.8888567540493666,
-        "Anthropic": 0.8257298616204417,
-        "NovaMind": 0.6788560633545746,
-        "DeepMind": 0.8231847141529502,
-        "Meta_AI": 0.7848256177829972
+        "OpenAI": 0.9546617257544074,
+        "Anthropic": 0.9525322266251828,
+        "NovaMind": 0.830756267048423,
+        "DeepMind": 0.9495625141288307,
+        "Meta_AI": 0.9444467147784961
       },
       "tenure": {
-        "OpenAI": 25,
+        "OpenAI": 24,
         "Anthropic": 0,
         "NovaMind": 0,
-        "DeepMind": 0,
+        "DeepMind": 2,
         "Meta_AI": 0
       }
     },
@@ -469,38 +604,263 @@
       "name": "finance_experience_driven",
       "archetype": "experience_driven",
       "use_case": "finance",
-      "market_fraction": 0.0875,
+      "market_fraction": 0.034999999999999996,
       "benchmark_weights": {
-        "coding_bench": 0.13333333333333333,
-        "reasoning_bench": 0.3333333333333333,
-        "reasoning": 0.3333333333333333,
-        "question_answering": 0.06666666666666667,
-        "factual_recall": 0.06666666666666667,
-        "accounting": 0.06666666666666667
+        "coding_bench": 0.045454545454545456,
+        "question_answering_bench": 0.09090909090909091,
+        "logical_reasoning": 0.6363636363636362,
+        "advanced_coding": 0.045454545454545456,
+        "factual_recall": 0.09090909090909091,
+        "science": 0.09090909090909091
       },
       "leaderboard_trust": 0.315,
       "switching_cost": 0.08,
       "switching_threshold": 0.08,
       "provider_shares": {
-        "OpenAI": 0.9975423222787728,
-        "Anthropic": 0.0006063556594848823,
-        "NovaMind": 0.00031330138987203243,
-        "DeepMind": 0.0005485531113676499,
-        "Meta_AI": 0.000989467560502623
+        "OpenAI": 0.9863482008135919,
+        "Anthropic": 0.011588042901873681,
+        "NovaMind": 0.0004878670127817487,
+        "DeepMind": 0.0006144932088772174,
+        "Meta_AI": 0.0009613960628754957
       },
       "believed_quality": {
-        "Anthropic": 0.9773456259869024,
-        "OpenAI": 0.9961999841698816,
-        "DeepMind": 0.9646107673025345,
-        "Meta_AI": 0.9889310998340708,
-        "NovaMind": 0.8962523089857843
+        "Anthropic": 0.9785035581611072,
+        "OpenAI": 0.9792965846379531,
+        "Meta_AI": 0.9800954531232178,
+        "DeepMind": 0.9877407356602041,
+        "NovaMind": 0.8703286011213216
       },
       "satisfaction": {
-        "OpenAI": 0.8888567540493666,
-        "Anthropic": 0.8257298616204417,
-        "NovaMind": 0.6788560633545746,
-        "DeepMind": 0.8231847141529502,
-        "Meta_AI": 0.7848256177829972
+        "OpenAI": 0.9546617257544074,
+        "Anthropic": 0.9525322266251828,
+        "NovaMind": 0.830756267048423,
+        "DeepMind": 0.9495625141288307,
+        "Meta_AI": 0.9444467147784961
+      },
+      "tenure": {
+        "OpenAI": 25,
+        "Anthropic": 6,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "finance_cautious",
+      "archetype": "cautious",
+      "use_case": "finance",
+      "market_fraction": 0.025,
+      "benchmark_weights": {
+        "coding_bench": 0.045454545454545456,
+        "question_answering_bench": 0.09090909090909091,
+        "logical_reasoning": 0.6363636363636362,
+        "advanced_coding": 0.045454545454545456,
+        "factual_recall": 0.09090909090909091,
+        "science": 0.09090909090909091
+      },
+      "leaderboard_trust": 0.45,
+      "switching_cost": 0.2,
+      "switching_threshold": 0.25,
+      "provider_shares": {
+        "OpenAI": 0.8216623859854648,
+        "Anthropic": 0.12680504233590056,
+        "NovaMind": 0.0007131474176473685,
+        "DeepMind": 0.04986620011623063,
+        "Meta_AI": 0.0009532241447566686
+      },
+      "believed_quality": {
+        "Anthropic": 0.9785035581611072,
+        "OpenAI": 0.9792965846379531,
+        "Meta_AI": 0.9800954531232178,
+        "DeepMind": 0.9877407356602041,
+        "NovaMind": 0.8703286011213216
+      },
+      "satisfaction": {
+        "OpenAI": 0.9546617257544074,
+        "Anthropic": 0.9525322266251828,
+        "NovaMind": 0.830756267048423,
+        "DeepMind": 0.9495625141288307,
+        "Meta_AI": 0.9444467147784961
+      },
+      "tenure": {
+        "OpenAI": 24,
+        "Anthropic": 5,
+        "NovaMind": 0,
+        "DeepMind": 1,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "customer_service_leaderboard_follower",
+      "archetype": "leaderboard_follower",
+      "use_case": "customer_service",
+      "market_fraction": 0.04000000000000001,
+      "benchmark_weights": {
+        "coding_bench": 0.16129032258064518,
+        "question_answering_bench": 0.16129032258064518,
+        "logical_reasoning": 0.1935483870967742,
+        "advanced_coding": 0.16129032258064518,
+        "factual_recall": 0.16129032258064518,
+        "science": 0.16129032258064518
+      },
+      "leaderboard_trust": 0.765,
+      "switching_cost": 0.05,
+      "switching_threshold": 0.15,
+      "provider_shares": {
+        "OpenAI": 0.9972932088756924,
+        "Anthropic": 0.0004952244837983162,
+        "NovaMind": 0.0007290972371965959,
+        "DeepMind": 0.0008782246416220609,
+        "Meta_AI": 0.0006042447616906597
+      },
+      "believed_quality": {
+        "Anthropic": 0.9571278981525926,
+        "OpenAI": 0.9919233796491942,
+        "Meta_AI": 0.961662611629664,
+        "DeepMind": 0.9894203594309661,
+        "NovaMind": 0.8909036277046476
+      },
+      "satisfaction": {
+        "OpenAI": 0.9606885207656486,
+        "Anthropic": 0.9245565666166682,
+        "NovaMind": 0.846051293631749,
+        "DeepMind": 0.9459621378995927,
+        "Meta_AI": 0.9207338732849424
+      },
+      "tenure": {
+        "OpenAI": 29,
+        "Anthropic": 0,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "customer_service_experience_driven",
+      "archetype": "experience_driven",
+      "use_case": "customer_service",
+      "market_fraction": 0.034999999999999996,
+      "benchmark_weights": {
+        "coding_bench": 0.16129032258064518,
+        "question_answering_bench": 0.16129032258064518,
+        "logical_reasoning": 0.1935483870967742,
+        "advanced_coding": 0.16129032258064518,
+        "factual_recall": 0.16129032258064518,
+        "science": 0.16129032258064518
+      },
+      "leaderboard_trust": 0.315,
+      "switching_cost": 0.08,
+      "switching_threshold": 0.08,
+      "provider_shares": {
+        "OpenAI": 0.9972862398328953,
+        "Anthropic": 0.0006806016841540396,
+        "NovaMind": 0.0006416437792353886,
+        "DeepMind": 0.0007126715639063244,
+        "Meta_AI": 0.0006788431398089572
+      },
+      "believed_quality": {
+        "Anthropic": 0.9571278981525926,
+        "OpenAI": 0.9919233796491942,
+        "Meta_AI": 0.961662611629664,
+        "DeepMind": 0.9894203594309661,
+        "NovaMind": 0.8909036277046476
+      },
+      "satisfaction": {
+        "OpenAI": 0.9606885207656486,
+        "Anthropic": 0.9245565666166682,
+        "NovaMind": 0.846051293631749,
+        "DeepMind": 0.9459621378995927,
+        "Meta_AI": 0.9207338732849424
+      },
+      "tenure": {
+        "OpenAI": 29,
+        "Anthropic": 0,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "customer_service_cautious",
+      "archetype": "cautious",
+      "use_case": "customer_service",
+      "market_fraction": 0.025,
+      "benchmark_weights": {
+        "coding_bench": 0.16129032258064518,
+        "question_answering_bench": 0.16129032258064518,
+        "logical_reasoning": 0.1935483870967742,
+        "advanced_coding": 0.16129032258064518,
+        "factual_recall": 0.16129032258064518,
+        "science": 0.16129032258064518
+      },
+      "leaderboard_trust": 0.45,
+      "switching_cost": 0.2,
+      "switching_threshold": 0.25,
+      "provider_shares": {
+        "OpenAI": 0.9876037350210904,
+        "Anthropic": 0.009665356793937329,
+        "NovaMind": 0.0008752020777327922,
+        "DeepMind": 0.0008776680154333576,
+        "Meta_AI": 0.0009780380918059735
+      },
+      "believed_quality": {
+        "Anthropic": 0.9571278981525926,
+        "OpenAI": 0.9919233796491942,
+        "Meta_AI": 0.961662611629664,
+        "DeepMind": 0.9894203594309661,
+        "NovaMind": 0.8909036277046476
+      },
+      "satisfaction": {
+        "OpenAI": 0.9606885207656486,
+        "Anthropic": 0.9245565666166682,
+        "NovaMind": 0.846051293631749,
+        "DeepMind": 0.9459621378995927,
+        "Meta_AI": 0.9207338732849424
+      },
+      "tenure": {
+        "OpenAI": 29,
+        "Anthropic": 1,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "researcher_leaderboard_follower",
+      "archetype": "leaderboard_follower",
+      "use_case": "researcher",
+      "market_fraction": 0.04000000000000001,
+      "benchmark_weights": {
+        "coding_bench": 0.2647058823529412,
+        "question_answering_bench": 0.05882352941176471,
+        "logical_reasoning": 0.29411764705882354,
+        "advanced_coding": 0.2647058823529412,
+        "factual_recall": 0.05882352941176471,
+        "science": 0.05882352941176471
+      },
+      "leaderboard_trust": 0.765,
+      "switching_cost": 0.05,
+      "switching_threshold": 0.15,
+      "provider_shares": {
+        "OpenAI": 0.9976600568294508,
+        "Anthropic": 0.0005569950217498593,
+        "NovaMind": 0.0007465153403002733,
+        "DeepMind": 0.00037342999283108285,
+        "Meta_AI": 0.0006630028156680273
+      },
+      "believed_quality": {
+        "Anthropic": 0.9533465959563256,
+        "OpenAI": 0.9898685648333151,
+        "Meta_AI": 0.9642730398856113,
+        "DeepMind": 0.9920572845924889,
+        "NovaMind": 0.8783170204602757
+      },
+      "satisfaction": {
+        "OpenAI": 0.9577337059497695,
+        "Anthropic": 0.9198752644204012,
+        "NovaMind": 0.8327446863873771,
+        "DeepMind": 0.9478790630611155,
+        "Meta_AI": 0.9226243015408896
       },
       "tenure": {
         "OpenAI": 30,
@@ -511,41 +871,491 @@
       }
     },
     {
-      "name": "finance_cautious",
-      "archetype": "cautious",
-      "use_case": "finance",
-      "market_fraction": 0.0625,
+      "name": "researcher_experience_driven",
+      "archetype": "experience_driven",
+      "use_case": "researcher",
+      "market_fraction": 0.034999999999999996,
       "benchmark_weights": {
-        "coding_bench": 0.13333333333333333,
-        "reasoning_bench": 0.3333333333333333,
-        "reasoning": 0.3333333333333333,
-        "question_answering": 0.06666666666666667,
-        "factual_recall": 0.06666666666666667,
-        "accounting": 0.06666666666666667
+        "coding_bench": 0.2647058823529412,
+        "question_answering_bench": 0.05882352941176471,
+        "logical_reasoning": 0.29411764705882354,
+        "advanced_coding": 0.2647058823529412,
+        "factual_recall": 0.05882352941176471,
+        "science": 0.05882352941176471
+      },
+      "leaderboard_trust": 0.315,
+      "switching_cost": 0.08,
+      "switching_threshold": 0.08,
+      "provider_shares": {
+        "OpenAI": 0.9973083640248077,
+        "Anthropic": 0.0005888407268486783,
+        "NovaMind": 0.0003928011462870423,
+        "DeepMind": 0.0007511911828562993,
+        "Meta_AI": 0.0009588029192003032
+      },
+      "believed_quality": {
+        "Anthropic": 0.9533465959563256,
+        "OpenAI": 0.9898685648333151,
+        "Meta_AI": 0.9642730398856113,
+        "DeepMind": 0.9920572845924889,
+        "NovaMind": 0.8783170204602757
+      },
+      "satisfaction": {
+        "OpenAI": 0.9577337059497695,
+        "Anthropic": 0.9198752644204012,
+        "NovaMind": 0.8327446863873771,
+        "DeepMind": 0.9478790630611155,
+        "Meta_AI": 0.9226243015408896
+      },
+      "tenure": {
+        "OpenAI": 30,
+        "Anthropic": 0,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "researcher_cautious",
+      "archetype": "cautious",
+      "use_case": "researcher",
+      "market_fraction": 0.025,
+      "benchmark_weights": {
+        "coding_bench": 0.2647058823529412,
+        "question_answering_bench": 0.05882352941176471,
+        "logical_reasoning": 0.29411764705882354,
+        "advanced_coding": 0.2647058823529412,
+        "factual_recall": 0.05882352941176471,
+        "science": 0.05882352941176471
       },
       "leaderboard_trust": 0.45,
       "switching_cost": 0.2,
       "switching_threshold": 0.25,
       "provider_shares": {
-        "OpenAI": 0.9823119082439868,
-        "Anthropic": 0.013492298658367062,
-        "NovaMind": 0.0009159444154403391,
-        "DeepMind": 0.0023020364771152305,
-        "Meta_AI": 0.0009778122050905086
+        "OpenAI": 0.9963111192563717,
+        "Anthropic": 0.0008966648033540286,
+        "NovaMind": 0.0009993535546973262,
+        "DeepMind": 0.0009044242414863856,
+        "Meta_AI": 0.0008884381440906386
       },
       "believed_quality": {
-        "Anthropic": 0.9773456259869024,
-        "OpenAI": 0.9961999841698816,
-        "DeepMind": 0.9646107673025345,
-        "Meta_AI": 0.9889310998340708,
-        "NovaMind": 0.8962523089857843
+        "Anthropic": 0.9533465959563256,
+        "OpenAI": 0.9898685648333151,
+        "Meta_AI": 0.9642730398856113,
+        "DeepMind": 0.9920572845924889,
+        "NovaMind": 0.8783170204602757
       },
       "satisfaction": {
-        "OpenAI": 0.8888567540493666,
-        "Anthropic": 0.8257298616204417,
-        "NovaMind": 0.6788560633545746,
-        "DeepMind": 0.8231847141529502,
-        "Meta_AI": 0.7848256177829972
+        "OpenAI": 0.9577337059497695,
+        "Anthropic": 0.9198752644204012,
+        "NovaMind": 0.8327446863873771,
+        "DeepMind": 0.9478790630611155,
+        "Meta_AI": 0.9226243015408896
+      },
+      "tenure": {
+        "OpenAI": 30,
+        "Anthropic": 0,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "creative_leaderboard_follower",
+      "archetype": "leaderboard_follower",
+      "use_case": "creative",
+      "market_fraction": 0.04000000000000001,
+      "benchmark_weights": {
+        "coding_bench": 0.1,
+        "question_answering_bench": 0.2,
+        "logical_reasoning": 0.2,
+        "advanced_coding": 0.1,
+        "factual_recall": 0.2,
+        "science": 0.2
+      },
+      "leaderboard_trust": 0.765,
+      "switching_cost": 0.05,
+      "switching_threshold": 0.15,
+      "provider_shares": {
+        "OpenAI": 0.9975385217084084,
+        "Anthropic": 0.0005041446111487879,
+        "NovaMind": 0.00048685979733873385,
+        "DeepMind": 0.0006493060009889619,
+        "Meta_AI": 0.00082116788211518
+      },
+      "believed_quality": {
+        "Anthropic": 0.9614979368681961,
+        "OpenAI": 0.9913440471534574,
+        "Meta_AI": 0.9627665100305414,
+        "DeepMind": 0.9879421327081757,
+        "NovaMind": 0.8945846258295957
+      },
+      "satisfaction": {
+        "OpenAI": 0.9592091882699117,
+        "Anthropic": 0.9280266053322717,
+        "NovaMind": 0.8490122917566971,
+        "DeepMind": 0.9437639111768023,
+        "Meta_AI": 0.9211177716858197
+      },
+      "tenure": {
+        "OpenAI": 28,
+        "Anthropic": 0,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "creative_experience_driven",
+      "archetype": "experience_driven",
+      "use_case": "creative",
+      "market_fraction": 0.034999999999999996,
+      "benchmark_weights": {
+        "coding_bench": 0.1,
+        "question_answering_bench": 0.2,
+        "logical_reasoning": 0.2,
+        "advanced_coding": 0.1,
+        "factual_recall": 0.2,
+        "science": 0.2
+      },
+      "leaderboard_trust": 0.315,
+      "switching_cost": 0.08,
+      "switching_threshold": 0.08,
+      "provider_shares": {
+        "OpenAI": 0.9973992619500731,
+        "Anthropic": 0.0006295168044244518,
+        "NovaMind": 0.0005223610366823553,
+        "DeepMind": 0.0005558102459996119,
+        "Meta_AI": 0.0008930499628204894
+      },
+      "believed_quality": {
+        "Anthropic": 0.9614979368681961,
+        "OpenAI": 0.9913440471534574,
+        "Meta_AI": 0.9627665100305414,
+        "DeepMind": 0.9879421327081757,
+        "NovaMind": 0.8945846258295957
+      },
+      "satisfaction": {
+        "OpenAI": 0.9592091882699117,
+        "Anthropic": 0.9280266053322717,
+        "NovaMind": 0.8490122917566971,
+        "DeepMind": 0.9437639111768023,
+        "Meta_AI": 0.9211177716858197
+      },
+      "tenure": {
+        "OpenAI": 27,
+        "Anthropic": 0,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "creative_cautious",
+      "archetype": "cautious",
+      "use_case": "creative",
+      "market_fraction": 0.025,
+      "benchmark_weights": {
+        "coding_bench": 0.1,
+        "question_answering_bench": 0.2,
+        "logical_reasoning": 0.2,
+        "advanced_coding": 0.1,
+        "factual_recall": 0.2,
+        "science": 0.2
+      },
+      "leaderboard_trust": 0.45,
+      "switching_cost": 0.2,
+      "switching_threshold": 0.25,
+      "provider_shares": {
+        "OpenAI": 0.9596518498477173,
+        "Anthropic": 0.03202323642759249,
+        "NovaMind": 0.0009887991664962361,
+        "DeepMind": 0.006420079024803682,
+        "Meta_AI": 0.000916035533390307
+      },
+      "believed_quality": {
+        "Anthropic": 0.9614979368681961,
+        "OpenAI": 0.9913440471534574,
+        "Meta_AI": 0.9627665100305414,
+        "DeepMind": 0.9879421327081757,
+        "NovaMind": 0.8945846258295957
+      },
+      "satisfaction": {
+        "OpenAI": 0.9592091882699117,
+        "Anthropic": 0.9280266053322717,
+        "NovaMind": 0.8490122917566971,
+        "DeepMind": 0.9437639111768023,
+        "Meta_AI": 0.9211177716858197
+      },
+      "tenure": {
+        "OpenAI": 27,
+        "Anthropic": 3,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "marketing_leaderboard_follower",
+      "archetype": "leaderboard_follower",
+      "use_case": "marketing",
+      "market_fraction": 0.04000000000000001,
+      "benchmark_weights": {
+        "coding_bench": 0.08333333333333333,
+        "question_answering_bench": 0.16666666666666666,
+        "logical_reasoning": 0.3333333333333333,
+        "advanced_coding": 0.08333333333333333,
+        "factual_recall": 0.16666666666666666,
+        "science": 0.16666666666666666
+      },
+      "leaderboard_trust": 0.765,
+      "switching_cost": 0.05,
+      "switching_threshold": 0.15,
+      "provider_shares": {
+        "OpenAI": 0.9971065255202177,
+        "Anthropic": 0.0009302490369029496,
+        "NovaMind": 0.00048685979733873385,
+        "DeepMind": 0.0006551977634254714,
+        "Meta_AI": 0.0008211678821151793
+      },
+      "believed_quality": {
+        "Anthropic": 0.9667346868926399,
+        "OpenAI": 0.9875767129471034,
+        "Meta_AI": 0.968075173649072,
+        "DeepMind": 0.9877356748654393,
+        "NovaMind": 0.8870194417398234
+      },
+      "satisfaction": {
+        "OpenAI": 0.9554418540635577,
+        "Anthropic": 0.9332633553567155,
+        "NovaMind": 0.8414471076669248,
+        "DeepMind": 0.9435574533340659,
+        "Meta_AI": 0.9264264353043503
+      },
+      "tenure": {
+        "OpenAI": 27,
+        "Anthropic": 0,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "marketing_experience_driven",
+      "archetype": "experience_driven",
+      "use_case": "marketing",
+      "market_fraction": 0.034999999999999996,
+      "benchmark_weights": {
+        "coding_bench": 0.08333333333333333,
+        "question_answering_bench": 0.16666666666666666,
+        "logical_reasoning": 0.3333333333333333,
+        "advanced_coding": 0.08333333333333333,
+        "factual_recall": 0.16666666666666666,
+        "science": 0.16666666666666666
+      },
+      "leaderboard_trust": 0.315,
+      "switching_cost": 0.08,
+      "switching_threshold": 0.08,
+      "provider_shares": {
+        "OpenAI": 0.9973386076568297,
+        "Anthropic": 0.0006592136821620075,
+        "NovaMind": 0.0005223610366823554,
+        "DeepMind": 0.0005332980840720919,
+        "Meta_AI": 0.0009465195402538392
+      },
+      "believed_quality": {
+        "Anthropic": 0.9667346868926399,
+        "OpenAI": 0.9875767129471034,
+        "Meta_AI": 0.968075173649072,
+        "DeepMind": 0.9877356748654393,
+        "NovaMind": 0.8870194417398234
+      },
+      "satisfaction": {
+        "OpenAI": 0.9554418540635577,
+        "Anthropic": 0.9332633553567155,
+        "NovaMind": 0.8414471076669248,
+        "DeepMind": 0.9435574533340659,
+        "Meta_AI": 0.9264264353043503
+      },
+      "tenure": {
+        "OpenAI": 27,
+        "Anthropic": 0,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "marketing_cautious",
+      "archetype": "cautious",
+      "use_case": "marketing",
+      "market_fraction": 0.025,
+      "benchmark_weights": {
+        "coding_bench": 0.08333333333333333,
+        "question_answering_bench": 0.16666666666666666,
+        "logical_reasoning": 0.3333333333333333,
+        "advanced_coding": 0.08333333333333333,
+        "factual_recall": 0.16666666666666666,
+        "science": 0.16666666666666666
+      },
+      "leaderboard_trust": 0.45,
+      "switching_cost": 0.2,
+      "switching_threshold": 0.25,
+      "provider_shares": {
+        "OpenAI": 0.9559725729501123,
+        "Anthropic": 0.03772905527293691,
+        "NovaMind": 0.0009277806787558071,
+        "DeepMind": 0.004410493361967262,
+        "Meta_AI": 0.0009600977362277948
+      },
+      "believed_quality": {
+        "Anthropic": 0.9667346868926399,
+        "OpenAI": 0.9875767129471034,
+        "Meta_AI": 0.968075173649072,
+        "DeepMind": 0.9877356748654393,
+        "NovaMind": 0.8870194417398234
+      },
+      "satisfaction": {
+        "OpenAI": 0.9554418540635577,
+        "Anthropic": 0.9332633553567155,
+        "NovaMind": 0.8414471076669248,
+        "DeepMind": 0.9435574533340659,
+        "Meta_AI": 0.9264264353043503
+      },
+      "tenure": {
+        "OpenAI": 27,
+        "Anthropic": 3,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "service_worker_leaderboard_follower",
+      "archetype": "leaderboard_follower",
+      "use_case": "service_worker",
+      "market_fraction": 0.04000000000000001,
+      "benchmark_weights": {
+        "coding_bench": 0.13333333333333333,
+        "question_answering_bench": 0.13333333333333333,
+        "logical_reasoning": 0.3333333333333333,
+        "advanced_coding": 0.13333333333333333,
+        "factual_recall": 0.13333333333333333,
+        "science": 0.13333333333333333
+      },
+      "leaderboard_trust": 0.765,
+      "switching_cost": 0.05,
+      "switching_threshold": 0.15,
+      "provider_shares": {
+        "OpenAI": 0.9970735727491127,
+        "Anthropic": 0.0006928698039926269,
+        "NovaMind": 0.0007258399682374512,
+        "DeepMind": 0.0009060815717764552,
+        "Meta_AI": 0.0006016359068808635
+      },
+      "believed_quality": {
+        "Anthropic": 0.9633275062494635,
+        "OpenAI": 0.9879373926804036,
+        "Meta_AI": 0.9673875057458432,
+        "DeepMind": 0.9890009017401833,
+        "NovaMind": 0.8838039139567259
+      },
+      "satisfaction": {
+        "OpenAI": 0.958802533796858,
+        "Anthropic": 0.9328561747135391,
+        "NovaMind": 0.8406315798838272,
+        "DeepMind": 0.9472226802088098,
+        "Meta_AI": 0.9281387674011214
+      },
+      "tenure": {
+        "OpenAI": 29,
+        "Anthropic": 0,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "service_worker_experience_driven",
+      "archetype": "experience_driven",
+      "use_case": "service_worker",
+      "market_fraction": 0.034999999999999996,
+      "benchmark_weights": {
+        "coding_bench": 0.13333333333333333,
+        "question_answering_bench": 0.13333333333333333,
+        "logical_reasoning": 0.3333333333333333,
+        "advanced_coding": 0.13333333333333333,
+        "factual_recall": 0.13333333333333333,
+        "science": 0.13333333333333333
+      },
+      "leaderboard_trust": 0.315,
+      "switching_cost": 0.08,
+      "switching_threshold": 0.08,
+      "provider_shares": {
+        "OpenAI": 0.9970757971388908,
+        "Anthropic": 0.0009293300027687409,
+        "NovaMind": 0.0006296092909092546,
+        "DeepMind": 0.000708099600448683,
+        "Meta_AI": 0.0006571639669825937
+      },
+      "believed_quality": {
+        "Anthropic": 0.9633275062494635,
+        "OpenAI": 0.9879373926804036,
+        "Meta_AI": 0.9673875057458432,
+        "DeepMind": 0.9890009017401833,
+        "NovaMind": 0.8838039139567259
+      },
+      "satisfaction": {
+        "OpenAI": 0.958802533796858,
+        "Anthropic": 0.9328561747135391,
+        "NovaMind": 0.8406315798838272,
+        "DeepMind": 0.9472226802088098,
+        "Meta_AI": 0.9281387674011214
+      },
+      "tenure": {
+        "OpenAI": 29,
+        "Anthropic": 0,
+        "NovaMind": 0,
+        "DeepMind": 0,
+        "Meta_AI": 0
+      }
+    },
+    {
+      "name": "service_worker_cautious",
+      "archetype": "cautious",
+      "use_case": "service_worker",
+      "market_fraction": 0.025,
+      "benchmark_weights": {
+        "coding_bench": 0.13333333333333333,
+        "question_answering_bench": 0.13333333333333333,
+        "logical_reasoning": 0.3333333333333333,
+        "advanced_coding": 0.13333333333333333,
+        "factual_recall": 0.13333333333333333,
+        "science": 0.13333333333333333
+      },
+      "leaderboard_trust": 0.45,
+      "switching_cost": 0.2,
+      "switching_threshold": 0.25,
+      "provider_shares": {
+        "OpenAI": 0.9850042845961337,
+        "Anthropic": 0.01224780224480756,
+        "NovaMind": 0.0009359363658748189,
+        "DeepMind": 0.0009283971559650055,
+        "Meta_AI": 0.0008835796372189392
+      },
+      "believed_quality": {
+        "Anthropic": 0.9633275062494635,
+        "OpenAI": 0.9879373926804036,
+        "Meta_AI": 0.9673875057458432,
+        "DeepMind": 0.9890009017401833,
+        "NovaMind": 0.8838039139567259
+      },
+      "satisfaction": {
+        "OpenAI": 0.958802533796858,
+        "Anthropic": 0.9328561747135391,
+        "NovaMind": 0.8406315798838272,
+        "DeepMind": 0.9472226802088098,
+        "Meta_AI": 0.9281387674011214
       },
       "tenure": {
         "OpenAI": 29,

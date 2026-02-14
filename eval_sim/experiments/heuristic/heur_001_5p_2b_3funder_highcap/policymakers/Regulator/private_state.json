@@ -4,9 +4,9 @@
     "fairness"
   ],
   "risk_beliefs": {
-    "gaming_risk": 0.0,
+    "gaming_risk": 0.7500000000000001,
     "consumer_harm_risk": 0.0,
-    "validity_degradation_risk": 0.3
+    "validity_degradation_risk": 0.35
   },
   "industry_trust": 1.0,
   "regulatory_capacity": 1.0,
@@ -19,10 +19,18 @@
       }
     ],
     [
-      8,
+      7,
       "public_warning",
       {
         "warning_severity": "moderate"
+      }
+    ],
+    [
+      27,
+      "mandate_benchmark",
+      {
+        "validity": 0.7999999999999999,
+        "exploitability": 0.3
       }
     ]
   ],
