@@ -295,10 +295,12 @@ def plot_consumer_dashboard(
     Create a dashboard for Consumer actors.
 
     Panels:
-    1. Average Satisfaction over time
-    2. Subscription Switches per round
-    3. Market Share (subscriptions per provider)
-    4. Satisfaction Distribution (min/max/avg)
+    1. Satisfaction by Use Case (profession)
+    2. Switching Rate by Use Case (stacked bar)
+    3. Switching Rate by Archetype (stacked bar)
+    4. Market Share (subscriptions per provider)
+    5. Per-Provider Satisfaction
+    6. Satisfaction Gap (Score - Satisfaction)
 
     Args:
         history: List of round data dicts
@@ -322,26 +324,122 @@ def plot_consumer_dashboard(
     fig, axes = plt.subplots(2, 3, figsize=figsize)
     fig.suptitle("Consumer Dashboard", fontsize=14, fontweight='bold')
 
-    # --- Panel 1: Average Satisfaction ---
+    # --- Panel 1: Satisfaction by Use Case ---
     ax1 = axes[0, 0]
-    avg_satisfaction = [h["consumer_data"].get("avg_satisfaction", 0) for h in consumer_rounds]
-    ax1.plot(rounds, avg_satisfaction, 'o-', color='#2A9D8F', markersize=4, linewidth=2)
-    ax1.axhline(y=0.5, color='gray', linestyle='--', alpha=0.5, label='Neutral')
-    ax1.fill_between(rounds, 0.7, 1.0, alpha=0.1, color='green', label='High')
-    ax1.fill_between(rounds, 0, 0.3, alpha=0.1, color='red', label='Low')
+
+    # Extract use cases and compute average satisfaction per use case
+    use_cases_set = set()
+    for h in consumer_rounds:
+        segment_data = h["consumer_data"].get("segment_data", {})
+        for seg_name, seg_info in segment_data.items():
+            use_case = seg_info.get("use_case")
+            if use_case:
+                use_cases_set.add(use_case)
+
+    use_cases = sorted(use_cases_set)
+    use_case_colors = get_provider_colors(len(use_cases))
+
+    for i, use_case in enumerate(use_cases):
+        use_case_satisfaction = []
+        for h in consumer_rounds:
+            segment_data = h["consumer_data"].get("segment_data", {})
+            # Aggregate satisfaction across all segments with this use_case
+            total_sat = 0.0
+            count = 0
+            for seg_name, seg_info in segment_data.items():
+                if seg_info.get("use_case") == use_case:
+                    # Average satisfaction across all providers in this segment
+                    seg_sats = seg_info.get("satisfaction", {}).values()
+                    if seg_sats:
+                        total_sat += sum(seg_sats) / len(seg_sats)
+                        count += 1
+            if count > 0:
+                use_case_satisfaction.append(total_sat / count)
+            else:
+                use_case_satisfaction.append(0)
+
+        ax1.plot(rounds, use_case_satisfaction, 'o-', label=use_case,
+                color=use_case_colors[i], markersize=3, linewidth=1.5)
+
+    ax1.axhline(y=0.5, color='gray', linestyle='--', alpha=0.5)
     ax1.set_ylim(0, 1)
-    style_axis(ax1, "Average Consumer Satisfaction", "Round", "Satisfaction")
+    style_axis(ax1, "Satisfaction by Use Case", "Round", "Satisfaction")
 
-    # --- Panel 2: Switching Rate ---
+    # --- Panel 2: Switching Rate by Use Case (stacked bar) ---
     ax2 = axes[0, 1]
-    switching_rates = [h["consumer_data"].get("switching_rate", 0) for h in consumer_rounds]
-    ax2.bar(rounds, [r * 100 for r in switching_rates], color='#E76F51', alpha=0.7)
+
+    # Aggregate switching by use_case across archetypes
+    use_case_switching = {uc: [] for uc in use_cases}
+    for h in consumer_rounds:
+        segment_data = h["consumer_data"].get("segment_data", {})
+        use_case_totals = {uc: 0.0 for uc in use_cases}
+
+        for seg_name, seg_info in segment_data.items():
+            use_case = seg_info.get("use_case")
+            if use_case in use_cases:
+                # Switching rate × market_fraction = contribution to total switching
+                seg_switching = seg_info.get("switching_rate", 0.0)
+                market_frac = seg_info.get("market_fraction", 0.0)
+                use_case_totals[use_case] += seg_switching * market_frac
+
+        for uc in use_cases:
+            use_case_switching[uc].append(use_case_totals[uc] * 100)  # Convert to %
+
+    # Stacked bar chart
+    bottom = np.zeros(len(rounds))
+    for i, use_case in enumerate(use_cases):
+        values = np.array(use_case_switching[use_case])
+        ax2.bar(rounds, values, bottom=bottom, label=use_case,
+                color=use_case_colors[i], alpha=0.8, width=0.8)
+        bottom += values
+
     ax2.set_ylabel("Switching Rate (%)", fontsize=9)
-    style_axis(ax2, "Market Switching Rate Per Round", "Round", "Switching Rate (%)", legend=False)
+    ax2.legend(loc='upper right', fontsize=6)
+    style_axis(ax2, "Switching Rate by Use Case", "Round", "Switching Rate (%)", legend=False)
 
-    # --- Panel 3: Market Share Over Time ---
-    ax3 = axes[1, 0]
+    # --- Panel 3: Switching Rate by Archetype (stacked bar) ---
+    ax3 = axes[0, 2]
 
+    # Extract archetypes and aggregate switching
+    archetypes_set = set()
+    for h in consumer_rounds:
+        segment_data = h["consumer_data"].get("segment_data", {})
+        for seg_name, seg_info in segment_data.items():
+            archetype = seg_info.get("archetype")
+            if archetype:
+                archetypes_set.add(archetype)
+
+    archetypes = sorted(archetypes_set)
+    archetype_colors = get_provider_colors(len(archetypes))
+
+    archetype_switching = {arch: [] for arch in archetypes}
+    for h in consumer_rounds:
+        segment_data = h["consumer_data"].get("segment_data", {})
+        archetype_totals = {arch: 0.0 for arch in archetypes}
+
+        for seg_name, seg_info in segment_data.items():
+            archetype = seg_info.get("archetype")
+            if archetype in archetypes:
+                seg_switching = seg_info.get("switching_rate", 0.0)
+                market_frac = seg_info.get("market_fraction", 0.0)
+                archetype_totals[archetype] += seg_switching * market_frac
+
+        for arch in archetypes:
+            archetype_switching[arch].append(archetype_totals[arch] * 100)
+
+    # Stacked bar chart
+    bottom = np.zeros(len(rounds))
+    for i, archetype in enumerate(archetypes):
+        values = np.array(archetype_switching[archetype])
+        ax3.bar(rounds, values, bottom=bottom, label=archetype.replace("_", " ").title(),
+                color=archetype_colors[i], alpha=0.8, width=0.8)
+        bottom += values
+
+    ax3.set_ylabel("Switching Rate (%)", fontsize=9)
+    ax3.legend(loc='upper right', fontsize=7)
+    style_axis(ax3, "Switching Rate by Archetype", "Round", "Switching Rate (%)", legend=False)
+
+    # --- Panel 4: Market Share Over Time ---
     # Use market_shares (proportions) from consumer_data
     market_share = {p: [] for p in providers}
     for h in consumer_rounds:
@@ -353,66 +451,38 @@ def plot_consumer_dashboard(
     bottom = np.zeros(len(rounds))
     for provider in providers:
         values = np.array(market_share[provider])
-        ax3.fill_between(rounds, bottom, bottom + values,
+        ax4.fill_between(rounds, bottom, bottom + values,
                         alpha=0.7, label=provider, color=provider_colors[provider])
         bottom += values
 
-    ax3.set_ylim(0, 1.05)
-    style_axis(ax3, "Market Share", "Round", "Share")
+    ax4.set_ylim(0, 1.05)
+    style_axis(ax4, "Market Share", "Round", "Share")
 
-    # --- Panel 4: Per-Provider Satisfaction ---
-    ax4 = axes[1, 1]
+    # --- Panel 5: Per-Provider Satisfaction ---
+    avg_satisfaction = [h["consumer_data"].get("avg_satisfaction", 0) for h in consumer_rounds]
 
     for provider in providers:
         prov_sats = []
         for h in consumer_rounds:
             prov_sat = h["consumer_data"].get("provider_satisfaction", {})
             prov_sats.append(prov_sat.get(provider, 0))
-        ax4.plot(rounds, prov_sats, 'o-', label=provider, color=provider_colors[provider],
+        ax5.plot(rounds, prov_sats, 'o-', label=provider, color=provider_colors[provider],
                  markersize=3, linewidth=2)
 
-    ax4.plot(rounds, avg_satisfaction, 'k--', linewidth=1.5, alpha=0.5, label='Market Avg')
-    ax4.set_ylim(0, 1)
-    style_axis(ax4, "Per-Provider Satisfaction", "Round", "Satisfaction")
+    ax5.plot(rounds, avg_satisfaction, 'k--', linewidth=1.5, alpha=0.5, label='Market Avg')
+    ax5.set_ylim(0, 1)
+    style_axis(ax5, "Per-Provider Satisfaction", "Round", "Satisfaction")
 
-    # --- Panel 5: Satisfaction Gap (Score - Satisfaction) ---
-    ax5 = axes[0, 2]
+    # --- Panel 6: Satisfaction Gap (Score - Satisfaction) ---
     for provider in providers:
         scores = [h["scores"][provider] for h in consumer_rounds]
         prov_sats = [h["consumer_data"].get("provider_satisfaction", {}).get(provider, 0)
                      for h in consumer_rounds]
         gap = [s - sat for s, sat in zip(scores, prov_sats)]
-        ax5.plot(rounds, gap, 'o-', label=provider, color=provider_colors[provider],
+        ax6.plot(rounds, gap, 'o-', label=provider, color=provider_colors[provider],
                  markersize=3, linewidth=2)
-    ax5.axhline(y=0, color='black', linestyle='-', linewidth=1, alpha=0.5)
-    style_axis(ax5, "Satisfaction Gap (Score - Satisfaction)", "Round", "Gap")
-
-    # --- Panel 6: Segment Market Share (Final Round) Heatmap ---
-    ax6 = axes[1, 2]
-    last_round = consumer_rounds[-1]
-    segment_data = last_round["consumer_data"].get("segment_data", {})
-    if segment_data:
-        segments = sorted(segment_data.keys())
-        share_matrix = []
-        for seg in segments:
-            row = []
-            seg_shares = segment_data[seg].get("provider_shares", {})
-            for p in providers:
-                row.append(seg_shares.get(p, 0))
-            share_matrix.append(row)
-        share_matrix = np.array(share_matrix)
-
-        im = ax6.imshow(share_matrix, aspect='auto', cmap='Blues', vmin=0, vmax=1)
-        ax6.set_yticks(range(len(segments)))
-        ax6.set_yticklabels(segments, fontsize=8)
-        ax6.set_xticks(range(len(providers)))
-        ax6.set_xticklabels(providers, rotation=45, ha='right', fontsize=8)
-        fig.colorbar(im, ax=ax6, fraction=0.046, pad=0.04)
-        ax6.set_title("Segment Market Share (Final Round)", fontsize=11, fontweight='bold')
-    else:
-        ax6.text(0.5, 0.5, "No segment data", ha='center', va='center',
-                 transform=ax6.transAxes, fontsize=10, alpha=0.5)
-        ax6.set_title("Segment Market Share (Final Round)", fontsize=11, fontweight='bold')
+    ax6.axhline(y=0, color='black', linestyle='-', linewidth=1, alpha=0.5)
+    style_axis(ax6, "Satisfaction Gap (Score - Satisfaction)", "Round", "Gap")
 
     plt.tight_layout()
 

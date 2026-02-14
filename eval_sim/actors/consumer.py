@@ -32,43 +32,47 @@ import numpy as np
 USE_CASE_PROFILES = {
     "software_dev": {
         "label": "Software Developer",
-        "benchmark_prefs": {"coding": 0.7, "reasoning": 0.2, "writing": 0.1},
+        "benchmark_prefs": {"coding": 0.80, "reasoning": 0.15, "writing": 0.05},
     },
     "content_writer": {
         "label": "Content Writer",
-        "benchmark_prefs": {"writing": 0.7, "reasoning": 0.2, "coding": 0.1},
+        "benchmark_prefs": {"writing": 0.80, "reasoning": 0.15, "coding": 0.05},
     },
     "legal": {
         "label": "Legal Professional",
-        "benchmark_prefs": {"reasoning": 0.5, "writing": 0.4, "safety": 0.1},
+        "benchmark_prefs": {"reasoning": 0.65, "writing": 0.30, "safety": 0.05},
     },
     "healthcare": {
         "label": "Healthcare Worker",
-        "benchmark_prefs": {"safety": 0.5, "reasoning": 0.3, "writing": 0.2},
+        "benchmark_prefs": {"safety": 0.60, "reasoning": 0.25, "writing": 0.15},
     },
     "finance": {
         "label": "Finance Analyst",
-        "benchmark_prefs": {"reasoning": 0.5, "safety": 0.3, "coding": 0.2},
+        "benchmark_prefs": {"reasoning": 0.60, "safety": 0.25, "coding": 0.15},
     },
     "educator": {
         "label": "Educator",
-        "benchmark_prefs": {"writing": 0.4, "reasoning": 0.4, "safety": 0.2},
+        "benchmark_prefs": {"writing": 0.45, "reasoning": 0.40, "safety": 0.15},
     },
     "customer_service": {
         "label": "Customer Service",
-        "benchmark_prefs": {"writing": 0.6, "reasoning": 0.3, "safety": 0.1},
+        "benchmark_prefs": {"writing": 0.70, "reasoning": 0.25, "safety": 0.05},
     },
     "researcher": {
         "label": "Researcher",
-        "benchmark_prefs": {"reasoning": 0.4, "coding": 0.4, "writing": 0.2},
+        "benchmark_prefs": {"reasoning": 0.45, "coding": 0.45, "writing": 0.10},
     },
     "creative": {
         "label": "Creative Professional",
-        "benchmark_prefs": {"writing": 0.6, "reasoning": 0.2, "coding": 0.2},
+        "benchmark_prefs": {"writing": 0.70, "reasoning": 0.20, "coding": 0.10},
     },
     "marketing": {
         "label": "Marketing Professional",
-        "benchmark_prefs": {"writing": 0.5, "reasoning": 0.3, "coding": 0.2},
+        "benchmark_prefs": {"writing": 0.60, "reasoning": 0.30, "coding": 0.10},
+    },
+    "service_worker": {
+        "label": "Service Worker",
+        "benchmark_prefs": {"writing": 0.55, "reasoning": 0.30, "safety": 0.15},
     },
 }
 
@@ -167,6 +171,7 @@ class ConsumerMarket:
         self.rng = np.random.default_rng(seed)
         self.current_round = 0
         self.memory = []
+        self._last_segment_switching = {}  # Track per-segment switching rates
 
         # Initialize provider shares if not already set
         for seg in self.segments:
@@ -301,20 +306,92 @@ class ConsumerMarket:
                         (1 - learning_rate) * old + learning_rate * perceived_score
                     )
 
-    def compute_satisfaction(self, ground_truth: dict):
+    def compute_satisfaction(
+        self,
+        ground_truth: dict,
+        provider_strategies: Optional[dict] = None,
+        published_scores: Optional[dict] = None,
+        media_coverage: Optional[dict] = None,
+    ):
         """Compute per-segment per-provider satisfaction from ground truth.
 
-        Satisfaction = true_capability of the provider. This is the actual
-        experience the consumer has, independent of benchmark scores.
+        Satisfaction is based on:
+        1. True capability (base)
+        2. Use-case capability match (believed quality alignment with preferences)
+        3. Gaming detection penalty (score inflation above true capability)
+        4. Safety alignment match (provider safety investment × segment safety preference)
+        5. Media sentiment influence (negative coverage reduces satisfaction)
 
         Args:
             ground_truth: {provider_name: ProviderGroundTruth}
+            provider_strategies: {provider_name: {fundamental_research, ...}}
+            published_scores: {provider_name: composite_score}
+            media_coverage: Media coverage dict with sentiment and provider_attention
         """
         for seg in self.segments:
             for provider_name in self.provider_names:
-                if provider_name in ground_truth:
-                    gt = ground_truth[provider_name]
-                    seg.satisfaction[provider_name] = gt.true_capability
+                if provider_name not in ground_truth:
+                    continue
+
+                gt = ground_truth[provider_name]
+                base_satisfaction = gt.true_capability
+
+                # Factor 1: Use-Case Capability Match
+                # If provider's believed quality (use-case weighted scores) aligns with
+                # true capability, boost satisfaction slightly
+                use_case_bonus = 0.0
+                if provider_name in seg.believed_quality:
+                    believed = seg.believed_quality[provider_name]
+                    # Bonus if believed quality matches or exceeds true capability
+                    # (provider is good at what this segment cares about)
+                    if believed >= base_satisfaction:
+                        use_case_bonus = 0.05 * (believed - base_satisfaction)
+                    use_case_bonus = min(0.08, use_case_bonus)  # Cap bonus
+
+                # Factor 2: Gaming Detection Penalty
+                # If score >> true_capability, consumer experiences disappointment
+                gaming_penalty = 0.0
+                if published_scores and provider_name in published_scores:
+                    score = published_scores[provider_name]
+                    gap = max(0, score - base_satisfaction)
+                    gaming_penalty = 0.15 * gap  # 15% penalty per unit of inflation
+
+                # Factor 3: Safety Alignment Match
+                # Segments with high safety preferences value safety investment
+                safety_bonus = 0.0
+                if provider_strategies and provider_name in provider_strategies:
+                    strategy = provider_strategies[provider_name]
+                    safety_investment = strategy.get("safety_alignment", 0.0)
+                    # Get segment's safety preference weight
+                    safety_pref = 0.0
+                    for cat, weight in USE_CASE_PROFILES.get(seg.use_case, {}).get("benchmark_prefs", {}).items():
+                        if "safety" in cat.lower():
+                            safety_pref = weight
+                            break
+                    # Bonus scales with both provider investment and segment preference
+                    safety_bonus = 0.10 * safety_investment * safety_pref
+
+                # Factor 4: Media Sentiment Influence
+                # Negative media coverage reduces satisfaction
+                media_penalty = 0.0
+                if media_coverage:
+                    sentiment = media_coverage.get("sentiment", 0.0)
+                    provider_attention = media_coverage.get("provider_attention", {}).get(provider_name, 0.0)
+                    # Only negative sentiment creates penalty (positive is already priced in via scores)
+                    if sentiment < 0:
+                        media_penalty = 0.08 * abs(sentiment) * provider_attention
+
+                # Compute final satisfaction
+                satisfaction = (
+                    base_satisfaction
+                    + use_case_bonus
+                    - gaming_penalty
+                    + safety_bonus
+                    - media_penalty
+                )
+
+                # Clamp to [0, 1]
+                seg.satisfaction[provider_name] = max(0.0, min(1.0, satisfaction))
 
     def compute_switching(self):
         """Compute switching proportions within each segment.
@@ -327,6 +404,9 @@ class ConsumerMarket:
             Total switching rate (fraction of total market that switched)
         """
         total_switching = 0.0
+
+        # Track per-segment switching for analysis
+        segment_switching_rates = {}
 
         for seg in self.segments:
             seg_switching = 0.0
@@ -401,6 +481,12 @@ class ConsumerMarket:
 
             total_switching += seg_switching * seg.market_fraction
 
+            # Store per-segment switching rate
+            segment_switching_rates[seg.name] = seg_switching
+
+        # Store for later retrieval
+        self._last_segment_switching = segment_switching_rates
+
         return total_switching
 
     def _blended_score(self, seg: MarketSegment, provider: str) -> float:
@@ -465,6 +551,7 @@ class ConsumerMarket:
                 "market_fraction": seg.market_fraction,
                 "provider_shares": dict(seg.provider_shares),
                 "satisfaction": dict(seg.satisfaction),
+                "switching_rate": self._last_segment_switching.get(seg.name, 0.0),
             }
 
         return {

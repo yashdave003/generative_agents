@@ -701,8 +701,23 @@ class EvalEcosystemSimulation:
         else:
             self.consumer_market.observe(leaderboard, media_coverage, round_num)
 
-        # Compute satisfaction from ground truth
-        self.consumer_market.compute_satisfaction(self.ground_truth)
+        # Compute satisfaction from ground truth and ecosystem factors
+        provider_strategies = {
+            p.name: {
+                "fundamental_research": p.fundamental_research,
+                "training_optimization": p.training_optimization,
+                "evaluation_engineering": p.evaluation_engineering,
+                "safety_alignment": p.safety_alignment,
+            }
+            for p in self.providers
+        }
+        published_scores = dict(leaderboard)  # Convert to dict
+        self.consumer_market.compute_satisfaction(
+            self.ground_truth,
+            provider_strategies=provider_strategies,
+            published_scores=published_scores,
+            media_coverage=media_coverage,
+        )
 
         # Compute switching
         switching_rate = self.consumer_market.compute_switching()

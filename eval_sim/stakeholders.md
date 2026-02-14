@@ -218,6 +218,7 @@ The Evaluator is **active** in two ways:
 ### Future Extensions
 - **Organizational Consumer**: Longer decision timelines, compliance constraints
 - **Multi-outlet Media**: Multiple media outlets with different editorial biases and reach
+- **LLM-Driven Consumer Decisions**: Currently, consumer market decisions (observation, satisfaction computation, switching) use algorithmic/heuristic logic. Future: enable LLM mode where consumer segments reason about leaderboard signals, use-case fit, and switching decisions using natural language reasoning. This would allow more nuanced, context-aware consumer behavior (e.g., "I'm a healthcare worker; I care more about safety than speed" or "Recent media coverage makes me distrust leaderboard rankings").
 
 #### Evaluator Enhancements (Not Implemented)
 
@@ -405,16 +406,17 @@ Each profile defines benchmark preferences — which capabilities matter most:
 
 | Profile | Key Benchmark Preferences |
 |---------|--------------------------|
-| `software_dev` | coding: 0.7, reasoning: 0.2, writing: 0.1 |
-| `content_writer` | writing: 0.7, reasoning: 0.2, coding: 0.1 |
-| `legal` | reasoning: 0.5, writing: 0.4, safety: 0.1 |
-| `healthcare` | safety: 0.5, reasoning: 0.3, writing: 0.2 |
-| `finance` | reasoning: 0.5, safety: 0.3, coding: 0.2 |
-| `educator` | writing: 0.4, reasoning: 0.4, safety: 0.2 |
-| `customer_service` | writing: 0.6, reasoning: 0.3, safety: 0.1 |
-| `researcher` | reasoning: 0.4, coding: 0.4, writing: 0.2 |
-| `creative` | writing: 0.6, reasoning: 0.2, coding: 0.2 |
-| `marketing` | writing: 0.5, reasoning: 0.3, coding: 0.2 |
+| `software_dev` | coding: 0.80, reasoning: 0.15, writing: 0.05 |
+| `content_writer` | writing: 0.80, reasoning: 0.15, coding: 0.05 |
+| `legal` | reasoning: 0.65, writing: 0.30, safety: 0.05 |
+| `healthcare` | safety: 0.60, reasoning: 0.25, writing: 0.15 |
+| `finance` | reasoning: 0.60, safety: 0.25, coding: 0.15 |
+| `educator` | writing: 0.45, reasoning: 0.40, safety: 0.15 |
+| `customer_service` | writing: 0.70, reasoning: 0.25, safety: 0.05 |
+| `researcher` | reasoning: 0.45, coding: 0.45, writing: 0.10 |
+| `creative` | writing: 0.70, reasoning: 0.20, coding: 0.10 |
+| `marketing` | writing: 0.60, reasoning: 0.30, coding: 0.10 |
+| `service_worker` | writing: 0.55, reasoning: 0.30, safety: 0.15 |
 
 Preference categories are mapped to actual benchmark names via substring matching (e.g., "coding" matches "coding_bench"). Unmatched benchmarks receive a small default weight (0.1). Weights are re-resolved when new benchmarks are introduced mid-simulation.
 
@@ -474,12 +476,31 @@ When media coverage is available:
 - Risk signals reduce `leaderboard_trust` by 5% for leaderboard-follower segments
 - Provider attention modulates brand awareness during switching decisions
 
+### Satisfaction Model (Enhanced)
+
+Consumer satisfaction is now computed from multiple factors:
+
+1. **Base**: True capability (objective quality)
+2. **Use-Case Match**: Bonus if provider's believed quality (use-case weighted scores) aligns with/exceeds true capability (+0 to +0.08)
+3. **Gaming Penalty**: Score inflation above true capability reduces satisfaction (-15% per unit gap)
+4. **Safety Alignment**: Provider safety investment × segment safety preference (+0 to +0.10)
+5. **Media Influence**: Negative media sentiment × provider attention reduces satisfaction (-0 to -0.08)
+
+Formula:
+```
+satisfaction = true_capability + use_case_bonus - gaming_penalty + safety_bonus - media_penalty
+```
+
+Clamped to [0, 1].
+
 ### Key Dynamic: The Satisfaction Gap
 When a provider games the benchmark:
 - High scores attract market share (especially from leaderboard followers)
-- Low true capability leads to poor satisfaction in use-case-relevant dimensions
+- Gaming penalty reduces satisfaction even when base capability is decent
+- Low satisfaction in use-case-relevant dimensions (via gaming detection)
 - Disappointed segments proportionally shift market share away
 - This creates demand-side pressure against gaming, differentiated by use case
+- Media coverage amplifies the effect via sentiment influence
 
 ---
 

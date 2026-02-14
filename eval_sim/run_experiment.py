@@ -25,7 +25,7 @@ EXPERIMENT = {
     "name": "5p_2b_3funder_highcap",
     "description": (
         "Full ecosystem v6: 5 providers, 2 benchmarks (coding + reasoning), "
-        "12 consumer segments (4 use-cases × 3 archetypes), 1 policymaker, "
+        "30 consumer segments (10 use-cases × 3 archetypes), 1 policymaker,"
         "3 funders (2 VC + 1 Gov) with high capital ($2B/$500M/$100M). "
         "NEW v6 features: funder diversification (observe other funders' allocations), "
         "per-benchmark score reporting (console output), optional benchmark sequence. "
@@ -70,8 +70,9 @@ SIMULATION = {
     # "benchmark_sequence": None,
     # Media
     "enable_media": True,
-    # Consumer market: 4 use-cases × 3 archetypes = 12 segments
-    "use_case_profiles": ["software_dev", "lawyer", "healthcare", "finance"],
+    # Consumer market: 10 use-cases × 3 archetypes = 30 segments
+    "use_case_profiles": ["software_dev", "content_writer", "legal", "healthcare", "finance",
+                          "customer_service", "researcher", "creative", "marketing", "service_worker"],
 }
 
 # 2 benchmarks: coding (high validity, harder to game) and reasoning (more exploitable)
