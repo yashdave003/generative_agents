@@ -40,7 +40,7 @@ EXPERIMENT = {
 
 LLM = {
     "provider": "ollama",       # openai | anthropic | ollama | gemini
-    "llm_mode": False,          # True = LLM planning, False = heuristic
+    "llm_mode": True,          # True = LLM planning, False = heuristic
 }
 
 SIMULATION = {
